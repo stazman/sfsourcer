@@ -1,3 +1,25 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'pledges/index'
+  get 'pledges/new'
+  get 'pledges/create'
+  get 'pledges/show'
+  get 'pledges/edit'
+  get 'pledges/update'
+  get 'pledges/destroy'
+  get 'funding_projects/index'
+  get 'funding_projects/new'
+  get 'funding_projects/create'
+  get 'funding_projects/show'
+  get 'funding_projects/edit'
+  get 'funding_projects/update'
+  get 'funding_projects/destroy'
+  get 'users/index'
+  get 'users/new'
+  get 'users/create'
+  get 'users/show'
+  get 'users/edit'
+  get 'users/update'
+  get 'users/destroy'
+
+  root 'funding_projects/index'
 end
