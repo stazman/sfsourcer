@@ -1,0 +1,2 @@
+module SourcingProjectsHelper
+end
