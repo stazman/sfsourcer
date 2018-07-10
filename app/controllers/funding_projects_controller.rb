@@ -1,5 +1,6 @@
-class SourcingProjectsController < ApplicationController
+class FundingProjectsController < ApplicationController
   def index
+    
   end
 
   def new
