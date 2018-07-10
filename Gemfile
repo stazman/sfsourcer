@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'devise'
+
+
+gem 'orm_adapter', '~> 0.1'
+gem 'responders', ' >= 0'
+gem 'warden', '~> 1.2.3'
+
 ruby '2.3.3'
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
