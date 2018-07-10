@@ -1,2 +1,2 @@
-module SourcingProjectsHelper
+module FundingProjectsHelper
 end

@@ -12,19 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2018_07_07_174939) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "funding_projects", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.string "funding_goal"
+    t.integer "funding_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "pledges", force: :cascade do |t|
-    t.string "amount"
+    t.integer "amount"
     t.integer "user_id"
     t.integer "funding_project_id"
     t.datetime "created_at", null: false
