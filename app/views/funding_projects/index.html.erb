@@ -1,2 +1,8 @@
-<h1>SourcingProjects#index</h1>
-<p>Find me in app/views/sourcing_projects/index.html.erb</p>
+<h1>All Sourcer Projects</h1><br>
+<p><% @funding_projects.each do |fp| %></p>
+    <ul>
+        <h3>Title: <li><%= fp.title %> </li></h3>
+        <p>Description: <li><%= fp.description %> </li></p>
+        <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
+    </ul>
+    <% end %>
