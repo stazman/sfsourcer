@@ -533,3 +533,109 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2018-07-11 11:47:07 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 448ms (Views: 433.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 11:47:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFxuAY0uTX9QqlAeeQldEUzekU/cX/Wc7ot/0K1ZMug/hemFc/CDt1/xO4BYPipnN6GAgiDUYGaryz+27J553Q==", "session"=>{"email"=>"joe@joesland.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joesland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 3.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x007fe56b6e36a8>):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 11:49:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFxuAY0uTX9QqlAeeQldEUzekU/cX/Wc7ot/0K1ZMug/hemFc/CDt1/xO4BYPipnN6GAgiDUYGaryz+27J553Q==", "session"=>{"email"=>"joe@joesland.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joesland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.6ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 11:54:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFxuAY0uTX9QqlAeeQldEUzekU/cX/Wc7ot/0K1ZMug/hemFc/CDt1/xO4BYPipnN6GAgiDUYGaryz+27J553Q==", "session"=>{"email"=>"joe@joesland.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 18ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-11 11:54:09 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 11:54:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t34E4fk/6iuNw0mmZwpYhD0k/Zw8i4g0bLvosa43R1cwp4NlB+Ek44KYIjhGPS/yRlvsUcAAHc4p+6jX7/AMYg==", "session"=>{"email"=>"joe@joesland.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-11 11:54:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 11:54:41 -0500
+  
+ActionController::RoutingError (undefined method `before_save' for UsersController:Class
+Did you mean?  before_action):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 12:01:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 123ms (Views: 84.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 12:02:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m0fYr7aBE96fZXN/KZj61dDqybBRZBxbHjUXaHwFVN4cnl8rSF/dFpA+GOEIr42jq5XYfa3viaFbdVcOPcIf6w==", "user"=>{"name"=>"john smith", "email"=>"johnsmith@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnsmith@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnsmith@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "John Smith"], ["email", "johnsmith@gmail.com"], ["password_digest", "$2a$10$zNSL8tcxw/q4y6U3gMeIg.om5.X/gKKdlEFh6uwWfsgJhg6DVcISq"], ["created_at", "2018-07-11 17:02:10.830046"], ["updated_at", "2018-07-11 17:02:10.830046"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 104ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-07-11 12:02:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 67ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
