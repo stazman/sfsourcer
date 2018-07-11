@@ -1355,3 +1355,19 @@ Processing by FundingProjectsController#index as HTML
 Completed 200 OK in 56ms (Views: 37.6ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-11 16:27:14 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1><%= @funding_project.title %></h1><br>
+    2: <p>Description: <%= @funding_project.description %> </p><br>
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4:         
+  
+app/views/funding_projects/show.html.erb:1:in `_app_views_funding_projects_show_html_erb__765786977062310203_70312977509520'
