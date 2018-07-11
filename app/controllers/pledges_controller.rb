@@ -2,14 +2,16 @@ class PledgesController < ApplicationController
   before_action :require_login
   
   def index
+    @pledges = Pledge.all
     #must be associated with user and with project
   end
 
   def new
+    @pledge = Pledge.new
   end
 
   def create
-    @pledge = Pledge.new(pledge_params)
+    # new_pledge = @pledge = Pledge.new(pledge_params)
     if @pledge.valid?
       @pledge.save
       redirect_to pledge_path(@pledge)
@@ -20,6 +22,7 @@ class PledgesController < ApplicationController
   end
 
   def show
+    @pledge = Pledge.find(params[:id])
   end
 
   def edit

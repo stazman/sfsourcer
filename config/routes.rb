@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :pledges
   resources :funding_projects
 
+  #can only destroy a funding project as admin
+
   # get 'pledges/new'
   # get 'pledges/create'
   # get 'pledges/show'
