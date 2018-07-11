@@ -7,5 +7,6 @@ To Do:
 
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
+[  ] Make admin privleges; only admin can delete a project
 
 
