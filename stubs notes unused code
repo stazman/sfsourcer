@@ -2,9 +2,8 @@ current commit notepad:
 
 'building fundingprojectcontroller'
 
-checking for funding_goal views to work in browser'
 
-'building pledgecontroller, view, and associations with user'
+'building pledgescontroller and views'
 
 
 To Do:
@@ -12,5 +11,6 @@ To Do:
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
 [  ] Make admin privleges; only admin can delete a project
+[  ] Refactor to include navbar: Log In, Home, Your Profile
 
 

@@ -1,14 +1,14 @@
-<h1>Your Pledge</h1><br>
+<h1>Your Pledge for <%= @funding_project.title %></h1><br>
 
-<% if @upledge.errors.any? %>
+<% if @pledge.errors.any? %>
   <div id="error_explanation">
     <h2>
-      <%= pluralize(@upledge.errors.count, "error") %>
-      prohibited this profile from being saved:
+      <%= pluralize(@pledge.errors.count, "error") %>
+      prohibited this pledge from being saved:
     </h2>
  
     <ul>
-    <% @upledge.errors.full_messages.each do |msg| %>
+    <% @pledge.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>

@@ -11,10 +11,11 @@ class PledgesController < ApplicationController
   end
 
   def create
+    @pledge = Pledge.new(pledge_params)
     # new_pledge = @pledge = Pledge.new(pledge_params)
     if @pledge.valid?
       @pledge.save
-      redirect_to pledge_path(@pledge)
+      redirect_to pledges_path(@pledge)
     else
       render :new
     end
