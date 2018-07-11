@@ -1,5 +1,6 @@
 class PledgesController < ApplicationController
   def index
+    #must be associated with user and with project
   end
 
   def new

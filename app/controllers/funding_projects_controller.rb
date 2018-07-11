@@ -1,4 +1,6 @@
 class FundingProjectsController < ApplicationController
+  before_save :make_titlecase
+  
   def index
     
   end
