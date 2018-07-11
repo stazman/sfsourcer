@@ -1536,3 +1536,170 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
     9: <% end %>
   
 app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__765786977062310203_70312967903700'
+Started GET "/funding_projects/2" for 127.0.0.1 at 2018-07-11 16:57:24 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:20
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4:         
+    5: <h2>Make a pledge for this project:</h2><br>
+    6: <%= form_for @pledge do |f| %>
+    7: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :amount %></h4>
+    8: <%= f.submit "Make a Pledge"%>
+    9: <% end %>
+  
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__765786977062310203_70312945108160'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-11 16:57:44 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:20
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4:         
+    5: <h2>Make a pledge for this project:</h2><br>
+    6: <%= form_for @pledge do |f| %>
+    7: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :amount %></h4>
+    8: <%= f.submit "Make a Pledge"%>
+    9: <% end %>
+  
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__765786977062310203_70312962566560'
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-11 16:57:52 -0500
+Processing by FundingProjectsController#new as HTML
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-11 16:58:20 -0500
+Processing by PledgesController#new as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 16:58:58 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 55.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-11 16:59:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 16:59:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNFopv0/RgQqTNclX/v9PW3fwX7aN4N2XbKWQUdmp98M87xSdr8EbCKpBZ/SF+RbSeXZZTcIvGAlygERr1iLfQ==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 82ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 16:59:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-11 16:59:36 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Your Pledge</h1><br>
+    2: 
+    3: <% if @upledge.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2>
+    6:       <%= pluralize(@upledge.errors.count, "error") %>
+  
+app/views/pledges/new.html.erb:3:in `_app_views_pledges_new_html_erb___3888855057718770379_70312912293580'
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-11 17:00:02 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Your Pledge</h1><br>
+    2: 
+    3: <% if @upledge.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2>
+    6:       <%= pluralize(@upledge.errors.count, "error") %>
+  
+app/views/pledges/new.html.erb:3:in `_app_views_pledges_new_html_erb___3888855057718770379_70312977512600'
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-11 17:00:31 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-11 17:00:38 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XMj624x4U3e7NSh1g2PhzIq5nPxruGcjGpHNJe0x7Svo6i4vB/gRH7PQ+s8Oj/iqroOE54aHWDVi6Vp1BQ/BiQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/pledges_controller.rb:15:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-11 17:01:42 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XMj624x4U3e7NSh1g2PhzIq5nPxruGcjGpHNJe0x7Svo6i4vB/gRH7PQ+s8Oj/iqroOE54aHWDVi6Vp1BQ/BiQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    3: <% if @pledge.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2>
+    6:       <%= pluralize(@upledge.errors.count, "error") %>
+    7:       prohibited this pledge from being saved:
+    8:     </h2>
+    9:  
+  
+app/views/pledges/new.html.erb:6:in `_app_views_pledges_new_html_erb___3888855057718770379_70312967417080'
+app/controllers/pledges_controller.rb:20:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-11 17:02:22 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XMj624x4U3e7NSh1g2PhzIq5nPxruGcjGpHNJe0x7Svo6i4vB/gRH7PQ+s8Oj/iqroOE54aHWDVi6Vp1BQ/BiQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
