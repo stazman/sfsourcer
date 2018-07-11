@@ -387,3 +387,113 @@ Processing by PledgesController#index as HTML
 Completed 200 OK in 459ms (Views: 443.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pledges" for 127.0.0.1 at 2018-07-11 09:02:36 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 405ms (Views: 393.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-11 09:02:41 -0500
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 09:02:53 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `validates_uniquenessof' for #<Class:0x007f96c32c04f0>
+Did you mean?  validates_uniqueness_of):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:7:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 09:03:53 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 93ms (Views: 73.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 09:05:42 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 09:11:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ibhxvosh3y0x3sj3dEXk9ADMKmgaOJVE1pr7QvxO/FKmYfY6df8R5T6Fo2lVcpOCe7M7peazAL6T2rskvYm3Zw==", "user"=>{"name"=>"joe sith", "email"=>"joe@joeland.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joeland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joeland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "joe sith"], ["email", "joe@joeland.com"], ["password", "joe"], ["created_at", "2018-07-11 14:11:41.994946"], ["updated_at", "2018-07-11 14:11:41.994946"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to http://localhost:3000/users.2
+Completed 302 Found in 24ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/users.2" for 127.0.0.1 at 2018-07-11 09:11:42 -0500
+Processing by UsersController#index as 
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.2" for 127.0.0.1 at 2018-07-11 09:12:56 -0500
+Processing by UsersController#index as 
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 92ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 09:13:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ibhxvosh3y0x3sj3dEXk9ADMKmgaOJVE1pr7QvxO/FKmYfY6df8R5T6Fo2lVcpOCe7M7peazAL6T2rskvYm3Zw==", "user"=>{"name"=>"joe sith", "email"=>"joe@joeland.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joeland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 54ms (Views: 35.1ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 09:13:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cAFhalL1juW3PR/T/NfhfpQPkG36FjuF7R5CTGz1jEj32OburCtALbhmdE3d4JYI73CBoAadrn+oXgIqLTLHfQ==", "user"=>{"name"=>"joe sith", "email"=>"joe@joesland.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joesland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mCACHE User Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joesland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "joe sith"], ["email", "joe@joesland.com"], ["password", "joe"], ["created_at", "2018-07-11 14:13:27.493161"], ["updated_at", "2018-07-11 14:13:27.493161"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-11 09:13:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
