@@ -1,7 +1,8 @@
 <h1>Create a New Sourcer Project!</h1><br>
 
 <%= form_for @funding_project do |f| %>
-<h4>Project Title: <%= f.text_field :title %> </h4><br>
-<h3>Description: <%= f.textarea_field :description %></h3><br>
+<h2>Project Title: <%= f.text_field :title %> </h2><br>
+<h3>Description: <%= f.text_area :description %></h3><br>
 <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3>
+<%= f.submit "Create Project"%>
 <% end %>
