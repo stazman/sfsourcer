@@ -20,11 +20,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if require_login
+      @user = User.find(params[:id])
+    else 
+      redirect_to login_path
+    end
   end
 
   def edit
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
   end
 
   def update
@@ -37,4 +41,8 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :comment_attributes, :pledge_attributes)
   end
+
+  # def require_login
+  #   session[:user_id] = @user.id
+  # end
 end
