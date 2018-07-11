@@ -1,8 +1,10 @@
 <h1>All Sourcer Projects</h1><br>
+
 <p><% @funding_projects.each do |fp| %></p>
     <ul>
-        <h3>Title: <li><%= fp.title %> </li></h3>
+        <h3><li><%= link_to "Title", funding_project_path(fp.title) %> </li></h3>
         <p>Description: <li><%= fp.description %> </li></p>
         <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
+        
     </ul>
     <% end %>

@@ -1332,3 +1332,26 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 86ms (Views: 63.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 15:56:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 119ms (Views: 93.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-11 15:56:44 -0500
+  
+ActionController::RoutingError (undefined method `before_save' for FundingProjectsController:Class
+Did you mean?  before_action):
+  
+app/controllers/funding_projects_controller.rb:2:in `<class:FundingProjectsController>'
+app/controllers/funding_projects_controller.rb:1:in `<main>'
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-11 15:57:12 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (1.8ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:2
+  Rendered funding_projects/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 56ms (Views: 37.6ms | ActiveRecord: 2.9ms)
+
+
