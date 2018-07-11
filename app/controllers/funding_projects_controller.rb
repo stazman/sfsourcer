@@ -2,8 +2,6 @@ class FundingProjectsController < ApplicationController
   before_save :make_titlecase
   
 
-
-
   def index
     @funding_projects = FundingProject.all
   end
