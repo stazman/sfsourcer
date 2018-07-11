@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   
   root 'static#home'
   
+  get '/auth/facebook/callback' => 'sessions#create'
   get '/login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  get 'logout', to: 'sessions#destroy'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 
   resources :users
   resources :pledges

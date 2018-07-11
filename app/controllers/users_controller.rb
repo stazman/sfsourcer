@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def create
+    #should I create separate logic in the same method for omniauth? a different method?
+    
     @user = User.new(user_params)
     if @user.valid?
       @user.save
@@ -44,4 +46,34 @@ class UsersController < ApplicationController
   # def require_login
   #   session[:user_id] = @user.id
   # end
+end
+
+
+# def create
+#   @user = User.find_or_create_by(uid: auth['uid']) do |u|
+#     u.name = auth['info']['name']
+#     u.email = auth['info']['email']
+#     u.image = auth['info']['image']
+#   end
+
+#   session[:user_id] = @user.id
+
+#   render 'welcome/home'
+# end
+
+# private
+
+# def auth
+#   request.env['omniauth.auth']
+# end
+
+# <% if session[:user_id] %>
+#   <h1><%= @user.name %></h1>
+#   <h2>Email: <%= @user.email %></h2>
+#   <h2>Facebook UID: <%= @user.uid %></h2>
+#   <img src="<%= @user.image %>">
+# <% else %>
+#   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+# <% end %>
+
 end
