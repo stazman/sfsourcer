@@ -1,2 +1,7 @@
-<h1>SourcingProjects#new</h1>
-<p>Find me in app/views/sourcing_projects/new.html.erb</p>
+<h1>Create a New Sourcer Project!</h1><br>
+
+<%= form_for @funding_project do |f| %>
+<h4>Project Title: <%= f.text_field :title %> </h4><br>
+<h3>Description: <%= f.textarea_field :description %></h3><br>
+<h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3>
+<% end %>
