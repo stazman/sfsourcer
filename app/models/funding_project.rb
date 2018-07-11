@@ -7,6 +7,10 @@ class FundingProject < ApplicationRecord
     validates_presence_of :description
     validates_presence_of :funding_amount
 
+    def make_title_case
+        self.title = self.title.titlecase
+    end
+
     # def comment_attributes=(comment_attribute)
     # end
 end
