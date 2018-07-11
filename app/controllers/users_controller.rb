@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_save :make_name_titlecase
   
   def index
     @users = User.all
