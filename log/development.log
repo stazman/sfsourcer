@@ -1087,3 +1087,30 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/login" for 127.0.0.1 at 2018-07-11 12:53:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jD+j8JE/GeHt54dEQczPI3ei1LrPFVHRVkyBVqFilF/sgmjYl1u5CbWZNGg9cPa4/h0Jr3AMeJ74UTzxu2Ko3g==", "session"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-07-11 12:56:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 77ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 12:56:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuv8xjpN9fGKQJM7Au4ADE7b84PBJxENYUMoGyt88FYSVjfuPClVGdI+IBd+UjmXx2Quln4+OELPXpW8MXzM1w==", "session"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `create'
