@@ -5,7 +5,7 @@ class FundingProject < ApplicationRecord
     validates_presence_of :title
     validates_uniqueness_of :title
     validates_presence_of :description
-    validates_presence_of :funding_amount
+    validates_presence_of :funding_goal
 
     def make_title_case
         self.title = self.title.titlecase

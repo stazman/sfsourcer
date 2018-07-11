@@ -7,15 +7,17 @@ class FundingProjectsController < ApplicationController
   end
 
   def new
-    #make new FP instance possible
+    @funding_project = FundingProject.new#make new FP instance possible
   end
 
   def create
-    #create and save new FP instance
+    @funding_project = FundingProject.new(funding_project_params)
+    @funding_project.save
+    redirect_to funding_project_path(@funding_project)#create and save new FP instance
   end
 
   def show
-    #show newly created FP instance
+    @funding_project = FundingProject.find(params[:id])
   end
 
   def edit
@@ -24,5 +26,14 @@ class FundingProjectsController < ApplicationController
 
   def update
     #update an already made FP instance, including saving it
+  end
+
+  def destroy
+  end
+
+  private
+
+  def funding_project_params
+    params.require(:funding_project).permit(:title, :description, :funding_goal)
   end
 end
