@@ -1,4 +1,6 @@
 class PledgesController < ApplicationController
+  before_action :require_login
+  
   def index
     #must be associated with user and with project
   end
@@ -37,4 +39,7 @@ private
     params.require(:pledge).permit(:amount)
   end
 
+  def require_login
+    return head(:forbidden) unless session.include? :user_id   
+  end
 end

@@ -1309,3 +1309,26 @@ Processing by SessionsController#destroy as HTML
 Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 14:24:24 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<UsersController:0x007fe6009cfd90>
+Did you mean?  logger):
+  
+app/controllers/application_controller.rb:8:in `require_login'
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 14:27:00 -0500
+Processing by UsersController#new as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 14:28:52 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 86ms (Views: 63.8ms | ActiveRecord: 0.7ms)
+
+
