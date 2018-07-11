@@ -1114,3 +1114,49 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 NoMethodError (undefined method `[]' for nil:NilClass):
   
 app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 13:03:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuv8xjpN9fGKQJM7Au4ADE7b84PBJxENYUMoGyt88FYSVjfuPClVGdI+IBd+UjmXx2Quln4+OELPXpW8MXzM1w==", "session"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-07-11 13:03:38 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (322.8ms)
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x007f9edd3c5fe0>:0x007f9ed9bc3570>
+Did you mean?  session):
+    1: <h1>Log In</h1>
+    2:  <%= form_for(:session, url: sessions_path) do |f| %>
+    3: 
+    4:     <%= f.label :email %>
+    5:     <%= f.email_field :email %>
+  
+app/views/sessions/new.html.erb:2:in `_app_views_sessions_new_html_erb___412608186321449127_70160146669640'
+Started GET "/login" for 127.0.0.1 at 2018-07-11 13:05:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 347ms (Views: 342.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 13:05:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `create'
