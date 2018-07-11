@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.update(user_params)
-
+    @user.save
   end
 
   def destroy

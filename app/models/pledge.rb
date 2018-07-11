@@ -2,5 +2,5 @@ class Pledge < ApplicationRecord
     belongs_to :user
     belongs_to :funding_project
 
-    # validates presence of amount
+    validates_presence_of :amount
 end
