@@ -1,2 +1,24 @@
-<h1>Pledges#new</h1>
-<p>Find me in app/views/pledges/new.html.erb</p>
+<h1>Your Pledge</h1><br>
+
+<% if @upledge.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@upledge.errors.count, "error") %>
+      prohibited this profile from being saved:
+    </h2>
+ 
+    <ul>
+    <% @upledge.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @pledge do |f| %>
+<%= f.label :amount %>
+<%= f.text_field :amount %>
+<%= f.submit "Create Pledge" %>
+<% end %>
+
+
