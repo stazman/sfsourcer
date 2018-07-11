@@ -1,10 +1,11 @@
 current commit notepad:
 
-'debugging login'
+'building pledgecontroller, view, and associations with user'
 
 
 To Do:
 
 [  ] Make sure all validations work
+[  ] Add JS snippet to prevent backsies
 
 
