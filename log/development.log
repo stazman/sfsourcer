@@ -1160,3 +1160,152 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
 NoMethodError (undefined method `[]' for nil:NilClass):
   
 app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:02:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"a"}, "commit"=>"Log in", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:03:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:04:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-07-11 14:07:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:07:40 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"a"}, "commit"=>"Log in", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:08:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"a"}, "commit"=>"Log in", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:09:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBpoXk1pgFGX+1V4GNZt2iOCi7tjoaSQC6veZ9K/jlIgp6N2Sw0guc+F5lRkalRBqj1Wrty4jd+ltmPAyL+y0w==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 126ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:09:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `require_login' for #<UsersController:0x007fe6041fea40>
+Did you mean?  require):
+  
+app/controllers/users_controller.rb:23:in `show'
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:10:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:46:in `require_login'
+app/controllers/users_controller.rb:23:in `show'
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:12:26 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/users_controller.rb:46: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:12:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:43:in `require_login'
+app/controllers/users_controller.rb:23:in `show'
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:13:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 330ms (Views: 308.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-11 14:13:52 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-11 14:14:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VjuLXas0P2N4Ll181eDcFKUcECZnnywbfYcQ24tG800gCT3XXh0cLIBp7K0+nZ64e7u3A8T9gx9cphoICYQ/fQ==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 81ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-11 14:14:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-11 14:14:02 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+

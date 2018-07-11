@@ -20,11 +20,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    if require_login
-      @user = User.find(params[:id])
-    else 
-      redirect_to login_path
-    end
+      @user = User.find(params[:id]) 
+      # if require_login
+      # redirect_to login_path
   end
 
   def edit
