@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
       render :new
@@ -29,10 +30,6 @@ class UsersController < ApplicationController
   def update
     @user = User.update(user_params)
     @user.save
-  end
-
-  def destroy
-    @user.delete
   end
 
   private
