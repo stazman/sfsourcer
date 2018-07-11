@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
+
 gem 'devise'
-
-
 gem 'orm_adapter', '~> 0.1'
 gem 'responders', ' >= 0'
 gem 'warden', '~> 1.2.3'
