@@ -4,9 +4,9 @@
 <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
 
         
-<h2>Make a pledge for this project:</h2><br>
+<h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", pledges_path</h2><br>
 <%= form_for @funding_project do |f| %>
-<h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+<h4>Pledge Amount  <%= f.text_field :funding_project_pledge %></h4>
 <%= f.submit "Make a Pledge"%>
 <% end %>
 
