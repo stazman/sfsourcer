@@ -11,6 +11,7 @@
     <%# <% end %> %>
     <%# make into link %>
     <li><h3><% @pledges.each do |p| %></h3></li>
+    <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
     <li><h3>Amount: <%= p.amount %></h3></li>
         <% end %>
 

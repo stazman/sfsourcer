@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id]) 
             # user_pledges = @user.pledges
       @pledges = Pledge.where(:user_id == @user.id)
-      # @funding_project = FundingProject.find(params[:id])
+      # @pledge_funding_project = FundingProject.where()
       # @funding_projects = FundingProject.where(Pledge.funding_project_id == @funding_project.id)
 # if require_login
       # redirect_to login_path
