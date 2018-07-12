@@ -23,7 +23,11 @@ class UsersController < ApplicationController
 
   def show
       @user = User.find(params[:id]) 
-      # if require_login
+            # user_pledges = @user.pledges
+      @pledges = Pledge.where(:user_id == @user.id)
+      # @funding_project = FundingProject.find(params[:id])
+      # @funding_projects = FundingProject.where(Pledge.funding_project_id == @funding_project.id)
+# if require_login
       # redirect_to login_path
   end
 
@@ -76,4 +80,3 @@ end
 #   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
 # <% end %>
 
-end
