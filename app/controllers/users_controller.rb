@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    # raise params.inspect
     #should I create separate logic in the same method for omniauth? a different method?
     
     @user = User.new(user_params)
