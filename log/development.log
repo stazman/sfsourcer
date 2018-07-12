@@ -1993,3 +1993,84 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 90ms (Views: 66.3ms | ActiveRecord: 4.9ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 13:01:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (1.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mFundingProject Load (1.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 118ms (Views: 87.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 13:01:58 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:22
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     5: 
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @pledge do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :amount %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+  
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291050858960'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 13:16:30 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (1.6ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:22
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `pledge' for #<FundingProject:0x007fdbd8fad168>
+Did you mean?  pledges
+               pledges=):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:19:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291072711880'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291072711880'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 13:22:39 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (1.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     5: 
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @pledge do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :amount %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+  
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291113250660'
