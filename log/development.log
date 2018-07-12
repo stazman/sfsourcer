@@ -2255,3 +2255,154 @@ ActionView::Template::Error (undefined local variable or method `params' for #<F
 app/models/funding_project.rb:15:in `funding_project_pledge'
 app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291112699080'
 app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291112699080'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:36:59 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFundingProject Load (0.7ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `params' for #<FundingProject:0x007fdbd9e68068>):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:15:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291116840640'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291116840640'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:37:22 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/models/funding_project.rb:15: syntax error, unexpected ']', expecting ')'
+        self.pledge = Pledge.create_by(:amount])
+                                               ^):
+  
+app/models/funding_project.rb:15: syntax error, unexpected ']', expecting ')'
+app/controllers/funding_projects_controller.rb:23:in `show'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:37:43 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `create_by' for #<Class:0x007fdbd98c04a8>
+Did you mean?  create
+               create!):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:15:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291112297660'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291112297660'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:38:42 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `params' for #<FundingProject:0x007fdbd0c442b8>):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:15:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291038529240'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291038529240'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:39:02 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (When assigning attributes, you must pass a hash as an argument.):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:15:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291050164400'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291050164400'
+Started GET "/funding_projects/3" for 127.0.0.1 at 2018-07-12 13:39:37 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/funding_project.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (42.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `pledge=' for #<FundingProject:0x007fdbd8971970>
+Did you mean?  pledges=
+               pledges):
+     6:         
+     7: <h2>Make a pledge for this project:</h2><br>
+     8: <%= form_for @funding_project do |f| %>
+     9: <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
+    10: <%= f.submit "Make a Pledge"%>
+    11: <% end %>
+    12: 
+  
+app/models/funding_project.rb:15:in `funding_project_pledge'
+app/views/funding_projects/show.html.erb:9:in `block in _app_views_funding_projects_show_html_erb__2202755431218494959_70291104170400'
+app/views/funding_projects/show.html.erb:8:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291104170400'
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-12 13:51:53 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1>Your Pledge for <%= @funding_project.title %></h1><br>
+    2: 
+    3: <% if @pledge.errors.any? %>
+    4:   <div id="error_explanation">
+  
+app/views/pledges/new.html.erb:1:in `_app_views_pledges_new_html_erb___4101347286207867011_70291114401160'

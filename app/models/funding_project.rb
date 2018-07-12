@@ -11,9 +11,9 @@ class FundingProject < ApplicationRecord
         self.title = self.title.titlecase
     end
 
-    def funding_project_pledge
-        self.pledge = Pledge.create_by(params[:amount])
-    end
+    # def funding_project_pledge
+    #     self.pledge = Pledge.create(amount: :amount)
+    # end
     
     # def funding_project_pledge
     #     self.pledge ? self.pledge.amount : nil
