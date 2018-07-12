@@ -2,7 +2,7 @@
 
 <p><% @funding_projects.each do |fp| %></p>
     <ul>
-        <h3><li><%= link_to fp.title, funding_project_path(fp.title) %> </li></h3>
+        <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
         <p>Description: <li><%= fp.description %> </li></p>
         <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
         

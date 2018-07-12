@@ -2532,3 +2532,250 @@ Processing by FundingProjectsController#index as HTML
 Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/funding_projects/Fantastic%20Cats" for 127.0.0.1 at 2018-07-12 14:23:17 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"Fantastic Cats"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FundingProject with 'id'=Fantastic Cats):
+  
+app/controllers/funding_projects_controller.rb:23:in `show'
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-12 14:24:40 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects/Fantastic%20Cats" for 127.0.0.1 at 2018-07-12 14:24:42 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"Fantastic Cats"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FundingProject with 'id'=Fantastic Cats):
+  
+app/controllers/funding_projects_controller.rb:23:in `show'
+Started GET "/funding_projects/Fantastic%20Cats" for 127.0.0.1 at 2018-07-12 14:25:18 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"Fantastic Cats"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FundingProject with 'id'=Fantastic Cats):
+  
+app/controllers/funding_projects_controller.rb:23:in `show'
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-12 14:25:26 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:25:27 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:9: unknown regexp option - h
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:9: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:16: syntax error, unexpected '>'
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:17: unterminated string meets end of file):
+  
+app/views/funding_projects/show.html.erb:9: unknown regexp option - h
+app/views/funding_projects/show.html.erb:9: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/funding_projects/show.html.erb:16: syntax error, unexpected '>'
+app/views/funding_projects/show.html.erb:17: unterminated string meets end of file
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:26:19 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:9: unknown regexp option - h
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:9: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:16: syntax error, unexpected '>'
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:17: unterminated string meets end of file):
+  
+app/views/funding_projects/show.html.erb:9: unknown regexp option - h
+app/views/funding_projects/show.html.erb:9: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/funding_projects/show.html.erb:16: syntax error, unexpected '>'
+app/views/funding_projects/show.html.erb:17: unterminated string meets end of file
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:27:06 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:27:44 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (318.3ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pledges' for #<#<Class:0x007fdbd25bdfa0>:0x007fdbd9d8acb8>
+Did you mean?  pledges_url):
+    4: <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+    5: 
+    6:         
+    7: <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", pledges %></h2><br>
+    8: <%# <%= form_for @funding_project do |f| %> %>
+    9: <%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
+   10: <%# <%= f.submit "Make a Pledge"%> %>
+  
+app/views/funding_projects/show.html.erb:7:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291114712000'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:28:03 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-12 14:28:05 -0500
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `pledges' for nil:NilClass):
+    1: <h1>Your Pledges</h1>
+    2: <p><% @user.pledges.each do |p| %>
+    3:   <li><%= link_to p.amount, pledge_path(p) %></li>
+    4: <% end %>
+    5: </p>
+  
+app/views/pledges/index.html.erb:2:in `_app_views_pledges_index_html_erb__547938691167945259_70291050627240'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:29:05 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (271.1ms)
+Completed 500 Internal Server Error in 289ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pledges_new_path' for #<#<Class:0x007fdbd25bdfa0>:0x007fdbd8b033d8>
+Did you mean?  pledges_path):
+    4: <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+    5: 
+    6:         
+    7: <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", pledges_new_path %></h2><br>
+    8: <%# <%= form_for @funding_project do |f| %> %>
+    9: <%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
+   10: <%# <%= f.submit "Make a Pledge"%> %>
+  
+app/views/funding_projects/show.html.erb:7:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291104997080'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:29:10 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (397.6ms)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pledges_new_path' for #<#<Class:0x007fdbd25bdfa0>:0x007fdbd6963048>
+Did you mean?  pledges_path):
+    4: <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+    5: 
+    6:         
+    7: <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", pledges_new_path %></h2><br>
+    8: <%# <%= form_for @funding_project do |f| %> %>
+    9: <%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
+   10: <%# <%= f.submit "Make a Pledge"%> %>
+  
+app/views/funding_projects/show.html.erb:7:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291087394620'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:29:34 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (258.4ms)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_pledges_path' for #<#<Class:0x007fdbd25bdfa0>:0x007fdbd1d35180>
+Did you mean?  new_pledge_path):
+    4: <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+    5: 
+    6:         
+    7: <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", new_pledges_path %></h2><br>
+    8: <%# <%= form_for @funding_project do |f| %> %>
+    9: <%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
+   10: <%# <%= f.submit "Make a Pledge"%> %>
+  
+app/views/funding_projects/show.html.erb:7:in `_app_views_funding_projects_show_html_erb__2202755431218494959_70291047427500'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-12 14:29:47 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-12 14:29:50 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-12 14:30:32 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ch9vpRSNuV6lj5b8MDfyvhsT91vLoI1EiZw46JUfqDjSNstkhV9eANDGlvMzVo8VzoPMfv4TKBn7hzq3GmmaDg==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
