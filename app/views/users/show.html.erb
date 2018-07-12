@@ -4,3 +4,22 @@
 
 <%= link_to "Log Out", logout_path %>
 
+<h3>Your Pledges: </h3>
+<ul>
+    <%# <li><h3><% @funding_projects.each do |fp| %></h3></li> %>
+    <%# <li><h3>Sourcer Project: <%= fp.title %></h3></li> %>
+    <%# <% end %> %>
+    <%# make into link %>
+    <li><h3><% @pledges.each do |p| %></h3></li>
+    <li><h3>Amount: <%= p.amount %></h3></li>
+        <% end %>
+
+    <%# make into link %>
+</ul>
+
+
+
+
+
+
+
