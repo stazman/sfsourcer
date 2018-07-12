@@ -1,8 +1,15 @@
+NAVBAR Log In, Home, Your Profile, Sourcer Projects
+
+
 <h1><%= @user.name %></h1><br>
 <p>Email: <%= @user.email %></p>
 <p>Change Password: </p>
 
-<%= link_to "Log Out", logout_path %>
+<%= link_to "Log Out", logout_path %><br>
+
+
+<h2><%= link_to "Check out our Sourcer Projects!", funding_projects_url %> </h2><br>
+
 
 <h3>Your Pledges: </h3>
 <ul>
