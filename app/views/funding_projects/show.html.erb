@@ -1,6 +1,8 @@
 <h1><%= @funding_project.title %></h1><br>
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+<%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+
         
 <h2>Make a pledge for this project:</h2><br>
 <%= form_for @pledge do |f| %>
