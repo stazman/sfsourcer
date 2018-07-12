@@ -1,6 +1,9 @@
 current commit notepad:
 
-'stubbing/setting up for Facebook login'
+'allowing user pledges to be seen on user#show'
+
+'allowing project pledges to be seen on funding_project#show'
+
 
 
 'building pledgescontroller and views'
@@ -9,6 +12,8 @@ current commit notepad:
 To Do:
 
 [  ] Make sure all validations work
+[  ] Finish Facebook signup
+[  ] Add custom writer to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
 [  ] Add JS snippet to prevent backsies
 [  ] Make admin privleges; only admin can delete a project
 [  ] Refactor to include navbar: Log In, Home, Your Profile
