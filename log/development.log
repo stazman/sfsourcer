@@ -3070,3 +3070,1027 @@ ActionView::Template::Error (undefined method `pledges' for nil:NilClass):
     5: </p>
   
 app/views/pledges/index.html.erb:2:in `_app_views_pledges_index_html_erb__547938691167945259_70291050610040'
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 15:52:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (1.4ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (1.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 198ms (Views: 127.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 15:52:20 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 15:52:30 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 70ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/auth/facebook" for 127.0.0.1 at 2018-07-12 15:52:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login/auth/facebook"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 15:52:43 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 15:52:43 -0500
+Started GET "/auth/facebook/callback?code=AQCBfZyk2YZdOn2B3TtE9UuERT7WwLMUFtgbY0FIpuIVh7zNJClp5FfDJgD3XISV4GVzPlN13rw6U-XgCxwGXSp2LP1FoPgBZT83xSMBGADjpli-3_2XCbOjds-AWObQ0AaU0ujhhugAEhwuPngNs6cFwms8FtRrbMypuB0EROW7W9Hecmgqig91n_iytNVHsgPtf8BBIdC0fXvJekaiZNRLA4s4ZPMJMibkL92nBcrS9T35RK13lCrLZeiKkgTUsCWLWV6CoJoBdwvbd0yevjVhIjsK5WeF7X9BXCMfIWNG0P0IvRIJQtdnWc6-XnQa75Q&state=55b8cc06c155277eb4e185d5b0d718ec59153bfa66a7873a" for 127.0.0.1 at 2018-07-12 15:52:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCBfZyk2YZdOn2B3TtE9UuERT7WwLMUFtgbY0FIpuIVh7zNJClp5FfDJgD3XISV4GVzPlN13rw6U-XgCxwGXSp2LP1FoPgBZT83xSMBGADjpli-3_2XCbOjds-AWObQ0AaU0ujhhugAEhwuPngNs6cFwms8FtRrbMypuB0EROW7W9Hecmgqig91n_iytNVHsgPtf8BBIdC0fXvJekaiZNRLA4s4ZPMJMibkL92nBcrS9T35RK13lCrLZeiKkgTUsCWLWV6CoJoBdwvbd0yevjVhIjsK5WeF7X9BXCMfIWNG0P0IvRIJQtdnWc6-XnQa75Q", "state"=>"55b8cc06c155277eb4e185d5b0d718ec59153bfa66a7873a"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/auth/facebook/callback?code=AQAhSlMRq9PwmHALKKU9057JJkTjZ5ovUbIfW_-s0TfqjTwTguCR6TC64DrRt2BWECzJLBYnXI3GpD0qR6h687NBHa15t_ddVtzAAEwZJMebdH7qPD9wnQWr_DhZo9MiG2mQtfU21gdmtU1YW-rfrS3d-GIHTzYuSe7m7TIzCQuSSK_ZArKHQmEfULiqC1PvgbZ0-r9DebFw9zEYqds2BKN-0CEsmDg-rfViJYwD0VhcmDYwpA0E5O6BSkYtcJbKgYYBa4IBPh2n8ya8thPxk6Q6Q4hFWG8tqhV5_420UeNAzebswPe9oiCOutiY0EP0c2I&state=55b8cc06c155277eb4e185d5b0d718ec59153bfa66a7873a" for 127.0.0.1 at 2018-07-12 15:53:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAhSlMRq9PwmHALKKU9057JJkTjZ5ovUbIfW_-s0TfqjTwTguCR6TC64DrRt2BWECzJLBYnXI3GpD0qR6h687NBHa15t_ddVtzAAEwZJMebdH7qPD9wnQWr_DhZo9MiG2mQtfU21gdmtU1YW-rfrS3d-GIHTzYuSe7m7TIzCQuSSK_ZArKHQmEfULiqC1PvgbZ0-r9DebFw9zEYqds2BKN-0CEsmDg-rfViJYwD0VhcmDYwpA0E5O6BSkYtcJbKgYYBa4IBPh2n8ya8thPxk6Q6Q4hFWG8tqhV5_420UeNAzebswPe9oiCOutiY0EP0c2I", "state"=>"55b8cc06c155277eb4e185d5b0d718ec59153bfa66a7873a"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:10:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:10:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kV6/kjjJqKNlx9o6uNX7+bc7vxR72V/9EM5et+oQF5hOGCddEjB8/XkJKL2KKg1ST58zc0wU6lyiXMR2yD2m4Q==", "sessions"=>{"email"=>"b", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 19ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:10:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-12 16:11:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 83ms (Views: 64.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-12 16:11:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a6Ec9ZngMC8Asge5jXpTu+BDSUlC4YM23e3rgRmjsJu054Q6sxnkcRx89T6/haUQGOfFLnUsNpdvf3FAO44B4g==", "user"=>{"name"=>"c", "email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "C"], ["email", "c@c.com"], ["password_digest", "$2a$10$iAnWItsv98n5Vpx8FzZK5.wWcV5ziK/ChPhG7zZHF5cP3a4zliCLu"], ["created_at", "2018-07-12 21:11:32.603404"], ["updated_at", "2018-07-12 21:11:32.603404"]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 88ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-07-12 16:11:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.5ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 86ms (Views: 53.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:11:35 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:11:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:13:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:14:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:16:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.3ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=><ActionController::Parameters {"email"=>"c@c.com", "password"=>"c"} permitted: false>, "commit"=>"Log in", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:17:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:18:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ylPo2CG8HinpIKtw9hnZuU9jSMs7VquGI06trNmWH65gvOcPpyOMl3YNM3/9FuVi/g3oZN76YePUR7k6Ge0CQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "c@c.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 88ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:18:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:18:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lND6ElnqvUik+coljL7Ztq+2DTNa6nyiz4F6yaqNPdV5PkRuDUzVgwgRL+7y3Z0IdwyJOGoqPR9Hias8Te5Qog==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "c@c.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 77ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:18:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:18:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:19:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDlQXxE6xdK0bw2e4zz8CNdlFiQj/8Ua19ieyB0tOhPZ1+4jRZytGRiH6FWdX7i2D9+SLxM/hKdf0E89+k5XZA==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "c@c.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 94ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:19:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:20:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 81ms (Views: 56.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:20:09 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:20:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zjri5mtPf23yjsQMAroKUwlCCv45xY0YnAk/v68KqR61xCFyhnSAqCRWyL5n5dRexAmbVqEoE530fq0UryTGIg==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "c@c.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 80ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:20:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-12 16:20:32 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 62ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-12 16:20:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HMfWkaYpLARgjwvr/S7lM4p8ipnOGQ/pNki7Jy+NJ68S9G8eR29knN7/quOZheUU1y/RbSf7xTVTrmGl0i10LA==", "user"=>{"name"=>"d", "email"=>"d@d.d", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.d"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.d"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "D"], ["email", "d@d.d"], ["password_digest", "$2a$10$Aof1I9Ho3VhZFD3orH/jHeLQttnpMUqkRRbwZMoufXvpSGS6cWeoa"], ["created_at", "2018-07-12 21:20:40.797971"], ["updated_at", "2018-07-12 21:20:40.797971"]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 86ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2018-07-12 16:20:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:20:43 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:20:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:22:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:24:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:24:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:25:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:26:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:26:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:28:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:29:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x007fdbd9f93578>
+Did you mean?  @user):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:29:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:33:15 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/sessions_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+            session[:user_id] = user.id
+                   ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/sessions_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/sessions_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/sessions_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:34:25 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/sessions_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+            session[:user_id] = user.id
+                   ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/sessions_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/sessions_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/sessions_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:35:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.4ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:35:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:37:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:45:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UY39V5S0mrUNcJ0LJPJUairvapoEj/oM31+H05aMZvcFXgT2g9A+LbNxT4X0NCMPM7H1/I9oa+z4MepHxy98w==", "sessions"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:45:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:45:41 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:45:41 -0500
+Started GET "/auth/facebook/callback?code=AQBNlxbtfUKpVeoS_9srclpWK6qPdbLNFIzaQ4Otz__Fch0GIuXYpfm3DfpC9bMTc0nqS6PgClJs6uHWmQm439cGCM8XCJPXjVvBsLhfyPD2kJwS4lf5DQPNyeXJCeClmFLsreJ_hzGeYWCM2jIke3_hPsSVrlsdkE9Zctbw0Hug1iyhroubRr_3-S_p_UQJbUoBwbhH03dkvqd5sRmD-0ZGmJeJFwT5zsAFzdfjshb1T11R0yvs0c_xcIc9IPMvuET8UmK9OJEIMEChLLhgbiEWMhGp42JsUcy_g9SyBcWcNhGy_20JE5zEZYg0wbc1s60&state=e44c1506ddd65922f601d698633a41cbc8734cb41ce79662" for 127.0.0.1 at 2018-07-12 16:45:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBNlxbtfUKpVeoS_9srclpWK6qPdbLNFIzaQ4Otz__Fch0GIuXYpfm3DfpC9bMTc0nqS6PgClJs6uHWmQm439cGCM8XCJPXjVvBsLhfyPD2kJwS4lf5DQPNyeXJCeClmFLsreJ_hzGeYWCM2jIke3_hPsSVrlsdkE9Zctbw0Hug1iyhroubRr_3-S_p_UQJbUoBwbhH03dkvqd5sRmD-0ZGmJeJFwT5zsAFzdfjshb1T11R0yvs0c_xcIc9IPMvuET8UmK9OJEIMEChLLhgbiEWMhGp42JsUcy_g9SyBcWcNhGy_20JE5zEZYg0wbc1s60", "state"=>"e44c1506ddd65922f601d698633a41cbc8734cb41ce79662"}
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x007fdbd9b43540>):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started GET "/auth/facebook/callback?code=AQBNlxbtfUKpVeoS_9srclpWK6qPdbLNFIzaQ4Otz__Fch0GIuXYpfm3DfpC9bMTc0nqS6PgClJs6uHWmQm439cGCM8XCJPXjVvBsLhfyPD2kJwS4lf5DQPNyeXJCeClmFLsreJ_hzGeYWCM2jIke3_hPsSVrlsdkE9Zctbw0Hug1iyhroubRr_3-S_p_UQJbUoBwbhH03dkvqd5sRmD-0ZGmJeJFwT5zsAFzdfjshb1T11R0yvs0c_xcIc9IPMvuET8UmK9OJEIMEChLLhgbiEWMhGp42JsUcy_g9SyBcWcNhGy_20JE5zEZYg0wbc1s60&state=e44c1506ddd65922f601d698633a41cbc8734cb41ce79662" for 127.0.0.1 at 2018-07-12 16:46:11 -0500
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ffp2Cym9kjd"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Ffp2Cym9kjd"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/facebook/callback?code=AQBNlxbtfUKpVeoS_9srclpWK6qPdbLNFIzaQ4Otz__Fch0GIuXYpfm3DfpC9bMTc0nqS6PgClJs6uHWmQm439cGCM8XCJPXjVvBsLhfyPD2kJwS4lf5DQPNyeXJCeClmFLsreJ_hzGeYWCM2jIke3_hPsSVrlsdkE9Zctbw0Hug1iyhroubRr_3-S_p_UQJbUoBwbhH03dkvqd5sRmD-0ZGmJeJFwT5zsAFzdfjshb1T11R0yvs0c_xcIc9IPMvuET8UmK9OJEIMEChLLhgbiEWMhGp42JsUcy_g9SyBcWcNhGy_20JE5zEZYg0wbc1s60&state=e44c1506ddd65922f601d698633a41cbc8734cb41ce79662" for 127.0.0.1 at 2018-07-12 16:51:34 -0500
+  
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HB0f0ApTfv2"}: 
+{"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"HB0f0ApTfv2"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:51:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 113ms (Views: 83.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:51:56 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:52:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzzD0oSgk0UtdIB3odJNrzck3mEKg9pM7Z3VgpozEfflqMmGMnE4SqLHCMyx1g3vICAVBhX5g0FxTtmXXhRxpQ==", "sessions"=>{"email"=>"c@c.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:52:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:52:18 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:52:18 -0500
+Started GET "/auth/facebook/callback?code=AQDhvt7IDTgwNr3gaTIGCqF5W3wuy_R5GyI7stqyFgMkclpljoQvmuuIuuJ_W7NtS9j-JP-Cipgb73mPk8f0aBvpTWO6OErcvEs-qyrkXOIzgXd0RMd0-olVLcTVsyQllo2PVJ-yhdYsGKS3VTd6mZ6GGO88WR5zA_GMmxVmQTHgkgmPkX-oh6-U5kMzr-ZbpS-ynoi-l89szIVKJgEQRnZfMXVMbYVKyYO_zmaePsAgIvuIsMvQK5fIXIP8F5qgEhqbgN2wcU_VyDelUgGwCgyNR5OObuApf2cNttigDb4d0NUMHZ9SEKqahkfIO_RV0F4&state=fb9cca4b95e32d1a326878948475207627073e02f2af7ecf" for 127.0.0.1 at 2018-07-12 16:52:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDhvt7IDTgwNr3gaTIGCqF5W3wuy_R5GyI7stqyFgMkclpljoQvmuuIuuJ_W7NtS9j-JP-Cipgb73mPk8f0aBvpTWO6OErcvEs-qyrkXOIzgXd0RMd0-olVLcTVsyQllo2PVJ-yhdYsGKS3VTd6mZ6GGO88WR5zA_GMmxVmQTHgkgmPkX-oh6-U5kMzr-ZbpS-ynoi-l89szIVKJgEQRnZfMXVMbYVKyYO_zmaePsAgIvuIsMvQK5fIXIP8F5qgEhqbgN2wcU_VyDelUgGwCgyNR5OObuApf2cNttigDb4d0NUMHZ9SEKqahkfIO_RV0F4", "state"=>"fb9cca4b95e32d1a326878948475207627073e02f2af7ecf"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:16:in `create'
+Started GET "/auth/facebook/callback?code=AQDhvt7IDTgwNr3gaTIGCqF5W3wuy_R5GyI7stqyFgMkclpljoQvmuuIuuJ_W7NtS9j-JP-Cipgb73mPk8f0aBvpTWO6OErcvEs-qyrkXOIzgXd0RMd0-olVLcTVsyQllo2PVJ-yhdYsGKS3VTd6mZ6GGO88WR5zA_GMmxVmQTHgkgmPkX-oh6-U5kMzr-ZbpS-ynoi-l89szIVKJgEQRnZfMXVMbYVKyYO_zmaePsAgIvuIsMvQK5fIXIP8F5qgEhqbgN2wcU_VyDelUgGwCgyNR5OObuApf2cNttigDb4d0NUMHZ9SEKqahkfIO_RV0F4&state=fb9cca4b95e32d1a326878948475207627073e02f2af7ecf" for 127.0.0.1 at 2018-07-12 16:53:06 -0500
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Bl7LoNPTO4s"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Bl7LoNPTO4s"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/facebook/callback?code=AQDhvt7IDTgwNr3gaTIGCqF5W3wuy_R5GyI7stqyFgMkclpljoQvmuuIuuJ_W7NtS9j-JP-Cipgb73mPk8f0aBvpTWO6OErcvEs-qyrkXOIzgXd0RMd0-olVLcTVsyQllo2PVJ-yhdYsGKS3VTd6mZ6GGO88WR5zA_GMmxVmQTHgkgmPkX-oh6-U5kMzr-ZbpS-ynoi-l89szIVKJgEQRnZfMXVMbYVKyYO_zmaePsAgIvuIsMvQK5fIXIP8F5qgEhqbgN2wcU_VyDelUgGwCgyNR5OObuApf2cNttigDb4d0NUMHZ9SEKqahkfIO_RV0F4&state=fb9cca4b95e32d1a326878948475207627073e02f2af7ecf" for 127.0.0.1 at 2018-07-12 16:57:54 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"ER1O/PscdDE"}: 
+{"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"ER1O\/PscdDE"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-12 16:58:11 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 316ms (Views: 310.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:58:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 83ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-12 16:58:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ABFTqjXJUBYw38ZZKxoB7SXCvpbZqc8/HP6YfI3Z0be0jJjxfF94I35/gjbiTwbdxFOmH9tV3tRTx/GdLZ8rA==", "sessions"=>{"email"=>"b@b.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 49ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-12 16:58:28 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:58:30 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:58:30 -0500
+Started GET "/auth/facebook/callback?code=AQA2AOwQ58UUjrX86-RGmefB2Kmaj6vPSEzecGCDrvAu70T31EphqPrOQePKRISm6NkCmqX-pAuu-k0KVsmUsmmI_kkh11u8le0KA4HeN-maMbYXuttL3J4ZW_5F-Oj__Wqz-CenqssHKeu6BTIU8hMpIF1bYRdC1KW6Z2GfO8MTaeoyNBQwIjzKIn-k7pznGhPvbtODhKEw23xJrkwELkOC5u0L9endc-V4LCTM9T1kEGrptJRaRxuBegHZj5th7WLzzw7kaYid1BJeqEZs0wqfMFJA3IDvvykoQ7HR4HUwbXoRD_n6pqTcMdRmRzFF_q4&state=83302650461c5479fb92852941f25dcb7cd58e12adc835f6" for 127.0.0.1 at 2018-07-12 16:58:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA2AOwQ58UUjrX86-RGmefB2Kmaj6vPSEzecGCDrvAu70T31EphqPrOQePKRISm6NkCmqX-pAuu-k0KVsmUsmmI_kkh11u8le0KA4HeN-maMbYXuttL3J4ZW_5F-Oj__Wqz-CenqssHKeu6BTIU8hMpIF1bYRdC1KW6Z2GfO8MTaeoyNBQwIjzKIn-k7pznGhPvbtODhKEw23xJrkwELkOC5u0L9endc-V4LCTM9T1kEGrptJRaRxuBegHZj5th7WLzzw7kaYid1BJeqEZs0wqfMFJA3IDvvykoQ7HR4HUwbXoRD_n6pqTcMdRmRzFF_q4", "state"=>"83302650461c5479fb92852941f25dcb7cd58e12adc835f6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:58:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 102ms (Views: 80.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-12 16:58:43 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:58:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:58:46 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:58:56 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:58:56 -0500
+Started GET "/auth/facebook/callback?code=AQDQSyDxcq38yWSoOFMvYO3kkvP0xIATXaeHUWpnogSIuoTsIPTHxXOhc4V6T0wahTRbO1WL5mrp5iTbBvYbAJfVsRUdnoDNgVNoYDaHYACgi6cVHlAMZNd_m_VxGY00zjr8VMmID_R-l1qYV_HCRdMPCcSa5tkYKqTZ901riwZ1irsJKa9SYP9qs_xuYTsVUJ8zQRO01g5eOvCfQiuyXttlz-wI_o-YYmBdCgJHikMqwc6nBsNCfkIZRNYNr7w1TwRlendCBF3cJVdBiudxqiSdPUCHbUIeGUXI-5GrON-0dZUWAyhKnqSFNjGs0MFH9no&state=67bb925ab02e031bce2f7636e291380f92c1a8909e959669" for 127.0.0.1 at 2018-07-12 16:58:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDQSyDxcq38yWSoOFMvYO3kkvP0xIATXaeHUWpnogSIuoTsIPTHxXOhc4V6T0wahTRbO1WL5mrp5iTbBvYbAJfVsRUdnoDNgVNoYDaHYACgi6cVHlAMZNd_m_VxGY00zjr8VMmID_R-l1qYV_HCRdMPCcSa5tkYKqTZ901riwZ1irsJKa9SYP9qs_xuYTsVUJ8zQRO01g5eOvCfQiuyXttlz-wI_o-YYmBdCgJHikMqwc6nBsNCfkIZRNYNr7w1TwRlendCBF3cJVdBiudxqiSdPUCHbUIeGUXI-5GrON-0dZUWAyhKnqSFNjGs0MFH9no", "state"=>"67bb925ab02e031bce2f7636e291380f92c1a8909e959669"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:58:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 51ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 16:59:02 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:59:06 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:59:06 -0500
+Started GET "/auth/facebook/callback?code=AQD4uvL_nLXNDGquQ1NZWwVdYnZTigIpbRlJ_c6cxOlZ5FtQVGORy_m3EMrZ2_xgRnVSdPKdr4_r_GxY2E_hV8L-atq_Z3WS0rxzvMKd8pr0_6B4w5fiKCRY8-0SIl-nELv76eqPQSxQ6JhZKyI4mxbmnhKxwW6gzR2DV21_Ptxs5hJA63_Di2kEEOHRzGH8QK6ahmyf0GQh5djcU7fqpGS2NOzBqxmli8EA6RzGftGQQ2PZ23mAy-lYUn2vUWaZaZANZujpyOg61jeMYKnlB09uDw3YDo7U-DWib8_xrtnHHA2FQ5OkxBqdeI8NgSlr-sU&state=0b11378aaf6c5490c2d701d5662bbd418c67150b7004542d" for 127.0.0.1 at 2018-07-12 16:59:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD4uvL_nLXNDGquQ1NZWwVdYnZTigIpbRlJ_c6cxOlZ5FtQVGORy_m3EMrZ2_xgRnVSdPKdr4_r_GxY2E_hV8L-atq_Z3WS0rxzvMKd8pr0_6B4w5fiKCRY8-0SIl-nELv76eqPQSxQ6JhZKyI4mxbmnhKxwW6gzR2DV21_Ptxs5hJA63_Di2kEEOHRzGH8QK6ahmyf0GQh5djcU7fqpGS2NOzBqxmli8EA6RzGftGQQ2PZ23mAy-lYUn2vUWaZaZANZujpyOg61jeMYKnlB09uDw3YDo7U-DWib8_xrtnHHA2FQ5OkxBqdeI8NgSlr-sU", "state"=>"0b11378aaf6c5490c2d701d5662bbd418c67150b7004542d"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:59:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:59:12 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-12 16:59:12 -0500
+Started GET "/auth/facebook/callback?code=AQCrg9a60dQqBWs_Gzv79PY_pSN1E29Me5DWLg9KX70Lns6k3RpAhj5aD3qYLbt4dTwOFZ0RzC9RYefPKCFpEX3khompNtv7G40sBcEjRi-2xw8YzTGJzUk727HlBDuqf-MtiEhP_vgYZkt_gPjCHVCmDe6cp0WI6anOyTu0pMCjrIcz2uuIpO85q1QhCUbnk3NiJraDI8b15QMyaaHjx713sGvGjtFavyH5IIVXrf9_2quEbwTmNOAt2iiDgIqsSJy_fGTvo-BKLcyV4vByk_mOPifNzWe3vDfngIlEbEc0TulFizaCoqCjwh5yTJ7bOWs&state=a067d838c7da14b17439db05cdf81dc9f6e37a45bd4cfd13" for 127.0.0.1 at 2018-07-12 16:59:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCrg9a60dQqBWs_Gzv79PY_pSN1E29Me5DWLg9KX70Lns6k3RpAhj5aD3qYLbt4dTwOFZ0RzC9RYefPKCFpEX3khompNtv7G40sBcEjRi-2xw8YzTGJzUk727HlBDuqf-MtiEhP_vgYZkt_gPjCHVCmDe6cp0WI6anOyTu0pMCjrIcz2uuIpO85q1QhCUbnk3NiJraDI8b15QMyaaHjx713sGvGjtFavyH5IIVXrf9_2quEbwTmNOAt2iiDgIqsSJy_fGTvo-BKLcyV4vByk_mOPifNzWe3vDfngIlEbEc0TulFizaCoqCjwh5yTJ7bOWs", "state"=>"a067d838c7da14b17439db05cdf81dc9f6e37a45bd4cfd13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-12 16:59:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-12 17:17:57 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 122ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
