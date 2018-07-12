@@ -37,6 +37,6 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(:title, :description, :funding_goal)
+    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal)
   end
 end
