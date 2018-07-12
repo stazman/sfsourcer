@@ -1,6 +1,6 @@
 current commit notepad:
 
-'allowing user pledges to be seen on user#show'
+'associating a new pledge with a current_user'
 
 'allowing project pledges to be seen on funding_project#show'
 

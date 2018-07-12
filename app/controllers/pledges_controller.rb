@@ -12,6 +12,7 @@ class PledgesController < ApplicationController
 
   def create
     @pledge = Pledge.new(pledge_params)
+    @pledge.user_id = current_user
     # new_pledge = @pledge = Pledge.new(pledge_params)
     if @pledge.valid?
       @pledge.save
