@@ -4670,3 +4670,360 @@ Processing by PledgesController#create as HTML
 Completed 200 OK in 58ms (Views: 45.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:29:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-15 17:30:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 212ms (Views: 200.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/q" for 127.0.0.1 at 2018-07-15 17:30:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"q"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+Completed 404 Not Found in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=q):
+  
+app/controllers/users_controller.rb:26:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2018-07-15 17:30:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 136ms (Views: 91.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-15 17:30:47 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/2" for 127.0.0.1 at 2018-07-15 17:30:49 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 63ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-15 17:30:51 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-15 17:30:54 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/A/I2LOTvQ182AXIikAnVKClpj0rto/m4q0x6D675nFKlOo9hFYJuc3K/QCait15oWdfj8QrZBIGtVM3gkxpw==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/pledges_controller.rb:17:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-15 17:31:41 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/A/I2LOTvQ182AXIikAnVKClpj0rto/m4q0x6D675nFKlOo9hFYJuc3K/QCait15oWdfj8QrZBIGtVM3gkxpw==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 50ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:32:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-15 17:46:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 307ms (Views: 290.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-15 17:46:47 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 83ms (Views: 38.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180707170145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707170145"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePledges (20180707173946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707173946_create_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707173946"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateFundingProjects (20180707174939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "funding_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707174939_create_funding_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707174939"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-15 22:48:54.689538"], ["updated_at", "2018-07-15 22:48:54.689538"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Fantastic Cats"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mFundingProject Create (0.4ms)[0m  [1m[32mINSERT INTO "funding_projects" ("title", "description", "funding_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Cats"], ["description", "A collection of short stories about cats with science fiction and fantasy settings."], ["funding_goal", 500], ["created_at", "2018-07-15 22:48:59.691380"], ["updated_at", "2018-07-15 22:48:59.691380"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frankjones@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frank Jones"], ["email", "frankjones@gmail.com"], ["password_digest", "$2a$10$9xeag8kBzPhdntVbYcWYLeaSEFOqRH4dT6L3IBCX/SZ7IK0RXf5xu"], ["created_at", "2018-07-15 22:48:59.778749"], ["updated_at", "2018-07-15 22:48:59.778749"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mPledge Create (0.4ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 10], ["user_id", 1], ["funding_project_id", 1], ["created_at", "2018-07-15 22:48:59.809952"], ["updated_at", "2018-07-15 22:48:59.809952"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for 127.0.0.1 at 2018-07-15 17:50:36 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 265ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-15 17:50:42 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 99ms (Views: 59.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-15 17:51:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vgIKldz+V8auJTz2iAIq1EDQn2ljqyip0Jg+eFX6+9ASapOMtDkfnaVerdWHLtiIDpMTdnUyu/QB0g94VjQ/Pg==", "user"=>{"name"=>"z", "email"=>"z@z.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "z@z.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "z@z.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "z"], ["email", "z@z.com"], ["password_digest", "$2a$10$9suU34NzRxuXBBV1RKA0zuL/5KdngZuiu3jOETaWlXCGB5.d1.w8K"], ["created_at", "2018-07-15 22:51:18.501975"], ["updated_at", "2018-07-15 22:51:18.501975"]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 86ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-07-15 17:51:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 91ms (Views: 77.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-15 17:51:22 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 59ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-15 17:51:25 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:23
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-15 17:51:28 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 57ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-15 17:51:33 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i7/3FoQ4hdW/rmNUjrQWINVtNoKSv7EM/rHyg+AX7UK5ZZudEOeTB21qKLeu9z3IYWo9ZFkBxqMtIZMInuQzfA==", "pledge"=>{"amount"=>"10"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:26
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 108557ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:56:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
