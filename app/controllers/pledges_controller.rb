@@ -1,5 +1,5 @@
 class PledgesController < ApplicationController
-  before_action :require_login
+  # before_action :require_login
   
   def index
     @pledges = Pledge.all
@@ -8,11 +8,19 @@ class PledgesController < ApplicationController
 
   def new
     @pledge = Pledge.new
+        new_pledge = User.where(:id == @pledge.user_id)
+    @pledge.user_id = new_pledge
+
   end
 
   def create
+    
     @pledge = Pledge.new(pledge_params)
-    @pledge.user_id = current_user
+
+    
+    
+    # need to make a new pledge and 
+    # @pledge.user_id = current_user
     # new_pledge = @pledge = Pledge.new(pledge_params)
     if @pledge.valid?
       @pledge.save
@@ -42,7 +50,7 @@ private
     params.require(:pledge).permit(:amount)
   end
 
-  def require_login
-    return head(:forbidden) unless session.include? :user_id   
-  end
+  # def require_login
+  #   return head(:forbidden) unless session.include? :user_id   
+  # end
 end
