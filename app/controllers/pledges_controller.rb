@@ -8,15 +8,17 @@ class PledgesController < ApplicationController
 
   def new
     @pledge = Pledge.new
-        new_pledge = User.where(:id == @pledge.user_id)
-    @pledge.user_id = new_pledge
-
+    new_user_pledge = User.where(:id == @pledge.user_id)
+    @pledge.user_id = new_user_pledge
+    new_pledge_fp = FundingProject.where(:id == @pledge.funding_project_id)
   end
 
   def create
-    
+    @user = current_user
     @pledge = Pledge.new(pledge_params)
+    @pledge.user_id = session[:user_id]
 
+    binding.pry
     
     
     # need to make a new pledge and 
