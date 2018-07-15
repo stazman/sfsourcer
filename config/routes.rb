@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
 
   resources :users
-  resources :pledges
+  resources :pledges, except: :index
   resources :funding_projects
 
   #can only destroy a funding project as admin
