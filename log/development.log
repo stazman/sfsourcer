@@ -4589,3 +4589,84 @@ Processing by PledgesController#create as HTML
 Completed 200 OK in 44ms (Views: 38.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:20:08 -0500
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `pledges' for nil:NilClass):
+    1: <h1>Your Pledges</h1>
+    2: <p><% @user.pledges.each do |p| %>
+    3:   <li><%= link_to p.amount, pledge_path(p) %></li>
+    4: <% end %>
+    5: </p>
+  
+app/views/pledges/index.html.erb:2:in `_app_views_pledges_index_html_erb__2467933365686758598_70179016107920'
+Started GET "/pledges/1" for 127.0.0.1 at 2018-07-15 17:20:15 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:35
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:1
+  Rendered pledges/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 90ms (Views: 68.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-15 17:20:19 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 60ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-15 17:20:22 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nGva8sWOHypc4Vf9hyIGG+ngfvN6aeJ7aHL1VrBWd5eGTZyo9FwJ6IIFHz5MHpEIeQN5NtwNNQ86/rVWQ+dMA==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:21:11 -0500
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `pledges' for nil:NilClass):
+    1: <h1>Your Pledges</h1>
+    2: <p><% @user.pledges.each do |p| %>
+    3:   <li><%= link_to p.amount, pledge_path(p) %></li>
+    4: <% end %>
+    5: </p>
+  
+app/views/pledges/index.html.erb:2:in `_app_views_pledges_index_html_erb__2467933365686758598_70179017591900'
+Started GET "/pledges" for 127.0.0.1 at 2018-07-15 17:23:01 -0500
+Processing by PledgesController#index as HTML
+  Rendering pledges/index.html.erb within layouts/application
+  Rendered pledges/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-15 17:26:34 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 28.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-15 17:26:38 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Pfvp4yBOyCvb5mqiMAxe0Bj6H55J3dzZZFECZP0FIZ0n3a+5EZze6QUCImH7MMnDiBkYW++5C6023UJkDrQaA==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
