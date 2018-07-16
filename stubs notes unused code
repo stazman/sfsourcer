@@ -22,6 +22,18 @@ To Do:
 
 Unused Code:
 
+    current_funding_project = FundingProject.where(@pledge.user_id == current_user)
+binding.pry
+    project_pledges = current_funding_project.pledges 
+
+    new_pledge_save = @pledge 
+    
+    project_pledges << new_pledge_save 
+
+    @pledge = new_pledge_save
+
+
+
 <h2>Make a pledge for this project:</h2><br>
 <%= form_for @funding_project do |f| %>
 <h4>Pledge Amount (in U.S. dollars) <%= f.text_field :funding_project_pledge %></h4>
