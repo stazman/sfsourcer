@@ -11,6 +11,7 @@ current commit notepad:
 To Do:
 
 [  ] Make sure all validations work
+[  ] Make sure login works
 [  ] Finish Facebook signup
 [  ] Add custom writer to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
 [  ] Add JS snippet to prevent backsies
@@ -27,3 +28,33 @@ Unused Code:
 <%= f.submit "Make a Pledge"%>
 <% end %>
 
+<%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
+
+<%# if @pledge.user_id == @funding_project.id %>
+<%# make a form that lets you pledge right there
+set @pledge form for
+text_box for amount
+makes use of @funding_project --- hidden param?
+    or make it a collection nested hash
+user_id assocation is easy, from sessions
+direct to pledges#show %>
+
+<%= form_for(@pledge) do |f| %> %>
+<%# <%= @funding_project.id = @pledge.funding_project_id %> %>
+<%= f.text_field :amount %>
+<%= f.hidden :funding_project_id %>
+<%= f.submit "Make a Pledge"%>
+<% end %>
+
+
+
+<%# <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", new_pledge_path %></h2><br> %>
+<%# <%= form_for @funding_project do |f| %> %>
+<%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
+<%# <%= f.submit "Make a Pledge"%> %>
+<%# <% end %> %>
+
+
+
+
+<%# <%= link_to '/pledges/new', pledges_path%> %>
