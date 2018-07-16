@@ -16,9 +16,8 @@
 <% end %>
 
 <%= form_for @pledge do |f| %>
-
-collection of funding projects to choose from. It's not pretty but JS will improve it
-
+<%= f.label "Choose the project" %>
+<%= f.collection_select :funding_project, FundingProject.all, :id, :title %><br>
 <%= f.label :amount %>
 <%= f.text_field :amount %>
 <%= f.submit "Create Pledge" %>
