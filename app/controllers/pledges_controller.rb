@@ -3,18 +3,17 @@ class PledgesController < ApplicationController
   
   def index
     @pledges = Pledge.all
-    #must be associated with user and with project
   end
 
   def new
     @pledge = Pledge.new
-    new_user_pledge = User.where(:id == @pledge.user_id)
-    @pledge.user_id = new_user_pledge    
+    # new_user_pledge = User.where(:id == @pledge.user_id)
+    # @pledge.user_id = new_user_pledge    
   end
 
   def create
+    @pledge.user_id = session[:user_id]
     @pledge = Pledge.new(pledge_params)
-    # @pledge.user_id = session[:user_id]
     if @pledge.valid?
       @pledge.save
       redirect_to pledge_path(@pledge)
@@ -40,7 +39,7 @@ class PledgesController < ApplicationController
 private
 
   def pledge_params
-    params.require(:pledge).permit(:amount, funding_project_ids: [])
+    params.require(:pledge).permit(:amount, :funding_project_title)
   end
 
   # def require_login
