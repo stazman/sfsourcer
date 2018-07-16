@@ -40,7 +40,7 @@ class PledgesController < ApplicationController
 private
 
   def pledge_params
-    params.require(:pledges).permit(:amount)
+    params.require(:pledge).permit(:amount, funding_project_ids: [])
   end
 
   # def require_login
