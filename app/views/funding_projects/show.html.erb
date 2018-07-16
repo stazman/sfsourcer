@@ -13,6 +13,7 @@ direct to pledges#show %>
 
 <%= form_for(:pledges, url: pledge_path) do |f| %>
 <%= f.text_field :amount %>
+<>
 <%# <%= f.hidden :funding_project_id %> %>
 <%= f.submit "Make a Pledge"%>
 <% end %>

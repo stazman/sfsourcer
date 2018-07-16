@@ -14,9 +14,15 @@ class PledgesController < ApplicationController
 
   def create
     # @user = current_user
-    new_pledge_fp = FundingProject.where(:id == @pledge.funding_project_id)
-    @pledge = new_pledge_fp 
-    @pledge = Pledge.new(pledge_params)
+    # new_pledge_fp = FundingProject.where(:id == @pledge.funding_project_id)
+    # @pledge = new_pledge_fp 
+    @pledge = Pledge.new({
+      {
+        project_pledge: params[:funding_project][:project_pledge],
+        
+       }
+      }, pledge_params)
+      
     @pledge.user_id = session[:user_id]
 
     # binding.pry
@@ -50,7 +56,7 @@ class PledgesController < ApplicationController
 private
 
   def pledge_params
-    params.require(:pledge).permit(:amount)
+    params.require(:pledge).permit(:product_pledges, :amount)
   end
 
   # def require_login

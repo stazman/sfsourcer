@@ -1,6 +1,7 @@
 class Pledge < ApplicationRecord
     belongs_to :user
     belongs_to :funding_project
+    accepts_nested_attributes_for :funding_projects
 
     validates_presence_of :amount
     validates :amount, numericality: true
