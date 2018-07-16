@@ -11,9 +11,9 @@ makes use of @funding_project --- hidden param?
 user_id assocation is easy, from sessions
 direct to pledges#show %>
 
-<%= form_for(:pledges, url: pledge_path) do |f| %>
+<%= form_for(@pledge) do |f| %>
+<%# <%= @funding_project.id = @pledge.funding_project_id %> %>
 <%= f.text_field :amount %>
-<>
 <%# <%= f.hidden :funding_project_id %> %>
 <%= f.submit "Make a Pledge"%>
 <% end %>
