@@ -13,16 +13,17 @@ class PledgesController < ApplicationController
   end
 
   def create
+    
     # @user = current_user
     # new_pledge_fp = FundingProject.where(:id == @pledge.funding_project_id)
     # @pledge = new_pledge_fp 
-    @pledge = Pledge.new({
-      {
-        project_pledge: params[:funding_project][:project_pledge],
-        
-       }
-      }, pledge_params)
-      
+    
+    @pledge = Pledge.new(pledge_params)
+
+    # @pledge.funding_projects << @pledge
+#  binding.pry
+    # @pledge = pledge
+    
     @pledge.user_id = session[:user_id]
 
     # binding.pry
@@ -33,12 +34,12 @@ class PledgesController < ApplicationController
     # new_pledge = @pledge = Pledge.new(pledge_params)
     if @pledge.valid?
       @pledge.save
-      redirect_to pledges_path(@pledge)
+      redirect_to pledge_path(@pledge)
     else
       render :new
     end
+    end
       
-  end
 
   def show
     @pledge = Pledge.find(params[:id])
@@ -56,7 +57,7 @@ class PledgesController < ApplicationController
 private
 
   def pledge_params
-    params.require(:pledge).permit(:product_pledges, :amount)
+    params.require(:pledges).permit(:amount)
   end
 
   # def require_login
