@@ -14,12 +14,12 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
 
+    
     @funding_project.save
 
     fp_pledges = @funding_project.pledges
     
-  whenever you make a new pledge, you shovel it into the array of a given funding project's array of pledges
-    
+  
     
     
     # @pledge = Pledge.where(:funding_project_id == @funding_project.id)

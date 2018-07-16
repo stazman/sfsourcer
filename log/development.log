@@ -6784,3 +6784,819 @@ SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/contr
 app/controllers/funding_projects_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
 app/controllers/funding_projects_controller.rb:20: unterminated string meets end of file
 app/controllers/funding_projects_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-07-16 15:43:01 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 335ms (Views: 322.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-16 15:43:23 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 109ms (Views: 68.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-16 15:43:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (1.5ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (1.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 150ms (Views: 118.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 15:43:32 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...u make a new pledge, you shovel it into the array of a given...
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:21: unterminated string meets end of file
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/funding_projects_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/controllers/funding_projects_controller.rb:21: unterminated string meets end of file
+app/controllers/funding_projects_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 15:55:41 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:22: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...u make a new pledge, you shovel it into the array of a given...
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:22: unterminated string meets end of file
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/funding_projects_controller.rb:22: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/controllers/funding_projects_controller.rb:22: unterminated string meets end of file
+app/controllers/funding_projects_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-07-16 15:55:55 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-16 15:56:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (1.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (1.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 104ms (Views: 67.0ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 15:56:17 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 61ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-16 15:56:19 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 15:56:20 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 15:56:33 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lA4CK3PAKv/JbdsK1f+VPaKVUxlmPa6GabW9ieONvQcHkLxZYkMaYhAckIHT391XdHc5JnFdx4f1DpqAg5Be6Q==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pledges):
+  
+app/controllers/pledges_controller.rb:75:in `pledge_params'
+app/controllers/pledges_controller.rb:26:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 15:56:57 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lA4CK3PAKv/JbdsK1f+VPaKVUxlmPa6GabW9ieONvQcHkLxZYkMaYhAckIHT391XdHc5JnFdx4f1DpqAg5Be6Q==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Unsupported argument type: 4 (Fixnum)):
+  
+app/controllers/pledges_controller.rb:36:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 15:58:07 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lA4CK3PAKv/JbdsK1f+VPaKVUxlmPa6GabW9ieONvQcHkLxZYkMaYhAckIHT391XdHc5JnFdx4f1DpqAg5Be6Q==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+ArgumentError (Unsupported argument type: 4 (Fixnum)):
+  
+app/controllers/pledges_controller.rb:36:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 15:59:02 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lA4CK3PAKv/JbdsK1f+VPaKVUxlmPa6GabW9ieONvQcHkLxZYkMaYhAckIHT391XdHc5JnFdx4f1DpqAg5Be6Q==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (2.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" ORDER BY "funding_projects"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mPledge Create (2.6ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 300], ["user_id", 4], ["funding_project_id", 1], ["created_at", "2018-07-16 20:59:02.241541"], ["updated_at", "2018-07-16 20:59:02.241541"]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+Redirected to http://localhost:3000/pledges/2
+Completed 302 Found in 78ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/pledges/2" for 127.0.0.1 at 2018-07-16 15:59:02 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:60
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:1
+  Rendered pledges/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-16 15:59:36 -0500
+Processing by FundingProjectsController#new as HTML
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-16 15:59:58 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QhmfBYUmSdfCmPOxHAPebZEKdQkKUty5Tfaxp4tcP4lz/XXfBxfHeKm60xCn6JqGxXueRA2h8DRJSoYRyo55uw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"Jelly jamfest, so sweet.", "funding_goal"=>"4000"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:18
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:18
+  [1m[36mFundingProject Create (0.7ms)[0m  [1m[32mINSERT INTO "funding_projects" ("title", "description", "funding_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Jelly jam"], ["description", "Jelly jamfest, so sweet."], ["funding_goal", 4000], ["created_at", "2018-07-16 20:59:58.787517"], ["updated_at", "2018-07-16 20:59:58.787517"]]
+  ↳ app/controllers/funding_projects_controller.rb:18
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:18
+Redirected to http://localhost:3000/funding_projects/2
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/funding_projects/2" for 127.0.0.1 at 2018-07-16 15:59:58 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:00:02 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:00:07 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HuWEAffh+nhKSMPgUNIw8CRSMJTAdhBMLY2Zga0eNoGNezpz5mLK5ZM5iGtW8nia8rBaq9cWeU2xNr6IzQPVbw==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" ORDER BY "funding_projects"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mPledge Create (0.7ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 20], ["user_id", 4], ["funding_project_id", 2], ["created_at", "2018-07-16 21:00:07.661691"], ["updated_at", "2018-07-16 21:00:07.661691"]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+Redirected to http://localhost:3000/pledges/3
+Completed 302 Found in 19ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/pledges/3" for 127.0.0.1 at 2018-07-16 16:00:07 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPledge Load (0.5ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:60
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:1
+  Rendered pledges/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-16 16:00:32 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 77ms (Views: 69.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 16:00:34 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:00:40 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:00:43 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fDFhiVAWS0M1SXf2iYYnHGlj5r2jo+VTTrNrxNMjNuLvr9/7QZV73uw4PH2Ppm92v4GMgrTDjFLSCEzNsz7VDA==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" ORDER BY "funding_projects"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mPledge Create (0.9ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 300], ["user_id", 4], ["funding_project_id", 2], ["created_at", "2018-07-16 21:00:43.363533"], ["updated_at", "2018-07-16 21:00:43.363533"]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+Redirected to http://localhost:3000/pledges/4
+Completed 302 Found in 21ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/pledges/4" for 127.0.0.1 at 2018-07-16 16:00:43 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:60
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:1
+  Rendered pledges/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 16:01:07 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-16 16:01:10 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:01:12 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 89ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:01:15 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CYK/97JGZTdRl0PxnquX0y+WSHMaDt46PRSDmq9ekHKaHAGFo8VVqojmCHqYi9+5+XQiTA1utzuhr6STz0NznA==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" ORDER BY "funding_projects"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[36mPledge Create (0.5ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 20], ["user_id", 4], ["funding_project_id", 2], ["created_at", "2018-07-16 21:01:15.747901"], ["updated_at", "2018-07-16 21:01:15.747901"]]
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:51
+Redirected to http://localhost:3000/pledges/5
+Completed 302 Found in 23ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/pledges/5" for 127.0.0.1 at 2018-07-16 16:01:15 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:60
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:1
+  Rendered pledges/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 73ms (Views: 61.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-16 16:01:32 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 16:02:00 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 57ms (Views: 46.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-16 16:02:02 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:02:03 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 31.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:02:07 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DFj+khLPiweJsFbUNW4w9Y2TFU3+OBm+uuxfKJaNBN3r92IWcgOscdXitBW9fCpANQmaiCYiWdmUJZ1wkfX/Q==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.4ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fa29f9fb908>):
+  
+app/controllers/pledges_controller.rb:38:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:03:00 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DFj+khLPiweJsFbUNW4w9Y2TFU3+OBm+uuxfKJaNBN3r92IWcgOscdXitBW9fCpANQmaiCYiWdmUJZ1wkfX/Q==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.9ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fa297c58ed8>):
+  
+app/controllers/pledges_controller.rb:38:in `create'
+Started GET "/" for 127.0.0.1 at 2018-07-16 16:04:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 300ms (Views: 282.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-16 16:04:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 181ms (Views: 115.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-16 16:04:48 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-16 16:04:49 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 90ms (Views: 84.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:04:50 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 100ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:04:53 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"efwU4vxuTt1h0qLCSZPWyFSGRN0Pi3PaKhWBLLnO0tXqYqqQ7e1+QLij6UlPs56igmQu4hjrGtu2rqYl2dMxOw==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.6ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad18775908>):
+  
+app/controllers/pledges_controller.rb:38:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:06:34 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"efwU4vxuTt1h0qLCSZPWyFSGRN0Pi3PaKhWBLLnO0tXqYqqQ7e1+QLij6UlPs56igmQu4hjrGtu2rqYl2dMxOw==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 2.0ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad185cf388>):
+  
+app/controllers/pledges_controller.rb:48:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:07:33 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"efwU4vxuTt1h0qLCSZPWyFSGRN0Pi3PaKhWBLLnO0tXqYqqQ7e1+QLij6UlPs56igmQu4hjrGtu2rqYl2dMxOw==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 2.6ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad1bbecfb0>):
+  
+app/controllers/pledges_controller.rb:53:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:09:43 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"efwU4vxuTt1h0qLCSZPWyFSGRN0Pi3PaKhWBLLnO0tXqYqqQ7e1+QLij6UlPs56igmQu4hjrGtu2rqYl2dMxOw==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 81ms (Views: 43.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:10:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:13:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:13:12 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VEEk+5ym2cfRn5phaOlUjUM/BBJXMOYFM605x24jUCxlpc4hHpdXaLq9usDTAhBmF07vX1DDyog3EQ5xL/EWHg==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 100ms (Views: 49.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:13:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-16 16:13:55 -0500
+Processing by PledgesController#new as HTML
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 109ms (Views: 67.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:13:59 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7eFG36JjF9XUVyupJiOvq7DWteJEWTM/ZilRsFPILtyU2/B/LgC8DxzfA8fc8pV+rKxmo7iSEH5JJLwgJ1miQ==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 77ms (Views: 44.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:14:01 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RcqY9It76B1WpvgWIRII2OzGWknsfOHrkj1+ArwWeV50LnIuCUpmsj2E2Lea+UwzuLexBOuPzWaWgUm0/cQ/bA==", "pledge"=>{"amount"=>"300"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering pledges/new.html.erb within layouts/application
+  Rendered pledges/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 73ms (Views: 64.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:14:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:14:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pledges" for 127.0.0.1 at 2018-07-16 16:14:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pledges"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:14:57 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7eFG36JjF9XUVyupJiOvq7DWteJEWTM/ZilRsFPILtyU2/B/LgC8DxzfA8fc8pV+rKxmo7iSEH5JJLwgJ1miQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 2.4ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad1a9b78b8>):
+  
+app/controllers/pledges_controller.rb:46:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:15:51 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7eFG36JjF9XUVyupJiOvq7DWteJEWTM/ZilRsFPILtyU2/B/LgC8DxzfA8fc8pV+rKxmo7iSEH5JJLwgJ1miQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.0ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad1b900f18>):
+  
+app/controllers/pledges_controller.rb:46:in `create'
+Started POST "/pledges" for 127.0.0.1 at 2018-07-16 16:15:56 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7eFG36JjF9XUVyupJiOvq7DWteJEWTM/ZilRsFPILtyU2/B/LgC8DxzfA8fc8pV+rKxmo7iSEH5JJLwgJ1miQ==", "pledge"=>{"amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `pledges' for #<FundingProject::ActiveRecord_Relation:0x007fad1aceefb8>):
+  
+app/controllers/pledges_controller.rb:46:in `create'
