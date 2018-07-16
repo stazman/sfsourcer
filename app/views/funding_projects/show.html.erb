@@ -3,8 +3,23 @@
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
 <%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
 
-        
-<h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", new_pledge_path %></h2><br>
+<%# make a form that lets you pledge right there
+set @pledge form for
+text_box for amount
+makes use of @funding_project --- hidden param?
+    or make it a collection nested hash
+user_id assocation is easy, from sessions
+direct to pledges#show %>
+
+<%= form_for(:pledges, url: pledge_path) do |f| %>
+<%= f.text_field :amount %>
+<%# <%= f.hidden :funding_project_id %> %>
+<%= f.submit "Make a Pledge"%>
+<% end %>
+
+
+
+<%# <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", new_pledge_path %></h2><br> %>
 <%# <%= form_for @funding_project do |f| %> %>
 <%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
 <%# <%= f.submit "Make a Pledge"%> %>
