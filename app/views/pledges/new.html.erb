@@ -17,7 +17,7 @@
 
 <%= form_for @pledge do |f| %>
 <%= f.label "Choose the project" %>
-<%= f.collection_select :funding_project_ids, FundingProject.all, :id, :title %><br>
+<%= f.collection_select :funding_project, FundingProject.all, :id, :title %><br>
 <%= f.label :amount %>
 <%= f.text_field :amount %>
 <%= f.submit "Create Pledge" %>
