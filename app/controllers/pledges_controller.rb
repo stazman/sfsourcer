@@ -8,11 +8,13 @@ class PledgesController < ApplicationController
 
   def new
     @pledge = Pledge.new
+    
     new_user_pledge = User.where(:id == @pledge.user_id)
+    
     @pledge.user_id = new_user_pledge
     
     
-    @pledge.funding_project_id = Pledge.where
+
   end
 
   def create
@@ -31,7 +33,17 @@ class PledgesController < ApplicationController
 
     # binding.pry
     
+    current_funding_project = FundingProject.where(current_user === @pledge.user_id)
+
+    project_pledges = current_funding_project.pledges 
+
+    new_pledge_save = @pledge 
     
+    project_pledges << new_pledge_save 
+
+    @pledge = new_pledge_save
+
+
     # need to make a new pledge and 
     # @pledge.user_id = current_user
     # new_pledge = @pledge = Pledge.new(pledge_params)
@@ -60,7 +72,7 @@ class PledgesController < ApplicationController
 private
 
   def pledge_params
-    params.require(:pledges).permit(:amount)
+    params.require(:pledge).permit(:amount)
   end
 
   # def require_login
