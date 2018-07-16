@@ -13,7 +13,7 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
     @funding_project.save
-    @pledge = Pledge.where(:funding_project_id == @funding_project.id)
+    # @pledge = Pledge.where(:funding_project_id == @funding_project.id)
     # pledge = Pledge.create(params[:amount])
     # @funding_project.pledges < pledge
     redirect_to funding_project_path(@funding_project)#create and save new FP instance
