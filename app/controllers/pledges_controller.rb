@@ -10,6 +10,9 @@ class PledgesController < ApplicationController
     @pledge = Pledge.new
     new_user_pledge = User.where(:id == @pledge.user_id)
     @pledge.user_id = new_user_pledge
+    
+    
+    @pledge.funding_project_id = Pledge.where
   end
 
   def create

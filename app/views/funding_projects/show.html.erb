@@ -1,32 +1,7 @@
 <h1><%= @funding_project.title %></h1><br>
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
-<%# <p>Amount Pledged: <%= @funding_project.funding_goal %> </p><br> %>
 
-<%# make a form that lets you pledge right there
-set @pledge form for
-text_box for amount
-makes use of @funding_project --- hidden param?
-    or make it a collection nested hash
-user_id assocation is easy, from sessions
-direct to pledges#show %>
+Check out refactoring views with helpers lab for possible way
 
-<%= form_for(@pledge) do |f| %>
-<%# <%= @funding_project.id = @pledge.funding_project_id %> %>
-<%= f.text_field :amount %>
-<%# <%= f.hidden :funding_project_id %> %>
-<%= f.submit "Make a Pledge"%>
-<% end %>
-
-
-
-<%# <h2><%= link_to "Click here to make a pledge for this project (in U.S. dollars)", new_pledge_path %></h2><br> %>
-<%# <%= form_for @funding_project do |f| %> %>
-<%# <h4>Pledge Amount  <%= f.text_field :amount %></h4> %>
-<%# <%= f.submit "Make a Pledge"%> %>
-<%# <% end %> %>
-
-
-
-
-<%# <%= link_to '/pledges/new', pledges_path%> %>
+Make a link to pledges#new and list of projects
