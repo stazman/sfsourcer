@@ -45,7 +45,8 @@ private
     params.require(:pledge).permit(:amount, :funding_project_title, :user_id, :funding_project_id)
   end
 
-  def require_login
-    return head(:forbidden) unless session.include? :user_id   
+  unless logged_in?
+    flash[:error] = "You must be logged in to access this section"
+    redirect_to new_login_url
   end
 end
