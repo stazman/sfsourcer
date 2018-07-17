@@ -6,13 +6,13 @@ class SessionsController < ApplicationController
 
         # raise params.inspect
         
-        user = User.find_by(params[:email])
-        user = user.try(:authenticate, params[:user][:password])
-# raise params.inspect
-        if user && user.authenticate(:password => params[:user][:password]) && user.valid?
+
+        user = User.find_by(email: params[:email])
+        authenticated = user.try(:authenticate, params[:password])
+        # return head(:forbidden) unless authenticated
+        if user && user.authenticated && user.valid?
         # if auth = request.env["omniauth.auth"]
             session[:user_id] = user.id
-            # @user = user
             redirect_to user_path(user)
         else
             redirect_to(controller: 'sessions', action: 'new')
