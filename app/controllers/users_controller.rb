@@ -10,10 +10,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
-    # raise params.inspect
-    #should I create separate logic in the same method for omniauth? a different method?
-    
+  def create  
     @user = User.new(user_params)
     if @user.valid?
       @user.save
@@ -26,12 +23,7 @@ class UsersController < ApplicationController
 
   def show
       @user = User.find(params[:id]) 
-            # user_pledges = @user.pledges
       @pledges = Pledge.where(:user_id == @user.id)
-      # @pledge_funding_project = FundingProject.where()
-      # @funding_projects = FundingProject.where(Pledge.funding_project_id == @funding_project.id)
-# if require_login
-      # redirect_to login_path
   end
 
   def edit
@@ -57,32 +49,3 @@ class UsersController < ApplicationController
     end
   end
 end
-
-
-# def create
-#   @user = User.find_or_create_by(uid: auth['uid']) do |u|
-#     u.name = auth['info']['name']
-#     u.email = auth['info']['email']
-#     u.image = auth['info']['image']
-#   end
-
-#   session[:user_id] = @user.id
-
-#   render 'welcome/home'
-# end
-
-# private
-
-# def auth
-#   request.env['omniauth.auth']
-# end
-
-# <% if session[:user_id] %>
-#   <h1><%= @user.name %></h1>
-#   <h2>Email: <%= @user.email %></h2>
-#   <h2>Facebook UID: <%= @user.uid %></h2>
-#   <img src="<%= @user.image %>">
-# <% else %>
-#   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-# <% end %>
-
