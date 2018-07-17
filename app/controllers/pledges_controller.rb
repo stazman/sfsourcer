@@ -7,23 +7,19 @@ class PledgesController < ApplicationController
 
   def new
     @pledge = Pledge.new
-    # binding.pry
-    # new_user_pledge = User.where(:id == @pledge.user_id)
-    # @pledge.user_id = new_user_pledge    
   end
 
   def create
     @pledge = Pledge.new(pledge_params)
     @pledge.user_id = current_user.id
     @pledge.funding_project_id = params[:pledge][:funding_project_id] 
-    # binding.pry
     if @pledge.valid?
       @pledge.save
       redirect_to pledge_path(@pledge)
     else
       render :new
     end
-    end
+  end
       
 
   def show
@@ -45,7 +41,7 @@ private
     params.require(:pledge).permit(:amount, :funding_project_title, :user_id, :funding_project_id)
   end
 
-  def :require_login
+  def require_login
     unless logged_in?
       flash[:error] = "You must be logged in to access this section"
       redirect_to new_login_url
