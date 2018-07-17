@@ -1,4 +1,8 @@
 class FundingProjectsController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:index, :show]
+
+  
   # before_save :make_titlecase
   
 
@@ -47,5 +51,12 @@ class FundingProjectsController < ApplicationController
 
   def funding_project_params
     params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal)
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to new_login_url
+    end
   end
 end

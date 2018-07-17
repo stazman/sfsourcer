@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  
+  before_action :require_login
+  skip_before_action :require_login, only: [:new, :create]
+
   def index
     @users = User.all
   end
@@ -48,9 +50,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password)
   end
 
-  # def require_login
-  #   session[:user_id] = @user.id
-  # end
+  unless logged_in?
+    flash[:error] = "You must be logged in to access this section"
+    redirect_to new_login_url
+  end
 end
 
 

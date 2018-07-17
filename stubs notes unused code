@@ -1,6 +1,6 @@
 current commit notepad:
 
-'associating a new pledge with a current_user'
+'adding logged_in? method for site security'
 
 
 
