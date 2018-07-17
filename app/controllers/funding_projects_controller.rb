@@ -29,7 +29,7 @@ class FundingProjectsController < ApplicationController
   end
 
   def show
-    @funding_project = FundingProject.find(params[:id])
+    @funding_project = FundingProject.find_by(id: params[:id])
   end
 
   def edit
