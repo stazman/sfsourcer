@@ -1,6 +1,6 @@
 current commit notepad:
 
-'adding logged_in? and before_action filter lifecycle method for site security'
+'cleaning up code/checking for Facebook login functionality'
 
 
 
@@ -10,6 +10,7 @@ current commit notepad:
 
 To Do:
 
+[  ] refactor for Model.find
 [  ] Make sure all validations work
 [  ] Make sure login works
 [  ] Finish Facebook signup
@@ -21,6 +22,44 @@ To Do:
 
 
 Unused Code:
+
+   
+         # new_user_pledge = User.where(:id == @pledge.user_id)
+    # @pledge.user_id = new_user_pledge    
+
+    
+    
+    # @pledge = Pledge.where(:funding_project_id == @funding_project.id)
+    # pledge = Pledge.create(params[:amount])
+    # @funding_project.pledges < pledge
+
+   # def create
+#   @user = User.find_or_create_by(uid: auth['uid']) do |u|
+#     u.name = auth['info']['name']
+#     u.email = auth['info']['email']
+#     u.image = auth['info']['image']
+#   end
+
+#   session[:user_id] = @user.id
+
+#   render 'welcome/home'
+# end
+
+# private
+
+# def auth
+#   request.env['omniauth.auth']
+# end
+
+# <% if session[:user_id] %>
+#   <h1><%= @user.name %></h1>
+#   <h2>Email: <%= @user.email %></h2>
+#   <h2>Facebook UID: <%= @user.uid %></h2>
+#   <img src="<%= @user.image %>">
+# <% else %>
+#   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+# <% end %>
+
 
     current_funding_project = FundingProject.where(@pledge.user_id == current_user)
 binding.pry
