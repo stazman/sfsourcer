@@ -1,6 +1,6 @@
 current commit notepad:
 
-'adding logged_in? method for site security'
+'adding logged_in? and before_action filter lifecycle method for site security'
 
 
 
