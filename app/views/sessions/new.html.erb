@@ -1,6 +1,11 @@
 
 
 
+<% if flash[:alert] %>
+    <%= flash[:alert] %>
+  <% end %><br><br>
+
+
 <h1>Log In</h1>
  <%= form_for(:sessions, url: '/login') do |f| %>
 
