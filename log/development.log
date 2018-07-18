@@ -12786,3 +12786,123 @@ Completed 500 Internal Server Error in 100ms (ActiveRecord: 2.6ms)
 RuntimeError (#<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1537051014 token="EAAPSKDH8TfUBAOxWZCrMTCYcqWymsJidm871I8qS3Ryuw6HK7ronVqetHeTDEy8G5xdyCJdBfnYkM5eO2LZBDRFiLdW2kG2XTr1sJoi4H9sqPVEQhDGlByZCchVkiDcVZCQ22bScPhiZAplrqRHpR1JDqvRvbLmTGyqZA1SM2JZBQZDZD"> extra=#<OmniAuth::AuthHash raw_info=#<OmniAuth::AuthHash email="cadistasio@gmail.com" id="10155675744162263" name="Christopher DiStasio">> info=#<OmniAuth::AuthHash::InfoHash email="cadistasio@gmail.com" image="http://graph.facebook.com/v2.10/10155675744162263/picture" name="Christopher DiStasio"> provider="facebook" uid="10155675744162263">):
   
 app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/" for 127.0.0.1 at 2018-07-18 11:47:59 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 343ms (Views: 329.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-18 11:48:08 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 71ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-18 11:48:14 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-07-18 11:48:14 -0500
+Started GET "/auth/facebook/callback?code=AQBkGwN9pB1yLYMdMaAz-Rdmx7SWgGCy9mUrsiW3v3cKZQWFz-1jFLSg2GcwRtw2BNVC0EzfsiDs4-8HGrNl60RPfUKll5I_c4_1jTBx0kPn0yIuTaXH9XJrRe4er4oact0Vhm-EXDTgbdFPRbGbBqkmw2UzXnfPN4pmtCXITG9C0HRFeNf8P8EVL3Ut5tb_-tNcLSOQEDbh7NYfLFCgoh3QVpFXTXShz1vGyfrz046TG_BrZUa4ePNK9u-Q9zH42YEJMTce93kc2UEnCUz33bm0Le4Ni_uWL2mybTarydRLqh114vn2TDszFwOAcvyY678&state=82f49363d7decf2607c9de3921fc8d7e1e68c0e86decca96" for 127.0.0.1 at 2018-07-18 11:48:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBkGwN9pB1yLYMdMaAz-Rdmx7SWgGCy9mUrsiW3v3cKZQWFz-1jFLSg2GcwRtw2BNVC0EzfsiDs4-8HGrNl60RPfUKll5I_c4_1jTBx0kPn0yIuTaXH9XJrRe4er4oact0Vhm-EXDTgbdFPRbGbBqkmw2UzXnfPN4pmtCXITG9C0HRFeNf8P8EVL3Ut5tb_-tNcLSOQEDbh7NYfLFCgoh3QVpFXTXShz1vGyfrz046TG_BrZUa4ePNK9u-Q9zH42YEJMTce93kc2UEnCUz33bm0Le4Ni_uWL2mybTarydRLqh114vn2TDszFwOAcvyY678", "state"=>"82f49363d7decf2607c9de3921fc8d7e1e68c0e86decca96"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cadistasio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cadistasio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:14
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 3.1ms)
+
+
+  
+RuntimeError (#<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1537051014 token="EAAPSKDH8TfUBAOuNL59iGs7lKCvcvs70TuObZAVCCWApXipaTCAtnLHsz9O0lDSLYUDmtI0CA8SZAgtsWtezPyxyZALM9ZC4shXgSPI8bIcg0zZCgouZB0vGYfQ352urEOaFVTsMoSuP0KZAYDztbXkRlFXRCFM5Di3sIog3iQIogZDZD"> extra=#<OmniAuth::AuthHash raw_info=#<OmniAuth::AuthHash email="cadistasio@gmail.com" id="10155675744162263" name="Christopher DiStasio">> info=#<OmniAuth::AuthHash::InfoHash email="cadistasio@gmail.com" image="http://graph.facebook.com/v2.10/10155675744162263/picture" name="Christopher DiStasio"> provider="facebook" uid="10155675744162263">):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/" for 127.0.0.1 at 2018-07-18 12:56:06 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 256ms (Views: 241.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-18 12:56:14 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (1.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 149ms (Views: 124.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 12:56:23 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:29
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (323.2ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `total_pledges' for #<#<Class:0x007fb813c159a8>:0x007fb818b60198>):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4: 
+    5: <h3>Total Pledges:</h3>
+    6: <%= total_pledges %>
+    7: total pledge amounts from database for this funding_project
+    8: 
+    9: <h3>Total Needed:</h3>
+  
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__4436616173884755731_70214332648760'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 12:57:29 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:29
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pledges' for nil:NilClass):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4: 
+    5: <h3>Total Pledges:</h3>
+    6: <%= @funding_projects.total_pledges %>
+    7: <%# total pledge amounts from database for this funding_project %>
+    8: 
+    9: <h3>Total Needed:</h3>
+  
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__4436616173884755731_70214333436980'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 12:58:00 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:29
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM() FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (64.3ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: wrong number of arguments to function SUM(): SELECT SUM() FROM "pledges" WHERE "pledges"."funding_project_id" = ?):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4: 
+    5: <h3>Total Pledges:</h3>
+    6: <%= @funding_project.total_pledges %>
+    7: <%# total pledge amounts from database for this funding_project %>
+    8: 
+    9: <h3>Total Needed:</h3>
+  
+app/models/funding_project.rb:15:in `total_pledges'
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__4436616173884755731_70214348381960'

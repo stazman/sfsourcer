@@ -2,5 +2,12 @@
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
 
+<h3>Total Pledges:</h3>
+<%= @funding_project.total_pledges %>
+<%# total pledge amounts from database for this funding_project %>
+
+<h3>Total Needed:</h3>
+<%# funding goal - total pledges %>
+
 
 <%= link_to "Make a Pledge", new_pledge_path %>
