@@ -13429,3 +13429,69 @@ Processing by FundingProjectsController#show as HTML
 Completed 200 OK in 45ms (Views: 37.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 14:25:24 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:26
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.1ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 67ms (Views: 48.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 14:29:59 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:26
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.1ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 14:36:40 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:26
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 14:37:25 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:26
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:9: syntax error, unexpected '<'
+...ng_project.total_pledges.sum =< @funding_project.funding_goa...
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/funding_projects/show.html.erb:9: syntax error, unexpected '<'
+app/views/funding_projects/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-18 14:39:20 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:26
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:15
+  Rendered funding_projects/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
