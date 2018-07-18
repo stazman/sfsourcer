@@ -2,7 +2,7 @@
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
 
-<h3>Total Pledges:</h3>
+<h3>Total Pledges So Far:</h3>
 <%= @funding_project.total_pledges.sum  %><br><br>
 
 <% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
@@ -16,4 +16,13 @@
     <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
 <% end %><br><br>
 
+
 <%= link_to "Make a Pledge", new_pledge_path %>
+
+
+<%= form_for @comment do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %><br>
+<%= f.label "What do you think?" %>
+<%= f.text_area_field :content %><br>
+<%= f.submit "Submit"%>
