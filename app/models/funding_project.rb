@@ -11,6 +11,10 @@ class FundingProject < ApplicationRecord
         self.title = self.title.titlecase
     end
 
+    def total_pledges
+        self.pledges.sum
+    end
+
     # def funding_project_pledge
     #     self.pledge = Pledge.create(amount: :amount)
     # end
