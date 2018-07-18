@@ -1,6 +1,8 @@
 class FundingProject < ApplicationRecord
     has_many :pledges
     has_many :users, through: :pledges
+    has_many :comments
+    has many :comments, through: :users
 
     validates_presence_of :title
     validates_uniqueness_of :title
