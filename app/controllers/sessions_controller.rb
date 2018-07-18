@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
 
         # raise params.inspect
         if auth_hash = request.env["omniauth.auth"]
-            user = User.find_or_create_by_ominauth(auth_hash)
+            user = User.find_or_create_by_omniauth(auth_hash)
+            raise auth_hash.inspect
             session[:user_id] = user.id
             redirect_to root_path
         else
