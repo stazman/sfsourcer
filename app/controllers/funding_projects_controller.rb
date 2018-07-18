@@ -3,9 +3,6 @@ class FundingProjectsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   # before_save :make_titlecase
 
-  
-  
-
   def index
     @funding_projects = FundingProject.all
   end
@@ -27,6 +24,7 @@ class FundingProjectsController < ApplicationController
 
   def show
     @funding_project = FundingProject.find_by(id: params[:id])
+    @total_pledges = []
   end
 
   def edit
@@ -52,4 +50,12 @@ class FundingProjectsController < ApplicationController
       redirect_to new_login_url
     end
   end
+
+
+#   def total_pledges
+#     self.pledges.each do |p| 
+#        p.amount  
+#     end
+# end
+
 end

@@ -3,7 +3,15 @@
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
 
 <h3>Total Pledges:</h3>
-<%= @funding_project.total_pledges %>
+<%= @funding_project.total_pledges.sum  %>
+<%# <%= @total_pledges << p %>
+<%# <%= @total_pledges.sum %> %> %>
+<%# <% end %> %>
+
+
+<%# <% @funding_project.total_pledges.map do |p| %> %>
+<%# <%= p.amount %> %>
+<%# <% end %> %>
 <%# total pledge amounts from database for this funding_project %>
 
 <h3>Total Needed:</h3>
