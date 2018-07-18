@@ -12,8 +12,10 @@ class FundingProject < ApplicationRecord
     end
 
     def total_pledges
-        self.pledges.sum
-    end
+        self.pledges.map do |p| 
+           p.amount     
+        end
+   end
 
     # def funding_project_pledge
     #     self.pledge = Pledge.create(amount: :amount)
