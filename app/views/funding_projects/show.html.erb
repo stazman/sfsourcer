@@ -3,22 +3,17 @@
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
 
 <h3>Total Pledges:</h3>
-<%= @funding_project.total_pledges.sum  %>
+<%= @funding_project.total_pledges.sum  %><br><br>
 
 <% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
-<%= "Total Needed:" %>
-<%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %> %><br>
-<%= "Funding Goal Achieved!" %>
-<%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% end %>
-
-
-
-<h3>Total Over Goal:</h3>
-<% if @funding_project.total_pledges.sum > @funding_project.funding_goal %>
-<%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% end %>
-
+    <%= "Total Needed:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<% elsif @funding_project.total_pledges.sum > @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<%= "Total Over Funding Goal:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% end %><br><br>
 
 <%= link_to "Make a Pledge", new_pledge_path %>
