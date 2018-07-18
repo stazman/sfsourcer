@@ -15,7 +15,8 @@ class FundingProject < ApplicationRecord
         self.pledges.map do |p| 
            p.amount     
         end
-   end
+    end
+
 
     # def funding_project_pledge
     #     self.pledge = Pledge.create(amount: :amount)
