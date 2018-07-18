@@ -1,6 +1,9 @@
 class User < ApplicationRecord
     has_many :pledges
     has_many :funding_projects, through: :pledges
+    has_many :comments
+    has_many :comments, through: :funding_projects
+
     has_secure_password
 
     validates_presence_of :name
