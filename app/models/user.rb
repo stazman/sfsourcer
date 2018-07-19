@@ -4,6 +4,7 @@ class User < ApplicationRecord
     has_many :comments
     has_many :comments, through: :funding_projects
     has_many :addresses
+    accepts_nested_attributes_for :addresses
 
     has_secure_password
 
