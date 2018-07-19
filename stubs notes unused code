@@ -1,6 +1,6 @@
 current commit notepad:
 
-'removing comments as a nested resource; will work better as directly associated with model; making user address a nested resource, starting with route'
+'making user address a nested resource, setting up model'
 
 
 To Do:
