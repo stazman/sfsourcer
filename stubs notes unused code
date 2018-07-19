@@ -1,13 +1,13 @@
 current commit notepad:
 
-'building comments nested resource for funding_projects, starting with routes'
+'removing comments as a nested resource; will work better as directly associated with model; making user address a nested resource, starting with route'
 
 
 To Do:
 
-[  ] Make a nested resource for a user's funding projects 
+[  ] Make a nested resource for a user address 
+[  ] Make 
 [  ] Make a class scope method for all funding_projects that have met 80% funding
-[  ] Nest users funding projects under user to make it a separate url ... show
 [  ] make comments section for projects and nest comments on project show page with form for new comments
 [  ] Finish Facebook signup
 [  ] refactor for Model.find
@@ -24,6 +24,7 @@ Finished To Do
 
 Unused Code:
 
+[  ] Nest users funding projects under user to make it a separate url ... show
 [  ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
                # oauth_email = request.env["omniauth.auth"][:info][:email]
             #     session[:user_id] = user.id
