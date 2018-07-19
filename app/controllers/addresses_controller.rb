@@ -1,4 +1,6 @@
 class AddressesController < ApplicationController
+  before_action :require_login
+  
   def index
     @addresses = Address.all
   end
@@ -18,6 +20,7 @@ class AddressesController < ApplicationController
   end
 
   def show
+    @address = Address.find(params[:id])
   end
 
   def edit
@@ -33,5 +36,12 @@ class AddressesController < ApplicationController
 
   def address_params
     params.require(:address).permit(:address1, :address2, :city, :state, :zip)
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_path
+    end
   end
 end
