@@ -24,5 +24,26 @@
 <%= f.text_field :email %>
 <%= f.label :password %>
 <%= f.text_field :password %>
+
+<h2>Address Information</h2>
+<%= f.fields_for :addresses do |addr| %>
+    <%= addr.label :address1 %>
+    <%= addr.text_field :address1 %><br>
+ 
+    <%= addr.label :address2 %>
+    <%= addr.text_field :address2 %><br>
+ 
+    <%= addr.label :city %>
+    <%= addr.text_field :city %><br>
+ 
+    <%= addr.label :state %>
+    <%= addr.text_field :state %><br>
+ 
+    <%= addr.label :zip %>
+    <%= addr.text_field :zip %><br>
+ 
+    <%# <%= addr.label :address_type %> %>
+    <%# <%= addr.text_field :address_type %><br> %>
+  <% end %><br>
 <%= f.submit "Create Account" %>
 <% end %>
