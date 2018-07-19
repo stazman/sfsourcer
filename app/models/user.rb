@@ -3,6 +3,7 @@ class User < ApplicationRecord
     has_many :funding_projects, through: :pledges
     has_many :comments
     has_many :comments, through: :funding_projects
+    has_many :addresses
 
     has_secure_password
 

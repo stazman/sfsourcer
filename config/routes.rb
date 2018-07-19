@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'addresses/index'
+  get 'addresses/new'
+  get 'addresses/create'
+  get 'addresses/show'
+  get 'addresses/edit'
+  get 'addresses/update'
+  get 'addresses/destroy'
   root 'static#home'
   
   get '/login', to: 'sessions#new'
