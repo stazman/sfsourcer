@@ -11,9 +11,13 @@ Rails.application.routes.draw do
   resources :pledges, except: :index
   resources :funding_projects
 
-  resources :funding_projects do 
-    resources :comments
+  resources :user do
+    resources :addresses
   end
+
+  # resources :funding_projects do 
+  #   resources :comments
+  # end
 
   #can only destroy a funding project as admin
 
