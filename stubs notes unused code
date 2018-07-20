@@ -1,6 +1,6 @@
 current commit notepad:
 
-'getting new comment to be associated with funding_project on creation'
+'added user_id column to comments and migrated, getting new comment to be associated with funding_project and user on creation'
 
 
 To Do:
