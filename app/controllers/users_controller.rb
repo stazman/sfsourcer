@@ -12,11 +12,11 @@ class UsersController < ApplicationController
     render template: 'addresses/index'
   end
  
-  def post
-    @user = User.find(params[:id])
-    @address = Address.find(params[:user_id])
-    render template: 'addresses/show'
-  end
+  # def post
+  #   @user = User.find(params[:id])
+  #   @address = Address.find(params[:user_id])
+  #   render template: 'addresses/show'
+  # end
 
   def new
     @user = User.new
