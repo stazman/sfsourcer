@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   end
 
   resources :funding_projects do
-    resources :comments, only: [:index, :new, :show]
+    resources :comments
   end
 end
