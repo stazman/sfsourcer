@@ -1,6 +1,8 @@
 <h1>Comments for <%= @funding_project.title %></h1>
-<% @funding_project.comments.each do |fpc| %>
-<h3><%= fpc.title%></h3>
-<h4><%= fpc.content%></h4><br>
+ 
+<% @funding_project.comments.each do |comment| %>
+    <%= comment.title %>
+    <%= comment.content %>
+<% end %>
 
 

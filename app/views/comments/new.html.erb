@@ -1,5 +1,6 @@
 <%# <h3>Make a Comment About <%= @funding_project.title %>!</h4> %>
 <%= form_for @comment do |f| %>
+<%= f.hidden_field :funding_project_id %>
 <%= f.label :title %>
 <%= f.text_field :title %><br>
 <%= f.label "What do you think?" %>
