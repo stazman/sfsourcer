@@ -7,6 +7,18 @@ class FundingProjectsController < ApplicationController
     @funding_projects = FundingProject.all
   end
 
+  def comments_index
+    @funding_project = FundingProject.find(params[:id])
+    @comments = @funding_project.comments
+    # render template: 'comments/index'
+  end
+
+  def comment
+    @funding_project = FundingProject.find(params[:id])
+    @comments = Comment.find(params[:user_id])
+    render template: 'comments/show'
+  end
+
   def new
     @funding_project = FundingProject.new
 
