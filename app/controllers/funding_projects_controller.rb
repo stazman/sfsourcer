@@ -10,7 +10,7 @@ class FundingProjectsController < ApplicationController
   def comments_index
     @funding_project = FundingProject.find(params[:id])
     @comments = @funding_project.comments
-
+    redirect_to funding_project_comments_path
   end
 
   def comment
