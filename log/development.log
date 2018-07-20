@@ -14624,3 +14624,108 @@ Processing by AddressesController#show as HTML
 Completed 200 OK in 87ms (Views: 44.7ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:50:36 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `addresses' for nil:NilClass):
+    1: <h1>Your Address</h1>
+    2: <p><% @user.addresses.each do |a| %></p>
+    3: <p><%= a.address1 %></p>
+    4: <p><%= a.address2 %></p>
+    5: <p><%= a.city  %></p>
+  
+app/views/addresses/show.html.erb:2:in `_app_views_addresses_show_html_erb___947408685494535191_70205116129240'
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:51:41 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for nil:NilClass):
+    1: <h1>Your Address</h1>
+    2: <p><% @user.address.address1 %></p>
+  
+app/views/addresses/show.html.erb:2:in `_app_views_addresses_show_html_erb___947408685494535191_70205060747980'
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:55:23 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for nil:NilClass):
+    1: <h1>Your Address</h1>
+    2: <p><% @user.address.address1 %></p>
+  
+app/views/addresses/show.html.erb:2:in `_app_views_addresses_show_html_erb___947408685494535191_70205128387680'
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:55:45 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:56:05 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 03:58:38 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5/addresses/1" for 127.0.0.1 at 2018-07-20 04:00:10 -0500
+Processing by AddressesController#show as HTML
+  Parameters: {"user_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:23
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 29.8ms | ActiveRecord: 1.6ms)
+
+
