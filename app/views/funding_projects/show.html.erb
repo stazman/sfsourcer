@@ -19,11 +19,6 @@
 
 <h3><%= link_to "Make a Pledge", new_pledge_path %></h3>
 
-<h3>Make a Comment About This Project!</h4>
-<%= form_for :comment, action: :new, url: 'new_comment_path' do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %><br>
-<%= f.label "What do you think?" %>
-<%= f.text_area :content %><br>
-<%= f.submit "Submit"%>
-<% end %>
+<h3><%= link_to "Make a Comment", new_funding_project_comment_path(@funding_project) %></h3>
+
+

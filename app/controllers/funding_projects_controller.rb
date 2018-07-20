@@ -31,7 +31,7 @@ class FundingProjectsController < ApplicationController
 
     fp_pledges = @funding_project.pledges
     
-    redirect_to funding_project_path(@funding_project)#create and save new FP instance
+    redirect_to funding_project_path(@funding_project)
   end
 
   def show
