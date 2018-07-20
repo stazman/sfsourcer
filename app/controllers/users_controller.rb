@@ -6,6 +6,21 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def addresses_index
+    @user = User.find(params[:id])
+    @addresses = @user.addresses
+    render template: 'addresses/index'
+  end
+ 
+  def post
+    @user = User.find(params[:id])
+ 
+    # Note that because ids are unique by table we can go directly to
+    # Post.find — no need for @author.posts.find...
+    @address = Address.find(params[:user_id])
+    render template: 'addresses/show'
+  end
+
   def new
     @user = User.new
     @user.addresses.build

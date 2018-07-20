@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :funding_projects
 
   resources :users do
-    resources :addresses
+    resources :addresses, only: [:new, :show, :edit]
   end
 
   
