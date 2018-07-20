@@ -5,6 +5,7 @@ current commit notepad:
 
 To Do:
 
+[  ] add users names to comments on funding projects
 [  ] make comments section for projects and nest comments on project show page with form for new comments
 [  ] Make a class scope method for all funding_projects that have met 80% funding
 [  ] Finish Facebook signup
@@ -22,6 +23,42 @@ Finished To Do
 
 
 Unused Code:
+
+  # get 'addresses/index'
+  # get 'addresses/new'
+  # get 'addresses/create'
+  # get 'addresses/show'
+  # get 'addresses/edit'
+  # get 'addresses/update'
+  # get 'addresses/destroy'
+
+  # resources :funding_projects do 
+  #   resources :comments
+  # end
+
+  #can only destroy a funding project as admin
+
+  # get 'pledges/new'
+  # get 'pledges/create'
+  # get 'pledges/show'
+  # get 'pledges/edit'
+  # get 'pledges/update'
+  # get 'pledges/destroy'
+  # get 'funding_projects/index'
+  # get 'funding_projects/new'
+  # get 'funding_projects/create'
+  # get 'funding_projects/show'
+  # get 'funding_projects/edit'
+  # get 'funding_projects/update'
+  # get 'funding_projects/destroy'
+  # get 'users/index'
+  # get 'users/new'
+  # get 'users/create'
+  # get 'users/show'
+  # get 'users/edit'
+  # get 'users/update'
+  # get 'users/destroy'
+
 
 [  ] Nest users funding projects under user to make it a separate url ... show
 [  ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
