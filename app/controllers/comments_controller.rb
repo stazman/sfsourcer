@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
-    @funding_project.comments.build
   end
 
   def create  
@@ -59,6 +58,4 @@ class CommentsController < ApplicationController
       redirect_to login_url
     end
   end
-end
-
 end
