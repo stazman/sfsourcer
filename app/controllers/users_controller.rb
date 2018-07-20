@@ -14,9 +14,6 @@ class UsersController < ApplicationController
  
   def post
     @user = User.find(params[:id])
- 
-    # Note that because ids are unique by table we can go directly to
-    # Post.find — no need for @author.posts.find...
     @address = Address.find(params[:user_id])
     render template: 'addresses/show'
   end
