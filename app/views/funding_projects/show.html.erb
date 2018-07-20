@@ -17,13 +17,13 @@
 <% end %><br><br>
 
 
-<%= link_to "Make a Pledge", new_pledge_path %>
+<h3><%= link_to "Make a Pledge", new_pledge_path %></h3>
 
-
-<%= form_for @comment do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %><br>
+<h3>Make a Comment About This Project!</h4>
+<%= form_for :comment, action: :new, url: 'new_comment_path' do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %><br>
 <%= f.label "What do you think?" %>
-<%= f.text_area_field :content %><br>
+<%= f.text_area :content %><br>
 <%= f.submit "Submit"%>
 <% end %>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :pledges, except: :index
   resources :funding_projects
+  resources :comments
 
   resources :users do
     resources :addresses, only: [:new, :show, :edit]
