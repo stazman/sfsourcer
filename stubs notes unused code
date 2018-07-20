@@ -1,14 +1,12 @@
 current commit notepad:
 
-'making user address a nested resource, setting up nested attributes'
+'setting up form for new nested comment in funding_project#show, including correct routes'
 
 
 To Do:
 
-[  ] Make a nested resource for a user address 
-[  ] Make 
-[  ] Make a class scope method for all funding_projects that have met 80% funding
 [  ] make comments section for projects and nest comments on project show page with form for new comments
+[  ] Make a class scope method for all funding_projects that have met 80% funding
 [  ] Finish Facebook signup
 [  ] refactor for Model.find
 [  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
@@ -20,6 +18,7 @@ To Do:
 Finished To Do
 
 [ X ] Make sure login works
+[ x ] Make a nested resource for a user address 
 
 
 Unused Code:
