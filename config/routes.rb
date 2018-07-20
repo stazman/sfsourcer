@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     resources :addresses, only: [:new, :show, :edit]
   end
 
+  resources :users do
+    resources :comments
+  end
+
   resources :funding_projects do
     resources :comments, only: [:index, :new, :show]
   end
