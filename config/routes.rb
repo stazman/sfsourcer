@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'addresses/index'
-  get 'addresses/new'
-  get 'addresses/create'
-  get 'addresses/show'
-  get 'addresses/edit'
-  get 'addresses/update'
-  get 'addresses/destroy'
   root 'static#home'
   
   get '/login', to: 'sessions#new'
@@ -18,9 +11,18 @@ Rails.application.routes.draw do
   resources :pledges, except: :index
   resources :funding_projects
 
-  resources :user do
+  resources :users do
     resources :addresses
   end
+
+  
+  # get 'addresses/index'
+  # get 'addresses/new'
+  # get 'addresses/create'
+  # get 'addresses/show'
+  # get 'addresses/edit'
+  # get 'addresses/update'
+  # get 'addresses/destroy'
 
   # resources :funding_projects do 
   #   resources :comments
