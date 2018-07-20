@@ -3,11 +3,14 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
+    funding_project = FundingProject.find(params[:funding_project_id])
+    @comments = funding_project.comments.build
   end
  
   def new
     @comment = Comment.new
-    # (user_id: params[:user_id], funding_project_id: params[:funding_project_id])
+    # funding_project = FundingProject.find(params[:funding_project_id])
+    @comment = funding_project.comment.build
   end
 
   def create  
@@ -27,6 +30,8 @@ class CommentsController < ApplicationController
 
   def show
       @comment = Comment.find(params[:id]) 
+      # funding_project = FundingProject.find(params[:funding_project_id])
+      # @comment = funding_project.comments.find(params[:id])
   end
 
   def edit
