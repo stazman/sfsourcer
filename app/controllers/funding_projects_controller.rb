@@ -15,13 +15,12 @@ class FundingProjectsController < ApplicationController
 
   # def comment
   #   @funding_project = FundingProject.find(params[:id])
-  #   @comments = Comment.find(params[:user_id])
+  #   @funding_project.comment.id = Comment.find(params[:id])
   #   render template: 'comments/show'
   # end
 
   def new
     @funding_project = FundingProject.new
-
   end
 
   def create

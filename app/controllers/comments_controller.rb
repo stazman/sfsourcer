@@ -6,23 +6,27 @@ class CommentsController < ApplicationController
   end
  
   def new
-    @comment = Comment.new(user_id: params[:user_id], funding_project_id: params[:funding_project_id])
-    @comment.user_id = current_user
+    @comment = Comment.new
+    # (user_id: params[:user_id], funding_project_id: params[:funding_project_id])
   end
 
   def create  
     @comment = Comment.new(comment_params)
-    if @comment.valid?
+    # create a comment with a funding_project id of the specific project it is created under
+     # raise params.inspect
+    # if @comment.valid?
+    # @comment.user_id = current_user
+    # @funding_project.id = @comment.funding_project_id
+
       @comment.save
-      redirect_to comment_path(@comment)
-    else
-      render :new
-    end
+      redirect_to funding_project_comment_path(@comment)
+    # else
+    #   render :new
+    # end
   end
 
   def show
       @comment = Comment.find(params[:id]) 
-    #   @pledges = Pledge.where(:user_id == @user.id)
   end
 
   def edit
