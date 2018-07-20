@@ -16999,3 +16999,188 @@ Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.7ms)
 ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Comment.):
   
 app/controllers/comments_controller.rb:9:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddUserIdToComments (20180720125025)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comments" ADD "user_id" integer[0m
+  ↳ db/migrate/20180720125025_add_user_id_to_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180720125025"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-20 07:50:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (179.1ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f9a3dc25540>:0x007f9a37b779a0>
+Did you mean?  font_path):
+    1: <%# <h3>Make a Comment About <%= @funding_project.title %>!</h4> %>
+    2: <%= form_for @comment do |f| %>
+    3: <%= f.hidden_field :funding_project_id %>
+    4: <%= f.label :title %>
+    5: <%= f.text_field :title %><br>
+  
+app/views/comments/new.html.erb:2:in `_app_views_comments_new_html_erb__2043566547926708140_70150218919660'
+Started GET "/users/1" for 127.0.0.1 at 2018-07-20 07:51:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 93ms (Views: 75.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-20 07:51:09 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-20 07:51:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-20 07:51:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-20 07:52:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"78Jp/AyY/+OeH6DI2hv1XLyyIslgwVyY6fqy1Q+S2i+PQzEEBbn67mS50PuAq8ZQ/zZDFPbSVLGZFQUNUMQ+IA==", "sessions"=>{"email"=>"ls@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ls@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 76ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-20 07:52:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 48ms (Views: 41.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-20 07:52:14 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-20 07:52:16 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:38
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:17
+  Rendered funding_projects/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-20 07:52:18 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (178.6ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f9a3dc25540>:0x007f9a37de0c50>
+Did you mean?  font_path):
+    1: <%# <h3>Make a Comment About <%= @funding_project.title %>!</h4> %>
+    2: <%= form_for @comment do |f| %>
+    3: <%= f.hidden_field :funding_project_id %>
+    4: <%= f.label :title %>
+    5: <%= f.text_field :title %><br>
+  
+app/views/comments/new.html.erb:2:in `_app_views_comments_new_html_erb__2043566547926708140_70150169496380'
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-20 07:55:40 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (202.0ms)
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f9a37c15498>:0x007f9a37bef8d8>
+Did you mean?  font_path):
+    1: <%# <h3>Make a Comment About <%= @funding_project.title %>!</h4> %>
+    2: <%= form_for @comment do |f| %>
+    3: <%= f.hidden_field :funding_project_id %>
+    4: <%= f.label :title %>
+    5: <%= f.text_field :title %><br>
+  
+app/views/comments/new.html.erb:2:in `_app_views_comments_new_html_erb__2043566547926708140_70150168555160'
