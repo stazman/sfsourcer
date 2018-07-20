@@ -1,6 +1,6 @@
 current commit notepad:
 
-'excepted :index comments routes'
+'getting new comment to be associated with funding_project on creation'
 
 
 To Do:
@@ -24,7 +24,16 @@ Finished To Do
 
 Unused Code:
 
-  # get 'addresses/index'
+  <h3>Make a Comment About This Project!</h4>
+<%= form_for :comment, action: :new, url: 'new_comment_path' do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %><br>
+<%= f.label "What do you think?" %>
+<%= f.text_area :content %><br>
+<%= f.submit "Submit"%>
+<% end %>
+
+# get 'addresses/index'
   # get 'addresses/new'
   # get 'addresses/create'
   # get 'addresses/show'
