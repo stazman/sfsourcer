@@ -3,35 +3,20 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
-    funding_project = FundingProject.find(params[:funding_project_id])
-    @comments = funding_project.comments.build
   end
  
   def new
     @comment = Comment.new
-    # funding_project = FundingProject.find(params[:funding_project_id])
-    @comment = funding_project.comment.build
   end
 
   def create  
     @comment = Comment.new(comment_params)
-    # create a comment with a funding_project id of the specific project it is created under
-     # raise params.inspect
-    # if @comment.valid?
-    # @comment.user_id = current_user
-    # @funding_project.id = @comment.funding_project_id
-
       @comment.save
       redirect_to funding_project_comment_path(@comment)
-    # else
-    #   render :new
-    # end
   end
 
   def show
       @comment = Comment.find(params[:id]) 
-      # funding_project = FundingProject.find(params[:funding_project_id])
-      # @comment = funding_project.comments.find(params[:id])
   end
 
   def edit
