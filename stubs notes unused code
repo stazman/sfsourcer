@@ -1,6 +1,6 @@
 current commit notepad:
 
-'added user_id column to comments and migrated, getting new comment to be associated with funding_project and user on creation'
+'making a class scope method for all funding_projects that have met 80% funding'
 
 
 To Do:
@@ -13,8 +13,11 @@ To Do:
 [  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
-[  ] Make admin privleges; only admin can delete a project
 [  ] Refactor to include navbar: Log In, Home, Your Profile
+
+[  ] Make a custom route for countdown_projects or something else
+[  ] Make admin privleges; only admin can delete a project
+
 
 Finished To Do
 
