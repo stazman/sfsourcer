@@ -17922,3 +17922,124 @@ Processing by FundingProjectsController#show as HTML
 Completed 200 OK in 68ms (Views: 47.7ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/funding_projects/2" for 127.0.0.1 at 2018-07-20 19:42:02 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFundingProject Load (1.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:37
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (1.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 2]]
+  ↳ app/models/funding_project.rb:17
+  Rendered funding_projects/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 415ms (Views: 373.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-20 19:42:10 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-20 19:42:17 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-20 19:42:23 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 156ms (Views: 79.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-20 19:42:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYWlURPK4UvkSras5l+eprMSnbbpvZ/ZKdcU01exbu71BP2pGuvkRh7sxp+8762q8Jb8a3+ul/BZOKMLCOeK4Q==", "user"=>{"name"=>"hh", "email"=>"hh@hh.com", "password"=>"[FILTERED]", "addresses_attributes"=>{"0"=>{"address1"=>"hh", "address2"=>"hh", "city"=>"hh", "state"=>"hh", "zip"=>"12345"}}}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hh@hh.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hh@hh.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hh"], ["email", "hh@hh.com"], ["password_digest", "$2a$10$sCcqqyYF3UN1/IuNlFCV1eWkgKgrNQz3S/xP2isypnt1koxsS605m"], ["created_at", "2018-07-21 00:42:55.072444"], ["updated_at", "2018-07-21 00:42:55.072444"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mAddress Create (1.3ms)[0m  [1m[32mINSERT INTO "addresses" ("address1", "address2", "city", "state", "zip", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "hh"], ["address2", "hh"], ["city", "hh"], ["state", "hh"], ["zip", 12345], ["created_at", "2018-07-21 00:42:55.076745"], ["updated_at", "2018-07-21 00:42:55.076745"], ["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 98ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-07-20 19:42:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.6ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mFundingProject Load (1.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 88ms (Views: 76.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-20 19:43:01 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-20 19:43:05 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-20 19:43:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 90ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-20 19:43:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0kyPK5JCJsGqWdIjynVBaf07o8sLd0r8HJqC1mdb6ivYT23XvsnyXqH/nSRA3oaro+tuHMSA0xTLsXHJaWzVDQ==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "addresses_attributes"=>{"0"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 78ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-20 19:45:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0kyPK5JCJsGqWdIjynVBaf07o8sLd0r8HJqC1mdb6ivYT23XvsnyXqH/nSRA3oaro+tuHMSA0xTLsXHJaWzVDQ==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "addresses_attributes"=>{"0"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 88ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
