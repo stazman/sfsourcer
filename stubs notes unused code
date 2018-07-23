@@ -1,7 +1,8 @@
 current commit notepad:
 
-'adding functionality for logged-in user to make a new funding_project/change in authorization concept of who can create a funding_project'
+'stubbed out main navbar locations'
 
+'added columns for name, experience with SFS projects, last time logged in, entries for social media connections
 
 To Do:
 
@@ -15,6 +16,7 @@ To Do:
 [  ] Add categories for funding_projects
 [  ] Refactor to include navbar: Log In, Home, Your Profile
 [  ] Refactor pledge amount logic in funding_project#show
+[  ] Add social media connections, last logged in, number of times created projects for project creators
 
 
 Finished To Do

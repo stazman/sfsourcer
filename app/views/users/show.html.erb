@@ -1,4 +1,4 @@
-NAVBAR Log In, Home, Your Profile, Sourcer Projects
+MAIN NAVBAR 
 
 
 <h1><%= @user.name %></h1><br>
@@ -7,8 +7,9 @@ NAVBAR Log In, Home, Your Profile, Sourcer Projects
 
 <%= link_to "Log Out", logout_path %><br>
 
+<h2><%= link_to "Your SFSourcer Projects!", funding_projects_url %> </h2><br><br>
 
-<h2><%= link_to "Check out our Sourcer Projects!", funding_projects_url %> </h2><br>
+<h2><%= link_to "Check out all SFSourcer Projects!", funding_projects_url %> </h2><br>
 
 
 <h3>Your Pledges: </h3>
