@@ -21,6 +21,7 @@ class FundingProjectsController < ApplicationController
 
   def new
     @funding_project = FundingProject.new
+    @funding_project.comments.build
     # @comment = @comment.find_by(:id)
     # @funding_project.id = @comment.fundng_project_id
     # @funding_project.comments.build
@@ -39,6 +40,7 @@ class FundingProjectsController < ApplicationController
   def show
     @funding_project = FundingProject.find_by(id: params[:id])
     @total_pledges = []
+    @comments = Comment.where(:funding_project_id == @funding_project.id)
   end
 
   def edit
