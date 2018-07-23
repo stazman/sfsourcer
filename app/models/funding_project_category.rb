@@ -1,0 +1,2 @@
+class FundingProjectCategory < ApplicationRecord
+end
