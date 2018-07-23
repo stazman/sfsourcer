@@ -3,12 +3,17 @@ class FundingProject < ApplicationRecord
     has_many :users, through: :pledges
     has_many :comments
     # has_many :comments, through: :users
-    accepts_nested_attributes_for :comments
+    # accepts_nested_attributes_for :comments
 
     validates_presence_of :title
     validates_uniqueness_of :title
     validates_presence_of :description
     validates_presence_of :funding_goal
+    
+    # def comment_attributes=(comment)
+    #     self.comment = Comment.create_by(title = comment.title)
+    #     self.comment.update(comment)
+    # end
     
     def make_title_case
         self.title = self.title.titlecase

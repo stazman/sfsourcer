@@ -12,11 +12,19 @@ class CommentsController < ApplicationController
   end
 
   def create  
-    @comment = Comment.create(comment_params)
-  
+    @comment = Comment.new(comment_params)
+    @comment.user_id = current_user.id
+    @comment.funding_project_id = params[:comment][:funding_project_id] 
+    if @comment.valid?
+      @comment.save
+      redirect_to comments_path(@comment)
+    else
+      render :new
+    end
+
 
     # @comment.save
-    redirect_to funding_project_comment_path(@comment)
+    # redirect_to funding_project_comment_path(@comment)
   end
 
   def show
