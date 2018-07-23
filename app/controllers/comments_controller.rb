@@ -7,16 +7,16 @@ class CommentsController < ApplicationController
  
   def new
     @comment = Comment.new
-    @comment.funding_project.build(:id => :funding_project_id)
+    # @comment.funding_project.build(:id => :funding_project_id)
 
   end
 
   def create  
-    Comment.create(comment_params)
+    @comment = Comment.create(comment_params)
   
 
     # @comment.save
-    # redirect_to funding_project_comment_path(@comment)
+    redirect_to funding_project_comment_path(@comment)
   end
 
   def show

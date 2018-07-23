@@ -18404,3 +18404,292 @@ Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.0ms)
 NoMethodError (undefined method `build' for nil:NilClass):
   
 app/controllers/comments_controller.rb:10:in `new'
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-23 08:44:01 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/funding_projects/1/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/comments/new" for 127.0.0.1 at 2018-07-23 08:44:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-23 08:50:24 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 336ms (Views: 323.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-23 08:50:39 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.6ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 72ms (Views: 44.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-23 08:50:40 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:40
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.4ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:18
+  Rendered funding_projects/show.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 101ms (Views: 85.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-23 08:50:43 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `build' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:10:in `new'
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-23 08:51:12 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 110ms (Views: 69.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-23 08:51:29 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-23 08:51:39 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:3
+  Rendered funding_projects/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 69ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-23 08:51:41 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:40
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:18
+  Rendered funding_projects/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 82ms (Views: 73.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-23 08:51:43 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 08:52:00 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n34JMpSeGXenjAL5Wn3pEv/U9vXFKxeQmC+8X5BUvAeX6AC1Y7KYHpYJrNNIb3oMpUoqIcHKRBr33FdIg6ywfw==", "comment"=>{"funding_project_id"=>"", "title"=>"Test Comment4", "content"=>"testcomment4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 268ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/1/comments/new" for 127.0.0.1 at 2018-07-23 08:53:14 -0500
+Processing by CommentsController#new as HTML
+  Parameters: {"funding_project_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 57ms (Views: 32.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 08:53:27 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CZyrWt5zMGUAiPfUiqPKx/4dGOuHvtb/vjo+PV9zSPgsHsqnFVNqKWHjfVAOBw1RWaot6r/qNGRCwPv5oXBWw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>nil}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:00:12 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CZyrWt5zMGUAiPfUiqPKx/4dGOuHvtb/vjo+PV9zSPgsHsqnFVNqKWHjfVAOBw1RWaot6r/qNGRCwPv5oXBWw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>nil}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:00:23 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idCctUybAxI+eEk/xDG4BCU9RhZrQlRkJ+x9lk6fva2D035JYBDXjTXeBjhOmn/Ge+2LwaS1zYzwx46JQKiCiw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>nil}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:06:45 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idCctUybAxI+eEk/xDG4BCU9RhZrQlRkJ+x9lk6fva2D035JYBDXjTXeBjhOmn/Ge+2LwaS1zYzwx46JQKiCiw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>nil}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:06:51 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idCctUybAxI+eEk/xDG4BCU9RhZrQlRkJ+x9lk6fva2D035JYBDXjTXeBjhOmn/Ge+2LwaS1zYzwx46JQKiCiw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>nil}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:09:05 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idCctUybAxI+eEk/xDG4BCU9RhZrQlRkJ+x9lk6fva2D035JYBDXjTXeBjhOmn/Ge+2LwaS1zYzwx46JQKiCiw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>#<Comment id: nil, title: "t4", content: "t4", created_at: nil, updated_at: nil, funding_project_id: nil, user_id: nil>}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'
+Started POST "/funding_projects/1/comments" for 127.0.0.1 at 2018-07-23 09:09:15 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idCctUybAxI+eEk/xDG4BCU9RhZrQlRkJ+x9lk6fva2D035JYBDXjTXeBjhOmn/Ge+2LwaS1zYzwx46JQKiCiw==", "comment"=>{"funding_project_id"=>"", "title"=>"t4", "content"=>"t4"}, "commit"=>"Submit", "funding_project_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:15
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comments", :funding_project_id=>#<Comment id: nil, title: "t4", content: "t4", created_at: nil, updated_at: nil, funding_project_id: nil, user_id: nil>}, missing required keys: [:id], possible unmatched constraints: [:funding_project_id]):
+  
+app/controllers/comments_controller.rb:19:in `create'

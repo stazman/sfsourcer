@@ -21,9 +21,9 @@ class FundingProjectsController < ApplicationController
 
   def new
     @funding_project = FundingProject.new
-    @comment = @comment.find_by(:id)
-    @funding_project.id = @comment.fundng_project_id
-    @funding_project.comments.build
+    # @comment = @comment.find_by(:id)
+    # @funding_project.id = @comment.fundng_project_id
+    # @funding_project.comments.build
   end
 
   def create
@@ -55,7 +55,7 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal)
+    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal, comments_attributes: [:title, :content] )
   end
 
   def require_login
