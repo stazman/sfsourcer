@@ -11,9 +11,14 @@ Rails.application.routes.draw do
   resources :pledges, except: :index
   resources :funding_projects
   resources :comments
+  
 
   resources :users do
     resources :addresses, only: [:new, :show, :edit]
+  end
+
+  resources :funding_projects do
+    resources :funding_categories
   end
 
   # resources :users do

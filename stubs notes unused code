@@ -1,6 +1,6 @@
 current commit notepad:
 
-'created and migrated funding project and funding_project_categories models '
+'building out choice of funding_projects by category'
 
 
 To Do:
@@ -10,8 +10,9 @@ To Do:
 [  ] make total_pledges a true class scope method?
 [  ] make comments section for projects and nest comments on project show page with form for new comments
 [  ] make sure Facebook signup works
-[  ] refactor for Model.find
+
 [  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
+[  ] refactor for Model.find
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
 [  ] Refactor to include navbar: Log In, Home, Your Profile
