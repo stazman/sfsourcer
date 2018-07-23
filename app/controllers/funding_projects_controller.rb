@@ -55,7 +55,8 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal, comments_attributes: [:title, :content] )
+    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal)
+    # comments_attributes: [:title, :content] )
   end
 
   def require_login
