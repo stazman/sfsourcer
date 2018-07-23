@@ -1,7 +1,6 @@
 class FundingProjectsController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:index, :show]
-  accepts_nested_attributes_for :comments
   # before_save :make_titlecase
 
   def index
@@ -22,6 +21,8 @@ class FundingProjectsController < ApplicationController
 
   def new
     @funding_project = FundingProject.new
+    @comment = @comment.find_by(:id)
+    @funding_project.id = @comment.fundng_project_id
     @funding_project.comments.build
   end
 

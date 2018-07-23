@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :funding_projects do
-    resources :comments
-  end
+  # resources :funding_projects do
+  #   resources :comments
+  # end
 end
