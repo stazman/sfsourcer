@@ -5,29 +5,14 @@ current commit notepad:
 
 To Do:
 
+[  ] make total_pledges a true class scope method
 [  ] make comments section for projects and nest comments on project show page with form for new comments
-[  ] Make a class scope method for all funding_projects that have met 80% funding
-[  ] Finish Facebook signup
+[  ] make sure Facebook signup works
 [  ] refactor for Model.find
 [  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
 [  ] Refactor to include navbar: Log In, Home, Your Profile
-
-[  ] Make a custom route for countdown_projects
-[  ] Make admin privleges; only admin can delete a project
-[  ] Change name into first name middle name last name entries ... nest them perhaps
-[  ] Make form validations for user: must have first and last name, email must match best regex I can find, password must have at least one capital letter, 1 number, and 1 symbol and be 8 characters login
-[  ] Change address into two nested addresses such as in lesson, check for business or personal, add country
-[  ] Make form validations for addresses: address 1, city, state, country, zip must be present; zip must be five integers or five plus hyphen plus four integers
-[  ] field drop down for USA or all countries if feasible
-[  ] Funding_project validation for description must be at least 400 char long, funding_goal must be integer
-[  ] code to remove minus symbol when funds still needed
-[  ] Make form validations for pledges, must be integer
-[  ] Comments validation no more than 400 characters
-[  ] add users names to comments on funding projects
-[  ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
-
 
 
 Finished To Do
@@ -178,3 +163,21 @@ direct to pledges#show %>
 
 
 <%# <%= link_to '/pledges/new', pledges_path%> %>
+
+
+Future To Do Wish List:
+
+[  ] Make a class scope method for all funding_projects that have met 80% funding
+[  ] Make a custom route for countdown_projects
+[  ] Make admin privleges; only admin can delete a project
+[  ] Change name into first name middle name last name entries ... nest them perhaps
+[  ] Make form validations for user: must have first and last name, email must match best regex I can find, password must have at least one capital letter, 1 number, and 1 symbol and be 8 characters login
+[  ] Change address into two nested addresses such as in lesson, check for business or personal, add country
+[  ] Make form validations for addresses: address 1, city, state, country, zip must be present; zip must be five integers or five plus hyphen plus four integers
+[  ] field drop down for USA or all countries if feasible
+[  ] Funding_project validation for description must be at least 400 char long, funding_goal must be integer
+[  ] code to remove minus symbol when funds still needed
+[  ] Make form validations for pledges, must be integer
+[  ] Comments validation no more than 400 characters
+[  ] add users names to comments on funding projects
+[  ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
