@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :pledges, except: :index
   resources :funding_projects
+  resources :comments, except: :index
 
   resources :users do
     resources :addresses, only: [:new, :show, :edit]
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   #   resources :comments
   # end
 
-  resources :funding_projects do
-    resources :comments
-  end
+  # resources :funding_projects do
+  #   resources :comments
+  # end
 end
