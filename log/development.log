@@ -19893,3 +19893,118 @@ Did you mean?  @total_pledges):
     9:     <%= "Total Needed:" %>
   
 app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__1876935406702067892_70231084391920'
+Started GET "/funding_projects/4" for 127.0.0.1 at 2018-07-23 11:36:08 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFundingProject Load (0.5ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:41
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pledges' for #<FundingProject:0x007fbfe56f93c8>):
+    3: <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+    4: 
+    5: <h3>Total Pledges So Far:</h3>
+    6: <%= @funding_project.total_pledges.sum  %><br><br>
+    7: 
+    8: <% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
+    9:     <%= "Total Needed:" %>
+  
+app/views/funding_projects/show.html.erb:6:in `_app_views_funding_projects_show_html_erb__1876935406702067892_70231082425540'
+Started GET "/funding_projects/4" for 127.0.0.1 at 2018-07-23 11:37:22 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:41
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.1ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 4]]
+  ↳ app/models/funding_project.rb:23
+  Rendered funding_projects/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 64ms (Views: 44.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2018-07-23 11:37:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-23 11:41:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 201ms (Views: 190.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-23 11:41:34 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 110ms (Views: 37.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-23 11:45:58 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0TBFa+6+anueqbluU0BFgLLN9Sg0bDCWBif6SiAj2+9RyPpgzEtNuXc6eIz5sbUXBv6A28mKSqPM2z2JrewSQ==", "funding_project"=>{"title"=>"My First Project", "description"=>"This is my first project", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `bleongs_to' for #<Class:0x007fac77447020>
+Did you mean?  belongs_to):
+  
+app/models/funding_project.rb:5:in `<class:FundingProject>'
+app/models/funding_project.rb:1:in `<main>'
+app/controllers/funding_projects_controller.rb:31:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-23 11:46:36 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0TBFa+6+anueqbluU0BFgLLN9Sg0bDCWBif6SiAj2+9RyPpgzEtNuXc6eIz5sbUXBv6A28mKSqPM2z2JrewSQ==", "funding_project"=>{"title"=>"My First Project", "description"=>"This is my first project", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "My First Project"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:37:in `create'
