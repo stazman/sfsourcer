@@ -19,8 +19,8 @@ class FundingProject < ApplicationRecord
         self.title = self.title.titlecase
     end
 
-    def total_pledges
-        self.pledges.map do |p| 
+    def self_total_pledges(funding_project)
+        funding_project.pledges.map do |p| 
            p.amount     
         end
     end

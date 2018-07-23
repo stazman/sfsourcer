@@ -12,7 +12,9 @@ To Do:
 [  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
 [  ] Make sure all validations work
 [  ] Add JS snippet to prevent backsies
+[  ] Add categories for funding_projects
 [  ] Refactor to include navbar: Log In, Home, Your Profile
+[  ] Refactor pledge amount logic in funding_project#show
 
 
 Finished To Do
