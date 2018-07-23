@@ -1,5 +1,16 @@
 MAIN NAVBAR 
 
+<%# For navbar: %>
+
+<h3>Select an SFSourcer Project by Category </h3>
+
+<h4><%= @funding_categories.each do |fc| %></h4>
+<ul>
+    <li><%= link_to "Publications", fc.name %></li>
+</ul>
+
+<h3>SFSourcer Projects Nearing Final Countdown:</h3>
+
 <h1>All Sourcer Projects</h1><br>
 
 <p><% @funding_projects.each do |fp| %></p>
@@ -12,6 +23,3 @@ MAIN NAVBAR
 
     <% end %>
 
-<%# For navbar: %>
-
-<h3>SFSourcer Projects Nearing Final Countdown:</h3>
