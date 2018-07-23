@@ -20038,3 +20038,23 @@ Migrating to CreateFundingProjectCategories (20180723180542)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-23 15:08:18 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0TBFa+6+anueqbluU0BFgLLN9Sg0bDCWBif6SiAj2+9RyPpgzEtNuXc6eIz5sbUXBv6A28mKSqPM2z2JrewSQ==", "funding_project"=>{"title"=>"My First Project", "description"=>"This is my first project", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[36mFundingProject Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "My First Project"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:37:in `create'

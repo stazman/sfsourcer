@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   
   root 'static#home'
   
+  namespace :admin do
+    resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
+  end
+  
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
@@ -18,9 +22,11 @@ Rails.application.routes.draw do
   end
 
   resources :funding_projects do
-    resources :funding_categories
+    resources :funding_categories, only: [:index, :show]
   end
 
+  # resources :funding_categories do
+  #   resources :
   # resources :users do
   #   resources :comments
   # end
