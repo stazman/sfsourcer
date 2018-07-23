@@ -10,9 +10,11 @@ class CommentsController < ApplicationController
   end
 
   def create  
-    @comment = Comment.new(comment_params)
-      @comment.save
-      redirect_to funding_project_comment_path(@comment)
+    new_comment = Comment.create(comment_params)
+  
+
+    # @comment.save
+    redirect_to funding_project_comment_path(@comment)
   end
 
   def show
