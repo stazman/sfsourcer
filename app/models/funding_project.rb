@@ -2,6 +2,7 @@ class FundingProject < ApplicationRecord
     has_many :pledges
     has_many :users, through: :pledges
     has_many :comments
+    belongs_to :user
     # has_many :comments, through: :users
     # accepts_nested_attributes_for :comments
 
@@ -19,8 +20,8 @@ class FundingProject < ApplicationRecord
         self.title = self.title.titlecase
     end
 
-    def self_total_pledges(funding_project)
-        funding_project.pledges.map do |p| 
+    def total_pledges
+        self.pledges.map do |p| 
            p.amount     
         end
     end

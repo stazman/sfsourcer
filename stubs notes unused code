@@ -1,11 +1,11 @@
 current commit notepad:
 
-'making a class scope method for all funding_projects that have met 80% funding'
+'adding functionality for logged-in user to make a new funding_project/change in authorization concept of who can create a funding_project'
 
 
 To Do:
 
-[  ] make total_pledges a true class scope method
+[  ] make total_pledges a true class scope method?
 [  ] make comments section for projects and nest comments on project show page with form for new comments
 [  ] make sure Facebook signup works
 [  ] refactor for Model.find
@@ -172,6 +172,7 @@ Future To Do Wish List:
 [  ] Make a class scope method for all funding_projects that have met 80% funding
 [  ] Make a custom route for countdown_projects
 [  ] Make admin privleges; only admin can delete a project
+[  ] Make admin privileges; only admin can change/add/delete funding_project_categories
 [  ] Change name into first name middle name last name entries ... nest them perhaps
 [  ] Make form validations for user: must have first and last name, email must match best regex I can find, password must have at least one capital letter, 1 number, and 1 symbol and be 8 characters login
 [  ] Change address into two nested addresses such as in lesson, check for business or personal, add country
