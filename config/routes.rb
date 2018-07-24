@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   root 'static#home'
+
+  get 'sourcer_projects', to: 'static#sourcer_projects'
+  get 'living_stories', to: 'static#living_stories'
+
+
   
   namespace :admin do
     resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
