@@ -5,8 +5,7 @@ current commit notepad:
 
 To Do for Rails Project:
 
-[ ] Make a new landing page for Sourcer Projects
-[ ] Make funding_project category a nested attribute to choose when making a new funding_project
+[ ] make living story feature with nested category attributes; user can make new ones
 [ ] make total_pledges a true class scope method with #order
 [ ] make sure Facebook signup works
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
@@ -16,11 +15,16 @@ To Do for Rails Project:
 
 Future: 
 
+[ ] Make funding_project category a nested attribute to choose when making a new funding_project
+[ ] Make new funding_project only possible with admin login
+[ ] category a nested attribute to choose when making a new funding_project
+[ ] Make index of users only available with admin login
+[ ] Make landing pages for all sections
+[ ] Finish comments feature for projects
 [ ] Refactor to include navbar: Your Profile
 [ ] add authentication for admin ... make admin controller in controllers/admin but figure out authentication Monban; https://roberteshleman.com/blog/2014/08/14/using-rails-namespaces-for-admin-actions/
 [ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
 [ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
-[ ] Finish comments feature for projects
 [ ] refactor for Model.find
 [ ] Add JS snippet to prevent backsies
 [ ] add feature: Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
