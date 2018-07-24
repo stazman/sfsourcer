@@ -3,24 +3,40 @@ current commit notepad:
 'making links for convenience/later css navbar development'
 
 
-To Do:
+To Do for Rails Project:
 
-[ ] Refactor to include navbar: Log In, Log Out, Home, Your Profile
-[ ] Make class method for querying funding projects based on category
-[ ] make total_pledges a true class scope method?
-[ ] make comments section for projects and nest comments on project show page with form for new comments
+[ ] Make funding_project category a nested attribute to choose when making a new funding_project
+[ ] make total_pledges a true class scope method with #order
 [ ] make sure Facebook signup works
-
-[ ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
-[ ] refactor for Model.find
+[ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
 [ ] Make sure all validations work
-[ ] Add JS snippet to prevent backsies
 [ ] Refactor pledge amount logic in funding_project#show
-[ ] Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
+
+
+Future: 
+
+[ ] Refactor to include navbar: Your Profile
+[ ] add authentication for admin ... make admin controller in controllers/admin but figure out authentication Monban; https://roberteshleman.com/blog/2014/08/14/using-rails-namespaces-for-admin-actions/
 [ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
 [ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
+[ ] Finish comments feature for projects
+[ ] refactor for Model.find
+[ ] Add JS snippet to prevent backsies
+[ ] add feature: Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
 [ ] add last time logged in for project creators
-[ ] add authentication for admin ... make admin controller in controllers/admin but figure out authentication Monban; https://roberteshleman.com/blog/2014/08/14/using-rails-namespaces-for-admin-actions/
+[ ] Make a class scope method for all funding_projects that have met 80% funding
+[ ] Make a custom route for countdown_projects
+[ ] Change name into first name middle name last name entries ... nest them perhaps
+[ ] Make form validations for user: must have first and last name, email must match best regex I can find, password must have at least one capital letter, 1 number, and 1 symbol and be 8 characters login
+[ ] Change address into two nested addresses such as in lesson, check for business or personal, add country
+[ ] Make form validations for addresses: address 1, city, state, country, zip must be present; zip must be five integers or five plus hyphen plus four integers
+[ ] field drop down for USA or all countries if feasible
+[ ] Funding_project validation for description must be at least 400 char long, funding_goal must be integer
+[ ] code to remove minus symbol when funds still needed
+[ ] Make form validations for pledges, must be integer
+[ ] Comments validation no more than 400 characters
+[ ] add users names to comments on funding projects
+[ ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
 
 
 class AdminController < ApplicationController
@@ -48,6 +64,8 @@ Finished To Do
 [x] Add categories model for funding_projects: 
 [ X ] Make sure login works
 [ x ] Make a nested resource for a user address 
+[x] Make admin privleges; only admin can delete a project
+[x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
 
 Unused Code:
@@ -237,20 +255,3 @@ direct to pledges#show %>
 <%# <%= link_to '/pledges/new', pledges_path%> %>
 
 
-Future To Do Wish List:
-
-[  ] Make a class scope method for all funding_projects that have met 80% funding
-[  ] Make a custom route for countdown_projects
-[  ] Make admin privleges; only admin can delete a project
-[  ] Make admin privileges; only admin can change/add/delete funding_project_categories
-[  ] Change name into first name middle name last name entries ... nest them perhaps
-[  ] Make form validations for user: must have first and last name, email must match best regex I can find, password must have at least one capital letter, 1 number, and 1 symbol and be 8 characters login
-[  ] Change address into two nested addresses such as in lesson, check for business or personal, add country
-[  ] Make form validations for addresses: address 1, city, state, country, zip must be present; zip must be five integers or five plus hyphen plus four integers
-[  ] field drop down for USA or all countries if feasible
-[  ] Funding_project validation for description must be at least 400 char long, funding_goal must be integer
-[  ] code to remove minus symbol when funds still needed
-[  ] Make form validations for pledges, must be integer
-[  ] Comments validation no more than 400 characters
-[  ] add users names to comments on funding projects
-[  ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
