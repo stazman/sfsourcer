@@ -1,5 +1,13 @@
 class Admin::FundingCategoriesController < ApplicationController
 
+    def index
+        @funding_categories = FundingCategories.all
+    end
+
+    def show
+        @funding_category = FundingCategory.find(params[:id])
+    end
+
     def new
         @funding_category = FundingCategory.new
     end

@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
     @comment.funding_project_id = params[:comment][:funding_project_id] 
     if @comment.valid?
       @comment.save
-      redirect_to comments_path(@comment)
+      redirect_to funding_project_comment_path(:funding_project_id, @comment)
     else
       render :new
     end

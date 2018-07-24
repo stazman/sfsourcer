@@ -1,10 +1,11 @@
 class FundingProject < ApplicationRecord
+    belongs_to :user
+    has_many :comments
+    has_many :users, through: :comments
     has_many :pledges
     has_many :users, through: :pledges
-    has_many :comments
-    belongs_to :user
-    # has_many :comments, through: :users
-    # accepts_nested_attributes_for :comments
+    accepts_nested_attributes_for :comments
+
 
     validates_presence_of :title
     validates_uniqueness_of :title
@@ -20,6 +21,8 @@ class FundingProject < ApplicationRecord
         self.title = self.title.titlecase
     end
 
+
+    # order/groupby
     def total_pledges
         self.pledges.map do |p| 
            p.amount     

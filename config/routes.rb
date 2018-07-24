@@ -25,13 +25,14 @@ Rails.application.routes.draw do
     resources :funding_categories, only: [:index, :show]
   end
 
+  resources :funding_projects do
+    resources :comments
+  end
+
   # resources :funding_categories do
   #   resources :
   # resources :users do
   #   resources :comments
   # end
 
-  # resources :funding_projects do
-  #   resources :comments
-  # end
 end
