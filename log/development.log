@@ -22772,3 +22772,68 @@ Processing by FundingProjectsController#index as HTML
 Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-24 15:03:59 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 225ms (Views: 214.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-07-24 15:04:03 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 109ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:04:29 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:04:34 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:05:46 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-07-24 15:05:52 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:05:56 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:06:08 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:08:50 -0500
+Processing by StaticController#living_stories as HTML
+  Rendering static/living_stories.html.erb within layouts/application
+  Rendered static/living_stories.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
