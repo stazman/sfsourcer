@@ -1,0 +1,5 @@
+<h4><%= @funding_categories.each do |fc| %></h4>
+<ul>
+    <li><%= link_to fc.name, funding_category_path(fc) %></li>
+</ul>
+<% end %>
