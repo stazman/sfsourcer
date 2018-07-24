@@ -22837,3 +22837,156 @@ Processing by StaticController#living_stories as HTML
 Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-24 15:11:07 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 74ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-07-24 15:11:09 -0500
+Processing by StaticController#living_stories as HTML
+  Rendering static/living_stories.html.erb within layouts/application
+  Rendered static/living_stories.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 87ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-07-24 15:11:18 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-07-24 15:15:17 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-24 15:15:18 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 123ms (Views: 52.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-24 15:15:52 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TNp9J1+KKSaF5Y7chUwuy/KtK7qtrkv/Kj4YHQrHUSpFYa8Wj+QKLD7zc/f05VKRlo5gdtfLK9GTr6N5sWUYg==", "funding_project"=>{"title"=>"My First Project", "description"=>"This is my first project.", "funding_goal"=>"200"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "My First Project"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:33
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:37:in `create'
+Started GET "/users/1" for 127.0.0.1 at 2018-07-24 15:16:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.4ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 67ms (Views: 58.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-24 15:16:33 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-24 15:16:40 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-24 15:17:04 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-24 15:17:11 -0500
+Processing by FundingProjectsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-24 15:17:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-24 15:17:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/hXROukqA7+o2c1sXVkD/JgXseYoaBXv3M2BHhu889OuIPYbJ78FF0Iui1Aq6gFFLBZfKWgjEUVwfASZsu3pXQ==", "sessions"=>{"email"=>"js@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "js@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 74ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-24 15:17:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-24 15:17:38 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-24 15:17:43 -0500
+Processing by FundingProjectsController#index as HTML
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 69ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
