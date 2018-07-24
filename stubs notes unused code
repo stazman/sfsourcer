@@ -5,6 +5,7 @@ current commit notepad:
 
 To Do for Rails Project:
 
+[ ] Make a new landing page for Sourcer Projects
 [ ] Make funding_project category a nested attribute to choose when making a new funding_project
 [ ] make total_pledges a true class scope method with #order
 [ ] make sure Facebook signup works
