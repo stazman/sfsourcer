@@ -5,25 +5,47 @@ current commit notepad:
 
 To Do:
 
-[  ] Add categories model for funding_projects: 
-[  ] Make class method for querying funding projects based on category
-[  ] make total_pledges a true class scope method?
-[  ] make comments section for projects and nest comments on project show page with form for new comments
-[  ] make sure Facebook signup works
+[ ] Make class method for querying funding projects based on category
+[ ] make total_pledges a true class scope method?
+[ ] make comments section for projects and nest comments on project show page with form for new comments
+[ ] make sure Facebook signup works
 
-[  ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
-[  ] refactor for Model.find
-[  ] Make sure all validations work
-[  ] Add JS snippet to prevent backsies
-[  ] Refactor to include navbar: Log In, Home, Your Profile
-[  ] Refactor pledge amount logic in funding_project#show
-[  ] Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
-[  ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
-[  ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
-[  ] add last time logged in for project creators 
+[ ] fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
+[ ] refactor for Model.find
+[ ] Make sure all validations work
+[ ] Add JS snippet to prevent backsies
+[ ] Refactor to include navbar: Log In, Home, Your Profile
+[ ] Refactor pledge amount logic in funding_project#show
+[ ] Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
+[ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
+[ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
+[ ] add last time logged in for project creators
+[ ] add authentication for admin ... make admin controller in controllers/admin but figure out authentication Monban; https://roberteshleman.com/blog/2014/08/14/using-rails-namespaces-for-admin-actions/
+
+
+class AdminController < ApplicationController
+  before_action :require_admin
+
+  def require_admin
+    unless current_user.admin?
+      redirect_to root_path
+    end
+  end
+end
+Now, each namespaced admin controller can inherit directly (and quite appropriately) from AdminController. Since we’ve defined the before_action in AdminController, actions in any sub-classed controller will be restricted to admin users by default.
+
+We no longer need to list the before_action or define a require_admin method in each of our namespaced controllers; they just inherit from AdminController:
+
+class Admin::CategoriesController < AdminController
+  # Methods omitted
+end
+
+
+
 
 Finished To Do
 
+[x] Add categories model for funding_projects: 
 [ X ] Make sure login works
 [ x ] Make a nested resource for a user address 
 
