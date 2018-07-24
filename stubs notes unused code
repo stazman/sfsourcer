@@ -5,6 +5,7 @@ current commit notepad:
 
 To Do:
 
+[ ] Refactor to include navbar: Log In, Log Out, Home, Your Profile
 [ ] Make class method for querying funding projects based on category
 [ ] make total_pledges a true class scope method?
 [ ] make comments section for projects and nest comments on project show page with form for new comments
@@ -14,7 +15,6 @@ To Do:
 [ ] refactor for Model.find
 [ ] Make sure all validations work
 [ ] Add JS snippet to prevent backsies
-[ ] Refactor to include navbar: Log In, Home, Your Profile
 [ ] Refactor pledge amount logic in funding_project#show
 [ ] Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
 [ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
