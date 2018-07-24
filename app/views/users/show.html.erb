@@ -1,27 +1,23 @@
 MAIN NAVBAR <br> 
-<%= link_to "Home", root_url %>
-<%= link_to "Home", root_url %>
-<%= link_to "Home", root_url %>
 
 
-
-
-<h1><%= @user.name %></h1><br>
+<h1>Greetings, <%= @user.name %>!</h1><br><br>
 <p>Email: <%= @user.email %></p>
 <p>Change Password: </p>
 
 <%= link_to "Log Out", logout_path %><br>
 
-<h2><%= link_to "Your SFSourcer Projects!", funding_projects_url %> </h2><br><br>
+<h3></h3></h1>
+<h2><%= link_to "Your Own SFSourcer Projects!", funding_projects_url %> </h2><br><br>
 
 <h2><%= link_to "Check out all SFSourcer Projects!", funding_projects_url %> </h2><br>
 
 
 <h3>Your Pledges: </h3>
 <ul>
-    <%# <li><h3><% @funding_projects.each do |fp| %></h3></li> %>
-    <%# <li><h3>Sourcer Project: <%= fp.title %></h3></li> %>
-    <%# <% end %> %>
+    <%# <li><h3><% @funding_projects.each do |fp| %>
+    <%# <li><h3>Sourcer Project: <%= fp.title %>
+    <%# <% end %> 
     <%# make into link %>
     <li><h3><% @pledges.each do |p| %></h3></li>
     <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
@@ -36,7 +32,7 @@ MAIN NAVBAR <br>
 <%= link_to funding_project.title, funding_project_path(fp) %>
 <% end %>
 
-
+<%# If user has their own project/s, they appear here: %>
 
 
 
