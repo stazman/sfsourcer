@@ -23,3 +23,6 @@ MAIN NAVBAR
 
 <%# <h3><%= link_to "Make a Comment", new_funding_project_comment_path %></h3><br> %>
 
+<%= @funding_project.comments.each do |comment| %></h3>
+<%= link_to comment.user.username, user_path(comment.user) %>
+<%= comment.content %>
