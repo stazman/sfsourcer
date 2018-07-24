@@ -26,7 +26,10 @@ MAIN NAVBAR
     <%# make into link %>
 </ul>
 
-
+<h3>SFSourcer Projects you've commented on:</h3>
+<% @user.funding_projects.each do |fp| %>
+<%= link_to funding_project.title, funding_project_path(fp) %>
+<% end %>
 
 
 
