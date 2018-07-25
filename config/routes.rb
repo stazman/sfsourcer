@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
 
   resources :users
+  resources :fp_creators
   resources :pledges, except: :index
   resources :funding_projects
   resources :comments

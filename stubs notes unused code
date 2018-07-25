@@ -1,10 +1,12 @@
 current commit notepad:
 
-'debugging no id persisted for new funding_project'
+'making a new model for fp_creator'
 
 
 To Do for Rails Project:
 
+[ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, 
+[ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
 [ ] make living story feature with nested category attributes; user can make new ones
 [ ] make total_pledges a true class scope method with #order
 [ ] make sure Facebook signup works
@@ -15,6 +17,8 @@ To Do for Rails Project:
 
 Future: 
 
+[ ] Add how many days to go and how many backers for funding_project
+[ ] Give funding_project_creator choice to be same as user for login or not?
 [ ] Make funding_project category a nested attribute to choose when making a new funding_project
 [ ] Make new funding_project only possible with admin login
 [ ] category a nested attribute to choose when making a new funding_project
@@ -23,8 +27,6 @@ Future:
 [ ] Finish comments feature for projects
 [ ] Refactor to include navbar: Your Profile
 [ ] add authentication for admin ... make admin controller in controllers/admin but figure out authentication Monban; https://roberteshleman.com/blog/2014/08/14/using-rails-namespaces-for-admin-actions/
-[ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, choice to be same as user for login?
-[ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
 [ ] refactor for Model.find
 [ ] Add JS snippet to prevent backsies
 [ ] add feature: Which number of project it is for a user is :experience attribute to be a feature mostly connected to funding_project model
