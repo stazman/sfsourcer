@@ -23815,3 +23815,210 @@ Migrating to ChangeCreatorProfileToCreatorAbout (20180725183521)
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-07-25 13:58:14 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 493ms (Views: 480.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 13:58:26 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 98ms (Views: 46.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 13:58:33 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (287.9ms)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fc16fc41b10>:0x007fc16dbcd640>
+Did you mean?  @current_user):
+    1: <h1>New Sourcer Project Creator</h1><br>
+    2: <h3>Connected to User <%= user_creator_connect %></h3>
+    3: 
+    4: <%= form_for @fp_creator do |f| %>
+    5: <%= f.label "Name of Sponsoring Individual or Organization (Creator) "%>
+  
+app/helpers/fp_creators_helper.rb:3:in `user_creator_connect'
+app/views/fp_creators/new.html.erb:2:in `_app_views_fp_creators_new_html_erb___3305934622477281977_70234390272040'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 13:59:12 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (124.0ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id=' for #<#<Class:0x007fc16df16c70>:0x007fc173d5f6b0>
+Did you mean?  user_url):
+    1: <h1>New Sourcer Project Creator</h1><br>
+    2: <h3>Connected to User <%= user_creator_connect %></h3>
+    3: 
+    4: <%= form_for @fp_creator do |f| %>
+    5: <%= f.label "Name of Sponsoring Individual or Organization (Creator) "%>
+  
+app/helpers/fp_creators_helper.rb:3:in `user_creator_connect'
+app/views/fp_creators/new.html.erb:2:in `_app_views_fp_creators_new_html_erb___3305934622477281977_70234424385660'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:00:04 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (142.3ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id=' for #<#<Class:0x007fc16df16c70>:0x007fc174838dc0>
+Did you mean?  user_url):
+    1: <h1>New Sourcer Project Creator</h1><br>
+    2: <h3>Connected to User <%= user_creator_connect %></h3>
+    3: 
+    4: <%= form_for @fp_creator do |f| %>
+    5: <%= f.label "Name of Sponsoring Individual or Organization (Creator) "%>
+  
+app/helpers/fp_creators_helper.rb:3:in `user_creator_connect'
+app/views/fp_creators/new.html.erb:2:in `_app_views_fp_creators_new_html_erb___3305934622477281977_70234430098420'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:00:43 -0500
+  
+ActionController::RoutingError (Couldn't find FpCreatorsHelper, expected it to be defined in helpers/fp_creators_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/fp_creators_controller.rb:1:in `<main>'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:01:12 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (293.1ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_creator_connect' for #<#<Class:0x007fc16b9beb08>:0x007fc16c93c698>):
+    1: <h1>New Sourcer Project Creator</h1><br>
+    2: <h3>Connected to User <%= user_creator_connect %></h3>
+    3: 
+    4: <%= form_for @fp_creator do |f| %>
+    5: <%= f.label "Name of Sponsoring Individual or Organization (Creator) "%>
+  
+app/views/fp_creators/new.html.erb:2:in `_app_views_fp_creators_new_html_erb___3305934622477281977_70234359206500'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:01:44 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 87ms (Views: 82.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:02:26 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 14:04:02 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 14:04:15 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxSrTmC91bBtkWF9fUH7p/JOs1foKgfb4mNO2Emm4igY6LlO6q1zPZvuTsxNTiadv0Ko+C0SvQhXr7Nqtw9MJw==", "fp_creator"=>{"name"=>"a", "location"=>"a", "name_of_verified"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `fp_creator' for #<FpCreatorsController:0x007fc16bdb0298>
+Did you mean?  fp_creator_url):
+  
+app/controllers/fp_creators_controller.rb:13:in `create'
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 14:04:57 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxSrTmC91bBtkWF9fUH7p/JOs1foKgfb4mNO2Emm4igY6LlO6q1zPZvuTsxNTiadv0Ko+C0SvQhXr7Nqtw9MJw==", "fp_creator"=>{"name"=>"a", "location"=>"a", "name_of_verified"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+LoadError (Unable to autoload constant Fp_creator, expected /Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/models/fp_creator.rb to define it):
+  
+app/controllers/fp_creators_controller.rb:13:in `create'
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 14:05:58 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxSrTmC91bBtkWF9fUH7p/JOs1foKgfb4mNO2Emm4igY6LlO6q1zPZvuTsxNTiadv0Ko+C0SvQhXr7Nqtw9MJw==", "fp_creator"=>{"name"=>"a", "location"=>"a", "name_of_verified"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[36mFpCreator Create (0.5ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "a"], ["location", "a"], ["name_of_verified", "a"], ["creator_site", "a"], ["instagram_url", "a"], ["twitter_url", "a"], ["facebook_url", "a"], ["blog_url", "a"], ["created_at", "2018-07-25 19:05:58.963427"], ["updated_at", "2018-07-25 19:05:58.963427"]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:15
+Redirected to http://localhost:3000/fp_creators/1
+Completed 302 Found in 40ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-07-25 14:05:58 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (297.1ms)
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fc16c6edc20>:0x007fc16c6ec0c8>):
+    2: <%# <h3>Connected to User <%= user_creator_connect %></h3> %>
+    3: 
+    4: <p>Name: <%= @fp_creator.name %></p>
+    5: <p>Location: <%= f.text_field :location %>
+    6: <p>Name of Verified: <%= f.text_field "name_of_verified" %>
+    7: <p>About Creator: <%= f.text_area "creator_about" %>
+    8: <p>Creator Website: <%= f.text_field "creator_site" %>
+  
+app/views/fp_creators/show.html.erb:5:in `_app_views_fp_creators_show_html_erb__1509585093190629091_70234362311260'
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-07-25 14:08:18 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
