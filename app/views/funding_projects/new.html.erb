@@ -2,7 +2,10 @@ MAIN NAVBAR
 
 <h1>Create a New Sourcer Project!</h1><br>
 
+<h3>Project Originated by: <%= current_user %></h3>
+
 <%= form_for @funding_project do |f| %>
+<h2>Creator/Name of Sponsoring Organization: <%= f.text_field :title %> </h2><br>
 <h2>Project Title: <%= f.text_field :title %> </h2><br>
 <h3>Description: <%= f.text_area :description %></h3><br>
 <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3>
