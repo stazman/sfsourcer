@@ -1,6 +1,6 @@
 class FundingProjectsController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:index, :show]
+  # skip_before_action :require_login, only: [:index, :show]
   # before_save :make_titlecase
 
   def index
@@ -32,13 +32,15 @@ class FundingProjectsController < ApplicationController
 
     @funding_project.save
 
+    @funding_project.current_user = current_user
+
     fp_pledges = @funding_project.pledges
     
     redirect_to funding_project_path(@funding_project)
   end
 
   def show
-    @funding_project = FundingProject.find_by(id: params[:id])
+    @funding_project = FundingProject.find(params[:id])
     @total_pledges = []
     @comments = Comment.where(:funding_project_id == @funding_project.id)
   end
@@ -57,7 +59,7 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(:funding_project_pledge, :title, :description, :funding_goal, comments_attributes: [:title, :content] )
+    params.require(:funding_project).permit(:funding_project_pledge, :creator, :title, :description, :funding_goal, comments_attributes: [:title, :content] )
   end
 
   def require_login

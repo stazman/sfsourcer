@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-    has_many :comments
-    has_many :funding_projects, through: :comments
     has_many :pledges
     has_many :funding_projects
     has_many :funding_projects, through: :pledges
+    has_many :comments
     has_many :addresses
+    has_many :funding_projects, through: :comments
     accepts_nested_attributes_for :addresses
 
     has_secure_password

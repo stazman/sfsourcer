@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   end
 
   resources :funding_projects do
-    resources :funding_categories, only: [:index, :show]
+    resources :funding_categories
+    # , only: [:index, :show]
   end
 
   resources :funding_projects do
