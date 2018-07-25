@@ -10,7 +10,7 @@ class FpCreatorsController < ApplicationController
   end
 
   def create  
-    @fp_creator = fp_creator.new(fp_creator_params)
+    @fp_creator = FpCreator.new(fp_creator_params)
     if @fp_creator.valid?
       @fp_creator.save
       redirect_to fp_creator_path(@fp_creator)
