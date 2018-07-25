@@ -1,5 +1,6 @@
 class FundingProject < ApplicationRecord
     belongs_to :fp_creator
+    # belongs_to :user
     has_many :comments
     has_many :users, through: :comments
     has_many :pledges
