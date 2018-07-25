@@ -1,2 +1,16 @@
-<h1>FpCreatorsController#show,</h1>
-<p>Find me in app/views/fp_creators_controller/show,.html.erb</p>
+<h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+<h3>Connected to User <%= user_creator_connect %></h3>
+
+<p>Name: <%= @fp_creator.name %></p>
+<p>Location: <%= f.text_field :location %>
+<p>Name of Verified: <%= f.text_field "name_of_verified" %>
+<p>Creator Description: <%= f.text_area "creator_profile" %>
+<p>Creator Website: <%= f.text_field "creator_site" %>
+<p>Creator Instagram: <%= f.text_field "instagram_url" %>
+<p>Creator Twitter:<%= f.text_field "twitter_url" %>
+<p>Creator Facebook:<%= f.text_field "facebook_url" %>
+<p>Creator Blog: <%= f.text_field "blog_url" %>
+
+<h2>Make a New Sourcer Project</h2>
+
+<h3>Edit Profile</h3>

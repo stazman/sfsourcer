@@ -1,14 +1,14 @@
 <h1>New Sourcer Project Creator</h1><br>
 <h3>Connected to User <%= user_creator_connect %></h3>
 
-<%= form_for @user_creator do |f| %>
+<%= form_for @fp_creator do |f| %>
 <%= f.label "Name of Sponsoring Individual or Organization (Creator) "%>
 <%= f.text_field :name %>
 <%= f.label "Location "%>
 <%= f.text_field :location %>
 <%= f.label "Name of Verified for Project "%>
 <%= f.text_field "name_of_verified" %>
-<%= f.label "Creator Profile "%>
+<%= f.label "Creator Description "%>
 <%= f.text_area "creator_profile" %>
 <%= f.label "Creator Website "%>
 <%= f.text_field "creator_site" %>
