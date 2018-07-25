@@ -77,6 +77,15 @@ Finished To Do
 
 Unused Code:
 
+class CreateJoinTable < ActiveRecord::Migration[5.2]
+  def change
+    create_join_table :fp_creators, :funding_projects do |t|
+      # t.index [:fp_creator_id, :funding_project_id]
+      # t.index [:funding_project_id, :fp_creator_id]
+    end
+  end
+end
+
 <!DOCTYPE html>
 <html>
   <head>
