@@ -13,6 +13,7 @@ class FpCreatorsController < ApplicationController
     @fp_creator = FpCreator.new(fp_creator_params)
     if @fp_creator.valid?
       @fp_creator.save
+      @fp_creator.user_id = current_user.id 
       redirect_to fp_creator_path(@fp_creator)
     else
       render :new
@@ -20,7 +21,7 @@ class FpCreatorsController < ApplicationController
   end
 
   def show
-      @fp_creator = FpCreator.find(params[:id]) 
+      @fp_creator = FpCreator.find(params[:id])
   end
 
   def edit
