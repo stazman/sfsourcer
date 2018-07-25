@@ -23505,3 +23505,191 @@ Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.7ms)
 NoMethodError (undefined method `current_user=' for #<FundingProject:0x007fe17c9e5218>):
   
 app/controllers/funding_projects_controller.rb:35:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:08:32 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5g8pSs19WCuuFf+wQnUiPlODhbU0BWCFrGpiYoC1kXvUtFF8uG5Gq8J43C35xH0+Fuoi8NpnPtKLw/EzIO45UA==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"jj"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:39:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:09:50 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5g8pSs19WCuuFf+wQnUiPlODhbU0BWCFrGpiYoC1kXvUtFF8uG5Gq8J43C35xH0+Fuoi8NpnPtKLw/EzIO45UA==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"jj"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:39:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:10:01 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW+25x2VSQdEdN597lueBOgr2HhZIN4eUHbxY8RDxL3NWpHG0wBPr66DmEGZ6Jy9XCo2txlr2rT8x3TkbRLeMw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"funding_projects", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/funding_projects_controller.rb:39:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:12:22 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW+25x2VSQdEdN597lueBOgr2HhZIN4eUHbxY8RDxL3NWpHG0wBPr66DmEGZ6Jy9XCo2txlr2rT8x3TkbRLeMw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:34
+Redirected to http://localhost:3000/funding_projects
+Completed 302 Found in 44ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 10:12:22 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:14:26 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW+25x2VSQdEdN597lueBOgr2HhZIN4eUHbxY8RDxL3NWpHG0wBPr66DmEGZ6Jy9XCo2txlr2rT8x3TkbRLeMw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (275.6ms)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fe17590ac00>:0x007fe175902c58>
+Did you mean?  @current_user):
+    2: 
+    3: <h1>Create a New Sourcer Project!</h1><br>
+    4: 
+    5: <h3>Project Originated by: <%= current_user %></h3>
+    6: 
+    7: <%= form_for @funding_project do |f| %>
+    8: <h2>Creator/Name of Sponsoring Organization: <%= f.text_field :title %> </h2><br>
+  
+app/views/funding_projects/new.html.erb:5:in `_app_views_funding_projects_new_html_erb__1870653080194453661_70303158361000'
+app/controllers/funding_projects_controller.rb:37:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:14:57 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW+25x2VSQdEdN597lueBOgr2HhZIN4eUHbxY8RDxL3NWpHG0wBPr66DmEGZ6Jy9XCo2txlr2rT8x3TkbRLeMw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Redirected to 
+Completed 500 Internal Server Error in 57ms (Views: 41.6ms | ActiveRecord: 0.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/funding_projects_controller.rb:43:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:16:03 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW+25x2VSQdEdN597lueBOgr2HhZIN4eUHbxY8RDxL3NWpHG0wBPr66DmEGZ6Jy9XCo2txlr2rT8x3TkbRLeMw==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 76ms (Views: 35.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:16:08 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lmJzpU+auyg6Z2Dqv2QPYFuIj1U7ZGD8qNPui3fWmpDGV1SEgQ+9gNCQJtbI1w3Z74lhmnsvZFYEYmsM3oeAHg==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:16:12 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eBk8Ktnu1bTnR2nycIONpQD+8ogQeGE87se7R2WO3i91UPRZfK9/jlqW5u+cQyPIAIVBWAK5S5fCptqtMch9g==", "funding_project"=>{"title"=>"Jelly jam", "description"=>"jj", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Jelly jam"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 10:16:55 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmv6PYIqmiaRjEgNdjSy3HVIfNLVhwBL+IOB23vBW0DeXt0cTL+cjnt7DjEBh7BlwUmSHZXMBOFUMgRc0pBBzg==", "funding_project"=>{"title"=>"zzz", "description"=>"zzz", "funding_goal"=>"200"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "zzz"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
