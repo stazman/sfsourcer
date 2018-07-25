@@ -1,15 +1,15 @@
 <h1>Creator Profile for <%= @fp_creator.name %></h1><br>
-<h3>Connected to User <%= user_creator_connect %></h3>
+<%# <h3>Connected to User <%= user_creator_connect %></h3> %>
 
 <p>Name: <%= @fp_creator.name %></p>
-<p>Location: <%= f.text_field :location %>
-<p>Name of Verified: <%= f.text_field "name_of_verified" %>
-<p>About Creator: <%= f.text_area "creator_about" %>
-<p>Creator Website: <%= f.text_field "creator_site" %>
-<p>Creator Instagram: <%= f.text_field "instagram_url" %>
-<p>Creator Twitter:<%= f.text_field "twitter_url" %>
-<p>Creator Facebook:<%= f.text_field "facebook_url" %>
-<p>Creator Blog: <%= f.text_field "blog_url" %><br><br>
+<p>Location: <%= @fp_creator.location %>
+<p>Name of Verified: <%= @fp_creator.name_of_verified %>
+<p>About Creator: <%= @fp_creator.creator_about %>
+<p>Creator Website: <%= @fp_creator.creator_site %>
+<p>Creator Instagram: <%= @fp_creator.instagram_url %>
+<p>Creator Twitter:<%= @fp_creator.twitter_url %>
+<p>Creator Facebook:<%= @fp_creator.facebook_url %>
+<p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
 
 <h2>Make a New Sourcer Project</h2><br>
 
