@@ -1,6 +1,7 @@
 current commit notepad:
 
-'making a new model for fp_creator'
+user has many fp_creators
+An fp_creator is associated with a user on creation
 
 
 To Do for Rails Project:

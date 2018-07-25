@@ -1,6 +1,9 @@
 class User < ApplicationRecord
+    # has_many :funding_projects
+    has_many :fp_creators
     has_many :pledges
     has_many :funding_projects, through: :pledges
+    has_many :funding_projects, through: :fp_creators
     has_many :comments
     has_many :funding_projects, through: :comments
     has_many :addresses
