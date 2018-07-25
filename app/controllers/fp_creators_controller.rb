@@ -11,9 +11,9 @@ class FpCreatorsController < ApplicationController
 
   def create  
     @fp_creator = FpCreator.new(fp_creator_params)
+    @fp_creator.user_id = current_user.id 
     if @fp_creator.valid?
       @fp_creator.save
-      @fp_creator.user_id = current_user.id 
       redirect_to fp_creator_path(@fp_creator)
     else
       render :new

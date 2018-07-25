@@ -24275,3 +24275,78 @@ Unpermitted parameter: :creator_about
 Completed 200 OK in 80ms (Views: 45.7ms | ActiveRecord: 1.5ms)
 
 
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 17:32:44 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrRh22cgfhCPFg/GLkDYvtKamyZTR8xhAQ87AoBo+1u1SHPb7TDYnXlpIHceTwWEn5aAiZZ/drK0w8awfsFVVA==", "fp_creator"=>{"name"=>"b", "location"=>"b", "name_of_verified"=>"b", "creator_about"=>"", "creator_site"=>"b", "instagram_url"=>"b", "twitter_url"=>"b", "facebook_url"=>"b", "blog_url"=>"b"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 17:34:40 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uQqh9fHlREpY/5fv5llwrwzScBo3bLgDHjktxV3yl9Zu9rP1e/Xix66AuF7WVq2VQd5rtfJUAtCr9dB3o1s52Q==", "fp_creator"=>{"name"=>"b", "location"=>"b", "name_of_verified"=>"b", "creator_about"=>"", "creator_site"=>"b", "instagram_url"=>"b", "twitter_url"=>"b", "facebook_url"=>"b", "blog_url"=>"b"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[36mFpCreator Create (0.5ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "b"], ["location", "b"], ["name_of_verified", "b"], ["creator_site", "b"], ["instagram_url", "b"], ["twitter_url", "b"], ["facebook_url", "b"], ["blog_url", "b"], ["user_id", 1], ["created_at", "2018-07-25 22:34:40.495695"], ["updated_at", "2018-07-25 22:34:40.495695"]]
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+Redirected to http://localhost:3000/fp_creators/2
+Completed 302 Found in 49ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:34:40 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:35:53 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (268.3ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fbacda1a4c0>:0x007fbad4907c48>
+Did you mean?  @current_user):
+    1: <h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+    2: <h3>Connected to User <%= current_user.name %></h3>
+    3: 
+    4: <p>Name: <%= @fp_creator.name %></p>
+    5: <p>Location: <%= @fp_creator.location %>
+  
+app/views/fp_creators/show.html.erb:2:in `_app_views_fp_creators_show_html_erb___3046894567714193167_70220203303780'
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:37:16 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
