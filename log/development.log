@@ -23773,3 +23773,45 @@ Migrating to CreateFpCreators (20180725164757)
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpCreators (20180725164757)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180725164757_create_fp_creators.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "name_of_verified" varchar, "verified?" boolean, "creator_profile" text, "last_logged_in" datetime, "fp_amt_created" integer, "fp_amt_backed" integer, "creator_site" varchar, "instagram_url" varchar, "twitter_url" varchar, "facebook_url" varchar, "blog_url" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725164757_create_fp_creators.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725164757"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to ChangeCreatorProfileToCreatorAbout (20180725183521)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afp_creators" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "location" varchar DEFAULT NULL, "name_of_verified" varchar DEFAULT NULL, "verified?" boolean DEFAULT NULL, "creator_about" text DEFAULT NULL, "last_logged_in" datetime DEFAULT NULL, "fp_amt_created" integer DEFAULT NULL, "fp_amt_backed" integer DEFAULT NULL, "creator_site" varchar DEFAULT NULL, "instagram_url" varchar DEFAULT NULL, "twitter_url" varchar DEFAULT NULL, "facebook_url" varchar DEFAULT NULL, "blog_url" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "afp_creators" ("id","name","location","name_of_verified","verified?","creator_about","last_logged_in","fp_amt_created","fp_amt_backed","creator_site","instagram_url","twitter_url","facebook_url","blog_url","user_id","created_at","updated_at")
+                     SELECT "id","name","location","name_of_verified","verified?","creator_profile","last_logged_in","fp_amt_created","fp_amt_backed","creator_site","instagram_url","twitter_url","facebook_url","blog_url","user_id","created_at","updated_at" FROM "fp_creators"[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "fp_creators"[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "fp_creators" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "location" varchar DEFAULT NULL, "name_of_verified" varchar DEFAULT NULL, "verified?" boolean DEFAULT NULL, "creator_about" text DEFAULT NULL, "last_logged_in" datetime DEFAULT NULL, "fp_amt_created" integer DEFAULT NULL, "fp_amt_backed" integer DEFAULT NULL, "creator_site" varchar DEFAULT NULL, "instagram_url" varchar DEFAULT NULL, "twitter_url" varchar DEFAULT NULL, "facebook_url" varchar DEFAULT NULL, "blog_url" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "fp_creators" ("id","name","location","name_of_verified","verified?","creator_about","last_logged_in","fp_amt_created","fp_amt_backed","creator_site","instagram_url","twitter_url","facebook_url","blog_url","user_id","created_at","updated_at")
+                     SELECT "id","name","location","name_of_verified","verified?","creator_about","last_logged_in","fp_amt_created","fp_amt_backed","creator_site","instagram_url","twitter_url","facebook_url","blog_url","user_id","created_at","updated_at" FROM "afp_creators"[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "afp_creators"[0m
+  ↳ db/migrate/20180725183521_change_creator_profile_to_creator_about.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725183521"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
