@@ -27,6 +27,10 @@ Rails.application.routes.draw do
     resources :addresses, only: [:new, :show, :edit]
   end
 
+  resources :fp_creators do
+    resources :funding_projects
+  end  
+  
   resources :funding_projects do
     resources :funding_categories
     # , only: [:index, :show]
