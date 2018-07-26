@@ -1,59 +1,44 @@
 class LStoriesController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:new, :create]
-  include UsersHelper
 
   def index
-    @users = User.all
-  end
-
-  def addresses_index
-    @user = User.find(params[:id])
-    @addresses = @user.addresses
-    render template: 'addresses/index'
+    @l_stories = LStory.all
   end
  
-  # def post
-  #   @user = User.find(params[:id])
-  #   @address = Address.find(params[:user_id])
-  #   render template: 'addresses/show'
-  # end
-
   def new
-    @user = User.new
-    @user.addresses.build
+    @l_story = LStory.new
+    # @l_story.addresses.build
   end
 
   def create  
-    @user = User.new(user_params)
-    if @user.valid?
-      @user.save
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
+    @l_story = LStory.new(l_story_params)
+    if @l_story.valid?
+      @l_story.save
+      redirect_to l_story_path(@l_story)
     else
       render :new
     end
   end
 
   def show
-      @user = User.find(params[:id]) 
-      @pledges = Pledge.where(:user_id == @user.id)
+      @l_story = LStory.find(params[:id]) 
+      # @pledges = Pledge.where(:l_story_id == @l_story.id)
   end
 
   def edit
-      @user = User.find(params[:id])
+      @l_story = LStory.find(params[:id])
   end
 
   def update
-    @user = User.update(user_params)
-    @user.save
-    redirect_to user_path(@user)
+    @l_story = LStory.update(l_story_params)
+    @l_story.save
+    redirect_to l_story_path(@l_story)
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:name, :email, category_ids:[], categories_attributes: [:name]))
+  def l_story_params
+    params.require(:l_story).permit(:title, :content, o_genre_ids:[], o_genres_attributes: [:name])
   end
 
   def require_login
