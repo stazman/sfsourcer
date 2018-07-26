@@ -24350,3 +24350,833 @@ Processing by FpCreatorsController#show as HTML
 Completed 200 OK in 48ms (Views: 41.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:43:02 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (429.8ms)
+Completed 500 Internal Server Error in 484ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_fp_creator_funding_project' for #<#<Class:0x007fbad4b2a138>:0x007fbad4b28338>
+Did you mean?  new_fp_creator_funding_project_url
+               new_fp_creator_funding_project_path
+               new_fp_creator_url
+               new_fp_creator_path
+               new_funding_project_path
+               new_funding_project_comment_url
+               new_funding_project_comment_path
+               edit_fp_creator_funding_project_url):
+    11: <p>Creator Facebook:<%= @fp_creator.facebook_url %>
+    12: <p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+    13: 
+    14: <h2><% link_to "Make a New Sourcer Project for this Creator", new_fp_creator_funding_project %> </h2><br>
+    15: 
+    16: <h3>Edit Profile</h3>
+  
+app/views/fp_creators/show.html.erb:14:in `_app_views_fp_creators_show_html_erb___3046894567714193167_70220204561640'
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:43:37 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"funding_projects", :id=>"2"}, missing required keys: [:fp_creator_id]):
+    11: <p>Creator Facebook:<%= @fp_creator.facebook_url %>
+    12: <p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+    13: 
+    14: <h2><% link_to "Make a New Sourcer Project for this Creator", new_fp_creator_funding_project_path %> </h2><br>
+    15: 
+    16: <h3>Edit Profile</h3>
+  
+app/views/fp_creators/show.html.erb:14:in `_app_views_fp_creators_show_html_erb___3046894567714193167_70220213720160'
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 17:44:07 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-07-25 17:47:42 -0500
+Processing by FpCreatorsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (uninitialized constant FpCreatorsController::FpCreators):
+  
+app/controllers/fp_creators_controller.rb:5:in `index'
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 17:47:49 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEtCXv6hm7WREKaoF0W8epBpyNQL0exeq/+UE+bj5TZ/t1BedLE9OGdviRknSmFA3WXTe87pVo0eM2mhGEpLOQ==", "fp_creator"=>{"name"=>"b", "location"=>"b", "name_of_verified"=>"b", "creator_about"=>"b", "creator_site"=>"b", "instagram_url"=>"b", "twitter_url"=>"b", "facebook_url"=>"b", "blog_url"=>"b"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[36mFpCreator Create (0.5ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "b"], ["location", "b"], ["name_of_verified", "b"], ["creator_site", "b"], ["instagram_url", "b"], ["twitter_url", "b"], ["facebook_url", "b"], ["blog_url", "b"], ["user_id", 1], ["created_at", "2018-07-25 22:47:49.162641"], ["updated_at", "2018-07-25 22:47:49.162641"]]
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+Redirected to http://localhost:3000/fp_creators/3
+Completed 302 Found in 40ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/fp_creators/3" for 127.0.0.1 at 2018-07-25 17:47:49 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators/3" for 127.0.0.1 at 2018-07-25 17:48:42 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 17:48:48 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEtCXv6hm7WREKaoF0W8epBpyNQL0exeq/+UE+bj5TZ/t1BedLE9OGdviRknSmFA3WXTe87pVo0eM2mhGEpLOQ==", "fp_creator"=>{"name"=>"b", "location"=>"b", "name_of_verified"=>"b", "creator_about"=>"b", "creator_site"=>"b", "instagram_url"=>"b", "twitter_url"=>"b", "facebook_url"=>"b", "blog_url"=>"b"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[36mFpCreator Create (1.3ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "b"], ["location", "b"], ["name_of_verified", "b"], ["creator_site", "b"], ["instagram_url", "b"], ["twitter_url", "b"], ["facebook_url", "b"], ["blog_url", "b"], ["user_id", 1], ["created_at", "2018-07-25 22:48:48.774922"], ["updated_at", "2018-07-25 22:48:48.774922"]]
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+Redirected to http://localhost:3000/fp_creators/4
+Completed 302 Found in 18ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/fp_creators/4" for 127.0.0.1 at 2018-07-25 17:48:48 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fp_creators/4/funding_projects/new" for 127.0.0.1 at 2018-07-25 17:49:36 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:73: syntax error, unexpected tSYMBEG, expecting ')'
+      :fp_creator_id
+       ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:74: syntax error, unexpected ')', expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:91: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/funding_projects_controller.rb:73: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/funding_projects_controller.rb:74: syntax error, unexpected ')', expecting keyword_end
+app/controllers/funding_projects_controller.rb:91: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/fp_creators/4/funding_projects/new" for 127.0.0.1 at 2018-07-25 17:50:04 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:73: syntax error, unexpected '\n', expecting =>
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/funding_projects_controller.rb:91: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/funding_projects_controller.rb:73: syntax error, unexpected '\n', expecting =>
+app/controllers/funding_projects_controller.rb:91: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/fp_creators/4/funding_projects/new" for 127.0.0.1 at 2018-07-25 17:50:30 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 35.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 17:50:47 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CsrJwFX8UlptMoz6LikrZ23U9S15jmicDYFN0qniksr1zkni0dXxJ/L5YLYt3mX0LtIe3Deg3HF+viFtA4kRA==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 17:57:28 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fWBZAa2MzvPeWLV/OTO2P8i/P3425e99wMqrwoNHDNiqnEsBJ5xofignms4JPGsFhbMk0fPdVa51BlZwfe6i1w==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:33
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 130ms (Views: 112.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 18:06:34 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 88ms (Views: 48.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:08:10 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CsrJwFX8UlptMoz6LikrZ23U9S15jmicDYFN0qniksr1zkni0dXxJ/L5YLYt3mX0LtIe3Deg3HF+viFtA4kRA==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 79ms (Views: 35.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:09:23 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dBsuaYQgkAjA5D46Jk/wuM1Qu2pkXeH62kjmB+yPIOaj5zxpDjA2hTabEYsWQC2CgFygxaFlWylvhBu1EiaO6Q==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 70ms (Views: 31.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 18:09:25 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:09:31 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CsrJwFX8UlptMoz6LikrZ23U9S15jmicDYFN0qniksr1zkni0dXxJ/L5YLYt3mX0LtIe3Deg3HF+viFtA4kRA==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 56ms (Views: 48.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:25:43 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CsrJwFX8UlptMoz6LikrZ23U9S15jmicDYFN0qniksr1zkni0dXxJ/L5YLYt3mX0LtIe3Deg3HF+viFtA4kRA==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 77ms (Views: 39.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:25:47 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCgdSfpgSYoG9q2d5voIh9MQ3/Lf90d6ebrGv1sMR5IX1A9JcHDvB/CJgizW9dW9nhzEXRrP/anMdjsNpaXpnQ==", "funding_project"=>{"title"=>"asas", "description"=>"asas", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "asas"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-25 18:28:42 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 406ms (Views: 393.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-25 18:28:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.5ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 100ms (Views: 46.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 18:28:51 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 121ms (Views: 82.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 18:29:00 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"82Z81/iuDwC/2XP8kYUUQ1f43Em/A0zfF4coNI4NuU/6bwdEvgkUGeVAr5ZRlna4ja20PrX0lluXvNoSEbJQgw==", "fp_creator"=>{"name"=>"c", "location"=>"c", "name_of_verified"=>"c", "creator_about"=>"c", "creator_site"=>"c", "instagram_url"=>"c", "twitter_url"=>"c", "facebook_url"=>"c", "blog_url"=>""}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[36mFpCreator Create (0.6ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "c"], ["location", "c"], ["name_of_verified", "c"], ["creator_site", "c"], ["instagram_url", "c"], ["twitter_url", "c"], ["facebook_url", "c"], ["blog_url", ""], ["user_id", 1], ["created_at", "2018-07-25 23:29:00.238388"], ["updated_at", "2018-07-25 23:29:00.238388"]]
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+Redirected to http://localhost:3000/fp_creators/5
+Completed 302 Found in 29ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/fp_creators/5" for 127.0.0.1 at 2018-07-25 18:29:00 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 78ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators/5" for 127.0.0.1 at 2018-07-25 18:29:48 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fp_creators/fp_creator_id/funding_projects/new" for 127.0.0.1 at 2018-07-25 18:29:50 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"fp_creator_id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 37.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fp_creators/fp_creator_id/funding_projects/new" for 127.0.0.1 at 2018-07-25 18:30:57 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"fp_creator_id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 85ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:31:08 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rGaT6g0/7qYZIubB9jHSeJPz4zEIp92fg6iEzl0QPNaohWr0pBhmtZJ+pJ6cyHRmHF9ZOwdmaI4cbXJMETT33A==", "funding_project"=>{"title"=>"dd", "description"=>"dd", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "dd"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 101ms (Views: 85.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:31:55 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JwjO6cGAS1S7Ckel6TTh2g+TZZNxONikXQa0mH0vzfzw9NzpS5Dt2U11aBTZOzzgQp9+PLQAYnfoykkqg4Zj8w==", "funding_project"=>{"title"=>"dd", "description"=>"dd", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "dd"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:34
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 66ms (Views: 54.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:39:06 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pl1TAvyVuueIVtcfjzeFQ2bSUh/JUvLVR2OpuzqUFvVxoUECdoUcan4p+K6/OFh5K95JsAxqSAbyr1QJxD24+g==", "funding_project"=>{"title"=>"dd", "description"=>"dd", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "dd"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:35
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 79ms (Views: 38.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 18:39:08 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-25 18:39:23 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 60ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-07-25 18:39:49 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered fp_creators/show.html.erb within layouts/application (171.8ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_fp_creator_funding_projects_path' for #<#<Class:0x007fb5af188348>:0x007fb5ac08cdc0>
+Did you mean?  new_fp_creator_funding_project_path
+               new_fp_creator_funding_project_url):
+    11: <p>Creator Facebook:<%= @fp_creator.facebook_url %>
+    12: <p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+    13: 
+    14: <h2><%= link_to "Make a New Sourcer Project for this Creator", new_fp_creator_funding_projects_path(@fp_creator) %> </h2><br>
+    15: 
+    16: <h3>Edit Profile</h3>
+  
+app/views/fp_creators/show.html.erb:14:in `_app_views_fp_creators_show_html_erb___4581131940962349358_70209151714800'
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-07-25 18:40:10 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered fp_creators/show.html.erb within layouts/application (170.0ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_fp_creator_funding_projects_path' for #<#<Class:0x007fb5af188348>:0x007fb5b08b3dd8>
+Did you mean?  new_fp_creator_funding_project_path
+               new_fp_creator_funding_project_url):
+    11: <p>Creator Facebook:<%= @fp_creator.facebook_url %>
+    12: <p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+    13: 
+    14: <h2><%= link_to "Make a New Sourcer Project for this Creator", new_fp_creator_funding_projects_path(@fp_creator) %> </h2><br>
+    15: 
+    16: <h3>Edit Profile</h3>
+  
+app/views/fp_creators/show.html.erb:14:in `_app_views_fp_creators_show_html_erb___4581131940962349358_70209129294100'
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-07-25 18:40:30 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE FundingProject Load (0.0ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered fp_creators/show.html.erb within layouts/application (154.1ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_fp_creator_funding_projects_path' for #<#<Class:0x007fb5ac557760>:0x007fb5ac555640>
+Did you mean?  new_fp_creator_funding_project_path
+               new_fp_creator_funding_project_url):
+    11: <p>Creator Facebook:<%= @fp_creator.facebook_url %>
+    12: <p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+    13: 
+    14: <h2><%= link_to "Make a New Sourcer Project for this Creator", new_fp_creator_funding_projects_path(@fp_creator) %> </h2><br>
+    15: 
+    16: <h3>Edit Profile</h3>
+  
+app/views/fp_creators/show.html.erb:14:in `_app_views_fp_creators_show_html_erb___4581131940962349358_70209091444860'
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-07-25 18:41:13 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fp_creators/1/funding_projects/new" for 127.0.0.1 at 2018-07-25 18:41:17 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:41:25 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvNRNnidaZ+ebjh9A8IIDUd1NGf9Xo7LjJC8STx6lmYKEKgo0brhjBUyeiJpO64TyNmObfKfO9oTVUrLcF5dbA==", "funding_project"=>{"title"=>"ee", "description"=>"ee", "funding_goal"=>"433"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "ee"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:35
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 43.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 18:42:41 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 33.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-25 18:44:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 78ms (Views: 53.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-25 18:44:39 -0500
+Processing by PledgesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering pledges/new.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/pledges/new.html.erb:20
+  Rendered pledges/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 84ms (Views: 67.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-07-25 18:44:50 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:17
+  Rendered funding_projects/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-07-25 18:44:53 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 75ms (Views: 50.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:45:02 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iM+Hb8Qxt4CRJph9q7pyyqd9AjpqWkr8Ooh2dRSvmcVfM5VvTiERDWdZt8ybta/w6nEZla9i8C+PRIvH6gY3yg==", "funding_project"=>{"title"=>"ff", "description"=>"ff", "funding_goal"=>"550"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "ff"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:35
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 52ms (Views: 40.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Fantastic Cats"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frankjones@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-25 18:45:30 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:48
+Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FundingProject with 'id'=1):
+  
+app/controllers/funding_projects_controller.rb:48:in `show'
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-25 18:46:56 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:48
+  Rendering funding_projects/show.html.erb within layouts/application
+  Rendered funding_projects/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/funding_projects/show.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/funding_projects/show.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-07-25 18:48:05 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:48
+  Rendering funding_projects/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/models/funding_project.rb:28
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."funding_project_id" = ?[0m  [["funding_project_id", 1]]
+  ↳ app/views/funding_projects/show.html.erb:26
+  Rendered funding_projects/show.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 83ms (Views: 76.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pledges/new" for 127.0.0.1 at 2018-07-25 18:48:12 -0500
+Processing by PledgesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering pledges/new.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/pledges/new.html.erb:20
+  Rendered pledges/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pledges" for 127.0.0.1 at 2018-07-25 18:48:15 -0500
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gAye92p2w14O6zg+dcJNUPuKq0m4hzwwyDmGo+NIsv2mam+LQkdFGTqAT6v2UIRl0TCWgn5YzJi685FlcuoUXQ==", "pledge"=>{"funding_project_id"=>"1", "amount"=>"20"}, "commit"=>"Create Pledge"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:16
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pledges_controller.rb:17
+  [1m[36mPledge Create (0.5ms)[0m  [1m[32mINSERT INTO "pledges" ("amount", "user_id", "funding_project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["amount", 20], ["user_id", 1], ["funding_project_id", 1], ["created_at", "2018-07-25 23:48:15.700810"], ["updated_at", "2018-07-25 23:48:15.700810"]]
+  ↳ app/controllers/pledges_controller.rb:17
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pledges_controller.rb:17
+Redirected to http://localhost:3000/pledges/1
+Completed 302 Found in 18ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/pledges/1" for 127.0.0.1 at 2018-07-25 18:48:15 -0500
+Processing by PledgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" WHERE "pledges"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pledges_controller.rb:26
+  Rendering pledges/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pledges/show.html.erb:3
+  Rendered pledges/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-07-25 18:48:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT  "funding_projects".* FROM "funding_projects" WHERE "funding_projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 76ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-07-25 18:48:45 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 38.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-07-25 18:48:58 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXue9dj06DHQjLymgXV5oR9sBX2eUORBL+7LDaSswPKQcuVmnlPzKIoVYMxBZhtaxTltCpSnPsWv1TkrOxMpPg==", "fp_creator"=>{"name"=>"hh", "location"=>"hh", "name_of_verified"=>"hh", "creator_about"=>"hh", "creator_site"=>"hh", "instagram_url"=>"hh", "twitter_url"=>"hh", "facebook_url"=>"hh", "blog_url"=>"hh"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameter: :creator_about
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[36mFpCreator Create (0.8ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "name_of_verified", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hh"], ["location", "hh"], ["name_of_verified", "hh"], ["creator_site", "hh"], ["instagram_url", "hh"], ["twitter_url", "hh"], ["facebook_url", "hh"], ["blog_url", "hh"], ["user_id", 1], ["created_at", "2018-07-25 23:48:58.225732"], ["updated_at", "2018-07-25 23:48:58.225732"]]
+  ↳ app/controllers/fp_creators_controller.rb:16
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:16
+Redirected to http://localhost:3000/fp_creators/6
+Completed 302 Found in 20ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/fp_creators/6" for 127.0.0.1 at 2018-07-25 18:48:58 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:24
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators/6/funding_projects/new" for 127.0.0.1 at 2018-07-25 18:49:01 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:49:10 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1InEysptMEJd3u33cxLv02S06jqAqpWgzGVTPRGWiHXQaj3UY0q4UdaCr6gZ60nN6xhQMI9rILFToKW/XbJDfw==", "funding_project"=>{"title"=>"hh", "description"=>"hh", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "hh"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:35
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 61ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/funding_projects" for 127.0.0.1 at 2018-07-25 18:57:37 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DnItyCJHLSM4OxdgRlEB8//5mXrG9fCr1wT/c4b3hIDxdq3qpm6OXqfw+yxFpk9gvP9yi4jbREakO5PMLJwHQ==", "funding_project"=>{"title"=>"hh", "description"=>"hh", "funding_goal"=>"20"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "hh"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:35
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 83ms (Views: 38.0ms | ActiveRecord: 1.6ms)
+
+
