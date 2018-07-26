@@ -7,11 +7,11 @@ class FundingProjectsController < ApplicationController
     @funding_projects = FundingProject.all
   end
 
-  def comments_index
-    @funding_project = FundingProject.find(params[:id])
-    @comments = @funding_project.comments
-    render template: 'comments/index'
-  end
+  # def comments_index
+  #   @funding_project = FundingProject.find(params[:id])
+  #   @comments = @funding_project.comments
+  #   render template: 'comments/index'
+  # end
 
   # def comment
   #   @funding_project = FundingProject.find(params[:id])
@@ -31,18 +31,15 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
     # @funding_project.fp_creator_id = 
-    @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
-    if @funding_project.valid?
+    # @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
+    # if @funding_project.valid?
       # fp_pledges = @funding_project.pledges
       @funding_project.save
   
-      redirect_to fp_creator_funding_project_path(@funding_project)
-    else
-      render :new
+      redirect_to funding_project_path(@funding_project)
+    # else
+    #   render :new
     end
-
-
-  end
 
   def show
     @funding_project = FundingProject.find(params[:id])
@@ -67,12 +64,12 @@ class FundingProjectsController < ApplicationController
     params.require(:funding_project).permit(
       :funding_project_pledge,
       :user_id,
-      :creator,
+      # :creator,
       :title,
       :description, 
       :funding_goal, 
-      :fp_creator_id,
-      comments_attributes: [:title, :content]
+      :fp_creator_id
+      # comments_attributes: [:title, :content]
       )
   end
 
