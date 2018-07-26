@@ -1,10 +1,17 @@
+
+Does pledges satisfy a has many has mahy relationship?
+Will I need to customize all routes with nested resources?
+
 current commit notepad:
 
 getting a new funding_project to be instantiated under a specific fp_creator
 
 
+
 To Do for Rails Project:
 
+[ ] Use aliases for other relationships (comment, categories, etc.)
+[ ] Choose or make a new creator with the new form for new fp 
 [ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, 
 [ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
 [ ] make living story feature with nested category attributes; user can make new ones
