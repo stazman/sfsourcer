@@ -22,6 +22,7 @@ class FpCreatorsController < ApplicationController
 
   def show
       @fp_creator = FpCreator.find(params[:id])
+      @funding_projects = FundingProject.where(:fp_creator_id == @fp_creator.id)
   end
 
   def edit
@@ -51,7 +52,8 @@ class FpCreatorsController < ApplicationController
       "twitter_url",
       "facebook_url",
       "blog_url",
-      "user_id"
+      "user_id",
+      funding_projects_attributes: [:title, :description, :funding_goal]
     )
   end
 

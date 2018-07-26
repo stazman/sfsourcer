@@ -18,27 +18,27 @@ Rails.application.routes.draw do
 
   resources :users
   resources :fp_creators
-  resources :pledges, except: :index
   resources :funding_projects
   resources :comments
+  resources :pledges
   
 
   resources :users do
     resources :addresses, only: [:new, :show, :edit]
   end
 
-  resources :fp_creators do
-    resources :funding_projects
-  end  
+  # resources :fp_creators do
+  #   resources :funding_projects
+  # end  
   
   resources :funding_projects do
     resources :funding_categories
     # , only: [:index, :show]
   end
 
-  resources :funding_projects do
-    resources :comments
-  end
+  # resources :funding_projects do
+  #   resources :comments
+  # end
 
   # resources :funding_categories do
   #   resources :
