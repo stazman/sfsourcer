@@ -1,59 +1,44 @@
 class OGenresController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:new, :create]
-  include UsersHelper
 
   def index
-    @users = User.all
-  end
-
-  def addresses_index
-    @user = User.find(params[:id])
-    @addresses = @user.addresses
-    render template: 'addresses/index'
+    @o_genres = OGenre.all
   end
  
-  # def post
-  #   @user = User.find(params[:id])
-  #   @address = Address.find(params[:user_id])
-  #   render template: 'addresses/show'
-  # end
-
   def new
-    @user = User.new
-    @user.addresses.build
+    @o_genre = OGenre.new
+    # @o_genre.addresses.build
   end
 
   def create  
-    @user = User.new(user_params)
-    if @user.valid?
-      @user.save
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
+    @o_genre = OGenre.new(o_genre_params)
+    if @o_genre.valid?
+      @o_genre.save
+      redirect_to o_genre_path(@o_genre)
     else
       render :new
     end
   end
 
   def show
-      @user = User.find(params[:id]) 
-      @pledges = Pledge.where(:user_id == @user.id)
+      @o_genre = OGenre.find(params[:id]) 
+      # @pledges = Pledge.where(:o_genre_id == @o_genre.id)
   end
 
   def edit
-      @user = User.find(params[:id])
+      @o_genre = OGenre.find(params[:id])
   end
 
   def update
-    @user = User.update(user_params)
-    @user.save
-    redirect_to user_path(@user)
+    @o_genre = OGenre.update(o_genre_params)
+    @o_genre.save
+    redirect_to o_genre_path(@o_genre)
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:name, :email, :password, addresses_attributes: [:address1, :address2, :city, :state, :zip])
+  def o_genre_params
+    params.require(:o_genre).permit(:name)
   end
 
   def require_login
