@@ -8,3 +8,4 @@
 fantastic_cats = FundingProject.create(title: "Fantastic Cats", description: "A collection of short stories about cats with science fiction and fantasy settings.", funding_goal: 500)
 frank_jones = User.create(name: "Frank Jones", email: "frankjones@gmail.com", password: "frank jones password")
 frank_jones_cats_pledge = Pledge.create(amount: 10, user_id: 1, funding_project_id: 1)
+frank_jones_address = Address.create(address1: "100 Main Street")

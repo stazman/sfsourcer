@@ -6,7 +6,7 @@ class User < ApplicationRecord
     # # has_many :funding_projects, through: :fp_creators
     # has_many :comments
     # has_many :funding_projects, through: :comments
-    # has_many :addresses
+    has_many :addresses
     # accepts_nested_attributes_for :addresses
 
     has_secure_password
