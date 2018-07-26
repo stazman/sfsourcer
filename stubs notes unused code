@@ -1,7 +1,6 @@
 current commit notepad:
 
-user has many fp_creators
-An fp_creator is associated with a user on creation
+getting a new funding_project to be instantiated under a specific fp_creator
 
 
 To Do for Rails Project:

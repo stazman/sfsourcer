@@ -30,11 +30,13 @@ class FundingProjectsController < ApplicationController
 
   def create
     @funding_project = FundingProject.new(funding_project_params)
+    # @funding_project.fp_creator_id = 
+    @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
     if @funding_project.valid?
       # fp_pledges = @funding_project.pledges
       @funding_project.save
   
-      redirect_to funding_project_path(@funding_project)
+      redirect_to fp_creator_funding_project_path(@funding_project)
     else
       render :new
     end
@@ -45,7 +47,7 @@ class FundingProjectsController < ApplicationController
   def show
     @funding_project = FundingProject.find(params[:id])
     @total_pledges = []
-    @comments = Comment.where(:funding_project_id == @funding_project.id)
+    # @comments = Comment.where(:funding_project_id == @funding_project.id)
   end
 
   def edit
@@ -62,7 +64,16 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(:funding_project_pledge, :user_id, :creator, :title, :description, :funding_goal, comments_attributes: [:title, :content] )
+    params.require(:funding_project).permit(
+      :funding_project_pledge,
+      :user_id,
+      :creator,
+      :title,
+      :description, 
+      :funding_goal, 
+      :fp_creator_id,
+      comments_attributes: [:title, :content]
+      )
   end
 
   def require_login
