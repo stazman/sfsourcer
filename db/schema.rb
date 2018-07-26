@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_213153) do
+ActiveRecord::Schema.define(version: 2018_07_26_185224) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "address1"
@@ -74,6 +74,26 @@ ActiveRecord::Schema.define(version: 2018_07_25_213153) do
     t.datetime "updated_at", null: false
     t.string "creator"
     t.integer "fp_creator_id"
+  end
+
+  create_table "l_stories", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "l_story_o_genres", force: :cascade do |t|
+    t.integer "l_story_id"
+    t.integer "o_genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "o_genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pledges", force: :cascade do |t|

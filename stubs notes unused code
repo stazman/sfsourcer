@@ -1,11 +1,12 @@
 
-Does pledges satisfy a has many has mahy relationship?
-Will I need to customize all routes with nested resources?
+[ ] Making living story feature, to include OpenGenre feature, with OpenGenres to be nested under Living Story
 
 current commit notepad:
 
 getting a new funding_project to be instantiated under a specific fp_creator
 
+Questions:
+Will I need to customize all routes with nested resources?
 
 
 To Do for Rails Project:
@@ -24,6 +25,7 @@ To Do for Rails Project:
 
 Future: 
 
+[ ] Nest funding_project_categories under funding_project
 [ ] Add how many days to go and how many backers for funding_project
 [ ] Give funding_project_creator choice to be same as user for login or not?
 [ ] Make funding_project category a nested attribute to choose when making a new funding_project
