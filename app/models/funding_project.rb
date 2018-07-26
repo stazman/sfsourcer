@@ -1,17 +1,17 @@
 class FundingProject < ApplicationRecord
+    has_many :pledges
+    has_many :users, through: :pledges
     # belongs_to :fp_creator
     # belongs_to :user
     # has_many :comments
     # has_many :users, through: :comments
-    has_many :pledges
-    has_many :users, through: :pledges
     # accepts_nested_attributes_for :comments
 
 
-    # validates_presence_of :title
-    # validates_uniqueness_of :title
-    # validates_presence_of :description
-    # validates_presence_of :funding_goal
+    validates_presence_of :title
+    validates_uniqueness_of :title
+    validates_presence_of :description
+    validates_presence_of :funding_goal
     
     # def comment_attributes=(comment)
     #     self.comment = Comment.create_by(title = comment.title)
