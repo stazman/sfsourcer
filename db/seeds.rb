@@ -9,3 +9,4 @@ fantastic_cats = FundingProject.create(title: "Fantastic Cats", description: "A 
 frank_jones = User.create(name: "Frank Jones", email: "frankjones@gmail.com", password: "frank jones password")
 frank_jones_cats_pledge = Pledge.create(amount: 10, user_id: 1, funding_project_id: 1)
 frank_jones_address = Address.create(address1: "100 Main Street")
+new_story = LStory.create()
