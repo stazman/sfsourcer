@@ -7,6 +7,7 @@ getting a new funding_project to be instantiated under a specific fp_creator
 
 Questions:
 Will I need to customize all routes with nested resources?
+Do I have the right, many to many, relationship with l_story and o_genre?
 
 
 To Do for Rails Project:

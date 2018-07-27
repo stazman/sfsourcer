@@ -24,12 +24,17 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/facebook/callback' => 'sessions#create'
 
-  resources :users
-  resources :fp_creators
-  resources :funding_projects
+  resources :addresses
   resources :comments
-  resources :pledges
+  resources :fp_creators
+  resources :funding_categories
+  resources :funding_project_categories
+  resources :funding_projects
+  resources :l_story_o_genres
+  resources :l_stories
   resources :o_genres
+  resources :pledges
+  resources :users
   
   resources :l_stories do
     resources :o_genres
