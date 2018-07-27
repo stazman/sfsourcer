@@ -56,6 +56,27 @@ Future:
 [ ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
 
 
+
+
+Unused
+
+<h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+<h3>Connected to User <%= @current_user.name %></h3>
+
+<p>Name: <%= @fp_creator.name %></p>
+<p>Location: <%= @fp_creator.location %>
+<p>Name of Verified: <%= @fp_creator.name_of_verified %>
+<p>About Creator: <%= @fp_creator.creator_about %>
+<p>Creator Website: <%= @fp_creator.creator_site %>
+<p>Creator Instagram: <%= @fp_creator.instagram_url %>
+<p>Creator Twitter:<%= @fp_creator.twitter_url %>
+<p>Creator Facebook:<%= @fp_creator.facebook_url %>
+<p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+
+<h2><%= link_to "Make a New Sourcer Project for this Creator", new_funding_project_path %> </h2><br>
+
+<h3>Edit Profile</h3>
+
 class AdminController < ApplicationController
   before_action :require_admin
 
