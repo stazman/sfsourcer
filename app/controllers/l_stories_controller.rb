@@ -7,12 +7,13 @@ class LStoriesController < ApplicationController
  
   def new
     @l_story = LStory.new
-    # @l_story.addresses.build
   end
 
   def create  
     @l_story = LStory.new(l_story_params)
     if @l_story.valid?
+      chosen_o_genre = OGenre.find(params[:id])
+      @o_genre = @l_story.chosen_o_genre
       @l_story.save
       redirect_to l_story_path(@l_story)
     else
