@@ -1,5 +1,5 @@
 class LStoriesController < ApplicationController
-  before_action :require_login
+  # before_action :require_login
 
   def index
     @l_stories = LStory.all
@@ -23,7 +23,7 @@ class LStoriesController < ApplicationController
   end
 
   def show
-      @l_story = LStory.find(params[:user_id]) 
+      @l_story = LStory.find(params[:id]) 
       # @pledges = Pledge.where(:l_story_id == @l_story.id)
   end
 
@@ -42,11 +42,12 @@ class LStoriesController < ApplicationController
   def l_story_params
     params.require(:l_story).permit(:title, :content, o_genre_ids:[], o_genres_attributes: [:name])
   end
-
-  def require_login
-    unless logged_in?
-      flash[:alert] = "You must be logged in to access this section"
-      redirect_to login_url
-    end
-  end
 end
+
+#   def require_login
+#     unless logged_in?
+#       flash[:alert] = "You must be logged in to access this section"
+#       redirect_to login_url
+#     end
+#   end
+# end
