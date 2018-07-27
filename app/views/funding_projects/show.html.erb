@@ -30,3 +30,10 @@ MAIN NAVBAR
 <%# <%= link_to comment.user.username, user_path(comment.user) %> %>
 <%# <%= comment.content %> %>
 <%# <% end %> %> %>
+
+<% ready_for_countdown.each do |rfc| %>
+<ul>
+<li><%= rfc.amount %>
+</li>
+</ul>
+<% end %>

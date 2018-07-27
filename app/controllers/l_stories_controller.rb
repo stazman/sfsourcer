@@ -11,7 +11,6 @@ class LStoriesController < ApplicationController
 
   def create  
     @l_story = LStory.new(l_story_params)
-    binding.pry 
     if @l_story.valid?
       # chosen_o_genre = OGenre.find(params[:id])
       # @o_genre = @l_story.chosen_o_genre

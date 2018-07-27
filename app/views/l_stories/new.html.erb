@@ -6,12 +6,12 @@
   <%= f.text_field :title %><br>
   <%= f.label "Content" %>
   <%= f.text_area :content %><br>
-  <%= f.label "Choose an OpenGenre ... " %>
-  <%= f.collection_check_boxes :o_genre_ids, OGenre.all, :id, :name %><br>
-  <%= f.label "Or make one" %>
-  <%= f.fields_for :o_genre_ids, @l_story.o_genres.build do |o_genres_fields| %>
-    <%= o_genres_fields.text_field :name %>
-  <% end %>
+  <%# <%= f.label "Choose an OpenGenre ... " %>
+  <%# <%= f.collection_check_boxes :o_genre_ids, OGenre.all, :id, :name %><br> %>
+  <%# <%= f.label "Or make one" %> %>
+  <%# <%= f.fields_for :o_genre_ids, @l_story.o_genres.build do |o_genres_fields| %> %>
+    <%# <%= o_genres_fields.text_field :name %> %>
+  <%# <% end %> %> %>
   <%= f.submit %>
 <% end %>
 <%# <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
