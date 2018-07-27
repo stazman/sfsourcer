@@ -73,6 +73,27 @@ class FundingProjectsController < ApplicationController
       )
   end
 
+  # def fp_creator_params
+  #   params.require(:fp_creator).permit(
+  #     "name",
+  #     "location",
+  #     "name_of_verified",
+  #     "verified?",
+  #     "creator_profile",
+  #     "last_logged_in",
+  #     "fp_amt_created",
+  #     "fp_amt_backed",
+  #     "creator_site",
+  #     "instagram_url",
+  #     "twitter_url",
+  #     "facebook_url",
+  #     "blog_url",
+  #     "user_id",
+  #     funding_projects_attributes: [:title, :description, :funding_goal]
+  #   )
+  # end
+
+
   def require_login
     unless logged_in?
       flash[:alert] = "You must be logged in to access this section"

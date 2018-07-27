@@ -26,7 +26,6 @@ Rails.application.routes.draw do
 
   resources :addresses
   resources :comments
-  resources :fp_creators
   resources :funding_categories
   resources :funding_project_categories
   resources :funding_projects

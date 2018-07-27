@@ -23,7 +23,7 @@ class FundingProject < ApplicationRecord
     end
 
     def self.ready_for_countdown
-        still_need_funds = FundingProject.where(total_pledges.amount <= self.funding_goal * .8) 
+        still_need_funds = FundingProject.where(total_pledges <= funding_goal) 
         order("still_need_funds ASC")
         # select all funding projects that still have funds to raise
         # select all funding projects that only have 80 left to raise
