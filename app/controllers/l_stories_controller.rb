@@ -1,5 +1,5 @@
 class LStoriesController < ApplicationController
-  # before_action :require_login
+  before_action :require_login
 
   def index
     @l_stories = LStory.all
@@ -12,8 +12,6 @@ class LStoriesController < ApplicationController
   def create  
     @l_story = LStory.new(l_story_params)
     if @l_story.valid?
-      # chosen_o_genre = OGenre.find(params[:id])
-      # @o_genre = @l_story.chosen_o_genre
       @l_story.save
       redirect_to l_story_path(@l_story)
     else
@@ -41,12 +39,11 @@ class LStoriesController < ApplicationController
   def l_story_params
     params.require(:l_story).permit(:title, :content, o_genre_ids:[], o_genres_attributes: [:name])
   end
-end
 
-#   def require_login
-#     unless logged_in?
-#       flash[:alert] = "You must be logged in to access this section"
-#       redirect_to login_url
-#     end
-#   end
-# end
+  def require_login
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_url
+    end
+  end
+end
