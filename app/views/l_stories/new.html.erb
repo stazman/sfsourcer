@@ -1,7 +1,7 @@
 <h1>LStories#new</h1>
 <p>Find me in app/views/l_stories/new.html.erb</p>
 
-<%= form_for @l_story, @o_genre do |f| %>
+<%= form_for(@l_story) do |f| %>
   <%= f.label "Title" %>
   <%= f.text_field :title %><br>
   <%= f.label "Content" %>
