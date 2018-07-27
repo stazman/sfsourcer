@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   resources :funding_projects
   resources :comments
   resources :pledges
+  resources :o_genres
   
   resources :l_stories do
     resources :o_genres

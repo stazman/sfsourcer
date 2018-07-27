@@ -1,12 +1,13 @@
 class User < ApplicationRecord
     has_many :pledges
     has_many :funding_projects, through: :pledges
+    has_many :addresses
     # has_many :funding_projects
     # has_many :fp_creators
     # # has_many :funding_projects, through: :fp_creators
     # has_many :comments
     # has_many :funding_projects, through: :comments
-    has_many :addresses
+    # , :class_name => 'Addresses', :foreign_key => 'user_id'
     # accepts_nested_attributes_for :addresses
 
     has_secure_password
