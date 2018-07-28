@@ -35,9 +35,9 @@ Rails.application.routes.draw do
   resources :pledges
   resources :users
   
-  # resources :l_stories, only: [:new, :create, :show] do
-  #   resources :o_genres, only: [:new, :create, :show]
-  # end
+  resources :l_stories, only: [:new, :create, :show] do
+    resources :o_genres, only: [:new, :create, :show]
+  end
 
   resources :users do
     resources :addresses, only: [:new, :show, :edit]

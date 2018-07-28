@@ -1,17 +1,16 @@
-<h1>LStories#new</h1>
-<p>Find me in app/views/l_stories/new.html.erb</p>
+<h1>Make a New Living Story</h1>
 
 <%= form_for(@l_story) do |f| %>
   <%= f.label "Title" %>
   <%= f.text_field :title %><br>
   <%= f.label "Content" %>
   <%= f.text_area :content %><br>
-  <%# <%= f.label "Choose an OpenGenre ... " %>
-  <%# <%= f.collection_check_boxes :o_genre_ids, OGenre.all, :id, :name %><br> %>
-  <%# <%= f.label "Or make one" %> %>
-  <%# <%= f.fields_for :o_genre_ids, @l_story.o_genres.build do |o_genres_fields| %> %>
-    <%# <%= o_genres_fields.text_field :name %> %>
-  <%# <% end %> %> %>
+  <%= f.label "Choose an OpenGenre ... " %>
+  <%= f.collection_check_boxes :o_genre_ids, OGenre.all, :id, :name %><br>
+  <%= f.label "Or make one" %>
+  <%= f.fields_for :o_genre_ids, @l_story.o_genres.build do |o_genres_fields| %>
+    <%= o_genres_fields.text_field :name %>
+  <% end %>
   <%= f.submit %>
 <% end %>
 <%# <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
