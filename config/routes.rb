@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'ls_comments/index'
+  get 'ls_comments/new'
+  get 'ls_comments/show'
+  get 'ls_comments/edit'
   # get 'l_stories/index'
   # get 'l_stories/new'
   # get 'l_stories/show'
@@ -29,9 +33,8 @@ Rails.application.routes.draw do
   resources :funding_categories
   resources :funding_project_categories
   resources :funding_projects
-  resources :l_story_o_genres
-  resources :l_stories
-  resources :o_genres
+  # resources :l_story_o_genres
+ 
   resources :pledges
   resources :users
   
@@ -40,7 +43,10 @@ Rails.application.routes.draw do
     resources :o_genres
     # , only: [:new, :create, :show]
   end
-
+ 
+  resources :l_stories
+  resources :o_genres
+  
   resources :users do
     resources :addresses, only: [:new, :show, :edit]
   end
