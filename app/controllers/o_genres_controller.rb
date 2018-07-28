@@ -22,7 +22,7 @@ class OGenresController < ApplicationController
 
   def show
       @o_genre = OGenre.find(params[:id]) 
-      # @pledges = Pledge.where(:o_genre_id == @o_genre.id)
+      # @pledges = Pledge.where(:ls_genre_id == @o_genre.id)
   end
 
   def edit
@@ -38,7 +38,7 @@ class OGenresController < ApplicationController
   private
 
   def o_genre_params
-    params.require(:o_genre).permit(:name)
+    params.require(:ls_genre).permit(:name)
   end
 
   def require_login
