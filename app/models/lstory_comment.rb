@@ -1,3 +1,0 @@
-class LstoryComment < ApplicationRecord
-    
-end

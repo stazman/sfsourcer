@@ -1,0 +1,3 @@
+class LsComment < ApplicationRecord
+    
+end
