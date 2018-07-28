@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class FpCommentsController < ApplicationController
   before_action :require_login
 
   def index
