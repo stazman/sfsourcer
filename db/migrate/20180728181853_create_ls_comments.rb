@@ -1,9 +1,8 @@
-class CreateLstoryComments < ActiveRecord::Migration[5.2]
+class CreateLsComments < ActiveRecord::Migration[5.2]
   def change
     create_table :ls_comments do |t|
       t.string :content
       t.string :user_id
-      t.string :l_story_id
 
       t.timestamps
     end

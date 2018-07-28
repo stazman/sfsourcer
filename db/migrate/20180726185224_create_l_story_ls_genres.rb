@@ -1,6 +1,6 @@
-class CreateLStoryOGenres < ActiveRecord::Migration[5.2]
+class CreateLStoryLsGenres < ActiveRecord::Migration[5.2]
   def change
-    create_table :l_story_o_genres do |t|
+    create_table :l_story_ls_genres do |t|
       t.integer :l_story_id
       t.integer :ls_genre_id
 
