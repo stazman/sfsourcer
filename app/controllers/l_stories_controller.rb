@@ -11,6 +11,7 @@ class LStoriesController < ApplicationController
 
   def create  
     @l_story = LStory.new(l_story_params)
+    raise params.inspect
     if @l_story.valid?
       @l_story.save
       redirect_to l_story_path(@l_story)
@@ -20,7 +21,7 @@ class LStoriesController < ApplicationController
   end
 
   def show
-      @l_story = LStory.find(params[:id]) 
+      @l_story = LStory.find(params[:id], :o_genre_id) 
       # @pledges = Pledge.where(:l_story_id == @l_story.id)
   end
 
