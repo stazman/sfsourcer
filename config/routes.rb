@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'ls_comments/index'
-  get 'ls_comments/new'
-  get 'ls_comments/show'
-  get 'ls_comments/edit'
-  # get 'l_stories/index'
-  # get 'l_stories/new'
-  # get 'l_stories/show'
-  # get 'l_stories/edit'
-  # get 'o_genres/index'
-  # get 'o_genres/new'
-  # get 'o_genres/show'
-  # get 'o_genres/edit'
   root 'static#home'
 
   get 'sourcer_projects', to: 'static#sourcer_projects'

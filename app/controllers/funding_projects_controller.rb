@@ -30,6 +30,8 @@ class FundingProjectsController < ApplicationController
 
   def create
     @funding_project = FundingProject.new(funding_project_params)
+    # raise params.inspect
+    
     # @funding_project.fp_creator_id = 
     # @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
     # if @funding_project.valid?
