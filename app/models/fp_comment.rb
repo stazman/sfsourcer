@@ -1,4 +1,4 @@
-class Comment < ApplicationRecord
+class FpComment < ApplicationRecord
     belongs_to :user
     belongs_to :funding_project
 
