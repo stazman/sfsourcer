@@ -1,4 +1,4 @@
-class CreateComments < ActiveRecord::Migration[5.2]
+class CreateFpComments < ActiveRecord::Migration[5.2]
   def change
     create_table :fp_comments do |t|
       t.string :title
