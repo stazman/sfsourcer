@@ -197,7 +197,7 @@ end
   # get 'addresses/destroy'
 
   # resources :funding_projects do 
-  #   resources :comments
+  #   resources :fp_comments
   # end
 
   #can only destroy a funding project as admin

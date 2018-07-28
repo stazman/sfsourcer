@@ -15021,7 +15021,7 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
 
   
 SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:23: syntax error, unexpected tLABEL
-....append=  form_for (controller: :comments, action: :new, url...
+....append=  form_for (controller: :fp_comments, action: :new, url...
 ...                               ^
 /Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
   
@@ -15039,7 +15039,7 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
 
   
 SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:23: syntax error, unexpected tLABEL
-....append=  form_for (controller: :comments, action: :new, url...
+....append=  form_for (controller: :fp_comments, action: :new, url...
 ...                               ^
 /Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
   
@@ -15057,7 +15057,7 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
 
   
 SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:23: syntax error, unexpected ',', expecting ')'
-...r.append=  form_for (:comments, action: :new, url: :new_comm...
+...r.append=  form_for (:fp_comments, action: :new, url: :new_comm...
 ...                               ^
 /Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
   
@@ -15075,7 +15075,7 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
 
   
 SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:23: syntax error, unexpected ',', expecting ')'
-...r.append=  form_for (:comments, url: :new_comment_path) do |...
+...r.append=  form_for (:fp_comments, url: :new_comment_path) do |...
 ...                               ^
 /Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/funding_projects/show.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
   

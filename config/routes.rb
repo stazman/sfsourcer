@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
 
   resources :addresses
-  resources :comments
+  resources :fp_comments
   resources :funding_categories
   resources :funding_project_categories
   resources :funding_projects
@@ -60,13 +60,13 @@ Rails.application.routes.draw do
   # end  
   
   # resources :funding_projects do
-  #   resources :comments
+  #   resources :fp_comments
   # end
 
   # resources :funding_categories do
   #   resources :
   # resources :users do
-  #   resources :comments
+  #   resources :fp_comments
   # end
 
 end
