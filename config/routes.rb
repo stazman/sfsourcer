@@ -40,12 +40,12 @@ Rails.application.routes.draw do
   
   resources :l_stories do
   #  only: [:new, :create, :show] do
-    resources :o_genres
+    resources :ls_genres
     # , only: [:new, :create, :show]
   end
  
   resources :l_stories
-  resources :o_genres
+  resources :ls_genres
   
   resources :users do
     resources :addresses, only: [:new, :show, :edit]

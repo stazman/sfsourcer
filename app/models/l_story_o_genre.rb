@@ -1,4 +1,4 @@
 class LStoryOGenre < ApplicationRecord
     belongs_to :l_story
-    belongs_to :o_genre
+    belongs_to :ls_genre
 end

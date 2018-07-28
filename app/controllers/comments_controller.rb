@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
   def create  
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.funding_project_id = params[:comment][:funding_project_id] 
+    @comment.funding_project_id = params[:fp_comment][:funding_project_id] 
     if @comment.valid?
       @comment.save
       redirect_to funding_project_comment_path(:funding_project_id, @comment)
@@ -44,7 +44,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:title, :content, :user_id, :funding_project_id)
+    params.require(:fp_comment).permit(:title, :content, :user_id, :funding_project_id)
   end
 
   def require_login

@@ -17,12 +17,12 @@ class User < ApplicationRecord
     AS A CONTRIBUTOR
     has_many :l_stories
     AS A CONTRIBUTOR
-    has_many :lstory_comments
+    has_many :ls_comments
     AS A CONTRIBUTOR
-    has_many  :l_stories, through: :lstory_comments
+    has_many  :l_stories, through: :ls_comments
     AS A CONTRIBUTOR
 
-    # has_many :o_genres, through: :l_stories
+    # has_many :ls_genres, through: :l_stories
     # has_many :funding_projects
     # has_many :fp_creators
     # # has_many :funding_projects, through: :fp_creators

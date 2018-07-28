@@ -1,14 +1,14 @@
 class FundingProject < ApplicationRecord
+    belongs_to :user
+        USER AS CREATOR
     has_many :pledges
+        USER AS CONTRIBUTOR
     has_many :users, through: :pledges
+        USER AS CONTRIBUTOR
     has_many :fp_comments
+        USER AS CONTRIBUTOR
     has_many :users, through: :fp_comments
-    # belongs_to :fp_creator
-    # belongs_to :user
-    # has_many :fp_comments
-    # has_many :users, through: :fp_comments
-    # accepts_nested_attributes_for :fp_comments
-
+        USER AS CONTRIBUTOR
 
     validates_presence_of :title
     validates_uniqueness_of :title
