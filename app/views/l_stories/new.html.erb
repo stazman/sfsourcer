@@ -8,9 +8,9 @@
   <%= f.label "Content" %>
   <%= f.text_area :content %><br>
   <%= f.label "Choose an OpenGenre ... " %>
-  <%= f.collection_check_boxes :o_genre_ids, OGenre.all, :id, :name %><br>
+  <%= f.collection_check_boxes :ls_genre_ids, OGenre.all, :id, :name %><br>
   <%= f.label "Or make one" %>
-  <%= f.fields_for :o_genre_ids, @l_story.o_genres.build do |o_genres_fields| %>
+  <%= f.fields_for :ls_genre_ids, @l_story.o_genres.build do |o_genres_fields| %>
     <%= o_genres_fields.text_field :name %>
   <% end %>
   <%= f.submit %>

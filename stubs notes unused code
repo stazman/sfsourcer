@@ -1,16 +1,16 @@
 
-l_story_1 = LStory.new(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :o_genre_id => 1, :o_genre_attributes => {:id => 1, :name => "Fantasy"})
+l_story_1 = LStory.new(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genre_id => 1, :ls_genre_attributes => {:id => 1, :name => "Fantasy"})
 l_story_2 = LStory.create(:title => "My Second Living Story", :content => "It was a dark but not as stormy morning ...",
-l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :o_genres_attributes => {:id => 1})
+l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genres_attributes => {:id => 1})
 
 => #<OGenre id: 1, name: "Fantasy", user_id: nil, l_story_id: nil, created_at: "2018-07-28 16:57:36", updated_at: "2018-07-28 16:57:36">
-2.3.3 :003 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :o_genre_attributes => {:id => 2, :name => "Horrible Horror"})
+2.3.3 :003 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genre_attributes => {:id => 2, :name => "Horrible Horror"})
 ActiveModel::UnknownAttributeError: unknown attribute 'o_genre_attributes' for LStory.
         from (irb):3
-2.3.3 :004 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :o_genres_attributes => {:id => 2, :name => "Horrible Horror"})
+2.3.3 :004 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genres_attributes => {:id => 2, :name => "Horrible Horror"})
 ActiveRecord::RecordNotFound: Couldn't find OGenre with ID=2 for LStory with ID=
         from (irb):4
-2.3.3 :005 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :o_genres_attributes => {:id => 1})
+2.3.3 :005 > l_story_1 = LStory.create(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genres_attributes => {:id => 1})
 ActiveRecord::RecordNotFound: Couldn't find OGenre with ID=1 for LStory with ID=
         from (irb):5
 2.3.3 :006 > l_story_2 = LStory.create(:title => "My Second Living Story", :content => "It was a dark but not as stormy m

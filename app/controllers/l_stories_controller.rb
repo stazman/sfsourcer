@@ -21,7 +21,7 @@ class LStoriesController < ApplicationController
   end
 
   def show
-      @l_story = LStory.find(params[:id], :o_genre_id) 
+      @l_story = LStory.find(params[:id], :ls_genre_id) 
       # @pledges = Pledge.where(:l_story_id == @l_story.id)
   end
 
