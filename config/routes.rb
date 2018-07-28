@@ -29,12 +29,13 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
 
   resources :addresses
+  resources :fp_categories
   resources :fp_comments
-  resources :funding_categories
-  resources :funding_project_categories
   resources :funding_projects
-  # resources :l_story_o_genres
- 
+  # resources :l_story_ls_genres
+  resources :l_stories
+  resources :ls_comments
+  resources :ls_genres
   resources :pledges
   resources :users
   
@@ -44,15 +45,14 @@ Rails.application.routes.draw do
     # , only: [:new, :create, :show]
   end
  
-  resources :l_stories
-  resources :ls_genres
-  
   resources :users do
-    resources :addresses, only: [:new, :show, :edit]
+    resources :addresses
+    # , only: [:new, :show, :edit]
   end
 
   resources :funding_projects do
-    resources :funding_categories, only: [:index, :show]
+    resources :funding_categories
+    # , only: [:index, :show]
   end
 
   # resources :fp_creators do
