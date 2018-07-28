@@ -3,10 +3,10 @@ MAIN NAVBAR
 <%# <h1>Comments for <%= @funding_project.title %></h1> %>
  
 <%# <% @funding_project.comments.each do |comment| %> %>
-<% @comments.each do |comment| %>
+<% @fp_comments.each do |fp_comment| %>
 
-    <%= comment.title %>
-    <%= comment.content %>
+    <%= fp_comment.title %>
+    <%= fp_comment.content %>
 <% end %>
 
 

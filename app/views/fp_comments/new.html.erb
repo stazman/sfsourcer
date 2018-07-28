@@ -3,7 +3,7 @@ MAIN NAVBAR
 <%# <h3>Make a Comment About <%= @funding_project.title %>!</h4> %>
 
 <%# <%= binding.pry %> %>
-<%= form_for @comment do |f| %>
+<%= form_for @fp_comment do |f| %>
 <%= f.hidden_field :funding_project_id %>
 <%= f.label :title %>
 <%= f.text_field :title %><br>
