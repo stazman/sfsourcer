@@ -29,9 +29,9 @@ Rails.application.routes.draw do
   resources :funding_categories
   resources :funding_project_categories
   resources :funding_projects
-  # resources :l_story_o_genres
-  # resources :l_stories
-  # resources :o_genres
+  resources :l_story_o_genres
+  resources :l_stories
+  resources :o_genres
   resources :pledges
   resources :users
   
