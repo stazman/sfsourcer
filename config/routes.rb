@@ -27,6 +27,10 @@ Rails.application.routes.draw do
   resources :pledges
   resources :users
   
+  resources :users do
+    resources :funding_projects
+  end
+  
   resources :l_stories do
   #  only: [:new, :create, :show] do
     resources :ls_genres
