@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_26_185224) do
+ActiveRecord::Schema.define(version: 2018_07_28_172214) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "address1"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2018_07_26_185224) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "o_genre_id"
   end
 
   create_table "l_story_o_genres", force: :cascade do |t|
