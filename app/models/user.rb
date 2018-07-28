@@ -3,6 +3,8 @@ class User < ApplicationRecord
     AS A CREATOR
     has_many :l_stories
     AS A CREATOR
+    has_many :ls_genres
+    AS A CREATOR  
     has_many :addresses
     AS A USER
     has_many :pledges
@@ -10,6 +12,8 @@ class User < ApplicationRecord
     has_many :funding_projects, through: :pledges
     AS A CONTRIBUTOR
     has_many :fp_comments
+    AS A CONTRIBUTOR
+    has_many :funding_projects, through: :fp_comments
     AS A CONTRIBUTOR
     has_many :l_stories
     AS A CONTRIBUTOR
@@ -22,8 +26,8 @@ class User < ApplicationRecord
     # has_many :funding_projects
     # has_many :fp_creators
     # # has_many :funding_projects, through: :fp_creators
-    # has_many :comments
-    # has_many :funding_projects, through: :comments
+    # has_many :fp_comments
+    # has_many :funding_projects, through: :fp_comments
     # , :class_name => 'Addresses', :foreign_key => 'user_id'
     # accepts_nested_attributes_for :addresses
 
