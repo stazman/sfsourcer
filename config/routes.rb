@@ -30,13 +30,15 @@ Rails.application.routes.draw do
   resources :funding_project_categories
   resources :funding_projects
   # resources :l_story_o_genres
-  resources :l_stories
-  resources :o_genres
+  # resources :l_stories
+  # resources :o_genres
   resources :pledges
   resources :users
   
-  resources :l_stories, only: [:new, :create, :show] do
-    resources :o_genres, only: [:new, :create, :show]
+  resources :l_stories do
+  #  only: [:new, :create, :show] do
+    resources :o_genres
+    # , only: [:new, :create, :show]
   end
 
   resources :users do
