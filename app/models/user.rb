@@ -1,8 +1,23 @@
 class User < ApplicationRecord
-    has_many :pledges
-    has_many :funding_projects, through: :pledges
-    has_many :addresses
+    has_many :funding_projects 
+    AS A CREATOR
     has_many :l_stories
+    AS A CREATOR
+    has_many :addresses
+    AS A USER
+    has_many :pledges
+    AS A CONTRIBUTOR
+    has_many :funding_projects, through: :pledges
+    AS A CONTRIBUTOR
+    has_many :fp_comments
+    AS A CONTRIBUTOR
+    has_many :l_stories
+    AS A CONTRIBUTOR
+    has_many :lstory_comments
+    AS A CONTRIBUTOR
+    has_many  :l_stories, through: :lstory_comments
+    AS A CONTRIBUTOR
+
     # has_many :o_genres, through: :l_stories
     # has_many :funding_projects
     # has_many :fp_creators
