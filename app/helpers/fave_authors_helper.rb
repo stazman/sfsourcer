@@ -1,0 +1,2 @@
+module FaveAuthorsHelper
+end

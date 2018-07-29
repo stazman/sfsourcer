@@ -1,0 +1,2 @@
+class FavGenre < ApplicationRecord
+end
