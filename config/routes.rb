@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   resources :users
   
   resources :users do
-    resources :funding_projects
+    resources :funding_projects, except: [:index]
   end
   
   resources :l_stories do
