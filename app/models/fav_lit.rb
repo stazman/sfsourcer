@@ -1,0 +1,2 @@
+class FavLit < ApplicationRecord
+end
