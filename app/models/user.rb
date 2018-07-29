@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :fav_lits
+    # AS A CREATOR
     has_many :funding_projects 
     # AS A CREATOR
     has_many :l_stories

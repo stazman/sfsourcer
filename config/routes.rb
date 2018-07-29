@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'fave_genres/index'
-  get 'fave_genres/new'
-  get 'fave_genres/show'
-  get 'fave_genres/edit'
-  get 'fave_lits/index'
-  get 'fave_lits/new'
-  get 'fave_lits/show'
-  get 'fave_lits/edit'
-  get 'fave_authors/index'
-  get 'fave_authors/new'
-  get 'fave_authors/show'
-  get 'fave_authors/edit'
   root 'static#home'
 
   get 'sourcer_projects', to: 'static#sourcer_projects'
@@ -28,7 +16,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/facebook/callback' => 'sessions#create'
 
-  resources :addresses
+    resources :addresses
   resources :fp_categories
   resources :fp_comments
   resources :funding_projects
@@ -38,10 +26,13 @@ Rails.application.routes.draw do
   resources :ls_genres
   resources :pledges
   resources :users
-  
-  resources :users do
-    resources :funding_projects, except: [:index]
-  end
+  resources :fav_authors
+  resources :fav_lits
+  resources :fav_genres
+
+  # resources :users do
+  #   resources :funding_projects, except: [:index]
+  # end
   
   resources :l_stories do
   #  only: [:new, :create, :show] do
