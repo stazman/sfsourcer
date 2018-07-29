@@ -3,14 +3,16 @@ class FundingProject < ApplicationRecord
         # USER AS CREATOR
     has_many :pledges
         # USER AS CONTRIBUTOR
-    has_many :users, through: :pledges
+    # has_many :users, through: :pledges
         # USER AS CONTRIBUTOR
     has_many :fp_comments
         # USER AS CONTRIBUTOR
-    has_many :users, through: :fp_comments
+    # has_many :users, through: :fp_comments
         # USER AS CONTRIBUTOR
 
     validates_presence_of :title
+    validates_presence_of :creator_name
+    validates_uniqueness_of :creator_name
     validates_uniqueness_of :title
     validates_presence_of :description
     validates_presence_of :funding_goal

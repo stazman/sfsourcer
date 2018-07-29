@@ -9,6 +9,17 @@ MAIN NAVBAR <br>
 
 <h2> <%= link_to "Make a New Living Story", new_l_story_path %> </h2><br><br>
 
+<h3>Your Sourcer Projects</h3>
+<p>
+    <ul>
+        <% @user.funding_projects.each do |ufp| %>
+        <li><%= ufp.title %></li>
+        <li><%= ufp.description %></li>
+        <li><%= ufp.funding_goal %></li>
+    </ul>
+        <% end %>
+</p>
+
 <h2> <%= link_to "Make a New Sourcer Project", new_funding_project_path %> </h2><br><br>
 
 

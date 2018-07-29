@@ -5,8 +5,10 @@ class CreateFundingProjects < ActiveRecord::Migration[5.2]
       t.string :creator_name
       t.string :description
       t.integer :funding_goal
+      t.integer :user_id
       t.string :created_at
       t.string :updated_at
+    
       t.timestamps
     end
   end
