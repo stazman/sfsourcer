@@ -26,8 +26,8 @@ class UsersController < ApplicationController
   def create  
     @user = User.new(user_params)
     if @user.valid?
-      @user.addresses.build      
-      @user.funding_projects.build
+      # @user.addresses.build      
+      # @user.funding_projects.build
 
       @user.save
       session[:user_id] = @user.id
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, addresses_attributes: [:address1, :address2, :city, :state, :zip])
+    params.require(:user).permit(:name, :email, :password, addresses_attributes: [:address1, :address2, :city, :state, :zip], created_funding_project_attributes: [:creator_name, :title, :description])
   end
 
   def require_login

@@ -16,10 +16,24 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/facebook/callback' => 'sessions#create'
 
-    resources :addresses
+  # resources :funding_projects
+  
+  get "/funding_projects", to: "funding_projects#index"
+  post "/funding_projects", to: "funding_projects#create"
+  get "/funding_projects/new", to: "funding_projects#new"
+  get "/funding_projects/:id/edit", to: "funding_projects#edit"
+  get "/funding_projects/:id", to: "funding_projects#show"
+  patch "/funding_projects/:id", to: "funding_projects#update"
+  put "/funding_projects/:id", to: "funding_projects#update"
+  delete "/funding_projects/:id", to: "funding_projects#destroy"
+    
+  resources :fp_creator do
+    resources :funding_projects
+  end
+    
+  resources :addresses
   resources :fp_categories
   resources :fp_comments
-  resources :funding_projects
   # resources :l_story_ls_genres
   resources :l_stories
   resources :ls_comments
