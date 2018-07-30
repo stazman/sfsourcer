@@ -1,5 +1,8 @@
 class User < ApplicationRecord
-    has_many :fav_lits
+    has_many :created_funding_projects, :foreign_key => "fp_creator_id", :class_name => "FundingProject"
+    has_many :participated_funding_projects, :foreign_key => "fp_participant_id", :class_name => "FundingProject"
+      
+      has_many :fav_lits
     # AS A CREATOR
     has_many :funding_projects 
     # AS A CREATOR
