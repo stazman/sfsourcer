@@ -4,7 +4,7 @@ MAIN NAVBAR
 
 <%# <h3>Project Originated by: <%= current_user %></h3> %>
 
-<%= form_for @funding_project do |f| %>
+<%= form_for([@user, @funding_project]) do |f| %>
 <h2>Creator/Name of Sponsoring Organization: <%= f.text_field :creator_name %> </h2><br>
 <h2>Project Title: <%= f.text_field :title %> </h2><br>
 <h3>Description: <%= f.text_area :description %></h3><br>
