@@ -18,17 +18,21 @@ Rails.application.routes.draw do
 
   # resources :funding_projects
   
-  get "/funding_projects", to: "funding_projects#index"
-  post "/funding_projects", to: "funding_projects#create"
-  get "/funding_projects/new", to: "funding_projects#new"
-  get "/funding_projects/:id/edit", to: "funding_projects#edit"
-  get "/funding_projects/:id", to: "funding_projects#show"
-  patch "/funding_projects/:id", to: "funding_projects#update"
-  put "/funding_projects/:id", to: "funding_projects#update"
-  delete "/funding_projects/:id", to: "funding_projects#destroy"
+  # get "/funding_projects", to: "funding_projects#index"
+  # post "/funding_projects", to: "funding_projects#create"
+  # get "/funding_projects/new", to: "funding_projects#new"
+  # get "/funding_projects/:id/edit", to: "funding_projects#edit"
+  # get "/funding_projects/:id", to: "funding_projects#show"
+  # patch "/funding_projects/:id", to: "funding_projects#update"
+  # put "/funding_projects/:id", to: "funding_projects#update"
+  # delete "/funding_projects/:id", to: "funding_projects#destroy"
+
+  resources :fp_participant do
+    resources :funding_projects, only: [:index, :show]
+  end
     
   resources :fp_creator do
-    resources :funding_projects
+    resources :funding_projects, only: [:new, :create, :show, :edit, :update, :destroy]
   end
     
   resources :addresses
