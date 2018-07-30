@@ -5,8 +5,8 @@ class FundingProjectsController < ApplicationController
 
   def index
     @funding_projects = FundingProject.all
-    @user = User.find_by(id: params[:user_id])
-    @funding_projects = @user.funding_projects
+    # @user = User.find_by(id: params[:user_id])
+    # @funding_projects = @user.funding_projects
   end
 
   # def comments_index
@@ -40,11 +40,11 @@ class FundingProjectsController < ApplicationController
     # @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
     # if @funding_project.valid?
       # fp_pledges = @funding_project.pledges
-      @user = User.find_by(id: params[:user_id])
+      # @user = User.find_by(id: params[:user_id])
 
       @funding_project.save
   
-      redirect_to user_funding_project_path(@funding_project)
+      redirect_to new_fp_creator_funding_project_path(@funding_project)
     else
       # funding_project_path(@funding_project)
     # else
@@ -73,13 +73,13 @@ class FundingProjectsController < ApplicationController
 
   def funding_project_params
     params.require(:funding_project).permit(
-      # :funding_project_pledge,
       :creator_name,
       :user_id,
-      # :creator,
+      :fp_creator_id,
+      # :funding_project_pledge,
       :title,
       :description, 
-      :funding_goal, 
+      :funding_goal 
       # comments_attributes: [:title, :content]
       )
   end
