@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   resources :fav_authors
   resources :fav_lits
   resources :fav_genres
+  resources :funding_projects
 
   # resources :users do
   #   resources :funding_projects, except: [:index]

@@ -2,7 +2,7 @@ class FundingProject < ApplicationRecord
     belongs_to :fp_creator, :class_name => "User"
     belongs_to :fp_participant, :class_name => "User"
     
-    belongs_to :user
+    # belongs_to :user
         # USER AS CREATOR
     has_many :pledges
         # USER AS CONTRIBUTOR
