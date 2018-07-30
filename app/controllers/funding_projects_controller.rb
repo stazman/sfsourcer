@@ -31,25 +31,37 @@ class FundingProjectsController < ApplicationController
   end
 
   def create
+    
     @funding_project = FundingProject.new(funding_project_params)
-    if @funding_project.valid?
+    @funding_project.save
+    binding.pry
+    # @funding_project.fp_creator_id = current_user.id
+    # fp = @funding_project
+    # fp.save
+    # current_user.funding_projects << fp
+    # @user.funding_projects << funding_project
+    # @funding_project = @user.funding_projects.last
+    # binding.pry
+    # if @funding_project.valid?
 
     # raise params.inspect
-    
+    # binding.pry
     # @funding_project.fp_creator_id = 
     # @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
     # if @funding_project.valid?
       # fp_pledges = @funding_project.pledges
       # @user = User.find_by(id: params[:user_id])
 
-      @funding_project.save
-  
-      redirect_to new_fp_creator_funding_project_path(@funding_project)
-    else
+    # @user = current_user
+    # @funding_project = @user.funding_projects.last
+    # binding.pry
+    redirect_to root_url
+    # redirect_to fp_creator_funding_project_path(@user, @funding_project.id)
+    # else
       # funding_project_path(@funding_project)
     # else
-      render :new
-    end
+    #   render :new
+    # end
     end
 
   def show
@@ -74,7 +86,7 @@ class FundingProjectsController < ApplicationController
   def funding_project_params
     params.require(:funding_project).permit(
       :creator_name,
-      :user_id,
+      :fp_participant_id,
       :fp_creator_id,
       # :funding_project_pledge,
       :title,
