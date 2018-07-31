@@ -34,7 +34,15 @@ Rails.application.routes.draw do
   resources :fp_creator do
     resources :funding_projects, only: [:new, :create, :show, :edit, :update, :destroy]
   end
-    
+  
+  resources :users do
+    resources :addresses, only: [:new, :create, :show, :edit, :update]
+  end
+
+  resources :users do
+    resources :sf_faves
+  end
+
   resources :addresses
   resources :fp_categories
   resources :fp_comments
