@@ -27,21 +27,6 @@ Rails.application.routes.draw do
   # put "/funding_projects/:id", to: "funding_projects#update"
   # delete "/funding_projects/:id", to: "funding_projects#destroy"
 
-  resources :fp_participant do
-    resources :funding_projects, only: [:index, :show]
-  end
-    
-  resources :fp_creator do
-    resources :funding_projects, only: [:new, :create, :show, :edit, :update, :destroy]
-  end
-  
-  resources :users do
-    resources :addresses, only: [:new, :create, :show, :edit, :update]
-  end
-
-  resources :users do
-    resources :sf_faves, only: [:new, :create, :show, :edit, :update]
-  end
 
   resources :addresses
   resources :fp_categories
@@ -57,7 +42,23 @@ Rails.application.routes.draw do
   resources :fav_genres
   resources :funding_projects
 
-  # resources :users do
+  resources :users do
+    resources :addresses, only: [:new, :create, :show, :edit, :update]
+  end
+
+  resources :users do
+    resources :sf_faves, only: [:new, :create, :show, :edit, :update]
+  end
+
+  resources :fp_creator do
+    resources :funding_projects, only: [:new, :create, :show, :edit, :update, :destroy]
+  end
+  
+  resources :fp_participant do
+    resources :funding_projects, only: [:index, :show]
+  end
+    
+# resources :users do
   #   resources :funding_projects, except: [:index]
   # end
   
@@ -67,10 +68,6 @@ Rails.application.routes.draw do
     # , only: [:new, :create, :show]
   end
  
-  resources :users do
-    resources :addresses
-    # , only: [:new, :show, :edit]
-  end
 
   resources :funding_projects do
     resources :funding_categories

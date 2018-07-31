@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   def create  
     @user = User.new(user_params)
     if @user.valid?
-      # @user.addresses.build      
+      @user.addresses.build      
       # @user.funding_projects.build
 
       @user.save
