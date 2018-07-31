@@ -37,17 +37,15 @@ Rails.application.routes.draw do
   resources :ls_genres
   resources :pledges
   resources :users
-  resources :fav_authors
-  resources :fav_lits
-  resources :fav_genres
   resources :funding_projects
+  resources :sf_favs
 
   # resources :users do
   #   resources :addresses, only: [:new, :create, :show, :edit, :update]
   # end
 
   resources :users do
-    resources :sf_faves, only: [:new, :create, :show, :edit, :update]
+    resources :sf_favs, only: [:new, :create, :show, :edit, :update]
   end
 
   resources :fp_creator do

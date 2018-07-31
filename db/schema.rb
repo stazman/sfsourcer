@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_31_004654) do
+ActiveRecord::Schema.define(version: 2018_07_31_002120) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -89,13 +89,14 @@ ActiveRecord::Schema.define(version: 2018_07_31_004654) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sf_faves", force: :cascade do |t|
-    t.string "fav_lit"
-    t.string "fav_film"
-    t.string "fav_game"
+  create_table "sf_favs", force: :cascade do |t|
+    t.string "fav_lits"
+    t.string "fav_films"
+    t.string "fav_games"
+    t.integer "user_id"
+    t.string "sf_fav_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -37,12 +37,11 @@ MAIN NAVBAR <br>
 
 </ul>
 <br>
-<h2><%= link_to "Tell us your favorite SF literature, film, and game! Come join our community of enthusiasts!", new_user_sf_fafe_path(:user_id) %> </h2><br><br>
 
 <%# <h3>Your SF Favorites: </h3>
 
     <ul>
-        <% @user.sf_faves.each do |sf_fave| %>
+        <% @user.sf_favs.each do |sf_fave| %>
         <%# <li><%= sf_fave.fav_lit %></li> %>
         <%# <li><%= sf_fave.fav_film %></li> %>
         <%# <li><%= sf_fave.fav_game %></li> %>
