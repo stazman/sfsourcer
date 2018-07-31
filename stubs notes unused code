@@ -23,6 +23,7 @@ To Do for Rails Project:
 [ ] Add more validations important for security
 [ ] Make sure all validations work
 [ ] Finish out unwritten CRUD actions
+    editig address will just be a part of edit user form, not at a separate link
 [ ] Clean up all code for submission
 [ ] video runthrough
 [ ] blog
@@ -30,6 +31,7 @@ To Do for Rails Project:
 
 Future: 
 
+[ ] Try to persist address
 [ ] Refactor pledge amount logic in funding_project#show?
 [ ] make living story feature where a user is both a ls_creator and a ls_participant, ls_creator creates it and ls_partipant adds to it through comments but they're directly below the creator's original beginning ... which user is typing will be at the side ... if it's a free for all that might be part of the fun ... make a contest with decent prizes 
 [ ] include remaining attributes for fp_creator to new funding_project or make a separate model/interface

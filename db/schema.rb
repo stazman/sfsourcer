@@ -13,14 +13,15 @@
 ActiveRecord::Schema.define(version: 2018_07_31_004654) do
 
   create_table "addresses", force: :cascade do |t|
+    t.integer "user_id"
     t.string "address1"
     t.string "address2"
     t.string "city"
     t.string "state"
     t.integer "zip"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "fp_categories", force: :cascade do |t|
