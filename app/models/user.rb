@@ -13,8 +13,8 @@ class User < ApplicationRecord
     has_many :ls_genres
     # AS A CREATOR  
     has_many :pledges
+    has_many :funding_projects, through: :pledges
     # AS A CONTRIBUTOR
-    # has_many :funding_projects, through: :pledges
     # AS A CONTRIBUTOR
     has_many :fp_comments
     # AS A CONTRIBUTOR
