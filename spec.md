@@ -13,7 +13,7 @@ Specs:
 - [x] Include logout (how e.g. Devise) CUSTOM METHOD
 - [x] Include third party signup/login (how e.g. Devise/OmniAuth) OMNIAUTH
 - [ ] Include nested resource show or index (URL e.g. users/2/recipes) USERS/1/FUNDING_PROJECTS/1
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients) USERS/1/SF_FAVES
+- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients) USERS/1/SF_favs
 - [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
