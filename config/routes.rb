@@ -42,9 +42,9 @@ Rails.application.routes.draw do
   resources :fav_genres
   resources :funding_projects
 
-  resources :users do
-    resources :addresses, only: [:new, :create, :show, :edit, :update]
-  end
+  # resources :users do
+  #   resources :addresses, only: [:new, :create, :show, :edit, :update]
+  # end
 
   resources :users do
     resources :sf_faves, only: [:new, :create, :show, :edit, :update]

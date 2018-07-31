@@ -2,7 +2,7 @@ class AddressesController < ApplicationController
   before_action :require_login
   
   def index
-    @addresses = Address.all
+    # @addresses = Address.all
   end
 
   def new
@@ -11,12 +11,11 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.new(address_params)
-    if @address.valid?
+    # if @address.valid?
       @address.save
-      redirect_to address_path(@pledge)
-    else
-      render :new
-    end
+      redirect_to user_path
+      # render :new
+    # end
   end
 
   def show
@@ -35,7 +34,7 @@ class AddressesController < ApplicationController
   private
 
   def address_params
-    params.require(:address).permit(:address1, :address2, :city, :state, :zip)
+    params.require(:address).permit(:address1, :address2, :city, :state, :zip, :user_id)
   end
 
   def require_login
