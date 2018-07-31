@@ -1,13 +1,9 @@
 
 current commit notepad:
 
-build association with params for new comment
 
 
 modifying nested routes for fp_creator and fp_participant with funding_projects
-
-
-making route for funding_project/:id/comments
 
 
 
@@ -18,22 +14,21 @@ Do I have the right, many to many, relationship with l_story and o_genre?
 
 To Do for Rails Project:
 
-[ ] getting funding_project#show to include a new form for making a comment associated with the project
-
-[ ] Use aliases for other relationships (comment, categories, etc.)
-[ ] Choose or make a new creator with the new form for new fp 
-[ ] make a new model :funding_project_creator: add columns for name, entries for social media connections, limited profile, 
-[ ] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
-[ ] make living story feature with nested category attributes; user can make new ones
-[ ] make total_pledges a true class scope method with #order
+[ ] Complete #ready_for_countdown class method
+[ ] Make URL route for USERS/:ID/SF_FAVES
+[ ]
 [ ] make sure Facebook signup works
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
 [ ] Make sure all validations work
-[ ] Refactor pledge amount logic in funding_project#show
 
 
 Future: 
 
+[ ] Refactor pledge amount logic in funding_project#show?
+[ ] make living story feature where a user is both a ls_creator and a ls_participant, ls_creator creates it and ls_partipant adds to it through comments but they're directly below the creator's original beginning ... which user is typing will be at the side ... if it's a free for all that might be part of the fun ... make a contest with decent prizes 
+[ ] include remaining attributes for fp_creator to new funding_project or make a separate model/interface
+[ ] Use aliases for other relationships (comment, categories, etc.)
+[ ] getting funding_project#show to include a new form for making a comment associated with the project
 [ ] Nest funding_project_categories under funding_project
 [ ] Add how many days to go and how many backers for funding_project
 [ ] Give funding_project_creator choice to be same as user for login or not?
@@ -62,6 +57,16 @@ Future:
 [ ] Comments validation no more than 400 characters
 [ ] add users names to comments on funding projects
 [ ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
+
+Finished To Do
+
+[x] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
+[x] Choose or make a new creator with the new form for new fp 
+[x] Add categories model for funding_projects: 
+[ X ] Make sure login works
+[ x ] Make a nested resource for a user address 
+[x] Make admin privleges; only admin can delete a project
+[x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
 
 
@@ -143,14 +148,6 @@ end
 
 
 
-
-Finished To Do
-
-[x] Add categories model for funding_projects: 
-[ X ] Make sure login works
-[ x ] Make a nested resource for a user address 
-[x] Make admin privleges; only admin can delete a project
-[x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
 
 Unused Code:
