@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.sf_faves.build
   end
 
   def create  
@@ -40,6 +41,9 @@ class UsersController < ApplicationController
   def show
       @user = User.find(params[:id]) 
       @pledges = Pledge.where(:user_id == @user.id)
+      if @user.sf_faves.last.try(:fav_lit)
+        @user.sf_faves.build
+      end
   end
 
   def edit
@@ -55,7 +59,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, addresses_attributes: [:address1, :address2, :city, :state, :zip], created_funding_project_attributes: [:creator_name, :title, :description])
+    params.require(:user).permit(:name, :email, :password, addresses_attributes: [:address1, :address2, :city, :state, :zip], created_funding_project_attributes: [:creator_name, :title, :description], sf_faves_attributes: [:fav_lit, :fav_film, :fav_game])
   end
 
   def require_login

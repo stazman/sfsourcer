@@ -52,6 +52,20 @@ MAIN NAVBAR
  
     <%# <%= addr.label :address_type %> %>
     <%# <%= addr.text_field :address_type %><br> %>
-  <% end %><br>
+  <% end %><br><br>
+
+<h2>What are your SF favorites?</h2>
+
+  <%= f.fields_for :sf_faves do |sf_fave| %>
+    <%= sf_fave.label "Favorite Writing" %>
+    <%= sf_fave.text_field :fav_lit %><br>
+ 
+    <%= sf_fave.label "Favorite Films" %>
+    <%= sf_fave.text_field :fav_film %><br>
+ 
+    <%= sf_fave.label "Favorite Game (Video or otherwise)" %>
+    <%= sf_fave.text_field :fav_game %><br>
+ 
+  <% end %>
 <%= f.submit "Create Account" %>
 <% end %>

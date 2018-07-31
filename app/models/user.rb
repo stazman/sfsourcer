@@ -1,18 +1,17 @@
 class User < ApplicationRecord
+    has_many :sf_faves
+    accepts_nested_attributes_for :sf_faves
     has_many :created_funding_projects, :foreign_key => "fp_creator_id", :class_name => "FundingProject"
     has_many :participated_funding_projects, :foreign_key => "fp_participant_id", :class_name => "FundingProject"
     accepts_nested_attributes_for :created_funding_projects
-
-    has_many :fav_lits
-    # AS A CREATOR
     has_many :funding_projects 
+    has_many :addresses
+    accepts_nested_attributes_for :addresses
     # AS A CREATOR
     has_many :l_stories
     # AS A CREATOR
     has_many :ls_genres
     # AS A CREATOR  
-    has_many :addresses
-    # AS A USER
     has_many :pledges
     # AS A CONTRIBUTOR
     # has_many :funding_projects, through: :pledges
