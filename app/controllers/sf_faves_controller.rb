@@ -7,13 +7,17 @@ class SfFavesController < ApplicationController
     
     def new
         @sf_fafe = SfFafe.new
+        # Here I made a logical series of assignments that got us to the sf_fafe#new page from the user#show page
     end
     
     def create
         @sf_fafe = SfFafe.new(sf_fafe_params)
         if @sf_fafe.valid?
+            @user = User.find_by(params[:id])
+            # @sf_fafe.user_id = @user.id 
+    
           @sf_fafe.save
-          redirect_to sf_fafe_path(@sf_fafe)
+          redirect_to user_sf_fafe_path(@user, @sf_fafe)
         else
           render :new
         end

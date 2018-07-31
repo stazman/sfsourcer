@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :sf_faves
+    resources :sf_faves, only: [:new, :create, :show, :edit, :update]
   end
 
   resources :addresses

@@ -10,17 +10,23 @@ modifying nested routes for fp_creator and fp_participant with funding_projects
 Questions:
 Will I need to customize all routes with nested resources?
 Do I have the right, many to many, relationship with l_story and o_genre?
+when do you use a custom writer as opposed to other methods to make associations such as build
 
 
 To Do for Rails Project:
 
+[ ] Make nested URL route work for USERS/:ID/SF_FAVES
+[ ] Get funding_project to instantiate with associated user at nested route for funding_project#show
 [ ] Complete #ready_for_countdown class method
-[ ] Make URL route for USERS/:ID/SF_FAVES
-[ ]
 [ ] make sure Facebook signup works
-[ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view
+[ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
+[ ] Add more validations important for security
 [ ] Make sure all validations work
-
+[ ] Finish out unwritten CRUD actions
+[ ] Clean up all code for submission
+[ ] video runthrough
+[ ] blog
+ 
 
 Future: 
 
