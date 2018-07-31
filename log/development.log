@@ -40529,3 +40529,1884 @@ Processing by SessionsController#destroy as HTML
 Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2018-07-31 12:10:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:10:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:10:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oDGSeTar5OSURoQiZi4GHZkVT6BgtfTmj8RLSnvEGci8ICTQ5MzPe/2ACCuL2vx0Nsz3yBglTAyoa+di2DBjJA==", "user"=>{"name"=>"a", "email"=>"a@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"a", "address2"=>"a", "city"=>"a", "state"=>"a", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$tjhMW/fPZxKwmZAHQFLqSet2VyeIRa8v5th/1k6eKr5TSQoTRddL2"], ["created_at", "2018-07-31 17:10:29.615637"], ["updated_at", "2018-07-31 17:10:29.615637"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 86ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-31 12:10:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  [1m[36mSfFafe Load (0.2ms)[0m  [1m[34mSELECT  "sf_faves".* FROM "sf_faves" WHERE "sf_faves"."user_id" = ? ORDER BY "sf_faves"."id" DESC LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 61ms (Views: 53.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/user_id/sf_faves/new" for 127.0.0.1 at 2018-07-31 12:10:33 -0500
+Processing by SfFavesController#new as HTML
+  Parameters: {"user_id"=>"user_id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sf_faves_controller.rb:10
+  Rendering sf_faves/new.html.erb within layouts/application
+  [1m[36mSfFafe Load (0.2ms)[0m  [1m[34mSELECT "sf_faves".* FROM "sf_faves" WHERE "sf_faves"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/sf_faves/new.html.erb:6
+  Rendered sf_faves/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 60ms (Views: 51.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:13:37 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 300ms (Views: 291.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:13:40 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:13:42 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 152ms (Views: 82.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:14:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzlgTRdUyHpYJdj2RlAHC2AQ7jll9J/iC9NVEMObLIpbpLSA3CPTgctkLkJ0sVa7CrHQQRD/EVFGnGv8Y15bLw==", "user"=>{"name"=>"b", "email"=>"b@b.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"b", "address2"=>"b", "city"=>"b", "state"=>"b", "zip"=>"12334"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "b"], ["email", "b@b.com"], ["password_digest", "$2a$10$kla4UV9ugixCywn81/qV7.paW08KJmaqBGN.DM3Z8ziflP1MpkQu2"], ["created_at", "2018-07-31 17:14:06.362607"], ["updated_at", "2018-07-31 17:14:06.362607"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_faves", :user_id=>#<User id: 4, name: "b", email: "b@b.com", password: nil, password_digest: "$2a$10$kla4UV9ugixCywn81/qV7.paW08KJmaqBGN.DM3Z8zi...", created_at: "2018-07-31 17:14:06", updated_at: "2018-07-31 17:14:06">}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:35:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:17:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzlgTRdUyHpYJdj2RlAHC2AQ7jll9J/iC9NVEMObLIpbpLSA3CPTgctkLkJ0sVa7CrHQQRD/EVFGnGv8Y15bLw==", "user"=>{"name"=>"b", "email"=>"b@b.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"b", "address2"=>"b", "city"=>"b", "state"=>"b", "zip"=>"12334"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 149ms (Views: 54.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:18:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bOiiTtjNjsyKKwosYFBWrNrb2wBDhrEtfXfQgMU45Rex0HkEuNxB3GSWhYNVhwQSUW2xJyXMshDAUCYQsIxKOQ==", "user"=>{"name"=>"b", "email"=>"d@d.d", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"d", "address2"=>"d", "city"=>"d", "state"=>"d", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.d"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.d"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "b"], ["email", "d@d.d"], ["password_digest", "$2a$10$WjxYYbyMk.VJROFmqlL7T./FES/bXZEEMijwV/NouXWYbz7U3fD4q"], ["created_at", "2018-07-31 17:18:02.650106"], ["updated_at", "2018-07-31 17:18:02.650106"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 2.7ms)
+
+
+  
+NoMethodError (undefined method `sf_fafe' for #<User:0x007fe634c260d8>
+Did you mean?  sf_fafe_ids
+               sf_faves):
+  
+app/controllers/users_controller.rb:35:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:18:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bOiiTtjNjsyKKwosYFBWrNrb2wBDhrEtfXfQgMU45Rex0HkEuNxB3GSWhYNVhwQSUW2xJyXMshDAUCYQsIxKOQ==", "user"=>{"name"=>"b", "email"=>"d@d.d", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"d", "address2"=>"d", "city"=>"d", "state"=>"d", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.d"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 149ms (Views: 58.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:19:08 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:19:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 89ms (Views: 56.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:19:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rQ903InFWp0p3nZvvCqtoAa0zNF+uND2vLahbGIitZu2ukJO9QzUW5GM9UOnSFg6muRqsaJC5ezfRTC2sw8c9Q==", "user"=>{"name"=>"u", "email"=>"u@u.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"u", "address2"=>"u", "city"=>"u", "state"=>"u", "zip"=>"75544"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "u@u.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "u@u.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "u"], ["email", "u@u.com"], ["password_digest", "$2a$10$rWJgdJ9MolVK3rbzJ96I9.9lMcii9WRQMI7PoUv9qZCZpJk8yTEnW"], ["created_at", "2018-07-31 17:19:43.967208"], ["updated_at", "2018-07-31 17:19:43.967208"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFafe Load (0.7ms)[0m  [1m[34mSELECT  "sf_faves".* FROM "sf_faves" WHERE "sf_faves"."user_id" = ? ORDER BY "sf_faves"."id" DESC LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_faves", :id=>nil, :user_id=>"6"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20180707170145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707170145"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreatePledges (20180707173946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707173946_create_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707173946"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFundingProjects (20180707174939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "creator_name" varchar, "description" varchar, "funding_goal" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707174939_create_funding_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707174939"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpComments (20180718221422)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "fp_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_user_id" ON "fp_comments" ("user_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_funding_project_id" ON "fp_comments" ("funding_project_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180718221422"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateAddresses (20180719214344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "address1" varchar, "address2" varchar, "city" varchar, "state" varchar, "zip" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180719214344"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpCategories (20180723180315)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "fp_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180723180315_create_fp_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180723180315"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStories (20180726184357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "l_stories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184357_create_l_stories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184357"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsGenres (20180726184907)
+  [1m[35m (2.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184907_create_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184907"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStoryLsGenres (20180726185224)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "l_story_ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "l_story_id" integer, "ls_genre_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726185224_create_l_story_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726185224"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsComments (20180728181853)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ls_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180728181853_create_ls_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180728181853"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddFpCreatorIdAndFpParticipantIdToFundingProject (20180729160958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_creator_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_participant_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180729160958"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFaves (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "sf_faves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lit" varchar, "fav_film" varchar, "fav_game" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_faves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddUserIdToSfFaves (20180731004654)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "sf_faves" ADD "user_id" integer[0m
+  ↳ db/migrate/20180731004654_add_user_id_to_sf_faves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731004654"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-31 17:23:59.573366"], ["updated_at", "2018-07-31 17:23:59.573366"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frankjones@yahoo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frank Jones"], ["email", "frankjones@yahoo.com"], ["password_digest", "$2a$10$ws1QmKs1vIDE77TB3x4XFer2als.QeeFuTroRApYstwS2C3GtIinK"], ["created_at", "2018-07-31 17:24:08.092071"], ["updated_at", "2018-07-31 17:24:08.092071"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."creator_name" = ? LIMIT ?[0m  [["creator_name", "Frank J Inc."], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Fantastic Cats"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:24:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 375ms (Views: 360.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:24:47 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (uninitialized constant User::SfFafe):
+  
+app/controllers/users_controller.rb:24:in `new'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20180707170145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707170145"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreatePledges (20180707173946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707173946_create_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707173946"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFundingProjects (20180707174939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "creator_name" varchar, "description" varchar, "funding_goal" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707174939_create_funding_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707174939"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpComments (20180718221422)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "fp_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_user_id" ON "fp_comments" ("user_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_funding_project_id" ON "fp_comments" ("funding_project_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180718221422"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateAddresses (20180719214344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "address1" varchar, "address2" varchar, "city" varchar, "state" varchar, "zip" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180719214344"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpCategories (20180723180315)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "fp_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180723180315_create_fp_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180723180315"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStories (20180726184357)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "l_stories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184357_create_l_stories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184357"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsGenres (20180726184907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184907_create_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184907"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStoryLsGenres (20180726185224)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "l_story_ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "l_story_id" integer, "ls_genre_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726185224_create_l_story_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726185224"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsComments (20180728181853)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ls_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180728181853_create_ls_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180728181853"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddFpCreatorIdAndFpParticipantIdToFundingProject (20180729160958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_creator_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_participant_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180729160958"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFaves (20180731002120)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lit" varchar, "fav_film" varchar, "fav_game" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-31 17:33:58.757010"], ["updated_at", "2018-07-31 17:33:58.757010"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frankjones@yahoo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frank Jones"], ["email", "frankjones@yahoo.com"], ["password_digest", "$2a$10$HVQg1ZWktSejnTlPcBejf.HrrKKiL57xx7byQXcZYd.s7dK.Q8fgS"], ["created_at", "2018-07-31 17:34:09.304952"], ["updated_at", "2018-07-31 17:34:09.304952"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."creator_name" = ? LIMIT ?[0m  [["creator_name", "Frank J Inc."], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Fantastic Cats"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:34:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (Couldn't find SfFavesHelper, expected it to be defined in helpers/sf_faves_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/static_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:35:28 -0500
+  
+ActionController::RoutingError (Couldn't find SfFavsHelper, expected it to be defined in helpers/sf_favs_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/static_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:35:42 -0500
+  
+ActionController::RoutingError (Couldn't find SfFavsHelper, expected it to be defined in helpers/sf_favs_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/static_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:36:05 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 376ms (Views: 371.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:36:08 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 109ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:36:09 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 192ms (Views: 83.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:36:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLX2UEM9WPVv20JNyM5IqDI4CCnFp6LGjTxbMgZNKwU5P8+Qt+k4oEV//E7Cv/yJP/x96/aPD7ZujD4BjXfq+g==", "user"=>{"name"=>"a", "email"=>"a@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"a", "address2"=>"a", "city"=>"a", "state"=>"a", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$GnZPVzUvRnLRV5pTL7FPB.D2kNVVlCERLXbHoBQQtJ.wVwvMB/uKa"], ["created_at", "2018-07-31 17:36:29.206600"], ["updated_at", "2018-07-31 17:36:29.206600"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `user_sf_fafe_path' for #<UsersController:0x007fcb7c1ebaf0>
+Did you mean?  user_sf_fav_path
+               user_sf_favs_path):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:37:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLX2UEM9WPVv20JNyM5IqDI4CCnFp6LGjTxbMgZNKwU5P8+Qt+k4oEV//E7Cv/yJP/x96/aPD7ZujD4BjXfq+g==", "user"=>{"name"=>"a", "email"=>"a@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"a", "address2"=>"a", "city"=>"a", "state"=>"a", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 189ms (Views: 78.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:38:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQhVR2hsBZcyhPI8HOacHpZMVCvkhnwSVairpb5AY+BSpduH24/E/NkrD3uKgAqI854uFAp3q80qybWioIHomg==", "user"=>{"name"=>"s", "email"=>"s@s.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"s", "address2"=>"s", "city"=>"s", "state"=>"s", "zip"=>"54654"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "s"], ["email", "s@s.com"], ["password_digest", "$2a$10$xGT0lvbYDdvBR2yBDlrdkeYbhAjf2GOFTlbN0sju05iGejcjBmd06"], ["created_at", "2018-07-31 17:38:11.755551"], ["updated_at", "2018-07-31 17:38:11.755551"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"3"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20180707170145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707170145"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreatePledges (20180707173946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707173946_create_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707173946"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFundingProjects (20180707174939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "creator_name" varchar, "description" varchar, "funding_goal" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707174939_create_funding_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707174939"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpComments (20180718221422)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "fp_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_user_id" ON "fp_comments" ("user_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fp_comments_on_funding_project_id" ON "fp_comments" ("funding_project_id")[0m
+  ↳ db/migrate/20180718221422_create_fp_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180718221422"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateAddresses (20180719214344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "address1" varchar, "address2" varchar, "city" varchar, "state" varchar, "zip" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  ↳ db/migrate/20180719214344_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180719214344"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpCategories (20180723180315)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "fp_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180723180315_create_fp_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180723180315"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStories (20180726184357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "l_stories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184357_create_l_stories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184357"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsGenres (20180726184907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726184907_create_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726184907"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLStoryLsGenres (20180726185224)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "l_story_ls_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "l_story_id" integer, "ls_genre_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726185224_create_l_story_ls_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726185224"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLsComments (20180728181853)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ls_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180728181853_create_ls_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180728181853"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddFpCreatorIdAndFpParticipantIdToFundingProject (20180729160958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_creator_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "funding_projects" ADD "fp_participant_id" integer[0m
+  ↳ db/migrate/20180729160958_add_fp_creator_id_and_fp_participant_id_to_funding_project.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180729160958"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lit" varchar, "fav_film" varchar, "fav_game" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-31 17:41:50.552085"], ["updated_at", "2018-07-31 17:41:50.552085"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frankjones@yahoo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frank Jones"], ["email", "frankjones@yahoo.com"], ["password_digest", "$2a$10$4P/B0WONpk9Vlww/.3z01.NxQZeLCigVjfH8c.BnVsOgfg0CZOzB2"], ["created_at", "2018-07-31 17:41:56.822002"], ["updated_at", "2018-07-31 17:41:56.822002"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."creator_name" = ? LIMIT ?[0m  [["creator_name", "Frank J Inc."], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mFundingProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "Fantastic Cats"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:42:26 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 357ms (Views: 344.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:42:34 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 205ms (Views: 121.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:45:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 162ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:45:57 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 96ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:46:00 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 112ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:46:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjUzKtKPf/15TwHGXJInsyKUC62sdyjaBP2/dQs8eOtTvwrqJlsfqFPrv8VW45OSL1B+b59fharnTdpGgAa5FA==", "user"=>{"name"=>"a", "email"=>"a@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"a", "address2"=>"a", "city"=>"a", "state"=>"a", "zip"=>"75544"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$.XzWyiRrQkd2ZOazS./JuOfnZ2.YO8p0jtNDQZ4PGheYigXhZWb1u"], ["created_at", "2018-07-31 17:46:26.928144"], ["updated_at", "2018-07-31 17:46:26.928144"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.8ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"2"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:47:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjUzKtKPf/15TwHGXJInsyKUC62sdyjaBP2/dQs8eOtTvwrqJlsfqFPrv8VW45OSL1B+b59fharnTdpGgAa5FA==", "user"=>{"name"=>"a", "email"=>"a@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"a", "address2"=>"a", "city"=>"a", "state"=>"a", "zip"=>"75544"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 212ms (Views: 81.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:47:28 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 102ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:47:30 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:47:34 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 89ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:47:51 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:47:54 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:47:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:49:34 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:49:37 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 12:50:53 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 167ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:50:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 102ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:51:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rj0PC/XnTwJqvfMLhpaEa+EFTCF2KF7IExao+MFrJIJRy2/+iotC5zdRv7PA4JrHOBVlxBogNNzDKUt7y0pMkQ==", "user"=>{"name"=>"b", "email"=>"b@b.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"b", "address2"=>"b", "city"=>"b", "state"=>"b", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "b"], ["email", "b@b.com"], ["password_digest", "$2a$10$6qu8TcqeGiWF.PQoDuwEHuPaf8Ot8ifnk0r7eqAtPtQkdWkIrHTOe"], ["created_at", "2018-07-31 17:51:41.671771"], ["updated_at", "2018-07-31 17:51:41.671771"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.3ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"3"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:58:55 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v03ooeFjN2qw6bZB6ctwvHQlZ3rcDgPQ+M2tO10Fpzz4Rv1huB+8EWQtjuR1WKgU4Pzg5w2PeRP1Pv3tQwHspg==", "user"=>{"name"=>"b", "email"=>"b@b.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"b", "address2"=>"b", "city"=>"b", "state"=>"b", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 144ms (Views: 50.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 12:59:08 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 12:59:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 83ms (Views: 56.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 12:59:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQTTg7alnSzQ4Tqrzy9Haks+R3O1N8g2Cej5DPWwbWD8bZqtwVpgaUti+I+ksRnUIUnI1Dz1KfAQyz1NuYzzTg==", "user"=>{"name"=>"c", "email"=>"c@c.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"c", "address2"=>"c", "city"=>"c", "state"=>"c", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "c"], ["email", "c@c.com"], ["password_digest", "$2a$10$v4kySt4BcBoTkCKcquvX6uND5l7m8Xhfgq.vJqhRaTST0TV2u0JvC"], ["created_at", "2018-07-31 17:59:37.410185"], ["updated_at", "2018-07-31 17:59:37.410185"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"4"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:00:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQTTg7alnSzQ4Tqrzy9Haks+R3O1N8g2Cej5DPWwbWD8bZqtwVpgaUti+I+ksRnUIUnI1Dz1KfAQyz1NuYzzTg==", "user"=>{"name"=>"c", "email"=>"c@c.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"c", "address2"=>"c", "city"=>"c", "state"=>"c", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@c.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 130ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 13:00:29 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 80ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:01:16 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 435ms (Views: 347.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:01:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A80Eor3gVZVuAT9I4+V3rqpZDLoeniIFmkXMUVphPceouONNYVViRVDy1G3Pxel8uFbnPK2LliCp5rpzknhGgQ==", "user"=>{"name"=>"d", "email"=>"d@d.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"d", "address2"=>"d", "city"=>"d", "state"=>"d", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "d"], ["email", "d@d.com"], ["password_digest", "$2a$10$MP.qTyioX0Q/ISeukL5Ahuy.YBjk2KcD7e9w2GJ97R0kk4KShw7cy"], ["created_at", "2018-07-31 18:01:40.320172"], ["updated_at", "2018-07-31 18:01:40.320172"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"5"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:04:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fZG/gv3RsJ+FIOG8ehhlJgVVPmJZeF62H51dTTHRPyGpaEigt05mZ9Ou7IOGX2ekAvHBJcIt66AKqcB+55IKSA==", "user"=>{"name"=>"d", "email"=>"d@d.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"d", "address2"=>"d", "city"=>"d", "state"=>"d", "zip"=>"12345"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@d.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 180ms (Views: 68.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:04:33 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RP9bASu1Q5rNZQv3TmwTuf4XOmagFlBiTmOmRyp3MQ2QBqwjYSqVYpvrBsiyKxE7+bPFITtD5XRbVzt0/DQEZA==", "user"=>{"name"=>"e", "email"=>"e@2.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "e@2.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "e@2.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "e"], ["email", "e@2.com"], ["password_digest", "$2a$10$4zSlyHsVmZhNXQAMzyhBUeco0KShWMinlZImN7nxfAC8oNgR14HsK"], ["created_at", "2018-07-31 18:04:33.195936"], ["updated_at", "2018-07-31 18:04:33.195936"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 209ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:04:53 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 87ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 13:04:56 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:04:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 89ms (Views: 62.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:05:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XRcNqI6g+mCr1K+YU8ScGP/87FVLIEmH7eX58fJzaxYautXqvfUE+GB4BpBDFdnupiRy+H4xCDZHjt5NG0k1w==", "user"=>{"name"=>"f", "email"=>"f@f.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "f@f.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "f@f.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "f"], ["email", "f@f.com"], ["password_digest", "$2a$10$j1V7rno4vltknLctshVjxejmrkOXF31XZbDEqhmMs90.Qwkdyl9l6"], ["created_at", "2018-07-31 18:05:08.230829"], ["updated_at", "2018-07-31 18:05:08.230829"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 203ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:05:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 318ms (Views: 307.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:05:45 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 151ms (Views: 86.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:05:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V9ZpHUHY/gYySsQ3IUWGfhrnK9XTU/3MVwGLRue4/GL2yN58SRWp/FFkdpMBBsNpw4BJr2eHuMqRqCfYFBwVGQ==", "user"=>{"name"=>"g", "email"=>"g@g.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "g"], ["email", "g@g.com"], ["password_digest", "$2a$10$UYaHR/MOFYp8Fv1eR/ish.vUoTXPYHQR2w.qe9Gxd8/eeLn36jAiS"], ["created_at", "2018-07-31 18:05:57.407977"], ["updated_at", "2018-07-31 18:05:57.407977"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 208ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:07:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 143ms (Views: 92.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:07:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 300ms (Views: 290.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:08:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 160ms (Views: 96.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:08:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ljuKxdUA2pM02nfF+MwlSI72fwuPzdaEr2efGSPwh9k3JT2k3c2NaVf0xWHYj2BfV5EdcTsZk4JpzjOH0FRuog==", "user"=>{"name"=>"h", "email"=>"h@h.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h@h.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h@h.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "h"], ["email", "h@h.com"], ["password_digest", "$2a$10$P.a51iMcqnwxy3uWG95zLuf/2SpgZ23RKg9hq993f51xbnoespUg."], ["created_at", "2018-07-31 18:08:13.105126"], ["updated_at", "2018-07-31 18:08:13.105126"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"9"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:08:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ljuKxdUA2pM02nfF+MwlSI72fwuPzdaEr2efGSPwh9k3JT2k3c2NaVf0xWHYj2BfV5EdcTsZk4JpzjOH0FRuog==", "user"=>{"name"=>"h", "email"=>"h@h.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h@h.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 179ms (Views: 68.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 13:09:10 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:09:12 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 89ms (Views: 60.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:09:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4sYt0h3xIccnyxDKlvs1KaBx4GEEU8vo8finHRwY75c8u4CksH+ktNLDk3YFQFRyPJh7v7jJTNxBbmPQYg4Rg==", "user"=>{"name"=>"i", "email"=>"i@i.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "i@i.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "i@i.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "i"], ["email", "i@i.com"], ["password_digest", "$2a$10$Fk2U6HD6kkg9Lj7CvQdD1ujKyddRNaRKxnvX1wDp0nDXtAyh7Vle2"], ["created_at", "2018-07-31 18:09:24.593736"], ["updated_at", "2018-07-31 18:09:24.593736"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.3ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"10"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:10:27 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/users_controller.rb:71: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:71: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:11:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4sYt0h3xIccnyxDKlvs1KaBx4GEEU8vo8finHRwY75c8u4CksH+ktNLDk3YFQFRyPJh7v7jJTNxBbmPQYg4Rg==", "user"=>{"name"=>"i", "email"=>"i@i.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "i@i.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 144ms (Views: 52.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 13:11:25 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:11:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 85ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:11:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Awy49IYgP1WW/M2sBHMIVQ2QfR2nyiYvXOsdNP7VBd3GYuHCAvXauI0D7Q3hMxh5tlWue7s9fcVEvU/9e9Tf2w==", "user"=>{"name"=>"aksjdfhaklsjdhf", "email"=>"jashdfjahsdf@dakjdslfj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"asdfasdf", "address2"=>"asdfadsfd", "city"=>"asdfadsfasd", "state"=>"asdfadsfad", "zip"=>"asdasdfad"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jashdfjahsdf@dakjdslfj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jashdfjahsdf@dakjdslfj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "aksjdfhaklsjdhf"], ["email", "jashdfjahsdf@dakjdslfj.com"], ["password_digest", "$2a$10$Qowryl7h12aqftvz38nhH.D4Mk3hXiyvhHhSuzJULtw6D695oUFmi"], ["created_at", "2018-07-31 18:11:45.222567"], ["updated_at", "2018-07-31 18:11:45.222567"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"11"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:12:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Awy49IYgP1WW/M2sBHMIVQ2QfR2nyiYvXOsdNP7VBd3GYuHCAvXauI0D7Q3hMxh5tlWue7s9fcVEvU/9e9Tf2w==", "user"=>{"name"=>"aksjdfhaklsjdhf", "email"=>"jashdfjahsdf@dakjdslfj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"asdfasdf", "address2"=>"asdfadsfd", "city"=>"asdfadsfasd", "state"=>"asdfadsfad", "zip"=>"asdasdfad"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jashdfjahsdf@dakjdslfj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 150ms (Views: 51.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:12:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l+89k3WbCJQ35tSxDbo4Avgjt0KzRop6xQXkEGjLCiAMVITcGxP90n8ezrNxg9e8dfVqTf7p1bTgNpAUz3l1aA==", "user"=>{"name"=>"hjhj", "email"=>"hjhj@jjkj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"dfd", "address2"=>"dfd", "city"=>"dfd", "state"=>"dfd", "zip"=>"23333"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hjhj@jjkj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hjhj@jjkj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hjhj"], ["email", "hjhj@jjkj.com"], ["password_digest", "$2a$10$Iu0NlcwBli47cisUpuDjj.B4z.wY0xFKF0c.NhRp//A7sPJrYpu5y"], ["created_at", "2018-07-31 18:12:32.138254"], ["updated_at", "2018-07-31 18:12:32.138254"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT  "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ? ORDER BY "sf_favs"."id" DESC LIMIT ?[0m  [["user_id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :id=>nil, :user_id=>"12"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:36:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:16:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l+89k3WbCJQ35tSxDbo4Avgjt0KzRop6xQXkEGjLCiAMVITcGxP90n8ezrNxg9e8dfVqTf7p1bTgNpAUz3l1aA==", "user"=>{"name"=>"hjhj", "email"=>"hjhj@jjkj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"dfd", "address2"=>"dfd", "city"=>"dfd", "state"=>"dfd", "zip"=>"23333"}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hjhj@jjkj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 149ms (Views: 55.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:16:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3NF1pnDfpqJUUe48+cXV4l8BNGUgbeGGz8ifiQBSggBHaszpHldT5Byp9D6F/Dpc0tfpam3Cvkjq++uNp+D9SA==", "user"=>{"name"=>"gtggt", "email"=>"tgtg@frfr.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tgtg@frfr.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tgtg@frfr.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "gtggt"], ["email", "tgtg@frfr.com"], ["password_digest", "$2a$10$qw4jqsL/eXS9zLaTcCnF9Oh1DT9XxEM/CG39b5zMOjsDZ2dlVJit6"], ["created_at", "2018-07-31 18:16:25.055604"], ["updated_at", "2018-07-31 18:16:25.055604"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sf_favs", :user_id=>#<User id: 13, name: "gtggt", email: "tgtg@frfr.com", password: nil, password_digest: "$2a$10$qw4jqsL/eXS9zLaTcCnF9Oh1DT9XxEM/CG39b5zMOjs...", created_at: "2018-07-31 18:16:25", updated_at: "2018-07-31 18:16:25">}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:34:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:17:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3NF1pnDfpqJUUe48+cXV4l8BNGUgbeGGz8ifiQBSggBHaszpHldT5Byp9D6F/Dpc0tfpam3Cvkjq++uNp+D9SA==", "user"=>{"name"=>"gtggt", "email"=>"tgtg@frfr.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tgtg@frfr.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 164ms (Views: 65.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:17:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TqEynMj8xnBu7PpCBhKqfZbPw+hwCglpxBR6mVHZKaPVGovTpnQzNiYU4EB6K0XDGxke5z2lVqfhJw6d9mtW6w==", "user"=>{"name"=>"kkkd", "email"=>"d@frfr.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@frfr.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@frfr.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "kkkd"], ["email", "d@frfr.com"], ["password_digest", "$2a$10$JbdmiSQ.moULgs..kU0kF.HrNUkcv5ac6i3VeZ8Bjhgs.5OIGmBU6"], ["created_at", "2018-07-31 18:17:24.369527"], ["updated_at", "2018-07-31 18:17:24.369527"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 82ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2018-07-31 13:17:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (29.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"sf_favs", :id=>"14"}, missing required keys: [:user_id]):
+    37: 
+    38: </ul>
+    39: <br>
+    40: <h2><%= link_to "Tell us your favorite SF literature, film, and game! Come join our community of enthusiasts!", user_sf_favs_path %> </h2><br><br>
+    41: 
+    42: <%# <h3>Your SF Favorites: </h3>
+    43: 
+  
+app/views/users/show.html.erb:40:in `_app_views_users_show_html_erb__2834904429999167232_70181228665400'
+Started GET "/users/14" for 127.0.0.1 at 2018-07-31 13:22:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"sf_favs", :id=>"14"}, missing required keys: [:user_id]):
+    37: 
+    38: </ul>
+    39: <br>
+    40: <h2><%= link_to "Tell us your favorite SF literature, film, and game! Come join our community of enthusiasts!", user_sf_favs_path() %> </h2><br><br>
+    41: 
+    42: <%# <h3>Your SF Favorites: </h3>
+    43: 
+  
+app/views/users/show.html.erb:40:in `_app_views_users_show_html_erb__2834904429999167232_70181276111380'
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:23:43 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 13:23:45 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:23:46 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 108ms (Views: 56.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 13:23:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/vJM0nukNOvVIu4HkUsOGLBI9AxVEopv6DbIIXqLfUdctLyL21NU983MAhjMwVGIkS20eF43tey7tgKiX7IlqA==", "user"=>{"name"=>"sdsdasdfasd", "email"=>"asdfas@adfsd.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 343236ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:53:28 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 246ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:53:32 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'sf_fav_type' for SfFav.):
+  
+app/controllers/users_controller.rb:24:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "sf_favs"[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_gamesra" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 13:58:33 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'sf_fav_type' for SfFav.):
+  
+app/controllers/users_controller.rb:24:in `new'
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "sf_favs"[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:04:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_games" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:05:39 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'sf_fav_type' for SfFav.):
+  
+app/controllers/users_controller.rb:24:in `new'
+Started GET "/" for 127.0.0.1 at 2018-07-31 14:11:01 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 259ms (Views: 246.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:11:05 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'sf_fav_type' for SfFav.):
+  
+app/controllers/users_controller.rb:24:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "sf_favs"[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (12.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_games" varchar, "user_id" integer, "sf_fav_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-07-31 14:12:26 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 259ms (Views: 248.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 14:12:29 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:12:31 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 155ms (Views: 74.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 14:12:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pCdjYgHrQDwsyqS2vGjro0gP6ZTDb2qK5xDUuf7qFFtp9C34WhFTjAjwxhBkb/aDXAd946U3JrPzmNlpXSwq2g==", "user"=>{"name"=>"ggr", "email"=>"grg@fef.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 1037411ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/new.html.erb:70: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/new.html.erb:70: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:39:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-31 14:30:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pCdjYgHrQDwsyqS2vGjro0gP6ZTDb2qK5xDUuf7qFFtp9C34WhFTjAjwxhBkb/aDXAd946U3JrPzmNlpXSwq2g==", "user"=>{"name"=>"ggr", "email"=>"grg@fef.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Started GET "/" for 127.0.0.1 at 2018-07-31 14:31:05 -0500
+Started GET "/" for 127.0.0.1 at 2018-07-31 14:34:13 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 237ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:34:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 142ms (Views: 76.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 14:34:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bW5eqcRdPEAwLnnCbrHl3+YVDlyN95eW/NxqQbsT/bagvRAzn6cv8BQUG2S2tvj/8h2aK+uv26/oVGeRGNXDNw==", "user"=>{"name"=>"ffff", "email"=>"ffff@fvv.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"dfd", "address2"=>"fdfd", "city"=>"dfd", "state"=>"dfd", "zip"=>"dfd"}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"dfd", "fav_films"=>"dfdf", "fav_games"=>"dfdfd"}, "1"=>{"fav_lits"=>"dfd", "fav_films"=>"fdfd", "fav_games"=>"dfd"}, "2"=>{"fav_lits"=>"dfd", "fav_films"=>"dfd", "fav_games"=>"dfd"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Started GET "/users" for 127.0.0.1 at 2018-07-31 14:36:11 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-31 14:36:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 310ms (Views: 305.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-07-31 14:36:19 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-31 14:36:23 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 153ms (Views: 76.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-31 14:36:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PwixcrUWqhl4kDn78XUB4xAkrea12N/LLU7kKz13hLu8+OBs8Fd1VpgC6xdZF6wtygdt78YbYDycMPGAbASyXQ==", "user"=>{"name"=>"adsfas", "email"=>"asfasfas@a.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"dfd", "address2"=>"fdfd", "city"=>"dfdf", "state"=>"dfdf", "zip"=>"dfd"}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"dfdf", "fav_films"=>"dfdffd", "fav_games"=>"f"}, "1"=>{"fav_lits"=>"df", "fav_films"=>"f", "fav_games"=>"f"}, "2"=>{"fav_lits"=>"d", "fav_films"=>"f", "fav_games"=>"d"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asfasfas@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asfasfas@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "adsfas"], ["email", "asfasfas@a.com"], ["password_digest", "$2a$10$wWyWGf02ihzYPk1WMR28YOxlcquY8Fcf9IXqgi.EvveDnvzfq1rJm"], ["created_at", "2018-07-31 19:36:45.409759"], ["updated_at", "2018-07-31 19:36:45.409759"]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mSfFav Create (0.2ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "dfdf"], ["fav_films", "dfdffd"], ["fav_games", "f"], ["user_id", 15], ["created_at", "2018-07-31 19:36:45.413261"], ["updated_at", "2018-07-31 19:36:45.413261"]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mSfFav Create (0.1ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "df"], ["fav_films", "f"], ["fav_games", "f"], ["user_id", 15], ["created_at", "2018-07-31 19:36:45.414912"], ["updated_at", "2018-07-31 19:36:45.414912"]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mSfFav Create (0.1ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "d"], ["fav_films", "f"], ["fav_games", "d"], ["user_id", 15], ["created_at", "2018-07-31 19:36:45.416239"], ["updated_at", "2018-07-31 19:36:45.416239"]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:35
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 90ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2018-07-31 14:36:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"sf_favs", :id=>"15"}, missing required keys: [:user_id]):
+    37: 
+    38: </ul>
+    39: <br>
+    40: <h2><%= link_to "Tell us your favorite SF literature, film, and game! Come join our community of enthusiasts!", user_sf_favs_path() %> </h2><br><br>
+    41: 
+    42: <%# <h3>Your SF Favorites: </h3>
+    43: 
+  
+app/views/users/show.html.erb:40:in `_app_views_users_show_html_erb__497796204962234499_70269026733000'
+Started GET "/users/15" for 127.0.0.1 at 2018-07-31 14:37:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 57.2ms | ActiveRecord: 0.8ms)
+
+

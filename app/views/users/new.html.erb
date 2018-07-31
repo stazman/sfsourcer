@@ -51,5 +51,17 @@ MAIN NAVBAR
     <%= addr.text_field :zip %><br>
 
   <% end %><br><br>
+
+    <%= f.fields_for :sf_favs do |sf_fave| %>
+    <%= sf_fave.label "Favorite Writing" %>
+    <%= sf_fave.text_field :fav_lits %><br>
+ 
+    <%= sf_fave.label "Favorite Films" %>
+    <%= sf_fave.text_field :fav_films %><br>
+ 
+    <%= sf_fave.label "Favorite Game (Video or otherwise)" %>
+    <%= sf_fave.text_field :fav_games %><br>
+  <% end %>
+
   <%= f.submit "Create Account" %>
 <% end %>

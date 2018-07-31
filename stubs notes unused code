@@ -15,7 +15,7 @@ when do you use a custom writer as opposed to other methods to make associations
 
 To Do for Rails Project:
 
-[ ] Make nested URL route work for USERS/:ID/SF_FAVES
+[ ] Make nested URL route work for USERS/:ID/SF_favs
 [ ] Get funding_project to instantiate with associated user at nested route for funding_project#show
 [ ] Complete #ready_for_countdown class method
 [ ] make sure Facebook signup works
