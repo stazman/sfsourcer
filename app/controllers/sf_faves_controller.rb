@@ -7,13 +7,15 @@ class SfFavesController < ApplicationController
     
     def new
         @sf_fafe = SfFafe.new
+        @user = User.find_by(params[:id])
+        raise params.inspect
         # Here I made a logical series of assignments that got us to the sf_fafe#new page from the user#show page
     end
     
     def create
         @sf_fafe = SfFafe.new(sf_fafe_params)
         if @sf_fafe.valid?
-            @user = User.find_by(params[:id])
+            
             # @sf_fafe.user_id = @user.id 
     
           @sf_fafe.save

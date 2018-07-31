@@ -2,8 +2,8 @@
 
 <h2>What are your SF favorites?</h2>
 <%# <%= binding.pry %> %>
-<%= form_for @sf_fafe, url: user_sf_fafe_path do |f| %>
-  <%# <%= f.fields_for :sf_faves do |sf_fave| %> %>
+<%= form_for @user do |f| %>
+  <%= f.fields_for :sf_faves do |sf_fave| %>
     <%= f.label "Favorite Writing" %>
     <%= f.text_field :fav_lit %><br>
  
@@ -12,5 +12,5 @@
  
     <%= f.label "Favorite Game (Video or otherwise)" %>
     <%= f.text_field :fav_game %><br>
-   <%# <% end %> %>
+   <% end %>
   <% end %>
