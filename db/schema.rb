@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_29_160958) do
+ActiveRecord::Schema.define(version: 2018_07_31_004654) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "address1"
@@ -19,25 +19,6 @@ ActiveRecord::Schema.define(version: 2018_07_29_160958) do
     t.string "state"
     t.integer "zip"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fav_authors", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fav_genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fav_lits", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -105,6 +86,15 @@ ActiveRecord::Schema.define(version: 2018_07_29_160958) do
     t.integer "funding_project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sf_faves", force: :cascade do |t|
+    t.string "fav_lit"
+    t.string "fav_film"
+    t.string "fav_game"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
