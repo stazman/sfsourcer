@@ -34,7 +34,6 @@ class FundingProjectsController < ApplicationController
     
     @funding_project = FundingProject.new(funding_project_params)
     @funding_project.save
-    binding.pry
     # @funding_project.fp_creator_id = current_user.id
     # fp = @funding_project
     # fp.save
