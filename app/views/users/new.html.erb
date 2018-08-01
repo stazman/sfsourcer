@@ -52,14 +52,15 @@ MAIN NAVBAR
 
   <% end %><br><br>
 
+<h2>Let us know about your SF favorites!</h2>
     <%= f.fields_for :sf_favs do |sf_fave| %>
-    <%= sf_fave.label "Favorite Writing" %>
+    <%= sf_fave.label "What is your favorite SF literature?" %>
     <%= sf_fave.text_field :fav_lits %><br>
  
-    <%= sf_fave.label "Favorite Films" %>
+    <%= sf_fave.label "What are your favorite SF films?" %>
     <%= sf_fave.text_field :fav_films %><br>
  
-    <%= sf_fave.label "Favorite Game (Video or otherwise)" %>
+    <%= sf_fave.label "What are your favorite SF games?" %>
     <%= sf_fave.text_field :fav_games %><br>
   <% end %>
 
