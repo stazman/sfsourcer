@@ -6,36 +6,22 @@ class User < ApplicationRecord
     accepts_nested_attributes_for :created_funding_projects
     has_one :address
     accepts_nested_attributes_for :address
-    has_many :funding_projects 
-    # AS A CREATOR
-    has_many :l_stories
-    # AS A CREATOR
-    has_many :ls_genres
-    # AS A CREATOR  
     has_many :pledges
     has_many :funding_projects, through: :pledges
-    # AS A CONTRIBUTOR
-    # AS A CONTRIBUTOR
-    has_many :fp_comments
-    # AS A CONTRIBUTOR
-    # has_many :funding_projects, through: :fp_comments
-    # AS A CONTRIBUTOR
-    has_many :l_stories
-    # AS A CONTRIBUTOR
+    # TO DO: THROUGH FP_PARTICIPANT ALIAS
     has_many :ls_comments
-    # AS A CONTRIBUTOR
-    has_many  :l_stories, through: :ls_comments
-    # AS A CONTRIBUTOR
-    # accepts_nested_attributes_for :funding_projects
-
-    # has_many :ls_genres, through: :l_stories
-    # has_many :funding_projects
-    # has_many :fp_creators
-    # # has_many :funding_projects, through: :fp_creators
+    has_many :l_stories, through: :ls_comments
     # has_many :fp_comments
     # has_many :funding_projects, through: :fp_comments
-    # , :class_name => 'Addresses', :foreign_key => 'user_id'
-    # accepts_nested_attributes_for :addresses
+    # TO DO: THROUGH FP_PARTICIPANT ALIAS
+    # has_many :l_stories
+    # TO DO: THROUGH LS_CREATOR ALIAS
+    # has_many :ls_genres
+    # TO DO: THROUGH LS_CREATOR ALIAS
+
+    # has_many :ls_genres
+    # has_many :ls_genres, through: :l_stories
+    # AS A CONTRIBUTOR
 
     has_secure_password
 
