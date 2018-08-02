@@ -1,11 +1,14 @@
 
 current commit notepad:
 
+made gitignore file, added /tmp to it; stubbed to reorganize user into separate functions
+
 getting user to instantatiate with new funding_project in nested resource without aliasing for different user roles
 
 modifying nested routes for fp_creator and fp_participant with funding_projects
 
 
+hasmnay through in user/funding project?
 
 Questions:
 Help with [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
@@ -18,6 +21,12 @@ can I make USERS/1/SF_favs into a nested resource or do I need to do soomething 
 
 To Do for Rails Project:
 
+[ ] Make a static page for All SF Film Fanvorites
+[ ] Make author, title, format models for has many through model with nested attributes for author and title
+[ ] Make separate model for fp_creator to make funding_projects and be associated with user
+[ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
+[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
+[ ] Complete #ready_for_countdown class method
 [ ] Complete #ready_for_countdown class method
 [ ] make sure Facebook signup works
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
@@ -33,6 +42,9 @@ To Do for Rails Project:
 
 Future: 
 
+[ ] Make Fanvorite static pages for literature, film, and games
+[ ] Make new fan pages based on author, title, and genre links in All SF Fanvorites
+[ ] Make created fan pages based on author, title, and genre links in sections for All SF Fanvorite formats
 [ ] Try to persist address
 [ ] Refactor pledge amount logic in funding_project#show?
 [ ] make living story feature where a user is both a ls_creator and a ls_participant, ls_creator creates it and ls_partipant adds to it through comments but they're directly below the creator's original beginning ... which user is typing will be at the side ... if it's a free for all that might be part of the fun ... make a contest with decent prizes 
@@ -70,8 +82,7 @@ Future:
 
 Finished To Do
 
-[x] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
-[x] Choose or make a new creator with the new form for new fp 
+[x] set gitignore for temp files 
 [x] Add categories model for funding_projects: 
 [ X ] Make sure login works
 [ x ] Make a nested resource for a user address 
@@ -79,10 +90,179 @@ Finished To Do
 [x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
 
-
-
 Unused
 
+ [x] Choose or make a new creator with the new form for new fp 
+ [x] funding_project_creator can have different name, other profile info, but will be same :id and login for a user
+
+  # resources :users do
+  #   resources :funding_projects, only: [:index, :show, :new, :edit]
+  # end
+  # resources :funding_projects
+
+  
+  # def addresses_index
+  #   @user = User.find(params[:id])
+  #   @addresses = @user.addresses
+  #   render template: 'addresses/index'
+  # end
+ 
+  # def post
+  #   @user = User.find(params[:id])
+  #   @address = Address.find(params[:user_id])
+  #   render template: 'addresses/show'
+  # end
+
+class FundingProjectsController < ApplicationController
+  before_action :require_login
+  # skip_before_action :require_login, only: [:index, :show]
+  # before_save :make_titlecase
+
+  def index
+    @funding_projects = FundingProject.all
+    # @user = User.find_by(id: params[:user_id])
+    # @funding_projects = @user.funding_projects
+  end
+
+  # def comments_index
+  #   @funding_project = FundingProject.find(params[:id])
+  #   @comments = @funding_project.comments
+  #   render template: 'comments/index'
+  # end
+
+  # def comment
+  #   @funding_project = FundingProject.find(params[:id])
+  #   @funding_project.comment.id = Comment.find(params[:id])
+  #   render template: 'comments/show'
+  # end
+
+  def new
+    @funding_project = FundingProject.new
+
+    # @user = User.find(params[:id])
+    # @user = User.find_by(id: params[:id])
+
+
+
+    # @funding_project.comments.build
+    # @funding_project.user_id = current_user
+    # @comment = @comment.find_by(:id)
+    # @funding_project.id = @comment.fundng_project_id
+    # @funding_project.comments.build
+  end
+
+  def create
+    
+    @funding_project = FundingProject.new(funding_project_params)
+    @user = User.find_by(id: params[:user_id])
+    @funding_project = @user.funding_projects.find_by(id: params[:id])
+    
+    # @user = User.find(params[:id])
+    @funding_project.save
+
+    redirect_to user_funding_project_path(@user, @funding_project)
+    # binding.pry
+
+
+    # @funding_project.fp_creator_id = current_user.id
+    # fp = @funding_project
+    # fp.save
+    # current_user.funding_projects << fp
+    # @user.funding_projects << funding_project
+    # @funding_project = @user.funding_projects.last
+    # binding.pry
+    # if @funding_project.valid?
+
+    # raise params.inspect
+    # binding.pry
+    # @funding_project.fp_creator_id = 
+    # @funding_project.fp_creator_id = FpCreator.where(:id == current_user.id)
+    # if @funding_project.valid?
+      # fp_pledges = @funding_project.pledges
+      # @user = User.find_by(id: params[:user_id])
+
+    # @user = current_user
+    # @funding_project = @user.funding_projects.last
+    # binding.pry
+    # redirect_to fp_creator_funding_project_path(@user, @funding_project.id)
+    # else
+      # funding_project_path(@funding_project)
+    # else
+    #   render :new
+    # end
+    end
+
+  def show
+    @user = User.find_by(id: params[:user_id])
+    @funding_project = @user.funding_projects.find_by(id: params[:id])
+    # @funding_project = FundingProject.find(params[:id])
+    # NOTE: Above doesn't work because there needs to be an association in the first place, not finding a funding_project
+    @total_pledges = []
+    # @comments = Comment.where(:funding_project_id == @funding_project.id)
+  end
+
+  def edit
+    #make editong an already made FP instance possible
+  end
+
+  def update
+    #update an already made FP instance, including saving it
+  end
+
+  def destroy
+  end
+
+  private
+
+  def funding_project_params
+    params.require(:funding_project).permit(
+      :creator_name,
+      :fp_participant_id,
+      :fp_creator_id,
+      # :funding_project_pledge,
+      :title,
+      :description, 
+      :funding_goal, 
+      # comments_attributes: [:title, :content]
+      :user_id)
+  end
+
+  # def fp_creator_params
+  #   params.require(:fp_creator).permit(
+  #     "name",
+  #     "location",
+  #     "name_of_verified",
+  #     "verified?",
+  #     "creator_profile",
+  #     "last_logged_in",
+  #     "fp_amt_created",
+  #     "fp_amt_backed",
+  #     "creator_site",
+  #     "instagram_url",
+  #     "twitter_url",
+  #     "facebook_url",
+  #     "blog_url",
+  #     "user_id",
+  #     funding_projects_attributes: [:title, :description, :funding_goal]
+  #   )
+  # end
+
+
+  def require_login
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_url
+    end
+  end
+
+
+#   def total_pledges
+#     self.pledges.each do |p| 
+#        p.amount  
+#     end
+# end
+
+end
 [ ] Making living story feature, to include OpenGenre feature, with OpenGenres to be nested under Living Story
 l_story_1 = LStory.new(:title => "My First Living Story", :content => "It was a dark and stormy morning ...", :ls_genre_id => 1, :ls_genre_attributes => {:id => 1, :name => "Fantasy"})
 l_story_2 = LStory.create(:title => "My Second Living Story", :content => "It was a dark but not as stormy morning ...",
