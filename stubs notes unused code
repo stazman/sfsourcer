@@ -1,7 +1,7 @@
 
 current commit notepad:
 
-made gitignore file, added /tmp to it; stubbed to reorganize user into separate functions
+made gitignore file, added /tmp and /log to it; stubbed SF works for usermade list and fan pages incl nested resources for titles stubbed reorganization of user into separate roles
 
 getting user to instantatiate with new funding_project in nested resource without aliasing for different user roles
 

@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
   get 'sourcer_projects', to: 'static#sourcer_projects'
   get 'living_stories', to: 'static#living_stories'
+  get 'all_sf_fanvorites', to: 'static#all_sf_fanvorites'
+  get 'sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
+  get 'sf_film_fanvorites', to: 'static#sf_film_fanvorites'
+  get 'all_game_fanvorites', to: 'static#all_game_fanvorites'
+  get 'all_fan_pages', to: 'static#all_fan_pages'
 
-
-  
   namespace :admin do
     resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
   end
