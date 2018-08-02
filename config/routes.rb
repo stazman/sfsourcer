@@ -16,6 +16,24 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/facebook/callback' => 'sessions#create'
 
+  resources :addresses
+  resources :fp_categories
+  resources :fp_comments
+  resources :l_stories
+  resources :ls_comments
+  resources :ls_genres
+  resources :pledges
+  resources :users
+  resources :sf_favs
+
+  resources :users do
+    resources :sf_favs, only: [:new, :create, :show, :edit, :update]
+  end
+end
+
+
+
+
   # resources :funding_projects
   
   # get "/funding_projects", to: "funding_projects#index"
@@ -28,31 +46,12 @@ Rails.application.routes.draw do
   # delete "/funding_projects/:id", to: "funding_projects#destroy"
 
 
-  resources :addresses
-  resources :fp_categories
-  resources :fp_comments
-  # resources :l_story_ls_genres
-  resources :l_stories
-  resources :ls_comments
-  resources :ls_genres
-  resources :pledges
-  resources :users
-  resources :funding_projects
-  resources :sf_favs
 
   # resources :users do
   #   resources :addresses, only: [:new, :create, :show, :edit, :update]
   # end
 
-  resources :users do
-    resources :sf_favs, only: [:new, :create, :show, :edit, :update]
-  end
-
-  resources :users do
-    resources :funding_projects, only: [:show]
-  end
-  
-  # resources :fp_participant do
+# resources :fp_participant do
   #   resources :funding_projects, only: [:index, :show]
   # end
     
@@ -60,17 +59,17 @@ Rails.application.routes.draw do
   #   resources :funding_projects, except: [:index]
   # end
   
-  resources :l_stories do
-  #  only: [:new, :create, :show] do
-    resources :ls_genres
+  # resources :l_stories do
+  # #  only: [:new, :create, :show] do
+  #   resources :ls_genres
     # , only: [:new, :create, :show]
-  end
+  # end
  
 
-  resources :funding_projects do
-    resources :funding_categories
+  # resources :funding_projects do
+  #   resources :funding_categories
     # , only: [:index, :show]
-  end
+  # end
 
   # resources :fp_creators do
   #   resources :funding_projects
@@ -86,4 +85,3 @@ Rails.application.routes.draw do
   #   resources :fp_comments
   # end
 
-end
