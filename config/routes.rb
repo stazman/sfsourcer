@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'lit_fan_authors/index'
+  get 'lit_fan_authors/new'
+  get 'lit_fan_authors/show'
+  get 'lit_fan_authors/edit'
+  get 'lit_fan_works/index'
+  get 'lit_fan_works/new'
+  get 'lit_fan_works/show'
+  get 'lit_fan_works/edit'
   root 'static#home'
 
   get 'sourcer_projects', to: 'static#sourcer_projects'
