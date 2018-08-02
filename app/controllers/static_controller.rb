@@ -8,4 +8,19 @@ class StaticController < ApplicationController
     
     def living_stories
     end
+
+    def all_sf_fanvorites
+    end
+
+    def sf_lit_fanvorites
+    end
+
+    def sf_film_fanvorites
+    end
+
+    def all_game_fanvorites
+    end
+
+    def all_fan_pages
+    end
 end
