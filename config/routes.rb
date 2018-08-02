@@ -48,13 +48,13 @@ Rails.application.routes.draw do
     resources :sf_favs, only: [:new, :create, :show, :edit, :update]
   end
 
-  resources :fp_creator do
-    resources :funding_projects, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :users do
+    resources :funding_projects, only: [:show]
   end
   
-  resources :fp_participant do
-    resources :funding_projects, only: [:index, :show]
-  end
+  # resources :fp_participant do
+  #   resources :funding_projects, only: [:index, :show]
+  # end
     
 # resources :users do
   #   resources :funding_projects, except: [:index]

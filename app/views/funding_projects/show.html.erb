@@ -1,5 +1,8 @@
 MAIN NAVBAR 
 
+<h1><%= link_to @funding_project.title, funding_project_path(@funding_project) %></h1>
+<h3> by <%= user_path(@funding_project) %></h3>
+
 <h1><%= @funding_project.title %></h1><br>
 
 <%# <h3>By: <%= link_to fp_creator_name, fp_creator_path %><br> %>
