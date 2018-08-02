@@ -43351,3 +43351,438 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 77ms (Views: 73.5ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/users" for 127.0.0.1 at 2018-08-01 22:27:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/MRtsLushBgUpRd5NRBXGwSuArn6strq/hNEdaFmrbIncggw2dFbl3CaoPsUNwlbRSYuxZDJwttGDxi75k74w==", "user"=>{"name"=>"ddfdd", "email"=>"fdfd@kjkjk.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"aaa", "fav_films"=>"bbb", "fav_games"=>"ccc"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fdfd@kjkjk.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fdfd@kjkjk.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ddfdd"], ["email", "fdfd@kjkjk.com"], ["password_digest", "$2a$10$RcKP0z5zXne.jfEyIWh7zeiyJ.g8Wj1/i3uXYkQI9KgzgXxpMtmoe"], ["created_at", "2018-08-02 03:27:45.241271"], ["updated_at", "2018-08-02 03:27:45.241271"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Create (0.2ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "aaa"], ["fav_films", "bbb"], ["fav_games", "ccc"], ["user_id", 19], ["created_at", "2018-08-02 03:27:45.245493"], ["updated_at", "2018-08-02 03:27:45.245493"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 119ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:27:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:51: unknown regexp option - l
+unmatched close parenthesis: /li> );@output_buffer.safe_append='
+        <li>'.freeze;@output_buffer.append=( sf_fave.fav_film );@output_buffer.safe_append='</i
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:52: syntax error, unexpected '<'
+        <li><%= sf_fave.fav_game</li>
+         ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tput_buffer = _old_virtual_path, _old_output_buffer
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:61: syntax error, unexpected '\n', expecting '='):
+  
+app/views/users/show.html.erb:51: unknown regexp option - l
+app/views/users/show.html.erb:52: syntax error, unexpected '<'
+app/views/users/show.html.erb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/show.html.erb:61: syntax error, unexpected '\n', expecting '='
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:28:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:60: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/show.html.erb:60: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/show.html.erb:62: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:28:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.4ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.3ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 121ms (Views: 112.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:31:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "aaa":String):
+    47: 
+    48:     <ul>
+    49:         <% @user.sf_favs.each do |sf_fave| %> %>
+    50:         <li><%= sf_fave.fav_lits.each do |lit| %></li>
+    51:         <li><%= lit %></li>
+    52:         <% end %>
+    53:         <li><%= sf_fave.fav_games %></li>
+  
+app/views/users/show.html.erb:50:in `block in _app_views_users_show_html_erb___1720132893973801011_70361922803560'
+app/views/users/show.html.erb:49:in `_app_views_users_show_html_erb___1720132893973801011_70361922803560'
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:31:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "aaa":String):
+    47: 
+    48:     <ul>
+    49:         <% @user.sf_favs.each do |sf_fave| %> %>
+    50:         <li><% sf_fave.fav_lits.each do |lit| %></li>
+    51:         <li><%= lit %></li>
+    52:         <% end %>
+    53:         <li><%= sf_fave.fav_games %></li>
+  
+app/views/users/show.html.erb:50:in `block in _app_views_users_show_html_erb___1720132893973801011_70361948003220'
+app/views/users/show.html.erb:49:in `_app_views_users_show_html_erb___1720132893973801011_70361948003220'
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:32:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:33:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.3ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sf_lits' for #<SfFav:0x007ffcd9c412f0>
+Did you mean?  fav_lits):
+    47: 
+    48:     <ul>
+    49:         <% @user.sf_favs.collect do |sf_fave| %> %>
+    50:         <li><% sf_fave.sf_lits %></li>
+    51:         <li><%= lit %></li>
+    52:         <li><%= sf_fave.fav_games %></li>
+    53:         <% end %>
+  
+app/views/users/show.html.erb:50:in `block in _app_views_users_show_html_erb___1720132893973801011_70361983803320'
+app/views/users/show.html.erb:49:in `collect'
+app/views/users/show.html.erb:49:in `_app_views_users_show_html_erb___1720132893973801011_70361983803320'
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:33:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:34:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 52.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:38:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/users/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/show.html.erb:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:38:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 61ms (Views: 54.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-08-01 22:38:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-01 22:57:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/MRtsLushBgUpRd5NRBXGwSuArn6strq/hNEdaFmrbIncggw2dFbl3CaoPsUNwlbRSYuxZDJwttGDxi75k74w==", "user"=>{"name"=>"dfdfd", "email"=>"fdfd@dfd.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"aaa", "fav_films"=>"bbb", "fav_games"=>"ccc"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 1.3ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"3/MRtsLushBgUpRd5NRBXGwSuArn6strq/hNEdaFmrbIncggw2dFbl3CaoPsUNwlbRSYuxZDJwttGDxi75k74w==", "user"=><ActionController::Parameters {"name"=>"dfdfd", "email"=>"fdfd@dfd.com", "password"=>"dfdfd", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"aaa", "fav_films"=>"bbb", "fav_games"=>"ccc"}}} permitted: false>, "commit"=>"Create Account", "controller"=>"users", "action"=>"create"} permitted: false>):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-01 23:04:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/MRtsLushBgUpRd5NRBXGwSuArn6strq/hNEdaFmrbIncggw2dFbl3CaoPsUNwlbRSYuxZDJwttGDxi75k74w==", "user"=>{"name"=>"dfdfd", "email"=>"fdfd@dfd.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"aaa", "fav_films"=>"bbb", "fav_games"=>"ccc"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"3/MRtsLushBgUpRd5NRBXGwSuArn6strq/hNEdaFmrbIncggw2dFbl3CaoPsUNwlbRSYuxZDJwttGDxi75k74w==", "user"=><ActionController::Parameters {"name"=>"dfdfd", "email"=>"fdfd@dfd.com", "password"=>"dfdfd", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"aaa", "fav_films"=>"bbb", "fav_games"=>"ccc"}}} permitted: false>, "commit"=>"Create Account", "controller"=>"users", "action"=>"create"} permitted: false>):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 23:04:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-01 23:05:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KGAsGEuKBmKjd6Kl+Lqo/6cC6+R3c+prEaBfJjf5ZLvz1kmYKffZ7cdIFSfZnfa/5orHmB0I8lqpvAPocNExw==", "user"=>{"name"=>"dfd", "email"=>"dfdfdfd", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"", "fav_films"=>"", "fav_games"=>""}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"+KGAsGEuKBmKjd6Kl+Lqo/6cC6+R3c+prEaBfJjf5ZLvz1kmYKffZ7cdIFSfZnfa/5orHmB0I8lqpvAPocNExw==", "user"=><ActionController::Parameters {"name"=>"dfd", "email"=>"dfdfdfd", "password"=>"", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"", "fav_films"=>"", "fav_games"=>""}}} permitted: false>, "commit"=>"Create Account", "controller"=>"users", "action"=>"create"} permitted: false>):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-01 23:05:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KGAsGEuKBmKjd6Kl+Lqo/6cC6+R3c+prEaBfJjf5ZLvz1kmYKffZ7cdIFSfZnfa/5orHmB0I8lqpvAPocNExw==", "user"=>{"name"=>"dfd", "email"=>"dfdfdfd2d@kkjkj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"a", "fav_films"=>"b", "fav_games"=>""}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"+KGAsGEuKBmKjd6Kl+Lqo/6cC6+R3c+prEaBfJjf5ZLvz1kmYKffZ7cdIFSfZnfa/5orHmB0I8lqpvAPocNExw==", "user"=><ActionController::Parameters {"name"=>"dfd", "email"=>"dfdfdfd2d@kkjkj.com", "password"=>"kjkjkj", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"a", "fav_films"=>"b", "fav_games"=>""}}} permitted: false>, "commit"=>"Create Account", "controller"=>"users", "action"=>"create"} permitted: false>):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-01 23:07:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KGAsGEuKBmKjd6Kl+Lqo/6cC6+R3c+prEaBfJjf5ZLvz1kmYKffZ7cdIFSfZnfa/5orHmB0I8lqpvAPocNExw==", "user"=>{"name"=>"dfd", "email"=>"dfdfdfd2d@kkjkj.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>""}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"a", "fav_films"=>"b", "fav_games"=>"c"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dfdfdfd2d@kkjkj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dfdfdfd2d@kkjkj.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "dfd"], ["email", "dfdfdfd2d@kkjkj.com"], ["password_digest", "$2a$10$ePccqGJKkdA46vaChbUkG.h/.yJdnbMn2nVMYIzEH/NWfcZY.zWPm"], ["created_at", "2018-08-02 04:07:34.400993"], ["updated_at", "2018-08-02 04:07:34.400993"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[36mSfFav Create (0.2ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "a"], ["fav_films", "b"], ["fav_games", "c"], ["user_id", 20], ["created_at", "2018-08-02 04:07:34.402940"], ["updated_at", "2018-08-02 04:07:34.402940"]]
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 108ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2018-08-01 23:07:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 76ms (Views: 64.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2018-08-01 23:08:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2018-08-01 23:11:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.1ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2018-08-01 23:11:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges"[0m
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/views/users/show.html.erb:49
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fp_creator/20/funding_projects/new" for 127.0.0.1 at 2018-08-01 23:20:28 -0500
+Processing by FundingProjectsController#new as HTML
+  Parameters: {"fp_creator_id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  Rendered funding_projects/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 289ms (Views: 256.3ms | ActiveRecord: 0.3ms)
+
+
