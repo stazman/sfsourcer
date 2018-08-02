@@ -54,7 +54,7 @@ class FundingProjectsController < ApplicationController
     # @user = current_user
     # @funding_project = @user.funding_projects.last
     # binding.pry
-    redirect_to root_url
+    redirect_to fp_creator_funding_project_path()
     # redirect_to fp_creator_funding_project_path(@user, @funding_project.id)
     # else
       # funding_project_path(@funding_project)

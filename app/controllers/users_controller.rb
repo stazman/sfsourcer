@@ -21,9 +21,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @user.sf_favs.build(sf_fav_type: 'sf_lits')
-    @user.sf_favs.build(sf_fav_type: 'sf_films')
-    @user.sf_favs.build(sf_fav_type: 'sf_games')
+    @user.sf_favs.build
   end
 
   def create  
@@ -60,7 +58,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games], addresses_attributes: [:address1, :address2, :city, :state, :zip, :user_id], created_funding_project_attributes: [:creator_name, :title, :description], )
+    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games], addresses_attributes: [:address1, :address2, :city, :state, :zip, :user_id], created_funding_project_attributes: [:creator_name, :title, :description])
 
   end
 
