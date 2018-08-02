@@ -1,0 +1,2 @@
+module LitFanWorksHelper
+end
