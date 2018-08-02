@@ -23,6 +23,11 @@ class FundingProjectsController < ApplicationController
 
   def new
     @funding_project = FundingProject.new
+    @user = User.find(params[:id])
+    # @user = User.find_by(id: params[:id])
+
+
+
     # @funding_project.comments.build
     # @funding_project.user_id = current_user
     # @comment = @comment.find_by(:id)
@@ -33,7 +38,11 @@ class FundingProjectsController < ApplicationController
   def create
     
     @funding_project = FundingProject.new(funding_project_params)
+    # @user = User.find(params[:id])
     @funding_project.save
+    # binding.pry
+
+
     # @funding_project.fp_creator_id = current_user.id
     # fp = @funding_project
     # fp.save
@@ -54,7 +63,7 @@ class FundingProjectsController < ApplicationController
     # @user = current_user
     # @funding_project = @user.funding_projects.last
     # binding.pry
-    redirect_to fp_creator_funding_project_path()
+    redirect_to user_funding_project_path(@user, @funding_project)
     # redirect_to fp_creator_funding_project_path(@user, @funding_project.id)
     # else
       # funding_project_path(@funding_project)
@@ -64,7 +73,10 @@ class FundingProjectsController < ApplicationController
     end
 
   def show
-    @funding_project = FundingProject.find(params[:id])
+    @user = User.find_by(id: params[:user_id])
+    @funding_project = @user.funding_projects.find_by(id: params[:id])
+    # @funding_project = FundingProject.find(params[:id])
+    # NOTE: Above doesn't work because there needs to be an association in the first place, not finding a funding_project
     @total_pledges = []
     # @comments = Comment.where(:funding_project_id == @funding_project.id)
   end
