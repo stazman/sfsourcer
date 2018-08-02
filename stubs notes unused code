@@ -8,13 +8,13 @@ modifying nested routes for fp_creator and fp_participant with funding_projects
 
 
 Questions:
-Please help with [ ] Get funding_project to instantiate with associated user at nested route for funding_project#show
+Help with [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
+[ ] Make nested URL route work for USERS/:ID/SF_favs
 Will I need to customize anywhere? (eg., with #new form with routes with nested resources)?
 Do I have the right, many to many, relationship with funding projects and users throuh pledges?
   If not could I do it with users, funding_projects, and comments
 when do you use a custom writer as opposed to other methods to make associations such as build
 can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
-[ ] Make nested URL route work for USERS/:ID/SF_favs
 
 To Do for Rails Project:
 
