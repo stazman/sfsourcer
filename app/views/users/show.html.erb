@@ -46,10 +46,14 @@
 <h3>Your SF Favorites: </h3> %>
 
     <ul>
-        <%# <% @user.sf_favs.each do |sf_fave| %> %>
-        <%# <li><%= sf_fave.fav_lit %></li> %>
-        <%# <li><%= sf_fave.fav_film %></li> %>
-        <%# <li><%= sf_fave.fav_game %></li> %>
+        <% @user.sf_favs.each do |fav| %>
+        <h4>Favorite Literary Work:</h4>
+            <%= fav.fav_lits %><br>
+        <h4>Favorite Film:</h4>
+            <%= fav.fav_films %><br>
+        <h4>Favorite Game:</h4>
+            <%= fav.fav_games %><br>
+         <% end %>
     </ul>
 
 
