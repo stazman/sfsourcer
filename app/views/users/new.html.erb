@@ -54,14 +54,25 @@ MAIN NAVBAR
 
 <h2>Let us know about your SF favorites!</h2>
     <%= f.fields_for :sf_favs do |sf_fave| %>
-    <%= sf_fave.label "What is your favorite SF literature?" %>
-    <%= sf_fave.text_field :fav_lits %><br>
+<h3>What are your favorite SF literary works?</h3>    
+<ol>
+      <li><%= sf_fave.text_field :fav_lits %><br></li>
+      <li><%= sf_fave.text_field :fav_lits %><br></li>
+      <li><%= sf_fave.text_field :fav_lits %><br></li>
+    </ol>
  
-    <%= sf_fave.label "What are your favorite SF films?" %>
-    <%= sf_fave.text_field :fav_films %><br>
- 
-    <%= sf_fave.label "What are your favorite SF games?" %>
-    <%= sf_fave.text_field :fav_games %><br>
+<h3>What are your favorite SF films?</h3>    
+        <ol>
+      <li><%= sf_fave.text_field :fav_films %><br></li>
+      <li><%= sf_fave.text_field :fav_films %><br></li>
+      <li><%= sf_fave.text_field :fav_films %><br></li>
+    </ol> 
+<h3>What are your favorite SF games?</h3>    
+        <ol>
+      <li><%= sf_fave.text_field :fav_games %><br></li>
+      <li><%= sf_fave.text_field :fav_games %><br></li>
+      <li><%= sf_fave.text_field :fav_games %><br></li>
+    </ol> 
   <% end %>
 
   <%= f.submit "Create Account" %>
