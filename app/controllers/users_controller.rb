@@ -7,18 +7,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # def addresses_index
-  #   @user = User.find(params[:id])
-  #   @addresses = @user.addresses
-  #   render template: 'addresses/index'
-  # end
- 
-  # def post
-  #   @user = User.find(params[:id])
-  #   @address = Address.find(params[:user_id])
-  #   render template: 'addresses/show'
-  # end
-
   def new
     @user = User.new
     @user.sf_favs.build
@@ -27,10 +15,6 @@ class UsersController < ApplicationController
   def create  
     @user = User.new(user_params)
     if @user.valid?
-      # @user.address.build      
-      # @user.funding_projects.build
-
-      @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
