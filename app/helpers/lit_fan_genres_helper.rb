@@ -1,0 +1,2 @@
+module LitFanGenresHelper
+end

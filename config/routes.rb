@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'lit_fan_genres/index'
+  get 'lit_fan_genres/new'
+  get 'lit_fan_genres/show'
+  get 'lit_fan_genres/edit'
   get 'lit_fan_authors/index'
   get 'lit_fan_authors/new'
   get 'lit_fan_authors/show'
