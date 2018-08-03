@@ -45084,3 +45084,424 @@ ActionView::Template::Error (undefined local variable or method `funding_project
     15: 
   
 app/views/static/home.html.erb:12:in `_app_views_static_home_html_erb___4461679869793939594_70262736890800'
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:28:32 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 737ms (Views: 732.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-08-03 11:28:36 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:28:42 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:28:44 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (240.4ms)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_url_path' for #<#<Class:0x007fcea2f24888>:0x007fcea8731300>
+Did you mean?  root_path):
+    2: 
+    3: <h2>For information, media, events, and links to ClubSites about published written works that SFSourcer members have recommended. Come view them and make your own recommendations!</h2>
+    4: 
+    5: <h3>Go to <%= link_to 'All Literature Fanvorite Works', root_url_path %></h3>
+    6: 
+    7: <h3>Search for a Work: </h3>
+    8: 
+  
+app/views/static/sf_lit_fanvorites.html.erb:5:in `_app_views_static_sf_lit_fanvorites_html_erb___1581794457392907039_70262783055260'
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:28:52 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:28:59 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_game_fanvorites" for 127.0.0.1 at 2018-08-03 11:29:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sf_game_fanvorites"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:29:11 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:31:51 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (245.3ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_url_path' for #<#<Class:0x007fcea2f24888>:0x007fcea9e6b138>
+Did you mean?  root_path):
+    2: 
+    3: <h2>For information, media, events, and links to ClubSites about published written works that SFSourcer members have recommended. Come view them and make your own recommendations!</h2>
+    4: 
+    5: <h3>Go to <%= link_to 'All Literature Fanvorite Works', root_url_path %></h3>
+    6: 
+    7: <h3>Search for a Work: </h3>
+    8: 
+  
+app/views/static/sf_lit_fanvorites.html.erb:5:in `_app_views_static_sf_lit_fanvorites_html_erb___1581794457392907039_70262795230560'
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:32:51 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (275.2ms)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_url_path' for #<#<Class:0x007fcea2f24888>:0x007fcea3602380>
+Did you mean?  root_path):
+     9: 
+    10: <h2>For information, media, events, and links to ClubSites about authors that SFSourcer members have recommended. Come view them and make your own recommendations!</h2>
+    11: 
+    12: <h3>Go to <%= link_to 'All Literature Fanvorite Authors', root_url_path %></h3>
+    13: 
+    14: <h3>Search for an Author: </h3>
+  
+app/views/static/sf_lit_fanvorites.html.erb:12:in `_app_views_static_sf_lit_fanvorites_html_erb___1581794457392907039_70262740489880'
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:33:08 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:35:27 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:35:33 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:35:54 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 121ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:35:58 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:35:59 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (264.9ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `lit_fan_authors_path' for #<#<Class:0x007fcea2f24888>:0x007fcea374b318>
+Did you mean?  lit_fan_authors_new_path
+               lit_fan_authors_index_path
+               lit_fan_authors_edit_path
+               lit_fan_authors_show_path):
+     9: 
+    10: <h2>For information, media, events, and links to ClubSites about authors that SFSourcer members have recommended. Come view them and make your own recommendations!</h2>
+    11: 
+    12: <h3>Go to <%= link_to 'All Literature Fanvorite Authors', lit_fan_authors_path %></h3>
+    13: 
+    14: <h3>Search for an Author: </h3>
+  
+app/views/static/sf_lit_fanvorites.html.erb:12:in `_app_views_static_sf_lit_fanvorites_html_erb___1581794457392907039_70262741163600'
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:36:20 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:36:38 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:36:41 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:36:42 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:36:44 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 84ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors/index" for 127.0.0.1 at 2018-08-03 11:37:54 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  Rendered lit_fan_authors/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:37:58 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:38:36 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_works/index" for 127.0.0.1 at 2018-08-03 11:38:39 -0500
+Processing by LitFanWorksController#index as HTML
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  Rendered lit_fan_works/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 74ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:38:43 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_game_fanvorites" for 127.0.0.1 at 2018-08-03 11:38:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sf_game_fanvorites"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:38:48 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:44:59 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:45:02 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:45:43 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 483ms (Views: 469.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:45:47 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 116ms (Views: 111.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:45:48 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:45:51 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:47:19 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:47:21 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 99ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:47:23 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:47:25 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_game_fanvorites" for 127.0.0.1 at 2018-08-03 11:47:28 -0500
+Processing by StaticController#sf_game_fanvorites as HTML
+  Rendering static/sf_game_fanvorites.html.erb within layouts/application
+  Rendered static/sf_game_fanvorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:47:30 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:48:34 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 11:49:02 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-03 11:49:06 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-03 11:49:07 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 90ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_film_fanvorites" for 127.0.0.1 at 2018-08-03 11:49:09 -0500
+Processing by StaticController#sf_film_fanvorites as HTML
+  Rendering static/sf_film_fanvorites.html.erb within layouts/application
+  Rendered static/sf_film_fanvorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_game_fanvorites" for 127.0.0.1 at 2018-08-03 11:49:12 -0500
+Processing by StaticController#sf_game_fanvorites as HTML
+  Rendering static/sf_game_fanvorites.html.erb within layouts/application
+  Rendered static/sf_game_fanvorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
