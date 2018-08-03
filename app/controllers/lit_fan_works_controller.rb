@@ -2,7 +2,8 @@ class LitFanWorksController < ApplicationController
   
   def new
     if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
-      redirect_to lit_fan_author_path, alert: "Artist not found"
+      redirect_to lit_fan_author_path, alert: "Author not found"
+      # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
     else
       @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
     end
@@ -11,78 +12,83 @@ class LitFanWorksController < ApplicationController
   def index
     if params[:lit_fan_author_id]
       # NEED THIS TO CHECK BECAUSE NEED TO ... WHY DO WE NEED THIS IF #NEW HAS THIS?
-      # THIS IS DONE BECAUSE BOTH AUTHOR AND SONG ARE LISTED IN THE INDEX; PRESUMABLY NOT NECESSARY IF ONLY ONE MODEL INVOLVED?
+      # THIS IS DONE BECAUSE in case index is rendered where aUTHOR AND lit_fan_work ARE both LISTED; PRESUMABLY NOT NECESSARY IF ONLY ONE MODEL INVOLVED?
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       if @lit_fan_author.nil?
-        redirect_to lit_fan_author_path, alert: "Artist not found"
+        redirect_to lit_fan_author_path, alert: "Author not found"
       else
-        @lit_fan_works = @lit_fan_author.songs
+        @lit_fan_works = @lit_fan_author.lit_fan_works
       end
     else
-      @songs = Song.all
+      @lit_fan_works = LitFanWork.all
     end
   end
 
   def show
-    if params[:artist_id]
-      @artist = Artist.find_by(id: params[:artist_id])
-      @song = @artist.songs.find_by(id: params[:id])
-      if @song.nil?
-        redirect_to artist_songs_path(@artist), alert: "Song not found"
+    if params[:lit_fan_author_id]
+      @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_id])
+      @lit_fan_work = @lit_fan_author.lit_fan_works.find_by(id: params[:id])
+      # This is done in case the specific work requested is expected to have the associated author with it
+      if @lit_fan_work.nil?
+        redirect_to lit_fan_author_lit_fan_works_path(@lit_fan_author), alert: "Work not found"
+           # This is done in case the specific work requested is expected to have the associated author with it but it doesn't
       end
     else
-      @song = Song.find(params[:id])
+      # And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
+      @lit_fan_work = LitFanWork.find(params[:id])
     end
   end
 
   def create
-    #create gives strong paramaters to instance made by the #new action here
-    @song = Song.new(song_params)
+    @lit_fan_work = LitFanWork.new(lit_fan_work_params)
 
-    if @song.save
-      redirect_to @song
+    if @lit_fan_work.save
+      # setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
+      redirect_to @lit_fan_work
     else
       render :new
     end
   end
 
   def edit
-    if params[:artist_id]
-      artist = Artist.find_by(id: params[:artist_id])
-      if artist.nil?
-        redirect_to artists_path, alert: "Artist not found"
+    if params[:lit_fan_author_id]
+      lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
+      # This is in the case of a work that has an associated author needing to be edited
+      if lit_fan_author.nil?
+        redirect_to lit_fan_author_path, alert: "Author not found"
+        # This is in the case of a work that has an associated author needing to be edited but there's no author
       else
-        @song = artist.songs.find_by(id: params[:id])
-        redirect_to artist_songs_path(artist), alert: "Song not found." if @song.nil?
+        @lit_fan_work = lit_fan_author.lit_fan_works.find_by(id: params[:id])
+        redirect_to lit_fan_works_path(lit_fan_author), alert: "Work not found." if @lit_fan_work.nil?
       end
     else
-      @song = Song.find(params[:id])
+      @lit_fan_work = LitFanWork.find(params[:id])
     end
   end
 
   def update
-    @song = Song.find(params[:id])
+    @lit_fan_work = LitFanWork.find(params[:id])
 
-    @song.update(song_params)
+    @lit_fan_work.update(lit_fan_work_params)
 
-    if @song.save
-      redirect_to @song
+    if @lit_fan_work.save
+      redirect_to @lit_fan_work
     else
       render :edit
     end
   end
 
   def destroy
-    @song = Song.find(params[:id])
-    @song.destroy
-    flash[:notice] = "Song deleted."
-    redirect_to songs_path
+    @lit_fan_work = LitFanWork.find(params[:id])
+    @lit_fan_work.destroy
+    flash[:notice] = "Work deleted."
+    redirect_to lit_fan_works_path
   end
 
   private
 
-  def song_params
-    params.require(:song).permit(:title, :artist_name, :artist_id)
+  def lit_fan_work_params
+    params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id)
     # binding.pry
   end
 end

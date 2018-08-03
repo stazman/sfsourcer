@@ -1,13 +1,10 @@
 class LitFanGenresController < ApplicationController
+
   def index
+    @lit_fan_genres = LitFanGenre.new(params[:id])  
   end
-
-  def new
-  end
-
+    
   def show
-  end
-
-  def edit
+    @lit_fan_genre = LitFanGenre.find(params[:id])
   end
 end
