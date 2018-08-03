@@ -1,2 +1,8 @@
-<h1>LitFanWorks#index</h1>
-<p>Find me in app/views/lit_fan_works/index.html.erb</p>
+<h1>All Literature Fanvorites</h1><br>
+<ul>
+<% @lit_fan_works.each do |lfw| %>
+  <li><%= display_author(lfw) %> - <%= link_to lfw.title, lit_fan_work_path(lfw) %></li>
+<% end %>
+</ul>
+<br>
+<%= link_to "Add New Work", new_lit_fan_work_path %>
