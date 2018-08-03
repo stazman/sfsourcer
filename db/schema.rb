@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_31_002120) do
+ActiveRecord::Schema.define(version: 2018_08_02_221902) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -63,6 +63,20 @@ ActiveRecord::Schema.define(version: 2018_07_31_002120) do
   create_table "l_story_ls_genres", force: :cascade do |t|
     t.integer "l_story_id"
     t.integer "ls_genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lit_fan_authors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lit_fan_works", force: :cascade do |t|
+    t.string "title"
+    t.string "lit_fan_author_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
