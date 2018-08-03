@@ -2,18 +2,9 @@
 current commit notepad:
 
 
-Questions:
-Help with [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
-[ ] Make nested URL route work for USERS/:ID/SF_favs
-Will I need to customize anywhere? (eg., with #new form with routes with nested resources)?
-Do I have the right, many to many, relationship with funding projects and users throuh pledges?
-  If not could I do it with users, funding_projects, and comments
-when do you use a custom writer as opposed to other methods to make associations such as build
-can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
-
 To Do for Rails Project:
 
-[ ] For SF_Lit Fanvorites: LitFanAuthor, LitFanTitle, lit_ff_title Make author, title models for has many assoc with nested attributes for author and title
+[ ] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested attributes for author and title
 [ ] For SF_Lit Fanvorites:  LitFanGenre Make genre model for has many assoc with title and has many through with author
 [ ] Make separate model for fp_creator to make funding_projects and be associated with user
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
@@ -82,6 +73,15 @@ Finished To Do
 [x] Make admin privleges; only admin can delete a project
 [x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
+
+Questions:
+Help with [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
+[ ] Make nested URL route work for USERS/:ID/SF_favs
+Will I need to customize anywhere? (eg., with #new form with routes with nested resources)?
+Do I have the right, many to many, relationship with funding projects and users throuh pledges?
+  If not could I do it with users, funding_projects, and comments
+when do you use a custom writer as opposed to other methods to make associations such as build
+can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
 
 Unused
 
