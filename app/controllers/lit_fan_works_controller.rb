@@ -1,5 +1,6 @@
 class LitFanWorksController < ApplicationController
   def index
+    @lit_fan_works = LitFanWork.all
   end
 
   def new
