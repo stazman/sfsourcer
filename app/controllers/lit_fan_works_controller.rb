@@ -1,14 +1,5 @@
 class LitFanWorksController < ApplicationController
   
-  def new
-    if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
-      redirect_to lit_fan_author_path, alert: "Author not found"
-      # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
-    else
-      @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
-    end
-  end
-
   def index
     if params[:lit_fan_author_id]
       # NEED THIS TO CHECK BECAUSE NEED TO ... WHY DO WE NEED THIS IF #NEW HAS THIS?
@@ -24,6 +15,28 @@ class LitFanWorksController < ApplicationController
     end
   end
 
+  def new
+    # if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
+    #   redirect_to lit_fan_author_path, alert: "Author not found"
+    #   # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
+    # else
+      @lit_fan_work = LitFanWork.new
+      # (lit_fan_author_id: params[:lit_fan_author_id])
+    # end
+  end
+
+  def create
+    @lit_fan_work = LitFanWork.new(lit_fan_work_params)
+  @lit_fan_work.save
+  raise params.inspect
+
+    # if @lit_fan_work.save
+    #   # setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
+      redirect_to @lit_fan_work
+    # else
+    #   render :new
+  end
+
   def show
     if params[:lit_fan_author_id]
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_id])
@@ -36,17 +49,6 @@ class LitFanWorksController < ApplicationController
     else
       # And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
       @lit_fan_work = LitFanWork.find(params[:id])
-    end
-  end
-
-  def create
-    @lit_fan_work = LitFanWork.new(lit_fan_work_params)
-
-    if @lit_fan_work.save
-      # setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
-      redirect_to @lit_fan_work
-    else
-      render :new
     end
   end
 

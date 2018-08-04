@@ -10,8 +10,17 @@ class LitFanWork < ApplicationRecord
     end
     # but how does this work from just the parameters??? what mechanism takes what instance through the strong params and how does it do it?
     def lit_fan_author_name=(name)
-        lit_fan_author_name = LitFanAuthor.find_or_create_by(name: name)
-        self.artist = artist
+        lit_fan_author = LitFanAuthor.find_or_create_by(name: name)
+        self.lit_fan_author = lit_fan_author
     end
 end
 
+# def artist_name
+#     self.try(:artist).try(:name)
+#   end
+
+#   def artist_name=(name)
+#     artist = Artist.find_or_create_by(name: name)
+#     self.artist = artist
+#   end
+# end
