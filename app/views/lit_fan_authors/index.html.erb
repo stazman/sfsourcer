@@ -1,2 +1,10 @@
-<h1>LitFanAuthors#index</h1>
-<p>Find me in app/views/lit_fan_authors/index.html.erb</p>
+<h1>All Fanvorite Author Recommendations</h1>
+
+<h3>Search for an author here to see if the author is on our list:</h3>
+
+<h3>Or ... click on an author below to see the author's works recommended by SFSourcer members, Clubsites for the author, and other information such as events related to the author.</p>
+
+<h4><% @lit_fan_authors.each do |lfa| %>
+        <%= link_to lfa.name, lit_fan_author(lfa) %>
+    <% end %>
+

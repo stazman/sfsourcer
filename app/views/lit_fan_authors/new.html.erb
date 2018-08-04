@@ -1,2 +1,10 @@
-<h1>Recommend an SF Fanvorite Author! </h1>
+<h1>Recommend an SF Fanvorite Author!</h1>
 
+<h3>Search here to see if your recommended author is on our list:</h3>
+
+<h3>Make a new recommendation:<h3>
+
+<h4><%= form_for @lit_fan_author do |f| %></h4>
+<h4><%= f.text_field :name %></h4>
+<h4><%= f.submit %></h4>
+<% end %>

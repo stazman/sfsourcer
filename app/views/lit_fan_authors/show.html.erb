@@ -1,7 +1,22 @@
-<h1>Specific Author: <%= @lit_fan_work.title %></h1>
+<h1>Specific Author: <%= @lit_fan_author.name %></h1>
+
+<h2>Works by the author recommended by fellow SFSourcer members:</h2>
+<ul>
+  <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+  <% end %>
+</ul>
+
+<h2>Make this page into a ClubSite!</h2>
+
+<h2>Here's how:</h2>
+
+
 
 <p>Error messages:</p>
 
-<h2>Make a new recommendation</h2>
+<h2><%= Find or add a new recommendation to our database to share and experience the information, events, and ClubSite connections based on the author!</h2>
+
+<%= link_to 'Find or add a new recommendation to our database to share and experience the information, events, and ClubSite connections based on the author!', lit_fan_authors_index_path %>
 
 
