@@ -1,19 +1,7 @@
 MAIN NAVBAR <%# <h1>Your Pledge for <%= @funding_project.title %></h1><br> %>
 
-<% if @pledge.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@pledge.errors.count, "error") %>
-      prohibited this pledge from being saved:
-    </h2>
- 
-    <ul>
-    <% @pledge.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+
+<%= render partial: "errors" %>
 
 <%= form_for @pledge do |f| %>
 <%= f.label "Choose the project" %>
