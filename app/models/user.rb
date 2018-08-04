@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :addresses
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
     has_many :funding_projects

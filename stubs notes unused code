@@ -4,6 +4,7 @@ current commit notepad:
 
 To Do for Rails Project:
 
+[ ] require login for all pages for now
 [ ] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested attributes for author and title
 [ ] For SF_Lit Fanvorites:  LitFanGenre Make genre model for has many assoc with title and has many through with author
 [ ] Make separate model for fp_creator to make funding_projects and be associated with user

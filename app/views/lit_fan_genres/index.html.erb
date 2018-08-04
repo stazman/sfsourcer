@@ -1,2 +1,12 @@
-<h1>LitFanGenres#index</h1>
-<p>Find me in app/views/lit_fan_genres/index.html.erb</p>
+<h1>Find SF Fanfavorite Authors and Written Works by Genre:</h1>
+
+<h3>Search for a genre here to see if it is on our list:</h3>
+
+<h3>Or ... click on a genre below>
+
+<h4><% @lit_fan_authors.each do |lfa| %>
+        <%= link_to lfa.name, lit_fan_author(lfa) %>
+    <% end %>
+
+
+<p>Planned Sidebar: Genres can be points of great contention among SF fans. Feel free to discuss the genres shown in works and authors found on SFSourcer Fanvorites and others. A way for genres to be changed/added to existing genres for a work, likely based on member voting, will be made possible in the future.</p>
