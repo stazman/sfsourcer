@@ -1,7 +1,7 @@
-<h1>Specific Work: <%= @lit_fan_work.title %></h1>
+<h1>Your Recommended Work:</h1>
+ <h3><%= @lit_fan_work.title %>
+ <h3>By: <%= @lit_fan_work.lit_fan_author.name %><br><br>
 
-<p>Error messages:</p>
-
-<h2>Make a new recommendation</h2>
+<h2><%= link_to "Go back to recommend a new work", lit_fan_works_path %></h2>
 
 
