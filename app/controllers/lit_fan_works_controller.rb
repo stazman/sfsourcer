@@ -78,6 +78,7 @@ class LitFanWorksController < ApplicationController
     end
   end
 
+  # Namespace this
   def destroy
     @lit_fan_work = LitFanWork.find(params[:id])
     @lit_fan_work.destroy
@@ -88,7 +89,7 @@ class LitFanWorksController < ApplicationController
   private
 
   def lit_fan_work_params
-    params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id)
+    params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
     # binding.pry
   end
 end
