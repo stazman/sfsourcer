@@ -18,7 +18,7 @@ class StaticController < ApplicationController
     def sf_film_fanvorites
     end
 
-    def all_game_fanvorites
+    def sf_game_fanvorites
     end
 
     def all_fan_pages
