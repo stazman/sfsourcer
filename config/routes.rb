@@ -42,12 +42,18 @@ Rails.application.routes.draw do
   resources :sf_favs
 
   resources :users do
-    resources :sf_favs, only: [:new, :create, :show, :edit, :update]
+    resources :sf_favs, only: [:new, :show, :edit]
   end
 end
 
+resources :lit_fan_authors do
+  resources :lit_fan_works, only: [:index, :show, :new, :edit]
+  why not create and update, too?
+end
 
+resources: :lit_fan_works
 
+end
 
   # resources :funding_projects
   
