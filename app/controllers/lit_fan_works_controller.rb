@@ -16,25 +16,22 @@ class LitFanWorksController < ApplicationController
   end
 
   def new
-    # if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
-    #   redirect_to lit_fan_author_path, alert: "Author not found"
-    #   # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
-    # else
-      @lit_fan_work = LitFanWork.new
-      # (lit_fan_author_id: params[:lit_fan_author_id])
-    # end
+    if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
+      redirect_to lit_fan_author_path, alert: "Author not found"
+      # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
+    else
+      @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
+    end
   end
 
   def create
     @lit_fan_work = LitFanWork.new(lit_fan_work_params)
-  @lit_fan_work.save
-  raise params.inspect
-
-    # if @lit_fan_work.save
+    if @lit_fan_work.save
     #   # setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
       redirect_to @lit_fan_work
-    # else
-    #   render :new
+    else
+      render :new
+    end
   end
 
   def show

@@ -1,0 +1,14 @@
+<% if @funding_categories.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@funding_categories.errors.count, "error") %>
+      prohibited this profile from being saved:
+    </h2>
+ 
+    <ul>
+    <% @@funding_categories.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
