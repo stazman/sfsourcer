@@ -1,12 +1,12 @@
-<% if @funding_projects.errors.any? %>
+<% if @lit_fan_work.errors.any? %>
   <div id="error_explanation">
     <h2>
-      <%= pluralize(@funding_projects.errors.count, "error") %>
+      <%= pluralize(@lit_fan_work.errors.count, "error") %>
       prohibited this profile from being saved:
     </h2>
  
     <ul>
-    <% @funding_projects.errors.full_messages.each do |msg| %>
+    <% @lit_fan_work.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
