@@ -1,6 +1,7 @@
 
 current commit notepad:
 
+allowing users to create an author as well as select already made author
 
 To Do for Rails Project:
 
@@ -87,6 +88,42 @@ can I make USERS/1/SF_favs into a nested resource or do I need to do soomething 
 
 UNUSED
 
+<h2>For checking out or recommending a specific work, browse through all the works or search for a specific one.
+
+<h3>Go to <%= link_to 'All Works Fanvorites', lit_fan_works_path %></h3>
+
+<h3>Search for a Work: </h3>
+
+
+<h2>For checking out works and authors by genre, browse through all the genres or search for a specific one.
+
+<h3>Go to <%= link_to 'All Fanvorite Genres', lit_fan_genres_path %></h3>
+
+<h3>Search for a Work: </h3>
+
+
+    <%= f.label "Find or write the work's title below:" %><br>
+    <%= f.text_field :title, list: "lit_fan_works_autocomplete" %>
+    <datalist id="lit_fan_works_autocomplete">
+    <% LitFanWork.all.each do |lfw| %>
+    <option value="<%= lfw.title %>">
+    <% end %>
+<%# <h4>Choose the author from the list of recommended authors below ... </h4> %>
+    <%# <%= lit_fan_author_select(@lit_fan_work.lit_fan_author, @lit_fan_work) %><br><br> 
+    <%# <h4>or add a new one ...</h4> %>
+<%# However, we've lost the ability for users to create their own categories.
+That might be what you want. For example, the content management system for a magazine would probably want to enforce that the category of an article is one of the sections actually printed in the magazine.
+In our case, however, we want to give users the flexibility to create a new category or pick an existing one. What we want is autocompletion, which we can get with a datalist:
+<%= form_for @post do |f| %>
+ <%# <%= f.text_field :category_name, list: "categories_autocomplete" %> %>
+ <%# <datalist id="categories_autocomplete"> %>
+   <%# <% Category.all.each do |category| %> %>
+     <%# <option value="<%= category.name %>"> %>
+   <%# <% end %> %>
+ <%# </datalist> %>
+ <%# <textarea name="post[content]"></textarea> %>
+<%# <% end %> %>
+<%# datalist is a new element in the HTML5 spec that allows for easy autocomplete. Check below in Resources for further reading. %> %>
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
