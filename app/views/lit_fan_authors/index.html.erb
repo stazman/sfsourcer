@@ -5,6 +5,6 @@
 <h3>Or ... click on an author below to see the author's works recommended by SFSourcer members, Clubsites for the author, and other information such as events related to the author.</p>
 
 <h4><% @lit_fan_authors.each do |lfa| %>
-        <%= link_to lfa.name, lit_fan_author(lfa) %>
+        <%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %>
     <% end %>
 

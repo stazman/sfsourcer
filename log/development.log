@@ -48125,3 +48125,616 @@ Unpermitted parameter: :lit_fan_author
 Completed 200 OK in 92ms (Views: 76.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-04 14:52:57 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 548ms (Views: 534.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-04 14:53:01 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-04 14:53:03 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 119ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 14:53:09 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (1.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 122ms (Views: 98.7ms | ActiveRecord: 1.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$ZoHzIo7TTHJ2uqd1b3PHcOTK6QD/P5f8DvDcQ6F49Ds8bGBfzzSKC"], ["created_at", "2018-08-04 19:54:32.345748"], ["updated_at", "2018-08-04 19:54:32.345748"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:4
+  [1m[36mAddress Create (2.2ms)[0m  [1m[32mINSERT INTO "addresses" ("user_id", "address1", "city", "state", "zip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["address1", "100 Main Street"], ["city", "Springfield"], ["state", "Ohio"], ["zip", 45454], ["created_at", "2018-08-04 19:54:32.386649"], ["updated_at", "2018-08-04 19:54:32.386649"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mLitFanAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "lit_fan_authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Frank Herbert"], ["created_at", "2018-08-04 19:54:32.430308"], ["updated_at", "2018-08-04 19:54:32.430308"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mLitFanGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "lit_fan_genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic Science Fiction"], ["created_at", "2018-08-04 19:54:32.443396"], ["updated_at", "2018-08-04 19:54:32.443396"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 14:54:37 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (162.0ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_author' for #<#<Class:0x007fdbe3421ed8>:0x007fdbe9cf3178>
+Did you mean?  lit_fan_author_url):
+    5: <h3>Or ... click on an author below to see the author's works recommended by SFSourcer members, Clubsites for the author, and other information such as events related to the author.</p>
+    6: 
+    7: <h4><% @lit_fan_authors.each do |lfa| %>
+    8:         <%= link_to lfa.name, lit_fan_author(lfa) %>
+    9:     <% end %>
+  
+app/views/lit_fan_authors/index.html.erb:8:in `block in _app_views_lit_fan_authors_index_html_erb___3355951130858494580_70291248644900'
+app/views/lit_fan_authors/index.html.erb:7:in `_app_views_lit_fan_authors_index_html_erb___3355951130858494580_70291248644900'
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 14:57:10 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  Rendered lit_fan_authors/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/index.html.erb:8: syntax error, unexpected '(', expecting ')'
+...k_to lfa.name, @lit_fan_author(lfa) );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/lit_fan_authors/index.html.erb:8: syntax error, unexpected '(', expecting ')'
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 14:57:34 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 14:57:37 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+...ce the information, events, and ClubSite connections based o...
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: unterminated regexp meets end of file
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+app/views/lit_fan_authors/show.html.erb:18: unterminated regexp meets end of file
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 14:57:40 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 14:59:31 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+...ce the information, events, and ClubSite connections based o...
+...                               ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: unterminated regexp meets end of file
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+app/views/lit_fan_authors/show.html.erb:18: unterminated regexp meets end of file
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:00:16 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+...ce the information, events, and ClubSite connections based o...
+...                               ^):
+  
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:01:23 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+...ce the information, events, and ClubSite connections based o...
+...                               ^):
+  
+app/views/lit_fan_authors/show.html.erb:18: syntax error, unexpected keyword_and
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:03:24 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fdbe3e3f910>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__2241238276990528368_70291198960020'
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 15:08:37 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 72ms (Views: 66.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:08:40 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fdbeb0e1900>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__2241238276990528368_70291259065140'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:09:00 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fdbe7760d48>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__2241238276990528368_70291228904960'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:10:52 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fdbecb19390>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__2241238276990528368_70291272810600'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLitFanWork Create (0.5ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dune"], ["lit_fan_author_id", "1"], ["created_at", "2018-08-04 20:19:51.214036"], ["updated_at", "2018-08-04 20:19:51.214036"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:20:17 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fdbe46af370>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__2241238276990528368_70291203387420'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:21:06 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fbcfbc50188>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__3291261989988808844_70224827307460'
+Started GET "/" for 127.0.0.1 at 2018-08-04 15:21:12 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 416ms (Views: 411.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-04 15:21:15 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 111ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-04 15:21:16 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 88ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 15:21:17 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 79ms (Views: 74.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:21:19 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:7
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007fbcfa7cfe70>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb__3291261989988808844_70224826720160'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:46:26 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.4ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:8
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007f91e7cc5cd8>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb___1622036316158003414_70132328239600'
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 15:51:14 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:8
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  Rendered lit_fan_authors/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `lit_fan_works' for #<LitFanAuthor:0x007f91e9360678>
+Did you mean?  lit_fan_authors):
+    2: 
+    3: <h2>Works by the author recommended by fellow SFSourcer members:</h2>
+    4: <ul>
+    5:   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
+    6:     <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/lit_fan_authors/show.html.erb:5:in `_app_views_lit_fan_authors_show_html_erb___1622036316158003414_70132329831580'
+Started GET "/" for 127.0.0.1 at 2018-08-04 15:51:29 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 549ms (Views: 544.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-04 15:51:32 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-04 15:51:33 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 123ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 15:51:34 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lit_fan_works", :lit_fan_author_id=>#<LitFanAuthor id: 1, name: "Frank Herbert", created_at: "2018-08-04 19:54:32", updated_at: "2018-08-04 19:54:32">}, missing required keys: [:id]):
+    5: <h3>Or ... click on an author below to see the author's works recommended by SFSourcer members, Clubsites for the author, and other information such as events related to the author.</p>
+    6: 
+    7: <h4><% @lit_fan_authors.each do |lfa| %>
+    8:         <%= link_to lfa.name, lit_fan_author_lit_fan_work_path(lfa) %>
+    9:     <% end %>
+  
+app/views/lit_fan_authors/index.html.erb:8:in `block in _app_views_lit_fan_authors_index_html_erb___2195293311568428013_70132300706960'
+app/views/lit_fan_authors/index.html.erb:7:in `_app_views_lit_fan_authors_index_html_erb___2195293311568428013_70132300706960'
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 15:52:19 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 71ms (Views: 61.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-04 15:52:21 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/lit_fan_works_controller.rb:94: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/lit_fan_works_controller.rb:94: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-04 15:53:06 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:7
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `lit_fan_works' for #<LitFanAuthor:0x007f91e6305c30>
+Did you mean?  lit_fan_authors):
+  
+app/controllers/lit_fan_works_controller.rb:11:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to ChangeLitFanAuthorIdToInteger (20180805005126)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alit_fan_works" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "lit_fan_author_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "alit_fan_works" ("id","title","lit_fan_author_id","created_at","updated_at")
+                     SELECT "id","title","lit_fan_author_id","created_at","updated_at" FROM "lit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "lit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "lit_fan_works" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "lit_fan_author_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("id","title","lit_fan_author_id","created_at","updated_at")
+                     SELECT "id","title","lit_fan_author_id","created_at","updated_at" FROM "alit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "alit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180805005126"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-08-04 19:57:53 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 336ms (Views: 323.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-04 19:57:57 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-04 19:57:59 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-04 19:58:01 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:7
+  Rendered lit_fan_authors/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 145ms (Views: 118.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-04 19:58:03 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.4ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:7
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `lit_fan_works' for #<LitFanAuthor:0x007f88869faea0>
+Did you mean?  lit_fan_authors):
+  
+app/controllers/lit_fan_works_controller.rb:11:in `index'
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-04 20:05:19 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:7
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  [1m[36mLitFanWork Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 1]]
+  ↳ app/views/lit_fan_works/index.html.erb:3
+  Rendered lit_fan_works/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 141ms (Views: 94.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/lit_fan_authors/1" for 127.0.0.1 at 2018-08-04 20:05:25 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:8
+  Rendering lit_fan_authors/show.html.erb within layouts/application
+  [1m[36mLitFanWork Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 1]]
+  ↳ app/views/lit_fan_authors/show.html.erb:5
+  Rendered lit_fan_authors/show.html.erb within layouts/application (270.0ms)
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `lit_fan_authors_index_path' for #<#<Class:0x007f8880c19070>:0x007f8880c23430>
+Did you mean?  lit_fan_authors_path
+               lit_fan_author_path):
+    11: 
+    12: <h2>Here's how:</h2><br>
+    13: 
+    14: <h3><%= link_to 'Find or add a new recommendation to our database to share and experience the information, events, and ClubSite connections based on the author!', lit_fan_authors_index_path %></h3>
+  
+app/views/lit_fan_authors/show.html.erb:14:in `_app_views_lit_fan_authors_show_html_erb__640973607915113413_70112126225540'

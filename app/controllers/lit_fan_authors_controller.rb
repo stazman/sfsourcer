@@ -1,6 +1,7 @@
 class LitFanAuthorsController < ApplicationController
   def index
     @lit_fan_authors = LitFanAuthor.all
+    # @lit_fan_works = @lit
   end
 
   def show
@@ -13,6 +14,9 @@ class LitFanAuthorsController < ApplicationController
 
   def create
     @lit_fan_author = LitFanAuthor.new(lit_fan_author_params)
+  
+    # @lit_fan_author.lit_fan_works.build
+      # = LitFanWork.where(lit_fan_author_id: params[:lit_fan_author_id])
 
     if @lit_fan_author.save
       redirect_to @lit_fan_author
