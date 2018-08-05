@@ -1,11 +1,14 @@
 
 <%= form_for @lit_fan_work do |f| %>
     <%= f.label :title %>
-    <%= f.text_field :title %><br><br>
-    <%# <h4>Choose the author from the list of recommended authors below ... </h4> %>
-    <%# <%= lit_fan_author_select(@lit_fan_work.lit_fan_author, @lit_fan_work) %><br><br> 
-    <%# <h4>or add a new one ...</h4> %>
-    <%= f.label "Write the author's name below if not found or on the list of recommended authors" %><br>
-    <%= f.text_field :lit_fan_author_name %><br><br>
+    <%= f.text_field :title %><br><br><br>
+    <%= f.label "Find or write the author's name below:" %><br>
+    <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %>
+    <datalist id="lit_fan_authors_autocomplete">
+    <% LitFanAuthor.all.each do |lfa| %>
+    <option value="<%= lfa.name %>">
+    <% end %>
+    <br><br>
     <%= f.submit "Submit" %>
 <% end %>
+
