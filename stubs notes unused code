@@ -6,7 +6,6 @@ To Do for Rails Project:
 
 [ ] make partials for forms for all relevant view classes
 [ ] require login for all pages for now
-[ ] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested attributes for author and title
 [ ] For SF_Lit Fanvorites:  LitFanGenre Make genre model for has many assoc with title and has many through with author
 [ ] Make separate model for fp_creator to make funding_projects and be associated with user
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
@@ -67,6 +66,7 @@ Future:
 
 Finished To Do
 
+[x] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested resources for index and new
 [x] Make a static page for All SF Film Fanvorites
 [x] set gitignore for temp files 
 [x] Add categories model for funding_projects: 
