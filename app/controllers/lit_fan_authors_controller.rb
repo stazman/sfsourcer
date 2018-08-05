@@ -1,6 +1,9 @@
 class LitFanAuthorsController < ApplicationController
   def index
-    @lit_fan_authors = LitFanAuthor.all
+    @lit_fan_authors = LitFanAuthor.search(params[:term])
+
+    # @lit_fan_authors = LitFanAuthor.all
+    # @tasks = Task.search(params[:term])
     # @lit_fan_works = @lit
   end
 
@@ -52,6 +55,6 @@ class LitFanAuthorsController < ApplicationController
   private
 
   def lit_fan_author_params
-    params.require(:lit_fan_author).permit(:name)
+    params.require(:lit_fan_author).permit(:name, :term)
   end
 end
