@@ -36,13 +36,13 @@ class LitFanWorksController < ApplicationController
 
   def show
     if params[:lit_fan_author_id]
-      @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_id])
+      @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       @lit_fan_work = @lit_fan_author.lit_fan_works.find_by(id: params[:id])
       # This is done in case the specific work requested is expected to have the associated author with it
-      if @lit_fan_work.nil?
-        redirect_to lit_fan_author_lit_fan_works_path(@lit_fan_author), alert: "Work not found"
+      # if @lit_fan_work.nil?
+      #   redirect_to lit_fan_author_lit_fan_works_path(@lit_fan_author), alert: "Work not found"
            # This is done in case the specific work requested is expected to have the associated author with it but it doesn't
-      end
+      # end
     else
       # And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
       @lit_fan_work = LitFanWork.find(params[:id])
