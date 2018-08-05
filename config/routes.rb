@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   end
 
   resources :lit_fan_authors do
-    resources :lit_fan_works, only: [:index, :show, :new, :create, :edit]
+    resources :lit_fan_works, only: [:index, :show, :edit]
   # why not create and update, too?
   end
 
