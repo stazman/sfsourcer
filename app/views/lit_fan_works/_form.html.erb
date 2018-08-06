@@ -7,7 +7,6 @@
     <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
     <%= f.label "Or Add a New Genre" %><br>
     <%= lfg_fields.text_field :name %>
-    <% end %><br><br>
     <%= f.label "Find or write the author's name below:" %><br>
     <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %><br><br>
     <%= f.submit "Submit" %>
