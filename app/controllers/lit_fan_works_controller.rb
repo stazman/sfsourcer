@@ -70,7 +70,6 @@ class LitFanWorksController < ApplicationController
     @lit_fan_work = LitFanWork.find(params[:id])
 
     @lit_fan_work.update(lit_fan_work_params)
-
     if @lit_fan_work.save
       redirect_to @lit_fan_work
     else

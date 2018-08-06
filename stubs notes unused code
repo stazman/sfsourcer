@@ -1,7 +1,7 @@
 
 current commit notepad:
 
-allowing users to create an author as well as select already made author
+debugging persisting empty genre issue
 
 To Do for Rails Project:
 
@@ -27,6 +27,9 @@ To Do for Rails Project:
 
 Future: 
 
+CSS
+[ ] Add spaces between checkbox choices in authors index view
+[ ] Make links to all works and genres as well as all authors
 [ ] Make links to all works and genres as well as all authors
 [ ] Make Fanvorite static pages for literature, film, and games
 [ ] Make new fan pages based on author, title, and genre links in All SF Fanvorites
