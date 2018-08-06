@@ -1,13 +1,11 @@
 <h1>All Fanvorite Author Recommendations</h1>
 
-
-<h1>search</h1>
 <%= form_tag(lit_fan_authors_path, method: :get) do %>
+<h3>Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.</p>
+
   <%= text_field_tag :term, params[:term] %>
   <%= submit_tag 'Search', name: nil  %>
   <% end %>
-
-<h3>Click on an author below to see or add to the author's works recommended by SFSourcer members, Clubsites for the author, and other information such as events related to the author.</p>
 
 <h4><% @lit_fan_authors.each do |lfa| %>
         <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li><br>
