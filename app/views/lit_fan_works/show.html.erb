@@ -2,6 +2,11 @@
  <h3><%= @lit_fan_work.title %></h3>
  <h2>By: <%= @lit_fan_work.lit_fan_author.name %></h2><br><br>
 
+<p><%= link_to "Add New Work", new_lit_fan_work_path %></p>
+
+<p><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></p>
+
+<p><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></p>
 
 <h2>SFSourcer Features for this work:</h2>
 
