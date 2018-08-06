@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   resources :users
   resources :sf_favs
   resources :lit_fan_genres
+  resources :lit_fan_works
+
+
 
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
@@ -38,7 +41,6 @@ Rails.application.routes.draw do
   # why not create and update, too?
   end
 
-  resources :lit_fan_works
 
 end
 
