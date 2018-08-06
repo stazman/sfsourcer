@@ -1,6 +1,12 @@
 <h1>Your Recommended Work:</h1>
  <h3><%= @lit_fan_work.title %></h3>
- <h2>By: <%= @lit_fan_work.lit_fan_author.name %></h2><br><br>
+ <h2>By: <%= @lit_fan_work.lit_fan_author.name %></h2><br>
+ <h4>Genre/s: </h4>
+ <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
+ <ul>
+ <li><%= lfg.name %></h4></li>
+ </ul>
+ <% end %>
 
 <p><%= link_to "Add New Work", new_lit_fan_work_path %></p>
 
