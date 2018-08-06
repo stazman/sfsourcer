@@ -15,13 +15,12 @@ class LitFanWork < ApplicationRecord
         self.lit_fan_author = lit_fan_author
     end
 
-
-  def lit_fan_genres_attributes=(lit_fan_genre_attributes)
-    lit_fan_genre_attributes.values.each do |lfg_attribute|
-      lfg = LitFanGenre.find_or_create_by(lfg_attribute)
-      self.lit_fan_genres << lfg
-    end 
-  end
+    def lit_fan_genres_attributes=(lit_fan_genre_attributes)
+        lit_fan_genre_attributes.values.each do |lfg_attribute|
+        lfg = LitFanGenre.find_or_create_by(lfg_attribute) 
+        self.lit_fan_genres << lfg unless lfg.name == ""
+        end 
+    end
 end
 
 # def artist_name

@@ -52441,3 +52441,463 @@ SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views
 app/views/lit_fan_works/_form.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/lit_fan_works/_form.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
 app/views/lit_fan_works/new.html.erb:5:in `_app_views_lit_fan_works_new_html_erb__3676978132649873454_70240101783340'
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:17:44 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.6ms)
+  [1m[36mLitFanGenre Load (0.5ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:15
+  Rendered lit_fan_works/_form.html.erb (8.9ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 158ms (Views: 151.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:18:23 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:15
+  Rendered lit_fan_works/_form.html.erb (7.0ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 96ms (Views: 91.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:18:38 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:15
+  Rendered lit_fan_works/_form.html.erb (6.9ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:20:11 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (8.8ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:20:39 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.6ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (6.9ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 76ms (Views: 71.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:21:19 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.7ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (5.6ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 96ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:22:47 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (6.2ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 76ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:23:07 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (5.9ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 82ms (Views: 78.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:23:42 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.4ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (6.0ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:23:44 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.6ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (6.2ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:24:00 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.6ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (7.6ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 12:25:40 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (6.3ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 12:44:26 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4T0iFCma2YSez5jr64ayu2lXJSpbt/IdTxQ/BTFfvnX2U/uCKBMu+qNfZjXjAi/CaFEFm6oeHn2J9E52CEMfIA==", "lit_fan_work"=>{"title"=>"dfdfd", "lit_fan_genre_ids"=>["", "2"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `lit_fan_genre_attributes' for nil:NilClass):
+  
+app/models/lit_fan_work.rb:21:in `block in lit_fan_genres_attributes='
+app/models/lit_fan_work.rb:19:in `each'
+app/models/lit_fan_work.rb:19:in `lit_fan_genres_attributes='
+app/controllers/lit_fan_works_controller.rb:28:in `create'
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 12:54:50 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4T0iFCma2YSez5jr64ayu2lXJSpbt/IdTxQ/BTFfvnX2U/uCKBMu+qNfZjXjAi/CaFEFm6oeHn2J9E52CEMfIA==", "lit_fan_work"=>{"title"=>"dfdfd", "lit_fan_genre_ids"=>["", "2"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWork Create (2.6ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dfdfd"], ["lit_fan_author_id", 7], ["created_at", "2018-08-06 17:54:51.200344"], ["updated_at", "2018-08-06 17:54:51.200344"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (2.6ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 2], ["lit_fan_work_id", 25], ["created_at", "2018-08-06 17:54:51.205825"], ["updated_at", "2018-08-06 17:54:51.205825"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.1ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 3], ["lit_fan_work_id", 25], ["created_at", "2018-08-06 17:54:51.210544"], ["updated_at", "2018-08-06 17:54:51.210544"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+Redirected to http://localhost:3000/lit_fan_works/25
+Completed 302 Found in 84ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/lit_fan_works/25" for 127.0.0.1 at 2018-08-06 12:54:51 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 25]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 158ms (Views: 151.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lit_fan_works/25" for 127.0.0.1 at 2018-08-06 12:58:46 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 25]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 169ms (Views: 138.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 12:58:53 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4T0iFCma2YSez5jr64ayu2lXJSpbt/IdTxQ/BTFfvnX2U/uCKBMu+qNfZjXjAi/CaFEFm6oeHn2J9E52CEMfIA==", "lit_fan_work"=>{"title"=>"dfdfd", "lit_fan_genre_ids"=>["", "2"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.4ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWork Create (0.9ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dfdfd"], ["lit_fan_author_id", 7], ["created_at", "2018-08-06 17:58:53.347480"], ["updated_at", "2018-08-06 17:58:53.347480"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 2], ["lit_fan_work_id", 26], ["created_at", "2018-08-06 17:58:53.350234"], ["updated_at", "2018-08-06 17:58:53.350234"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.1ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 3], ["lit_fan_work_id", 26], ["created_at", "2018-08-06 17:58:53.352048"], ["updated_at", "2018-08-06 17:58:53.352048"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+Redirected to http://localhost:3000/lit_fan_works/26
+Completed 302 Found in 33ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/lit_fan_works/26" for 127.0.0.1 at 2018-08-06 12:58:53 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mLitFanWork Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 26]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-06 13:01:18 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 522ms (Views: 508.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-06 13:01:22 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-06 13:01:23 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 100ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-06 13:01:25 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:10
+  Rendered lit_fan_authors/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 104ms (Views: 86.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lit_fan_authors/7/lit_fan_works" for 127.0.0.1 at 2018-08-06 13:01:27 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"7"}
+  [1m[36mLitFanAuthor Load (1.7ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:7
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  [1m[36mLitFanWork Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 7]]
+  ↳ app/views/lit_fan_works/index.html.erb:3
+  Rendered lit_fan_works/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 123ms (Views: 80.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 13:01:29 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (0.3ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (180.4ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (193.5ms)
+Completed 200 OK in 285ms (Views: 278.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 13:02:03 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECMc+Z5cDn84rX9x1lw8tjVNlOObOxyR2EO6wxDUz8hhvgs9od3A+f2CzldRJuibln0wb3HMUXHHmFrTEKgL2A==", "lit_fan_work"=>{"title"=>"test 3", "lit_fan_genre_ids"=>["", "1"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWork Create (0.7ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test 3"], ["lit_fan_author_id", 7], ["created_at", "2018-08-06 18:02:03.023306"], ["updated_at", "2018-08-06 18:02:03.023306"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 1], ["lit_fan_work_id", 27], ["created_at", "2018-08-06 18:02:03.025631"], ["updated_at", "2018-08-06 18:02:03.025631"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.2ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 3], ["lit_fan_work_id", 27], ["created_at", "2018-08-06 18:02:03.027306"], ["updated_at", "2018-08-06 18:02:03.027306"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+Redirected to http://localhost:3000/lit_fan_works/27
+Completed 302 Found in 27ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lit_fan_works/27" for 127.0.0.1 at 2018-08-06 13:02:03 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.3ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 27]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 72ms (Views: 65.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lit_fan_works/27" for 127.0.0.1 at 2018-08-06 13:02:25 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mLitFanWork Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 27]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 91ms (Views: 73.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 13:02:29 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oCaiUV2R/pIqwqF7f0xTR2U09ON0dCBwtqD0hhxUPvW3SHvHXBgJ7BdSX6V3yM4+ZDLUUoXdzBBwQIX1JUifoA==", "lit_fan_work"=>{"title"=>"test 3", "lit_fan_genre_ids"=>["", "1"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.4ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWork Create (0.5ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test 3"], ["lit_fan_author_id", 7], ["created_at", "2018-08-06 18:02:29.184055"], ["updated_at", "2018-08-06 18:02:29.184055"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 1], ["lit_fan_work_id", 28], ["created_at", "2018-08-06 18:02:29.187123"], ["updated_at", "2018-08-06 18:02:29.187123"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+Redirected to http://localhost:3000/lit_fan_works/28
+Completed 302 Found in 27ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/lit_fan_works/28" for 127.0.0.1 at 2018-08-06 13:02:29 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.1ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 28]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-06 13:03:23 -0500
+Processing by LitFanWorksController#new as HTML
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.8ms)
+  [1m[36mLitFanGenre Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (13.4ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-06 13:03:39 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvMA4vGJ2dwDZ97A7ny+6hUqVAUhMDwIG7TGiXew7u0jbhcmzggXWsZIb+ZpBmrHthrwicvHcegEbyaZd8wq/Q==", "lit_fan_work"=>{"title"=>"test4", "lit_fan_genre_ids"=>[""], "lit_fan_genres_attributes"=>{"0"=>{"name"=>"Fantasy"}}, "lit_fan_author_name"=>"john reynolds"}, "commit"=>"Submit"}
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "john reynolds"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (0.3ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE 1=0[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:28
+  [1m[36mLitFanGenre Load (0.4ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", "Fantasy"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[36mLitFanGenre Create (0.9ms)[0m  [1m[32mINSERT INTO "lit_fan_genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fantasy"], ["created_at", "2018-08-06 18:03:39.510461"], ["updated_at", "2018-08-06 18:03:39.510461"]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWork Create (0.4ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test4"], ["lit_fan_author_id", 4], ["created_at", "2018-08-06 18:03:39.519333"], ["updated_at", "2018-08-06 18:03:39.519333"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanWorkLitFanGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 4], ["lit_fan_work_id", 29], ["created_at", "2018-08-06 18:03:39.521152"], ["updated_at", "2018-08-06 18:03:39.521152"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+Redirected to http://localhost:3000/lit_fan_works/29
+Completed 302 Found in 25ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/lit_fan_works/29" for 127.0.0.1 at 2018-08-06 13:03:39 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:49
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.1ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 29]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
