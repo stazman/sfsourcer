@@ -93,6 +93,25 @@ can I make USERS/1/SF_favs into a nested resource or do I need to do soomething 
 
 UNUSED
 
+<h2>Address Information</h2>
+<%= f.fields_for :addresses do |addr| %>
+    <%= addr.label :address1 %>
+    <%= addr.text_field :address1 %><br>
+ 
+    <%= addr.label :address2 %>
+    <%= addr.text_field :address2 %><br>
+ 
+    <%= addr.label :city %>
+    <%= addr.text_field :city %><br>
+ 
+    <%= addr.label :state %>
+    <%= addr.text_field :state %><br>
+ 
+    <%= addr.label :zip %>
+    <%= addr.text_field :zip %><br>
+
+  <% end %><br><br>
+
 <h3>Your Source Projects As a Creator</h3>
     <ul>
     <% @user.funding_projects.each do |ufp| %>
