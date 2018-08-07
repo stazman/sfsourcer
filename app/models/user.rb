@@ -1,30 +1,7 @@
 class User < ApplicationRecord
-    has_many :addresses
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
-    has_many :funding_projects
-
-    # has_many :created_funding_projects, :foreign_key => "fp_creator_id", :class_name => "FundingProject"
-    # has_many :participated_funding_projects, :foreign_key => "fp_participant_id", :class_name => "FundingProject"
-    # accepts_nested_attributes_for :created_funding_projects
-    has_one :address
-    accepts_nested_attributes_for :address
-    has_many :pledges
-    has_many :funding_projects, through: :pledges
-    # TO DO: THROUGH FP_PARTICIPANT ALIAS
-    has_many :ls_comments
-    has_many :l_stories, through: :ls_comments
-    # has_many :fp_comments
-    # has_many :funding_projects, through: :fp_comments
-    # TO DO: THROUGH FP_PARTICIPANT ALIAS
-    # has_many :l_stories
-    # TO DO: THROUGH LS_CREATOR ALIAS
-    # has_many :ls_genres
-    # TO DO: THROUGH LS_CREATOR ALIAS
-
-    # has_many :ls_genres
-    # has_many :ls_genres, through: :l_stories
-    # AS A CONTRIBUTOR
+    has_many :fp_creators
 
     has_secure_password
 

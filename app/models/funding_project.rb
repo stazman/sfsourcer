@@ -1,17 +1,5 @@
 class FundingProject < ApplicationRecord
-    # belongs_to :fp_creator, :class_name => "User"
-    # belongs_to :fp_participant, :class_name => "User"
-    belongs_to :user
-    # belongs_to :user
-        # USER AS CREATOR
-    has_many :pledges
-        # USER AS CONTRIBUTOR
-    # has_many :users, through: :pledges
-        # USER AS CONTRIBUTOR
-    has_many :fp_comments
-        # USER AS CONTRIBUTOR
-    # has_many :users, through: :fp_comments
-        # USER AS CONTRIBUTOR
+    belongs_to :fp_creator
 
     validates_presence_of :title
     validates_presence_of :creator_name

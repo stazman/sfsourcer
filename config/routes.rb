@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
 
+  get 'fp_creators/index'
+  get 'fp_creators/new'
+  get 'fp_creators/show'
+  get 'fp_creators/edit'
+  get 'fp_creators/name'
   root 'static#home'
 
   # namespace :admin do
@@ -20,19 +25,18 @@ Rails.application.routes.draw do
 
 
   
-  resources :addresses
-  resources :fp_categories
-  resources :fp_comments
-  resources :l_stories
-  resources :ls_comments
-  resources :ls_genres
   resources :pledges
   resources :users
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
-
-
+  resources :funding_projects
+  # resources :addresses
+  # resources :fp_categories
+  # resources :fp_comments
+  # resources :l_stories
+  # resources :ls_comments
+  # resources :ls_genres
 
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
