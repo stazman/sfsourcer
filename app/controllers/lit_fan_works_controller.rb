@@ -1,4 +1,6 @@
 class LitFanWorksController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:index, :show]
   
   def index
     if params[:lit_fan_author_id]
@@ -86,6 +88,13 @@ class LitFanWorksController < ApplicationController
   end
 
   private
+
+  def require_login
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_url
+    end
+  end
 
   def lit_fan_work_params
     params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
