@@ -19,25 +19,6 @@ MAIN NAVBAR
 <%= f.text_field :password %>
   </div>
 
-<h2>Address Information</h2>
-<%= f.fields_for :addresses do |addr| %>
-    <%= addr.label :address1 %>
-    <%= addr.text_field :address1 %><br>
- 
-    <%= addr.label :address2 %>
-    <%= addr.text_field :address2 %><br>
- 
-    <%= addr.label :city %>
-    <%= addr.text_field :city %><br>
- 
-    <%= addr.label :state %>
-    <%= addr.text_field :state %><br>
- 
-    <%= addr.label :zip %>
-    <%= addr.text_field :zip %><br>
-
-  <% end %><br><br>
-
 <h2>Let us know about your SF favorites!</h2>
     <%= f.fields_for :sf_favs do |sf_fave| %>
 <h3>What are your favorite SF literary works?</h3>    

@@ -53044,3 +53044,439 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 183ms (Views: 165.1ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:34:19 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 522ms (Views: 508.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-07 00:34:26 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-07 00:34:27 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-07 00:34:30 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (1.4ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:10
+  Rendered lit_fan_authors/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 125ms (Views: 108.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-07 00:34:38 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (1.5ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:9
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  [1m[36mLitFanWork Load (1.4ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 1]]
+  ↳ app/views/lit_fan_works/index.html.erb:3
+  Rendered lit_fan_works/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 125ms (Views: 80.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/lit_fan_works/new" for 127.0.0.1 at 2018-08-07 00:34:41 -0500
+Processing by LitFanWorksController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering lit_fan_works/new.html.erb within layouts/application
+  Rendered lit_fan_works/_errors.html.erb (0.5ms)
+  [1m[36mLitFanGenre Load (1.6ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:6
+  [1m[36mLitFanAuthor Load (1.0ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_works/_form.html.erb:14
+  Rendered lit_fan_works/_form.html.erb (190.5ms)
+  Rendered lit_fan_works/new.html.erb within layouts/application (199.2ms)
+Completed 200 OK in 323ms (Views: 264.5ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/lit_fan_works" for 127.0.0.1 at 2018-08-07 00:34:53 -0500
+Processing by LitFanWorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZg3S4me7D8SCjixxjVJ3ubD6bu6VNrK0c4TDKj9QwvCtI5OSqYkTJBEW2ROU28WGTe6qFzQLlq25DFl0b9cUw==", "lit_fan_work"=>{"title"=>"dsfsdfsd", "lit_fan_genre_ids"=>["", "2", "3"], "lit_fan_genres_attributes"=>{"0"=>{"name"=>""}}, "lit_fan_author_name"=>"John Smith"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."name" = ? LIMIT ?[0m  [["name", "John Smith"], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:14
+  [1m[36mLitFanGenre Load (1.8ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."id" IN (?, ?)[0m  [["id", 2], ["id", 3]]
+  ↳ app/controllers/lit_fan_works_controller.rb:30
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_genres".* FROM "lit_fan_genres" WHERE "lit_fan_genres"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/lit_fan_work.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:32
+  [1m[36mLitFanWork Create (1.9ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("title", "lit_fan_author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dsfsdfsd"], ["lit_fan_author_id", 7], ["created_at", "2018-08-07 05:34:54.023710"], ["updated_at", "2018-08-07 05:34:54.023710"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:32
+  [1m[36mLitFanWorkLitFanGenre Create (2.1ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 2], ["lit_fan_work_id", 30], ["created_at", "2018-08-07 05:34:54.028561"], ["updated_at", "2018-08-07 05:34:54.028561"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:32
+  [1m[36mLitFanWorkLitFanGenre Create (0.1ms)[0m  [1m[32mINSERT INTO "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id", "lit_fan_work_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lit_fan_genre_id", 3], ["lit_fan_work_id", 30], ["created_at", "2018-08-07 05:34:54.032128"], ["updated_at", "2018-08-07 05:34:54.032128"]]
+  ↳ app/controllers/lit_fan_works_controller.rb:32
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lit_fan_works_controller.rb:32
+Redirected to http://localhost:3000/lit_fan_works/30
+Completed 302 Found in 35ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/lit_fan_works/30" for 127.0.0.1 at 2018-08-07 00:34:54 -0500
+Processing by LitFanWorksController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mLitFanWork Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:51
+  Rendering lit_fan_works/show.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.5ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/lit_fan_works/show.html.erb:3
+  [1m[36mLitFanGenre Load (0.2ms)[0m  [1m[34mSELECT "lit_fan_genres".* FROM "lit_fan_genres" INNER JOIN "lit_fan_work_lit_fan_genres" ON "lit_fan_genres"."id" = "lit_fan_work_lit_fan_genres"."lit_fan_genre_id" WHERE "lit_fan_work_lit_fan_genres"."lit_fan_work_id" = ?[0m  [["lit_fan_work_id", 30]]
+  ↳ app/views/lit_fan_works/show.html.erb:5
+  Rendered lit_fan_works/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-07 00:35:54 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.2ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:9
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  [1m[36mLitFanWork Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 1]]
+  ↳ app/views/lit_fan_works/index.html.erb:3
+  Rendered lit_fan_works/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 81ms (Views: 74.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-07 00:35:57 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:10
+  Rendered lit_fan_authors/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-07 00:35:58 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-07 00:36:00 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:36:16 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-07 00:36:58 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-07 00:37:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 106ms (Views: 72.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-07 00:38:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-07 00:39:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DdwdfIxGlyIcjF8trdITrCJur0+WyO/d5EbGuWr+vGZoQnKQkxiRLA+L4XO0OI+6uCv20F52z0CxGdOVszsJcQ==", "user"=>{"name"=>"joe doe", "email"=>"jd@gmail.com", "password"=>"[FILTERED]", "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"d", "fav_films"=>"d", "fav_games"=>"d"}}}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "joe doe"], ["email", "jd@gmail.com"], ["password_digest", "$2a$10$SopJ/ModDoP8pq31RHv8KuEIRfO74klt.smhX5KFCRKK7pZjFMucu"], ["created_at", "2018-08-07 05:39:07.595918"], ["updated_at", "2018-08-07 05:39:07.595918"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mSfFav Create (1.3ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "d"], ["fav_films", "d"], ["fav_games", "d"], ["user_id", 3], ["created_at", "2018-08-07 05:39:07.597854"], ["updated_at", "2018-08-07 05:39:07.597854"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 87ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:39:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.3ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 108ms (Views: 79.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:40:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-08-07 00:40:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/living_stories"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:40:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 84ms (Views: 76.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-08-07 00:40:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/living_stories"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:40:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 70.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:41:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-08-07 00:41:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sourcer_projects"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:43:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 105ms (Views: 74.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-08-07 00:43:40 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 90ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:43:55 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 76ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:46:43 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:46:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:47:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 69.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:48:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 00:48:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+

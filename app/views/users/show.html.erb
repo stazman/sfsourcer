@@ -1,26 +1,27 @@
 <h2>Greetings, <%= @user.name %>!</h2>
-<h3>Your Current Email: <%= @user.email %></h3>
-<h3>Edit Your Profile Information Here</h3><br>
+<h3>Your Current Email: <%= @user.email %></h3><br>
+<%# <h3>Edit Your Profile Information Here</h3><br> %>
 
 <h3>Check out our Sourcer Projects!</h3>
-<h4><%= link_to "Sourcer Projects Page", "/living_stories" %></h4><br>
+<h4><%= link_to "Sourcer Projects Page", "/sourcer_projects" %></h4><br>
 
-<h3>Check out our fabulous features!</h3>
-<h4><%= link_to "Living Story Page", "/living_stories" %></h4><br>
+<%# <h3>Check out our fabulous features!</h3> %>
+<%# <h4><%= link_to "Living Story Page", "/living_stories" %>
 
+<h3>Check out members' favorites and find or add your own:</h3>
+<h4> <%= link_to "SF Literature Fanvorites", '/sf_lit_fanvorites' %></h4><br>
 
-<h3>Your SF Favorites: </h3> %>
-
-    <ul>
-        <% @user.sf_favs.each do |fav| %>
-        <h4>Favorite Literary Work:</h4>
-            <%= fav.fav_lits %><br>
-        <h4>Favorite Film:</h4>
-            <%= fav.fav_films %><br>
-        <h4>Favorite Game:</h4>
-            <%= fav.fav_games %><br>
-         <% end %>
-    </ul>
+<h3>Your SF Favorites: </h3>
+<ul>
+    <% @user.sf_favs.each do |fav| %>
+    <h4>Favorite Literary Work:</h4>
+        <%= fav.fav_lits %><br>
+    <h4>Favorite Film:</h4>
+        <%= fav.fav_films %><br>
+    <h4>Favorite Game:</h4>
+        <%= fav.fav_games %><br>
+        <% end %>
+</ul>
 
 
 
