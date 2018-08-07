@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_083709) do
   create_table "fp_creators", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.text "creator_blurb"
+    t.text "creator_about"
     t.datetime "last_logged_in"
     t.integer "fp_amt_created"
     t.integer "fp_amt_backed"
