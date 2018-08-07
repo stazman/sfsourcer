@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
 
   get '/all_sf_fanvorites', to: 'static#all_sf_fanvorites'
+  get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
   get '/sf_film_fanvorites', to: 'static#sf_film_fanvorites'
   get '/sf_game_fanvorites', to: 'static#sf_game_fanvorites'
-  get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
+  get '/sourcer_projects', to: 'static#sourcer_projects'
+
 
   
   resources :addresses
