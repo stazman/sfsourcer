@@ -1,4 +1,7 @@
 class LitFanAuthorsController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:index, :show]
+  
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
 
@@ -53,6 +56,13 @@ class LitFanAuthorsController < ApplicationController
   end
 
   private
+
+  def require_login
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_url
+    end
+  end
 
   def lit_fan_author_params
     params.require(:lit_fan_author).permit(:name, :term)
