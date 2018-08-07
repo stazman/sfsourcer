@@ -4,13 +4,10 @@ Specs:
 - [x] Using Ruby on Rails for the project
 - [x] Include at least one has_many relationship (x has_many y e.g. User has_many Recipes) 
 - [x] Include at least one belongs_to relationship (x belongs_to y e.g. Post belongs_to User)
-- [x] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients) LIT_FAN_AUTHOR HAS_MANY LIT_FAN_GENRES THROUGH LIT_FAN_WORKS
-<!-- USER (AS FP_PARTICIPANT) HAS_MANY FUNDING_PROJECTS (AS FP_PARTICIPATED) THROUGH PLEDGES -->
-- [x] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity) "THROUGH": GENRE; USER SUBMITTABLE ATTRIBUTE: NAME
-<!-- "THROUGH": PLEDGES; USER SUBMITTABLE ATTRIBUTE: AMOUNT -->
+- [x] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients) LIT_FAN_WORKS HAS_MANY LIT_FAN_GENRES THROUGH LIT_FAN_WORK_LIT_FAN_GENRES
+- [x] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity) "THROUGH": LIT_FAN_WORK_LIT_FAN_GENRES; USER SUBMITTABLE ATTRIBUTE: NAME
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes) 
-<!-- FUNDINGPROJECT MODEL; #READYFORCOUNTDOWN; URL /FUNDINGPROJECTS/READYFORCOUNTDOWN -->
 - [x] Include signup (how e.g. Devise) CUSTOM METHOD
 - [x] Include login (how e.g. Devise) CUSTOM METHOD
 - [x] Include logout (how e.g. Devise) CUSTOM METHOD

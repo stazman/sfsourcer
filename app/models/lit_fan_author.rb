@@ -8,4 +8,8 @@ class LitFanAuthor < ApplicationRecord
           all
         end
     end
+
+    def self.most_works
+      self.lit_fan_works.sort.last
+    end
 end

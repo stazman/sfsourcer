@@ -6,7 +6,9 @@ adding require_login to all relevant actions for fanvorites
 To Do for Rails Project:
 
 
-[ ] make sure Facebook signup works
+[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
+[ ] Make separate model for fp_creator to make funding_projects and be associated with user
+user submittable in through
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
 [ ] Make sure all validations work
@@ -22,11 +24,9 @@ Future:
 
 CSS
 
-[ ] Make separate model for fp_creator to make funding_projects and be associated with user
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
-[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
-[ ] Complete #ready_for_countdown class method
-[ ] Complete #ready_for_countdown class method
+[ ] Complete #ready_for_countdown class method 
+[ ] Complete #ready_for_countdown class method 
 [ ] Add spaces between checkbox choices in authors index view
 [ ] Make links to all works and genres as well as all authors
 [ ] Make links to all works and genres as well as all authors
@@ -70,6 +70,7 @@ CSS
 
 Finished To Do
 
+[x] make sure Facebook signup works
 [x] require login for all pages for now
 [x] For SF_Lit Fanvorites:  LitFanGenre Make genre model for has many assoc with title and has many through with author
 [x] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested resources for index and new
