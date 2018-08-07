@@ -53480,3 +53480,97 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/logout" for 127.0.0.1 at 2018-08-07 00:51:06 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 126ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-08-07 00:51:09 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-08-07 00:51:09 -0500
+Started GET "/auth/facebook/callback?code=AQDfCmIPtUsLvMEdWnWkSKm3s75Jc8UNK2jGRxjmdBWEbUgekN8C6E6O_LA6Yy4DTeidoLlc2cXhlGxNKUFx4JstKPL8zdq5ZgLc4RFGqSEKbTGZ3YmwjRoUNTiL8VETfdkXbg3AposZ_obmAfm7Q9VpbYPk3EGvJpwczTzK5Nuim-3eROuBfPBf95PcZXMWt8fsnqQ7dvYXvP4dC6AqI66OligtteuXyxdJ6edfBVoTVuoNk9PgNRIHwddrgIfCHLAPnn48ACrb1BDRaDeMNwucHmkk2QDp52mwZO1ku1801V9CaATjoA86LOFwfC44Yfw&state=16cfe366e2f01c957e320426ae30fe72589b0a5c81583f10" for 127.0.0.1 at 2018-08-07 00:51:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDfCmIPtUsLvMEdWnWkSKm3s75Jc8UNK2jGRxjmdBWEbUgekN8C6E6O_LA6Yy4DTeidoLlc2cXhlGxNKUFx4JstKPL8zdq5ZgLc4RFGqSEKbTGZ3YmwjRoUNTiL8VETfdkXbg3AposZ_obmAfm7Q9VpbYPk3EGvJpwczTzK5Nuim-3eROuBfPBf95PcZXMWt8fsnqQ7dvYXvP4dC6AqI66OligtteuXyxdJ6edfBVoTVuoNk9PgNRIHwddrgIfCHLAPnn48ACrb1BDRaDeMNwucHmkk2QDp52mwZO1ku1801V9CaATjoA86LOFwfC44Yfw", "state"=>"16cfe366e2f01c957e320426ae30fe72589b0a5c81583f10"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cadistasio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cadistasio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:39
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:51:14 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all_sf_fanvorites" for 127.0.0.1 at 2018-08-07 00:51:23 -0500
+Processing by StaticController#all_sf_fanvorites as HTML
+  Rendering static/all_sf_fanvorites.html.erb within layouts/application
+  Rendered static/all_sf_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sf_lit_fanvorites" for 127.0.0.1 at 2018-08-07 00:51:25 -0500
+Processing by StaticController#sf_lit_fanvorites as HTML
+  Rendering static/sf_lit_fanvorites.html.erb within layouts/application
+  Rendered static/sf_lit_fanvorites.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors" for 127.0.0.1 at 2018-08-07 00:51:26 -0500
+Processing by LitFanAuthorsController#index as HTML
+  Rendering lit_fan_authors/index.html.erb within layouts/application
+  [1m[36mLitFanAuthor Load (0.5ms)[0m  [1m[34mSELECT "lit_fan_authors".* FROM "lit_fan_authors"[0m
+  ↳ app/views/lit_fan_authors/index.html.erb:10
+  Rendered lit_fan_authors/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 91ms (Views: 77.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/lit_fan_authors/1/lit_fan_works" for 127.0.0.1 at 2018-08-07 00:51:29 -0500
+Processing by LitFanWorksController#index as HTML
+  Parameters: {"lit_fan_author_id"=>"1"}
+  [1m[36mLitFanAuthor Load (0.3ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_works_controller.rb:9
+  Rendering lit_fan_works/index.html.erb within layouts/application
+  [1m[36mLitFanWork Load (0.4ms)[0m  [1m[34mSELECT "lit_fan_works".* FROM "lit_fan_works" WHERE "lit_fan_works"."lit_fan_author_id" = ?[0m  [["lit_fan_author_id", 1]]
+  ↳ app/views/lit_fan_works/index.html.erb:3
+  Rendered lit_fan_works/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 86ms (Views: 64.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 00:51:50 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 03:18:29 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 535ms (Views: 516.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lit_fan_authors/most_works" for 127.0.0.1 at 2018-08-07 03:19:16 -0500
+Processing by LitFanAuthorsController#show as HTML
+  Parameters: {"id"=>"most_works"}
+  [1m[36mLitFanAuthor Load (2.0ms)[0m  [1m[34mSELECT  "lit_fan_authors".* FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/lit_fan_authors_controller.rb:18
+Completed 404 Not Found in 38ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find LitFanAuthor with 'id'=most_works):
+  
+app/controllers/lit_fan_authors_controller.rb:18:in `show'
