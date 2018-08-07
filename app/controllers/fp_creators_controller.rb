@@ -61,6 +61,16 @@ class FpCreatorsController < ApplicationController
   end
 
   def fp_creator_params
-    params.require(:fp_creator).permit(:name, :term)
+    params.require(:fp_creator).permit(
+      "name",
+      "location",
+      "creator_about",
+      "creator_site",
+      "instagram_url",
+      "twitter_url",
+      "facebook_url",
+      "blog_url",
+      "user_id"
+      # funding_projects_attributes: [:title, :description, :funding_goal]
+    )
   end
-end
