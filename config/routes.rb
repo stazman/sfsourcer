@@ -23,14 +23,14 @@ Rails.application.routes.draw do
   get '/sf_game_fanvorites', to: 'static#sf_game_fanvorites'
   get '/sourcer_projects', to: 'static#sourcer_projects'
 
-
-  
-  resources :pledges
   resources :users
+  resources :fp_creators
+  resources :funding_projects
+  resources :pledges
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
-  resources :funding_projects
+
   # resources :addresses
   # resources :fp_categories
   # resources :fp_comments
@@ -46,8 +46,6 @@ Rails.application.routes.draw do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
   # why not create and update, too?
   end
-
-
 end
 
   # resources :funding_projects
