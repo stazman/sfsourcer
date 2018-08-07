@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_005126) do
+ActiveRecord::Schema.define(version: 2018_08_07_083709) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -39,6 +39,23 @@ ActiveRecord::Schema.define(version: 2018_08_05_005126) do
     t.datetime "updated_at", null: false
     t.index ["funding_project_id"], name: "index_fp_comments_on_funding_project_id"
     t.index ["user_id"], name: "index_fp_comments_on_user_id"
+  end
+
+  create_table "fp_creators", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.text "creator_blurb"
+    t.datetime "last_logged_in"
+    t.integer "fp_amt_created"
+    t.integer "fp_amt_backed"
+    t.string "creator_site"
+    t.string "instagram_url"
+    t.string "twitter_url"
+    t.string "facebook_url"
+    t.string "blog_url"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "funding_projects", force: :cascade do |t|
