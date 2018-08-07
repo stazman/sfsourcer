@@ -3,7 +3,7 @@ class CreateFpCreators < ActiveRecord::Migration[5.2]
     create_table :fp_creators do |t|
       t.string :name
       t.string :location
-      t.text :creator_blurb
+      t.text :creator_about
       t.datetime :last_logged_in
       t.integer :fp_amt_created
       t.integer :fp_amt_backed
