@@ -5,12 +5,7 @@ adding require_login to all relevant actions for fanvorites
 
 To Do for Rails Project:
 
-[ ] require login for all pages for now
-[ ] Make separate model for fp_creator to make funding_projects and be associated with user
-[ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
-[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
-[ ] Complete #ready_for_countdown class method
-[ ] Complete #ready_for_countdown class method
+
 [ ] make sure Facebook signup works
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
@@ -26,6 +21,12 @@ To Do for Rails Project:
 Future: 
 
 CSS
+
+[ ] Make separate model for fp_creator to make funding_projects and be associated with user
+[ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
+[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
+[ ] Complete #ready_for_countdown class method
+[ ] Complete #ready_for_countdown class method
 [ ] Add spaces between checkbox choices in authors index view
 [ ] Make links to all works and genres as well as all authors
 [ ] Make links to all works and genres as well as all authors
@@ -69,6 +70,7 @@ CSS
 
 Finished To Do
 
+[x] require login for all pages for now
 [x] For SF_Lit Fanvorites:  LitFanGenre Make genre model for has many assoc with title and has many through with author
 [x] For SF_Lit Fanvorites: LitFanAuthor, LitFanWork for has many assoc with nested resources for index and new
 [x] Make a static page for All SF Film Fanvorites
@@ -90,6 +92,79 @@ when do you use a custom writer as opposed to other methods to make associations
 can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
 
 UNUSED
+
+<h3>Your Source Projects As a Creator</h3>
+    <ul>
+    <% @user.funding_projects.each do |ufp| %>
+    <h4<li><%= ufp.title %></li><h4>
+    <h4><li><%= ufp.description %></li></h4>
+    <h4></h4><li><%= ufp.funding_goal %></li></h4>
+    <% end %>
+    </ul><br>
+
+
+<h3><%= link_to "Make a New Sourcer Project", new_user_funding_project_path(@user) %>
+
+
+<%# <h2><%= link_to "Your Sourcer Projects", funding_projects_url(user_fp_creator) %> 
+
+<h3>Your Pledges/Sourcer Projects as Contributor: </h3>
+<ul>
+    <%# make into link %>
+    <li><h3><% @pledges.each do |p| %></h3></li>
+    <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
+    <li><h3>Amount: <%= p.amount %></h3></li>
+        <% end %>
+</ul>
+<br><br>
+
+<h3>Sourcer Projects You've Commented on: </h3>
+        <%# <% end %> %> %>
+
+<%# <% @user.funding_projects.each do |fp| %> %>
+<%# <%= link_to funding_project.title, funding_project_path(fp) %> %>
+<%# <% end %> %>
+ %>
+<%# If user has their own project/s, they appear here: %><br><br>
+
+
+  </div>
+
+<h2>Address Information</h2>
+<%= f.fields_for :addresses do |addr| %>
+    <%= addr.label :address1 %>
+    <%= addr.text_field :address1 %><br>
+ 
+    <%= addr.label :address2 %>
+    <%= addr.text_field :address2 %><br>
+ 
+    <%= addr.label :city %>
+    <%= addr.text_field :city %><br>
+ 
+    <%= addr.label :state %>
+    <%= addr.text_field :state %><br>
+ 
+    <%= addr.label :zip %>
+    <%= addr.text_field :zip %><br>
+
+  <% end %><br><br>
+
+<h2>Let us know about your SF favorites!</h2>
+    <%= f.fields_for :sf_favs do |sf_fave| %>
+<h3>What are your favorite SF literary works?</h3>    
+<%# <ol> %>
+      <li><%= sf_fave.text_field :fav_lits %><br></li>
+    <%# </ol> %>
+ 
+<h3>What are your favorite SF films?</h3>    
+        <%# <ol> %>
+      <li><%= sf_fave.text_field :fav_films %><br></li>
+    <%# </ol>  %>
+<h3>What are your favorite SF games?</h3>    
+        <%# <ol> %>
+      <li><%= sf_fave.text_field :fav_games %><br></li>
+    <%# </ol>  %>
+  <% end %>
 
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
