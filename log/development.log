@@ -52901,3 +52901,146 @@ Processing by LitFanWorksController#show as HTML
 Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-06 22:26:22 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 419ms (Views: 404.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-06 22:26:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 214ms (Views: 124.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-06 22:27:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dKT2L78huDvvbO/Z094bHVBL9y8kZvsTrQZrhjJEtFOJStcWR8g/p5eVhC51ivvgztoUcjONIw2mvRbgVfa9sA==", "user"=>{"name"=>"s", "email"=>"s@s.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"s", "address2"=>"s", "city"=>"s", "state"=>"s", "zip"=>"11111"}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"s", "fav_films"=>"s", "fav_games"=>"s"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:20:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-06 22:27:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mlXBx8uAc0C++or8Y6DoI1r9oUkscrt+E/Lar5Rw1Ar07S5NcZkKlPjzzGnMZPsmbFaI3oj4b+3DASbq1k4zVg==", "user"=>{"name"=>"s", "email"=>"s@s.com", "password"=>"[FILTERED]", "addresses"=>{"address1"=>"s", "address2"=>"s", "city"=>"s", "state"=>"s", "zip"=>"11111"}, "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"s", "fav_films"=>"s", "fav_games"=>"s"}}}, "commit"=>"Create Account"}
+Unpermitted parameter: :addresses
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "s"], ["email", "s@s.com"], ["password_digest", "$2a$10$k54FPXqd8QzPFvstGdKzbeRzOzBhoifRvIcZyIR8NZ6rRIujOxHRq"], ["created_at", "2018-08-07 03:27:57.166931"], ["updated_at", "2018-08-07 03:27:57.166931"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mSfFav Create (1.5ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", "s"], ["fav_films", "s"], ["fav_games", "s"], ["user_id", 2], ["created_at", "2018-08-07 03:27:57.170538"], ["updated_at", "2018-08-07 03:27:57.170538"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 120ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-08-06 22:27:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects" INNER JOIN "pledges" ON "funding_projects"."id" = "pledges"."funding_project_id" WHERE "pledges"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:14
+  [1m[36mPledge Load (0.2ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Pledge Load (0.0ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Pledge Load (0.1ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Pledge Load (0.0ms)[0m  [1m[34mSELECT  "pledges".* FROM "pledges" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3@global/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered users/show.html.erb within layouts/application (212.5ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_user_funding_project_path' for #<#<Class:0x007fe0624a9878>:0x007fe0624b3b98>
+Did you mean?  new_ls_genre_path):
+    19:     </ul><br>
+    20: 
+    21: 
+    22: <h3><%= link_to "Make a New Sourcer Project", new_user_funding_project_path(@user) %>
+    23: 
+    24: 
+    25: <%# <h2><%= link_to "Your Sourcer Projects", funding_projects_url(user_fp_creator) %> 
+  
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb___3174850204358813861_70300849229960'
+Started GET "/users/2" for 127.0.0.1 at 2018-08-06 22:29:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 54.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/living_stories" for 127.0.0.1 at 2018-08-06 23:23:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/living_stories"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/2" for 127.0.0.1 at 2018-08-06 23:23:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (1.3ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 183ms (Views: 165.1ms | ActiveRecord: 3.4ms)
+
+

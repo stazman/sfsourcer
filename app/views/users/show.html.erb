@@ -9,40 +9,6 @@
 <h4><%= link_to "Living Story Page", "/living_stories" %></h4><br>
 
 
-<h3>Your Source Projects As a Creator</h3>
-    <ul>
-    <% @user.funding_projects.each do |ufp| %>
-    <h4<li><%= ufp.title %></li><h4>
-    <h4><li><%= ufp.description %></li></h4>
-    <h4></h4><li><%= ufp.funding_goal %></li></h4>
-    <% end %>
-    </ul><br>
-
-
-<h3><%= link_to "Make a New Sourcer Project", new_user_funding_project_path(@user) %>
-
-
-<%# <h2><%= link_to "Your Sourcer Projects", funding_projects_url(user_fp_creator) %> 
-
-<h3>Your Pledges/Sourcer Projects as Contributor: </h3>
-<ul>
-    <%# make into link %>
-    <li><h3><% @pledges.each do |p| %></h3></li>
-    <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
-    <li><h3>Amount: <%= p.amount %></h3></li>
-        <% end %>
-</ul>
-<br><br>
-
-<h3>Sourcer Projects You've Commented on: </h3>
-        <%# <% end %> %> %>
-
-<%# <% @user.funding_projects.each do |fp| %> %>
-<%# <%= link_to funding_project.title, funding_project_path(fp) %> %>
-<%# <% end %> %>
- %>
-<%# If user has their own project/s, they appear here: %><br><br>
-
 <h3>Your SF Favorites: </h3> %>
 
     <ul>
