@@ -25,14 +25,14 @@ class FpCreatorsController < ApplicationController
   end
 
   def create
-    @fp_creator = FpCreator.create(fp_creator_params)
+      @fp_creator = FpCreator.create(fp_creator_params)
     
     # raise params.inspect
   
     # @fp_creator.lit_fan_works.build
       # = LitFanWork.where(fp_creator_id: params[:fp_creator_id])
     # if @fp_creator.save
-    redirect_to @fp_creator
+      redirect_to @fp_creator
     # else
     #   render :new
     # end
@@ -89,7 +89,8 @@ class FpCreatorsController < ApplicationController
       :twitter_url,
       :facebook_url,
       :blog_url,
-      :user_id
+      :user_id,
+      
       # "fpc_user_name"
     )
   end
