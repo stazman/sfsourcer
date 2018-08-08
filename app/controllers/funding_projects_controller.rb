@@ -14,7 +14,7 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
     @funding_project.save
-    redirect_to user_funding_project_path(@user, @funding_project)
+    redirect_to @funding_project
   end
 
   def show
