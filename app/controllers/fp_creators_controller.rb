@@ -29,12 +29,12 @@ class FpCreatorsController < ApplicationController
   end
 
   def new
-    if params[:user_id] && !User.exists?(id: params[:user_id])
-      redirect_to user_path, alert: "User not found"
-      # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
-    else
+    # if params[:user_id] && !User.exists?(id: params[:user_id])
+    #   redirect_to user_path, alert: "User not found"
+    #   # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
+    # else
       @fp_creator = FpCreator.new(user_id: params[:user_id])
-    end
+    # end
   end
 
   # if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
@@ -45,16 +45,17 @@ class FpCreatorsController < ApplicationController
   # end
 
   def create
-    @fp_creator = FpCreator.new(fp_creator_params)
+    @fp_creator = FpCreator.create(fp_creator_params)
+    
     # raise params.inspect
   
     # @fp_creator.lit_fan_works.build
       # = LitFanWork.where(fp_creator_id: params[:fp_creator_id])
-    if @fp_creator.save
-      redirect_to fp_creator_path(@fp_creator)
-    else
-      render :new
-    end
+    # if @fp_creator.save
+      redirect_to @fp_creator
+    # else
+    #   render :new
+    # end
   end
 
   def show
@@ -108,8 +109,8 @@ class FpCreatorsController < ApplicationController
       "twitter_url",
       "facebook_url",
       "blog_url",
-      "user_id",
-      "fpc_user_name"
+      "user_id"
+      # "fpc_user_name"
     )
   end
 end 
