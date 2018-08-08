@@ -6,10 +6,10 @@ MAIN NAVBAR
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal: <%= @funding_project.funding_goal %> </p><br><br>
 
-<h2>Creator/Creator Team Profile</h2>
+<h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
     <ul>
-        <li><%= fpc.co_creator_name %></li><br><br>
+        <li>Creator: <%= fpc.creator_name %></li><br><br>
         <li>Location: <%= fpc.location %></li><br><br>
         <li>About Creator: <%= fpc.creator_about %></li><br><br>
         <li>Creator Website: <%= fpc.creator_site %></li><br><br>
