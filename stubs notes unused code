@@ -97,6 +97,49 @@ can I make USERS/1/SF_favs into a nested resource or do I need to do soomething 
 
 UNUSED
 
+<h3>Total Pledges So Far:</h3>
+<%= @funding_project.total_pledges.sum  %><br><br>
+
+<% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
+    <%= "Total Needed:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<% elsif @funding_project.total_pledges.sum > @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<%= "Total Over Funding Goal:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% end %><br><br>
+
+
+
+<%# <h3><%= link_to "Make a Pledge", new_pledge_path %>
+
+
+<%# <h3>Select an SFSourcer Project by Category </h3> %>
+
+<%# <h4><%= @funding_categories.each do |fc| %>
+<%# <ul> %>
+    <%# <li><%= link_to fc.name, funding_category_path(fc) %>
+<%# </ul> %>
+<%# <% end %> 
+
+<%# <h3>SFSourcer Projects Nearing Final Countdown:</h3> %>
+
+
+<%# <h3><%= link_to "Make a Comment", new_funding_project_comment_path %>
+
+<%# <%= @funding_project.comments.each do |comment| %>
+<%# <%= link_to comment.user.username, user_path(comment.user) %> 
+<%# <%= comment.content %> 
+<%# <% end   
+
+<%# <% ready_for_countdown.each do |rfc|  
+<ul>
+<%# <li><%= rfc.amount  
+</li>
+</ul>
+<%# <% end  
  , addresses_attributes: [:address1, :address2, :city, :state, :zip, :user_id], created_funding_project_attributes: [:creator_name, :title, :description]
     a = User.create(name: "a", email: "a@a.com", password: "a")
 # aa fantastic_cats = FundingProject.create(creator_name: "Frank J Inc.", title: "Fantastic Cats", description: "A collection of short stories about cats with science fiction and fantasy settings.", funding_goal: 500, user_id: 1)
