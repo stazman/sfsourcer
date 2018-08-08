@@ -18,8 +18,9 @@ class FundingProjectsController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:user_id])
-    @funding_project = @user.funding_projects.find_by(id: params[:id])
+    @funding_project = FundingProject.find(params[:id])
+    # @user = User.find_by(id: params[:user_id])
+    # @funding_project = @user.funding_projects.find_by(id: params[:id])
     @total_pledges = []
   end
 
