@@ -49,11 +49,9 @@ Rails.application.routes.draw do
     # , only: [:index, :new, :show, :edit]
   end
 
-
   resources :fp_creators do
     resources :funding_projects
   end
-
 
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
