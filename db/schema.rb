@@ -29,17 +29,17 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "funding_project_fp_creators", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.integer "fp_creator_id"
+  end
+
   create_table "funding_projects", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.integer "funding_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "funding_projects_fp_creators", force: :cascade do |t|
-    t.integer "funding_project_id"
-    t.integer "fp_creator_id"
   end
 
   create_table "lit_fan_authors", force: :cascade do |t|
@@ -84,13 +84,6 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
     t.string "fav_games"
     t.integer "user_id"
     t.string "sf_fav_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_fp_creators", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "fp_creator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
