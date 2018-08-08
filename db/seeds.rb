@@ -1,6 +1,6 @@
 a = User.create(name: "a", email: "a@a.com", password: "a")
 afp = FundingProject.create(title: "afp")
-afpc = FpCreator.create(creator_name: "ac")
+afpc = FpCreator.create(creator_name: "ac", location: "tampa")
  
 work1 = LitFanWork.create(title: "Dune")
 author1 = LitFanAuthor.create(name: "Frank Herbert")

@@ -16,9 +16,6 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
     t.string "creator_name"
     t.string "location"
     t.text "creator_about"
-    t.datetime "last_logged_in"
-    t.integer "fp_amt_created"
-    t.integer "fp_amt_backed"
     t.string "creator_site"
     t.string "email"
     t.string "instagram_url"
@@ -32,6 +29,10 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
   create_table "funding_project_fp_creators", force: :cascade do |t|
     t.integer "funding_project_id"
     t.integer "fp_creator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fp_creator_id"], name: "index_funding_project_fp_creators_on_fp_creator_id"
+    t.index ["funding_project_id"], name: "index_funding_project_fp_creators_on_funding_project_id"
   end
 
   create_table "funding_projects", force: :cascade do |t|
