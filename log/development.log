@@ -56796,3 +56796,99 @@ ActionView::Template::Error (uninitialized constant FundingProject::FundingProje
   
 app/views/funding_projects/new.html.erb:14:in `block in _app_views_funding_projects_new_html_erb__1276332129766150806_70290698321340'
 app/views/funding_projects/new.html.erb:8:in `_app_views_funding_projects_new_html_erb__1276332129766150806_70290698321340'
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-08-08 11:51:24 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  [1m[36mFpCreator Load (1.7ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators"[0m
+  ↳ app/views/funding_projects/new.html.erb:14
+  Rendered funding_projects/new.html.erb within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant FundingProject::FundingProjectsFpCreator):
+    11:     <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3><br>
+    12: 
+    13: <h3>Creator Information</h3>
+    14:     <h3><%= f.collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :creator_name) %><br>
+    15:         <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+    16:             <%= fpc_fields.label "Creator Name"%>
+    17:             <%= fpc_fields.text_field :creator_name %> </h2><br>
+  
+app/views/funding_projects/new.html.erb:14:in `block in _app_views_funding_projects_new_html_erb__1276332129766150806_70290628509000'
+app/views/funding_projects/new.html.erb:8:in `_app_views_funding_projects_new_html_erb__1276332129766150806_70290628509000'
+Started GET "/users/1" for 127.0.0.1 at 2018-08-08 11:51:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (1.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 156ms (Views: 146.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-08-08 11:52:04 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators"[0m
+  ↳ app/views/funding_projects/new.html.erb:14
+  Rendered funding_projects/new.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant FundingProject::FundingProjectsFpCreator):
+    11:     <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3><br>
+    12: 
+    13: <h3>Creator Information</h3>
+    14:     <h3><%= f.collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :creator_name) %><br>
+    15:         <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+    16:             <%= fpc_fields.label "Creator Name"%>
+    17:             <%= fpc_fields.text_field :creator_name %> </h2><br>
+  
+app/views/funding_projects/new.html.erb:14:in `block in _app_views_funding_projects_new_html_erb__1276332129766150806_70290700441980'
+app/views/funding_projects/new.html.erb:8:in `_app_views_funding_projects_new_html_erb__1276332129766150806_70290700441980'
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-08-08 11:52:45 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  [1m[36mFpCreator Load (1.3ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators"[0m
+  ↳ app/views/funding_projects/new.html.erb:14
+  Rendered funding_projects/new.html.erb within layouts/application (48.6ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `fp_creator' for #<FundingProject:0x007fdba6fd10b8>
+Did you mean?  fp_creators
+               fp_creators=):
+    12: 
+    13: <h3>Creator Information</h3>
+    14:     <h3><%= f.collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :creator_name) %><br>
+    15:         <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+    16:             <%= fpc_fields.label "Creator Name"%>
+    17:             <%= fpc_fields.text_field :creator_name %> </h2><br>
+    18:             <%= fpc_fields.label "Location "%>
+  
+app/views/funding_projects/new.html.erb:15:in `block in _app_views_funding_projects_new_html_erb__1276332129766150806_70290709238800'
+app/views/funding_projects/new.html.erb:8:in `_app_views_funding_projects_new_html_erb__1276332129766150806_70290709238800'
+Started GET "/funding_projects/new" for 127.0.0.1 at 2018-08-08 11:53:41 -0500
+Processing by FundingProjectsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/new.html.erb within layouts/application
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators"[0m
+  ↳ app/views/funding_projects/new.html.erb:14
+  Rendered funding_projects/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 115ms (Views: 111.4ms | ActiveRecord: 0.3ms)
+
+
