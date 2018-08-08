@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get '/sourcer_projects', to: 'static#sourcer_projects'
 
   resources :users
-  resources :fp_creators
   resources :funding_projects
+  resources :fp_creators
   resources :pledges
   resources :sf_favs
   resources :lit_fan_genres

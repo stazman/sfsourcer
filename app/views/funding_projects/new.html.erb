@@ -10,10 +10,10 @@ MAIN NAVBAR
     <h3>Description: <%= f.text_area :description %></h3><br>
     <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3><br>
 
-<h3>Creator Information</h3>
-    <h3><%= f.collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :creator_name) %><br>
+    <label>Creator Information</label>
+        <%= f.collection_check_boxes :fp_creator_ids, FpCreator.all, :id, :creator_name %><br>
         <%= f.fields_for :funding_project, @funding_project.fp_creators.build do |fpc_fields|%><br>
-            <%= fpc_fields.label "Creator Name"%>
+            <%= fpc_fields.label :creator_name %>
             <%= fpc_fields.text_field :creator_name %> </h2><br>
             <%= fpc_fields.label "Location "%>
             <%= fpc_fields.text_field :location %><br>
@@ -21,6 +21,8 @@ MAIN NAVBAR
             <%= fpc_fields.text_area :creator_about %><br>
             <%= fpc_fields.label "Creator Website" %>
             <%= fpc_fields.text_field :creator_site %><br>
+            <%= fpc_fields.label :email %>
+            <%= fpc_fields.text_field :email %><br>
             <%= fpc_fields.label "Instagram" %>
             <%= fpc_fields.text_field :instagram_url %><br>
             <%= fpc_fields.label "Twitter" %>
@@ -30,7 +32,7 @@ MAIN NAVBAR
             <%= fpc_fields.label "Blog" %>
             <%= fpc_fields.text_field :blog_url %><br>
             <%= fpc_fields.submit %>
-        <% end %><br><br><br>
     <%= f.submit "Create Project"%>
+        <% end %><br><br><br>
 <% end %>
 
