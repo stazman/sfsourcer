@@ -1,6 +1,6 @@
 class FpCreator < ApplicationRecord
-    has_many :funding_project_fp_creators
-    has_many :funding_projects, through: :funding_project_fp_creators  
+    has_many :funding_projects_fp_creators
+    has_many :funding_projects, through: :funding_projects_fp_creators  
     # belongs_to :user_fp_creators
     # has_many :funding_projects
     # def funding_project_attributes=(funding_project_attributes)
