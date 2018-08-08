@@ -25,12 +25,12 @@ class User < ApplicationRecord
         end
     end
 
-    def fp_creator_attributes=(fp_creator_attributes)
-        fp_creator_attributes.values.each do |fpc_attribute|
-        fpc = FpCreator.find_or_create_by(fpc_attribute) 
-        self.fp_creators << fpc unless fpc.name == ""
-        end 
-    end
+    # def fp_creator_attributes=(fp_creator_attributes)
+    #     fp_creator_attributes.values.each do |fpc_attribute|
+    #     fpc = FpCreator.find_or_create_by(fpc_attribute) 
+    #     self.fp_creators << fpc unless fpc.name == ""
+    #     end 
+    # end
 
     # before_save :make_name_titlecase
 
