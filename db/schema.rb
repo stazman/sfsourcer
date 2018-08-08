@@ -12,35 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_08_07_083709) do
 
-  create_table "addresses", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "address1"
-    t.string "address2"
-    t.string "city"
-    t.string "state"
-    t.integer "zip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_addresses_on_user_id"
-  end
-
-  create_table "fp_categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fp_comments", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.integer "user_id"
-    t.integer "funding_project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["funding_project_id"], name: "index_fp_comments_on_funding_project_id"
-    t.index ["user_id"], name: "index_fp_comments_on_user_id"
-  end
-
   create_table "fp_creators", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -64,22 +35,6 @@ ActiveRecord::Schema.define(version: 2018_08_07_083709) do
     t.string "description"
     t.integer "funding_goal"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "fp_creator_id"
-    t.integer "fp_participant_id"
-  end
-
-  create_table "l_stories", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "l_story_ls_genres", force: :cascade do |t|
-    t.integer "l_story_id"
-    t.integer "ls_genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -108,20 +63,6 @@ ActiveRecord::Schema.define(version: 2018_08_07_083709) do
   create_table "lit_fan_works", force: :cascade do |t|
     t.string "title"
     t.integer "lit_fan_author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ls_comments", force: :cascade do |t|
-    t.string "content"
-    t.string "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ls_genres", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

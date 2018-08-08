@@ -55035,3 +55035,368 @@ Processing by FpCreatorsController#index as HTML
 Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/1/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:50:24 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mLitFanAuthor Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:32
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 249ms (Views: 194.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:50:33 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mWp1rc3bHY4TDVgKseN+8rodKwsMLojJfuFF88/MFrUtNaga20HA//h20rNENNQkCtdPXHouN2X2Rb0H83ovA==", "fp_creator"=>{"name"=>"g", "location"=>"g", "creator_about"=>"g", "creator_site"=>"g", "instagram_url"=>"g", "twitter_url"=>"g", "facebook_url"=>"g", "blog_url"=>"g"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 73ms (Views: 61.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 19:53:07 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 563ms (Views: 543.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-07 19:53:19 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-07 19:54:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 97ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-07 19:54:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kQRiRCATZNOL5yUPku7nOHtN/R1kKbnqgnWJBjPQnCKkevQkHSOPYV9oLxwPWHz4ANFkUSEolviB7UvAQAWpCw==", "sessions"=>{"email"=>"s@s.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 107ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-08-07 19:54:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.3ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 120ms (Views: 111.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:54:25 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mLitFanAuthor Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "lit_fan_authors" WHERE "lit_fan_authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:32
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 144ms (Views: 94.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:54:37 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSIXQ1RuaOdMFnRidfYYZ13Ym8a/NfNq0wqJ5y13n6d7pcv75RZIVTUhgaw2xoh/DfbFS+QJGVL0pG14Xi1VEQ==", "fp_creator"=>{"name"=>"bb", "location"=>"bb", "creator_about"=>"bb", "creator_site"=>"bb", "instagram_url"=>"bb", "twitter_url"=>"bb", "facebook_url"=>"bb", "blog_url"=>"bb"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 96ms (Views: 83.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:54:58 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0vJzDnIKbqBJ2/ZCfNsKmBfNrXaeb0Q7Z9IKNhn/Zqrunx43DNAB7c5HD94LDs1iY0c43xd94LGxk/w/qzZ9A==", "fp_creator"=>{"name"=>"bb", "location"=>"bb", "creator_about"=>"bb", "creator_site"=>"bb", "instagram_url"=>"bb", "twitter_url"=>"bb", "facebook_url"=>"bb", "blog_url"=>"bb"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 76ms (Views: 64.4ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20180707170145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707170145_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707170145"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreatePledges (20180707173946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "user_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707173946_create_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707173946"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFundingProjects (20180707174939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "creator_name" varchar, "description" varchar, "funding_goal" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707174939_create_funding_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707174939"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateSfFavs (20180731002120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_games" varchar, "user_id" integer, "sf_fav_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180731002120_create_sf_favs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180731002120"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLitFanAuthors (20180802221054)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lit_fan_authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180802221054_create_lit_fan_authors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180802221054"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLitFanWorks (20180802221902)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lit_fan_works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "lit_fan_author_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180802221902_create_lit_fan_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180802221902"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLitFanGenres (20180803190640)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180803190640_create_lit_fan_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180803190640"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLitFanWorkLitFanGenres (20180803191115)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lit_fan_work_lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lit_fan_genre_id" integer, "lit_fan_work_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_ff735d71be"
+FOREIGN KEY ("lit_fan_genre_id")
+  REFERENCES "lit_fan_genres" ("id")
+, CONSTRAINT "fk_rails_d3f3203635"
+FOREIGN KEY ("lit_fan_work_id")
+  REFERENCES "lit_fan_works" ("id")
+)[0m
+  ↳ db/migrate/20180803191115_create_lit_fan_work_lit_fan_genres.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_genre_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id")[0m
+  ↳ db/migrate/20180803191115_create_lit_fan_work_lit_fan_genres.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_work_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_work_id")[0m
+  ↳ db/migrate/20180803191115_create_lit_fan_work_lit_fan_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180803191115"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to ChangeLitFanAuthorIdToInteger (20180805005126)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alit_fan_works" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "lit_fan_author_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "alit_fan_works" ("id","title","lit_fan_author_id","created_at","updated_at")
+                     SELECT "id","title","lit_fan_author_id","created_at","updated_at" FROM "lit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "lit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "lit_fan_works" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "lit_fan_author_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "lit_fan_works" ("id","title","lit_fan_author_id","created_at","updated_at")
+                     SELECT "id","title","lit_fan_author_id","created_at","updated_at" FROM "alit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alit_fan_works"[0m
+  ↳ db/migrate/20180805005126_change_lit_fan_author_id_to_integer.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180805005126"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpCreators (20180807083709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "creator_about" text, "last_logged_in" datetime, "fp_amt_created" integer, "fp_amt_backed" integer, "creator_site" varchar, "instagram_url" varchar, "twitter_url" varchar, "facebook_url" varchar, "blog_url" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180807083709_create_fp_creators.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180807083709"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-08 03:00:39.375610"], ["updated_at", "2018-08-08 03:00:39.375610"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$5AogEmqyiZxN7LI8cbo9leb1ZgvjZhsY0bBqr5k/WxrlaKhlZuB0m"], ["created_at", "2018-08-08 03:00:47.745915"], ["updated_at", "2018-08-08 03:00:47.745915"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mLitFanAuthor Create (1.5ms)[0m  [1m[32mINSERT INTO "lit_fan_authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Frank Herbert"], ["created_at", "2018-08-08 03:00:47.812238"], ["updated_at", "2018-08-08 03:00:47.812238"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mLitFanGenre Create (1.5ms)[0m  [1m[32mINSERT INTO "lit_fan_genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic Science Fiction"], ["created_at", "2018-08-08 03:00:47.828087"], ["updated_at", "2018-08-08 03:00:47.828087"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:7
+  [1m[36mFpCreator Create (1.6ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "s"], ["user_id", 1], ["created_at", "2018-08-08 03:00:47.861248"], ["updated_at", "2018-08-08 03:00:47.861248"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+Started GET "/" for 127.0.0.1 at 2018-08-07 22:01:43 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 348ms (Views: 335.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-07 22:03:08 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 181ms (Views: 114.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-07 22:03:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UXGgtBWyQDHve6ltIl3YyDwZXwdg5H6GB1iz6MqN0vF6tfVNiMGGUuqbXoIrIDNPTQspNJfvCR3Nbly/mSvLdw==", "user"=>{"name"=>"b", "email"=>"b@b.com", "password"=>"[FILTERED]", "sf_favs_attributes"=>{"0"=>{"fav_lits"=>"", "fav_films"=>"", "fav_games"=>""}}}, "commit"=>"Create Account"}
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "b"], ["email", "b@b.com"], ["password_digest", "$2a$10$eMl/85PMz64mPJpsVJiiZON65GXv.F/GWntA6vXNiHBTAlV1UxPLW"], ["created_at", "2018-08-08 03:03:25.495316"], ["updated_at", "2018-08-08 03:03:25.495316"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mSfFav Create (1.3ms)[0m  [1m[32mINSERT INTO "sf_favs" ("fav_lits", "fav_films", "fav_games", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fav_lits", ""], ["fav_films", ""], ["fav_games", ""], ["user_id", 2], ["created_at", "2018-08-08 03:03:25.502463"], ["updated_at", "2018-08-08 03:03:25.502463"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 106ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-08-07 22:03:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.4ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 86.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2/fp_creators/new" for 127.0.0.1 at 2018-08-07 22:03:33 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:112: syntax error, unexpected tSTRING_BEG, expecting ')'
+      "fpc_user_name"
+       ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:113: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:112: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/controllers/fp_creators_controller.rb:113: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/2/fp_creators/new" for 127.0.0.1 at 2018-08-07 22:04:34 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:32
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 125ms (Views: 81.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 22:04:53 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wxHdxek2IKXU9RNrMg1w6gQR/4PD+5D7wXSmidFEfPR74GhxDM1JGOLrYI1D0if17cPV1WXf2mnqLaFR949Ymg==", "fp_creator"=>{"name"=>"b", "location"=>"b", "creator_about"=>"b", "creator_site"=>"b", "instagram_url"=>"b", "twitter_url"=>"b", "facebook_url"=>"b", "blog_url"=>"b"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:53
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 88ms (Views: 76.4ms | ActiveRecord: 0.5ms)
+
+

@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :fp_creators, only: [:index, :new, :show, :edit]
+    resources :fp_creators, only: [:new, :show, :edit]
   end
 
   resources :lit_fan_authors do
