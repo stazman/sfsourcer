@@ -26,15 +26,6 @@ Rails.application.routes.draw do
     resources :sf_favs, only: [:new, :show, :edit]
   end
 
-  resources :users do
-    resources :fp_creators
-    # , only: [:index, :new, :show, :edit]
-  end
-
-  # resources :funding_projects do
-  #   resources :fp_creators, only: [:show]
-  # end
-
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
   # why not create and update, too?
@@ -42,6 +33,15 @@ Rails.application.routes.draw do
 end
 
 
+
+  # resources :users do
+  #   resources :fp_creators
+  #   # , only: [:index, :new, :show, :edit]
+  # end
+
+  # resources :funding_projects do
+  #   resources :fp_creators, only: [:show]
+  # end
 
 
   # resources :addresses
