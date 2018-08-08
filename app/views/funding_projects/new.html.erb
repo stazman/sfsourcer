@@ -2,42 +2,34 @@ MAIN NAVBAR
 
 <h1>Create a New Sourcer Project!</h1><br>
 
-
 <%= render partial: "errors" %>
 
-<%# <h3>Project Originated by: <%= current_user %></h3> %>
-
-<%# <%= form_for([@user, @funding_project], :url => url_for(:controller => 'funding_projects', :action => 'create')) do |f| %> %>
+<h3>Project Information</h3>
 <%= form_for @funding_project do |f| %>
+    <h2>Creator/Name of Sponsoring Organization: <%= f.text_field :creator_name %> </h2><br>
+    <h2>Project Title: <%= f.text_field :title %> </h2><br>
+    <h3>Description: <%= f.text_area :description %></h3><br>
+    <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3><br>
 
-<h2>Creator/Name of Sponsoring Organization: <%= f.text_field :creator_name %> </h2><br>
-<h2>Project Title: <%= f.text_field :title %> </h2><br>
-<h3>Description: <%= f.text_area :description %></h3><br>
-<h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3>
-<h3><%= collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :title) %>
-    <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
-        <%= fpc_fields.label "Location "%>
-        <%= fpc_fields.text_field :location %><br>
-        <%# <%= fpc_fields.label "Name of Verified for Project "%>
-        <%# <%= fpc_fields.text_field "name_of_verified" %>
-        <%= fpc_fields.label "About Creator" %>
-        <%= fpc_fields.text_area :creator_about %><br>
-        <%= fpc_fields.label "Creator Website" %>
-        <%= fpc_fields.text_field :creator_site %><br>
-        <%= fpc_fields.label "Instagram" %>
-        <%= fpc_fields.text_field :instagram_url %><br>
-        <%= fpc_fields.label "Twitter" %>
-        <%= fpc_fields.text_field :twitter_url %><br>
-        <%= fpc_fields.label "Facebook" %>
-        <%= fpc_fields.text_field :facebook_url %><br>
-        <%= fpc_fields.label "Blog" %>
-        <%= fpc_fields.text_field :blog_url %><br>
-        <%= fpc_fields.submit %>
-        <% end %>
-
-    <% end %><br><br><br>
-        <label>Find or write the author's name ...</label><br><br>
-d
-<%= f.submit "Create Project"%>
+<h3>Creator Information</h3>
+    <h3><%= collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :title) %><br>
+        <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+            <%= fpc_fields.label "Location "%>
+            <%= fpc_fields.text_field :location %><br>
+            <%= fpc_fields.label "About Creator" %>
+            <%= fpc_fields.text_area :creator_about %><br>
+            <%= fpc_fields.label "Creator Website" %>
+            <%= fpc_fields.text_field :creator_site %><br>
+            <%= fpc_fields.label "Instagram" %>
+            <%= fpc_fields.text_field :instagram_url %><br>
+            <%= fpc_fields.label "Twitter" %>
+            <%= fpc_fields.text_field :twitter_url %><br>
+            <%= fpc_fields.label "Facebook" %>
+            <%= fpc_fields.text_field :facebook_url %><br>
+            <%= fpc_fields.label "Blog" %>
+            <%= fpc_fields.text_field :blog_url %><br>
+            <%= fpc_fields.submit %>
+        <% end %><br><br><br>
+    <%= f.submit "Create Project"%>
 <% end %>
 
