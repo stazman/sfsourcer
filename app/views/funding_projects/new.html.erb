@@ -12,7 +12,7 @@ MAIN NAVBAR
 
 <h3>Creator Information</h3>
     <h3><%= f.collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :creator_name) %><br>
-        <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+        <%= f.fields_for :funding_project, @funding_project.fp_creators.build do |fpc_fields|%><br>
             <%= fpc_fields.label "Creator Name"%>
             <%= fpc_fields.text_field :creator_name %> </h2><br>
             <%= fpc_fields.label "Location "%>
