@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
   
-
-  # get 'fp_creators/index'
-  # get 'fp_creators/new'
-  # get 'fp_creators/show'
-  # get 'fp_creators/edit'
-  # get 'fp_creators/name'
-
-  # namespace :admin do
-  #   resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
-  # end
-  
   root 'static#home'
   
   get '/login', to: 'sessions#new'
@@ -33,13 +22,6 @@ Rails.application.routes.draw do
   resources :lit_fan_works
   resources :lit_fan_authors
 
-  # resources :addresses
-  # resources :fp_categories
-  # resources :fp_comments
-  # resources :l_stories
-  # resources :ls_comments
-  # resources :ls_genres
-
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
   end
@@ -58,6 +40,28 @@ Rails.application.routes.draw do
   # why not create and update, too?
   end
 end
+
+
+
+
+  # resources :addresses
+  # resources :fp_categories
+  # resources :fp_comments
+  # resources :l_stories
+  # resources :ls_comments
+  # resources :ls_genres
+
+
+  # get 'fp_creators/index'
+  # get 'fp_creators/new'
+  # get 'fp_creators/show'
+  # get 'fp_creators/edit'
+  # get 'fp_creators/name'
+
+  # namespace :admin do
+  #   resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
+  # end
+  
 
   # resources :funding_projects
   

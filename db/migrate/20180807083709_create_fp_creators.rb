@@ -13,7 +13,6 @@ class CreateFpCreators < ActiveRecord::Migration[5.2]
       t.string :twitter_url
       t.string :facebook_url
       t.string :blog_url
-      t.integer :fp_project_id
 
       t.timestamps
     end
