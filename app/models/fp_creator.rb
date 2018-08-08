@@ -1,14 +1,14 @@
 class FpCreator < ApplicationRecord
-    # belongs_to :user
-    belongs_to :funding_projects
+    has_many :funding_project_fp_creators
+    has_many :funding_projects, through: :funding_project_fp_creators  
     # belongs_to :user_fp_creators
     # has_many :funding_projects
-    def funding_project_attributes=(funding_project_attributes)
-        funding_project_attributes.values.each do |fp_attribute|
-        fp = FpProject.find_or_create_by(fp_attribute) 
-        self.funding_projects << fp
-        end 
-    end
+    # def funding_project_attributes=(funding_project_attributes)
+    #     funding_project_attributes.values.each do |fp_attribute|
+    #     fp = FpProject.find_or_create_by(fp_attribute) 
+    #     self.funding_projects << fp
+    #     end 
+    # end
 
     # def fpc_user_name
     #     self.try(:user).try(:name)
