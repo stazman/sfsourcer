@@ -7,7 +7,7 @@ adding require_login to all relevant actions for fanvorites
 Questions:
 when do we need a writer for the association? in a has many trough?
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
-
+how to bypass index and get to show?? is this a general issue? wrong id parameters? was an issue with user/fp_creator
 To Do for Rails Project:
 
 
@@ -96,6 +96,33 @@ when do you use a custom writer as opposed to other methods to make associations
 can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
 
 UNUSED
+
+    <h2>Creator Profile</h2>
+<% @funding_project.fp_creators.each do |fpc| %>
+    <ul>
+        <li><h2>Creator Profile</h2></li>
+        <li>Creator: <%= fpc.creator_name %></li><br><br>
+        <li>Location: <%= fpc.location %></li><br><br>
+        <li>About Creator: <%= fpc.creator_about %></li><br><br>
+        <li>Creator Website: <%= fpc.creator_site %></li><br><br>
+        <li>Creator Instagram: <%= fpc.instagram_url %></li><br><br>
+        <li>Creator Twitter:<%= fpc.twitter_url %></li><br><br>
+        <li>Creator Facebook:<%= fpc.facebook_url %></li><br><br>
+        <li>Creator Blog: <%= fpc.blog_url %></li>
+    </ul>
+<% end %>
+
+
+
+<%# <h3>Select an SFSourcer Project by Category </h3> %>
+
+<%# <h4><%= @funding_categories.each do |fc| %>
+<%# <ul> %>
+    <%# <li><%= link_to fc.name, funding_category_path(fc) %>
+<%# </ul> %>
+<%# <% end %> 
+
+<%# <h3>SFSourcer Projects Nearing Final Countdown:</h3> %>
 
 class FpCreatorsController < ApplicationController
   before_action :require_login

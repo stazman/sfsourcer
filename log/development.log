@@ -56892,3 +56892,113 @@ Processing by FundingProjectsController#new as HTML
 Completed 200 OK in 115ms (Views: 111.4ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/funding_projects" for 127.0.0.1 at 2018-08-08 11:57:27 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGYqXyXv30DYUvjCojOmI9PbNCQtt6lSXfdN9JMNSBl77omJSplhA8sjKMYIeW91aDJPnmQRbnOlFyE+/+o3hA==", "funding_project"=>{"title"=>"aa", "description"=>"aa", "funding_goal"=>"100", "fp_creator_ids"=>"1", "funding_project"=>{"creator_name"=>"aa", "location"=>"aa", "creator_about"=>"aa", "creator_site"=>"aa", "instagram_url"=>"aa", "twitter_url"=>"aa", "facebook_url"=>"aa", "blog_url"=>"aa"}}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameters: :fp_creator_ids, :funding_project
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:16
+  [1m[36mFundingProject Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "aa"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:16
+  [1m[36mFundingProject Create (1.7ms)[0m  [1m[32mINSERT INTO "funding_projects" ("title", "description", "funding_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aa"], ["description", "aa"], ["funding_goal", 100], ["created_at", "2018-08-08 16:57:27.335108"], ["updated_at", "2018-08-08 16:57:27.335108"]]
+  ↳ app/controllers/funding_projects_controller.rb:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:16
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 5.3ms)
+
+
+  
+NoMethodError (undefined method `user_funding_project_path' for #<FundingProjectsController:0x007fdba70ab790>
+Did you mean?  new_funding_project_path
+               edit_funding_project_path):
+  
+app/controllers/funding_projects_controller.rb:17:in `create'
+Started POST "/funding_projects" for 127.0.0.1 at 2018-08-08 11:58:12 -0500
+Processing by FundingProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGYqXyXv30DYUvjCojOmI9PbNCQtt6lSXfdN9JMNSBl77omJSplhA8sjKMYIeW91aDJPnmQRbnOlFyE+/+o3hA==", "funding_project"=>{"title"=>"aa", "description"=>"aa", "funding_goal"=>"100", "fp_creator_ids"=>"1", "funding_project"=>{"creator_name"=>"aa", "location"=>"aa", "creator_about"=>"aa", "creator_site"=>"aa", "instagram_url"=>"aa", "twitter_url"=>"aa", "facebook_url"=>"aa", "blog_url"=>"aa"}}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Unpermitted parameters: :fp_creator_ids, :funding_project
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:16
+  [1m[36mFundingProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "aa"], ["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/funding_projects_controller.rb:16
+Redirected to http://localhost:3000/funding_projects
+Completed 302 Found in 31ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/funding_projects" for 127.0.0.1 at 2018-08-08 11:58:13 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:5
+  Rendered funding_projects/index.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `creator_name' for #<FundingProject:0x007fdba315bb80>
+Did you mean?  created_at):
+     5: <p><% @funding_projects.each do |fp| %></p>
+     6:     <ul>
+     7:         <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
+     8:         <p>Creator: <li><%= fp.creator_name %> </li></p>
+     9:         <p>Description: <li><%= fp.description %> </li></p>
+    10:         <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
+    11:     </ul><br><br>
+  
+app/views/funding_projects/index.html.erb:8:in `block in _app_views_funding_projects_index_html_erb___2000814683363782114_70290655629200'
+app/views/funding_projects/index.html.erb:5:in `_app_views_funding_projects_index_html_erb___2000814683363782114_70290655629200'
+Started GET "/funding_projects" for 127.0.0.1 at 2018-08-08 12:02:52 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:5
+  Rendered funding_projects/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `fp_creators' for nil:NilClass):
+    10:     </ul><br><br>
+    11:     <% end %>
+    12:     <h2>Creator Profile</h2>
+    13: <% @funding_project.fp_creators.each do |fpc| %>
+    14:     <ul>
+    15:         <li><h2>Creator Profile</h2></li>
+    16:         <li>Creator: <%= fpc.creator_name %></li><br><br>
+  
+app/views/funding_projects/index.html.erb:13:in `_app_views_funding_projects_index_html_erb___2000814683363782114_70290685990180'
+Started GET "/funding_projects" for 127.0.0.1 at 2018-08-08 12:03:50 -0500
+Processing by FundingProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering funding_projects/index.html.erb within layouts/application
+  [1m[36mFundingProject Load (0.2ms)[0m  [1m[34mSELECT "funding_projects".* FROM "funding_projects"[0m
+  ↳ app/views/funding_projects/index.html.erb:5
+  Rendered funding_projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 133ms (Views: 128.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/funding_projects/1" for 127.0.0.1 at 2018-08-08 12:04:36 -0500
+Processing by FundingProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/funding_projects_controller.rb:21
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `funding_projects' for nil:NilClass):
+  
+app/controllers/funding_projects_controller.rb:22:in `show'
