@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
   
 
-  get 'fp_creators/index'
-  get 'fp_creators/new'
-  get 'fp_creators/show'
-  get 'fp_creators/edit'
-  get 'fp_creators/name'
-  root 'static#home'
+  # get 'fp_creators/index'
+  # get 'fp_creators/new'
+  # get 'fp_creators/show'
+  # get 'fp_creators/edit'
+  # get 'fp_creators/name'
 
   # namespace :admin do
   #   resources :funding_categories, only: [:new, :create, :edit, :update, :destroy]
   # end
+  
+  root 'static#home'
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
+  resources :lit_fan_authors
 
   # resources :addresses
   # resources :fp_categories
@@ -40,6 +42,10 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
+  end
+
+  resources :users do
+    resources :fp_creators, only: [:index, :new, :show, :edit]
   end
 
   resources :lit_fan_authors do

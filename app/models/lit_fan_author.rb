@@ -9,7 +9,7 @@ class LitFanAuthor < ApplicationRecord
         end
     end
 
-    def self.most_works
-      self.lit_fan_works.sort.last
-    end
+    # def self.most_works
+    #   self.lit_fan_works.sort.last
+    # end
 end
