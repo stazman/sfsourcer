@@ -55801,3 +55801,245 @@ Migrating to CreateUserFpCreators (20180808103550)
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-08-08 06:51:43 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 502ms (Views: 490.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-08 06:51:49 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 109ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 06:51:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 113ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-08 06:51:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cw8q+IK1PsAfAdWYsgTASdU/9m88dHD12bv3m4+3SD8ep6eghVUu5/wmiU7oO0sUZA0EkK8IoqYpvcLKpiTohA==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 117ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-08 06:51:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (1.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 122ms (Views: 111.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/fp_creators/new" for 127.0.0.1 at 2018-08-08 06:52:01 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:97: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:97: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1/fp_creators/new" for 127.0.0.1 at 2018-08-08 06:52:35 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:20
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 107ms (Views: 63.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-08 06:52:44 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tPjCr68ixTU7bI7w7VOOIElcJe6iTDMIEeVUYLLjduFPEswPusQuzkyQoq1IPipYELAtwI2qgXu+ImupWP/EQw==", "fp_creator"=>{"name"=>"a", "location"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:29
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 22ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-08 06:52:44 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-08 06:59:51 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 603ms (Views: 556.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-08 06:59:57 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 111ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 06:59:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 129ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-08 07:00:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cOkl5htO0VB5E81R31Bp0LDeFdgI5EQ7n/NE9boe9TxzVlk5o8rI0yYw8pUJKJrmORKuNhCb+St7VTrburCZ7w==", "sessions"=>{"email"=>"s@s.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/login
+Completed 302 Found in 34ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 07:00:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-08 07:00:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r4JFr1sMERfQaINV3onO1nbOXzUR3pMYxu/XHwqEAoJsCuZ5NHqvVMMZU1F0wweAzSckj1h4VDk+D7vVZmN9Hw==", "sessions"=>{"email"=>"s@s.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 07:00:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-08 07:00:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 07:00:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 100ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-08 07:00:37 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 07:00:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-08 07:00:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOyrguH15aa3Mu7ls8TOSKiwtAQBkw+b2WyLB8e2eN0zU9ddWXH8JegR0SFlvD1+IXwP6hnssos9yvUpxxgUDg==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 117ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-08 07:00:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (1.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 101ms (Views: 92.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1/fp_creators/new" for 127.0.0.1 at 2018-08-08 07:00:50 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:20
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 107ms (Views: 58.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-08 07:05:32 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zh9SUK/S0NZsf6iynIhTz7mIzpYMxlIgQqn8n2cPhe5XYr3MKMJetJAqLiAjcZRpApc3BD1ympvc9M7lQSghWg==", "fp_creator"=>{"name"=>"a", "location"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:29
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 47ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-08 07:05:32 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 93ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-08 07:11:07 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pIYNCdwA1cNg0RWGYZxYzdHWi76LmIh7tfKnfeI5qKJnDq7fs3ZrgHOgxYLL1pGbaj/wBMI+T1pNEsu3jt7XPw==", "fp_creator"=>{"name"=>"a", "location"=>"a", "creator_about"=>"a", "creator_site"=>"a", "instagram_url"=>"a", "twitter_url"=>"a", "facebook_url"=>"a", "blog_url"=>"a"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:28
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 42ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-08 07:11:07 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 131ms (Views: 125.1ms | ActiveRecord: 0.0ms)
+
+

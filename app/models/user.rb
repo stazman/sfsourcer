@@ -2,7 +2,7 @@ class User < ApplicationRecord
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
     has_many :fp_creators
-    has_many :fp_creators, through: :user_fp_creators
+    # has_many :fp_creators, through: :user_fp_creators
     accepts_nested_attributes_for :fp_creators
 
     has_secure_password
