@@ -9,10 +9,11 @@ MAIN NAVBAR
 <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
     <ul>
-        <p><li>Creator: <%= fpc.creator_name %></li></p><br><br>
+        <p>Creator: <li><%= fpc.creator_name %></li></p><br><br>
         <li>Location: <%= fpc.location %></li><br><br>
         <li>About Creator: <%= fpc.creator_about %></li><br><br>
         <li>Creator Website: <%= fpc.creator_site %></li><br><br>
+        <li>Email: <%= fpc.email %></li><br><br>
         <li>Creator Instagram: <%= fpc.instagram_url %></li><br><br>
         <li>Creator Twitter:<%= fpc.twitter_url %></li><br><br>
         <li>Creator Facebook:<%= fpc.facebook_url %></li><br><br>

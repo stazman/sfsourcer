@@ -13,8 +13,11 @@ class FundingProjectsController < ApplicationController
 
   def create
     @funding_project = FundingProject.new(funding_project_params)
-    @funding_project.save
-    redirect_to @funding_project
+    if @funding_project.save
+      redirect_to @funding_project
+    else
+      render :new
+    end
   end
 
   def show
@@ -38,21 +41,7 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(
-        :title, 
-        :description, 
-        :funding_goal, 
-        fp_creator_ids: [], 
-        fp_creator_attributes:
-      [:creator_name,
-       :location,
-       :creator_about,
-       :creator_site,
-       :instagram_url,
-       :twitter_url,
-       :facebook_url,
-       :blog_url    
-      ]) 
+    params.require(:funding_project).permit(:title, :description, :funding_goal, fp_creator_ids: [], fp_creators_attributes: [:creator_name, :location, :creator_about, :creator_site, :email, :instagram_url, :twitter_url, :facebook_url, :blog_url]) 
   end
 
   def require_login
