@@ -1,14 +1,18 @@
-<h1>Creator Profile for <%= @fp_creator.name %></h1><br>
-<h3>Connected to User <%= @current_user.name %></h3>
 
-<p>Name: <%= @fp_creator.name %></p>
-<p>Location: <%= @fp_creator.location %>
-<p>About Creator: <%= @fp_creator.creator_about %>
-<p>Creator Website: <%= @fp_creator.creator_site %>
-<p>Creator Instagram: <%= @fp_creator.instagram_url %>
-<p>Creator Twitter:<%= @fp_creator.twitter_url %>
-<p>Creator Facebook:<%= @fp_creator.facebook_url %>
-<p>Creator Blog: <%= @fp_creator.blog_url %><br><br>
+  <% @user.fp_creators.each do |fpc| %>
+    <%# <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+  <%# <% end %> %> %>
+
+
+<p>Name: <%= fpc.name %></p>
+<p>Location: <%= fpc.location %>
+<p>About Creator: <%= fpc.creator_about %>
+<p>Creator Website: <%= fpc.creator_site %>
+<p>Creator Instagram: <%= fpc.instagram_url %>
+<p>Creator Twitter:<%= fpc.twitter_url %>
+<p>Creator Facebook:<%= fpc.facebook_url %>
+<p>Creator Blog: <%= fpc.blog_url %><br><br>
+<% end %>
 <%# add last logged in %>
 
-<h2><%= link_to "Make a New Sourcer Project", new_funding_project_path %> </h2><br>
+<%# <h2><%= link_to "Make a New Sourcer Project", new_funding_project_path %> </h2><br> %>

@@ -3,6 +3,10 @@ current commit notepad:
 
 adding require_login to all relevant actions for fanvorites
 
+
+Questions:
+when do we need a writer for the association? in a has many trough?
+
 To Do for Rails Project:
 
 
@@ -94,7 +98,18 @@ can I make USERS/1/SF_favs into a nested resource or do I need to do soomething 
 
 UNUSED
 
-    # has_many :pledges
+ , addresses_attributes: [:address1, :address2, :city, :state, :zip, :user_id], created_funding_project_attributes: [:creator_name, :title, :description]
+    a = User.create(name: "a", email: "a@a.com", password: "a")
+# aa fantastic_cats = FundingProject.create(creator_name: "Frank J Inc.", title: "Fantastic Cats", description: "A collection of short stories about cats with science fiction and fantasy settings.", funding_goal: 500, user_id: 1)
+# frank_jones_cats_pledge = Pledge.create(amount: 10, user_id: 1, funding_project_id: 1)
+aa = Address.create(address1: "100 Main Street", city: "Springfield", state: "Ohio", zip: "45454", user_id: 1)
+
+work1 = LitFanWork.create(title: "Dune")
+author1 = LitFanAuthor.create(name: "Frank Herbert")
+genre1 = LitFanGenre.create(name: "Classic Science Fiction")
+
+
+# has_many :pledges
     # belongs_to :user
     # belongs_to :fp_creator, :class_name => "User"
     # belongs_to :fp_participant, :class_name => "User"
