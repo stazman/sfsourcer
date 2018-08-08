@@ -14,6 +14,30 @@ MAIN NAVBAR
 <h2>Project Title: <%= f.text_field :title %> </h2><br>
 <h3>Description: <%= f.text_area :description %></h3><br>
 <h3>Funding Goal (in U.S. dollars): <%= f.text_field :funding_goal %></h3>
+<h3><%= collection_radio_buttons(:fp_creator_ids, FpCreator.all, :id, :title) %>
+    <%= f.fields_for :fp_creator, @funding_project.fp_creators.build do |fpc_fields|%><br>
+        <%= fpc_fields.label "Location "%>
+        <%= fpc_fields.text_field :location %><br>
+        <%# <%= fpc_fields.label "Name of Verified for Project "%>
+        <%# <%= fpc_fields.text_field "name_of_verified" %>
+        <%= fpc_fields.label "About Creator" %>
+        <%= fpc_fields.text_area :creator_about %><br>
+        <%= fpc_fields.label "Creator Website" %>
+        <%= fpc_fields.text_field :creator_site %><br>
+        <%= fpc_fields.label "Instagram" %>
+        <%= fpc_fields.text_field :instagram_url %><br>
+        <%= fpc_fields.label "Twitter" %>
+        <%= fpc_fields.text_field :twitter_url %><br>
+        <%= fpc_fields.label "Facebook" %>
+        <%= fpc_fields.text_field :facebook_url %><br>
+        <%= fpc_fields.label "Blog" %>
+        <%= fpc_fields.text_field :blog_url %><br>
+        <%= fpc_fields.submit %>
+        <% end %>
+
+    <% end %><br><br><br>
+        <label>Find or write the author's name ...</label><br><br>
+d
 <%= f.submit "Create Project"%>
 <% end %>
 
