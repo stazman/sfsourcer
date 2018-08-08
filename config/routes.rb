@@ -31,9 +31,9 @@ Rails.application.routes.draw do
     # , only: [:index, :new, :show, :edit]
   end
 
-  resources :funding_projects do
-    resources :fp_creators, only: [:show]
-  end
+  # resources :funding_projects do
+  #   resources :fp_creators, only: [:show]
+  # end
 
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]

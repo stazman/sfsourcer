@@ -56596,3 +56596,42 @@ Migrating to CreateFundingProjectsFpCreators (20180808160636)
   ↳ db/seeds.rb:7
   [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:7
+Started GET "/" for 127.0.0.1 at 2018-08-08 11:35:49 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 505ms (Views: 492.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-08 11:35:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 112ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-08 11:36:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"drZYMs8cBOX57Y0xVNmI7j+8NsYxoQvYG67TGbnXJgZ1CSTtd5gdZqbOsvWCoXvYtnCNKCnetsj/CK03uXlK1Q==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 109ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-08 11:36:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (1.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 121ms (Views: 111.8ms | ActiveRecord: 2.0ms)
+
+

@@ -81,16 +81,14 @@ class FpCreatorsController < ApplicationController
 
   def fp_creator_params
     params.require(:fp_creator).permit(
-      :name,
+      :creator_name,
       :location,
       :creator_about,
       :creator_site,
       :instagram_url,
       :twitter_url,
       :facebook_url,
-      :blog_url,
-      :user_id,
-      
+      :blog_url,    
       # "fpc_user_name"
     )
   end

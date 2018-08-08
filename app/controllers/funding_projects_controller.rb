@@ -13,8 +13,6 @@ class FundingProjectsController < ApplicationController
 
   def create
     @funding_project = FundingProject.new(funding_project_params)
-    @user = User.find_by(id: params[:user_id])
-    @funding_project = @user.funding_projects.find_by(id: params[:id])
     @funding_project.save
     redirect_to user_funding_project_path(@user, @funding_project)
   end
@@ -39,14 +37,21 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit(
-      :creator_name,
-      :fp_participant_id,
-      :fp_creator_id,
-      :title,
-      :description, 
-      :funding_goal, 
-      :user_id)
+    params.require(:funding_project).permit
+      (:title, 
+        :description, 
+        :funding_goal, 
+        fp_creator_ids: [], 
+        fp_creator_attributes:
+      [:creator_name,
+       :location,
+       :creator_about,
+       :creator_site,
+       :instagram_url,
+       :twitter_url,
+       :facebook_url,
+       :blog_url,    
+      ]) 
   end
 
   def require_login
