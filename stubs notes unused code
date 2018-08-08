@@ -6,6 +6,7 @@ adding require_login to all relevant actions for fanvorites
 
 Questions:
 when do we need a writer for the association? in a has many trough?
+does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
 
 To Do for Rails Project:
 
