@@ -37,8 +37,8 @@ class FundingProjectsController < ApplicationController
   private
 
   def funding_project_params
-    params.require(:funding_project).permit
-      (:title, 
+    params.require(:funding_project).permit(
+        :title, 
         :description, 
         :funding_goal, 
         fp_creator_ids: [], 
@@ -50,7 +50,7 @@ class FundingProjectsController < ApplicationController
        :instagram_url,
        :twitter_url,
        :facebook_url,
-       :blog_url,    
+       :blog_url    
       ]) 
   end
 
