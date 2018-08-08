@@ -53805,3 +53805,1233 @@ Unpermitted parameters: :location, :creator_about, :creator_site, :instagram_url
 Completed 200 OK in 86ms (Views: 75.4ms | ActiveRecord: 0.4ms)
 
 
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:54:17 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:76: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:76: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:54:46 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DRF3G+lHe6yqLZZTCXH4eTeA7Um3LeGDRY9afExrxgIV8YVQptWG2rPnZYsVzR8tnkPcamwAyaYfUF6UM3hcxA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 108ms (Views: 72.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:54:49 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g1Ek2a1i4b53jCPQ1p6dOZ5dpMT1az36Mt+4wqh/AxabsdaS4vAcyG5G0AjKInptN56V5y5GFd9oALwq12yZ0A==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 80ms (Views: 68.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:54:51 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sxaCAPsfbJq008c5uJf0V53bUHHYxIzWj6no/JWJoqKr9nBLtI2R7K0ZNOGkKxMDNBhhUgPppPPVduwU6po4ZA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:54:52 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lqLEFmj2LK74Z4rpOVE2bcnUOwRS+AcLVOh6T6HIcoWOQjZdJ2TR2OGteTEl7dE5YBcKJ4nVLy4ON36n3tvoQw==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 83ms (Views: 77.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:56:53 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:77: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/fp_creators_controller.rb:77: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:32 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:41 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4no+JBihgKulwzbVHKExI1cKvJqrTVzd+J+jboYEoav6msxvVzN93bwJxQ0AHdZ3/smNuXBgdPiiQKeG+Rc7bQ==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 93ms (Views: 57.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:43 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6LLc6s9M8PbyIFvUV5U61BCIsj22ZfZzT7wnT8WReKvQjk45K/OtcICcrdN4rO/+YET6y30v/yX4fR1QAXfJA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:46 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/zP0ENzeC4HLAOgvIYiOAyLBDB5nB1qsz3rTyVoHvSTHD2bDOGFWB7m8HigOsVspUg1E6KxNU/p4u+nWnuEMg==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:47 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f2y1IYKcyVgJ0onQmCFoXCIV+QSLn98JWQOMNjEU8btnjEdqzQ40LhAYegiEnY8Ii9bIJ1Cy9ywD3IjeTgdrfQ==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 83ms (Views: 73.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:57:47 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nqmexHCtjjG44MB2AS+M2z8nmOdy2EVVXtCLfr8g05GGSWyPPz9zR6EqM64dk2uPluSpxKn1bXAED4+WwDNJVw==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 115ms (Views: 107.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:58:12 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/fp_creators_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:58:35 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/fp_creators_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 04:59:00 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uw/kpiX9ifCtY0EPwQThWGZw7edF4A4wuOs1qnj+46lL7xbtam90hrSpstfduAYMz7PcxJ7NJhXiNDFCB+15bw==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 35ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 04:59:00 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 05:00:10 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-07 05:00:14 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-07 05:00:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLW5kXVumbFLFn+NvYDEuxFAelfsl+TqbGZM+rRVwqP1omg4PjuJBl88WXT6w4hXKNq9jQa2CfDMTiXN17RRwQ==", "sessions"=>{"email"=>"s@s.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@s.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 88ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-08-07 05:00:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 107ms (Views: 97.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 05:00:26 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 128ms (Views: 87.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 05:00:35 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lUHGrGjlTXXUkDT+lWHMh5jUatGeyq+2AqJ/fUCp3Nb/0m86wiOeEZBXMn/vS76vO5WoE+gU6H+BkfIUP8AMHQ==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:23
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"fp_creators", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/fp_creators_controller.rb:24:in `create'
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 13:24:07 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 567ms (Views: 535.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 13:24:34 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/XmydwQgh79L1mN+eNharWQLdCUBPLtKnQQvXlQ2vY4wKTwF5Mqad7hve4kEn/HNbabFZ2LR4kUFmKTmQOuPA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 4.3ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"R/XmydwQgh79L1mN+eNharWQLdCUBPLtKnQQvXlQ2vY4wKTwF5Mqad7hve4kEn/HNbabFZ2LR4kUFmKTmQOuPA==", "fp_creator"=><ActionController::Parameters {"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"} permitted: false>, "commit"=>"Create Fp creator", "controller"=>"fp_creators", "action"=>"create"} permitted: false>):
+  
+app/controllers/fp_creators_controller.rb:19:in `create'
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 13:33:04 -0500
+Processing by FpCreatorsController#create as HTML
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 13:33:14 -0500
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/XmydwQgh79L1mN+eNharWQLdCUBPLtKnQQvXlQ2vY4wKTwF5Mqad7hve4kEn/HNbabFZ2LR4kUFmKTmQOuPA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"fp_creators", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/fp_creators_controller.rb:21:in `create'
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/XmydwQgh79L1mN+eNharWQLdCUBPLtKnQQvXlQ2vY4wKTwF5Mqad7hve4kEn/HNbabFZ2LR4kUFmKTmQOuPA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"fp_creators", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/fp_creators_controller.rb:21:in `create'
+Started GET "/" for 127.0.0.1 at 2018-08-07 13:57:07 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 32ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 13:57:34 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hom4" for 127.0.0.1 at 2018-08-07 13:58:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/hom4"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2018-08-07 13:58:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-07 13:59:28 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 445ms (Views: 440.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-08-07 13:59:45 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFpCreator Load (1.5ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:28
+Completed 404 Not Found in 22ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FpCreator with 'id'=1):
+  
+app/controllers/fp_creators_controller.rb:28:in `show'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:1
+Started GET "/" for 127.0.0.1 at 2018-08-07 14:05:41 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 380ms (Views: 368.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-08-07 14:05:58 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFpCreator Load (1.4ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:28
+Completed 404 Not Found in 25ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FpCreator with 'id'=1):
+  
+app/controllers/fp_creators_controller.rb:28:in `show'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 14:06:05 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 174ms (Views: 121.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 14:06:36 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E8XuRBECaA4zAv6XISqOWzQmDSw3BBkM3xbzXABEgEps8Kx92oHAeRDMGvT825D2tAC76T6LrGjhdIFy4Bf0gA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"E8XuRBECaA4zAv6XISqOWzQmDSw3BBkM3xbzXABEgEps8Kx92oHAeRDMGvT825D2tAC76T6LrGjhdIFy4Bf0gA==", "fp_creator"=><ActionController::Parameters {"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"} permitted: false>, "commit"=>"Create Fp creator", "controller"=>"fp_creators", "action"=>"create"} permitted: false>):
+  
+app/controllers/fp_creators_controller.rb:15:in `create'
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 14:07:08 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E8XuRBECaA4zAv6XISqOWzQmDSw3BBkM3xbzXABEgEps8Kx92oHAeRDMGvT825D2tAC76T6LrGjhdIFy4Bf0gA==", "fp_creator"=>{"name"=>"s", "location"=>"s", "creator_about"=>"s", "creator_site"=>"s", "instagram_url"=>"s", "twitter_url"=>"s", "facebook_url"=>"s", "blog_url"=>"s"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 52ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 14:07:18 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:1
+  [1m[36mFpCreator Create (3.2ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "s"], ["user_id", 3], ["created_at", "2018-08-07 19:11:39.912379"], ["updated_at", "2018-08-07 19:11:39.912379"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+Started GET "/" for 127.0.0.1 at 2018-08-07 16:09:20 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 163ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_creators/1" for 127.0.0.1 at 2018-08-07 16:09:28 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:28
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+    2: <h3>Connected to User <%= @current_user.name %></h3>
+    3: 
+    4: <p>Name: <%= @fp_creator.name %></p>
+    5: <p>Location: <%= @fp_creator.location %>
+  
+app/views/fp_creators/show.html.erb:2:in `_app_views_fp_creators_show_html_erb___2915509301956729434_70294768593040'
+Started GET "/fp_projects/new" for 127.0.0.1 at 2018-08-07 16:09:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fp_projects/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 16:10:03 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 142ms (Views: 83.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 16:10:12 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EfR4B9b0x7TV0J64tUwiCZG5ctBSCFyHMTYU61mzljhuwTo+HXdvw/YeettovTykEZ/EFVuH6eMPVGbFueDi8g==", "fp_creator"=>{"name"=>"d", "location"=>"d", "creator_about"=>"d", "creator_site"=>"d", "instagram_url"=>"d", "twitter_url"=>"d", "facebook_url"=>"d", "blog_url"=>"d"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[36mFpCreator Create (2.7ms)[0m  [1m[32mINSERT INTO "fp_creators" ("name", "location", "creator_about", "creator_site", "instagram_url", "twitter_url", "facebook_url", "blog_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "d"], ["location", "d"], ["creator_about", "d"], ["creator_site", "d"], ["instagram_url", "d"], ["twitter_url", "d"], ["facebook_url", "d"], ["blog_url", "d"], ["created_at", "2018-08-07 21:10:12.448648"], ["updated_at", "2018-08-07 21:10:12.448648"]]
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Redirected to http://localhost:3000/fp_creators/2
+Completed 302 Found in 20ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/fp_creators/2" for 127.0.0.1 at 2018-08-07 16:10:12 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFpCreator Load (0.4ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:28
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+    2: <h3>Connected to User <%= @current_user.name %></h3>
+    3: 
+    4: <p>Name: <%= @fp_creator.name %></p>
+    5: <p>Location: <%= @fp_creator.location %>
+  
+app/views/fp_creators/show.html.erb:2:in `_app_views_fp_creators_show_html_erb___2915509301956729434_70294726165420'
+Started GET "/" for 127.0.0.1 at 2018-08-07 16:25:24 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 497ms (Views: 485.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sourcer_projects" for 127.0.0.1 at 2018-08-07 16:25:46 -0500
+Processing by StaticController#sourcer_projects as HTML
+  Rendering static/sourcer_projects.html.erb within layouts/application
+  Rendered static/sourcer_projects.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 16:26:06 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting ']'
+      "location"
+       ^
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/users_controller.rb:57: syntax error, unexpected ']', expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/users_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting ']'
+app/controllers/users_controller.rb:57: syntax error, unexpected ']', expecting keyword_end
+app/controllers/users_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 16:27:04 -0500
+Processing by UsersController#show as HTML
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 16:27:14 -0500
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 184ms (Views: 138.2ms | ActiveRecord: 3.2ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 122ms (Views: 97.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 16:27:22 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 145ms (Views: 97.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 16:27:31 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bj3A0QTA5vwxSQF9FU3evTqa4Ou1F9nO45QeB+6gNloErmlHrgY1mHWOB/xvZ6yVmdsiKcPJngdgp5NukcnmkQ==", "fp_creator"=>{"name"=>"e", "location"=>"e", "creator_about"=>"e", "creator_site"=>"e", "instagram_url"=>"e", "twitter_url"=>"e", "facebook_url"=>"e", "blog_url"=>"e"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 16:27:31 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 16:37:30 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KuR/hlrRSvAM8AQ3Uyja7lEpy1g97tsiR6mZZ3WVjbhV0T2/kVLihy8+4FSO2cRD0Q99nTRhbkZ5y+tJlcb5cg==", "fp_creator"=>{"name"=>"e", "location"=>"e", "creator_about"=>"e", "creator_site"=>"e", "instagram_url"=>"e", "twitter_url"=>"e", "facebook_url"=>"e", "blog_url"=>"e"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 49ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 16:37:30 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 148ms (Views: 143.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 16:38:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 105ms (Views: 96.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 16:38:37 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 125ms (Views: 114.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 16:38:52 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fH9sKj4GxcEQ+IS4mkarN38RTf851mb9r2J//wlu8jUW7MW8lMAWpVQ/gjngbNkf3FCPPU8IITQsUfKWdgci/g==", "fp_creator"=>{"name"=>"f", "location"=>"f", "creator_about"=>"f", "creator_site"=>"f", "instagram_url"=>"f", "twitter_url"=>"f", "facebook_url"=>"f", "blog_url"=>"f"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:20
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 16:38:52 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 69ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 18:54:06 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 18:57:08 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URuIoz18i0pXG3MY0E6BvpKqadV1galEOY5+VeHOBDguLsqa9v8jPXTVl3sNv58TEozfEHwOHCAH7Ax7AZ1w8g==", "fp_creator"=>{"name"=>"f", "location"=>"f", "creator_about"=>"f", "creator_site"=>"f", "instagram_url"=>"f", "twitter_url"=>"f", "facebook_url"=>"f", "blog_url"=>"f"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 47ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 18:57:09 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 18:58:00 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 18:59:03 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:00:23 -0500
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/fp_creators_controller.rb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:00:40 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URuIoz18i0pXG3MY0E6BvpKqadV1galEOY5+VeHOBDguLsqa9v8jPXTVl3sNv58TEozfEHwOHCAH7Ax7AZ1w8g==", "fp_creator"=>{"name"=>"f", "location"=>"f", "creator_about"=>"f", "creator_site"=>"f", "instagram_url"=>"f", "twitter_url"=>"f", "facebook_url"=>"f", "blog_url"=>"f"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 41ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:00:40 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 119ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 19:01:00 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 412ms (Views: 395.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:01:10 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 230ms (Views: 166.0ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:01:19 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsLDdh7/n94pXwcudCkLY7xtS/RQxbXlDKTk0kmerEGx94FP1Xw3qQqR402p2BXOPEv9MVlKAIEyxpb8qc3Yiw==", "fp_creator"=>{"name"=>"v", "location"=>"v", "creator_about"=>"v", "creator_site"=>"v", "instagram_url"=>"v", "twitter_url"=>"v", "facebook_url"=>"v", "blog_url"=>"v"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:26
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 20ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:01:19 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:07:34 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsLDdh7/n94pXwcudCkLY7xtS/RQxbXlDKTk0kmerEGx94FP1Xw3qQqR402p2BXOPEv9MVlKAIEyxpb8qc3Yiw==", "fp_creator"=>{"name"=>"v", "location"=>"v", "creator_about"=>"v", "creator_site"=>"v", "instagram_url"=>"v", "twitter_url"=>"v", "facebook_url"=>"v", "blog_url"=>"v"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 60ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-07 19:07:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 159ms (Views: 147.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:08:02 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:08:11 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F1s/c1Fv1XxQvRkeN/EvMu+wwbQ3i3Yw5xxrLImEwBF9yJbl+6kGGBR6H59N210aTPEDdkFVMflkL+ZF9u0Q2g==", "fp_creator"=>{"name"=>"w", "location"=>"w", "creator_about"=>"w", "creator_site"=>"w", "instagram_url"=>"w", "twitter_url"=>"w", "facebook_url"=>"w", "blog_url"=>"w"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:08:11 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:10:17 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xsR7aQvE1SfW+vWQ2YEamtvkwtrDpvdKLRXQ4Y+gPni58TlQwEd9UPU0EfMEcAQ3W8J0H8opQi4Td6LPb/NKsg==", "fp_creator"=>{"name"=>"w", "location"=>"w", "creator_about"=>"w", "creator_site"=>"w", "instagram_url"=>"w", "twitter_url"=>"w", "facebook_url"=>"w", "blog_url"=>"w"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 45ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:10:17 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 83ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:11:48 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xsR7aQvE1SfW+vWQ2YEamtvkwtrDpvdKLRXQ4Y+gPni58TlQwEd9UPU0EfMEcAQ3W8J0H8opQi4Td6LPb/NKsg==", "fp_creator"=>{"name"=>"w", "location"=>"w", "creator_about"=>"w", "creator_site"=>"w", "instagram_url"=>"w", "twitter_url"=>"w", "facebook_url"=>"w", "blog_url"=>"w"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 44ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:11:49 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 134ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:19:21 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xsR7aQvE1SfW+vWQ2YEamtvkwtrDpvdKLRXQ4Y+gPni58TlQwEd9UPU0EfMEcAQ3W8J0H8opQi4Td6LPb/NKsg==", "fp_creator"=>{"name"=>"w", "location"=>"w", "creator_about"=>"w", "creator_site"=>"w", "instagram_url"=>"w", "twitter_url"=>"w", "facebook_url"=>"w", "blog_url"=>"w"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 44ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:19:21 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 19:19:37 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 156ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-07 19:19:42 -0500
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-07 19:19:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9tTKOCwdIJofxje50DqbTfQ+jdcyal5+1gZeI6W6bUAmgOmFi8m9hElZzRQfm2HfKuTnKpwLBOnBv3upkcVjQ==", "sessions"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-07 19:19:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.4ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 115ms (Views: 106.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:19:55 -0500
+Processing by FpCreatorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 113ms (Views: 106.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:20:04 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iQx0DFflKPY6nmQTLdM+UhGtcC7AzAbyB70oa6oQzBf/GaG0JVZvTSZsu2JWlPTvCZ40NbHLWafhzTz1oYfmVg==", "fp_creator"=>{"name"=>"c", "location"=>"c", "creator_about"=>"c", "creator_site"=>"c", "instagram_url"=>"c", "twitter_url"=>"c", "facebook_url"=>"c", "blog_url"=>"c"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:20:04 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-07 19:22:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (315.0ms)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_fp_creators_path' for #<#<Class:0x007fc67a358638>:0x007fc67912b7a8>
+Did you mean?  new_user_fp_creator_path
+               new_user_fp_creator_url
+               edit_user_fp_creator_path
+               new_fp_creator_path):
+     6: <h4><%= link_to "Sourcer Projects Page", "/sourcer_projects" %></h4><br>
+     7: 
+     8: <h3>Or make your own project!</h3>
+     9: <h4><%= link_to "Make a New Sourcer Project", new_user_fp_creators_path %></h4><br>
+    10: 
+    11: <%# <h3>Check out our fabulous features!</h3> %>
+    12: <%# <h4><%= link_to "Living Story Page", "/living_stories" %>
+  
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__4223569340962118041_70245205770560'
+Started GET "/users/1" for 127.0.0.1 at 2018-08-07 19:23:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"fp_creators", :id=>"1"}, missing required keys: [:user_id]):
+     6: <h4><%= link_to "Sourcer Projects Page", "/sourcer_projects" %></h4><br>
+     7: 
+     8: <h3>Or make your own project!</h3>
+     9: <h4><%= link_to "Make a New Sourcer Project", user_fp_creator_path %></h4><br>
+    10: 
+    11: <%# <h3>Check out our fabulous features!</h3> %>
+    12: <%# <h4><%= link_to "Living Story Page", "/living_stories" %>
+  
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__4223569340962118041_70245180867280'
+Started GET "/users/1" for 127.0.0.1 at 2018-08-07 19:29:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.4ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 91ms (Views: 83.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:29:31 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Creator Profile for <%= @fp_creator.name %></h1><br>
+    2: <h3>Connected to User <%= @current_user.name %></h3>
+    3: 
+    4: <p>Name: <%= @fp_creator.name %></p>
+  
+app/views/fp_creators/show.html.erb:1:in `_app_views_fp_creators_show_html_erb___1642421679100123596_70245207075020'
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:33:52 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/fp_creators/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/christopher_distasio/a-flatiron/PROJECTS/sfsourcer/app/views/fp_creators/show.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/fp_creators/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/fp_creators/show.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:34:11 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  Rendered fp_creators/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h3>Connected to User <%= @current_user.name %></h3>
+    2: 
+    3:   <% @user.fp_creators.each do |fpc| %>
+    4:     <%# <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
+  
+app/views/fp_creators/show.html.erb:1:in `_app_views_fp_creators_show_html_erb___1642421679100123596_70245204736220'
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:34:25 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.3ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/fp_creators/show.html.erb:2
+  Rendered fp_creators/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 84ms (Views: 77.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-07 19:35:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 103ms (Views: 94.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2018-08-07 19:35:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.1ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 69.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:35:16 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFpCreator Load (0.2ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/fp_creators/show.html.erb:2
+  Rendered fp_creators/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 79ms (Views: 70.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/fp_creators/1" for 127.0.0.1 at 2018-08-07 19:35:56 -0500
+Processing by FpCreatorsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:36
+  [1m[36mFpCreator Load (0.4ms)[0m  [1m[34mSELECT  "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ? AND "fp_creators"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_creators_controller.rb:37
+  Rendering fp_creators/show.html.erb within layouts/application
+  [1m[36mFpCreator Load (0.1ms)[0m  [1m[34mSELECT "fp_creators".* FROM "fp_creators" WHERE "fp_creators"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/fp_creators/show.html.erb:2
+  Rendered fp_creators/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 74ms (Views: 65.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2018-08-07 19:35:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSfFav Load (0.2ms)[0m  [1m[34mSELECT "sf_favs".* FROM "sf_favs" WHERE "sf_favs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 92ms (Views: 85.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/fp_creators/new" for 127.0.0.1 at 2018-08-07 19:36:01 -0500
+Processing by FpCreatorsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering fp_creators/new.html.erb within layouts/application
+  Rendered fp_creators/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 90ms (Views: 81.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/fp_creators" for 127.0.0.1 at 2018-08-07 19:36:14 -0500
+Processing by FpCreatorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y/ODeujAVq/0Au9YZ8Yq1uBvSX5KgfnAeVaofLQM7he95lbCmnMRFOjwMCkcgeBr+FwNZTuGppWfJrziv5vEVg==", "fp_creator"=>{"name"=>"g", "location"=>"g", "creator_about"=>"g", "creator_site"=>"g", "instagram_url"=>"ggg", "twitter_url"=>"g", "facebook_url"=>"g", "blog_url"=>"g"}, "commit"=>"Create Fp creator"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/fp_creators_controller.rb:27
+Redirected to http://localhost:3000/fp_creators
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/fp_creators" for 127.0.0.1 at 2018-08-07 19:36:14 -0500
+Processing by FpCreatorsController#index as HTML
+  Rendering fp_creators/index.html.erb within layouts/application
+  Rendered fp_creators/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+

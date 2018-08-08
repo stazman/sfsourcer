@@ -3,27 +3,41 @@ class FpCreatorsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   
   def index
-    @fp_creators = FpCreator.search(params[:term])
-  end
-
-  def show
-    @fp_creator = FpCreator.find(params[:id])
+    if params[:user_id]
+      @user = User.find_by(id: params[:user_id])
+      @fp_creator = @user.lit_fan_works
+    # end
+    # # This is if I only want to show the user as well as its fp_creator .. perhaps a later option; check lit_fan)works_controller for more code
+    else
+    @fp_creators = FpCreator.all
+    end
   end
 
   def new
-    @fp_creator = FpCreator.new
+    @fp_creator = FpCreator.new(user_id: params[:user_id])
   end
 
   def create
     @fp_creator = FpCreator.new(fp_creator_params)
+    # raise params.inspect
   
     # @fp_creator.lit_fan_works.build
       # = LitFanWork.where(fp_creator_id: params[:fp_creator_id])
 
-    if @fp_creator.save
-      redirect_to @fp_creator
+    @fp_creator.save
+    redirect_to @fp_creator
+    # else
+    #   render :new
+    # end
+  end
+
+  def show
+    if params[:user_id]
+      @user = User.find_by(id: params[:user_id])
+      @fp_creator = @user.fp_creators.find_by(id: params[:id])
+    #   # only if user to be included here, too
     else
-      render :new
+    @fp_creator = FpCreator.find(params[:id])
     end
   end
 
@@ -36,11 +50,9 @@ class FpCreatorsController < ApplicationController
 
     @fp_creator.update(fp_creator_params)
 
-    if @fp_creator.save
-      redirect_to @fp_creator
-    else
+      @fp_creator.save
+      redirect_to fp_creator_path(@fp_creator)
       render :edit
-    end
   end
 
   # Namespace destroy
@@ -70,7 +82,9 @@ class FpCreatorsController < ApplicationController
       "twitter_url",
       "facebook_url",
       "blog_url",
-      "user_id"
-      # funding_projects_attributes: [:title, :description, :funding_goal]
+      "user_id",
+      "fpc_user_name"
     )
   end
+end 
+     # funding_projects_attributes: [:title, :description, :funding_goal]

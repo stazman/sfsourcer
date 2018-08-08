@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:new, :create]
-  include UsersHelper
+  # include UsersHelper
 
   def index
     @users = User.all
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def show
       @user = User.find(params[:id]) 
-      @pledges = Pledge.where(:user_id == @user.id)
+      # @pledges = Pledge.where(:user_id == @user.id)
   end
 
   def edit
@@ -41,8 +41,24 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games], addresses_attributes: [:address1, :address2, :city, :state, :zip, :user_id], created_funding_project_attributes: [:creator_name, :title, :description])
-  
+    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games]
+      # , 
+      # fp_creator_ids:[],
+      # fp_creators_attributes:
+      # ["id",
+      # "name",
+      # "location",
+      # "creator_about",
+      # "last_logged_in",
+      # "fp_amt_created",
+      # "fp_amt_backed",
+      # "creator_site",
+      # "instagram_url",
+      # "twitter_url",
+      # "facebook_url",
+      # "blog_url",
+      # "user_id"]
+      )
   end
 
   def require_login

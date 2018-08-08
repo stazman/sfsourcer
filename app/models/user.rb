@@ -2,6 +2,7 @@ class User < ApplicationRecord
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
     has_many :fp_creators
+    accepts_nested_attributes_for :fp_creators
 
     has_secure_password
 
@@ -22,9 +23,14 @@ class User < ApplicationRecord
             #we do this to satisfy validations; it doesn't matter what we set as a password because the third-party password rules
             #sql ... where is select in sql and when a user with the email passed as self wasn't found then it made it an insert in sql
         end
-
     end
 
+    def fp_creator_attributes=(fp_creator_attributes)
+        fp_creator_attributes.values.each do |fpc_attribute|
+        fpc = FpCreator.find_or_create_by(fpc_attribute) 
+        self.fp_creators << fpc unless fpc.name == ""
+        end 
+    end
 
     # before_save :make_name_titlecase
 
