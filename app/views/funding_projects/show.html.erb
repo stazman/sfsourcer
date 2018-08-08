@@ -1,42 +1,26 @@
 MAIN NAVBAR 
 
-<h1><%= link_to @funding_project.title, funding_project_path(@funding_project) %></h1>
-<h3> by <%= user_path(@funding_project) %></h3>
+<h1>Your New Sourcer Project</h1>
 
-<h1><%= @funding_project.title %></h1><br>
-
-<%# <h3>By: <%= link_to fp_creator_name, fp_creator_path %><br> %>
-
+<h2><%= @funding_project.title %></h2>
 <p>Description: <%= @funding_project.description %> </p><br>
-<p>Funding Goal: <%= @funding_project.funding_goal %> </p><br>
+<p>Funding Goal: <%= @funding_project.funding_goal %> </p><br><br>
 
-<h3>Total Pledges So Far:</h3>
-<%= @funding_project.total_pledges.sum  %><br><br>
+<h2>Creator/Creator Team Profile</h2>
+<% @funding_project.fp_creators.each do |fpc| %>
+    <ul>
+        <li><%= fpc.co_creator_name %></li><br><br>
+        <li>Location: <%= fpc.location %></li><br><br>
+        <li>About Creator: <%= fpc.creator_about %></li><br><br>
+        <li>Creator Website: <%= fpc.creator_site %></li><br><br>
+        <li>Creator Instagram: <%= fpc.instagram_url %></li><br><br>
+        <li>Creator Twitter:<%= fpc.twitter_url %></li><br><br>
+        <li>Creator Facebook:<%= fpc.facebook_url %></li><br><br>
+        <li>Creator Blog: <%= fpc.blog_url %></li>
+    </ul>
+<% end %>
 
-<% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
-    <%= "Total Needed:" %>
-    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %><br>
-    <%= "Funding Goal Achieved!" %><br><br>
-<% elsif @funding_project.total_pledges.sum > @funding_project.funding_goal %><br>
-    <%= "Funding Goal Achieved!" %><br><br>
-<%= "Total Over Funding Goal:" %>
-    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% end %><br><br>
 
 
-<h3><%= link_to "Make a Pledge", new_pledge_path %></h3>
 
-<%# <h3><%= link_to "Make a Comment", new_funding_project_comment_path %></h3><br> %>
 
-<%# <%= @funding_project.comments.each do |comment| %></h3>
-<%# <%= link_to comment.user.username, user_path(comment.user) %> %>
-<%# <%= comment.content %> %>
-<%# <% end %> %> %>
-
-<%# <% ready_for_countdown.each do |rfc| %> %>
-<ul>
-<%# <li><%= rfc.amount %> %>
-</li>
-</ul>
-<%# <% end %> %>

@@ -1,18 +1,13 @@
 
-  <% @user.fp_creators.each do |fpc| %>
-    <%# <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
-  <%# <% end %> %> %>
-
-
-<p>Name: <%= fpc.name %></p>
-<p>Location: <%= fpc.location %>
-<p>About Creator: <%= fpc.creator_about %>
-<p>Creator Website: <%= fpc.creator_site %>
-<p>Creator Instagram: <%= fpc.instagram_url %>
-<p>Creator Twitter:<%= fpc.twitter_url %>
-<p>Creator Facebook:<%= fpc.facebook_url %>
-<p>Creator Blog: <%= fpc.blog_url %><br><br>
+<% @funding_project.fp_creators.each do |fpc| %>
+  <p>Name: <%= fpc.name %></p>
+  <p>Location: <%= fpc.location %>
+  <p>About Creator: <%= fpc.creator_about %>
+  <p>Creator Website: <%= fpc.creator_site %>
+  <p>Creator Instagram: <%= fpc.instagram_url %>
+  <p>Creator Twitter:<%= fpc.twitter_url %>
+  <p>Creator Facebook:<%= fpc.facebook_url %>
+  <p>Creator Blog: <%= fpc.blog_url %><br><br>
 <% end %>
-<%# add last logged in %>
 
 <%# <h2><%= link_to "Make a New Sourcer Project", new_funding_project_path %> </h2><br> %>
