@@ -1,5 +1,7 @@
 class FundingProject < ApplicationRecord
-    belongs_to :fp_creator
+    has_many :fp_creators
+    accepts_nested_attributes_for :fp_creators
+
 
     validates_presence_of :title
     validates_presence_of :creator_name
@@ -26,6 +28,13 @@ class FundingProject < ApplicationRecord
         # show them on a static page
     end
     
+    def fp_creator_attributes=(fp_creator_attributes)
+        fp_creator_attributes.values.each do |fc_attribute|
+        fc = FpProject.find_or_create_by(fc_attribute) 
+        self.fp_creators << fc
+        end 
+    end
+
     # order/groupby
 
     def total_pledges
