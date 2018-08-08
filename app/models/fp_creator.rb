@@ -1,6 +1,6 @@
 class FpCreator < ApplicationRecord
     belongs_to :user
-    belongs_to :user_fp_creators
+    # belongs_to :user_fp_creators
     # has_many :funding_projects
 
     # def fpc_user_name

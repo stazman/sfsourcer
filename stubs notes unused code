@@ -25,9 +25,7 @@ user submittable in through
  
 
 Future: 
-
-CSS
-
+[ ] Use polymorphic for comments belonging to a variety of models
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
 [ ] Complete #ready_for_countdown class method 
 [ ] Complete #ready_for_countdown class method 

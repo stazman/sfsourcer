@@ -41,20 +41,20 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games], 
-      fp_creator_ids:[],
-      fp_creators_attributes:
-      ["id",
-      "name",
-      "location",
-      "creator_about",
-      "creator_site",
-      "instagram_url",
-      "twitter_url",
-      "facebook_url",
-      "blog_url",
-      "user_id"]
-      )
+    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games])
+    #   fp_creator_ids:[],
+    #   fp_creators_attributes:
+    #   ["id",
+    #   "name",
+    #   "location",
+    #   "creator_about",
+    #   "creator_site",
+    #   "instagram_url",
+    #   "twitter_url",
+    #   "facebook_url",
+    #   "blog_url",
+    #   "user_id"]
+    #   )
   end
 
   def require_login
