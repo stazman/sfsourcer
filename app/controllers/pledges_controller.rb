@@ -6,7 +6,7 @@ class PledgesController < ApplicationController
   end
 
   def new
-    @pledge = Pledge.new
+    @pledge = Pledge.new(fp_backed_id: params[:fp_backed_id])
   end
 
   def create
