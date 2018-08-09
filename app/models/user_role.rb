@@ -1,6 +1,7 @@
 class UserRole < ApplicationRecord
     has_many :user_user_roles
-    has_many :users, through: :user_roles
+    has_many :users, through: :user_user_roles
+    
 
     # ROLE WRITER -- ADMIN NAMESPACED
     # USER CHOOSES ROLES THAT THEN ASSOCIATE THEM THROUGH SETTERS/GETTERS 

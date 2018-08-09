@@ -1,0 +1,2 @@
+class FpBacker < ApplicationRecord
+end
