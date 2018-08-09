@@ -5,6 +5,8 @@ class FpBackedsController < ApplicationController
 
     def create
         @fp_backed = FpBacked.new(fp_backed_params)
+        @fp_backed.save
+        redirect_to @fp_backed
     end
 
     def show

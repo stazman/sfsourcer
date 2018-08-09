@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :users
   resources :funding_projects
   resources :fp_creators
+  resources :fp_backeds, only: [:new, :create, :show]
   resources :pledges
   resources :sf_favs
   resources :lit_fan_genres
