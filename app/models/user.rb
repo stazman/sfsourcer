@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
-    has_many :user_user_roles,
-    has_many :roles, through: :user_roles
+    has_many :user_user_roles
+    has_many :user_roles, through: :user_user_roles
     # has_many :pledges
     # has_many :funding_projects, through: :pledges
     has_secure_password
