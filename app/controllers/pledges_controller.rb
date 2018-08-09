@@ -10,15 +10,17 @@ class PledgesController < ApplicationController
   end
 
   def create
-    @pledge = Pledge.new(pledge_params)
-    @pledge.user_id = current_user.id
-    @pledge.funding_project_id = params[:pledge][:funding_project_id] 
-    if @pledge.valid?
-      @pledge.save
-      redirect_to pledge_path(@pledge)
-    else
-      render :new
-    end
+    @pledge = @fp_backed.lit_fan_works.find_by(id: params[:id])
+    @fp_backed = @fp_backed.pledges.find_by(id: params[:id])
+
+    # @pledge.user_id = current_user.id
+    # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
+    # if @pledge.valid?
+    #   @pledge.save
+    #   redirect_to pledge_path(@pledge)
+    # else
+    #   render :new
+    # end
   end
       
 
