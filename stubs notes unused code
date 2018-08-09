@@ -2,7 +2,10 @@
 current commit notepad:
 
 
+
+
 Questions:
+polymorphic with pledges?
 when do we need a writer for the association? in a has many trough?
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
 how to bypass index and get to show?? is this a general issue? wrong id parameters? was an issue with user/fp_creator
@@ -23,6 +26,7 @@ what exactly is going on between these two snippets of code?
 To Do for Rails Project:
 
 
+[ ] reverse what model nests the other model for funding_project/fp_creator
 [ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
 [ ] Make separate model for fp_creator to make funding_projects and be associated with user
 user submittable in through

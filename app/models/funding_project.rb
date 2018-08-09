@@ -4,7 +4,8 @@ class FundingProject < ApplicationRecord
     accepts_nested_attributes_for :fp_creators
     has_many :pledges
     has_many :fp_backeds, through: :pledges
-    # has_many :fp_backers, through: :pledges  
+    # has_many :has_many :pledges
+    # has_many :fp_backers, through: :pledges
 
 
     validates_presence_of :title
