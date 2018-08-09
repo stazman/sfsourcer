@@ -4,7 +4,7 @@ class FpBackedsController < ApplicationController
     end
 
     def create
-        @fp_backed = FpBacked.create(fp_backed_params)
+        @fp_backed = FpBacked.new(fp_backed_params)
     end
 
     def show
