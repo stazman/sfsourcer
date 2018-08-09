@@ -1,11 +1,5 @@
 
-      t.belongs_to :lit_fan_genre, foreign_key: true
-      t.belongs_to :lit_fan_work, foreign_key: true
-
-
 current commit notepad:
-
-adding require_login to all relevant actions for fanvorites
 
 
 Questions:
