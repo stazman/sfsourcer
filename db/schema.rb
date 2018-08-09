@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_160636) do
+ActiveRecord::Schema.define(version: 2018_08_09_161701) do
+
+  create_table "fp_backeds", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fp_backers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "fp_creators", force: :cascade do |t|
     t.string "creator_name"
@@ -73,7 +84,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer "amount"
-    t.integer "user_id"
+    t.integer "fp_backed_id"
     t.integer "funding_project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -85,6 +96,11 @@ ActiveRecord::Schema.define(version: 2018_08_08_160636) do
     t.string "fav_games"
     t.integer "user_id"
     t.string "sf_fav_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_roles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

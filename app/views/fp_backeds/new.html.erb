@@ -1,8 +1,9 @@
 <h1>New Pledge Form for </h1>
 
 <%= form_for @fp_backed do |f| %>
-    <% end %>
-    <%= f.fields_for :pledge do |pledge| %>
+    <%= f.fields_for :pledges, @fp_backed.pledges.build do |pledge| %>
         <%= pledge.label "Enter pledge amount" %>
-        <%= pledge.amount %>
+        <%= pledge.text_field :amount %>
         <% end %>
+    <%= f.submit "Submit Pledge"%>
+    <% end %>
