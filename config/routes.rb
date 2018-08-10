@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'fp_backers/index'
+  get 'fp_backers/new'
+  get 'fp_backers/show'
+  get 'fp_backers/edit'
   root 'static#home'
   
   get '/login', to: 'sessions#new'
@@ -17,6 +21,7 @@ Rails.application.routes.draw do
   resources :funding_projects
   resources :fp_creators
   resources :pledges
+  resources :fp_backers
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
