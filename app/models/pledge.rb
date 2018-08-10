@@ -4,6 +4,15 @@ class Pledge < ApplicationRecord
    
     validates_presence_of :amount
     validates :amount, numericality: true
+
+    def funding_project_name
+        self.try(:funding_project).try(:name)
+    end
+
+    def funding_project_name=(name)
+        fp = FundingProject.find_by(name: name)
+        self.funding_project = fp
+    end
 end
 
 

@@ -11,7 +11,7 @@ class PledgesController < ApplicationController
   
     def create
       @pledge = Pledge.new(pledge_params)
-      @pledge.user_id = current_user.id
+      # @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
       @pledge.funding_project_id = params[:pledge][:funding_project_id] 
       if @pledge.valid?
         @pledge.save

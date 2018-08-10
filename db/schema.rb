@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_10_194222) do
+ActiveRecord::Schema.define(version: 2018_08_10_221211) do
 
   create_table "fp_backers", force: :cascade do |t|
     t.string "backer_msg"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "fp_creators", force: :cascade do |t|
