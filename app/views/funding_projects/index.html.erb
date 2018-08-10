@@ -1,12 +1,28 @@
-MAIN NAVBAR 
+<h1>Sourcer Projects!</h1><br>
 
-<h1>All Sourcer Projects</h1><br>
+<h2>Browse SFSourcer Projects by Category</h2>
 
-<p><% @funding_projects.each do |fp| %></p>
-    <ul>
-        <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
-        <p>Description: <li><%= fp.description %> </li></p>
-        <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
-    </ul><br><br>
-    <% end %>
+<%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
+<%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
+
+<h2>Browse through all SFSourcer Projects</h2>
+
+    <p><% @funding_projects.each do |fp| %></p>
+        <ul>
+            <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
+            <p>Description: <li><%= fp.description %> </li></p>
+            <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
+        </ul>
+        <% end %>
+
+
+
+
+
+
+<%# <h4><%= @funding_categories.each do |fc| %>
+<%# <ul> %>
+    <%# <li><%= link_to fc.name, funding_category_path(fc) %>
+<%# </ul> %>
+<%# <% end %>
 
