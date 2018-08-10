@@ -5,7 +5,6 @@ current commit notepad:
 
 
 Questions:
-polymorphic with pledges?
 when do we need a writer for the association? in a has many trough?
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
 how to bypass index and get to show?? is this a general issue? wrong id parameters? was an issue with user/fp_creator
@@ -38,7 +37,7 @@ there is no magic with join tables that have hteir own semantic attributes
 
 
 x1. change associations
-2. allow fpbacker to have access to h pledges and funding projects
+x2. allow fpbacker to have access to h pledges and funding projects
 3. allow many users to have access to many fp_creators but not to pledges; there can be many users who have access to making a project but only one to make a pledge as fp_backer
 4. even a non user can see how many pledges and total amounts a project has but not who made the pledges
 5. A user can see projects that are within 80% of their goal ... class scope method called on funding projects and viewable in a distinct url
@@ -59,7 +58,10 @@ make class method involving pledges and funding project
  
 
 Future: 
+having an fp_backer model may allow for future functionality involving options the fb_backer has in relation to the pledge
+i.e. one kind of backer is a backer who receives rewards for pledges for a particular pledge, while keeping user in a distinct but associated class
 a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
+
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
 [ ] reverse what model nests the other model for funding_project/fp_creator?
 [ ] Complete #ready_for_countdown class method 
@@ -129,7 +131,15 @@ Do I have the right, many to many, relationship with funding projects and users 
 when do you use a custom writer as opposed to other methods to make associations such as build
 can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
 
-UNUSED
+
+
+FINISHED STUBS
+
+polymorphic with pledges? doesn't seem to fit
+
+
+
+UNUSED CODE
 
     <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
