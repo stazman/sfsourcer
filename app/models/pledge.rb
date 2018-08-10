@@ -1,5 +1,4 @@
 class Pledge < ApplicationRecord
-    belongs_to :fp_backed
     belongs_to :funding_project
     # belongs_to :fp_backer
    
