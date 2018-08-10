@@ -26,10 +26,27 @@ what exactly is going on between these two snippets of code?
 To Do for Rails Project:
 
 
-[ ] reverse what model nests the other model for funding_project/fp_creator
-[ ] Make separate model for fp_contributor to make pledges to funding_projects and be associated with user
-[ ] Make separate model for fp_creator to make funding_projects and be associated with user
-user submittable in through
+connect pledges with funding project
+nested attribute is not the right connection and there is no need for nested resources/urls
+I'm going to go with direct associaiton belongs to has many but make a 
+
+needed functionality
+fp_backer can make a pledge to a funding_project
+the pledge can be made without making funding_project at the same time
+no nested attributes or urls are necessary, so through queries
+there is no magic with join tables that have hteir own semantic attributes
+
+
+x1. change associations
+2. allow fpbacker to have access to h pledges and funding projects
+3. allow many users to have access to many fp_creators but not to pledges; there can be many users who have access to making a project but only one to make a pledge as fp_backer
+4. even a non user can see how many pledges and total amounts a project has but not who made the pledges
+5. A user can see projects that are within 80% of their goal ... class scope method called on funding projects and viewable in a distinct url
+
+
+
+make class method involving pledges and funding project
+[ ] connect distinct, remotely connected roles to user
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
 [ ] Make sure all validations work
@@ -42,8 +59,9 @@ user submittable in through
  
 
 Future: 
-[ ] Use polymorphic for comments belonging to a variety of models
+a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
+[ ] reverse what model nests the other model for funding_project/fp_creator?
 [ ] Complete #ready_for_countdown class method 
 [ ] Complete #ready_for_countdown class method 
 [ ] Add spaces between checkbox choices in authors index view

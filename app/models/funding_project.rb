@@ -3,19 +3,13 @@ class FundingProject < ApplicationRecord
     has_many :fp_creators, through: :funding_project_fp_creators
     accepts_nested_attributes_for :fp_creators
     has_many :pledges
-    # has_many :fp_backers, through: :pledges
-
+    has_many :fp_backers, through: :pledges
 
     validates_presence_of :title
     validates_uniqueness_of :title
     validates_presence_of :description
     validates_presence_of :funding_goal
-    
-    # def comment_attributes=(comment)
-    #     self.comment = Comment.create_by(title = comment.title)
-    #     self.comment.update(comment)
-    # end
-    
+        
     def make_title_case
         self.title = self.title.titlecase
     end
@@ -43,6 +37,7 @@ class FundingProject < ApplicationRecord
            p.amount     
         end
     end
+end
 
 
     # def funding_project_pledge
@@ -54,4 +49,8 @@ class FundingProject < ApplicationRecord
     # end
     # def comment_attributes=(comment_attribute)
     # end
-end
+        # def comment_attributes=(comment)
+    #     self.comment = Comment.create_by(title = comment.title)
+    #     self.comment.update(comment)
+    # end
+
