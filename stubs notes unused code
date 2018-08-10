@@ -58,6 +58,12 @@ make class method involving pledges and funding project
  
 
 Future: 
+
+learn indexing -- higher speed and performance
+learn when how to use aliases
+concerns
+
+
 having an fp_backer model may allow for future functionality involving options the fb_backer has in relation to the pledge
 i.e. one kind of backer is a backer who receives rewards for pledges for a particular pledge, while keeping user in a distinct but associated class
 a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
