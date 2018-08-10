@@ -1,8 +1,1 @@
-<h1>Your Pledge for </h1>
-
- <% @fp_backed.pledges.each do |pledge| %>
-  <%= pledge.amount %>
-  <% end %>
-
-    
-
+<h2>Thank you for your pledge of $<%= @pledge.amount %> for <%= @pledge.funding_project.title %>!</h2></h1>
