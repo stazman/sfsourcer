@@ -2,7 +2,7 @@ a = User.create(name: "a", email: "a@a.com", password: "a")
 a_fp = FundingProject.create(title: "afp")
 a_fpcreator = FpCreator.create(creator_name: "ac", location: "tampa")
 a_pledge = Pledge.create(amount: 20)
-a_backer = FpBacker.create(name: "a")
+a_backer = FpBacker.create(backer_msg: "I can't wait to see your final project!")
 
 work1 = LitFanWork.create(title: "Dune")
 author1 = LitFanAuthor.create(name: "Frank Herbert")
