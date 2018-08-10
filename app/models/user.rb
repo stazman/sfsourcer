@@ -3,8 +3,14 @@ class User < ApplicationRecord
     accepts_nested_attributes_for :sf_favs
     has_many :user_user_roles
     has_many :user_roles, through: :user_user_roles
-    # has_many :pledges
-    # has_many :funding_projects, through: :pledges
+    # has_many :user_fp_creators 
+    # has_many :fp_creators, through: :user_fp_creators
+    # connect through abstract queries
+    # has_many :user_fp_backers
+    # has_many :fp_backers, through: :user_fp_backers
+    # this may be better as a has many but not has many through, maybe depending on polymorphic with only other classes involved such as comments
+    # connect through abstract queries
+
     has_secure_password
 
     validates_presence_of :name
