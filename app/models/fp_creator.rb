@@ -1,6 +1,11 @@
 class FpCreator < ApplicationRecord
     has_many :funding_project_fp_creators
     has_many :funding_projects, through: :funding_project_fp_creators  
+    # has_many :user_fp_creators
+    # has_many :users, through: :user_fp_creators
+# this may be more appropriate for fp_creators than fp_backers to have a has many through because fp_creators can have multiple users
+
+
     # belongs_to :user_fp_creators
     # has_many :funding_projects
     # def funding_project_attributes=(funding_project_attributes)
