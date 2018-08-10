@@ -60359,3 +60359,730 @@ Processing by FpBackedsController#show as HTML
 Completed 200 OK in 122ms (Views: 109.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-09 18:44:11 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 550ms (Views: 527.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 18:44:17 -0500
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (64.9ms)
+Completed 200 OK in 243ms (Views: 211.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/fp_backeds" for 127.0.0.1 at 2018-08-09 18:44:22 -0500
+Processing by FpBackedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8RnaMK1B+u5iwl+X3wmY+yG47jwWNwBlVJXcocB9aUohd4AapYoyhaiVTMTN1U7+6laBa/9625ZP1l1bXWnLPg==", "fp_backed"=>{"pledges_attributes"=>{"0"=>{"amount"=>"1111"}}}, "commit"=>"Submit Pledge"}
+Unpermitted parameter: :pledges_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:8
+  [1m[36mFpBacked Create (0.6ms)[0m  [1m[32mINSERT INTO "fp_backeds" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-08-09 23:44:22.813071"], ["updated_at", "2018-08-09 23:44:22.813071"]]
+  ↳ app/controllers/fp_backeds_controller.rb:8
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:8
+Redirected to http://localhost:3000/fp_backeds/7
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/fp_backeds/7" for 127.0.0.1 at 2018-08-09 18:44:22 -0500
+Processing by FpBackedsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFpBacked Load (0.3ms)[0m  [1m[34mSELECT  "fp_backeds".* FROM "fp_backeds" WHERE "fp_backeds"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/fp_backeds_controller.rb:13
+  Rendering fp_backeds/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."fp_backed_id" = ?[0m  [["fp_backed_id", 7]]
+  ↳ app/views/fp_backeds/show.html.erb:3
+  Rendered fp_backeds/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 136ms (Views: 124.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpBackeds (20180809161701)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "fp_backeds"[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180809161701"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpBackeds (20180809161701)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180809161701_create_fp_backeds.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "fp_backeds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180809161701_create_fp_backeds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180809161701"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-08-09 19:07:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:07:30 -0500
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:07:30 -0500
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 171ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by FpBackedsController#new as HTML
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (26.5ms)
+  Rendered fp_backeds/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 203ms (Views: 177.0ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 359ms (Views: 355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-09 19:07:46 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 540ms (Views: 528.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:07:52 -0500
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 249ms (Views: 217.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:08:07 -0500
+Processing by FpBackedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C8v9II18rIGe/QP6RiBVqFk+avK0Smn6BOfd6u358zPbpacKhbdk6lSqEKlU/IOtktAFpV0HsgkfpFwQcO1RRw==", "fp_backed"=>{"name"=>"current project", "pledges_attributes"=>{"0"=>{"amount"=>"111"}}}, "commit"=>"Submit Pledge"}
+Unpermitted parameters: :name, :pledges_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:8
+  [1m[36mFpBacked Create (1.4ms)[0m  [1m[32mINSERT INTO "fp_backeds" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-08-10 00:08:07.995500"], ["updated_at", "2018-08-10 00:08:07.995500"]]
+  ↳ app/controllers/fp_backeds_controller.rb:8
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:8
+Redirected to http://localhost:3000/fp_backeds/1
+Completed 302 Found in 13ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/fp_backeds/1" for 127.0.0.1 at 2018-08-09 19:08:08 -0500
+Processing by FpBackedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFpBacked Load (0.3ms)[0m  [1m[34mSELECT  "fp_backeds".* FROM "fp_backeds" WHERE "fp_backeds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fp_backeds_controller.rb:13
+  Rendering fp_backeds/show.html.erb within layouts/application
+  [1m[36mPledge Load (0.3ms)[0m  [1m[34mSELECT "pledges".* FROM "pledges" WHERE "pledges"."fp_backed_id" = ?[0m  [["fp_backed_id", 1]]
+  ↳ app/views/fp_backeds/show.html.erb:3
+  Rendered fp_backeds/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 157ms (Views: 142.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-09 19:18:21 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 446ms (Views: 427.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:18:35 -0500
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (135.6ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `fp_backeds_path' for #<#<Class:0x007fddd9940958>:0x007fddd99304b8>
+Did you mean?  fp_backed_path):
+    1: <h4><%= form_for @fp_backed do |f| %></h4>
+    2: <h4><%= f.text_field :name %></h4>
+    3: <h4><%= f.submit %></h4>
+    4: <% end %>
+  
+app/views/fp_backeds/new.html.erb:1:in `_app_views_fp_backeds_new_html_erb___2928062890984580559_70295407431540'
+Started GET "/fp_backed/new" for 127.0.0.1 at 2018-08-09 19:19:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fp_backed/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fp_backed/new" for 127.0.0.1 at 2018-08-09 19:21:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fp_backed/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:22:04 -0500
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (132.9ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `fp_backeds_path' for #<#<Class:0x007fddd4fef718>:0x007fddd4feda58>
+Did you mean?  fp_backed_path):
+    1: <h4><%= form_for @fp_backed do |f| %></h4>
+    2: <h4><%= f.text_field :name %></h4>
+    3: <h4><%= f.submit %></h4>
+    4: <% end %>
+  
+app/views/fp_backeds/new.html.erb:1:in `_app_views_fp_backeds_new_html_erb___2928062890984580559_70295428325400'
+Started GET "/" for 127.0.0.1 at 2018-08-09 19:30:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 338ms (Views: 327.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fp_backeds/new" for 127.0.0.1 at 2018-08-09 19:30:25 -0500
+Processing by FpBackedsController#new as HTML
+  Rendering fp_backeds/new.html.erb within layouts/application
+  Rendered fp_backeds/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 132ms (Views: 107.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:30:29 -0500
+Processing by FpBackedsController#index as HTML
+Completed 406 Not Acceptable in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (FpBackedsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:31:29 -0500
+Processing by FpBackedsController#index as HTML
+  Rendering fp_backeds/index.html.erb within layouts/application
+  Rendered fp_backeds/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:31:39 -0500
+Processing by FpBackedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtQwHIZpHsxQrmbRH7dWzIaOqmbDbAZixZEfxvTIzH+Wumo2jqLWp5r5dYINa4DJTWDFMSoh3ZHe0p48adxuCw==", "fp_backed"=>{"name"=>"test"}, "commit"=>"Create Fp backed"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[36mFpBacked Create (0.6ms)[0m  [1m[32mINSERT INTO "fp_backeds" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-08-10 00:31:39.775598"], ["updated_at", "2018-08-10 00:31:39.775598"]]
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `fp_backed_pledge' for #<FpBackedsController:0x007fe84e1ebf20>
+Did you mean?  fp_backed_pledge_url):
+  
+app/controllers/fp_backeds_controller.rb:13:in `create'
+Started POST "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:32:42 -0500
+Processing by FpBackedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtQwHIZpHsxQrmbRH7dWzIaOqmbDbAZixZEfxvTIzH+Wumo2jqLWp5r5dYINa4DJTWDFMSoh3ZHe0p48adxuCw==", "fp_backed"=>{"name"=>"test"}, "commit"=>"Create Fp backed"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[36mFpBacked Create (0.4ms)[0m  [1m[32mINSERT INTO "fp_backeds" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-08-10 00:32:52.246255"], ["updated_at", "2018-08-10 00:32:52.246255"]]
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"pledges", :fp_backed_id=>#<FpBacked id: 3, name: nil, funding_project_id: nil, created_at: "2018-08-10 00:32:52", updated_at: "2018-08-10 00:32:52">}, missing required keys: [:id]):
+  
+app/controllers/fp_backeds_controller.rb:13:in `create'
+Started POST "/fp_backeds" for 127.0.0.1 at 2018-08-09 19:34:00 -0500
+Processing by FpBackedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtQwHIZpHsxQrmbRH7dWzIaOqmbDbAZixZEfxvTIzH+Wumo2jqLWp5r5dYINa4DJTWDFMSoh3ZHe0p48adxuCw==", "fp_backed"=>{"name"=>"test"}, "commit"=>"Create Fp backed"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[36mFpBacked Create (0.4ms)[0m  [1m[32mINSERT INTO "fp_backeds" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-08-10 00:34:00.245721"], ["updated_at", "2018-08-10 00:34:00.245721"]]
+  ↳ app/controllers/fp_backeds_controller.rb:12
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fp_backeds_controller.rb:12
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `fp_backed_pledges_path' for #<FpBackedsController:0x007fe853149630>
+Did you mean?  fp_backed_pledge_path
+               fp_backed_path
+               fp_backed_pledge_url):
+  
+app/controllers/fp_backeds_controller.rb:13:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateFpBackedPledges (20180810011753)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180810011753_create_fp_backed_pledges.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "fp_backed_pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fp_backed_id" integer, "pledge_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_42380a656a"
+FOREIGN KEY ("fp_backed_id")
+  REFERENCES "fp_backeds" ("id")
+, CONSTRAINT "fk_rails_c492fbb9d7"
+FOREIGN KEY ("pledge_id")
+  REFERENCES "pledges" ("id")
+)[0m
+  ↳ db/migrate/20180810011753_create_fp_backed_pledges.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fp_backed_pledges_on_fp_backed_id" ON "fp_backed_pledges" ("fp_backed_id")[0m
+  ↳ db/migrate/20180810011753_create_fp_backed_pledges.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_fp_backed_pledges_on_pledge_id" ON "fp_backed_pledges" ("pledge_id")[0m
+  ↳ db/migrate/20180810011753_create_fp_backed_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180810011753"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to DropCreateFpBackedPledges (20180810032107)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "fp_backed_pledges"[0m
+  ↳ db/migrate/20180810032107_drop_create_fp_backed_pledges.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180810032107"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to DropFpBacked (20180810032305)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "fp_backed"[0m
+  ↳ db/migrate/20180810032305_drop_fp_backed.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to DropFpBacked (20180810032305)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_backeds"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "fp_backeds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_backers"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "fp_backers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_creators"[0m
+  ↳ db/schema.rb:27
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "creator_name" varchar, "location" varchar, "creator_about" text, "creator_site" varchar, "email" varchar, "instagram_url" varchar, "twitter_url" varchar, "facebook_url" varchar, "blog_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "funding_project_fp_creators"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "funding_project_fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "funding_project_id" integer, "fp_creator_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX "index_funding_project_fp_creators_on_fp_creator_id" ON "funding_project_fp_creators" ("fp_creator_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX "index_funding_project_fp_creators_on_funding_project_id" ON "funding_project_fp_creators" ("funding_project_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "funding_projects"[0m
+  ↳ db/schema.rb:50
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "funding_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_authors"[0m
+  ↳ db/schema.rb:58
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "lit_fan_authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_genres"[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_work_lit_fan_genres"[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "lit_fan_work_lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lit_fan_genre_id" integer, "lit_fan_work_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_genre_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id")[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_work_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_work_id")[0m
+  ↳ db/schema.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_works"[0m
+  ↳ db/schema.rb:79
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "lit_fan_works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "lit_fan_author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:79
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "pledges"[0m
+  ↳ db/schema.rb:86
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "fp_backed_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:86
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sf_favs"[0m
+  ↳ db/schema.rb:94
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_games" varchar, "user_id" integer, "sf_fav_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_roles"[0m
+  ↳ db/schema.rb:104
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:109
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:109
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180810032107)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180809143552),
+(20180731002120),
+(20180707173946),
+(20180803191115),
+(20180802221054),
+(20180802221902),
+(20180807083709),
+(20180805005126),
+(20180803190640),
+(20180809015816),
+(20180707170145),
+(20180808160636),
+(20180707174939);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-10 03:25:42.799455"], ["updated_at", "2018-08-10 03:25:42.799455"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_backeds"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "fp_backeds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_backers"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "fp_backers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fp_creators"[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "creator_name" varchar, "location" varchar, "creator_about" text, "creator_site" varchar, "email" varchar, "instagram_url" varchar, "twitter_url" varchar, "facebook_url" varchar, "blog_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "funding_project_fp_creators"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "funding_project_fp_creators" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "funding_project_id" integer, "fp_creator_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX "index_funding_project_fp_creators_on_fp_creator_id" ON "funding_project_fp_creators" ("fp_creator_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX "index_funding_project_fp_creators_on_funding_project_id" ON "funding_project_fp_creators" ("funding_project_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "funding_projects"[0m
+  ↳ db/schema.rb:50
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "funding_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "funding_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_authors"[0m
+  ↳ db/schema.rb:58
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "lit_fan_authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_genres"[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_work_lit_fan_genres"[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "lit_fan_work_lit_fan_genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lit_fan_genre_id" integer, "lit_fan_work_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_genre_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_genre_id")[0m
+  ↳ db/schema.rb:70
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX "index_lit_fan_work_lit_fan_genres_on_lit_fan_work_id" ON "lit_fan_work_lit_fan_genres" ("lit_fan_work_id")[0m
+  ↳ db/schema.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lit_fan_works"[0m
+  ↳ db/schema.rb:79
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "lit_fan_works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "lit_fan_author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:79
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pledges"[0m
+  ↳ db/schema.rb:86
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "pledges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" integer, "fp_backed_id" integer, "funding_project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:86
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sf_favs"[0m
+  ↳ db/schema.rb:94
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "sf_favs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "fav_lits" varchar, "fav_films" varchar, "fav_games" varchar, "user_id" integer, "sf_fav_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_roles"[0m
+  ↳ db/schema.rb:104
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:109
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:109
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180810032107)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180809143552),
+(20180731002120),
+(20180707173946),
+(20180803191115),
+(20180802221054),
+(20180802221902),
+(20180807083709),
+(20180805005126),
+(20180803190640),
+(20180809015816),
+(20180707170145),
+(20180808160636),
+(20180707174939);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-10 03:25:42.897853"], ["updated_at", "2018-08-10 03:25:42.897853"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-08-10 03:25:42.907030"], ["key", "environment"]]
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopher_distasio/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@a.com"], ["password_digest", "$2a$10$rfNRr4sHqvBeefc4n2Z0G.cNK1VhhEdPw6br612jCtbRda5OzGL1u"], ["created_at", "2018-08-10 03:25:43.009790"], ["updated_at", "2018-08-10 03:25:43.009790"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFundingProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "funding_projects" WHERE "funding_projects"."title" = ? LIMIT ?[0m  [["title", "afp"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mFpCreator Create (0.4ms)[0m  [1m[32mINSERT INTO "fp_creators" ("creator_name", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["creator_name", "ac"], ["location", "tampa"], ["created_at", "2018-08-10 03:25:43.060208"], ["updated_at", "2018-08-10 03:25:43.060208"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mLitFanAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "lit_fan_authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Frank Herbert"], ["created_at", "2018-08-10 03:25:43.107719"], ["updated_at", "2018-08-10 03:25:43.107719"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mLitFanGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "lit_fan_genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic Science Fiction"], ["created_at", "2018-08-10 03:25:43.122010"], ["updated_at", "2018-08-10 03:25:43.122010"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9

@@ -10,8 +10,9 @@ class PledgesController < ApplicationController
     end
 
     def create
-        @pledge = @fp_backed.pledges.find_by(id: params[:id])
-        @fp_backed = @fp_backed.pledges.find_by(id: params[:id])
+        @pledge = Pledge.new(pledge_params)
+        @pledge.save
+            redirect_to @pledge
 
         # @pledge.user_id = current_user.id
         # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
@@ -25,7 +26,8 @@ class PledgesController < ApplicationController
         
 
     def show
-        @pledge = Pledge.find(params[:id])
+        @fp_backed = FpBacked.find_by(id: params[:fp_backed_id])
+        @pledge = @fp_backed.pledges.find_by(id: params[:id])
     end
 
     def edit
@@ -40,7 +42,7 @@ class PledgesController < ApplicationController
     private
 
     def pledge_params
-        params.require(:pledge).permit(:amount, :funding_project_title, :user_id, :funding_project_id)
+        params.require(:pledge).permit(:amount, :fp_backed_name, :fp_backed_id)
     end
 
     def require_login

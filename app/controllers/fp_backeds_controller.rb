@@ -1,4 +1,8 @@
 class FpBackedsController < ApplicationController
+    def index
+        @fp_backeds = FpBacked.all
+    end
+    
     def new
         @fp_backed = FpBacked.new
     end
@@ -6,7 +10,7 @@ class FpBackedsController < ApplicationController
     def create
         @fp_backed = FpBacked.new(fp_backed_params)
         @fp_backed.save
-        redirect_to @fp_backed
+        redirect_to fp_backed_pledges_path(@fp_backed)
     end
 
     def show

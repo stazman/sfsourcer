@@ -1,6 +1,8 @@
-MAIN NAVBAR 
+<h1>Your Pledge for </h1>
 
-<h2>Thank you for your pledge of $<%= @pledge.amount %> for <%= @pledge.funding_project.title %>!</h2></h1>
-<h4><%# link_to logout %> </h4><br>
-<h4><%# link_to logout %> </h4><br>
+ <% @fp_backed.pledges.each do |pledge| %>
+  <%= pledge.amount %>
+  <% end %>
+
+    
 
