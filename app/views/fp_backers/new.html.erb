@@ -1,2 +1,7 @@
-<h1>FpBackers#new</h1>
-<p>Find me in app/views/fp_backers/new.html.erb</p>
+<h1>New Pledge Form for </h1>
+
+<%= form_for @fp_backer do |f| %>
+        <%= f.label "Leave a short message directly to the project creator" %>
+        <%= f.text_field :backer_msg %>
+    <%= f.submit "Submit Pledge"%>
+    <% end %>
