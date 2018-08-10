@@ -1,6 +1,7 @@
 class FpBacked < ApplicationRecord
     has_many :pledges
     has_many :funding_projects, through: :pledges
+    accepted_nested_attributes_for :pledges
     # has_many :pledges
     # has_many :fp_backers, through: :pledges
     def pledges_attributes=(pledges_attributes)

@@ -16,13 +16,17 @@ Rails.application.routes.draw do
   resources :users
   resources :funding_projects
   resources :fp_creators
-  resources :fp_backeds, only: [:new, :create, :show]
   resources :pledges
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
   resources :lit_fan_authors
+  resources :fp_backeds
 
+  # resources :fp_backeds do
+  #   resources :pledges, only: [:new, :show]
+  # end
+  
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
   end
