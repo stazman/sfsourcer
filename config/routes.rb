@@ -42,11 +42,6 @@ Rails.application.routes.draw do
   end
 end
 
-resources :funding_projects do
-  resources :pledges
-end
-
-
 
 
   # resources :users do
