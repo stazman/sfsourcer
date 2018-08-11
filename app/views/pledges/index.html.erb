@@ -1,7 +1,7 @@
 MAIN NAVBAR 
 
 <h1>Your Pledges</h1>
-<%# <p><% @user.pledges.each do |p| %>
-  <%# <li><%= link_to p.amount, pledge_path(p) %></li> %>
-<%# <% end %> %> %>
+<p><% @fp_backer.pledges.each do |p| %>
+  <li><%= link_to p.amount, pledge_path(p) %></li> %>
+<% end %>
 </p>
