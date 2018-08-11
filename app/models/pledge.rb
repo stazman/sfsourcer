@@ -2,8 +2,8 @@ class Pledge < ApplicationRecord
     belongs_to :funding_project
     belongs_to :fp_backer
    
-    validates_presence_of :amount
-    validates :amount, numericality: true
+    # validates_presence_of :amount
+    # validates :amount, numericality: true
 
     def funding_project_title=(funding_project_title)
         self.funding_project.title = FundingProject.find_by(title: funding_project_title)
