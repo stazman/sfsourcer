@@ -1,7 +1,9 @@
-<h1>New Pledge Form for </h1>
+<h1>New Pledge Form</h1>
 
 <%= form_for @pledge do |f| %>
-        <%= f.label "Enter pledge amount" %>
-        <%= f.text_field :amount %>
-    <%= f.submit "Submit Pledge"%>
-    <% end %>
+<%= f.label "Choose the project" %>
+<%= f.collection_select :funding_project_id, FundingProject.all, :id, :title %><br>
+<%= f.label :amount %>
+<%= f.text_field :amount %>
+<%= f.submit "Create Pledge" %>
+<% end %>

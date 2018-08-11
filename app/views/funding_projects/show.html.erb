@@ -7,8 +7,7 @@ MAIN NAVBAR
 <h2><%= @funding_project.title %></h2>
 <p>Description: <%= @funding_project.description %> </p><br>
 <p>Funding Goal (in U.S. dollars)"<%= @funding_project.funding_goal %> </p><br><br>
-<%= f.submit "Create Project"%>
-<% end %
+
 <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
     <ul>

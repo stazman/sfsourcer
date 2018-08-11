@@ -11,7 +11,6 @@ class PledgesController < ApplicationController
   
     def create
       @pledge = Pledge.new(pledge_params)
-      # @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
       @pledge.funding_project_id = params[:pledge][:funding_project_id] 
       if @pledge.valid?
         @pledge.save
@@ -38,7 +37,7 @@ class PledgesController < ApplicationController
   private
   
     def pledge_params
-      params.require(:pledge).permit(:amount, :funding_project_title, :user_id, :funding_project_id)
+      params.require(:pledge).permit(:amount, :funding_project_id)
     end
   
     def require_login
