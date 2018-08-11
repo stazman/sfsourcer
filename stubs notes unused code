@@ -68,6 +68,9 @@ having an fp_backer model may allow for future functionality involving options t
 i.e. one kind of backer is a backer who receives rewards for pledges for a particular pledge, while keeping user in a distinct but associated class
 a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
 
+
+[ ] right now you need to be a registered user to make a pledge; needs to be doable without registering ... kickstarter doing guest pledging now
+    [ ] use one of several available gems for giving user multiple roles ?!!! or learn a more up to date? and systematic authorization/authentication system (check bookmarks)
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
 [ ] reverse what model nests the other model for funding_project/fp_creator?
 [ ] Complete #ready_for_countdown class method 

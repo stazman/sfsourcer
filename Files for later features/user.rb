@@ -1,9 +1,28 @@
 class User < ApplicationRecord
-    is_user
-    
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
+    # has_many :user_user_roles
+    # has_many :user_roles, through: :user_user_roles
+    has_many :user_fp_backers
+    has_many :fp_backers, through: :user_fp_backers
     has_secure_password
+
+    # has_many :user_fp_creators 
+    # has_many :fp_creators, through: :user_fp_creators
+    # connect through abstract queries
+    # has_many :user_fp_backers
+    # has_many :fp_backers, through: :user_fp_backers
+    # this may be better as a has many but not has many through, maybe depending on polymorphic with only other classes involved such as comments
+    # connect through abstract queries
+
+    # def fp_backer_connect_id
+    #     self.try(:fp_backer).try(:connect_id)
+    # end
+    # # but how does this work from just the parameters??? what mechanism takes what instance through the strong params and how does it do it?
+    # def fp_backer_connect_id=(connect_id)
+    #     fpb = FpBacker.find_or_create_by(:connect_id: connect_id)
+    #     self.fp_backer = fpb
+    # end
 
     validates_presence_of :name
     validates_presence_of :password
@@ -23,11 +42,6 @@ class User < ApplicationRecord
             #sql ... where is select in sql and when a user with the email passed as self wasn't found then it made it an insert in sql
         end
     end
-end
-
-
-    # has_many :user_user_roles
-    # has_many :user_roles, through: :user_user_roles
 
     # def fp_creator_attributes=(fp_creator_attributes)
     #     fp_creator_attributes.values.each do |fpc_attribute|
@@ -43,22 +57,4 @@ end
 #     def make_name_titlecase
 #         self.name = self.name.titlecase
 #     end
-
-    # has_many :user_fp_creators 
-    # has_many :fp_creators, through: :user_fp_creators
-    # connect through abstract queries
-    # has_many :user_fp_backers
-    # has_many :fp_backers, through: :user_fp_backers
-    # this may be better as a has many but not has many through, maybe depending on polymorphic with only other classes involved such as comments
-    # connect through abstract queries
-
-    # def fp_backer_connect_id
-    #     self.try(:fp_backer).try(:connect_id)
-    # end
-    # # but how does this work from just the parameters??? what mechanism takes what instance through the strong params and how does it do it?
-    # def fp_backer_connect_id=(connect_id)
-    #     fpb = FpBacker.find_or_create_by(:connect_id: connect_id)
-    #     self.fp_backer = fpb
-    # end
-    # has_many :user_fp_backers
-    # has_many :fp_backers, through: :user_fp_backers
+end
