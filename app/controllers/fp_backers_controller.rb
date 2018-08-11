@@ -14,7 +14,7 @@ class FpBackersController < ApplicationController
     @fp_backer = FpBacker.new(fp_backer_params)
     if @fp_backer.valid?
       @fp_backer.save
-      session[:fp_backer_id] = @fp_backer.id
+      # session[:fp_backer_id] = @fp_backer.id
       redirect_to fp_backer_path(@fp_backer)
     else
       render :new
