@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   resources :lit_fan_genres
   resources :lit_fan_works
   resources :lit_fan_authors
-  resources :fp_backeds
 
   # resources :fp_backeds do
   #   resources :pledges, only: [:new, :show]
