@@ -8,19 +8,15 @@
 <%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
 <%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
 
-<h3>Browse through all SFSourcer Projects</h3>
+<h3>Browse through all SFSourcer Projects</h3><br>
 
     <p><% @funding_projects.each do |fp| %></p>
         <ul>
             <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
-            <p>Description: <li><%= fp.description %> </li></p>
-            <p>Funding Goal: <li><%= fp.funding_goal %> </li></p>
+            <h4>Description: <li><%= fp.description %> </li></h4>
+            <h4>Funding Goal: <li><%= fp.funding_goal %> </li></h4><br><br>
         </ul>
         <% end %>
-
-
-
-
 
 
 <%# <h4><%= @funding_categories.each do |fc| %>
