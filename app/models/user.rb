@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-    is_user
-    
+
     has_many :sf_favs
     accepts_nested_attributes_for :sf_favs
     has_secure_password

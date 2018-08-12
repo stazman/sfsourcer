@@ -1,5 +1,5 @@
 class LitFanWork < ApplicationRecord
-    belongs_to :lit_fan_author
+    belongs_to :lit_fan_author, optional: true
     has_many :lit_fan_work_lit_fan_genres
     has_many :lit_fan_genres, through: :lit_fan_work_lit_fan_genres
     accepts_nested_attributes_for :lit_fan_genres
