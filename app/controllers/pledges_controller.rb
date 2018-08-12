@@ -7,15 +7,16 @@ class PledgesController < ApplicationController
   
     def new
       @pledge = Pledge.new
-      @pledges = @fp_backer.lit_fan_works
+      @pledges = @fp_backer.pledges
     end
   
     def create
-      @pledge = Pledge.new(pledge_params)
+      @pledge = Pledge.new(fp_backer_id: params[:fp_backer])
       # @pledge.user_id = current_user.id
       # @fp_backer = FpBacker.where(id: current_user.id)
       # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
       # if @pledge.valid?
+
         @pledge.save
         redirect_to pledge_path(@pledge)
       # else
@@ -26,6 +27,8 @@ class PledgesController < ApplicationController
   
     def show
       @pledge = Pledge.find(params[:id])
+      @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
+      @pledge = @fp_backer.pledges.find_by(id: params[:id])
     end
   
     def edit
@@ -40,7 +43,7 @@ class PledgesController < ApplicationController
   private
   
     def pledge_params
-      params.require(:pledge).permit(:amount, :fp_backer_id, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
+      params.require(:pledge).permit(:amount, :fp_backer_name, funding_project_ids:[], funding_projects_attributes: [:title])
     end
   
     def require_login

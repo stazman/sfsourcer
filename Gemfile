@@ -2,10 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
-gem 'acts_as_user'
-gem 'orm_adapter'
-gem 'activerecord'
-
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
@@ -65,13 +61,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
-  gem 'activesupport'
-  gem 'bundler'
-  gem 'database_cleaner'
-  # gem 'debugger'
-  gem 'rake'
-  gem 'rspec'
-  gem 'shoulda-matchers'
 end
 
 
