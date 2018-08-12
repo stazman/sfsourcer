@@ -1,4 +1,4 @@
-<h1>Make a Pledge</h1>
+<h1>Make a Pledge!</h1>
 
 <%= form_for @pledge do |f| %>
     <%= f.label "Choose the project" %>
@@ -6,6 +6,7 @@
     <h4>Please choose from these reward options ... (under construction)</h4><br><br>
     <%= f.label :amount %>
     <%= f.text_field :amount %><br><br>
+
  <h3>Pledge Form</h3>
         <%= f.fields_for :fp_backer do |fpb| %>
             <%= fpb.label "Name of Backer" %><br>
