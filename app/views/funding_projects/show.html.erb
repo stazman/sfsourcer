@@ -1,12 +1,8 @@
-MAIN NAVBAR 
-
 <%# <%= render partial: "errors" %>
 
-<h1>Your New Sourcer Project</h1>
-
 <h2><%= @funding_project.title %></h2>
-<p>Description: <%= @funding_project.description %> </p><br>
-<p>Funding Goal (in U.S. dollars)"<%= @funding_project.funding_goal %> </p><br><br>
+<h4>Description: <%= @funding_project.description %></h4>
+<h4>Funding Goal (in U.S. dollars)"<%= @funding_project.funding_goal %></h4><br><br>
 
 <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
@@ -21,7 +17,7 @@ MAIN NAVBAR
         <li>Creator Facebook:<%= fpc.facebook_url %></li><br><br>
         <li>Creator Blog: <%= fpc.blog_url %></li>
     </ul>
-<% end %>
+<% end %><br><br>
 
 
 <h3><%= link_to "Make a Pledge", new_pledge_path %></h3>
