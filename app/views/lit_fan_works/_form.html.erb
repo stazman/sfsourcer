@@ -1,17 +1,19 @@
 
 <%= form_for @lit_fan_work do |f| %>
     <%= f.label :title %>
-    <%= f.text_field :title %><br><br><br>
-        <label>Choose/add at least one genre ... </label><br><br>
-    <%= f.collection_check_boxes :lit_fan_genre_ids, LitFanGenre.all, :id, :name %><br>
-    <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
-        <%= lfg_fields.text_field :name %><br>
-    <% end %><br><br><br>
-        <label>Find or write the author's name ...</label><br><br>
-    <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %><br><br>
-    <%= f.submit "Submit" %>
-    <datalist id="lit_fan_authors_autocomplete">
-    <% LitFanAuthor.all.each do |lfa| %>
-    <option value="<%= lfa.name %>">
+    <%= f.text_field :title %><br><br>
+
+        <h3>Choose/add at least one genre ... </h3><br><br>
+        <%= f.collection_check_boxes :lit_fan_genre_ids, LitFanGenre.all, :id, :name %><br>
+        <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
+            <%= lfg_fields.text_field :name %><br><br>
+        <% end %><br><br><br>
+        
+        <h3>Find or write the author's name ...</h3><br><br>
+        <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %><br><br>
+        <%= f.submit "Submit" %>
+        <datalist id="lit_fan_authors_autocomplete">
+        <% LitFanAuthor.all.each do |lfa| %>
+        <option value="<%= lfa.name %>">
     <% end %>
 <% end %>
