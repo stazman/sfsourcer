@@ -34,11 +34,11 @@ class FundingProject < ApplicationRecord
 
     # order/groupby
 
-    def total_pledges
-        self.pledges.map do |p| 
-           p.amount     
-        end
-    end
+    # def total_pledges
+    #     self.pledges.map do |p| 
+    #        p.amount     
+    #     end
+    # end
 end
 
 

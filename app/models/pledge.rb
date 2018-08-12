@@ -1,6 +1,7 @@
 class Pledge < ApplicationRecord
     belongs_to :funding_project
     belongs_to :fp_backer
+    accepts_nested_attributes_for :funding_project
    
     # validates_presence_of :amount
     # validates :amount, numericality: true
@@ -13,7 +14,7 @@ class Pledge < ApplicationRecord
     end
 
     def fp_backer_name=(name)
-        fpb = FpBacker.find_by(name: name)
+        fpb = FpBacker.find_or_create_by(name: name)
         self.fp_backer = fpb
     end
 
@@ -21,6 +22,7 @@ class Pledge < ApplicationRecord
         funding_project_attributes.values.each do |fp_attribute|
         fp = FundingProject.find(fp_attribute) 
         self.funding_projects << fp
+        end
     end 
 end
 

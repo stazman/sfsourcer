@@ -6,19 +6,20 @@ class PledgesController < ApplicationController
     end
   
     def new
-      @pledge = Pledge.new
-      @pledges = @fp_backer.pledges
+      # @pledge = Pledge.new
+      @pledge = Pledge.new(fp_backer_id: params[:fp_backer_id])
+
     end
   
     def create
-      @pledge = Pledge.new(fp_backer_id: params[:fp_backer])
+      @pledge = Pledge.new(pledge_params)
       # @pledge.user_id = current_user.id
       # @fp_backer = FpBacker.where(id: current_user.id)
       # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
       # if @pledge.valid?
 
         @pledge.save
-        redirect_to pledge_path(@pledge)
+        redirect_to @pledge
       # else
       #   render :new
       # end
