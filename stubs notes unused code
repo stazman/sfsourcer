@@ -1,10 +1,10 @@
-
-current commit notepad:
-
+NOTES
 
 
 
-Questions:
+
+QUESTIONS
+
 when do we need a writer for the association? in a has many trough?
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
 how to bypass index and get to show?? is this a general issue? wrong id parameters? was an issue with user/fp_creator
@@ -22,19 +22,16 @@ what exactly is going on between these two snippets of code?
     end
 
 
+Current commit notepad:
+
+
+
+
+
 To Do for Rails Project:
 
 
-
-
-x1. change associations
-x2. allow fpbacker to have access to h pledges and funding projects
-5. A user can see projects that are within 80% of their goal ... class scope method called on funding projects and viewable in a distinct url
-
-
-
-make class method involving pledges and funding project
-[ ] connect distinct, remotely connected roles to user
+[ ] make class method involving pledges and funding project
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
 [ ] Make sure all validations work
@@ -46,17 +43,14 @@ make class method involving pledges and funding project
 
  
 
-Future: 
+FUTURE TO DO: 
 
 learn indexing -- higher speed and performance
 learn when how to use aliases
 concerns
 
-
-having an fp_backer model may allow for future functionality involving options the fb_backer has in relation to the pledge
-i.e. one kind of backer is a backer who receives rewards for pledges for a particular pledge, while keeping user in a distinct but associated class
-a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
-
+[ ] Make FpBacker instantiate with Pledges correctly
+[ ] connect distinct, remotely connected roles to user
 [ ] for the next feature, use git branching
 [ ] right now you need to be a registered user to make a pledge; needs to be doable without registering ... kickstarter doing guest pledging now
     [ ] use one of several available gems for giving user multiple roles ?!!! or learn a more up to date? and systematic authorization/authentication system (check bookmarks)

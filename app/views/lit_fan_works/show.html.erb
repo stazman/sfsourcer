@@ -1,3 +1,33 @@
-<h1>Your Pledge for </h1>
+<h2>Your Recommended Work:</h2>
+ <h1><%= @lit_fan_work.title %></h1>
 
-<h3><%= @pledge.amount %></h3>
+ <h2>By: <%= @lit_fan_work.lit_fan_author.name %></h2><br>
+
+ <h3>Genre/s: </h3>
+        <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
+            <h4><li><%= lfg.name %><br></li></h4>
+        <% end %><br><br>
+
+ <h4><%= link_to "Add New Work", new_lit_fan_work_path %></h4>
+
+ <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
+
+ <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
+
+ <h2>(Under Construction)</h2><br>
+
+ <h2>SFSourcer Features for this work:</h2><br>
+
+ <h3>FanWiki About</h3><br>
+
+ <h3>News/Articles</h3><br>
+
+ <h3>Member Comments</h3><br>
+
+ <h3>Fandom/Events</h3><br><br>
+
+ <h2>Make this page into a ClubSite!</h3><br>
+ <h3>Here's how:</h3><br><br>
+
+ <h2>Add this site to your YourPage!</h2><br>
+ <h3>Here's how:</h2>
