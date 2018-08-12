@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_035859) do
+ActiveRecord::Schema.define(version: 2018_08_12_044359) do
 
   create_table "fp_backers", force: :cascade do |t|
     t.string "name"
@@ -74,6 +74,13 @@ ActiveRecord::Schema.define(version: 2018_08_12_035859) do
   create_table "lit_fan_works", force: :cascade do |t|
     t.string "title"
     t.integer "lit_fan_author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pledge_funding_projects", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.integer "pledge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
