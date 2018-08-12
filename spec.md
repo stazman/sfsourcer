@@ -12,7 +12,7 @@ Specs:
 - [x] Include login (how e.g. Devise) CUSTOM METHOD
 - [x] Include logout (how e.g. Devise) CUSTOM METHOD
 - [x] Include third party signup/login (how e.g. Devise/OmniAuth) OMNIAUTH
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes) LIT_FAN_AUTHORS/:1/LIT_FAN_WORKS
+- [x] Include nested resource show or index (URL e.g. users/2/recipes) LIT_FAN_AUTHORS/:1/LIT_FAN_WORKS
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients) LIT_FAN_AUTHORS/:1/LIT_FAN_WORKS/NEW
 - [x] Include form display of validation errors (form URL e.g. /recipes/new)
 

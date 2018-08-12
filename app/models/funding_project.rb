@@ -1,11 +1,11 @@
 class FundingProject < ApplicationRecord
-    
-    
+      
     has_many :funding_project_fp_creators
     has_many :fp_creators, through: :funding_project_fp_creators
     accepts_nested_attributes_for :fp_creators
-    has_many :pledges
-    has_many :fp_backers, through: :pledges
+    has_many :pledge_funding_projects
+    has_many :pledges, through: :pledge_funding_projects
+    # has_many :fp_backers, through: :pledges
 
     validates_presence_of :title
     validates_uniqueness_of :title
