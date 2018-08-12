@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_11_200123) do
+ActiveRecord::Schema.define(version: 2018_08_10_194222) do
 
   create_table "fp_backers", force: :cascade do |t|
     t.string "name"
@@ -96,15 +96,12 @@ ActiveRecord::Schema.define(version: 2018_08_11_200123) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "userable_type"
-    t.integer "userable_id"
     t.string "name"
     t.string "email"
     t.string "password"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["userable_id", "userable_type"], name: "index_users_on_userable_id_and_userable_type"
   end
 
 end

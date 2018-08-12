@@ -1,5 +1,4 @@
 class FpBacker < ApplicationRecord
-    acts_as_user
     
     has_many :pledges
     has_many :funding_projects, through: :pledges

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'fp_backers/index'
-  get 'fp_backers/new'
-  get 'fp_backers/show'
-  get 'fp_backers/edit'
   root 'static#home'
   
   get '/login', to: 'sessions#new'
