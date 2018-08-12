@@ -24,22 +24,7 @@ MAIN NAVBAR
 <% end %>
 
 
-<h3>Total Pledges So Far:</h3>
-<%= @funding_project.total_pledges.sum  %><br><br>
-
-<% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
-    <%= "Total Needed:" %>
-    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %><br>
-    <%= "Funding Goal Achieved!" %><br><br>
-<% elsif @funding_project.total_pledges.sum > @funding_project.funding_goal %><br>
-    <%= "Funding Goal Achieved!" %><br><br>
-<%= "Total Over Funding Goal:" %>
-    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
-<% end %><br><br>
-
-
-<h3><%= link_to "Make a Pledge", new_fp_backer_path %></h3>
+<h3><%= link_to "Make a Pledge", new_pledge_path %></h3>
 
 <%# <h3><%= link_to "Make a Comment", new_funding_project_comment_path %>
 

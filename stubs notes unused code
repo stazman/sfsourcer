@@ -25,21 +25,10 @@ what exactly is going on between these two snippets of code?
 To Do for Rails Project:
 
 
-connect pledges with funding project
-nested attribute is not the right connection and there is no need for nested resources/urls
-I'm going to go with direct associaiton belongs to has many but make a 
-
-needed functionality
-fp_backer can make a pledge to a funding_project
-the pledge can be made without making funding_project at the same time
-no nested attributes or urls are necessary, so through queries
-there is no magic with join tables that have hteir own semantic attributes
 
 
 x1. change associations
 x2. allow fpbacker to have access to h pledges and funding projects
-3. allow many users to have access to many fp_creators but not to pledges; there can be many users who have access to making a project but only one to make a pledge as fp_backer
-4. even a non user can see how many pledges and total amounts a project has but not who made the pledges
 5. A user can see projects that are within 80% of their goal ... class scope method called on funding projects and viewable in a distinct url
 
 
@@ -68,7 +57,7 @@ having an fp_backer model may allow for future functionality involving options t
 i.e. one kind of backer is a backer who receives rewards for pledges for a particular pledge, while keeping user in a distinct but associated class
 a fp backer can see all of the pledges and funding projects ... through query, but a fp creator can access all of their funding projects as a collection and a nested url of a creator's funding_projects is apprriate? [ ] Use polymorphic for comments belonging to a variety of models
 
-
+[ ] for the next feature, use git branching
 [ ] right now you need to be a registered user to make a pledge; needs to be doable without registering ... kickstarter doing guest pledging now
     [ ] use one of several available gems for giving user multiple roles ?!!! or learn a more up to date? and systematic authorization/authentication system (check bookmarks)
 [ ] Make separate model for fp_commenter to comment on funding_projects and be associated with user
@@ -149,6 +138,21 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+
+<h3>Total Pledges So Far:</h3>
+<%= @funding_project.total_pledges.sum  %><br><br>
+
+<% if @funding_project.total_pledges.sum < @funding_project.funding_goal %>
+    <%= "Total Needed:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% elsif @funding_project.total_pledges.sum == @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<% elsif @funding_project.total_pledges.sum > @funding_project.funding_goal %><br>
+    <%= "Funding Goal Achieved!" %><br><br>
+<%= "Total Over Funding Goal:" %>
+    <%= @funding_project.total_pledges.sum - @funding_project.funding_goal %>
+<% end %><br><br>
+
 
     <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>

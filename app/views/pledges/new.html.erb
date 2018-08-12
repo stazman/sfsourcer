@@ -1,10 +1,17 @@
-<h1>New Pledge Form</h1>
+<h1>Make a Pledge</h1>
 
 <%= form_for @pledge do |f| %>
-<%= f.label "Choose the project" %>
-<%= f.collection_select :funding_project_id, FundingProject.all, :id, :title %><br>
-<%= f.label :amount %>
-<%= f.text_field :amount %>
+    <%= f.label "Choose the project" %>
+    <%= f.collection_select :funding_project_id, FundingProject.all, :id, :title %><br><br><br>
+    <h4>Please choose from these reward options ... (under construction)</h4><br><br>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %><br><br>
+ <h3>Pledge Form</h3>
+        <%= f.fields_for :fp_backer do |fpb| %>
+            <%= fpb.label "Name of Backer" %><br>
+            <%= fpb.text_field :name %><br><br>
+            <%= fpb.label :backer_email %><br><br><br>
+            <%= fpb.text_field :backer_email %><br><br><br>
+    <% end %>
 <%= f.submit "Create Pledge" %>
 <% end %>
-
