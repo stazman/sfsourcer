@@ -28,8 +28,8 @@ class PledgesController < ApplicationController
   
     def show
       @pledge = Pledge.find(params[:id])
-      @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
-      @pledge = @fp_backer.pledges.find_by(id: params[:id])
+      # @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
+      # @pledge = @fp_backer.pledges.find_by(id: params[:id])
     end
   
     def edit

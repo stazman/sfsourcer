@@ -1,7 +1,7 @@
 class Pledge < ApplicationRecord
-    belongs_to :funding_project
-    belongs_to :fp_backer
-    accepts_nested_attributes_for :funding_project
+    has_many :pledge_funding_projects
+    has_many :funding_projects, through: :pledge_funding_projects
+    accepts_nested_attributes_for :funding_projects
    
     # validates_presence_of :amount
     # validates :amount, numericality: true
