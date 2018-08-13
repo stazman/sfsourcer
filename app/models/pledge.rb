@@ -4,8 +4,10 @@ class Pledge < ApplicationRecord
     has_many :fp_backer_pledges
     has_many :fp_backers, through: :fp_backer_pledges
        
-    # validates_presence_of :amount
-    # validates :amount, numericality: true
+    validates_presence_of :amount
+    validates :amount, numericality: true
+end
+
 
     # def funding_project_title=(funding_project_title)
     #     self.funding_project.title = FundingProject.find_by(title: funding_project_title)
@@ -19,15 +21,12 @@ class Pledge < ApplicationRecord
     #     self.fp_backer = fpb
     # end
 
-    def funding_project_attributes=(funding_project_attributes)
-        funding_project_attributes.values.each do |fp_attribute|
-        fp = FundingProject.find(fp_attribute) 
-        self.funding_projects << fp
-        end
-    end 
-end
-
-
+    # def funding_project_attributes=(funding_project_attributes)
+    #     funding_project_attributes.values.each do |fp_attribute|
+    #     fp = FundingProject.find(fp_attribute) 
+    #     self.funding_projects << fp
+    #     end
+    # end 
 
 # def funding_project_name
 #     self.try(:funding_project).try(:name)

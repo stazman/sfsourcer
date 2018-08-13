@@ -1,22 +1,3 @@
-<h1>Your Pledge</h1><br>
-
-<p>Change Password: </p>
-
-<h2><%= link_to "Your SFSourcer Projects!", funding_projects_url %> </h2><br><br>
-
-<h2><%= link_to "Check out all SFSourcer Projects!", funding_projects_url %> </h2><br>
+<h2>Thank you for your pledge of $<%= @pledge.amount %> for <%= @funding_project.title %>!</h2>
 
 
-<h3>Your Pledges: </h3>
-<ul>
-    <%# <li><h3><% @funding_projects.each do |fp| %></h3></li> %>
-    <%# <li><h3>Sourcer Project: <%= fp.title %></h3></li> %>
-    <%# <% end %> %>
-    <%# make into link %>
-    <li><h3><% @pledges.each do |p| %></h3></li>
-    <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
-    <li><h3>Amount: <%= p.amount %></h3></li>
-        <% end %>
-
-    <%# make into link %>
-</ul>

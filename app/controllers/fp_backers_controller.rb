@@ -1,6 +1,6 @@
 class FpBackersController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:new, :create]
+  # skip_before_action :require_login, only: [:new, :create]
 
   def index
     @fp_backers = FpBacker.all
@@ -40,7 +40,7 @@ class FpBackersController < ApplicationController
   private
 
   def fp_backer_params
-    params.require(:fp_backer).permit(:name, :user_id)
+    params.require(:fp_backer).permit(:name, :user_id, funding_projects_ids:[], funding_projects_attributes: [:title], pledges_ids:[], pledges_attributes: [:amount])
   end
 
   def require_login

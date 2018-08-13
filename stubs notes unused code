@@ -30,7 +30,7 @@ on new git branch changing controllers/views according to previous db/model chan
 
 To Do for Rails Project:
 
-
+[ ] Let user see all pledges/projects (see unused code XXA)
 [ ] make class method involving pledges and funding project
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
@@ -132,6 +132,27 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+
+
+XXA <h3>Your Pledges: </h3>
+<ul>
+    <%# <li><h3><% @funding_projects.each do |fp| %></h3></li> %>
+    <%# <li><h3>Sourcer Project: <%= fp.title %></h3></li> %>
+    <%# <% end %> %>
+    <%# make into link %>
+    <li><h3><% @pledges.each do |p| %></h3></li>
+    <li><h3>Sourcer Project: <%= p.funding_project.title %></h3></li>
+    <li><h3>Amount: <%= p.amount %></h3></li>
+        <% end %>
+
+    <%# make into link %>
+</ul>
+
+<h2><%= link_to "Your SFSourcer Projects!", funding_projects_url %> </h2><br><br>
+
+<h2><%= link_to "Check out all SFSourcer Projects!", funding_projects_url %> </h2><br>
+
+end XXA 
 
 <h3>Total Pledges So Far:</h3>
 <%= @funding_project.total_pledges.sum  %><br><br>
