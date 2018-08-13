@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_044359) do
+ActiveRecord::Schema.define(version: 2018_08_13_142701) do
+
+  create_table "fp_backer_funding_projects", force: :cascade do |t|
+    t.integer "fp_backer_id_id"
+    t.integer "funding_project_id_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fp_backer_id_id"], name: "index_fp_backer_funding_projects_on_fp_backer_id_id"
+    t.index ["funding_project_id_id"], name: "index_fp_backer_funding_projects_on_funding_project_id_id"
+  end
 
   create_table "fp_backers", force: :cascade do |t|
     t.string "name"
@@ -40,6 +49,13 @@ ActiveRecord::Schema.define(version: 2018_08_12_044359) do
     t.datetime "updated_at", null: false
     t.index ["fp_creator_id"], name: "index_funding_project_fp_creators_on_fp_creator_id"
     t.index ["funding_project_id"], name: "index_funding_project_fp_creators_on_funding_project_id"
+  end
+
+  create_table "funding_project_pledges", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.integer "pledge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "funding_projects", force: :cascade do |t|
@@ -74,13 +90,6 @@ ActiveRecord::Schema.define(version: 2018_08_12_044359) do
   create_table "lit_fan_works", force: :cascade do |t|
     t.string "title"
     t.integer "lit_fan_author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pledge_funding_projects", force: :cascade do |t|
-    t.integer "funding_project_id"
-    t.integer "pledge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
