@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_142701) do
+ActiveRecord::Schema.define(version: 2018_08_13_190417) do
 
   create_table "fp_backer_funding_projects", force: :cascade do |t|
     t.integer "fp_backer_id_id"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2018_08_13_142701) do
     t.datetime "updated_at", null: false
     t.index ["fp_backer_id_id"], name: "index_fp_backer_funding_projects_on_fp_backer_id_id"
     t.index ["funding_project_id_id"], name: "index_fp_backer_funding_projects_on_funding_project_id_id"
+  end
+
+  create_table "fp_backer_pledges", force: :cascade do |t|
+    t.integer "fp_backers_id"
+    t.integer "pledges_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fp_backers_id"], name: "index_fp_backer_pledges_on_fp_backers_id"
+    t.index ["pledges_id"], name: "index_fp_backer_pledges_on_pledges_id"
   end
 
   create_table "fp_backers", force: :cascade do |t|
