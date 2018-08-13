@@ -1,5 +1,9 @@
 class FpBacker < ApplicationRecord
-    has_many :pledges
+    has_many :fp_backer_funding_projects
+    has_many :funding_projects, through: :fp_backer_funding_projects
+    has_many :fp_backer_pledges
+    has_many :pledges, through: :fp_backer_pledges
+
     # has_many :funding_projects, through: :pledges
     # has_many :funding_projects
     # has_many :user_fp_backers
