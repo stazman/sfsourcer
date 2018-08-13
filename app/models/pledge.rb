@@ -10,14 +10,14 @@ class Pledge < ApplicationRecord
     # def funding_project_title=(funding_project_title)
     #     self.funding_project.title = FundingProject.find_by(title: funding_project_title)
     # end
-    def fp_backer_name
-        self.try(:fp_backer).try(:name)
-    end
+    # def fp_backer_name
+    #     self.try(:fp_backer).try(:name)
+    # end
 
-    def fp_backer_name=(name)
-        fpb = FpBacker.find_or_create_by(name: name)
-        self.fp_backer = fpb
-    end
+    # def fp_backer_name=(name)
+    #     fpb = FpBacker.find_or_create_by(name: name)
+    #     self.fp_backer = fpb
+    # end
 
     def funding_project_attributes=(funding_project_attributes)
         funding_project_attributes.values.each do |fp_attribute|

@@ -24,7 +24,7 @@ what exactly is going on between these two snippets of code?
 
 Current commit notepad:
 
-on new git branch changing associations/nesting models according to previous db/model changes
+on new git branch changing controllers/views according to previous db/model changes
 
 
 
