@@ -1,6 +1,6 @@
-class CreatePledgeFundingProjects < ActiveRecord::Migration[5.2]
+class CreateFundingProjectPledges < ActiveRecord::Migration[5.2]
   def change
-    create_table :pledge_funding_projects do |t|
+    create_table :funding_project_pledges do |t|
       t.integer :funding_project_id
       t.integer :pledge_id
 
