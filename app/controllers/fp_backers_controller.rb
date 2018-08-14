@@ -23,6 +23,8 @@ class FpBackersController < ApplicationController
 
   def show
       @fp_backer = FpBacker.find(params[:id])
+      @pledge = @fp_backer.pledges.find_by(params[:id])
+      @funding_project = @fp_backer.funding_projects.find_by(params[:id])
       # @pledges = Pledge.where(:fp_backer_id == @fp_backer.id) 
       # @pledges = Pledge.where(:fp_backer_id == @fp_backer.id)
   end
