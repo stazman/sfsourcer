@@ -10,25 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_190417) do
-
-  create_table "fp_backer_funding_projects", force: :cascade do |t|
-    t.integer "fp_backer_id_id"
-    t.integer "funding_project_id_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fp_backer_id_id"], name: "index_fp_backer_funding_projects_on_fp_backer_id_id"
-    t.index ["funding_project_id_id"], name: "index_fp_backer_funding_projects_on_funding_project_id_id"
-  end
-
-  create_table "fp_backer_pledges", force: :cascade do |t|
-    t.integer "fp_backers_id"
-    t.integer "pledges_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fp_backers_id"], name: "index_fp_backer_pledges_on_fp_backers_id"
-    t.index ["pledges_id"], name: "index_fp_backer_pledges_on_pledges_id"
-  end
+ActiveRecord::Schema.define(version: 2018_08_14_005703) do
 
   create_table "fp_backers", force: :cascade do |t|
     t.string "name"
@@ -73,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_190417) do
     t.integer "funding_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "fp_backer_id"
   end
 
   create_table "lit_fan_authors", force: :cascade do |t|
@@ -105,10 +88,11 @@ ActiveRecord::Schema.define(version: 2018_08_13_190417) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer "amount"
-    t.integer "fp_backer_id"
+    t.integer "reward_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "funding_project_id"
+    t.integer "fp_backer_id"
   end
 
   create_table "sf_favs", force: :cascade do |t|

@@ -1,8 +1,9 @@
 class Pledge < ApplicationRecord
-    has_many :funding_project_pledges
-    has_many :funding_projects, through: :funding_project_pledges
-    has_many :fp_backer_pledges
-    has_many :fp_backers, through: :fp_backer_pledges
+    # has_many :funding_project_pledges
+    # has_many :funding_projects, through: :funding_project_pledges
+    belongs_to :fp_backer 
+    # has_many :fp_backer_pledges
+    # has_many :fp_backers, through: :fp_backer_pledges
        
     validates_presence_of :amount
     validates :amount, numericality: true

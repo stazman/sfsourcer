@@ -1,7 +1,14 @@
 NOTES
 
 
-
+=> #<Pledge id: 7, amount: 20, reward_type: 1, created_at: "2018-08-14 00:18:52", updated_at: "2018-08-14 00:18:52", funding_project_id: nil>
+2.3.3 :002 > fp_backer = FpBacker.create!(name: "FP4", backer_email: "fp4@gmail.com", pledge_ids: [6], funding_project_ids: [2])
+NameError: uninitialized constant FpBacker::Pledges
+        from (irb):2
+2.3.3 :003 > fp_backer = FpBacker.create!(name: "FP4", backer_email: "fp4@gmail.com", pledge_ids: [6], funding_project_ids: [2])
+NameError: uninitialized constant FpBacker::Pledges
+        from (irb):3
+2.3.3 :004 > fp5 = FpBacker.create!(name: "FPB5", backer_email: "fpb5@gmail.com", pledge_ids: [6], funding_project_ids: [2])
 
 QUESTIONS
 
