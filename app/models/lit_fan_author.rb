@@ -9,8 +9,10 @@ class LitFanAuthor < ApplicationRecord
         end
     end
 
-    def self.author_most_works
-      puts "hello"
+    def self.alphabetized
+      # all.order('name').first
+      all.order("name")
+
       # joins(:lit_fan_works).group("lit_fan_author.id").order(title: :desc).limit(1)
       # binding.pry
       

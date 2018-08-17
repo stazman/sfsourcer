@@ -1,1 +1,14 @@
-<%= @lit_fan_authors.author_most_works %>
+
+
+<% LitFanAuthor.alphabetized.each do |lfa| %>
+<%= lfa.name %>
+
+<%# <% @lit_fan_authors.each do |lfa| %> %>
+<%# <%= lfa.name  %> %>
+<% end %>
+<%# <%= LitFanAuthor.author_most_works %>
+
+<%# <% @lit_fan_authors.all.each do |lfa| %> %>
+<%# <%= lfa.name if lfa.author_most_works %> %>
+<%# <% end %> %>
+<%# <%= LitFanAuthor.author_most_works %>
