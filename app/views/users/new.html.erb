@@ -1,40 +1,7 @@
-MAIN NAVBAR 
-<h1>Make a Free Account!</h1><br>
+<h1>Make a Free Account!</h1>
 
-<%= render partial: "errors" %>
+<%= render partial: "errors" %><br>
 
 <h3>Sign up with your email:</h3>
 
-<%= form_for @user do |f| %>
-<div class="field<%= ' field_with_errors' if @user.errors[:name].any? %>">
- <%= f.label :name %>
-<%= f.text_field :name %>
-  </div>
-<div class="field<%= ' field_with_errors' if @user.errors[:email].any? %>">
-<%= f.label :email %>
- <%= f.text_field :email %>
-  </div>
-<div class="field<%= ' field_with_errors' if @user.errors[:password].any? %>">
- <%= f.label :password %>
-<%= f.text_field :password %>
-  </div>
-
-<h2>Let us know about your SF favorites!</h2>
-    <%= f.fields_for :sf_favs do |sf_fave| %>
-<h3>What are your favorite SF literary works?</h3>    
-<%# <ol> %>
-      <li><%= sf_fave.text_field :fav_lits %><br></li>
-    <%# </ol> %>
- 
-<h3>What are your favorite SF films?</h3>    
-        <%# <ol> %>
-      <li><%= sf_fave.text_field :fav_films %><br></li>
-    <%# </ol>  %>
-<h3>What are your favorite SF games?</h3>    
-        <%# <ol> %>
-      <li><%= sf_fave.text_field :fav_games %><br></li>
-    <%# </ol>  %>
-  <% end %>
-
-  <%= f.submit "Create Account" %>
-<% end %>
+<%= render partial: "form" %>
