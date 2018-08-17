@@ -2,8 +2,20 @@ class LitFanAuthorsController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:index, :show]
   
-  def author_most_works
-    @lit_fan_authors = LitFanAuthor.author_most_works
+  def alphabetized
+      @lit_fan_authors = LitFanAuthor.alphabetized
+
+      
+      # @lit_fan_author = LitFanAuthor.find(params[:id])
+      # @lit_fan_works = @lit_fan_author.lit_fan_works.find_by(id: params[:lit_fan_work_id])
+      
+      # @lit_fan_author = LitFanAuthor.author_most_works(2)
+
+      # @lit_fan_author = LitFanAuthor.author_most_works(2)
+      # @lit_fan_authors = LitFanAuthor.all
+
+
+    # @lit_fan_authors = LitFanAuthor.author_most_works
   end
     
   def index
