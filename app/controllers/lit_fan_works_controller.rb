@@ -4,8 +4,8 @@ class LitFanWorksController < ApplicationController
   
   def index
     if params[:lit_fan_author_id]
-      # NEED THIS TO CHECK BECAUSE NEED TO ... WHY DO WE NEED THIS IF #NEW HAS THIS?
-      # THIS IS DONE BECAUSE in case index is rendered where aUTHOR AND lit_fan_work ARE both LISTED; PRESUMABLY NOT NECESSARY IF ONLY ONE MODEL INVOLVED?
+      # ??? NEED THIS TO CHECK BECAUSE NEED TO ... WHY DO WE NEED THIS IF #NEW HAS THIS?
+      # ??? THIS IS DONE BECAUSE in case index is rendered where aUTHOR AND lit_fan_work ARE both LISTED; PRESUMABLY NOT NECESSARY IF ONLY ONE MODEL INVOLVED?
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       if @lit_fan_author.nil?
         redirect_to lit_fan_author_path, alert: "Author not found"
@@ -30,7 +30,7 @@ class LitFanWorksController < ApplicationController
     @lit_fan_work = LitFanWork.new(lit_fan_work_params)
     # raise params.inspect
     if @lit_fan_work.save
-    #   # setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
+    #   # ??? setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
       redirect_to @lit_fan_work
     else
       render :new
@@ -47,7 +47,7 @@ class LitFanWorksController < ApplicationController
            # This is done in case the specific work requested is expected to have the associated author with it but it doesn't
       # end
     else
-      # And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
+      # ??? And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
       @lit_fan_work = LitFanWork.find(params[:id])
     end
   end
@@ -98,6 +98,5 @@ class LitFanWorksController < ApplicationController
 
   def lit_fan_work_params
     params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
-    # binding.pry
   end
 end

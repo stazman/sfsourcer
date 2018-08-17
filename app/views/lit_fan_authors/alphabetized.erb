@@ -1,14 +1,5 @@
-
-      <%# @lit_fan_authors.each {|name| name.alph_name } %>
+<h2>All Fanvorite Authors in Alphabetical Order (by First Name)</h2><br>
 
 <% @lit_fan_authors.each do |lfa|  %>
-<%= lfa.name  %>
+<h3><li><%= link_to lfa.name, lit_fan_author_path(lfa) %></li></h3>
 <% end %>
-<%# <% @lit_fan_authors.each do |lfa| %> %>
-<%# <% end %> %>
-<%# <%= LitFanAuthor.author_most_works %>
-
-<%# <% @lit_fan_authors.all.each do |lfa| %> %>
-<%# <%= lfa.name if lfa.author_most_works %> %>
-<%# <% end %> %>
-<%# <%= LitFanAuthor.author_most_works %>

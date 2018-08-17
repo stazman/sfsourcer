@@ -3,8 +3,8 @@
 <h2>Works by <%= @lit_fan_author.name %> recommended by SFSourcer members:</h2>
 <ul>
   <% @lit_fan_author.lit_fan_works.each do |lit_fan_work| %>
-    <li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li>
-  <% end %>
+    <h3><li><%= link_to lit_fan_work.title, lit_fan_author_lit_fan_work_path(@lit_fan_author, lit_fan_work) %></li></h3>
+  <% end %><br><br>
 </ul>
 
 <h2>SFSourcer Features for this author:</h2>
