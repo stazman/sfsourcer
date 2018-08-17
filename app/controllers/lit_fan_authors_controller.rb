@@ -2,6 +2,10 @@ class LitFanAuthorsController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:index, :show]
   
+  def author_most_works
+    @lit_fan_authors = LitFanAuthor.author_most_works
+  end
+    
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
 
