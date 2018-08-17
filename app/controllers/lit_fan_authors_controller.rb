@@ -3,7 +3,9 @@ class LitFanAuthorsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   
   def alphabetized
-      @lit_fan_authors = LitFanAuthor.alphabetized
+      @author_most_works = LitFanAuthor.alphabetized.each {|name| name}
+  end
+        
 
       
       # @lit_fan_author = LitFanAuthor.find(params[:id])
