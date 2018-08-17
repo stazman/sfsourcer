@@ -1,10 +1,11 @@
 
+      <%# @lit_fan_authors.each {|name| name.alph_name } %>
 
-<%= @lit_fan_author.name %>
-
-<%# <% @lit_fan_authors.each do |lfa| %> %>
-<%# <%= lfa.name  %> %>
+<% @lit_fan_authors.each do |lfa|  %>
+<%= lfa.name  %>
 <% end %>
+<%# <% @lit_fan_authors.each do |lfa| %> %>
+<%# <% end %> %>
 <%# <%= LitFanAuthor.author_most_works %>
 
 <%# <% @lit_fan_authors.all.each do |lfa| %> %>

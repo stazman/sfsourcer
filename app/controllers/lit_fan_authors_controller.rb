@@ -3,7 +3,9 @@ class LitFanAuthorsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   
   def alphabetized
-      @author_most_works = LitFanAuthor.alphabetized.each {|name| name}
+    @lit_fan_authors = LitFanAuthor.alphabetized
+    # @lit_fan_authors.each do |lfa|
+    #   lfa.alphabetized.name
   end
         
 
@@ -18,7 +20,6 @@ class LitFanAuthorsController < ApplicationController
 
 
     # @lit_fan_authors = LitFanAuthor.author_most_works
-  end
     
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
