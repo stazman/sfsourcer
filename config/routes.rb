@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/sf_game_fanvorites', to: 'static#sf_game_fanvorites'
   get '/sourcer_projects', to: 'static#sourcer_projects'
 
+  get '/lit_fan_authors/author_most_works', to: 'lit_fan_authors#author_most_works'
+
   resources :users
   resources :funding_projects
   resources :fp_creators
