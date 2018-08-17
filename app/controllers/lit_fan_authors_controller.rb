@@ -4,23 +4,8 @@ class LitFanAuthorsController < ApplicationController
   
   def alphabetized
     @lit_fan_authors = LitFanAuthor.alphabetized
-    # @lit_fan_authors.each do |lfa|
-    #   lfa.alphabetized.name
   end
-        
-
-      
-      # @lit_fan_author = LitFanAuthor.find(params[:id])
-      # @lit_fan_works = @lit_fan_author.lit_fan_works.find_by(id: params[:lit_fan_work_id])
-      
-      # @lit_fan_author = LitFanAuthor.author_most_works(2)
-
-      # @lit_fan_author = LitFanAuthor.author_most_works(2)
-      # @lit_fan_authors = LitFanAuthor.all
-
-
-    # @lit_fan_authors = LitFanAuthor.author_most_works
-    
+            
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
 
@@ -39,10 +24,6 @@ class LitFanAuthorsController < ApplicationController
 
   def create
     @lit_fan_author = LitFanAuthor.new(lit_fan_author_params)
-  
-    # @lit_fan_author.lit_fan_works.build
-      # = LitFanWork.where(lit_fan_author_id: params[:lit_fan_author_id])
-
     if @lit_fan_author.save
       redirect_to @lit_fan_author
     else
@@ -87,3 +68,21 @@ class LitFanAuthorsController < ApplicationController
     params.require(:lit_fan_author).permit(:name, :term)
   end
 end
+
+
+
+        
+    # @lit_fan_author.lit_fan_works.build
+      # = LitFanWork.where(lit_fan_author_id: params[:lit_fan_author_id])
+
+
+      # @lit_fan_author = LitFanAuthor.find(params[:id])
+      # @lit_fan_works = @lit_fan_author.lit_fan_works.find_by(id: params[:lit_fan_work_id])
+      
+      # @lit_fan_author = LitFanAuthor.author_most_works(2)
+
+      # @lit_fan_author = LitFanAuthor.author_most_works(2)
+      # @lit_fan_authors = LitFanAuthor.all
+
+
+    # @lit_fan_authors = LitFanAuthor.author_most_works
