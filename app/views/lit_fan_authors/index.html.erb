@@ -7,7 +7,9 @@
   <%= submit_tag 'Search', name: nil  %>
   <% end %>
 
+<%= link_to 'Author with the most works', lit_fan_authors_author_most_works_path %>
 <h4><% @lit_fan_authors.each do |lfa| %>
         <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li><br>
     <% end %>
 
+<%= LitFanAuthor.author_most_works %>
