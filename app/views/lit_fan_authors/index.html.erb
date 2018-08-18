@@ -9,7 +9,11 @@
 
 <%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %><br><br>
 
+
+
 <h3>All Fanvorite Authors:</h3><br>
 <% @lit_fan_authors.each do |lfa| %>
   <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li><br>
-<% end %>
+<% end %><br>
+
+<%= link_to "Don't see your author here? Make a new one!", new_lit_fan_author_path %><br><br>

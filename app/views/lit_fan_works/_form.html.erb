@@ -8,12 +8,14 @@
         <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
             <%= lfg_fields.text_field :name %><br><br>
         <% end %><br>
+
         <h3>Find or write the author's name ...</h3>
-<%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %>    <br><br>
+        <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %>    <br><br>
 
     <%= f.submit "Submit" %>
-    <datalist id="lit_fan_authors_autocomplete">
-    <% LitFanAuthor.all.each do |lfa| %>
-    <option value="<%= lfa.name %>">
-    <% end %>
+        <datalist id="lit_fan_authors_autocomplete">
+            <% LitFanAuthor.all.each do |lfa| %>
+            <option value="<%= lfa.name %>">
+        <% end %>
+
 <% end %> 
