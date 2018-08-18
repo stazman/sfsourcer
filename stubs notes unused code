@@ -1,6 +1,6 @@
 NOTES
 
-
+do user has many sf favs and sf fav has one user ... can still do join table, but probably not a good idea .. not a colleciton is needed ... instantiate association, new sffavs, in the user class, not a collection of sffavsattributes
 
 
 QUESTIONS
