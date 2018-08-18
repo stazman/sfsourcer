@@ -13,19 +13,17 @@
   </div><br>
 
 <h2>Let us know about your SF favorites!</h2>
-    <%= f.fields_for :sf_favs, @user.sf_favs.build do |sf_favs| %>
+
 <h3>What is your favorite SF literary work?</h3>    
-      <li><%= sf_favs.text_field :fav_lits %><br></li>
+<%= f.text_field :fav_lits %><br></li>
  
 <h3>What is your favorite SF film?</h3>    
-      <li><%= sf_favs.text_field :fav_films %><br></li>
+<%= f.text_field :fav_films %><br></li>
 
 <h3>What is your favorite SF game?</h3>    
-      <li><%= sf_favs.text_field :fav_games %><br></li>
-    <%# <% end %>
+<%= f.text_field :fav_games %><br></li>
 
-  <% end %><br>
-    <%= f.submit "Submit" %>
+<%= f.submit "Submit" %>
 <% end %>
 
 

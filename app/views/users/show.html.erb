@@ -17,14 +17,12 @@
 
 <h3>Your SF Favorites: </h3>
 <ul>
-    <% @user.sf_favs.each do |fav| %>
     <h4>Favorite Literary Work:</h4>
-        <%= fav.fav_lits %><br>
+        <%= @user.fav_lits %><br>
     <h4>Favorite Film:</h4>
-        <%= fav.fav_films %><br>
+        <%= @user.fav_films %><br>
     <h4>Favorite Game:</h4>
-        <%= fav.fav_games %><br>
-        <% end %>
+        <%= @user.fav_games %><br>
 </ul>
 
 
