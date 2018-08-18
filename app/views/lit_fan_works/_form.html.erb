@@ -7,7 +7,7 @@
         <%= f.collection_check_boxes :lit_fan_genre_ids, LitFanGenre.all, :id, :name %><br>
         <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
             <%= lfg_fields.text_field :name %><br><br>
-        <% end %><br><br><br>
+        <% end %><br>
         
         <h3>Find or write the author's name ...</h3><br><br>
         <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %><br><br>
