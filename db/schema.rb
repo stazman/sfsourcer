@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_18_033039) do
+ActiveRecord::Schema.define(version: 2018_08_18_050146) do
 
   create_table "fp_backer_funding_projects", force: :cascade do |t|
     t.integer "fp_backer_id_id"
@@ -131,6 +131,9 @@ ActiveRecord::Schema.define(version: 2018_08_18_033039) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fav_lits"
+    t.string "fav_films"
+    t.string "fav_games"
   end
 
 end
