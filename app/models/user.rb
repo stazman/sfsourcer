@@ -1,13 +1,23 @@
 class User < ApplicationRecord
 
-    has_many :sf_favs
+    has_many :user_sf_favs
+    has_many :sf_favs, through: :user_sf_favs
     accepts_nested_attributes_for :sf_favs
+
     has_secure_password
 
     validates_presence_of :name
     validates_presence_of :password
     validates_presence_of :email
     validates_uniqueness_of :email
+
+
+    def sf_favs_attributes=(sf_favs_attributes)
+        sf_favs_attributes.values.each do |sff_attribute|
+        sff = SfFav.find_or_create_by(sff_attribute) 
+        self.sf_favs << sff 
+        end 
+    end
 
     def self.find_or_create_by_omniauth(auth_hash)
         oauth_email = auth_hash[:info][:email]
