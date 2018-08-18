@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_190417) do
+ActiveRecord::Schema.define(version: 2018_08_18_033039) do
 
   create_table "fp_backer_funding_projects", force: :cascade do |t|
     t.integer "fp_backer_id_id"
@@ -56,8 +56,6 @@ ActiveRecord::Schema.define(version: 2018_08_13_190417) do
     t.integer "fp_creator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fp_creator_id"], name: "index_funding_project_fp_creators_on_fp_creator_id"
-    t.index ["funding_project_id"], name: "index_funding_project_fp_creators_on_funding_project_id"
   end
 
   create_table "funding_project_pledges", force: :cascade do |t|
@@ -115,8 +113,13 @@ ActiveRecord::Schema.define(version: 2018_08_13_190417) do
     t.string "fav_lits"
     t.string "fav_films"
     t.string "fav_games"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_sf_favs", force: :cascade do |t|
     t.integer "user_id"
-    t.string "sf_fav_type"
+    t.integer "sf_fav_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
