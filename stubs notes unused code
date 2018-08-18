@@ -44,6 +44,7 @@ concerns
 
 [ ] apply what learning in js/jquery section to the project
 [ ] make your next branch/track for git remotely
+[ ] correct sf_favs to allow all combinations of blank/filled out fan fanvorites
 [ ] make class method? involving pledges and funding project
 [ ] Make FpBacker instantiate with Pledges correctly
 [ ] connect distinct, remotely connected roles to user

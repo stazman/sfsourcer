@@ -1,4 +1,4 @@
-a = User.create!(name: "a", email: "a@a.com", password: "a", sf_favs_attributes: [fav_lits: "left blank", fav_films: "left blank", fav_games: "left blank"])
+a = User.create!(name: "a", email: "a@a.com", password: "a")
 # # b_fp = FundingProject.create!(title: "Test Fp", description: "test", funding_goal: "200")
 # # a_fpcreator = FpCreator.create!(creator_name: "ac", location: "tampa")
 # # # a_pledge = Pledge.create(amount: 20)
