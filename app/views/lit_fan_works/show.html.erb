@@ -3,6 +3,10 @@
 
  <h2>By: <%= link_to @lit_fan_work.lit_fan_author.name, lit_fan_author_path(@lit_fan_work.lit_fan_author) %></h2><br>
 
+<%= link_to "Edit author", edit_lit_fan_author_path(@lit_fan_work.lit_fan_author)%>
+
+<%= link_to "Edit work", edit_lit_fan_work_path(@lit_fan_work)%>
+
  <h3>Genre/s: </h3>
         <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
             <h4><li><%= lfg.name %><br></li></h4>
