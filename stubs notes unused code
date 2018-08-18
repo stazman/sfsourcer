@@ -25,6 +25,7 @@ cleaned up fanvorites interface; all fanvorites classes have login requirement
 
 TO DO FOR RAILS PROJECT:
 
+[ ] Add error message for not being logged in to making an author, litfanwork, or genre
 [ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [ ] Add more validations important for security
 [ ] Make sure all validations work

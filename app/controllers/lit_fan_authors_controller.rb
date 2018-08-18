@@ -14,10 +14,6 @@ class LitFanAuthorsController < ApplicationController
     # @lit_fan_works = @lit
   end
 
-  def show
-    @lit_fan_author = LitFanAuthor.find(params[:id])
-  end
-
   def new
     @lit_fan_author = LitFanAuthor.new
   end
@@ -29,6 +25,10 @@ class LitFanAuthorsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @lit_fan_author = LitFanAuthor.find(params[:id])
   end
 
   def edit

@@ -18,7 +18,7 @@ class LitFanWork < ApplicationRecord
     def lit_fan_genres_attributes=(lit_fan_genre_attributes)
         lit_fan_genre_attributes.values.each do |lfg_attribute|
         lfg = LitFanGenre.find_or_create_by(lfg_attribute) 
-        self.lit_fan_genres << lfg unless lfg.name == ""
+        self.lit_fan_genres << lfg unless lfg.include?(nil)
         end 
     end
 end
