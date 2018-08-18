@@ -12,14 +12,26 @@ class UsersController < ApplicationController
     @user.sf_favs.build
   end
 
-  def create  
-    @user = User.new(user_params)
-    if @user.valid?
-      @user.save
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
+  def create
+    if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+      @user = User.new(user_params_no_sf_favs)
+      # raise params.inspect
+      if @user.valid?
+        @user.save
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
+      else
+        render :new
+      end
     else
-      render :new
+      @user = User.new(user_params)
+      if @user.valid?
+        @user.save
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
+      else
+        render :new
+      end
     end
   end
 
@@ -33,28 +45,28 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.update(user_params)
-    @user.save
-    redirect_to user_path(@user)
+    # if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+    if params[:user][:sf_favs_attributes][:fav_lits] == "left blank" && params[:user][:sf_favs_attributes][:fav_films] == "left blank" && params[:user][:sf_favs_attributes][:fav_games] == "left blank"
+
+      # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"  
+      @user = User.update(user_params_no_sf_favs)
+      redirect_to user_path(@user)  
+    else
+      @user = User.update(user_params)
+      redirect_to user_path(@user)  
+    end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:id, :fav_lits, :fav_films, :fav_games])
-    #   fp_creator_ids:[],
-    #   fp_creators_attributes:
-    #   ["id",
-    #   "name",
-    #   "location",
-    #   "creator_about",
-    #   "creator_site",
-    #   "instagram_url",
-    #   "twitter_url",
-    #   "facebook_url",
-    #   "blog_url",
-    #   "user_id"]
-    #   )
+    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [:fav_lits, :fav_films, :fav_games])
+  end
+
+  def user_params_no_sf_favs
+    params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [fav_lits: "left blank", fav_films: "left blank", fav_games: "left blank"])
   end
 
   def require_login
@@ -64,3 +76,8 @@ class UsersController < ApplicationController
     end
   end
 end
+
+
+      # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"

@@ -120,6 +120,54 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+  def create
+    if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+      @user = User.new(user_params_no_sf_favs)
+      if @user.valid?
+        @user.save
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
+      else
+        render :new
+      end  
+    else
+      @user = User.new(user_params)
+      if @user.valid?
+        @user.save
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
+      else
+        render :new
+      end
+    end
+  end
+
+  def show
+      @user = User.find(params[:id]) 
+      # @pledges = Pledge.where(:user_id == @user.id)
+  end
+
+  def edit
+
+      @user = User.find(params[:id])
+  end
+
+  def update
+    if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+    # if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+      @user = User.update(user_params_no_sf_favs)
+      redirect_to user_path(@user)  
+    else
+      @user.sf_favs.each {|sffs|
+        @sf
+      
+      
+      }
+      @sf_favs = @user.sf_favs.where(@user.id == :user_id)
+      @sf_favs.update(user_params)
+      redirect_to user_path(@user)
+    end  
+  end
 <%# @lit_fan_authors.each {|name| name.alph_name } %>
 
 <%# <% @lit_fan_authors.each do |lfa| %>
