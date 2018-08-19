@@ -43,7 +43,7 @@ class LitFanAuthorsController < ApplicationController
 
   # Namespace destroy
   def destroy
-    @lit_fan_author = lit_fan_author.find(params[:id])
+    @lit_fan_author = LitFanAuthor.find(params[:id])
     @lit_fan_author.destroy
     flash[:notice] = "Author deleted."
     redirect_to lit_fan_authors_path

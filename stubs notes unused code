@@ -26,12 +26,7 @@ cleaned up fanvorites interface; finished lit_fan_authors#edit, lit_fan_works#ed
 
 TO DO FOR RAILS PROJECT:
 
-[ ] Add error message for not being logged in to making an author, litfanwork, or genre
-[ ] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
-[ ] Add more validations important for security
-[ ] Make sure all validations work
 [ ] Finish out unwritten CRUD actions
-    editig address will just be a part of edit user form, not at a separate link
 [ ] Clean up all code for submission
 [ ] video runthrough
 [ ] blog
@@ -103,6 +98,10 @@ concerns
 
 FINISHED TO DO 
 
+[x] Add error message for not being logged in to making an author, litfanwork, or genre
+[x] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
+[x] Add more validations important for security
+[x] Make sure all validations work
 [x] Make sure all relevant controllers have login requirement for fanvorites feature
 [x] make sure Facebook signup works
 [x] require login for all pages for now
