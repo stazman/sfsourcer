@@ -10,7 +10,16 @@
 <div class="field<%= ' field_with_errors' if @user.errors[:password].any? %>">
  <%= f.label :password %>
 <%= f.text_field :password %>
-  </div><br>
+  </div>
+
+<h5>Password Requirements:</h5>
+<ol>
+  <li>minimum 6 characters</li>
+  <li>at least one uppercase character</li>
+  <li>at last one lowercase character</li>
+  <li>special symbol</li>
+  <li>at least one number</li>
+</ol>
 
 <h2>Let us know about your SF favorites!</h2>
 
