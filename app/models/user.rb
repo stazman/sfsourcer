@@ -3,9 +3,17 @@ class User < ApplicationRecord
     has_secure_password
 
     validates_presence_of :name
-    validates_presence_of :password
+    # validates_presence_of :password
     validates_presence_of :email
-    validates_uniqueness_of :email
+    # validates_uniqueness_of :email
+    PASSWORD_REGEX = /((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
+    validates :password, 
+                    presence: true,
+                    :format => PASSWORD_REGEX
+    EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
+    validates :email,
+                    uniqueness: true,
+                    :format => EMAIL_REGEX
 
     def self.find_or_create_by_omniauth(auth_hash)
         oauth_email = auth_hash[:info][:email]
