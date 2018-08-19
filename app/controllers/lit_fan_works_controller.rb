@@ -70,7 +70,6 @@ class LitFanWorksController < ApplicationController
 
   def update
     @lit_fan_work = LitFanWork.find(params[:id])
-
     @lit_fan_work.update(lit_fan_work_params)
     if @lit_fan_work.save
       redirect_to @lit_fan_work
@@ -89,6 +88,14 @@ class LitFanWorksController < ApplicationController
 
   private
 
+  def lit_fan_work_params
+    params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
+  end
+
+  # def rejectable?(att)
+  #   att['name'].blank? && new_record?
+  # end
+
   def require_login
     unless logged_in?
       flash[:alert] = "You must be logged in to access this section"
@@ -96,7 +103,4 @@ class LitFanWorksController < ApplicationController
     end
   end
 
-  def lit_fan_work_params
-    params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
-  end
 end
