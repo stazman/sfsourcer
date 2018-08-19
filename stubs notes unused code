@@ -44,6 +44,8 @@ learn indexing -- higher speed and performance
 learn when how to use aliases
 concerns
 
+[ ] fix new lit_fan_author instantiation issue
+[ ] fix blank instance issue for genres collection/new genre field
 [ ] apply what learning in js/jquery section to the project
 [ ] make your next branch/track for git remotely
 [ ] correct sf_favs to allow all combinations of blank/filled out fan fanvorites
