@@ -8,10 +8,6 @@ class LitFanAuthorsController < ApplicationController
             
   def index
     @lit_fan_authors = LitFanAuthor.search(params[:term])
-
-    # @lit_fan_authors = LitFanAuthor.all
-    # @tasks = Task.search(params[:term])
-    # @lit_fan_works = @lit
   end
 
   def new
@@ -37,9 +33,7 @@ class LitFanAuthorsController < ApplicationController
 
   def update
     @lit_fan_author = LitFanAuthor.find(params[:id])
-
     @lit_fan_author.update(lit_fan_author_params)
-
     if @lit_fan_author.save
       redirect_to @lit_fan_author
     else
@@ -70,6 +64,10 @@ class LitFanAuthorsController < ApplicationController
 end
 
 
+
+    # @lit_fan_authors = LitFanAuthor.all
+    # @tasks = Task.search(params[:term])
+    # @lit_fan_works = @lit
 
         
     # @lit_fan_author.lit_fan_works.build

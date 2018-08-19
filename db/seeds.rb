@@ -5,6 +5,6 @@ a = User.create!(name: "a", email: "a@a.com", password: "a")
 # # a_backer = FpBacker.create!(name: "a", backer_email: "a@a.com")
 # b_pledge = Pledge.create!(amount: 10, funding_project_id: 1, fp_backer_id: 1)
 
-# author1 = LitFanAuthor.create!(name: "William Gibson")
+author1 = LitFanAuthor.create!(name: "Frank Herbert")
 # work1 = LitFanWork.create!(title: "Dune")
 

@@ -3,8 +3,10 @@ class LitFanWork < ApplicationRecord
     has_many :lit_fan_work_lit_fan_genres
     has_many :lit_fan_genres, through: :lit_fan_work_lit_fan_genres
     accepts_nested_attributes_for :lit_fan_genres
+    # , reject_if: :rejectable?
+    # proc { |attributes| attributes["name"].blank? }  
 
-        # but how does this work from just the paramaters???
+    # :all_blank, allow_destroy: 
 
     def lit_fan_author_name
         self.try(:lit_fan_author).try(:name)
@@ -15,10 +17,11 @@ class LitFanWork < ApplicationRecord
         self.lit_fan_author = lit_fan_author
     end
 
-    def lit_fan_genres_attributes=(lit_fan_genre_attributes)
-        lit_fan_genre_attributes.values.each do |lfg_attribute|
-        lfg = LitFanGenre.find_or_create_by(lfg_attribute) 
-        self.lit_fan_genres << lfg unless lfg.include?(nil)
+    def lit_fan_genres_attributes=(lit_fan_genre_attributes)        # binding.pry
+        lit_fan_genre_attributes.values.each do |lfg_attribute| 
+        lfg = LitFanGenre.find_or_create_by(lfg_attribute) unless lfg_attribute.blank?
+        #  unless lfg_attribute.name.blank?  
+        self.lit_fan_genres << lfg  
         end 
     end
 end
