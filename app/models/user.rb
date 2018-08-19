@@ -6,9 +6,8 @@ class User < ApplicationRecord
     # validates_presence_of :password
     validates_presence_of :email
     # validates_uniqueness_of :email
-    PASSWORD_REGEX = /((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
+    PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,10}\z/
     validates :password, 
-                    presence: true,
                     :format => PASSWORD_REGEX
     EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
     validates :email,
