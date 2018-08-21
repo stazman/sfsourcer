@@ -1,4 +1,4 @@
-a = User.create!(name: "a", email: "a@a.com", password: "Aa123!")
+# a = User.create!(name: "a", email: "a@a.com", password: "Aa123!")
 # # b_fp = FundingProject.create!(title: "Test Fp", description: "test", funding_goal: "200")
 # # a_fpcreator = FpCreator.create!(creator_name: "ac", location: "tampa")
 # # # a_pledge = Pledge.create(amount: 20)
@@ -7,4 +7,5 @@ a = User.create!(name: "a", email: "a@a.com", password: "Aa123!")
 
 author1 = LitFanAuthor.create!(name: "Frank Herbert")
 # work1 = LitFanWork.create!(title: "Dune")
+# genre1 = LitFanGenre.create!(name: "Science Fiction")
 
