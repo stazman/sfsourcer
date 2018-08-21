@@ -10,68 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_18_050146) do
-
-  create_table "fp_backer_funding_projects", force: :cascade do |t|
-    t.integer "fp_backer_id_id"
-    t.integer "funding_project_id_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fp_backer_id_id"], name: "index_fp_backer_funding_projects_on_fp_backer_id_id"
-    t.index ["funding_project_id_id"], name: "index_fp_backer_funding_projects_on_funding_project_id_id"
-  end
-
-  create_table "fp_backer_pledges", force: :cascade do |t|
-    t.integer "fp_backers_id"
-    t.integer "pledges_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fp_backers_id"], name: "index_fp_backer_pledges_on_fp_backers_id"
-    t.index ["pledges_id"], name: "index_fp_backer_pledges_on_pledges_id"
-  end
-
-  create_table "fp_backers", force: :cascade do |t|
-    t.string "name"
-    t.string "backer_email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fp_creators", force: :cascade do |t|
-    t.string "creator_name"
-    t.string "location"
-    t.text "creator_about"
-    t.string "creator_site"
-    t.string "email"
-    t.string "instagram_url"
-    t.string "twitter_url"
-    t.string "facebook_url"
-    t.string "blog_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "funding_project_fp_creators", force: :cascade do |t|
-    t.integer "funding_project_id"
-    t.integer "fp_creator_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "funding_project_pledges", force: :cascade do |t|
-    t.integer "funding_project_id"
-    t.integer "pledge_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "funding_projects", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.integer "funding_goal"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_08_05_005126) do
 
   create_table "lit_fan_authors", force: :cascade do |t|
     t.string "name"
@@ -101,39 +40,16 @@ ActiveRecord::Schema.define(version: 2018_08_18_050146) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pledges", force: :cascade do |t|
-    t.integer "amount"
-    t.integer "fp_backer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "funding_project_id"
-  end
-
-  create_table "sf_favs", force: :cascade do |t|
-    t.string "fav_lits"
-    t.string "fav_films"
-    t.string "fav_games"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_sf_favs", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "sf_fav_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "fav_lits"
     t.string "fav_films"
     t.string "fav_games"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
