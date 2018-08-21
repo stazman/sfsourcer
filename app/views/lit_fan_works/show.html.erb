@@ -6,32 +6,32 @@
 <h3>Genre/s: </h3>
     <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
         <h4><li><%= lfg.name %><br></li></h4>
-    <% end %><br><br>
+    <% end %><br>
 
-<h4><%= link_to "Edit author", edit_lit_fan_work_path(@lit_fan_work.lit_fan_author)%></h4>
+<%# <h4><%= link_to "Edit author", edit_lit_fan_work_path(@lit_fan_work.lit_fan_author)%></h4>
 
 <h4><%= link_to "Edit work", edit_lit_fan_work_path(@lit_fan_work)%></h4>
  
- <h4><%= link_to "Add New Work", new_lit_fan_work_path %></h4>
+<h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
 
- <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
+<h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
 
- <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
+<h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
 
- <h2>(Under Construction)</h2><br>
+<h2>(Under Construction)</h2><br>
 
- <h2>SFSourcer Features for this work:</h2><br>
+<h2>SFSourcer Features for this work:</h2><br>
 
- <h3>FanWiki About</h3><br>
+<h3>FanWiki About</h3><br>
 
- <h3>News/Articles</h3><br>
+<h3>News/Articles</h3><br>
 
- <h3>Member Comments</h3><br>
+<h3>Member Comments</h3><br>
 
- <h3>Fandom/Events</h3><br><br>
+<h3>Fandom/Events</h3><br><br>
 
- <h2>Make this page into a ClubSite!</h3><br>
- <h3>Here's how:</h3><br><br>
+<h2>Make this page into a ClubSite!</h3><br>
+<h3>Here's how:</h3><br><br>
 
- <h2>Add this site to your YourPage!</h2><br>
- <h3>Here's how:</h2>
+<h2>Add this site to your YourPage!</h2><br>
+<h3>Here's how:</h2>
