@@ -59,7 +59,7 @@ class LitFanAuthorsController < ApplicationController
   end
 
   def lit_fan_author_params
-    params.require(:lit_fan_author).permit(:name, :term)
+    params.require(:lit_fan_author).permit(:name)
   end
 end
 
