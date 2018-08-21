@@ -16,18 +16,18 @@ Rails.application.routes.draw do
   get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
 
   resources :users
-  resources :funding_projects
-  resources :fp_creators
-  resources :pledges
-  resources :fp_backers
-  resources :sf_favs
+  # resources :funding_projects
+  # resources :fp_creators
+  # resources :pledges
+  # resources :fp_backers
+  # resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
-  # resources :lit_fan_authors
+  resources :lit_fan_authors
 
-  resources :users do
-    resources :sf_favs, only: [:new, :show, :edit]
-  end
+  # resources :users do
+  #   resources :sf_favs, only: [:new, :show, :edit]
+  # end
 
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
