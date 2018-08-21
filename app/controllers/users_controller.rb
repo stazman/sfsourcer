@@ -33,9 +33,10 @@ class UsersController < ApplicationController
 
   def update
       @user = User.find(params[:id]) 
-
-      @user = User.update(user_params)
+      @user.update(user_params)
       redirect_to user_path(@user)  
+      # redirect_to @user
+@u
   end
 
   # Namespace destroy
@@ -49,7 +50,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :fav_lits, :fav_films, :fav_games, :password)
+    params.require(:user).permit(:name, :email, :password, :fav_lits, :fav_films, :fav_games)
   end
 
   def require_login
