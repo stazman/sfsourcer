@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   resources :sf_favs
   resources :lit_fan_genres
   resources :lit_fan_works
-  resources :lit_fan_authors
+  # resources :lit_fan_authors
 
   resources :users do
     resources :sf_favs, only: [:new, :show, :edit]
