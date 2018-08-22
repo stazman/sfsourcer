@@ -17,19 +17,18 @@ class SessionsController < ApplicationController
             else
                 redirect_to(controller: 'sessions', action: 'new')
             end
-
-        #why parentheses here and not with redirect_to above?
-
         end
     end
 
     def destroy
         reset_session
         session[:user_id] = nil
-        #  if session[:user_id]
+        redirect_to login_path
+    end
+end     
+
+
+        # if session[:user_id]
         # @current_user = nil
         # session.delete :user_id
         # redirect_to login_path
-        redirect_to login_path
-    end
-end

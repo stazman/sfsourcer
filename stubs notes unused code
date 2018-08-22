@@ -124,6 +124,11 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+  # def rejectable?(att)
+  #   att['name'].blank? && new_record?
+  # end
+
+
     # , reject_if: :rejectable?
     # proc { |attributes| attributes["name"].blank? }  
 
