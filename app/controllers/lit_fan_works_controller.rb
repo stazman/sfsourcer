@@ -4,8 +4,7 @@ class LitFanWorksController < ApplicationController
   
   def index
     if params[:lit_fan_author_id]
-      # ??? NEED THIS TO CHECK BECAUSE NEED TO ... WHY DO WE NEED THIS IF #NEW HAS THIS?
-      # ??? THIS IS DONE BECAUSE in case index is rendered where aUTHOR AND lit_fan_work ARE both LISTED; PRESUMABLY NOT NECESSARY IF ONLY ONE MODEL INVOLVED?
+      #??? Is this condition unnecessary because there are validations for author in the lit_fan_works model?
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       if @lit_fan_author.nil?
         redirect_to lit_fan_author_path, alert: "Author not found"
@@ -20,7 +19,6 @@ class LitFanWorksController < ApplicationController
   def new
     if params[:lit_fan_author_id] && !LitFanAuthor.exists?(id: params[:lit_fan_author_id])
       redirect_to lit_fan_author_path, alert: "Author not found"
-      # This is for when a new lit_fan_work with artist params is being made, so unlike #show and #edit, no work is to be found
     else
       @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
     end
@@ -28,8 +26,6 @@ class LitFanWorksController < ApplicationController
 
   def create
     @lit_fan_work = LitFanWork.new(lit_fan_work_params)
-    
-    # raise params.inspect
     if @lit_fan_work.save
     #   # ??? setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
       redirect_to @lit_fan_work
@@ -42,13 +38,7 @@ class LitFanWorksController < ApplicationController
     if params[:lit_fan_author_id]
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       @lit_fan_work = @lit_fan_author.lit_fan_works.find_by(id: params[:id])
-      # This is done in case the specific work requested is expected to have the associated author with it
-      # if @lit_fan_work.nil?
-      #   redirect_to lit_fan_author_lit_fan_works_path(@lit_fan_author), alert: "Work not found"
-           # This is done in case the specific work requested is expected to have the associated author with it but it doesn't
-      # end
     else
-      # ??? And this is for in case the association ISN'T part of the request ... so in case eg you wanted to make a new lit_fan_work without an auithor for some other purpose later in the app?
       @lit_fan_work = LitFanWork.find(params[:id])
     end
   end
@@ -56,10 +46,8 @@ class LitFanWorksController < ApplicationController
   def edit
     if params[:lit_fan_author_id]
       lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
-      # This is in the case of a work that has an associated author needing to be edited
       if lit_fan_author.nil?
         redirect_to lit_fan_author_path, alert: "Author not found"
-        # This is in the case of a work that has an associated author needing to be edited but there's no author
       else
         @lit_fan_work = lit_fan_author.lit_fan_works.find_by(id: params[:id])
         redirect_to lit_fan_works_path(lit_fan_author), alert: "Work not found." if @lit_fan_work.nil?
@@ -79,7 +67,7 @@ class LitFanWorksController < ApplicationController
     end
   end
 
-  # Namespace this
+  # Namespace destroy
   def destroy
     @lit_fan_work = LitFanWork.find(params[:id])
     @lit_fan_work.destroy
@@ -93,15 +81,10 @@ class LitFanWorksController < ApplicationController
     params.require(:lit_fan_work).permit(:title, :lit_fan_author_name, :lit_fan_author_id, lit_fan_genre_ids:[], lit_fan_genres_attributes: [:name])
   end
 
-  # def rejectable?(att)
-  #   att['name'].blank? && new_record?
-  # end
-
   def require_login
     unless logged_in?
       flash[:alert] = "You must be logged in to access this section"
       redirect_to login_url
     end
   end
-
 end
