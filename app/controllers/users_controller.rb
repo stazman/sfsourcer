@@ -32,13 +32,13 @@ class UsersController < ApplicationController
   end
 
   def update
-      if @user.valid?
-        @user = User.find(params[:id]) 
-        @user.update(user_params)
+    @user = User.find(params[:id]) 
+    @user.update(user_params)
+    if @user.save
         redirect_to user_path(@user)  
-      else
-        render :edit
-      end
+    else
+      render :edit
+    end
   end
 
   # Namespace destroy
