@@ -1,4 +1,5 @@
-<h4><%= form_for @lit_fan_author, url: lit_fan_authors_path(@lit_fan_author), :method => :post do |f| %></h4>
+<h4><%= form_for @lit_fan_author do |f| %></h4>
+<%# , url: lit_fan_authors_path(@lit_fan_author), :method => :post  %>
 <h4><%= f.text_field :name %></h4>
 <h4><%= f.submit "Submit", data: { disable_with: false } %></h4>
 <% end %>
