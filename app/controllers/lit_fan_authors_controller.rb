@@ -16,7 +16,8 @@ class LitFanAuthorsController < ApplicationController
 
   def create
     @lit_fan_author = LitFanAuthor.new(lit_fan_author_params)
-    if @lit_fan_author.save
+    if @lit_fan_author.valid?
+      @lit_fan_author.save
       redirect_to @lit_fan_author
     else
       render :new
