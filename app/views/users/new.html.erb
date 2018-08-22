@@ -1,7 +1,44 @@
-<h1>Make a Free Account!</h1>
+<h1>Become a member!</h1>
 
 <%= render partial: "errors" %><br>
 
 <h3>Sign up with your email:</h3>
 
-<%= render partial: "form" %>
+<%# <%= render partial: "form" %>
+
+<%= form_for @user do |f| %>
+<div class="field<%= ' field_with_errors' if @user.errors[:name].any? %>">
+ <%= f.label :name %>
+<%= f.text_field :name %>
+  </div>
+<div class="field<%= ' field_with_errors' if @user.errors[:email].any? %>">
+<%= f.label :email %>
+ <%= f.text_field :email %>
+  </div>
+<div class="field<%= ' field_with_errors' if @user.errors[:password].any? %>">
+ <%= f.label :password %>
+<%= f.text_field :password %>
+  </div>
+
+<h5>Password Requirements:</h5>
+<ol>
+  <li>minimum 6 characters</li>
+  <li>at least one uppercase character</li>
+  <li>at last one lowercase character</li>
+  <li>special symbol</li>
+  <li>at least one number</li>
+</ol>
+
+<h2>Let us know about your SF favorites!</h2>
+
+<h3>What is your favorite SF literary work?</h3>    
+<%= f.text_field :fav_lits %><br></li>
+ 
+<h3>What is your favorite SF film?</h3>    
+<%= f.text_field :fav_films %><br></li>
+
+<h3>What is your favorite SF game?</h3>    
+<%= f.text_field :fav_games %><br></li>
+
+<%= f.submit "Submit" %>
+<% end %>

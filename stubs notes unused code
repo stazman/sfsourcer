@@ -26,8 +26,8 @@ cleaned up fanvorites interface; finished lit_fan_authors#edit, lit_fan_works#ed
 
 TO DO FOR RAILS PROJECT:
 
-[ ] Finish out unwritten CRUD actions
-[ ] Clean up all code for submission
+[x] Finish out unwritten CRUD actions
+[x] Clean up all code for submission
 [ ] video runthrough
 [ ] blog
 
@@ -123,6 +123,12 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+
+    # , reject_if: :rejectable?
+    # proc { |attributes| attributes["name"].blank? }  
+
+    # :all_blank, allow_destroy: 
+
 
       # joins(:lit_fan_works).group("lit_fan_author.id").order(title: :desc).limit(1)
       # binding.pry
