@@ -26,7 +26,8 @@ class LitFanWorksController < ApplicationController
 
   def create
     @lit_fan_work = LitFanWork.new(lit_fan_work_params)
-    if @lit_fan_work.save
+    if @lit_fan_work.valid?
+      @lit_fan_work.save
     #   # ??? setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
       redirect_to @lit_fan_work
     else

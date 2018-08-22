@@ -6,8 +6,8 @@ class LitFanWork < ApplicationRecord
     has_many :lit_fan_genres, through: :lit_fan_work_lit_fan_genres
     accepts_nested_attributes_for :lit_fan_genres
 
-    validates_uniqueness_of :lit_fan_work
-    validates_uniqueness_of :lit_fan_author
+    # validates_uniqueness_of :lit_fan_work
+    # validates_uniqueness_of :lit_fan_author
     # validates_uniqueness_of :lit_fan_genre
 
 

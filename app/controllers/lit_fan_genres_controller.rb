@@ -12,7 +12,8 @@ class LitFanGenresController < ApplicationController
 
   def create
     @lit_fan_genre = LitFanGenre.new(lit_fan_genre_params)  
-    if @lit_fan_genre.save
+    if @lit_fan_genre.valid?
+      @lit_fan_genre.save
       redirect_to @lit_fan_genre
     else
       render :new
