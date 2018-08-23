@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
+  get 'auth/facebook/callback', to: 'sessions#create'
+  get 'auth/failure', to: 'static#home'
+  # get '/sessions', to: 'sessions#create'
+  # post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
-  get '/auth/facebook/callback' => 'sessions#create'
+  # get '/auth/facebook/callback' => 'sessions#create'
 
   get '/all_sf_fanvorites', to: 'static#all_sf_fanvorites'
   get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
