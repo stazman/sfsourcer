@@ -1,7 +1,5 @@
 NOTES
 
-do user has many sf favs and sf fav has one user ... can still do join table, but probably not a good idea .. not a colleciton is needed ... instantiate association, new sffavs, in the user class, not a collection of sffavsattributes
-
 
 QUESTIONS
 
@@ -15,29 +13,26 @@ Do I have the right, many to many, relationship with funding projects and users 
   If not could I do it with users, funding_projects, and comments
 when do you use a custom writer as opposed to other methods to make associations such as build
 can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
+How is the create view with json code working?
+Is it ok to have sessions#create twice in routes?
+Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
 
 
 
 CURRENT COMMIT NOTEPAD:
 
-cleaned up fanvorites interface; finished lit_fan_authors#edit, lit_fan_works#edit
-
 
 
 TO DO FOR RAILS PROJECT:
 
-[x] Finish out unwritten CRUD actions
-[x] Clean up all code for submission
-[ ] video runthrough
-[ ] blog
 
- 
 
 FUTURE TO DO: 
 
 learn indexing -- higher speed and performance
 learn when how to use aliases
 concerns
+
 
 [ ] fix new lit_fan_author instantiation issue
 [ ] fix blank instance issue for genres collection/new genre field
@@ -98,6 +93,10 @@ concerns
 
 FINISHED TO DO 
 
+[x] Finish out unwritten CRUD actions
+[x] Clean up all code for submission
+[x] video runthrough
+[x] blog
 [x] Add error message for not being logged in to making an author, litfanwork, or genre
 [x] For all relevant views: fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view on all relevant views
 [x] Add more validations important for security
