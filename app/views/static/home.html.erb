@@ -1,21 +1,10 @@
 <h3>Welcome to SFSourcer, where we help you experience, support, and create adventures in speculative fiction, all in a community of shared interests!</h3>
 
-<h3>Check out our features below, then sign up to be a member <%= link_to "here", new_user_path %> or <%= link_to "through Facebook", '/auth/facebook' %>!</h3>
+<h3>Check out our features below, then sign up to be a member <%= link_to "here", new_user_path %> or <%= link_to "sign in through Facebook", '/auth/facebook' %>!</h3>
 
 <h3>In our Fanvorites section, check out members' favorite works of speculative fiction and their authors, as well as films and games with a science fiction, fantasy, or horror theme!</h3>
 
 <h4> <%= link_to "All SF Fanvorites", '/all_sf_fanvorites' %></h4><br><br>
-
-
-<% if session[:user_id] %>
-  <h1><%= @user.name %></h1>
-  <h2>Email: <%= @user.email %></h2>
-  <h2>Facebook UID: <%= @user.uid %></h2>
-  <img src="<%= @user.image %>">
-<% else %>
-  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-<% end %>
-
 
 
 <h4>Sourcer Projects</h4>
