@@ -5,17 +5,19 @@ QUESTIONS
 
 (search ??? for more questions)
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
-Questions:
-Help with [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
-[ ] Make nested URL route work for USERS/:ID/SF_favs
-Will I need to customize anywhere? (eg., with #new form with routes with nested resources)?
-Do I have the right, many to many, relationship with funding projects and users throuh pledges?
-  If not could I do it with users, funding_projects, and comments
-when do you use a custom writer as opposed to other methods to make associations such as build
-can I make USERS/1/SF_favs into a nested resource or do I need to do soomething else?
+No, but still don't know the fine points of Questions:
+
+A many to many, relationship with funding projects and users throuh pledges could work, but I was too preoccupied with the user interface ... it's not time for that now in the curriculum.
+  I may be able to do users, funding_projects, and comments
+
 How is the create view with json code working?
+Is it rendering the view without being directed to the view having the view rendered more explicitly in the code?
+
+
 Is it ok to have sessions#create twice in routes?
+
 Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
+I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
 
 
 
@@ -33,7 +35,8 @@ learn indexing -- higher speed and performance
 learn when how to use aliases
 concerns
 
-
+[ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
+[ ] Check into gems that let you integrate Thirdparty authentication into own authentication; could try separate signup and only FB login, but seems unsophisticated
 [ ] fix new lit_fan_author instantiation issue
 [ ] fix blank instance issue for genres collection/new genre field
 [ ] apply what learning in js/jquery section to the project

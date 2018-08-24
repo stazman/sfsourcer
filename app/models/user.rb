@@ -19,10 +19,14 @@ class User < ApplicationRecord
         user.email = "#{auth['uid']}@#{auth['provider']}.com"
         user.password = auth['uid']
         user.name = auth['info']['name']
-        if User.exists?(user)
+        user.image = auth['info']['image']
+        if User.exists?(user.id)
+            # redirect_to root_url 
             user
         else
-            user.save!
+            user.save
+            # redirect_to root_url 
+
             user
         end
     end

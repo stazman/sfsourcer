@@ -3,19 +3,85 @@ class SessionsController < ApplicationController
     end
 
     def create
-      @user = User.find_or_create_by(uid: auth['uid']) do |u|
-        u.name = auth['info']['name']
-        u.email = auth['info']['email']
-        u.image = auth['info']['image']
+        if request.env['omniauth.auth']
+          user = User.create_with_omniauth(request.env['omniauth.auth'])
+          session[:user_id] = user.id
+          @current_user = session[:user_id]
+        #   session[:user_id] = user.id    
+          redirect_to root_url
+        #   user_path(user.id)( ??? shouldn't this work if the app is working, or it doesn't make sense because user info is stored on FB db?)
+        else
+          user = User.find_by_email(params[:email])
+          user && user.authenticate(params[:password])
+          session[:user_id] = user.id
+          redirect_to user_path(user.id)
+        end
       end
-    #   if @user.persisted?
-        session[:user_id] = @user.id
+    #         def create
+    #             user = User.find_or_create_by(:uid => auth['uid']) do |user|
+    #               user.name = auth['info']['name']
+    #         #  binding.pry
+    #             end
+    #             session[:user_id] = user.try(:id)
+    #             redirect_to root_url
+    #           end
+    # #     if # request.env["omniauth.auth"]
+    # #     @user = User.find_or_create_by(uid: auth['uid']) do |u|
+    # #     u.name = auth['info']['name']
+    # #     u.email = auth['info']['email']
+    # #     u.image = auth['info']['image']
 
-        redirect_to root_path
-    #   else 
+    # #             binding.pry
+    # # #   end
+    # # #   if @user if @user.persisted?
+    # #           end
+    # #     session[:user_id] = @user.id
+
     #     redirect_to root_path
+    # #   else 
+    # #     redirect_to root_path
+    # #   end
+    # end
+
+            # user = User.find_or_create_by(uid: auth[:uid]) do |u|
+            #     u.name = auth['info']['name']
+        #         end
+        # if user
+        #         session[:user_id] = user.id
+        #         # try(:uid)
+        #     redirect_to root_path
+        # else
+        #     redirect_to(controller: 'sessions', action: 'new')
+        # end
+        # else
+        #     redirect_to(controller: 'static', action: 'sf_lit_fanvorites')
+            
+
+        #     user = User.find_by(email: params[:sessions][:email])
+        #     authenticated = user.try(:authenticate, params[:sessions][:password])
+        # # return head(:forbidden) unless authenticated
+        #         session[:user_id] = user.id
+        #         redirect_to user_path(user)
+        #     else
+        #         redirect_to(controller: 'sessions', action: 'new')
+        #     end
+    #     end
+    # end
+
+    # def create
+    #   @user = User.find_or_create_by(uid: auth['uid']) do |u|
+    #     u.name = auth['info']['name']
+    #     u.email = auth['info']['email']
+    #     u.image = auth['info']['image']
     #   end
-    end
+    # #   if @user if @user.persisted?
+    #     session[:user_id] = @user.id
+
+    #     redirect_to root_path
+    # #   else 
+    # #     redirect_to root_path
+    # #   end
+    # end
       
     def destroy
       reset_session
@@ -31,25 +97,6 @@ private
 end
 
 
-    # def create
-    #     if auth_hash = request.env["omniauth.auth"]
-    #         user = User.find_or_create_by_omniauth(uid: auth[:uid]) do |u|
-    #             u.name = auth['info']['name']
-    #         end
-    #         session[:user_id] = user.try(:id)
-    #         redirect_to root_path
-    #     else
-    #         user = User.find_by(email: params[:sessions][:email])
-    #         authenticated = user.try(:authenticate, params[:sessions][:password])
-    #     # return head(:forbidden) unless authenticated
-    #         if user && authenticated
-    #             session[:user_id] = user.id
-    #             redirect_to user_path(user)
-    #         else
-    #             redirect_to(controller: 'sessions', action: 'new')
-    #         end
-    #     end
-    # end
 
 #     def create
 #         if request.env['omniauth.auth']
