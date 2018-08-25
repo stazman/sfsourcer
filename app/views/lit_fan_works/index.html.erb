@@ -1,7 +1,7 @@
 <h1>Fanvorite Works by <%= @lit_fan_author.name %></h1><br>
 <ul>
 <% @lit_fan_works.each do |lfw| %>
-  <li><%= display_author(lfw) %> - <%= link_to lfw.title, lit_fan_work_path(lfw) %></li>
+  <li><%= link_to lfw.title, lit_fan_work_path(lfw) %></li>
 <% end %>
 </ul>
 <br>

@@ -7,11 +7,11 @@
   <%= submit_tag 'Search', name: nil  %>
   <% end %><br><br><br>
 
-<%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %><br><br>
+<h4><%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %></h4>
 
+<h4><%= link_to "Add New Author, Work, and/or Genre", new_lit_fan_work_path %></h4>
 
-
-<h3>All Fanvorite Authors:</h3><br>
+<h3>Browse All Fanvorite Authors (or see Search result/s):</h3><br>
 <% @lit_fan_authors.each do |lfa| %>
   <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li><br>
 <% end %><br>
