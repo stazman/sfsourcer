@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
         if request.env['omniauth.auth']
           user = User.create_with_omniauth(request.env['omniauth.auth'])
           session[:user_id] = user.id
+          # binding.pry
           @current_user = session[:user_id]
-        #   session[:user_id] = user.id    
           redirect_to root_url
         #   user_path(user.id)( ??? shouldn't this work if the app is working, or it doesn't make sense because user info is stored on FB db?)
         else
@@ -16,7 +16,23 @@ class SessionsController < ApplicationController
           session[:user_id] = user.id
           redirect_to user_path(user.id)
         end
-      end
+    end
+      
+    def destroy
+      reset_session
+      session[:user_id] = nil
+      redirect_to login_path
+    end
+
+private
+       
+    def auth
+        request.env['omniauth.auth']
+    end
+end
+
+
+      
     #         def create
     #             user = User.find_or_create_by(:uid => auth['uid']) do |user|
     #               user.name = auth['info']['name']
@@ -82,20 +98,6 @@ class SessionsController < ApplicationController
     # #     redirect_to root_path
     # #   end
     # end
-      
-    def destroy
-      reset_session
-      session[:user_id] = nil
-      redirect_to login_path
-    end
-
-private
-       
-    def auth
-        request.env['omniauth.auth']
-    end
-end
-
 
 
 #     def create
