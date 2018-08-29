@@ -62,33 +62,3 @@ class UsersController < ApplicationController
     end
   end
 end
-
-
-      # @pledges = Pledge.where(:user_id == @user.id)
-      # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
-      # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
-      # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"
-      # def new
-      #   @user = User.new
-      #   # @user.sf_favs.build
-      # end
-        # if params[:user][:sf_favs_attributes][:fav_lits] == nil && params[:user][:sf_favs_attributes][:fav_films] == nil && params[:user][:sf_favs_attributes][:fav_games] == nil
-
-    # if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
-    # if params[:user][:sf_favs_attributes][:fav_lits] == "left blank" && params[:user][:sf_favs_attributes][:fav_films] == "left blank" && params[:user][:sf_favs_attributes][:fav_games] == "left blank"
-
-    #   # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
-    #   # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
-    #   # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"  
-    #   @user = User.update(user_params_no_sf_favs)
-    #   redirect_to user_path(@user)  
-    # else
-  # def user_params_no_sf_favs
-  #   params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [fav_lits: "left blank", fav_films: "left blank", fav_games: "left blank"])
-  # end
-
-  # def user_params_no_sf_favs_on_edit
-  #   params.require(:user).permit(:name, :email, :password)
-  # end
-
-
