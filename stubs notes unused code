@@ -126,6 +126,271 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+
+# # b_fp = FundingProject.create!(title: "Test Fp", description: "test", funding_goal: "200")
+# # a_fpcreator = FpCreator.create!(creator_name: "ac", location: "tampa")
+# # # a_pledge = Pledge.create(amount: 20)
+# # a_backer = FpBacker.create!(name: "a", backer_email: "a@a.com")
+# b_pledge = Pledge.create!(amount: 10, funding_project_id: 1, fp_backer_id: 1)
+
+  
+   # get '/sessions', to: 'sessions#create'
+  # post '/sessions', to: 'sessions#create'
+ # get '/auth/facebook/callback' => 'sessions#create'
+   # get '/sf_film_fanvorites', to: 'static#sf_film_fanvorites'
+  # get '/sf_game_fanvorites', to: 'static#sf_game_fanvorites'
+  # get '/sourcer_projects', to: 'static#sourcer_projects'
+
+ # resources :funding_projects
+  # resources :fp_creators
+  # resources :pledges
+  # resources :fp_backers
+  # resources :sf_favs
+  
+  # resources :users do
+  #   resources :sf_favs, only: [:new, :show, :edit]
+  # end
+
+
+
+      # @pledges = Pledge.where(:user_id == @user.id)
+      # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
+      # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"
+      # def new
+      #   @user = User.new
+      #   # @user.sf_favs.build
+      # end
+        # if params[:user][:sf_favs_attributes][:fav_lits] == nil && params[:user][:sf_favs_attributes][:fav_films] == nil && params[:user][:sf_favs_attributes][:fav_games] == nil
+
+    # if params[:user][:sf_favs_attributes][:fav_lits] == "" || params[:user][:sf_favs_attributes][:fav_films] == "" || params[:user][:sf_favs_attributes][:fav_games] == ""
+    # if params[:user][:sf_favs_attributes][:fav_lits] == "left blank" && params[:user][:sf_favs_attributes][:fav_films] == "left blank" && params[:user][:sf_favs_attributes][:fav_games] == "left blank"
+
+    #   # params[:user][:sf_favs_attributes][:fav_lits] = "(left blank)"
+    #   # params[:user][:sf_favs_attributes][:fav_films] = "(left blank)"
+    #   # params[:user][:sf_favs_attributes][:fav_games] = "(left blank)"  
+    #   @user = User.update(user_params_no_sf_favs)
+    #   redirect_to user_path(@user)  
+    # else
+  # def user_params_no_sf_favs
+  #   params.require(:user).permit(:name, :email, :password, sf_favs_attributes: [fav_lits: "left blank", fav_films: "left blank", fav_games: "left blank"])
+  # end
+
+  # def user_params_no_sf_favs_on_edit
+  #   params.require(:user).permit(:name, :email, :password)
+  # end
+
+
+
+
+      
+    #         def create
+    #             user = User.find_or_create_by(:uid => auth['uid']) do |user|
+    #               user.name = auth['info']['name']
+    #         #  binding.pry
+    #             end
+    #             session[:user_id] = user.try(:id)
+    #             redirect_to root_url
+    #           end
+    # #     if # request.env["omniauth.auth"]
+    # #     @user = User.find_or_create_by(uid: auth['uid']) do |u|
+    # #     u.name = auth['info']['name']
+    # #     u.email = auth['info']['email']
+    # #     u.image = auth['info']['image']
+
+    # #             binding.pry
+    # # #   end
+    # # #   if @user if @user.persisted?
+    # #           end
+    # #     session[:user_id] = @user.id
+
+    #     redirect_to root_path
+    # #   else 
+    # #     redirect_to root_path
+    # #   end
+    # end
+
+            # user = User.find_or_create_by(uid: auth[:uid]) do |u|
+            #     u.name = auth['info']['name']
+        #         end
+        # if user
+        #         session[:user_id] = user.id
+        #         # try(:uid)
+        #     redirect_to root_path
+        # else
+        #     redirect_to(controller: 'sessions', action: 'new')
+        # end
+        # else
+        #     redirect_to(controller: 'static', action: 'sf_lit_fanvorites')
+            
+
+        #     user = User.find_by(email: params[:sessions][:email])
+        #     authenticated = user.try(:authenticate, params[:sessions][:password])
+        # # return head(:forbidden) unless authenticated
+        #         session[:user_id] = user.id
+        #         redirect_to user_path(user)
+        #     else
+        #         redirect_to(controller: 'sessions', action: 'new')
+        #     end
+    #     end
+    # end
+
+    # def create
+    #   @user = User.find_or_create_by(uid: auth['uid']) do |u|
+    #     u.name = auth['info']['name']
+    #     u.email = auth['info']['email']
+    #     u.image = auth['info']['image']
+    #   end
+    # #   if @user if @user.persisted?
+    #     session[:user_id] = @user.id
+
+    #     redirect_to root_path
+    # #   else 
+    # #     redirect_to root_path
+    # #   end
+    # end
+
+
+#     def create
+#         if request.env['omniauth.auth']
+#           user = User.create_with_omniauth(request.env['omniauth.auth'])
+#           session[:user_id] = user.id    
+#           redirect_to user_path(user.id)
+#         else
+#           user = User.find_by_email(params[:email])
+#           user && user.authenticate(params[:password])
+#           session[:user_id] = user.id
+#           redirect_to user_path(user.id)
+#         end
+#       end
+#     # def create
+#     #     user = User.find_or_create_by(uid: auth[:uid]) do |u|
+#     #         u.name = auth['info']['name']
+#     #     end
+#     #         session[:user_id] = user.try(:id)
+
+#     #     # render 'welcome/home'
+
+#     # end
+
+
+#     def destroy
+#         reset_session
+#         session[:user_id] = nil
+#         redirect_to login_path
+#     end
+# end     
+
+# private 
+
+# def auth
+#     request.env['omniauth.auth']
+# end
+
+        # if session[:user_id]
+        # @current_user = nil
+        # session.delete :user_id
+        # redirect_to login_path
+
+        # def facebook
+        #     @user = User.create_from_provider_data(request.env['omniauth.auth'])
+        #     if @user.persisted?
+        #       sign_in_and_redirect @user
+        #       set_flash_message(:notice, :success, kind: 'Facebook') if is_navigational_format?
+        #     else
+        #       flash[:error] = 'There was a problem signing you in through Facebook. Please register or try signing in later.'
+        #       redirect_to new_user_registration_url
+        #     end 
+        #   end
+
+       # current_url = request.path
+    # unless current_url == "/auth/facebook/callback"
+    # end
+                    # request.env['omniauth.auth']
+                    # request.path -> "/auth/facebook/callback"
+                    
+                    # the user is using facebook signup/login 
+
+ #$^+=!*()@%&
+    # !#^$%&'*+-\/=?_`{|}~;
+    #  !#$%&'*+-/=?^_`{|}~;
+
+    
+
+    # def self.find_or_create_by_omniauth(auth_hash)
+    #     oauth_email = auth_hash[:info][:email]
+    #     #starts with a request ... have to put request here this way bec. models don't do requests/anything to do with http
+    #     where(:email => oauth_email).first_or_create do |user|
+    #     #using .first as a way to recognize the record that's found by where; .find wouldn't work
+    #     #because #where did that??? 
+    #     #first_or_create_by do |user| passes local variables not already created(???) with user. to create and becomes part of the instantiation of that user
+    #     #and is included in the object returned
+    #     user.password = SecureRandom.hex
+    #     #we do this to satisfy validations; it doesn't matter what we set as a password because the third-party password rules
+    #     #sql ... where is select in sql and when a user with the email passed as self wasn't found then it made it an insert in sql
+    #     end
+    # end
+
+    # def self.create_with_omniauth(auth)
+    #     user = find_or_create_by(uid: auth['uid'], provider:  auth['provider'])
+    #     user.email = "#{auth['uid']}@#{auth['provider']}.com"
+    #     user.password = auth['uid']
+    #     user.name = auth['info']['name']
+    #     user.image = auth['info']['image']
+    #     if User.exists?(user.id)
+    #         # redirect_to root_url 
+    #         user
+    #     else
+    #         user.save
+    #         # redirect_to root_url 
+
+    #         user
+    #     end
+
+
+
+
+    # has_many :user_sf_favs
+    # has_many :sf_favs, through: :user_sf_favs
+    # accepts_nested_attributes_for :sf_favs
+
+    # has_many :user_user_roles
+    # has_many :user_roles, through: :user_user_roles
+
+    # def fp_creator_attributes=(fp_creator_attributes)
+    #     fp_creator_attributes.values.each do |fpc_attribute|
+    #     fpc = FpCreator.find_or_create_by(fpc_attribute) 
+    #     self.fp_creators << fpc unless fpc.name == ""
+    #     end 
+    # end
+
+    # before_save :make_name_titlecase
+
+# private
+
+#     def make_name_titlecase
+#         self.name = self.name.titlecase
+#     end
+
+    # has_many :user_fp_creators 
+    # has_many :fp_creators, through: :user_fp_creators
+    # connect through abstract queries
+    # has_many :user_fp_backers
+    # has_many :fp_backers, through: :user_fp_backers
+    # this may be better as a has many but not has many through, maybe depending on polymorphic with only other classes involved such as comments
+    # connect through abstract queries
+
+    # def fp_backer_connect_id
+    #     self.try(:fp_backer).try(:connect_id)
+    # end
+    # # but how does this work from just the parameters??? what mechanism takes what instance through the strong params and how does it do it?
+    # def fp_backer_connect_id=(connect_id)
+    #     fpb = FpBacker.find_or_create_by(:connect_id: connect_id)
+    #     self.fp_backer = fpb
+    # end
+    # has_many :user_fp_backers
+    # has_many :fp_backers, through: :user_fp_backers
+
 module LitFanAuthorsHelper
     # def display_author(lit_fan_work)
     #     lit_fan_work.lit_fan_author.nil? ? link_to("Add Author", edit_lit_fan_work_path(lit_fan_work)) : link_to(lit_fan_work.lit_fan_author_name, lit_fan_author_path(lit_fan_work.lit_fan_author))
