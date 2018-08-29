@@ -6,9 +6,9 @@ class User < ApplicationRecord
     validates_presence_of :email
     validates_presence_of :password
 
-    PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^+=!*()@%&]).{6,10}\z/        
-        validates :password, 
-                    :format => PASSWORD_REGEX
+    # PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^+=!*()@%&]).{6,10}\z/        
+    #     validates :password, 
+    #                 :format => PASSWORD_REGEX
                     # , :if => !login_social?
                     
     EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
