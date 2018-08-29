@@ -7,21 +7,21 @@ class User < ApplicationRecord
     validates_presence_of :password
 
     PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,10}\z/
-    
-    validates :password, 
+        validates :password, 
                     :format => PASSWORD_REGEX 
+    
+    # current_url = request.path
+    # unless current_url == "/auth/facebook/callback"
+    # end
                     # request.env['omniauth.auth']
                     # request.path -> "/auth/facebook/callback"
                     
                     # the user is using facebook signup/login 
 
-    # EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
+    EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
     validates :email,
-                    uniqueness: true
-                    # :format => EMAIL_REGEX
-
-    def current_path
-    end
+                    uniqueness: true,
+                    :format => EMAIL_REGEX
 
     def self.create_with_omniauth(auth)
         user = find_or_create_by(uid: auth['uid'], provider:  auth['provider'])
