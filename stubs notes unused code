@@ -1,7 +1,11 @@
-NOTES
+POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
+
+What to put in env file to gitignore temp files? What I've Googled has been ambivalent
+How to fix blank genre instantiation when only checkboxes are selected
+For email_registration_validation_format_preventing_Facebook_authorization branch?
 
 
-QUESTIONS
+
 
 (search ??? for more questions)
 does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
@@ -20,12 +24,24 @@ Should the Facebook login sign up path provide data for the local rails database
 I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
 
 
+TO DO FOR RAILS PROJECT:
+
+
+
+
+
+
+
+
+
+
+
+
+NOTES
+
 
 CURRENT COMMIT NOTEPAD:
 
-
-
-TO DO FOR RAILS PROJECT:
 
 
 
