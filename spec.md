@@ -8,8 +8,8 @@ Specs:
 - [x] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity) "THROUGH": LIT_FAN_WORK_LIT_FAN_GENRES; USER SUBMITTABLE ATTRIBUTE: NAME
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 - [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes) /LIT_FAN_AUTHORS/ALPHABETIZED
-- [x] Include signup (how e.g. Devise) CUSTOM METHOD
-- [x] Include login (how e.g. Devise) CUSTOM METHOD
+- [x] Include signup (how e.g. Devise) CUSTOM API
+- [x] Include login (how e.g. Devise) CUSTOM API
 - [x] Include logout (how e.g. Devise) CUSTOM METHOD
 - [x] Include third party signup/login (how e.g. Devise/OmniAuth) OMNIAUTH
 - [x] Include nested resource show or index (URL e.g. users/2/recipes) LIT_FAN_AUTHORS/:1/LIT_FAN_WORKS
