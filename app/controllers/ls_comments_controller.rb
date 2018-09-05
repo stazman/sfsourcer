@@ -1,9 +1,28 @@
 class LsCommentsController < ApplicationController
+  
+  def index
+    @ls_comments = ls_comment.all
+  end
+
+  def new
+    @ls_comment = LsComment.new
+  end
 
   def create
-     # binding.pry
-    @ls_comment = LsComment.create(ls_comment_params)
+    @ls_comment = LsComment.new(ls_comment_params)
+    # @ls_comment.user_id = current_user.id
+    @ls_comment.ls_story_id = params[:ls_comment][:funding_project_id] 
+    # if @ls_comment.valid?
+    #   @ls_comment.save
+    #   redirect_to ls_comment_path(@ls_comment)
+    # else
+    #   render :new
+    # end
     redirect_to l_story_path(@ls_comment.l_story)
+  end
+
+  def show
+    @ls_comment = LsComment.find(params[:id])
   end
 
   private
