@@ -1,3 +1,38 @@
+class User < ActiveRecord::Base
+  has_many :ls_comments
+  has_many :l_stories, through: :ls_comments
+end
+
+class LsComment < ActiveRecord::Base
+  belongs_to :l_story_user
+  belongs_to :l_story
+end
+
+class LStory < ActiveRecord::Base
+  has_many :ls_comments
+  has_many :users, through: :ls_comments
+end
+
+class UsersController < ApplicationController
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+end
+
+l_story_user
+  accepts_nested_attributes_for :user, :reject_if => :all_blank
+
+  # def user_attributes=(user_attributes)
+  #   user_attributes.values.each do |user_attribute|
+  #     user = User.find_or_create_by(user_attribute)
+  #     self.users << category
+  #   end 
+  # end
+
+
+
 POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
 
 What to put in env file to gitignore temp files? What I've Googled has been ambivalent
