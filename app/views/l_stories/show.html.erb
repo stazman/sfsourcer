@@ -13,15 +13,15 @@
 <%# <% end %> %>
  <%# %> %>
 <% @l_story.ls_comments.each do |c| %>
-    <%= c.user.name%> says: <%= c.content %><br>
+    <%= c.ls_user.username%> says: <%= c.content %><br>
 <% end %><br><br>
 
 <%# <% @l_story.users.uniq.each do |u|%>
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
 <%# <% end %>
-<% @l_story.users.uniq.each do |u|%>
+<% @l_story.ls_users.uniq.each do |u|%>
 
-<li><%= link_to u.name, user_path(u) %></li>
+<li><%= link_to u.username, ls_user_path(u) %></li>
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
 <% end %>
 
