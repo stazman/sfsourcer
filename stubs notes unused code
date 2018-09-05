@@ -21,8 +21,85 @@ class UsersController < ApplicationController
 
 end
 
+lass LsCommentsController < ApplicationController
+
+  def create
+    @ls_comment = LsComment.create(ls_comment_params)
+    redirect_to l_story_path(@ls_comment.l_story)
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:content, :l_story_id, :user_id, user_attributes:[:name])
+  end
+end
+
+class LStoriesController < ApplicationController
+  def show
+    @l_story = LStory.find(params[:id])
+    @ls_comment = @l_story.comments.build
+    @user = @ls_comment.build_user
+    #for belongs_to relationship
+  end
+
+  def index
+    @l_stories = LStory.all
+  end
+
+  def new
+    @l_story = LStory.new
+  end
+
+  def create
+    @l_story = LStory.create(l_story_params)
+    redirect_to l_story_path(@l_story)
+  end
+
+  private
+
+  def l_story_params
+    params.require(:l_story).permit(:content, category_ids:[], categories_attributes: [:name])
+    #notice that l_story doesn't have anything about user in its params
+  end
+end
+
+USER views
+show
+<h1><%= @user.name %></h1><br>
+
+<h3>Living Stories You Have Contributed To:</h3>
+<% @user.l_stories.each do |ls| %>
+<%= link_to p.title, l_story_path(ls) %>
+<% end %>
+
+LSTORY views
+new
+<%= form_for @l_story, url: l_stories_path do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %><br><br>
+<%= f.label :content %><br>
+<%= f.text_area :content %><br><br>
+<%= f.submit "Create l_story"%>
+<% end %>
+
+
+lsc_content
+ls_content
+
+
+FEATURE NOTES
+
 l_story_user
   accepts_nested_attributes_for :user, :reject_if => :all_blank
+
+      <label>Choose a Category ... </label><br><br>
+<%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br>
+<%= f.fields_for :categories, @l_story.categories.build do |categories_fields|%>
+<%= f.label "Or Make a New Category" %><br>
+<%= categories_fields.text_field :name %>
+<% end %><br><br>
+
 
   # def user_attributes=(user_attributes)
   #   user_attributes.values.each do |user_attribute|
