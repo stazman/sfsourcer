@@ -1,12 +1,5 @@
 class LStoriesController < ApplicationController
-  before_action :require_login
-
-  def show
-    @l_story = LStory.find(params[:id])
-    @ls_comment = @l_story.ls_comments.build
-    @user = @ls_comment.build_user
-    #for belongs_to relationship
-  end
+  # before_action :require_login
 
   def index
     @l_stories = LStory.all
@@ -19,6 +12,14 @@ class LStoriesController < ApplicationController
   def create
     @l_story = LStory.create(l_story_params)
     redirect_to l_story_path(@l_story)
+  end
+
+  def show
+    @l_story = LStory.find(params[:id])
+    @ls_comment = @l_story.ls_comments.build
+    # .create(params[:content])
+    @user = @ls_comment.build_user
+    #for belongs_to relationship
   end
 
   def edit
