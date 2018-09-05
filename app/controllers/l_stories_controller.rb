@@ -1,5 +1,5 @@
 class LStoriesController < ApplicationController
-  # before_action :require_login
+  before_action :require_login
 
   def index
     @l_stories = LStory.all
@@ -18,7 +18,7 @@ class LStoriesController < ApplicationController
     @l_story = LStory.find(params[:id])
     @ls_comment = @l_story.ls_comments.build
     # .create(params[:content])
-    @user = @ls_comment.build_user
+    @ls_user = @ls_comment.build_ls_user
     #for belongs_to relationship
   end
 
