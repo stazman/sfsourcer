@@ -7,8 +7,9 @@
 <%# @l_story.o_genre %>
 <p><%= @l_story.content %></p>
 
-<% @l_story.comments.each do |c| %>
-    <%= c.user.name%> says: <%= c.ls_content %><br>
+<% @l_story.ls_comments.each do |c| %>
+    <%# <%= c.user.name%>
+    <%= c.content %><br>
 <% end %>
 
 
@@ -16,7 +17,7 @@
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
 <%# <% end %>
 
-<%= form_for @comment do |f| %>
+<%= form_for @ls_comment do |f| %>
     <%= f.text_area :content %><br><br>
     <%# <%= link_to @user.name, user_path(u) %>
     <%= f.hidden_field :l_story_id %>
