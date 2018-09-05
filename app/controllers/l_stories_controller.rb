@@ -3,7 +3,7 @@ class LStoriesController < ApplicationController
 
   def show
     @l_story = LStory.find(params[:id])
-    @ls_comment = @l_story.comments.build
+    @ls_comment = @l_story.ls_comments.build
     @user = @ls_comment.build_user
     #for belongs_to relationship
   end

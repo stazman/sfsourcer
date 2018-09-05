@@ -7,7 +7,7 @@ class LsCommentsController < ApplicationController
 
   private
 
-  def comment_params
-    params.require(:comment).permit(:content, :l_story_id, :user_id, user_attributes:[:name])
+  def ls_comment_params
+    params.require(:ls_comment).permit(:content, :l_story_id, :user_id, user_attributes:[:name])
   end
 end
