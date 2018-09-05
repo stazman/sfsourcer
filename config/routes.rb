@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :lit_fan_genres
   resources :lit_fan_works
   resources :lit_fan_authors
+  resources :l_stories
+  resources :ls_comments
 
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
