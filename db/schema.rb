@@ -12,6 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_08_22_235845) do
 
+  create_table "l_stories", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lit_fan_authors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
