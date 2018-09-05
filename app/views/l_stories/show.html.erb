@@ -7,18 +7,33 @@
 <%# @l_story.o_genre %>
 <p><%= @l_story.content %></p>
 
-<% @l_story.ls_comments.each do |c| %>
+<%# <% @l_story.ls_comments.each do |c| %>
     <%# <%= c.user.name%>
-    <%= c.content %><br>
-<% end %>
-
+    <%# <%= c.content %><br> %>
+<%# <% end %> %>
+ <%# %> %>
+<% @l_story.ls_comments.each do |c| %>
+    <%= c.user.name%> says: <%= c.content %><br>
+<% end %><br><br>
 
 <%# <% @l_story.users.uniq.each do |u|%>
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
 <%# <% end %>
+<% @l_story.users.uniq.each do |u|%>
+
+<li><%= link_to u.name, user_path(u) %></li>
+<%# user_path(u) worked because I passed in the whole object as a parameter %>
+<% end %>
 
 <%= form_for @ls_comment do |f| %>
     <%= f.text_area :content %><br><br>
+    <label>Choose Your Profile Name ... </label><br><br>
+    <%= f.collection_select :user_id, User.all, :id, :name %><br><br><br>
+    <%# <%= f.label "Or Make a New Profile" %><br>
+    <%# <%= f.fields_for :user, @user do |lsc_user|%> %>
+        <%# <%= lsc_user.text_field :name %> %> %>
+    <%# <% end %> %>
+
     <%# <%= link_to @user.name, user_path(u) %>
     <%= f.hidden_field :l_story_id %>
     <%= f.submit "Keep the Story Going!"%><br><br>  
