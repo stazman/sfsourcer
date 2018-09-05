@@ -1,6 +1,7 @@
 class LsCommentsController < ApplicationController
 
   def create
+     # binding.pry
     @ls_comment = LsComment.create(ls_comment_params)
     redirect_to l_story_path(@ls_comment.l_story)
   end
