@@ -2,3 +2,7 @@
 <p>Find me in app/views/ls_comments/new.html.erb</p>
 
 <%= render partial: "errors" %>
+
+<%= form_for @ls_comment do |f| %>
+<%= f.text_area :content %>
+<%= f.submit %>
