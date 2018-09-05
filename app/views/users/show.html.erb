@@ -3,10 +3,10 @@
 <%# <h3>Edit Your Profile Information Here</h3><br> %>
 <h4><%= link_to "Edit Profile/Change Password", edit_user_path(@user) %></h4><br>
 
-<h3>Living Stories You Have Contributed To:</h3>
+<%# <h3>Living Stories You Have Contributed To:</h3>
 <% @user.l_stories.each do |ls| %>
-<%= link_to p.title, l_story_path(ls) %>
-<% end %>
+<%# <%= link_to p.title, l_story_path(ls) %>
+<%# <% end %>
 
 <%# <h3>Check out our Sourcer Projects!</h3> %>
 <%# <h4><%= link_to "Sourcer Projects Page", "/sourcer_projects" %>
