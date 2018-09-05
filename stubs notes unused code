@@ -291,6 +291,38 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+    def l_story_title
+        self.try(:l_story).try(:title)
+    end
+    # but how does this work from just the parameters??? what mechanism takes what instance through the strong params and how does it do it?
+    def l_story_title=(title)
+        lst = LStory.find_by(title: title)
+        self.l_story = l_story
+    end
+
+
+<h1><%= @l_story.title %></h1><br>
+<h3>By: Everyone here!</h3><br>
+
+<%# <h3>Genre/s: <% @l_story.o_genres.each do |og| %>
+<%# <%= og.name %>
+<%# <% end %>
+<%# @l_story.o_genre %>
+<p><%= @l_story.content %></p>
+
+<h3>choose this l_story  ...</h3>
+        <%= f.text_field :l_story_title, list: "l_stories_autocomplete" %>    <br><br>
+
+    <%= f.submit "Submit" %>
+        <datalist id="lit_fan_authors_autocomplete">
+            <% LStory.all.each do |ls| %>
+            <option value="<%= ls.title %>">
+        <% end %>
+
+<% @l_story.ls_comments.each do |c| %>
+    <%# <%= c.user.name%>
+    <%= c.content %><br>
+<% end %>
 
 <h1>Welcome to Living Story!</h1>
 
