@@ -96,7 +96,7 @@ show
 <% end %><br><br>
 
 
-<h4>Users who have commented on this l_story:</h4>
+<h4>Users who have added to this l_story:</h4>
 
 <% @l_story.users.uniq.each do |u|%>
 
@@ -292,6 +292,29 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+<h1>Welcome to Living Story!</h1>
+
+
+<%= render partial: "errors" %>
+
+<p>This is how Living Story works: Choose a genre, create a title, and begin a story. You can write as many lines as possible, but do not finish the story. It is up to you and your fellow SFSourcerites to keep the story going!   </p>
+<%= form_for(@l_story) do |f| %>
+<%# story_creator %>
+  <%= f.label "Title" %>
+  <%= f.text_field :title %><br>
+  <%= f.label "Content" %>
+  <%= f.text_area :content %><br>
+  <%= f.label "Choose an OpenGenre ... " %>
+  <%= f.collection_check_boxes :ls_genre_ids, OGenre.all, :id, :name %><br>
+  <%= f.label "Or make one" %>
+  <%= f.fields_for :ls_genre_ids, @l_story.o_genres.build do |o_genres_fields| %>
+    <%= o_genres_fields.text_field :name %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
+<%# <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  <%# <%= f.fields_for :categories, post.categories.build do |categories_fields| %> 
+    <%# <%= categories_fields.text_field :name %>
   def l_story_params
     params.require(:l_story).permit(:title, :content, o_genre_ids:[], o_genres_attributes: [:name])
   end
