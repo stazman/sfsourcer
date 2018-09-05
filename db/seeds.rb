@@ -1,9 +1,10 @@
-# b = User.create(name: "a", email: "a@a.com", password: "Aa123!")
+user_1 = User.create!(name: "a", email: "a@a.com", password: "Aa123!")
 
-# author1 = LitFanAuthor.create!(name: "Frank Herbert")
+author_1 = LitFanAuthor.create!(name: "Frank Herbert")
 
-lsctest = LsComment.create!(content: "ghost!", user_id: 1, l_story_id: 1)
-# basement = LStory.create!(title: "From the Basement", content: "I heard a noise from the basement")
+ls_user = LsUser.create!(username: "Funky Fred")
+ls_1 = LStory.create!(title: "From the Basement", content: "I heard a noise from the basement")
+lsc_1 = LsComment.create!(content: "ghost!", ls_user_id: 1, l_story_id: 1)
 # # b_fp = FundingProject.create!(title: "Test Fp", description: "test", funding_goal: "200")
 # # a_fpcreator = FpCreator.create!(creator_name: "ac", location: "tampa")
 # # # a_pledge = Pledge.create(amount: 20)
