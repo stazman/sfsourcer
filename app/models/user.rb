@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     validates_presence_of :name
     validates_presence_of :email
-    # validates_presence_of :password
+    validates_presence_of :password
 
     # PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^+=!*()@%&]).{6,10}\z/        
     #     validates :password, 
