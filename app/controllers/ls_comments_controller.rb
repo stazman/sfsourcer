@@ -11,7 +11,7 @@ class LsCommentsController < ApplicationController
   def create
     @ls_comment = LsComment.new(ls_comment_params)
     # @ls_comment.user_id = current_user.id
-    @ls_comment.ls_story_id = params[:ls_comment][:funding_project_id] 
+    @ls_comment.l_story_id = params[:ls_comment][:l_story_id] 
     # if @ls_comment.valid?
     #   @ls_comment.save
     #   redirect_to ls_comment_path(@ls_comment)
