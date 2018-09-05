@@ -2,7 +2,8 @@
 
 # author1 = LitFanAuthor.create!(name: "Frank Herbert")
 
-basement = LStory.create!(title: "From the Basement", content: "I heard a noise from the basement")
+lsctest = LsComment.create!(content: "ghost!", user_id: 1, l_story_id: 1)
+# basement = LStory.create!(title: "From the Basement", content: "I heard a noise from the basement")
 # # b_fp = FundingProject.create!(title: "Test Fp", description: "test", funding_goal: "200")
 # # a_fpcreator = FpCreator.create!(creator_name: "ac", location: "tampa")
 # # # a_pledge = Pledge.create(amount: 20)
