@@ -19,7 +19,7 @@
     <%# <%= link_to @user.name, user_path(u) %>
     <%= f.hidden_field :l_story_id %><br>
     <%= f.submit "Now Click Here to Keep the Story Going!"%>
-<% end %><br><br>
+<% end %><br>
 
 <p>Contributors to this story:</p>
 <% @l_story.ls_users.uniq.each do |u|%>
@@ -28,3 +28,4 @@
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
 <% end %>
 
+<h4><%= link_to "Start a New Living Story", new_l_story_path %></h4>
