@@ -1,9 +1,12 @@
-<h1>LStories#index</h1>
-<p>Find me in app/views/l_stories/index.html.erb</p><br>
+<h1>Welcome to Living Stories!</h1>
+
+<p>Check out our Living Stories below and join in creating a fun and fantastic story with other SFSourcer members! Or start your own Living Story <%= link_to "here", new_l_story_path %>!</p>
 <% @l_stories.each do |l_story| %>
-<%# <%= l_story.o_genre.name%><br> %>
-<%= l_story.title %>
-<%= l_story.content %>
-<% end %>
+    <ul>
+        <li><%= link_to l_story.title, l_story_path(l_story) %></li><br>
+    </ul>
+<% end %><br><br>
+
+
 
 
