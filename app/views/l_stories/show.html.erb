@@ -1,29 +1,30 @@
-<h1><%= @l_story.title %></h1><br>
-<h3>By: Everyone here!</h3><br>
+<h2>"<%= @l_story.title %>"</h2>
+<h3>A story by ... everyone!</h3>
 
-
-<p><%= @l_story.content %></p>
-
+<h4>Here's the beginning of the story; now it's up to you and other SFSourcer members to see where it goes!</h4>
+<%= @l_story.content %>
 <% @l_story.ls_comments.each do |c| %>
-    <%= c.ls_user.username%> says: <%= c.content %><br>
+    <%= c.content %> 
+        <%# (<%= c.ls_user.username %>
 <% end %><br><br>
-
-<% @l_story.ls_users.uniq.each do |u|%>
-
-<li><%= link_to u.username, ls_user_path(u) %></li>
-<%# user_path(u) worked because I passed in the whole object as a parameter %>
-<% end %>
 
 <%= form_for @ls_comment do |f| %>
     <%= f.text_area :content %><br><br>
-    <label>Choose Your Living Stories Username ... </label><br><br>
-    <%= f.collection_select :ls_user_id, LsUser.all, :id, :username %><br><br><br>
-    <%= f.label "Or Make a New One" %><br>
-    <%= f.fields_for :ls_user, @ls_user do |new_ls_user|%>
-        <%= new_ls_user.text_field :username %> %>
+    <label>Finally, choose Your Living Stories username or make a new one:</label><br>
+    <p><%= f.collection_select :ls_user_id, LsUser.all, :id, :username %>
+        <%= f.fields_for :ls_user, @ls_user do |new_ls_user|%>
+         <%= new_ls_user.text_field :username %>
+    </p> 
     <% end %>
-
     <%# <%= link_to @user.name, user_path(u) %>
-    <%= f.hidden_field :l_story_id %>
-    <%= f.submit "Keep the Story Going!"%><br><br>  
+    <%= f.hidden_field :l_story_id %><br>
+    <%= f.submit "Now Click Here to Keep the Story Going!"%>
+<% end %><br><br>
+
+<p>Contributors to this story:</p>
+<% @l_story.ls_users.uniq.each do |u|%>
+    <li><%= u.username %></li>
+<%# <li><%= link_to u.username, ls_user_path(u) %>
+<%# user_path(u) worked because I passed in the whole object as a parameter %>
 <% end %>
+
