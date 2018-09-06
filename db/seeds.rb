@@ -1,4 +1,3 @@
-user_1 = User.create!(name: "a", email: "a@a.com", password: "Aa123!")
 
 author_1 = LitFanAuthor.create!(name: "Frank Herbert")
 
