@@ -4,6 +4,8 @@ POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
 What to put in env file to gitignore temp files? What I've Googled has been ambivalent
 How to fix blank genre instantiation when only checkboxes are selected
   On refactoring, this should be not be a many to many relationship, but a one to many; collection is still possible and blanks can be validated against/otherwise removed, and checkbox collection is still possible
+  make it collection select and can seed the space, so at least it's not as visible (or antoher collection method)
+
 For email_registration_validation_format_preventing_Facebook_authorization branch?
 
 
