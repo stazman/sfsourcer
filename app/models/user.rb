@@ -17,7 +17,7 @@ class User < ApplicationRecord
                     uniqueness: true,
                     :format => EMAIL_REGEX
 
-    def self.create_with_omniauth(auth)
+    def self.find_or_create_with_omniauth(auth)
         user = find_or_create_by(uid: auth['uid'], provider:  auth['provider'])
         user.email = auth['info']['email']
         user.password = auth['uid']
