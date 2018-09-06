@@ -1,4 +1,6 @@
 
+add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
+
 POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
 
 What to put in env file to gitignore temp files? What I've Googled has been ambivalent
@@ -146,6 +148,14 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+<% if session[:user_id] %>
+  <h1><%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>Facebook UID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+<% else %>
+  <%= link_to('Sign in with Facebook', '/auth/facebook') %>
+<% end %>
 
 <%# <h3>Genre/s: <% @l_story.o_genres.each do |og| %>
 <%# <%= og.name %>
