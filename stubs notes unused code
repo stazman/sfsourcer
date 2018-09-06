@@ -148,6 +148,13 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+      # binding.pry
+      # if user && user.authenticate(params[:session][:password])      
+      # @user = User.find_by(id: params[:id])
+        # @user = user.try(:authenticate, params[:sessions][:password])
+      # user = User.find_by(params[:email])
+      # user && user.authenticate(params[:password])
+
 <% if session[:user_id] %>
   <h1><%= @user.name %></h1>
   <h2>Email: <%= @user.email %></h2>
