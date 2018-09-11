@@ -1,0 +1,6 @@
+go from lstories#show to lsuser#show with associated comments
+lsuserscontroller#show 
+    @ls_user = LsUser.find_by(params[:id])
+    @ls_comments = LsComment.where(@ls_user.id == ls_user_id)
+iterate over ls_comments 
+    

@@ -1,0 +1,6 @@
+<h2>Edit Your Story Addition</h2>
+
+<%= form_for({controller: "ls_comment", action: "edit"}, method: "post") do |f| %>
+<%= f.text_area :content %>
+<%= f.submit %>
+<% end %>
