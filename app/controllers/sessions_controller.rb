@@ -11,9 +11,17 @@ class SessionsController < ApplicationController
       redirect_to root_url
     #   user_path(user.id)( ??? shouldn't this work if the app is working, or it doesn't make sense because user info is stored on FB db?)
     else
-      user = User.find_by(email: params[:sessions][:email])
-      session[:user_id] = user.id
-      redirect_to root_url
+        return redirect_to(controller: "sessions", action: "new") if !params[:sessions][:email] || params[:sessions][:password].empty?
+        user = User.find_by(email: params[:sessions][:email])
+        # user = user.try(:authenticate, params[:user][:password])
+        # unless user.email.blank? || user.?
+      # unless !!user.valid?
+        session[:user_id] = user.id
+        redirect_to root_url
+      # else
+      #   flash[:notice] = "Valid login information required." 
+      #   redirect_to new_session_path
+      # end
     end
   end
     

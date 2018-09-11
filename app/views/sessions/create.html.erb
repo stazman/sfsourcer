@@ -1,2 +1,7 @@
+<% if request.env['omniauth.auth'] %>
 <pre><%= JSON.pretty_generate(@auth) %></pre>
 <img src="<%= @auth[:info] && @auth[:info][:image] %>">
+<% else %>
+
+<% end %>
+
