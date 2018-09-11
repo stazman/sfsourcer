@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def show
       @user = User.find(params[:id])
       unless session[:user_id] == @user.id
-        flash[:notice] = "You don't have access to that order!" 
+        flash[:notice] = "You don't have access to that account" 
         redirect_to user_path(@user)
       end
   end
