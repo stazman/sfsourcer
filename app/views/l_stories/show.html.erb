@@ -1,7 +1,7 @@
 <h2>"<%= @l_story.title %>"</h2>
 <h3>A story by ... everyone!</h3>
 
-<h4>Here's the beginning of the story; now it's up to you and other SFSourcer members to see where it goes!</h4>
+<h4>Here's the story so far; now it's up to you and other SFSourcer members to see where it goes!</h4>
 <%= @l_story.content %>
 <% @l_story.ls_comments.each do |c| %>
     <%= c.content %> 
