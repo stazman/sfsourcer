@@ -4,8 +4,6 @@ SFSourcer
 
 SFSourcer is an app whose current feature is Fanvorites, in which users build a community database of favorite speculative fiction authors, works, and genres. Those who complete the app signup, authenticated through email registration with a password, or through Facebook, may add and update authors, works, and genres. Anyone may view all authors in the database as well as information about specific authors, works and related genres. Validations prevent users from adding blank records and adding to the database without being logged in. 
 
-# Description
-
 To run the app, follow these steps:
 
 Fork and clone this repo.
