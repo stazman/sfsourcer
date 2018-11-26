@@ -21,13 +21,13 @@
     <%= f.submit "Now Click Here to Keep the Story Going!"%>
 <% end %><br>
 
-<h3><%= link_to "Edit Your Story Addition", edit_ls_comment_path(f, @ls_user.id) %></h3>
+<h3><%= link_to "Edit Your Story Addition", edit_ls_comment_path(@ls_comment) %></h3>
 
-<p>Contributors to this story:</p>
+<%# <p>Contributors to this story:</p>
 <% @l_story.ls_users.uniq.each do |u|%>
-    <li><%= link_to u.username, to:   %></li>
+    <%# <li><%= link_to u.username, to:   %></li> %> %>
 <%# <li><%= link_to u.username, ls_user_path(u) %>
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
-<% end %>
+<%# <% end %> %>
 
 <h4><%= link_to "Start a New Living Story", new_l_story_path %></h4>
