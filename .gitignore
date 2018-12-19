@@ -1,6 +1,11 @@
-# /log
-# /tmp
-log/
-tmp/
-# Ignore application configuration
-/config/application.yml
+/tmp
+/log
+/env
+
+
+# # /log
+# # /tmp
+# log/
+# tmp/
+# # Ignore application configuration
+# /config/application.yml
