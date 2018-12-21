@@ -12,6 +12,27 @@
 
 ActiveRecord::Schema.define(version: 2018_09_05_223322) do
 
+  create_table "fp_categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "funding_project_pledges", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.integer "pledge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "funding_projects", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "funding_goal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "l_stories", force: :cascade do |t|
     t.string "title"
     t.string "content"
@@ -59,6 +80,14 @@ ActiveRecord::Schema.define(version: 2018_09_05_223322) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer "amount"
+    t.integer "fp_backer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "funding_project_id"
   end
 
   create_table "users", force: :cascade do |t|
