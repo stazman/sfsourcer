@@ -1,4 +1,6 @@
 
+add function for each user to be "up" and claim the spot (with a time limit) and be able to add a line without being interrupted
+
 add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
