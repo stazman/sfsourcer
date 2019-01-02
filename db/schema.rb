@@ -18,6 +18,27 @@ ActiveRecord::Schema.define(version: 2018_09_05_223322) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "fp_creators", force: :cascade do |t|
+    t.string "creator_name"
+    t.string "location"
+    t.text "creator_about"
+    t.string "creator_site"
+    t.string "email"
+    t.string "instagram_url"
+    t.string "twitter_url"
+    t.string "facebook_url"
+    t.string "blog_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "funding_project_fp_creators", force: :cascade do |t|
+    t.integer "funding_project_id"
+    t.integer "fp_creator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "funding_project_pledges", force: :cascade do |t|
     t.integer "funding_project_id"
     t.integer "pledge_id"
