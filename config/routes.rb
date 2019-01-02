@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :l_stories
   resources :ls_comments
   resources :ls_users
+  resources :funding_projects
 
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
