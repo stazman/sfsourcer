@@ -3,7 +3,7 @@ class LStoriesController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
 
   def index
-    @l_stories = LStory.all
+    @l_stories = LStory.all.reverse
   end
 
   def new
