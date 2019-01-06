@@ -39,11 +39,6 @@
  <h1>Welcome to Living Stories!</h1>
 
 <p>Check out our Living Stories below and join in creating a fun and fantastic story with other SFSourcer members! Or start your own Living Story <%= link_to "here", new_l_story_path %>!</p>
-<% @l_stories.each do |l_story| %>
-    <ul>
-      <%= link_to l_story.title, l_story_path(l_story) %><br>
-    </ul>
-<% end %><br><br>
 
   </div>
 </div>
@@ -51,40 +46,72 @@
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-4">
-      <p>Living Story 1</p>
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[0]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
     </div>
-    <div class="col-sm-4"> 
-      <p>Living Story 2</p>
+    <div class="col-sm-4">
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[1]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
     </div>
-    <div class="col-sm-4"> 
-      <p>Living Story 3</p>
+    <div class="col-sm-4">
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[2]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
-    </div>
-  </div>
-</div><br>
+    </div><br>
 
-<div class="container-fluid bg-4 text-center">    
+<div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-4">
-      <p>Living Story 4</p>
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[3]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
     </div>
-    <div class="col-sm-4"> 
-      <p>Living Story 5</p>
+    <div class="col-sm-4">
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[4]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
     </div>
-    <div class="col-sm-4"> 
-      <p>Living Story 6</p>
+    <div class="col-sm-4">
+      <h4>
+        <% @l_stories.each do |l_story| %>
+          <ul>
+            <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[5]%><br>
+        </ul>
+        <% end %><br><br>
+      </h4>
       <%# <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> %>
-    </div>
-  </div>
-</div><br><br>
+    </div><br><br>
 
-<footer class="container-fluid text-center">
+<%# <footer class="container-fluid text-center">
   <p>Footer Text</p>
-</footer>
+</footer> %>
 
 </body>
 </html>
