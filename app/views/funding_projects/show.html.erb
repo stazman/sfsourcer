@@ -2,7 +2,7 @@
 
 <h2><%= @funding_project.title %></h2>
 <h4>Description: <%= @funding_project.description %></h4>
-<h4>Funding Goal (in U.S. dollars)"<%= @funding_project.funding_goal %></h4><br><br>
+<h4>Funding Goal (in U.S. dollars):<%= @funding_project.funding_goal %></h4><br>
 
 <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
