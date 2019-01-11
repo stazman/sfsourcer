@@ -14,7 +14,11 @@
         <ul>
             <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
             <h4>Description: <li><%= fp.description %> </li></h4>
-            <h4>Funding Goal: <li><%= fp.funding_goal %> </li></h4><br><br>
+            <h4>Funding Goal: <li><%= fp.funding_goal %> </li></h4><br>
+            <h4>Amount Funded: SUM OF ALL PLEDGES FOR PROJECT </h4><br>
+            <h4>Amount Remaining: FUNDING GOAL - AMOUNT FUNDED </h4>
+
+
         </ul>
         <% end %>
 
