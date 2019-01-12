@@ -1,9 +1,10 @@
 class Pledge < ApplicationRecord
-    has_many :funding_project_pledges
-    has_many :funding_projects, through: :funding_project_pledges
+    belongs_to :funding_project
     has_many :fp_backer_pledges
     has_many :fp_backers, through: :fp_backer_pledges
-       
+    # has_many :funding_project_pledges
+    # has_many :funding_projects, through: :funding_project_pledges
+   
     # validates_presence_of :amount
     # validates :amount, numericality: true
 
@@ -19,12 +20,12 @@ class Pledge < ApplicationRecord
         self.fp_backer = fpb
     end
 
-    def funding_project_attributes=(funding_project_attributes)
-        funding_project_attributes.values.each do |fp_attribute|
-        fp = FundingProject.find(fp_attribute) 
-        self.funding_projects << fp
-        end
-    end 
+    # def funding_project_attributes=(funding_project_attributes)
+    #     funding_project_attributes.values.each do |fp_attribute|
+    #     fp = FundingProject.find(fp_attribute) 
+    #     self.funding_projects << fp
+    #     end
+    # end 
 end
 
 
