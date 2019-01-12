@@ -2,24 +2,31 @@ class PledgesController < ApplicationController
     before_action :require_login
   
     def index
-      @pledges = Pledge.all
+      if params[:funding_project_id]
+        @funding_project = FundingProject.find_by(id: params[:funding_project_id])
+      else
+        @pledges = Pledge.all
+      end
     end
   
     def new
       # @pledge = Pledge.new
-      @pledge = Pledge.new(fp_backer_id: params[:fp_backer_id])
-
+      @pledge = Pledge.new(fp_backer_id: params[:fp_backer_id], funding_project_id: params[:funding_project_id])
     end
   
     def create
       @pledge = Pledge.new(pledge_params)
+      if @pledge.valid?
+        @pledge.save
+        redirect_to @pledge
+      else
+        render :new
+      end
+          
       # @pledge.user_id = current_user.id
       # @fp_backer = FpBacker.where(id: current_user.id)
       # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
       # if @pledge.valid?
-
-        @pledge.save
-        redirect_to @pledge
       # else
       #   render :new
       # end
@@ -27,7 +34,12 @@ class PledgesController < ApplicationController
         
   
     def show
-      @pledge = Pledge.find(params[:id])
+      if params[:funding_project_id]
+        @funding_project = FundingProject.find_by(id: params(:funding_project_id))
+        @pledge = @funding_project.pledges.find_by(id: params[:id])
+      else  
+        @pledge = Pledge.find(params[:id])
+      end
       # @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
       # @pledge = @fp_backer.pledges.find_by(id: params[:id])
     end
@@ -44,7 +56,7 @@ class PledgesController < ApplicationController
   private
   
     def pledge_params
-      params.require(:pledge).permit(:amount, :fp_backer_id, :fp_backer_name, funding_project_ids:[], funding_projects_attributes: [:title])
+      params.require(:pledge).permit(:amount, :fp_backer_id, :fp_backer_name, :funding_project_title, :funding_project_id)
     end
   
     def require_login
