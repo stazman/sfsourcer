@@ -1,4 +1,94 @@
 
+
+TO DO:
+
+
+Finish setting up and filling out:
+  Clean up/reorganize home page DONE
+  Clean up/reogranize landing pages
+    Fanvorites
+    LStories
+  Add template for landing page for funding-project section
+    Fill out 
+    Fix links
+  Make Navbar standard on all pages
+  Fix existing links for all of these
+
+
+After Project Assessment:
+  Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
+    Add feature descriptions to home page feature boxes
+    Add images and effects
+    Clean up container margins
+
+
+
+
+  
+
+
+
+
+
+
+
+
+NOTES
+
+
+
+<h3>Welcome to SFSourcer, where we help you experience, support, and create adventures in speculative fiction, all in a community of shared interests!</h3>
+
+<h3>Check out our features below, then sign up to be a member <%= link_to "here", new_user_path %> or <%= link_to "through Facebook", '/auth/facebook' %>!</h3><br>
+
+
+<h4>Sourcer Projects</h4>
+
+<h4>In our Sourcer Projects section, check out projects in need of funding by our members, or create your own!</h4>
+
+<h4>(Under construction)</h4><br><br>
+
+
+<h3>In our Fanvorites section, check out members' favorite works of speculative fiction and their authors, as well as films and games with a science fiction, fantasy, or horror theme!</h3>
+
+<h4> <%= link_to "All SF Fanvorites", '/all_sf_fanvorites' %></h4><br><br>
+
+
+<h3>In our Living Stories section, create a story beginning or join other SFSourcer members in developing a fun and fantastic work of fiction! The ones who make the best story according to a poll of members will be featured in a special section of SFSourcer!</h3>
+
+<h4><%= link_to "All Living Stories", l_stories_path %></h4>
+<h4><%= link_to "Start a New Living Story", new_l_story_path %></h4>
+
+
+
+
+FEATURE SECTION
+
+FEATURE SECTION
+ClubSites (group discussion boards/chat rooms to be linked with Fanvorites)
+<br>
+<br>
+
+FEATURE SECTION
+YourPages (pages devoted to your own interests, webpages for which you can receive part of ad revenue based on clicks)
+<br>
+<br>
+
+FEATURE SECTION 
+Writer's Groups (where you can have your work read by professionals for a cost, on a one on one or group setting, as well as free discussion and free, non-mentored groups)
+<br>
+<br>
+
+FEATURE SECTION
+Events in Fandom (also linked to Fanvorites)
+<br>
+<br>
+
+FEATURE SECTION
+Special Projects
+<br>
+<br>
+
 add function for each user to be "up" and claim the spot (with a time limit) and be able to add a line without being interrupted
 
 add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
@@ -30,23 +120,6 @@ Is it ok to have sessions#create twice in routes?
 
 Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
 I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
-
-
-TO DO FOR RAILS PROJECT:
-
-
-
-
-
-
-
-
-
-
-
-
-NOTES
-
 
 CURRENT COMMIT NOTEPAD:
 
