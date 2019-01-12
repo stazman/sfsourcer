@@ -31,6 +31,10 @@ class FundingProject < ApplicationRecord
         self.pledges.sum(:amount)
     end
 
+    def amount_needed
+        self.funding_goal - total_pledges
+    end
+
 
     
     def fp_creators_attributes=(fp_creators_attributes)

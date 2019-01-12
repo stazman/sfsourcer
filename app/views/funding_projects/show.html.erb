@@ -3,11 +3,8 @@
 <h2><%= @funding_project.title %></h2>
 <h4>Description: <%= @funding_project.description %></h4>
 <h4>Funding Goal (in U.S. dollars):<%= @funding_project.funding_goal %></h4><br>
-<h4>Total Pledges: </h4>
-    <ul>
-    <%=  @funding_project.total_pledges %>
-    </ul>
-    <br><br>
+<h4>Amount Pledged: <%= @funding_project.total_pledges %></h4><br>
+<h4>Amount Needed: <%= @funding_project.amount_needed %></h4><br>
 
 <h2>Creator Profile</h2>
 <% @funding_project.fp_creators.each do |fpc| %>
