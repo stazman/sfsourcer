@@ -26,6 +26,12 @@ class FundingProject < ApplicationRecord
         # order them by the least left
         # show them on a static page
     end
+
+    def total_pledges
+        self.pledges.sum(:amount)
+    end
+
+
     
     def fp_creators_attributes=(fp_creators_attributes)
         fp_creators_attributes.values.each do |fc_attribute|
