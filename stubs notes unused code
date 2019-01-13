@@ -2,24 +2,32 @@
 
 TO DO:
 
+Rails/JS Project
+  Add JS/AJAX for comments in lstories
 
 Finish setting up and filling out:
   Clean up/reorganize home page DONE
-  Clean up/reogranize landing pages
-    Fanvorites
-    LStories
-  Add template for landing page for funding-project section
+  Add template for landing page for funding-project section DONE
     Fill out 
-    Fix links
+    Fix links DONE
+  Add template for lstories show page
+    Fill out
   Make Navbar standard on all pages
-  Fix existing links for all of these
+    add dropdowns
+  Fix existing links for all of these DONE
 
 
 After Project Assessment:
   Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
     Add feature descriptions to home page feature boxes
-    Add images and effects
+    Add images, style and effects
     Clean up container margins
+
+  Clean up/reogranize landing pages
+    Fanvorites
+    LStories
+    Funding Project index and new
+
 
 
 
