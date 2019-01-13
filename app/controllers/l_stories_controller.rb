@@ -8,6 +8,7 @@ class LStoriesController < ApplicationController
 
   def new
     @l_story = LStory.new
+    render :layout => 'navbar_on_top'
   end
 
   def create
@@ -21,6 +22,7 @@ class LStoriesController < ApplicationController
     # .create(params[:content])
     @ls_user = @ls_comment.build_ls_user
     #for belongs_to relationship
+    render :layout => 'navbar_on_top'
   end
 
   def edit

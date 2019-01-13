@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render :layout => 'navbar_on_top'
     # @user.sf_favs.build
   end
 
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
         flash[:notice] = "You don't have access to that account" 
         redirect_to user_path(@user)
       end
+      render :layout => 'navbar_on_top'
   end
 
   def edit
@@ -43,6 +45,7 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+    render :layout => 'navbar_on_top'
   end
 
   # Namespace destroy

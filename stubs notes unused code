@@ -29,6 +29,8 @@ After Project Assessment:
     LStories
     Funding Project index and new
 
+  Have Fanvorites nested routes use partial for heading navbar
+
   Add Events page and route
   
   Make test for navbar

@@ -12,6 +12,7 @@ class PledgesController < ApplicationController
     def new
       # @pledge = Pledge.new
       @pledge = Pledge.new(fp_backer_id: params[:fp_backer_id], funding_project_id: params[:funding_project_id])
+      render :layout => 'navbar_on_top'
     end
   
     def create
@@ -40,6 +41,7 @@ class PledgesController < ApplicationController
       else  
         @pledge = Pledge.find(params[:id])
       end
+      render :layout => 'navbar_on_top'
       # @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
       # @pledge = @fp_backer.pledges.find_by(id: params[:id])
     end
