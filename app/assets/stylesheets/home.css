@@ -22,14 +22,6 @@ footer, .stripe_row {
   font-size: 26px;
 }
 
-/* .panel {
-  font-size: 20px;
-  color: navy;
-  font-weight: bold;
-  height: 300px;
-  width: 300px;
-} */
-
 @media only all and (max-width: 320px) {
   .panel {
     font-size: 22px;
@@ -57,11 +49,3 @@ footer, .stripe_row {
     height: 170px;
   }
 }
-
-
-/* @media only all and (max-width: 320px){
-  #fluid div {
-      width: 100%;
-      float: none;
-  }
-} */
