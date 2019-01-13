@@ -18,6 +18,7 @@ Finish setting up and filling out:
 
 
 After Project Assessment:
+  Add partial for navbar to layouts
   Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
     Add feature descriptions to home page feature boxes
     Add images, style and effects
@@ -27,6 +28,11 @@ After Project Assessment:
     Fanvorites
     LStories
     Funding Project index and new
+
+  Add Events page and route
+  
+  Make test for navbar
+
 
 
 
