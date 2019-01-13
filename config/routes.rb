@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   
   root 'static#home'
   
+  get '/about', to: 'static#about'
+  get '/contact', to: 'static#contact'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get 'auth/facebook/callback', to: 'sessions#create'
