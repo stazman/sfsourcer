@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    render :layout => 'navbar_on_top'
   end
 
   def create
