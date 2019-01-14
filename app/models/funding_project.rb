@@ -39,7 +39,7 @@ class FundingProject < ApplicationRecord
     
     def fp_creators_attributes=(fp_creators_attributes)
         fp_creators_attributes.values.each do |fc_attribute|
-        fc = FpCreator.find_or_create_by(fc_attribute) 
+        fc = FpCreator.find_by(fc_attribute) 
         self.fp_creators << fc
         end 
     end

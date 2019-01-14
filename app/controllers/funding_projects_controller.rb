@@ -5,6 +5,7 @@ class FundingProjectsController < ApplicationController
 
   def index
     @funding_projects = FundingProject.all
+    @newest_fps_first = FundingProject.all.reverse
   end
 
   def new
