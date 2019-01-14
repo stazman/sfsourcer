@@ -1,105 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+  </style>
 </head>
 <body>
-
-<div class="container-fluid">
+  
+<div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>John's Blog</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>
-      </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
+    <div class="col-sm-2 sidenav">
+      <p><h5><%= link_to "Start a New Living Story", new_l_story_path %></h5></p><br><br>
+      <p><h5><%= link_to "Back to All Living Stories", l_stories_path %></h5></p><br><br>
     </div>
-
-    <div class="col-sm-9">
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h2>I Love Food</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-      
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h2>Officially Blogging</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-      <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form>
-      <br><br>
-      
-      <p><span class="badge">2</span> Comments:</p><br>
-      
-      <div class="row">
-        <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-        </div>
-        <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-          <p><span class="badge">1</span> Comment:</p><br>
-          <div class="row">
-            <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-            </div>
-            <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Me too! WOW!</p>
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
-
-</body>
-</html>
-
-
-
+    <div class="col-sm-8 text-left"> 
 <h2>"<%= @l_story.title %>"</h2>
 <h3>A story by ... everyone!</h3>
 
@@ -108,28 +28,45 @@
 <% @l_story.ls_comments.each do |c| %>
     <%= c.content %> 
         <%# (<%= c.ls_user.username %>
-<% end %><br><br>
+<% end %><br><br><br>
 
 <%= form_for @ls_comment do |f| %>
-    <%= f.text_area :content %><br><br>
-    <label>Finally, choose Your Living Stories username or make a new one:</label><br>
+        <label>Choose Your Living Stories username or make a new one:</label><br>
     <p><%= f.collection_select :ls_user_id, LsUser.all, :id, :username %>
         <%= f.fields_for :ls_user, @ls_user do |new_ls_user|%>
          <%= new_ls_user.text_field :username %>
-    </p> 
+    </p><br>
+    <label>Click here to claim your place in line to add the next line! (under construction)</label>
+    <br><br>
+    <label>Now write!</label>
+    <br>
+
+<%= f.text_area :content %><br><br>
     <% end %>
     <%# <%= link_to @user.name, user_path(u) %>
     <%= f.hidden_field :l_story_id %><br>
-    <%= f.submit "Now Click Here to Keep the Story Going!"%>
+    <%= f.submit "Click Here to Keep the Story Going!"%>
 <% end %><br>
 
-<%# <h3><%= link_to "Edit Your Story Addition", edit_ls_comment_path(@ls_comment) %></h3> %>
+<%# <h3><%= link_to "Edit Your Story Addition", edit_ls_comment_path(@ls_comment) %>
 
 <%# <p>Contributors to this story:</p>
 <% @l_story.ls_users.uniq.each do |u|%>
-    <%# <li><%= link_to u.username, to:   %></li> %> %>
+    <%# <li><%= link_to u.username, to:   %>
 <%# <li><%= link_to u.username, ls_user_path(u) %>
 <%# user_path(u) worked because I passed in the whole object as a parameter %>
-<%# <% end %> %>
+<%# <% end %>
 
-<h4><%= link_to "Start a New Living Story", new_l_story_path %></h4>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p></p>
+      </div>
+      <div class="well">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

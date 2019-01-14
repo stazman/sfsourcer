@@ -1,183 +1,158 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<html lang="en">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: white;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
 <body>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>All SFSourcer Projects</h1>      
+    <p>Help Great SF Projects Get Made</p>
   </div>
-
-  <%= render 'layouts/header_navbar' %>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-      <h3>John Doe</h3>
-      <p class="w3-opacity">CEO & Founder</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-      <h3>Jane Doe</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-      <h3>Mike Ross</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-      <h3>Dan Star</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Lets get in touch and talk about your next project.</p>
-    <form action="/action_page.php" target="_blank">
-      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
-  
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
 </div>
 
-<!-- End page content -->
+<%= render 'layouts/header_navbar' %>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#"><h5>Search For a Specific Project/Keyword (Under Construction)</h5><br><br></a></p>
+      <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p>
+      <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p>
+    </div>
+    <div class="text-center .mx-auto px-{1}">
+      <div class="stripe_row">
+        <div class="col-sm-10">
+          <div><p><strong>Popular Projects</strong></p></div>
+      </div>
+    </div>
+      <div class="col-sm-5">
+        <div class="panel panel-primary">
+          <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Almost Funded</strong></p></div>
+  </div>
 </div>
 
+<div class="container">
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Newest Projects</strong></p></div>
+  </div>
+</div>
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @newest_fps_first.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @newest_fps_first.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
 </html>
 
 
-
-<h1>Sourcer Projects!</h1><br>
-
-<h3>Search For a Specific Project/Keyword (Under Construction)</h3><br><br>
 <%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
 <%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
 
-<h3>Browse SFSourcer Projects by Category (Under Construction)</h3><br><br>
 <%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
 <%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
-
-<h3>Browse through all SFSourcer Projects</h3><br>
-
-    <p><% @funding_projects.each do |fp| %></p>
-        <ul>
-            <h3><li><%= link_to fp.title, funding_project_path(fp) %> </li></h3>
-            <h4>Description: <li><%= fp.description %> </li></h4>
-            <h4>Funding Goal: <li><%= fp.funding_goal %> </li></h4><br>
-            <h3>Pledges: </h3>
-                <% fp.pledges.each do |p| %>
-            <ul>
-            <h4><li><%= p.amount  %><br></li></h4>
-            </ul>
-
-                <% end %><br>
-
-            <%# <h4>Amount Funded: <li><%= fp.total_pledges%> 
-            <h4>Amount Remaining: FUNDING GOAL - AMOUNT FUNDED </h4>
-        </ul>
-        <% end %>
-
-
-<%# <h4><%= @funding_categories.each do |fc| %>
-<%# <ul> %>
-    <%# <li><%= link_to fc.name, funding_category_path(fc) %>
-<%# </ul> %>
-<%# <% end %>
 

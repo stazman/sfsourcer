@@ -18,6 +18,7 @@ class LStoriesController < ApplicationController
 
   def show
     @l_story = LStory.find(params[:id])
+    @l_stories = LStory.all
     @ls_comment = @l_story.ls_comments.build
     # .create(params[:content])
     @ls_user = @ls_comment.build_ls_user
