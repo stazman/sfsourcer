@@ -8,13 +8,15 @@ Rails/JS Project
 Finish setting up and filling out:
   Clean up/reorganize home page DONE
   Add template for landing page for funding-project section DONE
-    Fill out 
+    Fill out DONE
     Fix links DONE
-  Add template for lstories show page
-    Fill out
-  Make Navbar standard on all pages
-    add dropdowns
+  Add template for lstories show page DONE
+    Fill out DONE
+  Make Navbar standard on all pages DONE
+    add dropdowns DONE
   Fix existing links for all of these DONE
+  Add Events page and route
+  
 
 
 After Project Assessment:
@@ -31,8 +33,6 @@ After Project Assessment:
 
   Have Fanvorites nested routes use partial for heading navbar
 
-  Add Events page and route
-  
   Make test for navbar
 
   Have sidenavs collapse/be relocated responsively on small screen sizes
@@ -40,8 +40,6 @@ After Project Assessment:
   fix nested params for fpcreators on funding project show view
 
   build landing page views for fanvorites
-
-  fix navbar/routes for fanvorites landing pages
 
   Standardize page style across all pages
 
