@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
   get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
 
+  get 'all_sf_events', to: 'static#all_sf_events'
+
   resources :users
   resources :sessions
   resources :lit_fan_genres
