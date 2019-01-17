@@ -15,21 +15,22 @@ Finish setting up and filling out:
   Make Navbar standard on all pages DONE
     add dropdowns DONE
   Fix existing links for all of these DONE
-  Add Events page and route
+  Add Events page and route DONE
+    build landing page views for fanvorites DONE
+  Add partial for navbar to layouts DONE
+
   
 
 
 After Project Assessment:
-  Add partial for navbar to layouts
-  Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
-    Add feature descriptions to home page feature boxes
-    Add images, style and effects
-    Clean up container margins
 
-  Clean up/reogranize landing pages
-    Fanvorites
-    LStories
-    Funding Project index and new
+Rails/HTML/CSS/content
+
+  Add news/events, related articles to fanvorites show views sidenavs
+  
+  fix nested params for fpcreators on funding project show view
+  
+  Create MVC for new events
 
   Have Fanvorites nested routes use partial for heading navbar
 
@@ -37,17 +38,24 @@ After Project Assessment:
 
   Have sidenavs collapse/be relocated responsively on small screen sizes
 
-  fix nested params for fpcreators on funding project show view
-
-  build landing page views for fanvorites
-
   Standardize page style across all pages
+
+  Clean up/reogranize landing pages
+    Fanvorites
+    LStories
+    Funding Project index and new
+
+  Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
+    Add feature descriptions to home page feature boxes
+    Add images, style and effects
+    Clean up container margins
+
+
+JS
 
   Use JS to remove place to make/choose name after finished
 
   Build holding place in line to write functionality
-
-  Add news/events, related articles to fanvorites show views sidenavs
 
   Add comments section to fanvorites show views
 
