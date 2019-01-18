@@ -7,19 +7,10 @@
     <div class="col-sm-3 well">
       <div class="well">
         <p><a href="#"><strong>Check Out [or make] <%= @lit_fan_author.name %>'s Club Site! (under construction)</strong></a></p>
-        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
       </div>
       <div class="well">
-        <p><a href="#">Enter <%= @lit_fan_author.name %>'s FanWiki! (under construction)</strong></a></p>
+        <p><a href="#"><strong>Enter <%= @lit_fan_author.name %>'s FanWiki! (under construction)</strong></a></p>
       </div>
-      <div class="well">
-        <p><a href="#"><%= @lit_fan_author.name %> Events (under construction)</strong></a></p>
-      </div>
-      <div class="well">
-        <p><a href="#">News about <%= @lit_fan_author.name %> (under construction)</strong></a></p>
-      </div>
-
-
     </div>
     <div class="col-sm-7">
     
@@ -37,7 +28,6 @@
         <div class="col-sm-3">
           <div class="well">
            <p>Work Image</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
           </div>
         </div>
         <div class="col-sm-9">
@@ -54,7 +44,6 @@
         <div class="col-sm-3">
           <div class="well">
            <p>Work Image</p>
-           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
           </div>
         </div>
         <div class="col-sm-9">
@@ -71,7 +60,6 @@
         <div class="col-sm-3">
           <div class="well">
            <p>Work Image</p>
-           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
           </div>
         </div>
         <div class="col-sm-9">
@@ -84,7 +72,6 @@
         <div class="col-sm-3">
           <div class="well">
            <p>Work Image</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
           </div>
         </div>
         <div class="col-sm-9">
@@ -96,20 +83,12 @@
         <%= link_to "Add New Work", new_lit_fan_work_path %>
   </div> 
     <div class="col-sm-2 well">
-      <div class="thumbnail">
-        <p>Upcoming Events:</p>
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Fri. 27 November 2015</p>
-        <button class="btn btn-primary">Info</button>
-      </div>      
       <div class="well">
-        <p></p>
+        <p><a href="#"><strong><%= @lit_fan_author.name %> Events (under construction)</strong></a></p>
       </div>
       <div class="well">
-        <p></p>
+        <p><a href="#"><strong>News about <%= @lit_fan_author.name %> (under construction)</strong></a></p>
       </div>
-    </div>
   </div>
 </div>
 </body>
