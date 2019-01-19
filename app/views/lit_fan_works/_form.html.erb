@@ -12,7 +12,7 @@
         <h3>Find or write the author's name ...</h3>
         <%= f.text_field :lit_fan_author_name, list: "lit_fan_authors_autocomplete" %>    <br><br>
 
-    <%= f.submit "Submit" %>
+    <button onclick="recordAdded()"><%= f.submit "Submit" %></button>
         <datalist id="lit_fan_authors_autocomplete">
             <% LitFanAuthor.all.each do |lfa| %>
             <option value="<%= lfa.name %>">
