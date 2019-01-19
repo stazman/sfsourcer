@@ -5,9 +5,6 @@
     display: table;
   }
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 .pic,
 .info {
   padding: 20px;
