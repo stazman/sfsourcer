@@ -1,5 +1,6 @@
-$('body').on('click', '.dropdown-toggle', function () { $(this).dropdown(); });
-
-function recordAdded() {
-    alert("Record added!");
-}
+$(function(){
+    $("#new_lit_fan_work").on('submit', function(e){
+        alert("Record Added!");
+        e.preventDefault();
+    })
+})
