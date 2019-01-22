@@ -2,6 +2,11 @@
 
 TO DO:
 
+Fix alert not working:
+  Check turbolinks reloading action
+  Check if Ajax issues
+  
+
 Rails/JS Project
   Add JS/AJAX for comments in lstories
 
