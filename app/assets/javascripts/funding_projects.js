@@ -17,9 +17,9 @@ $('a.load_fps').on('click', function(e) {
 $(function () {
     $(".js-more").on('click', function() {
       let id = $(this).data("id");
-      $.get("/funding_projects/" + id + "/body", function(data) {
+      $.get("/funding_projects/" + id + "description", function(data) {
         // Replace text of body-id div
-        $("#body-" + id).text(data);
+        $("#description-" + id).text(data);
       });
     });
   });

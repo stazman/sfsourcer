@@ -56,7 +56,7 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-                <div><div id="body-<%= fp.id %>"><%= truncate @funding_projects[0].description %></div>
+                <div><div id="description-<%= fp.id %>"><%= truncate @funding_projects[0].description %></div>
                 <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button>
               </ul>
                 <% end %>

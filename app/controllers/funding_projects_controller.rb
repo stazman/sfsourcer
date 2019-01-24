@@ -30,6 +30,18 @@ class FundingProjectsController < ApplicationController
     render :layout => 'navbar_on_top'
   end
 
+  def description
+    fpd = FundingProject.find(params[:id])
+    render plain: fpd.description
+    # respond_to do |format| {
+    #   format.js {
+    #     :layout => false;
+    #   }
+    # end
+
+    # }
+  end
+
   def edit
     #make editong an already made FP instance possible
   end
