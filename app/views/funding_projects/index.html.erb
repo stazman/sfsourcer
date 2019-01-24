@@ -56,6 +56,8 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+                <div><%= truncate @funding_projects[0].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button>
               </ul>
                 <% end %>
         </div>
@@ -69,6 +71,8 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
+                <div><%= truncate @funding_projects[1].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
               </ul>
                 <% end %>
         </div>
@@ -91,6 +95,9 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+                <div><%= truncate @funding_projects[0].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button>
+
               </ul>
                 <% end %>
         </div>
@@ -103,7 +110,10 @@
         <div class="panel-body">
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
+                <div><%= truncate @funding_projects[1].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
+
               </ul>
                 <% end %>
         </div>
@@ -124,6 +134,8 @@
             <p><% @newest_fps_first.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
+                <div><%= truncate @newest_fps_first[0].description %></div>
+                <button class="js-more" data-id="<%= @newest_fps_first[0].id %>">More...</button>
               </ul>
                 <% end %>
         </div>
@@ -137,6 +149,8 @@
             <p><% @newest_fps_first.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
+                <div><%= truncate @funding_projects[1].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
               </ul>
                 <% end %>
         </div>
