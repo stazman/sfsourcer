@@ -1,15 +1,22 @@
 
 
-TO DO:
-
-Fix alert not working:
-  Check turbolinks reloading action
-  Check if Ajax issues
-  
 
 Rails/JS Project
-  Add JS/AJAX for comments in lstories
+  Add basic open source Writer's group feature to Rails
 
+    wg-author
+
+    wg-work
+
+    wg-comments
+    
+    commenter --> user
+
+
+
+
+
+Before Rails/JS Project
 Finish setting up and filling out:
   Clean up/reorganize home page DONE
   Add template for landing page for funding-project section DONE
@@ -24,10 +31,16 @@ Finish setting up and filling out:
     build landing page views for fanvorites DONE
   Add partial for navbar to layouts DONE
 
-  
-
 
 After Project Assessment:
+
+TO DO:
+
+Fix alert not working:
+  Check turbolinks reloading action
+  Check if Ajax issues
+
+Add JS/AJAX for comments in lstories
 
 Rails/HTML/CSS/content
 
