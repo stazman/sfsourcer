@@ -16,7 +16,10 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
     if @funding_project.save
-      redirect_to @funding_project
+      respond_to do |f|
+        f.html { redirect_to @funding_project }
+        f.json { render :json => @funding_project }
+      end
     else
       render :new
     end
