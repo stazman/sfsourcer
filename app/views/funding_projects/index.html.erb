@@ -54,11 +54,9 @@
         <div class="panel panel-primary">
           <div class="panel-body">
             <p><% @funding_projects.each do |fp| %></p>
-              <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-                <div id="description-<%= fp.id %>"><%= truncate @funding_projects[0].description %></div>
-                <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button>
-              </ul>
+                <div id="description-<%= fp.id if fp == @funding_projects[0]%>"><%= truncate fp.description  if fp == @funding_projects[0] %></div>
+                 <button class="js-more" data-id="<%= fp.id if fp == @funding_projects[0]%>">More...</button> 
                 <% end %>
         </div>
         <br>
@@ -71,8 +69,12 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
-                <div><%= truncate @funding_projects[1].description %></div>
-                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
+                <%
+=begin%>
+ <div><%= truncate @funding_projects[1].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
+<%
+=end%>
               </ul>
                 <% end %>
         </div>
@@ -95,8 +97,16 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-                <div><%= truncate @funding_projects[0].description %></div>
-                <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button>
+                <%
+=begin%>
+ <div><%= truncate @funding_projects[0].description %></div> 
+<%
+=end%>
+                <%
+=begin%>
+ <button class="js-more" data-id="<%= @funding_projects[0].id %>">More...</button> 
+<%
+=end%>
 
               </ul>
                 <% end %>
@@ -111,8 +121,16 @@
             <p><% @funding_projects.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
-                <div><%= truncate @funding_projects[1].description %></div>
-                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
+                <%
+=begin%>
+ <div><%= truncate @funding_projects[1].description %></div> 
+<%
+=end%>
+                <%
+=begin%>
+ <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
+<%
+=end%>
 
               </ul>
                 <% end %>
@@ -134,8 +152,12 @@
             <p><% @newest_fps_first.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
-                <div><%= truncate @newest_fps_first[0].description %></div>
-                <button class="js-more" data-id="<%= @newest_fps_first[0].id %>">More...</button>
+                <%
+=begin%>
+ <div><%= truncate @newest_fps_first[0].description %></div>
+                <button class="js-more" data-id="<%= @newest_fps_first[0].id %>">More...</button> 
+<%
+=end%>
               </ul>
                 <% end %>
         </div>
@@ -149,8 +171,16 @@
             <p><% @newest_fps_first.each do |fp| %></p>
               <ul>
                 <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
-                <div><%= truncate @funding_projects[1].description %></div>
-                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button>
+                <%
+=begin%>
+ <div><%= truncate @funding_projects[1].description %></div> 
+<%
+=end%>
+                <%
+=begin%>
+ <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
+<%
+=end%>
               </ul>
                 <% end %>
         </div>

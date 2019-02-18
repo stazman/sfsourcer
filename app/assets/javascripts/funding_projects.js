@@ -17,7 +17,7 @@ $(function(){
 $(function () {
     $(".js-more").on('click', function() {
       let id = $(this).data("id");
-      $.get("/funding_projects/" + id + "description", function(data) {
+      $.get("/funding_projects/", function(data) {
         // Replace text of body-id div
         $("#description-" + id).text(data);
       });
