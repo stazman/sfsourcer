@@ -12,17 +12,21 @@ $(function(){
   })
 })
 
+const fpsMore = document.getElementsByClassName('button')
 
+  fpsMore.addEventListener("onclick", function (event){
+    alert("this is an alert")
+  })
 
-$(function () {
-    $(".js-more").on('click', function() {
-      let id = $(this).data("id");
-      $.get("/funding_projects/", function(data) {
-        // Replace text of body-id div
-        $("#description-" + id).text(data);
-      });
-    });
-  });
+// $(function () {
+//     $(".js-more").on('click', function() {
+//       let id = $(this).data("id");
+//       $.get("/funding_projects/", function(data) {
+//         // Replace text of body-id div
+//         $("#description-" + id).text(data);
+//       });
+//     });
+//   });
 
 
 // $('a.load_fps').on('click', function(e) {
