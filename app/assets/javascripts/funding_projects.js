@@ -1,22 +1,6 @@
-$(function(){
-  $("form#new_funding_project").on("submit", function(e){
-    alert("You've created a new project!");
-    e.preventDefault();
 
-    let $form = $(this);
-    let action = $form.attr("action");
-    let params = $form.serialize()
 
-    $.post(action, params)
-    // console.log("A Project is Born!");
-  })
-})
 
-const fpsMore = document.getElementsByClassName('button')
-
-  fpsMore.addEventListener("onclick", function (event){
-    alert("this is an alert")
-  })
 
 // $(function () {
 //     $(".js-more").on('click', function() {
@@ -44,3 +28,16 @@ const fpsMore = document.getElementsByClassName('button')
 //   });
 // });
 
+// $(function(){
+//   $("form#new_funding_project").on("submit", function(e){
+//     alert("You've created a new project!");
+//     e.preventDefault();
+
+//     let $form = $(this);
+//     let action = $form.attr("action");
+//     let params = $form.serialize()
+
+//     $.post(action, params)
+//     // console.log("A Project is Born!");
+//   })
+// })
