@@ -53,100 +53,14 @@
       <div class="col-sm-5">
         <div class="panel panel-primary">
           <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-              </ul>
-                <% end %>
+              <h4><%= link_to @funding_projects[0].title, funding_project_path(@funding_projects[0]) %></h4>
+              <p id="text"></p>
         </div>
         <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Almost Funded</strong></p></div>
-  </div>
-</div>
-
-<div class="container">
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Newest Projects</strong></p></div>
-  </div>
-</div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
   </div>
   </div>
 </body>
+
 </html>
 
 
