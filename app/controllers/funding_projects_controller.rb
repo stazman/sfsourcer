@@ -22,6 +22,11 @@ class FundingProjectsController < ApplicationController
     end
   end
 
+  def body
+    fpd = FundingProject.find(params[:id])
+    render plain: fpd.description
+  end
+
   def show
     @funding_project = FundingProject.find(params[:id])
     # @user = User.find_by(id: params[:user_id])
