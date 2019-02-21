@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'all_sf_events', to: 'static#all_sf_events'
 
+  get '/funding_projects/:id/body', to: 'funding_projects#body'
+
   resources :users
   resources :sessions
   resources :lit_fan_genres
