@@ -1,0 +1,2 @@
+class WriterGroup < ApplicationRecord
+end
