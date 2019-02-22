@@ -14,5 +14,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+<<<<<<< HEAD
 //= require funding_projects
-
+=======
+//= require funding_projects
+>>>>>>> a353c0409caad1130fa8e8cee39fc79ea56ff2f0

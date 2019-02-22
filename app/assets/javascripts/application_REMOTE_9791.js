@@ -15,4 +15,3 @@
 //= require activestorage
 //= require turbolinks
 //= require funding_projects
-
