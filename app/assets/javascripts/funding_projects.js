@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 $(function () {
   $(".js-more").on('click', function() {
     // get the id from the data attribute
@@ -17,6 +18,11 @@ $(function () {
 // });
 
 
+=======
+
+
+
+>>>>>>> a353c0409caad1130fa8e8cee39fc79ea56ff2f0
 // $(function () {
 //     $(".js-more").on('click', function() {
 //       let id = $(this).data("id");
@@ -33,6 +39,18 @@ $(function () {
 //     e.preventDefault();
 // })
 
+<<<<<<< HEAD
+=======
+// $(function () {
+//   $(".js-more").on('click', function() {
+//     // get the id from the data attribute
+//     let id = $(this).data("id");
+//     $.get("/funding_projects/" + id + "/body", function(data) {
+//       alert(data);
+//     });
+//   });
+// });
+>>>>>>> a353c0409caad1130fa8e8cee39fc79ea56ff2f0
 
 // $(function(){
 //   $("form#new_funding_project").on("submit", function(e){
