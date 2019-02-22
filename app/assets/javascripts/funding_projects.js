@@ -1,6 +1,20 @@
-$(document).ready(function() {
-  $("#text").append("this is a test.");
+
+$(function () {
+  $(".js-more").on('click', function() {
+    // get the id from the data attribute
+    let id = $(this).data("id");
+    $.get("/funding_projects/" + id + "/body", function(data) {
+      $("#body-" + id).text(data);
+    });
+  });
 });
+
+
+
+
+// $(document).ready(function() {
+//   $("#text").append("this is a test.");
+// });
 
 
 // $(function () {
@@ -19,15 +33,6 @@ $(document).ready(function() {
 //     e.preventDefault();
 // })
 
-// $(function () {
-//   $(".js-more").on('click', function() {
-//     // get the id from the data attribute
-//     let id = $(this).data("id");
-//     $.get("/funding_projects/" + id + "/body", function(data) {
-//       alert(data);
-//     });
-//   });
-// });
 
 // $(function(){
 //   $("form#new_funding_project").on("submit", function(e){
