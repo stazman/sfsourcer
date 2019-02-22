@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
 
   get 'all_sf_events', to: 'static#all_sf_events'
+  
+  get '/funding_projects/:id/description', to: 'funding_projects#description'
 
   get '/funding_projects/:id/body', to: 'funding_projects#body'
 
