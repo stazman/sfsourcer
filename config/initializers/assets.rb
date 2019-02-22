@@ -16,3 +16,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( funding_projects.js )
 
 # Rails.application.config.assets.precompile += %w( main.js )
+<<<<<<< HEAD
+=======
+
+# Rails.application.config.assets.precompile += %w( funding_projects.js )
+>>>>>>> a353c0409caad1130fa8e8cee39fc79ea56ff2f0

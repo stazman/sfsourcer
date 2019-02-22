@@ -1,123 +1,18 @@
-<<<<<<< HEAD
 Use Rails/JS to load funding projects
   Handle event
   Fire a request
   Handle the response
-=======
 
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Almost Funded</strong></p></div>
-  </div>
-</div>
+TO DO:
 
-<div class="container">
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-                 <button class="more">More...</button> 
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
-                <%
-=begin%>
- <div><%= truncate @funding_projects[1].description %></div> 
-<%
-=end%>
-                <%
-=begin%>
- <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
-<%
-=end%>
-
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
->>>>>>> a353c0409caad1130fa8e8cee39fc79ea56ff2f0
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Newest Projects</strong></p></div>
-  </div>
-</div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
-                <%
-=begin%>
- <div><%= truncate @newest_fps_first[0].description %></div>
-                <button class="js-more" data-id="<%= @newest_fps_first[0].id %>">More...</button> 
-<%
-=end%>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
-                <%
-=begin%>
- <div><%= truncate @funding_projects[1].description %></div> 
-<%
-=end%>
-                <%
-=begin%>
- <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
-<%
-=end%>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
+Fix alert not working:
+  Check turbolinks reloading action
+  Check if Ajax issues
+  
 
 Rails/JS Project
-  Add basic open source Writer's group feature to Rails
+  Add JS/AJAX for comments in lstories
 
-    wg-author
-
-    wg-work
-
-    wg-comments
-    
-    commenter --> user
-
-
-
-
-
-Before Rails/JS Project
 Finish setting up and filling out:
   Clean up/reorganize home page DONE
   Add template for landing page for funding-project section DONE
@@ -132,16 +27,10 @@ Finish setting up and filling out:
     build landing page views for fanvorites DONE
   Add partial for navbar to layouts DONE
 
+  
+
 
 After Project Assessment:
-
-TO DO:
-
-Fix alert not working:
-  Check turbolinks reloading action
-  Check if Ajax issues
-
-Add JS/AJAX for comments in lstories
 
 Rails/HTML/CSS/content
 
@@ -328,93 +217,6 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
-
-
-  <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Almost Funded</strong></p></div>
-  </div>
-</div>
-
-<div class="container">
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @funding_projects.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-10">
-      <div><p><strong>Newest Projects</strong></p></div>
-  </div>
-</div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-5">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-            <p><% @newest_fps_first.each do |fp| %></p>
-              <ul>
-                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
-              </ul>
-                <% end %>
-        </div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-
 
       <% @l_stories.each do |l| %>
       <ul>
