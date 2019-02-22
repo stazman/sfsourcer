@@ -1,5 +1,3 @@
-<h1><%= fpd.id %><%= fpd.title %></h1>
-
-<div><%= truncate fpd.description %></div>
- 
+<div id="body-<%= fpd.id %>"><%= truncate fpd.description %></div>
+ <br>
 <button class="js-more" data-id="<%= fpd.id %>">More...</button>
