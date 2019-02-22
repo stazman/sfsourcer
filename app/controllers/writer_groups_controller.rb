@@ -9,7 +9,7 @@ class WriterGroupsController < ApplicationController
 
   def create
     @writer_group = WriterGroup.create(writer_group_params)
-    if @funding_project.save
+    if @writer_group.save
       redirect_to @writer_group
     else
       render :new
