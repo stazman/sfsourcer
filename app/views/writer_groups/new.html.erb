@@ -1,2 +1,15 @@
-<h1>WriterGroups#new</h1>
-<p>Find me in app/views/writer_groups/new.html.erb</p>
+<h1>Create a New Writer's Group</h1>
+
+<%= form_for @writer_group do |wg| %>
+    <%= wg.label "Group Creator Name"%><br>
+    <%= wg.text_field :wg_creator %>
+    <br><br>
+    <%= wg.label "Group Name"%><br>
+    <%= wg.text_field :wg_name %><br>
+    <br><br>
+    <%= wg.label "Group Description"%><br>
+    <%= wg.text_area :wg_description %><br>
+    <br>
+    <%= wg.submit "Create Group" %>
+<% end %>
+
