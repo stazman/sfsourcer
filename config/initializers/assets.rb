@@ -17,5 +17,3 @@ Rails.application.config.assets.precompile += %w( funding_projects.js )
 
 # Rails.application.config.assets.precompile += %w( main.js )
 
-Rails.application.config.assets.precompile += %w( funding_projects.js )
-

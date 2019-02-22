@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'writer_groups/index'
+  get 'writer_groups/new'
+  get 'writer_groups/create'
+  get 'writer_groups/show'
+  get 'writer_groups/edit'
+  get 'writer_groups/update'
+  get 'writer_groups/destroy'
   root 'static#home'
   
   get '/about', to: 'static#about'
