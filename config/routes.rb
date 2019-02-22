@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   resources :ls_users
   resources :funding_projects
   resources :pledges
+  resources :writer_groups
   
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
