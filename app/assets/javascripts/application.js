@@ -15,4 +15,5 @@
 //= require activestorage
 //= require turbolinks
 //= require funding_projects
+//= require writer_groups
 
