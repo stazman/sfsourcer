@@ -61,9 +61,14 @@
     <p >Welcome to SFSourcer Writer's Groups! We are excited to help each other improve our writing! Check out one of the general or sub-genre specific groups, or start your own group!</p>
    <br><br><br> 
       <div>
-        <%= link_to "All SFSourcer Writer's Groups", writer_groups_path(@writer_group) %></a>
+        <a class="load_writer_groups" href="/writer_groups">All SFSourcer Writer's Groups</a>
       </div>
          <br><br>
+      <div class="writer_groups">
+        <ul>
+          
+        </ul>
+      </div>
       <div>
         <%= link_to "Start a Writer's Group", new_writer_group_path %></a>
       </div>
