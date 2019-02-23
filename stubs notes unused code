@@ -1,4 +1,31 @@
 
+            <p><%= link_to @funding_projects[5].title, funding_project_path(@funding_projects[5]) %></p> 
+
+            <button onclick="myFunction()">About this project ...</button>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
+                <%
+=begin%>
+ <div><%= truncate @funding_projects[1].description %></div>
+                <button class="js-more" data-id="<%= @funding_projects[1].id %>">More...</button> 
+<%
+=end%>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+
+
+
 <div class="text-center .mx-auto px-{2}">
   <div class="stripe_row">
     <div class="col-sm-10">
