@@ -1,3 +1,3 @@
 class WriterGroupSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :wg_name
 end
