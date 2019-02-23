@@ -8,6 +8,9 @@ class StaticController < ApplicationController
 
     def sf_lit_fanvorites
     end
+
+    def writer_groups_home
+    end
 end
 
 

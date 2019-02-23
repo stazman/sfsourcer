@@ -30,8 +30,7 @@
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>All SFSourcer Projects</h1>      
-    <p>Help Great SF Projects Get Made</p>
+    <h1>Writer's Groups</h1>      
   </div>
 </div>
 
@@ -40,34 +39,25 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#"><h5>Search For a Specific Project/Keyword (Under Construction)</h5><br><br></a></p>
-      <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p>
-      <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p>
-    </div>
-    <div class="text-center .mx-auto px-{1}">
-      <div class="stripe_row">
-        <div class="col-sm-10">
-          <div><p><strong>Popular Projects</strong></p></div>
-      </div>
-    </div>
-      <div class="col-sm-5">
-        <div class="panel panel-primary">
-          <div class="panel-body">
-
-              <h1><%= link_to @funding_projects[2].title, funding_project_path(@funding_projects[2]) %></h1>
-              <%
+      <p><a href="#"><h5>Start a New Writer's Group</h5><br><br></a></p>
+      <%
 =begin%>
- <% @posts.each do |post| %> 
+ <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p> 
 <%
 =end%>
-              <%= render partial: "fpd", locals: {fpd: @funding_projects[2]} %>
-              <br>
-                <%
+      <%
 =begin%>
- <% end %> 
+ <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p> 
 <%
 =end%>
-              <p id="text"></p>
+    </div>
+    <div class="col-sm-9">
+    <br>
+    <br>
+    <p>Welcome to SFSourcer Writer's Groups! Get your work ready to show and check out one of the general or sub-genre specific groups below.</p>
+    <br>
+    <br>
+    ALL WRITER'S GROUPS
         </div>
         <br>
             

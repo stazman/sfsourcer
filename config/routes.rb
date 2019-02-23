@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'writer_groups/index'
-  get 'writer_groups/new'
-  get 'writer_groups/create'
-  get 'writer_groups/show'
-  get 'writer_groups/edit'
-  get 'writer_groups/update'
-  get 'writer_groups/destroy'
   root 'static#home'
   
   get '/about', to: 'static#about'
@@ -21,6 +14,7 @@ Rails.application.routes.draw do
   get '/all_sf_fanvorites', to: 'static#all_sf_fanvorites'
   get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
   get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
+  get '/writer_groups_home', to: 'static#writer_groups_home'
 
   get 'all_sf_events', to: 'static#all_sf_events'
   
