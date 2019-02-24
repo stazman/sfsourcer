@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_24_074834) do
+ActiveRecord::Schema.define(version: 2019_02_24_081948) do
 
   create_table "fp_categories", force: :cascade do |t|
     t.string "name"
@@ -124,6 +124,14 @@ ActiveRecord::Schema.define(version: 2019_02_24_074834) do
     t.string "provider"
     t.string "uid"
     t.string "image"
+  end
+
+  create_table "wg_comments", force: :cascade do |t|
+    t.string "author"
+    t.text "content"
+    t.integer "wg_work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "wg_works", force: :cascade do |t|
