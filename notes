@@ -1,9 +1,5 @@
 RAILS/JS PROJECT TO DO
 
-  Add links for wg_works titles on writer_group_home to show page for each work -- 4 R/JS Project requirement
-    Add wg_creator to rendered list of groups on writer_group_home via AMS -- 4 R/JS Project requirement
-
-
   Make sure wg_works working through rails only
   Make sure wg_comments working through rails only
 
@@ -16,10 +12,11 @@ Rails/JS Project
   Add JS/AJAX for comments in lstories
 
 
-
-
-
 RAILS/JS PROJECT FINISHED
+
+DONE Add links for wg_writer_group titles on wg_works index page to show page for each work -- 5 R/JS Project requirement
+
+DONE Add wg_creator to rendered list of groups on writer_group_home via AMS -- 4 R/JS Project requirement
 
 Fix alert not working:
   Check turbolinks reloading action DONE
@@ -45,43 +42,46 @@ Finish setting up and filling out:
 
 After Project Assessment:
 
-JS ALL FEATURES
-
-  Go server-side and Turn list of writer groups into links to each group .. use Rails/JS video 1, last half
-
-JS SPECIFIC FEATURES
-
-Use Rails/JS to load funding projects
-  Handle event 
-  Fire a request
-  Handle the response
+  Go server-side and use remote => :true pattern with Rails/JS video 1, last half
 
 
-Rails/HTML/CSS/content
 
-  Add news/events, related articles to fanvorites show views sidenavs
-  
-  fix nested params for fpcreators on funding project show view
-  
-  Create MVC for new events
+  JS ALL FEATURES
 
-  Have Fanvorites nested routes use partial for heading navbar
 
-  Make test for navbar
+  JS SPECIFIC FEATURES
 
-  Have sidenavs collapse/be relocated responsively on small screen sizes
+  Use Rails/JS to load funding projects
+    Handle event 
+    Fire a request
+    Handle the response
 
-  Standardize page style across all pages
 
-  Clean up/reogranize landing pages
-    Fanvorites
-    LStories
-    Funding Project index and new
+  Rails/HTML/CSS/content
 
-  Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
-    Add feature descriptions to home page feature boxes
-    Add images, style and effects
-    Clean up container margins
+    Add news/events, related articles to fanvorites show views sidenavs
+    
+    fix nested params for fpcreators on funding project show view
+    
+    Create MVC for new events
+
+    Have Fanvorites nested routes use partial for heading navbar
+
+    Make test for navbar
+
+    Have sidenavs collapse/be relocated responsively on small screen sizes
+
+    Standardize page style across all pages
+
+    Clean up/reogranize landing pages
+      Fanvorites
+      LStories
+      Funding Project index and new
+
+    Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
+      Add feature descriptions to home page feature boxes
+      Add images, style and effects
+      Clean up container margins
 
 
 JS
@@ -243,6 +243,24 @@ polymorphic with pledges? doesn't seem to fit
 
 UNUSED CODE
 
+$(function(){
+    $("a.load_writer_groups").on("click", function(e){
+        // alert("This is a test");
+        $.get(this.href).success(function(json){
+            // console.log(data);
+            // $("body").append(data);
+            // $("div.writer_groups.ul").
+            let $ul = $("div.writer_groups ul")
+
+            $ul.html("");
+
+            json.forEach(function(writer_group){
+                $ul.append("<li>" + "<a " + "href='" + "/writer_groups/" + writer_group.id + "' >" + writer_group.wg_name + "</a>" + " - " + writer_group.wg_creator + "</li>");
+            });
+        });
+        e.preventDefault();
+    })
+})
 <% @wg_works.each do |wgw| %>
 
 <%= wgw.title %><%>
