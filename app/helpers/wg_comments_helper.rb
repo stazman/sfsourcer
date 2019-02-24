@@ -1,0 +1,2 @@
+module WgCommentsHelper
+end
