@@ -1,7 +1,11 @@
 
-<ul>
+<%
+=begin%>
+ <ul>
     <% @writer_groups.each do |wg| %>
     <li><%= link_to wg.wg_name, writer %></li>
 <% end %>
-</ul>
+</ul> 
+<%
+=end%>
 
