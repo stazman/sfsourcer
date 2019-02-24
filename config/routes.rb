@@ -1,19 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'wg_comments/index'
-  get 'wg_comments/new'
-  get 'wg_comments/create'
-  get 'wg_comments/show'
-  get 'wg_comments/edit'
-  get 'wg_comments/update'
-  get 'wg_comments/delete'
-  get 'wg_works/index'
-  get 'wg_works/new'
-  get 'wg_works/create'
-  get 'wg_works/show'
-  get 'wg_works/edit'
-  get 'wg_works/update'
-  get 'wg_works/delete'
   root 'static#home'
   
   get '/about', to: 'static#about'
@@ -47,6 +33,8 @@ Rails.application.routes.draw do
   resources :funding_projects
   resources :pledges
   resources :writer_groups
+  resources :wg_works
+  resources :wg_comments
   
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
@@ -54,5 +42,13 @@ Rails.application.routes.draw do
 
   resources :funding_projects do
     resources :pledges
+  end
+
+  resources :writer_groups do
+    resources :wg_works
+  end
+
+  resources :wg_works do
+    resources :wg_comments
   end
 end
