@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'wg_works/index'
+  get 'wg_works/new'
+  get 'wg_works/create'
+  get 'wg_works/show'
+  get 'wg_works/edit'
+  get 'wg_works/update'
+  get 'wg_works/delete'
   root 'static#home'
   
   get '/about', to: 'static#about'
