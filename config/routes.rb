@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'wg_comments/index'
+  get 'wg_comments/new'
+  get 'wg_comments/create'
+  get 'wg_comments/show'
+  get 'wg_comments/edit'
+  get 'wg_comments/update'
+  get 'wg_comments/delete'
   get 'wg_works/index'
   get 'wg_works/new'
   get 'wg_works/create'
