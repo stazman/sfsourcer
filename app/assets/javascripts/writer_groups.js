@@ -10,7 +10,7 @@ $(function(){
             $ul.html("");
 
             json.forEach(function(writer_group){
-                $ul.append("<li>" + writer_group.wg_name + "</li>");
+                $ul.append("<li>" + writer_group.wg_name + " - " + writer_group.wg_creator + "</li>");
             });
         });
         e.preventDefault();
