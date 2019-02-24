@@ -1,0 +1,2 @@
+class WgWork < ApplicationRecord
+end
