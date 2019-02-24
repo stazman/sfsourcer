@@ -1,0 +1,2 @@
+class WgComment < ApplicationRecord
+end
