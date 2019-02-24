@@ -1,79 +1,3 @@
-Use Rails/JS to load funding projects
-  Handle event
-  Fire a request
-  Handle the response
-
-TO DO:
-
-Fix alert not working:
-  Check turbolinks reloading action
-  Check if Ajax issues
-  
-
-Rails/JS Project
-  Add JS/AJAX for comments in lstories
-
-Finish setting up and filling out:
-  Clean up/reorganize home page DONE
-  Add template for landing page for funding-project section DONE
-    Fill out DONE
-    Fix links DONE
-  Add template for lstories show page DONE
-    Fill out DONE
-  Make Navbar standard on all pages DONE
-    add dropdowns DONE
-  Fix existing links for all of these DONE
-  Add Events page and route DONE
-    build landing page views for fanvorites DONE
-  Add partial for navbar to layouts DONE
-
-  
-
-
-After Project Assessment:
-
-Rails/HTML/CSS/content
-
-  Add news/events, related articles to fanvorites show views sidenavs
-  
-  fix nested params for fpcreators on funding project show view
-  
-  Create MVC for new events
-
-  Have Fanvorites nested routes use partial for heading navbar
-
-  Make test for navbar
-
-  Have sidenavs collapse/be relocated responsively on small screen sizes
-
-  Standardize page style across all pages
-
-  Clean up/reogranize landing pages
-    Fanvorites
-    LStories
-    Funding Project index and new
-
-  Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
-    Add feature descriptions to home page feature boxes
-    Add images, style and effects
-    Clean up container margins
-
-
-JS
-
-  Use JS to remove place to make/choose name after finished
-
-  Build holding place in line to write functionality
-
-  Add comments section to fanvorites show views
-
-
-
-
-
-  
-
-
 
 
 
@@ -217,6 +141,93 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+
+
+  <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[1] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Almost Funded</strong></p></div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @funding_projects.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @funding_projects[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Newest Projects</strong></p></div>
+  </div>
+</div>
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @newest_fps_first.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[0] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            <p><% @newest_fps_first.each do |fp| %></p>
+              <ul>
+                <h4><%= link_to fp.title, funding_project_path(fp) if fp == @newest_fps_first[1] %></h4>
+              </ul>
+                <% end %>
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+
 
       <% @l_stories.each do |l| %>
       <ul>
