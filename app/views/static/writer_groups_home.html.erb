@@ -39,21 +39,6 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <%
-=begin%>
- <p><a href="#"><h5>Start a New Writer's Group</h5><br><br></a></p> 
-<%
-=end%>
-      <%
-=begin%>
- <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p> 
-<%
-=end%>
-      <%
-=begin%>
- <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p> 
-<%
-=end%>
     </div>
     <div class="col-sm-9">
     <br>
@@ -63,12 +48,13 @@
       <div>
         <a class="load_writer_groups" href="/writer_groups">All SFSourcer Writer's Groups</a>
       </div>
-         <br><br>
+         <br>
       <div class="writer_groups">
         <ul>
           
         </ul>
       </div>
+      <br><br>
       <div>
         <%= link_to "Start a Writer's Group", new_writer_group_path %></a>
       </div>

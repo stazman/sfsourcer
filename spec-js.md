@@ -1,10 +1,10 @@
 Rails App with JavaScript Frontend Spec
 Project Specs:
-* Must have a Rails Backend and new requirements implemented through JavaScript. WRITER GROUPS
-* Makes use of ES6 features as much as possible(e.g Arrow functions, Let & Const, Constructor Functions)
-* Must translate the JSON responses into Javascript Model Objects using either ES6 class or constructor syntax. 
-4 X * Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend. WRITER GROUPS INDEX ON /WRITER_GROUPS_HOME
-* Must render at least one show page (show resource - 'one specific thing') via JavaScript and an Active Model Serialization JSON Backend. WG_COMMENTS ON /WG_WORK/:ID ???
+1 * Must have a Rails Backend and new requirements implemented through JavaScript. WRITER GROUPS
+2 * Makes use of ES6 features as much as possible(e.g Arrow functions, Let & Const, Constructor Functions)
+3 * Must translate the JSON responses into Javascript Model Objects using either ES6 class or constructor syntax. 
+DONE 4 * Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend. WRITER GROUPS LIST AT /WRITER_GROUPS_HOME
+DONE 5 * Must render at least one show page (show resource - 'one specific thing') via JavaScript and an Active Model Serialization JSON Backend. WRITER GROUPS LINKS TO SPECIFIC WRITER'S GROUPS  AT /WRITER_GROUPS_HOME
 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page.
 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript.
 * At least one of the JS Model Objects must have a method on the prototype.
