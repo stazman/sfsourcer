@@ -5,12 +5,12 @@ $(function(){
             // console.log(data);
             // $("body").append(data);
             // $("div.writer_groups.ul").
-            let $ol = $("div.writer_groups ul")
+            let $ul = $("div.writer_groups ul")
 
-            $ol.html("");
+            $ul.html("");
 
             json.forEach(function(writer_group){
-            // debugger
+                $ul.append("<li>" + writer_group.wg_name + "</li>");
             });
         });
         e.preventDefault();
