@@ -5,13 +5,15 @@ class WgWorksController < ApplicationController
   end
 
   def new
-    @wg_work = WgWork.new(writer_group_id: params[:writer_group_id])
-    @wg_group = WriterGroup.where(:id == :writer_group_id)
+    @wg_work = WgWork.new
+    # (writer_group_id: params[:writer_group_id])
+    # @wg_group = WriterGroup.where(:id == :writer_group_id)
   end
 
   def create
     @wg_work = WgWork.create(wg_work_params)
-    if @wg_work.save
+    if @wg_work.valid?
+      @wg_work.save
       redirect_to @wg_work
     else
       render :new
