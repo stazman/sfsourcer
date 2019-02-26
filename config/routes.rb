@@ -44,10 +44,6 @@ Rails.application.routes.draw do
     resources :pledges
   end
 
-  resources :writer_groups do
-    resources :wg_works
-  end
-
   resources :wg_works do
     resources :wg_comments
   end
