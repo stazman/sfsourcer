@@ -1,2 +1,19 @@
-<h1>WgWorks#new</h1>
-<p>Find me in app/views/wg_works/new.html.erb</p>
+<h1>Add Your Work to the Group </h1>
+
+
+<br>
+
+<%= form_for(@wg_work) do |f| %>
+    <%= f.label "Your Name" %>
+    <%= f.text_field :author %><br>
+    <%= f.label "Your Bio" %>
+    <%= f.text_area :bio %><br>
+    <%= f.label "Title of Your Work" %>
+    <%= f.text_field :title %><br>
+    <%= f.label "Version of Your Work" %>
+    <%= f.text_field :version %><br>
+    <%= f.label "Your Work" %>
+    <%= f.text_area :content %><br>
+    <%= f.submit %>
+<% end %>
+
