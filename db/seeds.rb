@@ -15,4 +15,4 @@
 # work1 = LitFanWork.create!(title: "Dune")
 # genre1 = LitFanGenre.create!(name: "Science Fiction")
 
-DELETE FROM writer_groups WHERE ID = 3;
+wg_work1 = WgWork.create!(author: "test", bio: "test", title: "test", version: "1", content: "a", writer_group_id: 1)
