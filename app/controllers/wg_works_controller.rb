@@ -1,10 +1,12 @@
 class WgWorksController < ApplicationController
   def index
     @wg_works = WgWork.all
+    render :json => @wg_works
   end
 
   def new
-    @wg_work = WgWork.new
+    @wg_work = WgWork.new(writer_group_id: params[:writer_group_id])
+    @wg_group = WriterGroup.where(:id == :writer_group_id)
   end
 
   def create
