@@ -6,7 +6,6 @@ class CreateWgWorks < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :version
       t.text :content
-      t.integer :writer_group_id
 
       t.timestamps
     end
