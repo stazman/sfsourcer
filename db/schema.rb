@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_011824) do
+ActiveRecord::Schema.define(version: 2019_02_26_122804) do
 
   create_table "fp_categories", force: :cascade do |t|
     t.string "name"
@@ -140,9 +140,9 @@ ActiveRecord::Schema.define(version: 2019_02_26_011824) do
     t.string "title"
     t.string "version"
     t.text "content"
+    t.integer "writer_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "writer_group_id"
   end
 
   create_table "writer_groups", force: :cascade do |t|

@@ -4,8 +4,9 @@ class CreateWgWorks < ActiveRecord::Migration[5.2]
       t.string :author
       t.text :bio
       t.string :title
-      t.integer :version
+      t.string :version
       t.text :content
+      t.integer :writer_group_id
 
       t.timestamps
     end
