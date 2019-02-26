@@ -1,7 +1,11 @@
 class WgWorksController < ApplicationController
   def index
     @wg_works = WgWork.all
-    render :json => @wg_works
+    respond_to do |f|
+      f.html { redirect_to @wg_works }
+      f.json { render :json => @wg_works }
+    end
+    # render :json => @wg_works
   end
 
   def new
