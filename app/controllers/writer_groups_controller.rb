@@ -1,9 +1,8 @@
 class WriterGroupsController < ApplicationController
+  
   def index
     @writer_groups = WriterGroup.all
-    # render :layout => false
     render :json => @writer_groups
-    
   end
 
   def new
