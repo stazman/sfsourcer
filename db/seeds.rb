@@ -15,4 +15,7 @@
 # work1 = LitFanWork.create!(title: "Dune")
 # genre1 = LitFanGenre.create!(name: "Science Fiction")
 
-wg_work1 = WgWork.create!(author: "test", bio: "test", title: "test", version: "1", content: "a", writer_group_id: 1)
+# wg_work1 = WgWork.create!(author: "test", bio: "test", title: "test", version: "1", content: "a", writer_group_id: 1)
+
+# wg_comment1 = WgComment.create!(author: "Test commenter", content: "Test content", wg_work_id: 2)
+wg_commentpre1 = WgComment.create!(author: "Test commenter pre", content: "Test content pre", wg_work_id: 1)

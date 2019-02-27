@@ -1,32 +1,22 @@
 class WgWorksController < ApplicationController
   def index
+    @wg_work = WgWork.new
     @wg_works = WgWork.all
-    # respond_to do |f|
-    #   f.html { redirect_to @wg_works }
-    #   f.json { render :json => @wg_works }
-    # end
-    # render :json => @wg_works
   end
 
   def new
     @wg_work = WgWork.new
-    # (writer_group_id: params[:writer_group_id])
-    # @wg_group = WriterGroup.where(:id == :writer_group_id)
   end
 
   def create
-    @wg_work = WgWork.create(wg_work_params)
-    # if @wg_work
-      @wg_work.save
-      redirect_to @wg_work 
-      # wg_work_path(@wg_work)
-    # else
-    #   render :new
-    # end
+    @wg_work = WgWork.new(wg_work_params)
+    @wg_work.save
+    redirect_to @wg_work 
   end
 
   def show
-    @wg_work = WgWork.find(params[:id])   
+    @wg_work = WgWork.find(params[:id])
+    @wg_comment = @wg_work.wg_comments.build
   end
 
   def edit
