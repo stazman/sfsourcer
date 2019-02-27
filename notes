@@ -1,49 +1,57 @@
 RAILS/JS PROJECT TO DO
 
-  Make sure wg_works working through rails only
-  Make sure wg_comments working through rails only
+Repo General
+* You have a large number of small Git commits
+* Your commit messages are meaningful
+* You made the changes in a commit that relate to the commit message
+* You don't include changes in a commit that aren't related to the commit message
+
+6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORK HAS_MANY WG_COMMENTS
+
+  Render wg_comments to wg_work show view through JSON
 
 
 
-TO DO:
 
 
-Rails/JS Project
-  Add JS/AJAX for comments in lstories
 
 
 RAILS/JS PROJECT FINISHED
+
+DONE Make sure wg_works working through rails only
+DONE Make sure wg_comments working through rails only
 
 DONE Add links for wg_writer_group titles on wg_works index page to show page for each work -- 5 R/JS Project requirement
 
 DONE Add wg_creator to rendered list of groups on writer_group_home via AMS -- 4 R/JS Project requirement
 
 Fix alert not working:
-  Check turbolinks reloading action DONE
-  Check if Ajax issues DONE
+DONE  Check turbolinks reloading action 
+DONE  Check if Ajax issues 
   
 
 Finish setting up and filling out:
-  Clean up/reorganize home page DONE
-  Add template for landing page for funding-project section DONE
-    Fill out DONE
-    Fix links DONE
-  Add template for lstories show page DONE
-    Fill out DONE
-  Make Navbar standard on all pages DONE
-    add dropdowns DONE
-  Fix existing links for all of these DONE
-  Add Events page and route DONE
-    build landing page views for fanvorites DONE
-  Add partial for navbar to layouts DONE
+DONE  Clean up/reorganize home page 
+DONE  Add template for landing page for funding-project section 
+DONE    Fill out 
+DONE    Fix links 
+DONE  Add template for lstories show page 
+DONE    Fill out 
+DONE  Make Navbar standard on all pages 
+DONE    add dropdowns 
+DONE  Fix existing links for all of these 
+DONE  Add Events page and route 
+DONE    build landing page views for fanvorites 
+DONE  Add partial for navbar to layouts 
 
   
 
 
-After Project Assessment:
+***************************** AFTER RAILS/JS PROJECT ASSESSMENT TO DO ******************************
+
+  Delete blank comment for wg_works/2
 
   Go server-side and use remote => :true pattern with Rails/JS video 1, last half
-
 
 
   JS ALL FEATURES
