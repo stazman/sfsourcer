@@ -11,11 +11,7 @@ class WriterGroupsController < ApplicationController
 
   def create
     @writer_group = WriterGroup.create(writer_group_params)
-    if @writer_group.save
-      redirect_to @writer_group
-    else
-      render :new
-    end
+    render :json => @writer_group
   end
 
   def show

@@ -8,10 +8,22 @@ Repo General
 
 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORK HAS_MANY WG_COMMENTS
 
-  Render wg_comments to wg_work show view through JSON
+  
+  Look into Prototype requirement
+  
+  AAQ - Render wg_comments to wg_work show view through JSON? -- or for assessment questions
+  
+  Funding/projects/pledge or lit_fan_works or l_stories
 
 
+7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript.
 
+  Writing_groups/new
+
+8 * At least one of the JS Model Objects must have a method on the prototype.
+
+
+???
 
 
 
