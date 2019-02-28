@@ -1,12 +1,4 @@
 class WgCommentsController < ApplicationController
-  # def index
-  #   @list = List.new
-  #   @wg_comments = WgComment.all
-  # end
-
-  # def new
-  #   @wg_comment = WgComment.new
-  # end
 
   def create
     @wg_work = WgWork.find(params[:wg_work_id])
@@ -14,10 +6,6 @@ class WgCommentsController < ApplicationController
     @wg_comment.save
     redirect_to wg_work_path(@wg_work)
   end
-
-  # def show
-  #   @wg_comment = WgComment.find(params[:id])   
-  # end
 
   def edit
   end
