@@ -10,15 +10,22 @@ $(function () {
   });
 });
 
-$(function () {
-  $("a.all_pledges").on("click", function() {
-    let fpId = parseInt($("a.all_pledges").attr("data-id"));
-    $.get("/funding_project" + fpId + ".json", function(data) {
-      let fpPledges = data;
-      $(".fpPledges").text(fpPledges["pledges"]["amount"]);
-    });
-  });
-});
+$(function(){
+
+        // event handler
+
+  $("a.all_pledges").on("click", function(e){
+
+
+          // in this function:
+//              needs to access pledges for the funding_project from json object
+//                json object must be accessed
+//                need to access id of funding project from json object
+//                need to access pledges
+//                  need to access id and amount of each pledge associated with the funding_project
+//                  needs to render associated funding_project and pledges in a list on the funding_project 
+//                      in the list provided below the link event
+
 
 
 // $(document).ready(function() {
