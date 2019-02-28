@@ -23,7 +23,11 @@
 
       <p><h5><%= link_to "Make a Pledge", new_pledge_path %></h5>
 </p>
-    </div>
+
+
+    <%
+=begin%>
+ </div>
     <div class="col-sm-8 text-left"> 
       <h1><%= @funding_project.title %></h1><br>
         <h4><%= @funding_project.description %></h4><br><br>
@@ -31,7 +35,19 @@
         <h4>Amount Pledged: <%= @funding_project.total_pledges %></h4><br>
         <h4>Amount Needed: <%= @funding_project.amount_needed %></h4><br>
       <hr>
-    </div>
+      <br>
+    </div> 
+<%
+=end%>
+
+<div>
+  <a href="#" class="all_pledges">Click Here to See All Individual Pledge Amounts</a>
+
+</div>
+
+      link 
+      event handler onclick in js will render all pledges for the fp
+
     <div class="col-sm-2 sidenav">
       <div class="well">
         <p></p>

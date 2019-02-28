@@ -35,7 +35,8 @@ class FundingProjectsController < ApplicationController
     # @user = User.find_by(id: params[:user_id])
     # @funding_project = @user.funding_projects.find_by(id: params[:id])
     @total_pledges = []
-    render :layout => 'navbar_on_top'
+    # render :layout => 'navbar_on_top'
+    render :json => @funding_project
   end
 
   def description
