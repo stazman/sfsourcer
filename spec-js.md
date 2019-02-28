@@ -21,7 +21,7 @@ DONE 5 * Must render at least one show page (show resource - 'one specific thing
 
 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORK HAS_MANY WG_COMMENTS
 
-7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript.
+DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITER_GROUPS#NEW
 
 8 * At least one of the JS Model Objects must have a method on the prototype.
 
