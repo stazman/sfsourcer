@@ -6,29 +6,15 @@ Repo General
 * You made the changes in a commit that relate to the commit message
 * You don't include changes in a commit that aren't related to the commit message
 
-6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORK HAS_MANY WG_COMMENTS
-
-  
-  Look into Prototype requirement
-  
-  AAQ - Render wg_comments to wg_work show view through JSON? -- or for assessment questions
-  
-  Funding/projects/pledge or lit_fan_works or l_stories
-
-
-7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript.
-
-  Writing_groups/new
+6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. FUNDING_PROJECT/PLEDGES
 
 8 * At least one of the JS Model Objects must have a method on the prototype.
 
 
-???
-
-
-
 
 RAILS/JS PROJECT FINISHED
+
+DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITING_GROUPS#SHOW
 
 DONE Make sure wg_works working through rails only
 DONE Make sure wg_comments working through rails only
@@ -60,6 +46,8 @@ DONE  Add partial for navbar to layouts
 
 
 ***************************** AFTER RAILS/JS PROJECT ASSESSMENT TO DO ******************************
+
+  AAQ - Render wg_comments to wg_work show view with nested params through JSON? -- or for assessment questions
 
   Delete blank comment for wg_works/2
 
