@@ -10,7 +10,15 @@ $(function () {
   });
 });
 
-
+$(function () {
+  $("a.all_pledges").on("click", function() {
+    let fpId = parseInt($("a.all_pledges").attr("data-id"));
+    $.get("/funding_project" + fpId + ".json", function(data) {
+      let fpPledges = data;
+      $(".fpPledges").text(fpPledges["pledges"]["amount"]);
+    });
+  });
+});
 
 
 // $(document).ready(function() {
