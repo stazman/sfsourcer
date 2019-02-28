@@ -12,3 +12,18 @@ $(function(){
         e.preventDefault();
     })
 })
+
+$(function () {
+    $('form').submit(function(event) {
+      event.preventDefault();
+      let values = $(this).serialize();
+      let writer_group = $.post('/writer_groups', values);
+      writer_group.done(function(data) {
+          let w_group = data;
+          $("#writerGroupWgName").text(w_group["wg_name"]);
+          $("#writerGroupWgCreator").text(w_group["wg_creator"]);
+          $("#writerGroupWgDescription").text(w_group["wg_description"]);
+        });
+    });
+});
+   
