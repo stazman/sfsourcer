@@ -1,5 +1,9 @@
 RAILS/JS PROJECT TO DO
 
+writer_group js issue
+  check that js is working in asset pipeline
+  check that seralizers are working properly
+
 Repo General
 * You have a large number of small Git commits
 * Your commit messages are meaningful
