@@ -15,10 +15,24 @@ $(function(){
         // event handler
 
   $("a.all_pledges").on("click", function(e){
+    $.get(this.href).success(function(json){
+
+      let $ul = $("div.writer_groups ul")
 
 
-          // in this function:
 //              needs to access pledges for the funding_project from json object
+
+    let $ul = $(this).data
+    $ul.html("");
+    json.forEach(function(funding_project, pledge){
+        $ul.append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "/pledges/" + pledge.id + "' >" + pledge.amount + "</a>" + "</li>");
+    });
+});
+e.preventDefault();
+})
+})
+
+
 //                json object must be accessed
 //                need to access id of funding project from json object
 //                need to access pledges
