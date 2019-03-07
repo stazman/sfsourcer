@@ -32,11 +32,17 @@ class FundingProjectsController < ApplicationController
 
   def show
     @funding_project = FundingProject.find(params[:id])
+    respond_to do |f|
+      f.html { redirect_to @funding_project }
+      f.json { render :json => @funding_project }
+    end
+
+    # render :json => @funding_project
+    
     # @user = User.find_by(id: params[:user_id])
     # @funding_project = @user.funding_projects.find_by(id: params[:id])
     # @total_pledges = []
     # render :layout => 'navbar_on_top'
-    render :json => @funding_project
   end
 
   def description

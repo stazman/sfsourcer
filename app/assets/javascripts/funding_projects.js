@@ -17,7 +17,7 @@ $(function(){
   $("a.all_pledges").on("click", function(e){
     $.get(this.href).success(function(json){
 
-      let $ul = $("div.writer_groups ul")
+      let $ul = $("div.fpPledges ul")
 
 
 //              needs to access pledges for the funding_project from json object
@@ -26,10 +26,10 @@ $(function(){
     $ul.html("");
     json.forEach(function(funding_project, pledge){
         $ul.append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "/pledges/" + pledge.id + "' >" + pledge.amount + "</a>" + "</li>");
-    });
-});
-e.preventDefault();
-})
+          });
+      });
+      e.preventDefault();
+  })
 })
 
 
