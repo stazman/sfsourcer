@@ -1,23 +1,31 @@
-<h1>Create a New Writer's Group</h1>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%= javascript_include_tag 'writer_groups'  %>
+   </head>
+   <body>
+      <h1>Create a New Writer's Group</h1>
 
-<%= form_for @writer_group do |wg| %>
-    <%= wg.label "Group Name"%><br>
-    <%= wg.text_field :wg_name %><br>
-    <br><br>
-    <%= wg.label "Group Creator Name"%><br>
-    <%= wg.text_field :wg_creator %>
-    <br><br>
+      <%= form_for @writer_group do |wg| %>
+         <%= wg.label "Group Name"%><br>
+         <%= wg.text_field :wg_name %><br>
+         <br><br>
+         <%= wg.label "Group Creator Name"%><br>
+         <%= wg.text_field :wg_creator %>
+         <br><br>
 
-    <%= wg.label "Group Description"%><br>
-    <%= wg.text_area :wg_description %><br>
-    <br>
-    <%= wg.submit "Create Group" %>
-<% end %>
+         <%= wg.label "Group Description"%><br>
+         <%= wg.text_area :wg_description %><br>
+         <br>
+         <%= wg.submit "Create Group" %>
+      <% end %>
 
-<br><br>
+      <br><br>
 
-<div id="productResult">
-   <h2 id="writerGroupWgName"></h2>
-   <h3 id="writerGroupWgCreator"></h3><br>
-   <h4 id="writerGroupWgDescription"></h2>
-</div>
+      <div id="productResult">
+         <h2 id="writerGroupWgName"></h2>
+         <h3 id="writerGroupWgCreator"></h3><br>
+         <h4 id="writerGroupWgDescription"></h2>
+      </div>
+   <body>
+</html>
