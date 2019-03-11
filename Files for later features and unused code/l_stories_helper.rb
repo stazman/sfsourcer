@@ -1,2 +1,0 @@
-module LStoriesHelper
-end
