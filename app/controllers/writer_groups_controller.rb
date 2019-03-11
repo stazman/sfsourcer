@@ -7,6 +7,7 @@ class WriterGroupsController < ApplicationController
 
   def new
     @writer_group = WriterGroup.new
+    render :layout => 'navbar_on_top'
   end
 
   def create
@@ -16,6 +17,7 @@ class WriterGroupsController < ApplicationController
 
   def show
     @writer_group = WriterGroup.find(params[:id])
+    render :layout => 'navbar_on_top'
   end
 
   def edit
