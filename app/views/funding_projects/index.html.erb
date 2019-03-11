@@ -16,7 +16,17 @@
       color: white;
       padding: 15px;
     }
-    
+
+    <%
+=begin%>
+ .panel panel-primary {
+      margin-left: 0;
+      margin-right: 0;
+    }
+     
+<%
+=end%>
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -50,29 +60,50 @@
           <div><p><strong>Popular Projects</strong></p></div>
       </div>
     </div>
-      <div class="col-sm-5">
-        <div class="panel panel-primary">
-          <div class="panel-body">
+    <div class="text-center .mx-auto px-{1}">
+      <div class="container">
+        <div class="row content">
+            <div class="col-sm-2">
+              <div class="panel panel-primary">
+                <div class="panel-body">
 
-              <h1><%= link_to @funding_projects[2].title, funding_project_path(@funding_projects[2]) %></h1>
-              <%
-=begin%>
- <% @posts.each do |post| %> 
-<%
-=end%>
-              <%= render partial: "fpd", locals: {fpd: @funding_projects[2]} %>
-              <br>
-                <%
-=begin%>
- <% end %> 
-<%
-=end%>
-              <p id="text"></p>
+                    <h1><%= link_to @funding_projects[0].title, funding_project_path(@funding_projects[0]) %></h1>
+
+                    <%= render partial: "fpd", locals: {fpd: @funding_projects[0]} %>
+                    <br>
+                    <p id="text"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row content">
+          <div class="col-sm-2">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+
+                  <h1><%= link_to @funding_projects[1].title, funding_project_path(@funding_projects[1]) %></h1>
+
+                  <%= render partial: "fpd", locals: {fpd: @funding_projects[1]} %>
+                  <br>
+                  <p id="text"></p>
+              </div>
+          </div>
+          </div>
+          <div class="row content">
+          <div class="col-sm-3">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+
+                  <h1><%= link_to @funding_projects[2].title, funding_project_path(@funding_projects[2]) %></h1>
+
+                  <%= render partial: "fpd", locals: {fpd: @funding_projects[2]} %>
+                  <br>
+                  <p id="text"></p>
+              </div>
+          </div>
+          </div>
         </div>
-        <br>
-            
-  </div>
-  </div>
+      </div>
+    </div>
 </body>
 </html>
 
