@@ -8,6 +8,19 @@ $(function () {
   });
 });
 
+$(function () {
+  $("#all_pledges").on('click', function() {
+
+    console.log("This button works on the page.")
+
+  //  let fpId = $(this).data("id");
+
+
+  //  $.get("/funding_projects/" + fpId)
+  });
+});
+ 
+
 // 
 
 //               json object must be accessed
