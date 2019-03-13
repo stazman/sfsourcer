@@ -4,6 +4,13 @@ class PledgesController < ApplicationController
     def index
       if params[:funding_project_id]
         @funding_project = FundingProject.find_by(id: params[:funding_project_id])
+        @pledges = @funding_project.pledges
+        render :json => @pledges
+        # respond_to do |f|
+        #   f.html (render :index)
+        #   f.json (render :json => @pledges)
+        # end
+        # @pledges = Pledge.all
       else
         @pledges = Pledge.all
       end
