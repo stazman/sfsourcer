@@ -10,7 +10,8 @@ $(function () {
 
 $(function () {
   $("#all_pledges").on('click', function(e) {
-
+    $.get(this.href).success(function(json){
+        
     let $ul = $("div.fpPledges ul");
 
     $ul.append("<li>" + "hello" + "</li>");
@@ -21,7 +22,8 @@ $(function () {
 
 
   // console.log("This button makes a list of items.")
-    e.preventDefault();
+     });
+   e.preventDefault();
   });
 });
  
