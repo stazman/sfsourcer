@@ -1,12 +1,5 @@
 RAILS/JS PROJECT TO DO
 
-DONE pledges index view should show all pledges
-DONE pledges index controller should have html and json formats
-DONE funding_project#show should show results of button click by adding lines to ul
-access the id of each pledge for the specific funding_project id
-
-pledges index should be accessible on funding_projects show
-
 
 
 
@@ -17,13 +10,17 @@ Repo General
 * You made the changes in a commit that relate to the commit message
 * You don't include changes in a commit that aren't related to the commit message
 
-6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. FUNDING_PROJECT/PLEDGES
-
 8 * At least one of the JS Model Objects must have a method on the prototype.
 
 
-
 RAILS/JS PROJECT FINISHED
+
+DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. FUNDING_PROJECT/PLEDGES ON FUNDING_PROJECT#SHOW
+
+DONE pledges index view should show all pledges
+DONE pledges index controller should have html and json formats
+DONE funding_project#show should show results of button click by adding lines to ul
+DONE accesses pledges for the specific funding_project
 
 DONE writer_group js issue
   DONE check that js is working in asset pipeline
@@ -264,6 +261,107 @@ polymorphic with pledges? doesn't seem to fit
 
 
 UNUSED CODE
+
+// 
+
+//               json object must be accessed
+//               need to access id of funding project from json object
+//                need to access pledges
+//                  need to access id and amount of each pledge associated with the funding_project
+//                  needs to render associated funding_project and pledges in a list on the funding_project 
+//                      in the list provided below the link event
+
+
+
+//  $("a.all_pledges").on("click", function(e){
+//   $.get(this.href).success(function(json){
+
+//     let $ul = $("div.fpPledges ul")
+
+
+// //              needs to access pledges for the funding_project from json object
+
+//   let $ul = $(this).data
+//   $ul.html("");
+//   json.forEach(function(funding_project, pledge){
+//       $ul.append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "/pledges/" + "</a>" + "</li>");
+//       // + pledge.id + "' >" + pledge.amount
+//         });
+//     });
+//     e.preventDefault();
+// })
+// })
+
+
+// $(document).ready(function() {
+//   $("#text").append("this is a test.");
+// });
+
+// $(function () {
+//     $(".js-more").on('click', function() {
+//       let id = $(this).data("id");
+//       $.get("/funding_projects/", function(data) {
+//         // Replace text of body-id div
+//         $("#description-" + id).text(data);
+//       });
+//     });
+//   });
+
+
+// $('a.load_fps').on('click', function(e) {
+//     alert("Here are all the projects!");
+//     e.preventDefault();
+// })
+
+// $(function () {
+//   $(".js-more").on('click', function() {
+//     // get the id from the data attribute
+//     let id = $(this).data("id");
+//     $.get("/funding_projects/" + id + "/body", function(data) {
+//       alert(data);
+//     });
+//   });
+// });
+
+// $(function(){
+//   $("form#new_funding_project").on("submit", function(e){
+//     alert("You've created a new project!");
+//     e.preventDefault();
+
+//     let $form = $(this);
+//     let action = $form.attr("action");
+//     let params = $form.serialize()
+
+//     $.post(action, params)
+//     // console.log("A Project is Born!");
+//   })
+// })
+
+
+// $(function(){
+
+  //         // event handler
+  
+  //   $("a.all_pledges").on("click", function(e){
+  //     $.get(this.href).success(function(json){
+  
+  //       let $ul = $("div.fpPledges ul")
+  
+  
+  // //              needs to access pledges for the funding_project from json object
+  
+  //     let $ul = $(this).data
+  //     $ul.html("");
+  //     json.forEach(function(funding_project, pledge){
+  //         $ul.append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "/pledges/" + "</a>" + "</li>");
+  //         // + pledge.id + "' >" + pledge.amount
+  //           });
+  //       });
+  //       e.preventDefault();
+  //   })
+  // })
+
+
 
 $(function(){
     $("a.load_writer_groups").on("click", function(e){
