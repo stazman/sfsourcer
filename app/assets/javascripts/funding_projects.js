@@ -9,14 +9,19 @@ $(function () {
 });
 
 $(function () {
-  $("#all_pledges").on('click', function() {
+  $("#all_pledges").on('click', function(e) {
 
-    console.log("This button works on the page.")
+    let $ul = $("div.fpPledges ul");
 
+    $ul.append("<li>" + "hello" + "</li>");
   //  let fpId = $(this).data("id");
 
 
   //  $.get("/funding_projects/" + fpId)
+
+
+  // console.log("This button makes a list of items.")
+    e.preventDefault();
   });
 });
  
