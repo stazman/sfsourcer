@@ -3,6 +3,7 @@ RAILS/JS PROJECT TO DO
 DONE pledges index view should show all pledges
 DONE pledges index controller should have html and json formats
 DONE funding_project#show should show results of button click by adding lines to ul
+access the id of each pledge for the specific funding_project id
 
 pledges index should be accessible on funding_projects show
 
