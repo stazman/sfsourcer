@@ -1,5 +1,11 @@
 RAILS/JS PROJECT TO DO
 
+create serializer for wg_comments
+show association in serializers
+change writers_group controller to show json object with nested wg_comments 
+change writers_group#show view to have button for js-rendered comments that works
+create constructor function for writer_groups
+
 
 
 
@@ -10,7 +16,7 @@ Repo General
 * You made the changes in a commit that relate to the commit message
 * You don't include changes in a commit that aren't related to the commit message
 
-8 * At least one of the JS Model Objects must have a method on the prototype.
+8 * At least one of the JS Model Objects must have a method on the prototype. 
 
 
 RAILS/JS PROJECT FINISHED

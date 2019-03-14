@@ -32,38 +32,22 @@ class FundingProjectsController < ApplicationController
 
   def show
     @funding_project = FundingProject.find(params[:id])
-    # render :json => @funding_project
 
     respond_to do |f|
       f.html { render :show }
       f.json { render :json => @funding_project }
     end
-    # creates infinite loop of redirects
-    
-    # @user = User.find_by(id: params[:user_id])
-    # @funding_project = @user.funding_projects.find_by(id: params[:id])
-    # @total_pledges = []
-    # render :layout => 'navbar_on_top'
   end
 
   def description
     fpd = FundingProject.find(params[:id])
     render plain: fpd.description
-    # respond_to do |format| {
-    #   format.js {
-    #     :layout => false;
-    #   }
-    # end
-
-    # }
   end
 
   def edit
-    #make editong an already made FP instance possible
   end
 
   def update
-    #update an already made FP instance, including saving it
   end
 
   def destroy
