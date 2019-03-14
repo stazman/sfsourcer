@@ -17,6 +17,10 @@ class WgWorksController < ApplicationController
   def show
     @wg_work = WgWork.find(params[:id])
     @wg_comment = @wg_work.wg_comments.build
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @wg_work }
+    end
   end
 
   def edit
