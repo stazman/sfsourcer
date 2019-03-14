@@ -6,18 +6,12 @@ class PledgesController < ApplicationController
         @funding_project = FundingProject.find_by(id: params[:funding_project_id])
         @pledges = @funding_project.pledges
         render :json => @pledges
-        # respond_to do |f|
-        #   f.html (render :index)
-        #   f.json (render :json => @pledges)
-        # end
-        # @pledges = Pledge.all
       else
         @pledges = Pledge.all
       end
     end
   
     def new
-      # @pledge = Pledge.new
       @pledge = Pledge.new(fp_backer_id: params[:fp_backer_id], funding_project_id: params[:funding_project_id])
       render :layout => 'navbar_on_top'
     end
@@ -30,14 +24,6 @@ class PledgesController < ApplicationController
       else
         render :new
       end
-          
-      # @pledge.user_id = current_user.id
-      # @fp_backer = FpBacker.where(id: current_user.id)
-      # @pledge.funding_project_id = params[:pledge][:funding_project_id] 
-      # if @pledge.valid?
-      # else
-      #   render :new
-      # end
     end
         
   
@@ -49,8 +35,6 @@ class PledgesController < ApplicationController
         @pledge = Pledge.find(params[:id])
       end
       render :layout => 'navbar_on_top'
-      # @fp_backer = FpBacker.find_by(id: params[:fp_backer_id])
-      # @pledge = @fp_backer.pledges.find_by(id: params[:id])
     end
   
     def edit
