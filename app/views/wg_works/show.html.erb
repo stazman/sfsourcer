@@ -13,18 +13,6 @@
 <p><%= @wg_work.content %></p>
 <br>
 <br>
-<h3>Feedback on This Version</h3>
-<br>
-<ul>
-    <% @wg_work.wg_comments.each do |wgw| %>
-    <p><li>Critique/Comment: <%= wgw.content %></li></p>
-    <br>
-    <p><li>Commenter: <%= wgw.author %></p></li>
-    <br><br>
-</ul>
-    <% end %>
-<br>
-<br>
 <br>
 <h3>Make a New Critique/Comment</h3>
 <br>
@@ -35,6 +23,19 @@
 <%= f.text_area :content %><br><br>
 <%= f.submit "Submit" %>
 <% end %>
+<br>
+<br>
+<h3>Feedback on This Version</h3>
+<br>
+<ul>
+    <% @wg_work.wg_comments.each do |wgw| %>
+    <p><li>Critique/Comment: <%= wgw.content %></li></p>
+    <br>
+    <p><li>Commenter: <%= wgw.author %></p></li>
+    <br><br>
+</ul>
+    <% end %>
+
 
 
 
