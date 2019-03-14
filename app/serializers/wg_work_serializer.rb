@@ -1,3 +1,3 @@
 class WgWorkSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :author, :bio, :title, :version, :content
 end
