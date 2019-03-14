@@ -16,10 +16,7 @@ class FundingProjectsController < ApplicationController
   def create
     @funding_project = FundingProject.new(funding_project_params)
     if @funding_project.save
-      respond_to do |f|
-        f.html { redirect_to @funding_project }
-        f.json { render :json => @funding_project }
-      end
+      redirect_to @funding_project
     else
       render :new
     end
@@ -32,11 +29,7 @@ class FundingProjectsController < ApplicationController
 
   def show
     @funding_project = FundingProject.find(params[:id])
-
-    respond_to do |f|
-      f.html { render :show }
-      f.json { render :json => @funding_project }
-    end
+    # render json: @funding_project
   end
 
   def description
