@@ -1,3 +1,3 @@
 class WgCommentSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :author, :content
 end
