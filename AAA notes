@@ -9,8 +9,8 @@ DONE change wg_works controller to show json object with nested wg_comments
 DONE creates location and id for js-rendered wg_comments on wg_works#show view
 DONE creates button for js-rendered comments on wg_works#show view
 DONE creates event listener function for load-wg-comments button
-creates constructor function for wg_works
-function gets data from wg_works
+DONE creates constructor function for wg_works
+creates function to get data from wg_works
 
 
 
