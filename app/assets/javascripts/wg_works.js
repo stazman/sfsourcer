@@ -10,3 +10,15 @@ function wgCommentsListener(){
         event.preventDefault();
     })
 }
+
+class WgWork {
+    constructor(obj){
+        this.id = obj.id
+        this.author = obj.author
+        this.bio = obj.bio
+        this.title = obj.title
+        this.version = obj.version
+        this.content = obj.content
+        this.wg_comments = obj.wg_comments
+    }
+}
