@@ -1,7 +1,3 @@
-CURRENT COMMIT NOTEPAD:
-
-
-
 RAILS/JS PROJECT TO DO
 
 8 * At least one of the JS Model Objects must have a method on the prototype. 
@@ -10,9 +6,9 @@ DONE create serializer for wg_comments and wg_work
 DONE add attributes to serializers
 DONE show associations in serializers
 DONE change wg_works controller to show json object with nested wg_comments 
-creates location and id for js-rendered wg_comments on wg_works#show view
+DONE creates location and id for js-rendered wg_comments on wg_works#show view
 creates button for js-rendered comments on wg_works#show view
-create constructor function for wg_works
+creates constructor function for wg_works
 
 
 Repo General
