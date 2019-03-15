@@ -33,14 +33,14 @@
     <br>
     <h3>Feedback on This Version</h3>
     <br>
-    <ul>
-        <% @wg_work.wg_comments.each do |wgw| %>
-        <p><li>Critique/Comment: <%= wgw.content %></li></p>
-        <br>
-        <p><li>Commenter: <%= wgw.author %></p></li>
-        <br><br>
-    </ul>
-        <% end %>
+    <div id="load-wg-comments">
+        <ul>
+
+        </ul>
+    </div>
+
+    <br>
+
    <body>
 </html>
 

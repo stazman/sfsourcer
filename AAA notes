@@ -1,3 +1,7 @@
+CURRENT COMMIT NOTEPAD:
+
+
+
 RAILS/JS PROJECT TO DO
 
 8 * At least one of the JS Model Objects must have a method on the prototype. 
@@ -5,12 +9,10 @@ RAILS/JS PROJECT TO DO
 DONE create serializer for wg_comments and wg_work
 DONE add attributes to serializers
 DONE show associations in serializers
-change writers_group controller to show json object with nested wg_comments 
-change writers_group#show view to have button for js-rendered comments that works
-create constructor function for writer_groups
-
-
-
+DONE change wg_works controller to show json object with nested wg_comments 
+creates location and id for js-rendered wg_comments on wg_works#show view
+creates button for js-rendered comments on wg_works#show view
+create constructor function for wg_works
 
 
 Repo General
@@ -18,8 +20,6 @@ Repo General
 * Your commit messages are meaningful
 * You made the changes in a commit that relate to the commit message
 * You don't include changes in a commit that aren't related to the commit message
-
-
 
 
 RAILS/JS PROJECT FINISHED
@@ -74,6 +74,34 @@ DONE  Add partial for navbar to layouts
   Go server-side and use remote => :true pattern with Rails/JS video 1, last half
 
 
+POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
+
+What to put in env file to gitignore temp files? What I've Googled has been ambivalent
+How to fix blank genre instantiation when only checkboxes are selected
+  On refactoring, this should be not be a many to many relationship, but a one to many; collection is still possible and blanks can be validated against/otherwise removed, and checkbox collection is still possible
+  make it collection select and can seed the space, so at least it's not as visible (or antoher collection method)
+
+For email_registration_validation_format_preventing_Facebook_authorization branch?
+
+
+(search ??? for more questions)
+does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
+No, but still don't know the fine points of Questions:
+
+A many to many, relationship with funding projects and users throuh pledges could work, but I was too preoccupied with the user interface ... it's not time for that now in the curriculum.
+  I may be able to do users, funding_projects, and comments
+
+How is the create view with json code working?
+Is it rendering the view without being directed to the view having the view rendered more explicitly in the code?
+
+
+Is it ok to have sessions#create twice in routes?
+
+Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
+I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
+
+
+
   JS ALL FEATURES
 
 
@@ -119,59 +147,6 @@ JS
   Build holding place in line to write functionality
 
   Add comments section to fanvorites show views
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-NOTES
-
-
-
-add function for each user to be "up" and claim the spot (with a time limit) and be able to add a line without being interrupted
-
-add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
-
-POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
-
-What to put in env file to gitignore temp files? What I've Googled has been ambivalent
-How to fix blank genre instantiation when only checkboxes are selected
-  On refactoring, this should be not be a many to many relationship, but a one to many; collection is still possible and blanks can be validated against/otherwise removed, and checkbox collection is still possible
-  make it collection select and can seed the space, so at least it's not as visible (or antoher collection method)
-
-For email_registration_validation_format_preventing_Facebook_authorization branch?
-
-
-
-
-(search ??? for more questions)
-does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
-No, but still don't know the fine points of Questions:
-
-A many to many, relationship with funding projects and users throuh pledges could work, but I was too preoccupied with the user interface ... it's not time for that now in the curriculum.
-  I may be able to do users, funding_projects, and comments
-
-How is the create view with json code working?
-Is it rendering the view without being directed to the view having the view rendered more explicitly in the code?
-
-
-Is it ok to have sessions#create twice in routes?
-
-Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
-I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
-
-CURRENT COMMIT NOTEPAD:
-
-
 
 
 FUTURE TO DO: 
@@ -263,13 +238,32 @@ FINISHED TO DO
 [x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
 
-STUBS
+
+
+***************************** NOTES ******************************
+
 
 polymorphic with pledges? doesn't seem to fit
 
+add function for each user to be "up" and claim the spot (with a time limit) and be able to add a line without being interrupted
+
+add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 
-UNUSED CODE
+
+
+
+***************************** UNUSED CODE ******************************
+
+
+    <ul>
+        <% @wg_work.wg_comments.each do |wgw| %>
+        <p><li>Critique/Comment: <%= wgw.content %></li></p>
+        <br>
+        <p><li>Commenter: <%= wgw.author %></p></li>
+        <br><br>
+    </ul>
+        <% end %>
 
 // 
 
