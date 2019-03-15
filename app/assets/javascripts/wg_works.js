@@ -6,10 +6,25 @@
 
 function wgCommentsListener(){
     $("#load-wg-comments").on('click', function(event){
-        console.log('This button is working');
+        // console.log('This button is working');
+        getWgWorks();
         event.preventDefault();
     })
 }
+
+function getWgWorks () {
+    $.ajax ({
+        url: "http://localhost:8080/wg_works",
+        method: 'get',
+        dataType: 'json'
+    }).done(function(data){
+        // console.log(data);
+
+    });
+}
+
+
+
 
 class WgWork {
     constructor(obj){
