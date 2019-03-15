@@ -30,28 +30,35 @@
     }
   </style>
 <body>
-
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Writer's Groups</h1>      
-  </div>
-</div>
-
-<%= render 'layouts/header_navbar' %>
-
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Writer's Groups</h1>      
     </div>
-    <div class="col-sm-9">
-    <br>
-    <br>
-    <p >Welcome to SFSourcer Writer's Groups! We are excited to help each other improve our writing! Check out one of the general or sub-genre specific groups, or start your own group!</p>
-   <br><br><br> 
+  </div>
+
+  <%= render 'layouts/header_navbar' %>
+
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+      </div>
+      <div class="col-sm-9">
+        <h5>Welcome to SFSourcer Writer's Groups! We are excited to help each other improve our writing!</h5>
+        <br>
+        <p>To add your own work to be reviewed by other SFSourcer members, or to review another member's work, click the link below.</p> 
+        <br>
       <div>
+        <h4><%= link_to  "SFSourcer Member Works", wg_works_path %></h4>
+      </div>
+      <br>
+      <br> 
+      <div>
+        <h5>(UNDER CONSTRUCTION)</h5>
+        <p>Check out one of the general or sub-genre specific groups, or start your own group!</p>
+        <br>
         <a class="load_writer_groups" href="/writer_groups">All SFSourcer Writer's Groups</a>
       </div>
-         <br>
+          <br>
       <div class="writer_groups">
         <ul>
           
@@ -62,7 +69,7 @@
         <%= link_to "Start a Writer's Group", new_writer_group_path %></a>
       </div>
     </div>
-   </div>
+    </div>
   </div>
 </body>
 </html>
