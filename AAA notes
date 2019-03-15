@@ -10,7 +10,9 @@ DONE creates location and id for js-rendered wg_comments on wg_works#show view
 DONE creates button for js-rendered comments on wg_works#show view
 DONE creates event listener function for load-wg-comments button
 DONE creates constructor function for wg_works
-creates function to get data from wg_works
+DONE creates function to get data from wg_works
+sets prototype for and maps instances of wg_comments
+getWgWorks() instantiates data into JS from wgWorks class
 
 
 

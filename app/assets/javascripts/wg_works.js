@@ -37,3 +37,14 @@ class WgWork {
         this.wg_comments = obj.wg_comments
     }
 }
+
+WgWork.prototype.wgWorkHTML = function (){
+
+    let wgWorkComments = this.wg_comments.map(wg_comment => {
+        return (
+            `<ul>
+                <li> + wg_comment.content + </li>
+                <li> + wg_comment.author + </li>
+            </ul>`)
+    })
+}
