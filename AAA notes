@@ -7,7 +7,8 @@ DONE add attributes to serializers
 DONE show associations in serializers
 DONE change wg_works controller to show json object with nested wg_comments 
 DONE creates location and id for js-rendered wg_comments on wg_works#show view
-creates button for js-rendered comments on wg_works#show view
+DONE creates button for js-rendered comments on wg_works#show view
+creates event listener function for load-wg-comments button
 creates constructor function for wg_works
 
 
