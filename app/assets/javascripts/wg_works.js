@@ -1,7 +1,6 @@
-// $(function(){
-//     console.log("wg_works.js is loading");
-//     wgCommentsListener();
-// })
+$(function(){
+    wgCommentsListener();
+})
 
 
 function wgCommentsListener(){
@@ -12,21 +11,24 @@ function wgCommentsListener(){
     })
 }
 
-function getWgWorks () {
-    $.ajax ({
+function getWgWorks(){
+    //access specific instance
+    $.ajax({
         url: "http://localhost:8080/wg_works",
         method: 'get',
         dataType: 'json'
     }).done(function(data){
-        // console.log(data);
-
+        debugger
+ 
+        let wgWorkData = new WgWork(data[0]);
+       
+        let wgWorkDataHTML = wgWorkData.wgWorkCommentsHTML();
+ 
+        document.getElementById("show-wg-comments").innerHTML += wgWorkDataHTML;
     });
-}
-
-
-
-
-class WgWork {
+ }
+ 
+ class WgWork {
     constructor(obj){
         this.id = obj.id
         this.author = obj.author
@@ -36,22 +38,13 @@ class WgWork {
         this.content = obj.content
         this.wg_comments = obj.wg_comments
     }
-}
-
-WgWork.prototype.wgWorkHTML = function (){
-
-    let wgWorkComments = this.wg_comments.map(wg_comment => {
-        return (
-            `<ul>
-                <li> + wg_comment.content + </li>
-                <li> + wg_comment.author + </li>
-            </ul>`)
-    })
-}
-
-{/* <h5>Title: <%= @wg_work.title %></h5>
-<p>Version: <%= @wg_work.version %></p>
-<p>Author: <%= @wg_work.author %></p>
-<p>Author Bio: <%= @wg_work.bio %></p>
-<p>Work: <%= @wg_work.content %></p>
-<br> */}
+ }
+ 
+ WgWork.prototype.wgWorkCommentsHTML = function (){
+    return (`
+        <div>
+            <h5>${this.title} - ${this.version}</h5>
+            <p>${this.author}</p>
+            <p>${this.content}</p>
+        </div>`)
+ };
