@@ -31,11 +31,15 @@
     <% end %>
     <br>
     <br>
-    <button id="load-wg-comments">View All Feedback</button>
-    <br>
-    <br>
-    <div id="show-wg-comments"></div>
-
+   <h3>Feedback</h3>
+   <br>
+   <% @wg_work.wg_comments.each do |c| %>
+   <ul>
+      <li><%= c.content %></li>
+      <li><%= c.author %></li>
+   <br>
+   <% end %>
+   </ul>
    <body>
 </html>
 
