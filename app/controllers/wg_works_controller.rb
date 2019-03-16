@@ -2,6 +2,11 @@ class WgWorksController < ApplicationController
   def index
     @wg_work = WgWork.new
     @wg_works = WgWork.all
+    respond_to do |f|
+      f.html { render :index }
+      f.json { render json: @wg_works }
+    end
+    
   end
 
   def new

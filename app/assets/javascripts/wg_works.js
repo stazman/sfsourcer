@@ -4,7 +4,7 @@ $(function(){
 
 
 function wgCommentsListener(){
-    $("#load-wg-comments").on('click', function(event){
+    $("#load-wg-work-comments").on('click', function(event){
         // console.log('This button is working');
         getWgWorks();
         event.preventDefault();
@@ -18,13 +18,13 @@ function getWgWorks(){
         method: 'get',
         dataType: 'json'
     }).done(function(data){
-        debugger
+        // debugger
  
         let wgWorkData = new WgWork(data[0]);
        
         let wgWorkDataHTML = wgWorkData.wgWorkCommentsHTML();
  
-        document.getElementById("show-wg-comments").innerHTML += wgWorkDataHTML;
+        document.getElementById("show-wg-work-comments").innerHTML += wgWorkDataHTML;
     });
  }
  
