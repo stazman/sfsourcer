@@ -18,6 +18,7 @@ $(function () {
     $.ajax({
       method: "GET",
       url: "/funding_projects/1/pledges",
+      //is not dynamic; only renders the exact url for first funding_project
       dataType: "json",
       }).done(function(json){
         json.forEach(function(pledge){

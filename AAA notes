@@ -1,19 +1,26 @@
 RAILS/JS PROJECT TO DO
 
-8 * At least one of the JS Model Objects must have a method on the prototype. 
 
-DONE create serializer for wg_comments and wg_work
-DONE add attributes to serializers
-DONE show associations in serializers
-DONE change wg_works controller to show json object with nested wg_comments 
-DONE creates location and id for js-rendered wg_comments on wg_works#show view
-DONE creates button for js-rendered comments on wg_works#show view
-DONE creates event listener function for load-wg-comments button
-DONE creates constructor function for wg_works
-DONE creates function to get data from wg_works
-sets prototype for and maps instances of wg_comments
-getWgWorks() instantiates data into JS from wgWorks class
+Repo General
+* You have a large number of small Git commits
+* Your commit messages are meaningful
+* You made the changes in a commit that relate to the commit message
+* You don't include changes in a commit that aren't related to the commit message
 
+
+7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITING_GROUPS#SHOW
+
+
+Project Repo Specs:
+Read Me file contains:
+
+9 * Application Description
+
+10 * Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
+
+11 * Contributors guide (e.g. file an issue, file an issue with a pull request, etc)
+
+12 * Licensing statement at the bottom (e.g. This project has been licensed under the MIT open source license.)
 
 
 Repo General
@@ -23,9 +30,12 @@ Repo General
 * You don't include changes in a commit that aren't related to the commit message
 
 
+
+
 RAILS/JS PROJECT FINISHED
 
-DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. FUNDING_PROJECT/PLEDGES ON FUNDING_PROJECT#SHOW
+DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORKS/WG_COMMENTS ON FUNG_PROJECT#SHOW
+WG_WORKS/WG_COMMENTS ON WG_WORKS INDEX VIEW
 
 DONE pledges index view should show all pledges
 DONE pledges index controller should have html and json formats
@@ -35,7 +45,6 @@ DONE accesses pledges for the specific funding_project
 DONE writer_group js issue
   DONE check that js is working in asset pipeline
 
-DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITING_GROUPS#SHOW
 
 DONE Make sure wg_works working through rails only
 DONE Make sure wg_comments working through rails only
