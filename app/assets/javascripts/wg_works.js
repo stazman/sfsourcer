@@ -48,3 +48,10 @@ WgWork.prototype.wgWorkHTML = function (){
             </ul>`)
     })
 }
+
+{/* <h5>Title: <%= @wg_work.title %></h5>
+<p>Version: <%= @wg_work.version %></p>
+<p>Author: <%= @wg_work.author %></p>
+<p>Author Bio: <%= @wg_work.bio %></p>
+<p>Work: <%= @wg_work.content %></p>
+<br> */}
