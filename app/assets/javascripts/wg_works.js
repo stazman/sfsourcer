@@ -25,6 +25,7 @@ function getWgWorks(){
         let wgWorkDataHTML = wgWorkData.wgWorkCommentsHTML();
  
         document.getElementById("show-wg-work-comments").innerHTML += wgWorkDataHTML;
+        // debugger
     });
  }
  
@@ -41,10 +42,23 @@ function getWgWorks(){
  }
  
  WgWork.prototype.wgWorkCommentsHTML = function (){
+
+    let wgComments = this.wg_comments.map(wg_comment => {
+
+        return (`
+            <p>${wg_comment.content}</p>
+            <br>
+        `)
+    });
+
+
     return (`
         <div>
             <h5>${this.title} - ${this.version}</h5>
             <p>${this.author}</p>
             <p>${this.content}</p>
+            <br>
+            <p>${wgComments}</p>
+            <br>
         </div>`)
  };
