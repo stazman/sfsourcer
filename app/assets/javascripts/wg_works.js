@@ -20,7 +20,7 @@ function getWgWorks(){
     }).done(function(data){
         // debugger
  
-        let wgWorkData = new WgWork(data[0]);
+        let wgWorkData = new WgWork(data[5]);
        
         let wgWorkDataHTML = wgWorkData.wgWorkCommentsHTML();
  
@@ -54,11 +54,11 @@ function getWgWorks(){
 
     return (`
         <div>
-            <h5>${this.title} - ${this.version}</h5>
-            <p>${this.author}</p>
+            <h5>Title: ${this.title} - ${this.version}</h5>
+            <p>Author: ${this.author}</p>
             <p>${this.content}</p>
             <br>
+            <h5>Current Feedback</h5>
             <p>${wgComments}</p>
-            <br>
         </div>`)
  };
