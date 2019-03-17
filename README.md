@@ -2,7 +2,11 @@ SFSourcer
 
 # Description
 
-SFSourcer is an app whose current features are Fanvorites, in which users build a community database of favorite speculative fiction authors, works, and genres; and Living Story, in which users begin and develop a story in real time. Those who complete the app signup, authenticated through email registration with a password, or through Facebook, may add and update authors, works, and genres. Anyone may view all authors in the database as well as information about specific authors, works and related genres. Validations prevent users from adding blank records and adding to the database without being logged in. 
+SFSourcer is an app with an epic purpose, to provide a one-stop shop for enthusiasts of speculative fiction. The app's current working features are Fanvorites, in which users build a community database of favorite speculative fiction authors, works, and genres; Living Story, in which users begin and develop a story in real time; Funding Projects, which is a crowdsourcing program to fund projects in the SF realm; Writer Groups, a forum for new authors to have their work reviewed and review the work of others. 
+
+Those who complete the app signup, authenticated through email registration with a password, or through Facebook, may view, edit and update authors, works, and genres in Fanvorites, they may fund or create a new funding project, create a new writer group, join a writer group (under construction), add work to be reviewed to writer groups, or give feedback on other writer's works. These and several other anticipated features are shown in the navbar throuhout the app's pages.
+
+Validations prevent users from adding blank records and adding to the database without being logged in. Much of the functionality included in the Writer Groups feature is rendered through Javascript Model Objects.
 
 To run the app, follow these steps:
 
@@ -14,13 +18,11 @@ Run the program on an ssl-enabled browser.
 
 # Contributing to SFSourcer
 
-Contributions are currently only allowed by Flatiron School instructors. 
+Contributions are allowed by anyone. 
 
-However, a Contributor's Guide for the project if it were public can be found here: https://docs.google.com/document/d/1-KDX6GzCJ6ncsFoKWnyMuz0wUEj3DSk5hYm94UXMDiI/edit?usp=sharing.
+A Contributor's Guide for the project can be found here: https://docs.google.com/document/d/1-KDX6GzCJ6ncsFoKWnyMuz0wUEj3DSk5hYm94UXMDiI/edit?usp=sharing.
 
 
 # License
 
-There is currently no public license for this project. However, a public license statement if the project were public can be found in the public version of the Contributor's Guide here: https://docs.google.com/document/d/1-KDX6GzCJ6ncsFoKWnyMuz0wUEj3DSk5hYm94UXMDiI/edit?usp=sharing.
-
-The license would be added to the project's repo through Github.
+This project currently has a GNU Public license. A Statement of this license can be in the license file in this app and  here: (TBA)

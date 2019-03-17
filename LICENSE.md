@@ -1,1 +1,0 @@
-There is no public license for this repo because it's private. However, if it weren't private, the license information would go here.
