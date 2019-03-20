@@ -1,10 +1,11 @@
 Rails App with JavaScript Frontend Spec
 
-Repo General
-* You have a large number of small Git commits
-* Your commit messages are meaningful
-* You made the changes in a commit that relate to the commit message
-* You don't include changes in a commit that aren't related to the commit message
+Repo General:
+
+DONE * You have a large number of small Git commits
+DONE * Your commit messages are meaningful
+DONE * You made the changes in a commit that relate to the commit message
+DONE * You don't include changes in a commit that aren't related to the commit message
 
 
 Project Specs:
@@ -27,7 +28,7 @@ WRITER GROUPS LINKS TO SPECIFIC WRITER'S GROUPS AT /WRITER_GROUPS_HOME
 DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORK HAS_MANY WG_COMMENTS
 WG_WORKS/WG_COMMENTS ON WG_WORKS INDEX VIEW
 
-7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. 
+DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITER_GROUPS#CREATE
 
 DONE 8 * At least one of the JS Model Objects must have a method on the prototype.
 
@@ -35,13 +36,13 @@ DONE 8 * At least one of the JS Model Objects must have a method on the prototyp
 Project Repo Specs:
 Read Me file contains:
 
-9 * Application Description
+DONE 9 * Application Description
 
-10 * Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
+DONE 10 * Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
 
-11 * Contributors guide (e.g. file an issue, file an issue with a pull request, etc)
+DONE 11 * Contributors guide (e.g. file an issue, file an issue with a pull request, etc)
 
-12 * Licensing statement at the bottom (e.g. This project has been licensed under the MIT open source license.)
+DONE 12 * Licensing statement at the bottom (e.g. This project has been licensed under the MIT open source license.)
 
 Repo General
 * You have a large number of small Git commits
