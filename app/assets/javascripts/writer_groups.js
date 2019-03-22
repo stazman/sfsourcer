@@ -1,3 +1,5 @@
+//Dynamically renders list of writer group links through Javascript Object Model
+//Each link dynamically renders show page through Javascript Object Model
 $(function(){
     $("a.load_writer_groups").on("click", function(e){
         $.get(this.href).success(function(json){
@@ -13,6 +15,8 @@ $(function(){
     })
 })
 
+//Form submitted dynamically through Javascript Object Model
+//Dynamically renders data from newly created instance through Javascript Object Model
 $(function () {
     $('form').submit(function(event) {
       event.preventDefault();

@@ -5,14 +5,12 @@ $(function(){
 
 function wgCommentsListener(){
     $("#load-wg-work-comments").on('click', function(event){
-        // console.log('This button is working');
         getWgWorks();
         event.preventDefault();
     })
 }
 
 function getWgWorks(){
-    //access specific instance
     $.ajax({
         url: "http://localhost:8080/wg_works",
         method: 'get',
@@ -20,6 +18,7 @@ function getWgWorks(){
     }).done(function(data){
         // debugger
  
+    //Dynamically renders data from specific instance through JavaScript Object Model
         let wgWorkData = new WgWork(data[5]);
        
         let wgWorkDataHTML = wgWorkData.wgWorkCommentsHTML();
@@ -29,6 +28,8 @@ function getWgWorks(){
     });
  }
  
+ //Dynamically renders has_many relationship, wg_work/wg_comments
+ //Translates JSON responses into Javascript Model Objects using class/constructor syntax  
  class WgWork {
     constructor(obj){
         this.id = obj.id
@@ -41,6 +42,7 @@ function getWgWorks(){
     }
  }
  
+ //Calls the wgWorkCommentsHTML method on a prototype of the WgWork class to dynmically render wg_comment data
  WgWork.prototype.wgWorkCommentsHTML = function (){
 
     let wgComments = this.wg_comments.map(wg_comment => {
