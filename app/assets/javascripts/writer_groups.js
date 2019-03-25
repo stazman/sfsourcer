@@ -3,11 +3,47 @@
 $(function(){
     $("a.load_writer_groups").on("click", function(e){
         $.get(this.href).success(function(json){
-
+            debugger
             let $ul = $("div.writer_groups ul")
 
             $ul.html("");
+
             json.forEach(function(writer_group){
+                $ul.append("<li>" + "<a " + "href='" + "/writer_groups/" + writer_group.id + "' >" + writer_group.wg_name + "</a>" + " - " + writer_group.wg_creator + "</li>");
+            });
+        });
+        e.preventDefault();
+    })
+})
+
+$(function(){
+    $("#wg_sort").on("click", function(e){
+        $.ajax({
+            method: "get",
+            url: "/writer_groups"
+        }).success(function(data){
+            debugger
+
+            //traverse array and get each Object
+            //
+            // let sortGroups = json.sort(function(a, b) {
+            //     let nameA = a.name.toUpperCase(); // ignore upper and lowercase
+            //     let nameB = b.name.toUpperCase(); // ignore upper and lowercase
+            //     if (nameA < nameB) {
+            //       return -1;
+            //     }
+            //     if (nameA > nameB) {
+            //       return 1;
+            //     }
+              
+            //     // names must be equal
+            //     return 0;
+            //   });
+            
+            let $ul = $("div.writer_groups_sorted ul")
+
+            $ul.html("");
+            data.forEach(function(writer_group){
                 $ul.append("<li>" + "<a " + "href='" + "/writer_groups/" + writer_group.id + "' >" + writer_group.wg_name + "</a>" + " - " + writer_group.wg_creator + "</li>");
             });
         });
