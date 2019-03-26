@@ -16,6 +16,19 @@ $(function(){
     })
 })
 
+$(function () {
+    $(".wg-next").on("click", function() {
+      let nextId = parseInt($(".wg-next").attr("data-id")) + 1;
+      $.get("/writer_groups/" + nextId + ".json", function(data) {
+        let writer_group = data;
+        $(".writerGroupName").text(writer_group["wg_name"]);
+        $(".writerGroupCreator").text(writer_group["wg_creator"]);
+        $(".writerGroupDescription").text(writer_group["wg_description"]);
+        $(".wg-next").attr("data-id", writer_group["id"]);
+        });
+    });
+});
+
 $(function(){
     $("#wg_sort").on("click", function(e){
         $.ajax({
