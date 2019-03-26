@@ -17,7 +17,8 @@ $(function(){
 })
 
 $(function () {
-    $(".wg-next").on("click", function() {
+    $(".wg-next").on("click", function(e) {
+        e.preventDefault();
       let nextId = parseInt($(".wg-next").attr("data-id")) + 1;
       $.get("/writer_groups/" + nextId + ".json", function(data) {
         let writer_group = data;

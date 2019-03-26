@@ -257,6 +257,10 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 ***************************** UNUSED CODE ******************************
 
+   <head>
+      <%= javascript_include_tag 'writer_groups'  %>
+   </head>
+
 <h1><%= @writer_group.wg_name %></h1>
 
 <p>Group Creator: <%= @writer_group.wg_creator %></p>
