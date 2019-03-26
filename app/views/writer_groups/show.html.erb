@@ -5,11 +5,10 @@
    </head>
    <body>
 
-<h1><%= @writer_group.wg_name %></h1>
+      <a href="#" class="wg-next" data-id="<%=@writer_group.id%>">Next Group</a>
+      <h1 class="writerGroupName"><%= @writer_group.wg_name %></h1>
+      <p class="writerGroupCreator"><%= @writer_group.wg_creator %></p>
+      <p class="writerGroupDescription"><%= @writer_group.wg_description %></p>
 
-<p>Group Creator: <%= @writer_group.wg_creator %></p>
-<br><br>
-<p>Group Description: <%= @writer_group.wg_description %>
    <body>
 </html>
-
