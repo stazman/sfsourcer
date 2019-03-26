@@ -17,7 +17,10 @@ class WriterGroupsController < ApplicationController
 
   def show
     @writer_group = WriterGroup.find(params[:id])
-    render :json => @writer_group
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render :json => @writer_group }
+    end
 
     # render :layout => 'navbar_on_top'
   end
