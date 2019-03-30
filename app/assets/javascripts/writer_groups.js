@@ -25,7 +25,7 @@ $(function () {
         $(".writerGroupName").text(writer_group["wg_name"]);
         $(".writerGroupCreator").text(writer_group["wg_creator"]);
         $(".writerGroupDescription").text(writer_group["wg_description"]);
-        $(".wg-next").attr("data-id", writer_group["id"]);
+        $(".wg-next").attr("data-id", writer_group["id"] + 1);
         });
     });
 });
