@@ -257,6 +257,59 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 ***************************** UNUSED CODE ******************************
 
+
+      <%
+=begin%>
+ <p><h5>Creator Profile</p><br>
+      <% @funding_project.fp_creators.each do |fpc| %>
+    <ul>
+        <p>Creator: <li><%= fpc.creator_name %></li></p><br><br>
+        <li>Location: <%= fpc.location %></li><br><br>
+        <li>About Creator: <%= fpc.creator_about %></li><br><br>
+        <li>Creator Website: <%= fpc.creator_site %></li><br><br>
+        <li>Email: <%= fpc.email %></li><br><br>
+        <li>Creator Instagram: <%= fpc.instagram_url %></li><br><br>
+        <li>Creator Twitter:<%= fpc.twitter_url %></li><br><br>
+        <li>Creator Facebook:<%= fpc.facebook_url %></li><br><br>
+        <li>Creator Blog: <%= fpc.blog_url %></li>
+    </ul>
+<% end %><br><br> 
+<%
+=end%>
+
+
+      <div>
+        <button id="all_pledges">Click Here to See All Individual Pledge Amounts</button>
+      </div>
+      <br>
+      <div class="fpPledges">
+        <ul>
+          
+        </ul>
+      </div>
+
+
+
+// $(function () {
+//   $("#all_pledges").on('click', function(e) {
+    
+//     let $ul = $("div.fpPledges ul");
+
+//     $ul.html = "";
+
+//     let id = $(this).data("id");
+
+
+//     $.get("/funding_projects/" + id + "/pledges", function(){
+//         json.forEach(function(pledge){
+//         $ul.append("<li>" + pledge.amount + "</li>");
+//       });
+//     });
+//     e.preventDefault();
+//   });
+// });
+
+
    <head>
       <%= javascript_include_tag 'writer_groups'  %>
    </head>
