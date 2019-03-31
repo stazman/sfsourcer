@@ -16,6 +16,24 @@ $(function(){
     })
 })
 
+$(function(){
+    $("a.load_fantasy_groups").on("click", function(e){
+        $.get(this.href).success(function(json){
+
+            let $ul = $("div.fantasy_groups ul")
+
+            $ul.html("");
+
+            json.forEach(function(writer_group){
+                if ( writer_group.wg_name.includes("Fantasy" || "fantasy")){
+                    $ul.append("<li>" + "<a " + "href='" + "/writer_groups/" + writer_group.id + "' >" + writer_group.wg_name + "</a>" + " - " + writer_group.wg_creator + "</li>");
+                }
+            });
+        });
+        e.preventDefault();
+    })
+})
+
 $(function () {
     $(".wg-next").on("click", function(e) {
         e.preventDefault();
