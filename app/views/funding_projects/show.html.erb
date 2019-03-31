@@ -14,18 +14,23 @@
         <h4>Funding Goal (in U.S. dollars): <%= @funding_project.funding_goal %></h4><br>
         <h4>Amount Pledged: <%= @funding_project.total_pledges %></h4><br>
         <h4>Amount Needed: <%= @funding_project.amount_needed %></h4><br>
+    <br><br>
+    <button id="largest_pledge_btn">Largest Pledge</button>
+    <br><br>
+    <div id="largest_pledge"></div>
 
         <%
 =begin%>
  stubs: 
-        filter average pledge amount
+       filter highest pledge amount
           button
           response
 
-        filter highest pledge amount
+      filter average pledge amount
           button
           response
 
+        
 
         map to show all pledge amounts
 
