@@ -15,14 +15,15 @@
         <h4>Amount Pledged: <%= @funding_project.total_pledges %></h4><br>
         <h4>Amount Needed: <%= @funding_project.amount_needed %></h4><br>
     <br><br>
-    <button id="largest_pledge_btn">Largest Pledge</button>
+    <button id="largest_pledge_btn" data-id="<%=@funding_project.id%>">Largest Pledge</button>
     <br><br>
     <div id="largest_pledge"></div>
+
 
         <%
 =begin%>
  stubs: 
-       filter highest pledge amount
+    DONE   map highest pledge amount
           button
           response
 

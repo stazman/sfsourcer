@@ -8,3 +8,106 @@ $(function () {
   });
 });
 
+$(function () {
+  $("#largest_pledge_btn").on('click', function(e) {
+      e.preventDefault();
+
+      let fpId = parseInt($("#largest_pledge_btn").attr("data-id"));
+
+      $.get("/funding_projects/" + fpId + "/pledges" + ".json", function(data) {
+        
+        const dataArray = data
+
+        dataArray.map(pledge => pledge.amount)
+
+        let amountsArr = dataArray.map(pledge => pledge.amount)
+            
+        let largestPledge = Math.max(...amountsArr)
+
+        $("#largest_pledge").append(largestPledge)
+debugger
+      })
+  })
+})
+
+      //   dataArray.forEach(function(element, index, array) {
+      //     console.log(element.amount); // 100, 200, 300
+      //     debugger
+      //     console.log(index); // 0, 1, 2
+      //     console.log(array); // same myArray object 3 times
+      // });
+        // var myMap = new Map(data);
+        // debugger
+
+        // myMap.get("amount")
+
+          // data.map(function(pledge){ 
+          //   debugger
+
+          //   var pledgeKey = []
+          //   pledgeKey[pledge] = pledge.value
+          //   for (const nestedKey in pledgeKey) {
+          //     debugger
+          //       return pledgeKey[nestedKey];
+          //   }
+
+          // return pledge.amount                                    
+
+            // var rObj = {};
+            // debugger
+            // rObj[obj.amount] = obj.value;
+            //   debugger
+
+        // var arr = [
+        //   { id: 15 },
+        //   { id: -1 },
+        //   { id: 0 },
+        //   { id: 3 },
+        //   { id: 12.2 },
+        //   { },
+        //   { id: null },
+        //   { id: NaN },
+        //   { id: 'undefined' }
+        // ];
+        
+        // var invalidEntries = 0;
+        
+        // function isNumber(obj) {
+        //   return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
+        // }
+        
+        // function filterByID(item) {
+        //   if (isNumber(item.id) && item.id !== 0) {
+        //     return true;
+        //   } 
+        //   invalidEntries++;
+        //   return false; 
+        // }
+        
+        // var arrByID = arr.filter(filterByID);
+        
+        // forEach(function(fp_pledge){
+        //   debugger
+
+        //   if (fp_pledge.amount === fp_pledge.amount.max){
+            
+        //   $result.append(fp_pledge.amount);
+        //   }
+        // })
+
+        // let fpPledges = data;
+          // const digDeep = function  (data) {
+          //   for (const key in data) {
+          //     if (typeof data[key] === 'object') {
+          //       for (const nestedKey in data[key]) {
+          //         return data[key][nestedKey];
+        
+          //       }
+          //       debugger
+          //     } else {
+          //       console.log(target[key]);
+          //     }
+          //   }
+          // })
+          // $("#largest_pledge").text(digDeep.amount);             
+            // filter( pledge => pledge.amount === 20)
