@@ -29,6 +29,37 @@ $(function () {
   })
 })
 
+$(function () {
+  let pledgeId = parseInt($("#sourcer_credit").attr("data-id"));
+  $.get("/pledges/" + pledgeId + ".json", function(data) {
+
+    let $getCredit = $("#sourcer_credit")
+
+    let pledge = data;
+
+    let pledgeAmount = pledge["amount"]
+
+    function creditMaker (multiplier){
+      return function creditMultiplier (pledgeAmount){
+          multiplier * pledgeAmount
+      }
+    }
+
+    const multiplyByOnePercent = creditMaker(.01);
+
+    multiplyByOnePercent(pledgeAmount);
+
+    if (pledgeAmount <= 50 ){
+    $getCredit.append(multiplyByOnePercent);
+    } else if (pledgeAmount > 50 ){
+      const multiplyByTwoPercent = creditMaker(.02);
+      multiplyByTwoPercent(pledgeAmount);
+      $getCredit.append(multiplyByTwpPercent);
+    }
+  });
+});
+
+  
       //   dataArray.forEach(function(element, index, array) {
       //     console.log(element.amount); // 100, 200, 300
       //     debugger
