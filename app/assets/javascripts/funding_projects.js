@@ -25,7 +25,6 @@ $(function () {
         let largestPledge = Math.max(...amountsArr)
 
         $("#largest_pledge").append(largestPledge)
-debugger
       })
   })
 })

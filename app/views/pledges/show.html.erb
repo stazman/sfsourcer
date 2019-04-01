@@ -1,3 +1,5 @@
 <h2>Thank you for your pledge of $<%= @pledge.amount %>!</h2>
+<br>
+<div id="sourcerCredit" data-id="<%=@pledge.id%>"></div>
 
  <%= link_to "Back to Sourcer Projects", funding_projects_path(@funding_project) %>
