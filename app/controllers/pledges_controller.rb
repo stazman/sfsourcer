@@ -31,10 +31,18 @@ class PledgesController < ApplicationController
       if params[:funding_project_id]
         @funding_project = FundingProject.find_by(id: params(:funding_project_id))
         @pledge = @funding_project.pledges.find_by(id: params[:id])
+        respond_to do |f|
+          f.html { render :show }
+          f.json { render :json => @pledge }
+        end
       else  
         @pledge = Pledge.find(params[:id])
+        respond_to do |f|
+          f.html { render :show }
+          f.json { render :json => @pledge }
+        end
       end
-      render :layout => 'navbar_on_top'
+      # render :layout => 'navbar_on_top'
     end
   
     def edit
