@@ -56,17 +56,29 @@ $(function(){
         }).success(function(data){
 
             data.sort(function(a, b) {
-
+            //destructively changes array to be alphabetized
             let nameA = a.wg_name.toUpperCase();
             let nameB = b.wg_name.toUpperCase();
             
+            let wgCreatorA = a.wg_creator.toUpperCase();
+            let wgCreatorB = b.wg_creator.toUpperCase();
+
             if (nameA < nameB) {
                 return -1;
             }
             if (nameA > nameB) {
                 return 1;
             }
-            
+
+            //if two groups have the same name, then sort according to wg_creator
+
+            if (wgCreatorA > wgCreatorB){
+                return -1;
+            }
+            if (wgCreatorA < wgCreatorB) {
+                return 1;
+            }
+
                 return 0;
             });
             
