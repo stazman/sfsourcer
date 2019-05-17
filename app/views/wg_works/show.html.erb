@@ -4,42 +4,44 @@
       <%= javascript_include_tag 'wg_works'  %>
    </head>
    <body>
-    <h2>Title: <%= @wg_work.title %></h2>
-    <br>
-    <h4>Version: <%= @wg_work.version %></h4>
-    <br>
-    <h3>Author: <%= @wg_work.author %></h3>
-    <br>
-    <h4>Author Bio</h4>
-    <p><%= @wg_work.bio %></p>
-    <br>
-    <br>
-    <h3>Work to be Critiqued</h3>
-    <br>
-    <p><%= @wg_work.content %></p>
-    <br>
-    <br>
-    <br>
-    <h3>Make a New Critique/Comment</h3>
-    <br>
-    <%= form_for([@wg_work, @wg_comment]) do |f| %>
-        <%= f.label "Your Name" %>
-        <%= f.text_field :author %><br><br>
-        <%= f.label "Write critique/comment" %>
-        <%= f.text_area :content %><br><br>
-        <%= f.submit "Submit" %>
-    <% end %>
-    <br>
-    <br>
-   <h3>Feedback</h3>
-   <br>
-   <% @wg_work.wg_comments.each do |c| %>
-   <ul>
-      <li><%= c.content %></li>
-      <li><%= c.author %></li>
-   <br>
-   <% end %>
-   </ul>
+      <h2>Title: <%= @wg_work.title %></h2>
+      <br>
+      <h4>Version: <%= @wg_work.version %></h4>
+      <br>
+      <h3>Author: <%= @wg_work.author %></h3>
+      <br>
+      <h4>Author Bio</h4>
+      <p><%= @wg_work.bio %></p>
+      <br>
+      <br>
+      <h3>Work to be Critiqued</h3>
+      <br>
+      <p><%= @wg_work.content %></p>
+      <br>
+      <br>
+      <h4><%= link_to  "Back to Writer Groups Home Page", writer_groups_home_path %>
+      <br>
+      <br>
+      <h3>Make a New Critique/Comment</h3>
+      <br>
+      <%= form_for([@wg_work, @wg_comment]) do |f| %>
+         <%= f.label "Your Name" %>
+         <%= f.text_field :author %><br><br>
+         <%= f.label "Write critique/comment" %>
+         <%= f.text_area :content %><br><br>
+         <%= f.submit "Submit" %>
+      <% end %>
+      <br>
+      <br>
+      <h3>Feedback</h3>
+      <br>
+      <% @wg_work.wg_comments.each do |c| %>
+         <ul>
+            <li><%= c.content %></li>
+            <li><%= c.author %></li>
+         <br>
+         <% end %>
+         </ul>
    <body>
 </html>
 
