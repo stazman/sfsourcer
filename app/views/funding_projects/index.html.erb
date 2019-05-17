@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-</head>
 <body>
 
   <div class="jumbotron">
@@ -19,7 +16,7 @@
       <div class="col-sm-2 sidenav">
         <p><a href="#"><h5>Search For a Specific Project/Keyword (Under Construction)</h5><br><br></a></p>
         <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p>
-        <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p>
+        <p><a href="#"><h5>Browse through all SFSourcer Projects (Under Construction)</h5><br></a></p>
       </div>
       <div class="text-center .mx-auto px-{1}">
         <div class="stripe_row">
@@ -30,28 +27,28 @@
       <div class="text-center .mx-auto px-{1}">
         <div class="container">
           <div class="row content">
-              <div class="col-sm-2">
-                <div class="panel panel-primary">
-                  <div class="panel-body">
+            <div class="col-sm-2">
+              <div class="panel panel-primary">
+                <div class="panel-body">
 
-                    <h1><%= link_to @funding_projects[0].title, funding_project_path(@funding_projects[0]) %></h1>
+                  <h1><%= link_to @funding_projects[0].title, funding_project_path(@funding_projects[0]) %></h1>
 
-                    <%= render partial: "fpd", locals: {fpd: @funding_projects[0]} %>
-                    <br>
-                    <p id="text"></p>
-                  </div>
+                  <%= render partial: "fpd", locals: {fpd: @funding_projects[0]} %>
+                  <br>
+                  <p id="text"></p>
                 </div>
               </div>
+            </div>
             <div class="row content">
             <div class="col-sm-2">
               <div class="panel panel-primary">
                 <div class="panel-body">
 
-                    <h1><%= link_to @funding_projects[1].title, funding_project_path(@funding_projects[1]) %></h1>
+                  <h1><%= link_to @funding_projects[1].title, funding_project_path(@funding_projects[1]) %></h1>
 
-                    <%= render partial: "fpd", locals: {fpd: @funding_projects[1]} %>
-                    <br>
-                    <p id="text"></p>
+                  <%= render partial: "fpd", locals: {fpd: @funding_projects[1]} %>
+                  <br>
+                  <p id="text"></p>
                 </div>
               </div>
             </div>
