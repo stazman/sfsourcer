@@ -1,80 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  
+</head>
 <body>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>All SFSourcer Projects</h1>      
-    <p>Help Great SF Projects Get Made</p>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>All SFSourcer Projects</h1>      
+      <p>Help Great SF Projects Get Made</p>
+    </div>
   </div>
-</div>
 
-<%= render 'layouts/header_navbar' %>
+  <%= render 'layouts/header_navbar' %>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#"><h5>Search For a Specific Project/Keyword (Under Construction)</h5><br><br></a></p>
-      <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p>
-      <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p>
-    </div>
-    <div class="text-center .mx-auto px-{1}">
-      <div class="stripe_row">
-        <div class="col-sm-10">
-          <div><p><strong>Popular Projects</strong></p></div>
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><a href="#"><h5>Search For a Specific Project/Keyword (Under Construction)</h5><br><br></a></p>
+        <p><a href="#"><h5>Browse SFSourcer Projects by Category (Under Construction)</h5><br><br></a></p>
+        <p><a href="#"><h5>Browse through all SFSourcer Projects</h5><br></a></p>
       </div>
-    </div>
-    <div class="text-center .mx-auto px-{1}">
-      <div class="container">
-        <div class="row content">
-            <div class="col-sm-2">
-              <div class="panel panel-primary">
-                <div class="panel-body">
+      <div class="text-center .mx-auto px-{1}">
+        <div class="stripe_row">
+          <div class="col-sm-10">
+            <div><p><strong>Popular Projects</strong></p></div>
+        </div>
+      </div>
+      <div class="text-center .mx-auto px-{1}">
+        <div class="container">
+          <div class="row content">
+              <div class="col-sm-2">
+                <div class="panel panel-primary">
+                  <div class="panel-body">
 
                     <h1><%= link_to @funding_projects[0].title, funding_project_path(@funding_projects[0]) %></h1>
 
                     <%= render partial: "fpd", locals: {fpd: @funding_projects[0]} %>
                     <br>
                     <p id="text"></p>
+                  </div>
+                </div>
+              </div>
+            <div class="row content">
+            <div class="col-sm-2">
+              <div class="panel panel-primary">
+                <div class="panel-body">
+
+                    <h1><%= link_to @funding_projects[1].title, funding_project_path(@funding_projects[1]) %></h1>
+
+                    <%= render partial: "fpd", locals: {fpd: @funding_projects[1]} %>
+                    <br>
+                    <p id="text"></p>
                 </div>
               </div>
             </div>
-          <div class="row content">
-          <div class="col-sm-2">
-            <div class="panel panel-primary">
-              <div class="panel-body">
-
-                  <h1><%= link_to @funding_projects[1].title, funding_project_path(@funding_projects[1]) %></h1>
-
-                  <%= render partial: "fpd", locals: {fpd: @funding_projects[1]} %>
-                  <br>
-                  <p id="text"></p>
-              </div>
-          </div>
-          </div>
-          <div class="row content">
-          <div class="col-sm-3">
-            <div class="panel panel-primary">
-              <div class="panel-body">
+            <div class="row content">
+            <div class="col-sm-3">
+              <div class="panel panel-primary">
+                <div class="panel-body">
 
                   <h1><%= link_to @funding_projects[2].title, funding_project_path(@funding_projects[2]) %></h1>
 
                   <%= render partial: "fpd", locals: {fpd: @funding_projects[2]} %>
                   <br>
                   <p id="text"></p>
+                </div>
               </div>
-          </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 </body>
 </html>
-
-
-<%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
-<%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
-
-<%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
-<%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
-

@@ -260,6 +260,16 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 ***************************** UNUSED CODE ******************************
 
 
+
+funding_projects index view
+
+<%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
+<%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
+
+<%# <h2>Browse SFSourcer Projects Nearing Final Countdown: </h2> %>
+<%# <h3><%= link_to "5..4..3..2...", ready_for_countdown_funding_project_path %>
+
+
       <%
 =begin%>
  <p><h5>Creator Profile</p><br>
