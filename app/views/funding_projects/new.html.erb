@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <div><h2 class="w3-text-grey w3-padding-16"><h1>Create a New Sourcer Project!</h1><br></h2>
+  <div><h2 class="w3-text-grey w3-padding-16">
     <div class="w3-container">
-      <h3 class="w3-opacity"><b>Project Information</b></h3><br><br>
+      <h3 class="w3-opacity"><b>Your Project Information</b></h3><br>
       <%= form_for @funding_project do |f| %>
         <h4>Project Title: <%= f.text_field :title %> </h4><br>
         <h4>Description: <%= f.text_area :description %></h4><br>
@@ -13,8 +13,8 @@
   </div>
 
   <div class="w3-container">
-    <h3 class="w3-opacity"><b>Project Information</b></h3><br><br>
-      <%= f.collection_check_boxes :fp_creator_ids, FpCreator.all, :id, :creator_name %><br>
+    <h4 class="w3-opacity"><b>Creator Information</b></h4>
+      <%= f.collection_check_boxes :fp_creator_ids, FpCreator.all, :id, :creator_name %>
         <%= f.fields_for :funding_project, @funding_project.fp_creators.build do |fpc_fields|%><br>
             <%= fpc_fields.label :creator_name %>
             <%= fpc_fields.text_field :creator_name %> </h2><br>
@@ -34,6 +34,7 @@
             <%= fpc_fields.text_field :facebook_url %><br>
             <%= fpc_fields.label "Blog" %>
             <%= fpc_fields.text_field :blog_url %><br>
+            <br><br>
 
           <%= f.submit "Create Project"%>
               <% end %>
