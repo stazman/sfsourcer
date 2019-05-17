@@ -88,3 +88,11 @@ footer, .stripe_row {
     height: 170px;
   }
 }
+
+.medium-text {
+  font-size: .7em;
+}
+
+h1 {
+  font-size: 1.2em;
+}
