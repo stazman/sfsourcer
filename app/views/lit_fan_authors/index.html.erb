@@ -1,64 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-  </style>
-</head>
 <body>
   
-<%= render 'layouts/header_navbar' %>
+  <%= render 'layouts/header_navbar' %>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><h5><%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %></h5></p><br><br>
-      <p><h5><%= link_to "Add New Author, Work, and/or Genre", new_lit_fan_work_path %></h5></p><br><br>
-    </div>
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><h5><%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %></h5></p><br><br>
+        <p><h5><%= link_to "Add New Author, Work, and/or Genre", new_lit_fan_work_path %></h5></p><br><br>
+      </div>
     <div class="col-sm-8 text-left"> 
 
-<h1>All Fanvorite Author Recommendations</h1><br>
+      <%= form_tag(lit_fan_authors_path, method: :get) do %>
+      <p>
+        Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.
+      </p>
 
-<%= form_tag(lit_fan_authors_path, method: :get) do %>
-<h3>Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.</p>
-
-  <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil  %>
-  <% end %><br><br><br>
-
-<h3>Browse All Fanvorite Authors (or see Search result/s):</h3><br>
-<% @lit_fan_authors.each do |lfa| %>
-  <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li><br>
-<% end %><br>
-
-<%# <%= link_to "Don't see your author here? Make a new one!", new_lit_fan_author_path %>
-
-<%# <h3><%= link_to "Edit Your Story Addition", edit_ls_comment_path(@ls_comment) %>
-
-<%# <p>Contributors to this story:</p>
-<% @l_story.ls_users.uniq.each do |u|%>
-    <%# <li><%= link_to u.username, to:   %>
-<%# <li><%= link_to u.username, ls_user_path(u) %>
-<%# user_path(u) worked because I passed in the whole object as a parameter %>
-<%# <% end %>
-
-    </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p></p>
-      </div>
-      <div class="well">
-        <p></p>
-      </div>
+      <%= text_field_tag :term, params[:term] %>
+      <%= submit_tag 'Search', name: nil  %>
+      <% end %>
+      <br>
+      <h3>Browse All Fanvorite Authors (or see Search result/s):</h3><br>
+      <% @lit_fan_authors.each do |lfa| %>
+        <ul class="no-bull">
+          <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li>
+        </ul>
+      <% end %>
+      
     </div>
   </div>
-</div>
 </body>
 </html>
 
