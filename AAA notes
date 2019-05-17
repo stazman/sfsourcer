@@ -1,121 +1,10 @@
-makes change solely for commit to override fast-forward message in terminal after completing needed revert
-
-RAILS/JS PROJECT TO DO
 
 
-
-
-
-
-RAILS/JS PROJECT FINISHED
-
-Project Repo Specs:
-Read Me file contains:
-
-DONE 9 * Application Description
-
-DONE 10 * Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
-
-DONE 11 * Contributors guide (e.g. file an issue, file an issue with a pull request, etc)
-
-DONE 12 * Licensing statement at the bottom (e.g. This project has been licensed under the MIT open source license.)
-
-
-Repo General
-DONE * You have a large number of small Git commits
-DONE * Your commit messages are meaningful
-DONE * You made the changes in a commit that relate to the commit message
-DONE * You don't include changes in a commit that aren't related to the commit message
-
-DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITER_GROUPS#CREATE
-DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORKS/WG_COMMENTS ON FUNG_PROJECT#SHOW
-WG_WORKS/WG_COMMENTS ON WG_WORKS INDEX VIEW
-
-DONE pledges index view should show all pledges
-DONE pledges index controller should have html and json formats
-DONE funding_project#show should show results of button click by adding lines to ul
-DONE accesses pledges for the specific funding_project
-
-DONE writer_group js issue
-  DONE check that js is working in asset pipeline
-
-
-DONE Make sure wg_works working through rails only
-DONE Make sure wg_comments working through rails only
-
-DONE Add links for wg_writer_group titles on wg_works index page to show page for each work -- 5 R/JS Project requirement
-
-DONE Add wg_creator to rendered list of groups on writer_group_home via AMS -- 4 R/JS Project requirement
-
-Fix alert not working:
-DONE  Check turbolinks reloading action 
-DONE  Check if Ajax issues 
-  
-
-Finish setting up and filling out:
-DONE  Clean up/reorganize home page 
-DONE  Add template for landing page for funding-project section 
-DONE    Fill out 
-DONE    Fix links 
-DONE  Add template for lstories show page 
-DONE    Fill out 
-DONE  Make Navbar standard on all pages 
-DONE    add dropdowns 
-DONE  Fix existing links for all of these 
-DONE  Add Events page and route 
-DONE    build landing page views for fanvorites 
-DONE  Add partial for navbar to layouts 
 
   
 
 
-***************************** AFTER RAILS/JS PROJECT ASSESSMENT TO DO ******************************
-
-  AAQ - Render wg_comments to wg_work show view with nested params through JSON? -- or for assessment questions
-
-  Delete blank comment for wg_works/2
-
-  Go server-side and use remote => :true pattern with Rails/JS video 1, last half
-
-
-POSSIBLE QUESTIONS FOR PROJECT ASSESSMENT/AFTER PROJECT ASSESSMENT
-
-What to put in env file to gitignore temp files? What I've Googled has been ambivalent
-How to fix blank genre instantiation when only checkboxes are selected
-  On refactoring, this should be not be a many to many relationship, but a one to many; collection is still possible and blanks can be validated against/otherwise removed, and checkbox collection is still possible
-  make it collection select and can seed the space, so at least it's not as visible (or antoher collection method)
-
-For email_registration_validation_format_preventing_Facebook_authorization branch?
-
-
-(search ??? for more questions)
-does sessions hinder havng a user_id for a user in a nested resource with user as has many because :user_id is assigned to sessions?
-No, but still don't know the fine points of Questions:
-
-A many to many, relationship with funding projects and users throuh pledges could work, but I was too preoccupied with the user interface ... it's not time for that now in the curriculum.
-  I may be able to do users, funding_projects, and comments
-
-How is the create view with json code working?
-Is it rendering the view without being directed to the view having the view rendered more explicitly in the code?
-
-
-Is it ok to have sessions#create twice in routes?
-
-Should the Facebook login sign up path provide data for the local rails database? Yes, but should it show up in your local database?
-I'm pretty sure the way I've set up authentication doesn't allow for it, without a gem perhaps, but I do not see any records in the database with DBBrowser
-
-
-
-  JS ALL FEATURES
-
-
-  JS SPECIFIC FEATURES
-
-  Use Rails/JS to load funding projects
-    Handle event 
-    Fire a request
-    Handle the response
-
+FUTURE TO DO: 
 
   Rails/HTML/CSS/content
 
@@ -152,12 +41,6 @@ JS
 
   Add comments section to fanvorites show views
 
-
-FUTURE TO DO: 
-
-learn indexing -- higher speed and performance
-learn when how to use aliases
-concerns
 
 [ ] Get funding_project to instantiate with associated, aliased user at nested route for funding_project#show
 [ ] Check into gems that let you integrate Thirdparty authentication into own authentication; could try separate signup and only FB login, but seems unsophisticated
@@ -218,7 +101,14 @@ concerns
 [ ] Add custom writer for user to show which pledges are subject to be withdrawn by funding_project creator, when funding goal is 90% met (money isn't withdrawn until funding goal is met)
 
 
-FINISHED TO DO 
+
+
+
+
+
+
+***************************** RAILS/JS PROJECT FINISHED TASKS ******************************
+
 
 [x] Finish out unwritten CRUD actions
 [x] Clean up all code for submission
@@ -241,9 +131,64 @@ FINISHED TO DO
 [x] Make admin privleges; only admin can delete a project
 [x] Make admin privileges; only admin can change/add/delete funding_project_categories
 
+Project Repo Specs:
+Read Me file contains:
+
+DONE 9 * Application Description
+
+DONE 10 * Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
+
+DONE 11 * Contributors guide (e.g. file an issue, file an issue with a pull request, etc)
+
+DONE 12 * Licensing statement at the bottom (e.g. This project has been licensed under the MIT open source license.)
 
 
+Repo General
+DONE * You have a large number of small Git commits
+DONE * Your commit messages are meaningful
+DONE * You made the changes in a commit that relate to the commit message
+DONE * You don't include changes in a commit that aren't related to the commit message
 
+DONE 7 * Must use your Rails application to render a form for creating a resource that is submitted dynamically through JavaScript. WRITER_GROUPS#CREATE
+DONE 6 * Your Rails application must reveal at least one `has-many` relationship through JSON that is then rendered to the page. WG_WORKS/WG_COMMENTS ON FUNG_PROJECT#SHOW
+WG_WORKS/WG_COMMENTS ON WG_WORKS INDEX VIEW
+
+DONE pledges index view should show all pledges
+DONE pledges index controller should have html and json formats
+DONE funding_project#show should show results of button click by adding lines to ul
+DONE accesses pledges for the specific funding_project
+
+DONE writer_group js issue
+  DONE check that js is working in asset pipeline
+
+
+DONE Make sure wg_works working through rails only
+DONE Make sure wg_comments working through rails only
+
+DONE Add links for wg_writer_group titles on wg_works index page to show page for each work -- 5 R/JS Project requirement
+
+DONE Add wg_creator to rendered list of groups on writer_group_home via AMS -- 4 R/JS Project requirement
+
+Fix alert not working:
+DONE  Check turbolinks reloading action 
+DONE  Check if Ajax issues 
+  
+
+Finish setting up and filling out:
+DONE  Clean up/reorganize home page 
+DONE  Add template for landing page for funding-project section 
+DONE    Fill out 
+DONE    Fix links 
+DONE  Add template for lstories show page 
+DONE    Fill out 
+DONE  Make Navbar standard on all pages 
+DONE    add dropdowns 
+DONE  Fix existing links for all of these 
+DONE  Add Events page and route 
+DONE    build landing page views for fanvorites 
+DONE  Add partial for navbar to layouts 
+
+  
 ***************************** NOTES ******************************
 
 
