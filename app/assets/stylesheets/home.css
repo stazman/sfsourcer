@@ -96,3 +96,7 @@ footer, .stripe_row {
 h1 {
   font-size: 1.2em;
 }
+
+button {
+  font-size: 14px;
+}
