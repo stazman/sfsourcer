@@ -1,7 +1,4 @@
- /* from main.css */
-
-
- .field_with_errors {
+.field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
@@ -9,12 +6,12 @@
 
 .pic,
 .info {
-padding: 20px;
-display: inline-block;
-background-color: #eeeeee;
-border-radius: 7px;
-vertical-align: middle;
-margin: 10px;
+  padding: 20px;
+  display: inline-block;
+  background-color: #eeeeee;
+  border-radius: 7px;
+  vertical-align: middle;
+  margin: 10px;
 }
 
 .info {
@@ -22,65 +19,36 @@ height: 290px;
 text-align: left;
 }
 
-/* end from main.css */
-
-
-/* from fp#index */
-
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
+.row.content {height: 1500px}
     
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: white;
-      height: 100%;
-    }
+.sidenav {
+  background-color: white;
+  height: 100%;
+}
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
 
-    /* <%
-=begin%>
- .panel panel-primary {
-      margin-left: 0;
-      margin-right: 0;
-    }
-     
-<%
-=end%> */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}
 
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-
-  /* end from fp#index */
-
-
-
-
-
-
-/* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar {
   margin-bottom: 50px;
   border-radius: 0;
 }
 
-/* Remove the jumbotron's default bottom margin */ 
- .jumbotron {
+.jumbotron {
   margin-bottom: 0;
 }
 
-/* Add a gray background color and some padding to the footer */
 footer, .stripe_row {
   background-color: rgb(242, 242, 242);
   padding: 25px;
