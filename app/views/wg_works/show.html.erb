@@ -36,11 +36,11 @@
       <h3>Feedback</h3>
       <br>
       <% @wg_work.wg_comments.each do |c| %>
-         <ul>
+         <ul class="no-bull">
             <li><%= c.content %></li>
             <li><%= c.author %></li>
-         <br>
-         <% end %>
+            <br>
+            <% end %>
          </ul>
    <body>
 </html>
