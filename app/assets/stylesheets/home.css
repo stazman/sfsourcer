@@ -100,3 +100,7 @@ h1 {
 button {
   font-size: 14px;
 }
+
+.no-bull {
+  list-style-type: none;
+}
