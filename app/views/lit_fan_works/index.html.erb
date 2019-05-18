@@ -80,16 +80,23 @@
           </div>
         </div>
       </div>     
-        <%= link_to "Add New Work", new_lit_fan_work_path %>
-  </div> 
-    <div class="col-sm-2 well">
-      <div class="well">
-        <p><a href="#"><strong><%= @lit_fan_author.name %> Events (under construction)</strong></a></p>
-      </div>
-      <div class="well">
-        <p><a href="#"><strong>News about <%= @lit_fan_author.name %> (under construction)</strong></a></p>
+      
+      <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
+
+      <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
+
+      <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
+
+
+      </div> 
+        <div class="col-sm-2 well">
+          <div class="well">
+            <p><a href="#"><strong><%= @lit_fan_author.name %> Events (under construction)</strong></a></p>
+          </div>
+          <div class="well">
+            <p><a href="#"><strong>News about <%= @lit_fan_author.name %> (under construction)</strong></a></p>
+          </div>
       </div>
   </div>
-</div>
 </body>
 </html>
