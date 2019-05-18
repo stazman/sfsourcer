@@ -13,15 +13,15 @@
     <div class="col-sm-8 text-left"> 
 
       <%= form_tag(lit_fan_authors_path, method: :get) do %>
-      <p>
+      <h4>
         Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.
-      </p>
+      </h4>
 
       <%= text_field_tag :term, params[:term] %>
       <%= submit_tag 'Search', name: nil  %>
       <% end %>
       <br>
-      <h3>Browse All Fanvorite Authors (or see Search result/s):</h3><br>
+      <h4>Choose an author below to see the author's works, FanClub page and FanWiki, as well as news and events about the author:</h4><br>
       <% @lit_fan_authors.each do |lfa| %>
         <ul class="no-bull">
           <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li>
