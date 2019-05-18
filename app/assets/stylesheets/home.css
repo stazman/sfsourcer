@@ -57,6 +57,10 @@ footer, .stripe_row {
   margin-bottom: 5px;
 }
 
+.panel {
+  text-align: left;
+}
+
 .stripe_row {
   font-size: 26px;
 }
