@@ -59,6 +59,7 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_work = LitFanWork.find(params[:id])
     end
+    render :layout => 'navbar_on_top'
   end
 
   def update
