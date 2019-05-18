@@ -1,18 +1,24 @@
-<h1>Make a Pledge!</h1>
+    <div class="container" id="more-margin">
+        <div>
+            <%= form_for @pledge do |f| %>
+                <h3><%= f.label "Choose the project" %></h3>
+                <%= f.collection_select :funding_project_id, FundingProject.all, :id, :title %>
+                <br><br>
+                    <h3><%= f.label "Enter pledge amount" %></h3>
+                    <%= f.text_field :amount %>
+                <br><br><br>
 
-<%= form_for @pledge do |f| %>
-    <h4><%= f.label "Choose the project" %></h4>
-    <%= f.collection_select :funding_project_id, FundingProject.all, :id, :title %><br><br><br>
-    <h4>Please choose from these reward options ... (under construction)</h4><br><br>
-    <h4><%= f.label "Amount" %></h4>
-    <%= f.text_field :amount %><br><br>
-
- <h3>Pledge Form</h3>
-        <%= f.fields_for :fp_backer do |fpb| %>
-            <h4><%= fpb.label "Name of Backer" %></h4>
-            <h4><%= fpb.text_field :name %></h4><br>
-            <h4><%= fpb.label :backer_email %></h4>
-            <h4><%= fpb.text_field :backer_email %></h4><br>
-    <% end %>
-<%= f.submit "Create Pledge" %>
-<% end %>
+                <h3>Backer Information</h3>
+                <h5>(name/email not viewable at SFSourcer.com)</h5>
+                <br>
+                    <%= f.fields_for :fp_backer do |fpb| %>
+                        <h5><%= fpb.label "Name of Backer" %></h5>
+                        <h5><%= fpb.text_field :name %></h5><br>
+                        <h5><%= fpb.label :backer_email %></h5>
+                        <h5><%= fpb.text_field :backer_email %></h5>
+                <br>
+                <% end %>
+            <%= f.submit "Create Pledge" %>
+            <% end %>
+        </div>
+    </div>
