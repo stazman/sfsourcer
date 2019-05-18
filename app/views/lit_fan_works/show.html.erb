@@ -28,9 +28,13 @@
 
       <h2>Genre/s: </h2>
           <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
+            <ul class="no-bull">
               <h4><li><%= lfg.name %><br></li></h4>
+            </ul>
           <% end %><br>
 
+<a href = "#" onclick="javascript:window.history.back();">Go Back</a>
+<br><br>
       <h4><%= link_to "Edit Work, Author, and/or Genre", edit_lit_fan_work_path(@lit_fan_work) %></h4>
       
       <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
