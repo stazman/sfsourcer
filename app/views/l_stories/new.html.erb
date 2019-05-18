@@ -1,9 +1,11 @@
-<h1>Make a Living Story!</h1>
+<div class="container" id="more-margin">
 
-<%= form_for @l_story, url: l_stories_path do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %><br><br>
-<%= f.label :content %><br>
-<%= f.text_area :content %><br><br>
-<%= f.submit "Create Living Story"%>
-<% end %>
+    <%= form_for @l_story, url: l_stories_path do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br><br>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %><br><br>
+    <%= f.submit "Create Living Story"%>
+    <% end %>
+
+</div>
