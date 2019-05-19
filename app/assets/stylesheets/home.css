@@ -77,13 +77,23 @@ footer {
   margin-bottom: 0;
 }
 
-footer, .stripe_row {
-  background-color: rgb(242, 242, 242);
-  padding: 25px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
+.stripe_row {
+ background-color: rgb(242, 242, 242);
+ padding: 25px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 5px;
 }
+ 
+footer {
+ background-color: rgb(242, 242, 242);
+ padding: 25px;
+ color: black;
+ align-items: center;
+ text-align: center;
+ margin-bottom: 5px;
+}
+
 
 .panel {
   text-align: left;
