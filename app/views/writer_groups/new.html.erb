@@ -21,14 +21,28 @@
             <%= wg.submit "Create Group" %>
          <% end %>
 
-         <br><br>
-
          <div id="showWriterGroupResult">
             <h2 id="writerGroupWgName"></h2>
             <h3 id="writerGroupWgCreator"></h3><br>
             <h4 id="writerGroupWgDescription"></h2>
          </div>
+      
+         <br>
+
+         <h5><%= link_to "Back to Writer's Groups Home Page", writer_groups_home_path %></h5>
+
+         <br>
+
+         <div>
+            <h5><a class="load_writer_groups" href="/writer_groups">All Writer's Groups</a></h5>
+            </div>
+            <br>
+            <div class="writer_groups">
+            <ul class="no-bull">
+            </ul>
+         </div>
 
       </div>
+
    <body>
 </html>
