@@ -1,23 +1,30 @@
-<% if flash[:alert] %>
-    <%= flash[:alert] %>
-  <% end %><br><br>
+<div class="container" id="more-margin">
+  <% if flash[:alert] %>
+      <%= flash[:alert] %>
+    <% end %>
+  <br><br>
 
+  <%= form_for(:sessions, url: '/login') do |f| %>
 
-<h1>Log in</h1>
- <%= form_for(:sessions, url: '/login') do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br><br>
 
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+      <%= f.label :password %>
+      <%= f.text_field :password %>
+      <br><br>
 
-    <%= f.label :password %>
-    <%= f.text_field :password %>
+      <%= f.submit "Log in" %>
+  <% end %>
+  <br><br>
 
-    <%= f.submit "Log in" %>
-<% end %><br><br>
+  <%= link_to('Sign up with Email', '/users/new') %>
+  <br><br>
 
-<%= link_to('Sign up with Email', '/users/new') %><br><br>
+  <%= link_to('Log in/Sign up with Facebook', '/auth/facebook') %>
+  <br><br><br><br>
 
-<%= link_to('Sign in/Sign up with Facebook', '/auth/facebook') %>
+</div>
   
 
   
