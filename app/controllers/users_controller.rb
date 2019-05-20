@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:new, :create]
-  # include UsersHelper
 
   def index
     @users = User.all
@@ -10,27 +9,25 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     render :layout => 'navbar_on_top'
-    # @user.sf_favs.build
   end
 
   def create
-      @user = User.new(user_params)
-      if @user.valid?
-        @user.save
-        session[:user_id] = @user.id
-        redirect_to user_path(@user)
-      else
-        render :new
-      end
+    @user = User.new(user_params)
+    if @user.valid?
+      @user.save
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
   end
 
   def show
-      @user = User.find(params[:id])
-      unless session[:user_id] == @user.id
-        flash[:notice] = "You don't have access to that account" 
-        redirect_to user_path(@user)
-      end
-      render :layout => 'navbar_on_top'
+    @user = User.find(params[:id])
+    unless session[:user_id] == @user.id
+      flash[:notice] = "You don't have access to that account" 
+      redirect_to user_path(@user)
+    end
   end
 
   def edit
@@ -41,14 +38,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id]) 
     @user.update(user_params)
     if @user.save
-        redirect_to user_path(@user)  
+      redirect_to user_path(@user)  
     else
       render :edit
     end
-    render :layout => 'navbar_on_top'
   end
 
-  # Namespace destroy
   def destroy
     @user = User.find(params[:id])
     @user.destroy

@@ -1,35 +1,23 @@
-<h2>Greetings, <%= @user.name %>!</h2>
-<h3>Your Current Email: <%= @user.email %></h3>
-<%# <h3>Edit Your Profile Information Here</h3><br> %>
-<h4><%= link_to "Edit Profile/Change Password", edit_user_path(@user) %></h4><br>
+<%= render 'layouts/header_navbar'%>
 
-<h3>Check out members' favorites and find or add your own:</h3>
-<h4> <%= link_to "SF Literature Fanvorites", '/sf_lit_fanvorites' %></h4><br>
+<div class="container" id="more-margin">
 
-<h3>Your SF Favorites: </h3>
-<ul>
-    <h4>Favorite Literary Work:</h4>
-        <%= @user.fav_lits %><br>
-    <h4>Favorite Film:</h4>
-        <%= @user.fav_films %><br>
-    <h4>Favorite Game:</h4>
-        <%= @user.fav_games %><br>
-</ul>
+    <h4>Your Current Email: <%= @user.email %></h4>
 
+    <h5><%= link_to "Edit Profile/Change Password", edit_user_path(@user) %></h5><br>
 
-<%# <h3>Living Stories You Have Contributed To:</h3>
-<% @user.l_stories.each do |ls| %>
-<%# <%= link_to p.title, l_story_path(ls) %>
-<%# <% end %>
+    <h4>Check out members' favorites and find or add your own:</h4>
+    <h5> <%= link_to "SF Literature Fanvorites", '/sf_lit_fanvorites' %></h5><br>
 
-<%# <h3>Check out our Sourcer Projects!</h3> %>
-<%# <h4><%= link_to "Sourcer Projects Page", "/sourcer_projects" %>
+    <h4>Your SF Favorites: </h5>
+    <br>
+    <ul>
+        <h4>Favorite Literary Work:</h4><br>
+            <%= @user.fav_lits %><br><br>
+        <h4>Favorite Film:</h4><br>
+            <%= @user.fav_films %><br><br>
+        <h4>Favorite Game:</h4><br>
+            <%= @user.fav_games %><br><br>
+    </ul>
 
-<%# <h3>Or make your own project!</h3> %>
-<%# <h4><%= link_to "Make a New Sourcer Project", new_funding_project_path %>
-
-<%# <h3>Check out our fabulous features!</h3> %>
-<%# <h4><%= link_to "Living Story Page", "/living_stories" %>
-
-
-
+</div>
