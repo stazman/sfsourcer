@@ -79,7 +79,7 @@ text-align: left;
  margin-bottom: 5px;
 }
  
-footer {
+footer, #footer {
  background-color: rgb(242, 242, 242);
  padding: 25px;
  color: black;
