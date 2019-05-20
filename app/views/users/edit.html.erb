@@ -1,43 +1,54 @@
-<h1>Edit Your Profile</h1>
 
-<%= render partial: "errors" %>
+<%= render 'layouts/header_navbar'%>
 
-<%# <%= render partial: "form" %>
+<div class="container" id="more-margin">
 
-<%= form_for @user do |f| %>
-<div class="field<%= ' field_with_errors' if @user.errors[:name].any? %>">
- <%= f.label :name %>
-<%= f.text_field :name %>
+
+  <%= render partial: "errors" %><br>
+
+  <%= form_for @user do |f| %>
+  <div class="field<%= ' field_with_errors' if @user.errors[:name].any? %>">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
-<div class="field<%= ' field_with_errors' if @user.errors[:email].any? %>">
-<%= f.label :email %>
- <%= f.text_field :email %>
+  <br>
+  <div class="field<%= ' field_with_errors' if @user.errors[:email].any? %>">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
   </div>
-<div class="field<%= ' field_with_errors' if @user.errors[:password].any? %>">
- <%= f.label :password %>
-<%= f.text_field :password %><br>
-<p>(Please enter current or new password)</p>
+  <br>
+  <div class="field<%= ' field_with_errors' if @user.errors[:password].any? %>">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
   </div>
+  <br>
 
-<h5>Password Requirements:</h5>
-<ol>
-  <li>minimum 6 characters</li>
-  <li>at least one uppercase character</li>
-  <li>at last one lowercase character</li>
-  <li>special symbol</li>
-  <li>at least one number</li>
-</ol>
+  <h5>Password Requirements:</h5>
+  <ol>
+    <li>minimum 6 characters</li>
+    <li>at least one uppercase character</li>
+    <li>at last one lowercase character</li>
+    <li>special symbol</li>
+    <li>at least one number</li>
+  </ol>
+  <br>
 
-<h2>Let us know about your SF favorites!</h2>
+  <h4>Let us know about your SF favorites!</h4>
+  <br>
 
-<h3>What is your favorite SF literary work?</h3>    
-<%= f.text_field :fav_lits %><br></li>
- 
-<h3>What is your favorite SF film?</h3>    
-<%= f.text_field :fav_films %><br></li>
+  <h5>What is your favorite SF literary work?</h5>    
+  <%= f.text_field :fav_lits %><br></li>
+  <br>
+  
+  <h5>What is your favorite SF film?</h5>    
+  <%= f.text_field :fav_films %><br></li>
+  <br>
 
-<h3>What is your favorite SF game?</h3>    
-<%= f.text_field :fav_games %><br></li>
+  <h5>What is your favorite SF game?</h5>    
+  <%= f.text_field :fav_games %><br></li>
+  <br>
 
-<%= f.submit "Submit" %>
-<% end %>
+  <%= f.submit "Submit" %>
+  <% end %>
+
+</div>
