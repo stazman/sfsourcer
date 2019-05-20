@@ -6,17 +6,16 @@ class User < ApplicationRecord
     validates_presence_of :email
     validates_presence_of :password
 
-    # PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^+=!*()@%&]).{6,10}\z/        
-    #     validates :password, 
-    #                 :format => PASSWORD_REGEX
-                    # , :if => !login_social?
-                    
-    EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+.+[a-zA-Z][a-zA-Z]/
+    EMAIL_REGEX = /(?!.*@.*@)+[a-z0-9A-Z!#^$%&'*+-\/=?_`{|}~;]+@+([A-Za-z0-9])+\.+(?=[a-zA-Z][a-zA-Z])/
    
     validates :email,
-                    uniqueness: true,
-                    :format => EMAIL_REGEX
+                uniqueness: true,
+                :format => EMAIL_REGEX
 
+    PASSWORD_REGEX = /\A(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,36}\z/        
+        validates :password, 
+                    :format => PASSWORD_REGEX
+                    
     def self.find_or_create_with_omniauth(auth)
         user = find_or_create_by(uid: auth['uid'], provider:  auth['provider'])
         user.email = auth['info']['email']
