@@ -54,12 +54,6 @@ text-align: left;
   height: 100%;
 }
     
-footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
-}
-
 @media screen and (max-width: 767px) {
   .sidenav {
     height: auto;
@@ -94,7 +88,6 @@ footer {
  margin-bottom: 5px;
 }
 
-
 .panel {
   text-align: left;
 }
@@ -122,3 +115,4 @@ button {
 .container #more-margin {
   margin-left: 3%;
 }
+
