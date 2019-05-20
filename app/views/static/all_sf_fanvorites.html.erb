@@ -2,66 +2,62 @@
 <html lang="en">
 <body>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>All SF Fanvorites</h1>      
-    <p>Talk, Learn, and Write About All things SF</p>
-  </div>
-</div>
-
-<%= render 'layouts/header_navbar' %>
-
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-12">
-      <div><p><strong>Talk About and Add to All Fanvorites</strong></p></div>
-  </div>
-</div>
-
-<div class="container">   
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="panel panel-primary">
-        <div class="panel-body"><%= link_to "SF Literature Fanvorites", '/sf_lit_fanvorites' %></div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
-    </div>
-    <div class="col-sm-6"> 
-      <div class="panel panel-primary">
-        <div class="panel-body"><%= link_to "SF Film Fanvorites (under construction)", '/sf_film_fanvorites' %></div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>All SF Fanvorites</h1>      
+      <p>Talk, Learn, and Write About All things SF</p>
     </div>
   </div>
-</div>
 
-<div class="text-center .mx-auto px-{2}">
-  <div class="stripe_row">
-    <div class="col-sm-12">
-      <div><p><strong>Learn and Write About SF in Our FanWiki (under construction)</strong></p></div>
-  </div>
-</div>
+  <%= render 'layouts/header_navbar' %>
 
-<div class="container">   
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="panel panel-primary">
-        <div class="panel-body">Literature FanWiki (under construction)</div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-      </div>
+  <div class="text-center .mx-auto px-{2}">
+    <div class="stripe_row">
+      <div class="col-sm-12">
+        <div><p><strong>Talk About and Add to All Fanvorites</strong></p></div>
     </div>
-    <div class="col-sm-6"> 
-      <div class="panel panel-primary">
-        <div class="panel-body">Film FanWiki (under construction)</div>
-        <br>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+  </div>
+
+  <div class="container">   
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-body"><%= link_to "SF Literature Fanvorites", '/sf_lit_fanvorites' %></div>
+          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><%= link_to "SF Film Fanvorites (under construction)", '/sf_film_fanvorites' %></div>
+          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="text-center .mx-auto px-{2}">
+    <div class="stripe_row">
+      <div class="col-sm-12">
+        <div><p><strong>Learn and Write About SF in Our FanWiki (under construction)</strong></p></div>
+    </div>
+  </div>
+
+  <div class="container">   
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-body">Literature FanWiki (under construction)</div>
+          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body">Film FanWiki (under construction)</div>
+          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

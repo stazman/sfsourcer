@@ -7,7 +7,7 @@
     width: 300px;
   }
   .panel-body {
-    height: 100px;
+    height: auto;
   }
 }
 
@@ -19,10 +19,10 @@
     height: 350px;
   }
   .panel-body {
-    height: 100px;
+    height: auto;
   }
   .panel-body img {
-    height: 170px;
+    height: auto;
   }
 }
 
@@ -47,7 +47,7 @@ height: 290px;
 text-align: left;
 }
 
-.row.content {height: 1500px}
+.row.content {height: auto;}
     
 .sidenav {
   background-color: white;
@@ -73,10 +73,10 @@ text-align: left;
 
 .stripe_row {
  background-color: rgb(242, 242, 242);
- padding: 25px;
- display: flex;
- align-items: center;
- margin-bottom: 5px;
+ padding-top: 2%;
+ padding-bottom: 5%;
+ display: block;
+ margin-bottom: 1.5%;
 }
  
 footer, #footer {
@@ -90,6 +90,7 @@ footer, #footer {
 
 .panel {
   text-align: left;
+  height: 12.5em;
 }
 
 .stripe_row {
@@ -116,3 +117,6 @@ button {
   margin-left: 3%;
 }
 
+.container {
+  padding: 0;
+}
