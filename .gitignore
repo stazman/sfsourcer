@@ -5,6 +5,8 @@
 /.env
 
 *.env
+*.log
+*.tmp
 
 .env
 
