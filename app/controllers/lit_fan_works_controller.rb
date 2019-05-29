@@ -4,7 +4,6 @@ class LitFanWorksController < ApplicationController
   
   def index
     if params[:lit_fan_author_id]
-      #??? Is this condition unnecessary because there are validations for author in the lit_fan_works model?
       @lit_fan_author = LitFanAuthor.find_by(id: params[:lit_fan_author_id])
       if @lit_fan_author.nil?
         redirect_to lit_fan_author_path, alert: "Author not found"
@@ -30,7 +29,6 @@ class LitFanWorksController < ApplicationController
     @lit_fan_work = LitFanWork.new(lit_fan_work_params)
     if @lit_fan_work.valid?
       @lit_fan_work.save
-    #   # ??? setting a condition about the save method being called actually calls the method if it's true? Is this generally true or just for the save method?
       redirect_to @lit_fan_work
     else
       render :new
@@ -44,7 +42,7 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_work = LitFanWork.find(params[:id])
     end
-    render :layout => 'navbar_on_top'
+    # render :layout => 'navbar_on_top'
   end
 
   def edit
