@@ -120,3 +120,8 @@ button {
 .container {
   padding: 0;
 }
+
+ul, li {
+  margin: 2%; 
+  padding: 1%;
+}
