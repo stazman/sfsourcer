@@ -121,7 +121,15 @@ button {
   padding: 0;
 }
 
-ul, li {
+ul:not(.nav navbar-nav) {
   margin: 2%; 
   padding: 1%;
 }
+
+
+/* #list-margin ul, #list-margin li {
+  margin: 2%; 
+  padding: 1%;
+} */
+
+/* nav navbar-nav */
