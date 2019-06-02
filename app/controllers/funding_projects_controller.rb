@@ -6,6 +6,10 @@ class FundingProjectsController < ApplicationController
   def index
     @funding_projects = FundingProject.all
     @newest_fps_first = FundingProject.all.reverse
+    respond_to do |f|
+      f.html { render :index }
+      f.json { render json: @funding_projects }
+    end
   end
 
   def new
