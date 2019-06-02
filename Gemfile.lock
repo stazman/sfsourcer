@@ -276,6 +276,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   dotenv-rails
+  faraday
   figaro
   jbuilder (~> 2.5)
   jquery-rails

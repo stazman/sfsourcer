@@ -1,7 +1,31 @@
 
 
 
-  
+
+*************
+
+add_youtube_search branch notes:
+
+DONE SO FAR
+
+Set up SFSourcer project on Google Developer console; got key
+
+Enabled YouTube Data API v3:
+
+https://console.developers.google.com/apis/api/youtube.googleapis.com/overview?project=sfsourcer
+
+
+
+
+TO DO
+
+Add general YT search to lit_fan_authors 
+
+Add YT links for specific authors on fanvorites show views
+
+
+
+**************   
 
 
 FUTURE TO DO: 
@@ -22,11 +46,7 @@ FUTURE TO DO:
 
     Standardize page style across all pages
 
-    Clean up/reogranize landing pages
-      Fanvorites
-      LStories
-      Funding Project index and new
-
+    
     Home page: https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row
       Add feature descriptions to home page feature boxes
       Add images, style and effects
@@ -107,7 +127,12 @@ JS
 
 
 
-***************************** RAILS/JS PROJECT FINISHED TASKS ******************************
+***************************** SFSOURCER FINISHED TASKS ******************************
+
+DONE Clean up/reogranize landing pages
+      Fanvorites
+      LStories
+      Funding Project index and new
 
 
 [x] Finish out unwritten CRUD actions
