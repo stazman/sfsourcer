@@ -120,3 +120,8 @@ button {
 .container {
   padding: 0;
 }
+
+ul:not(.nav navbar-nav) {
+  margin: 2%; 
+  padding: 1%;
+}
