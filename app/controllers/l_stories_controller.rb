@@ -13,7 +13,10 @@ class LStoriesController < ApplicationController
 
   def create
     @l_story = LStory.create(l_story_params)
-    redirect_to l_story_path(@l_story)
+    respond_to do |f|
+      f.html( @l_story )
+      f.json( render :json => @create )
+    end
   end
 
   def show
