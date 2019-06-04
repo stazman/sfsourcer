@@ -1,19 +1,8 @@
 class LsCommentsController < ApplicationController
 
   def create
-     # binding.pry
     @ls_comment = LsComment.create(ls_comment_params)
     redirect_to l_story_path(@ls_comment.l_story)
-  end
-
-  def edit
-    @ls_comment = LsComment.find_by(params[:id])
-  end
-
-  def update
-    @ls_comment = LsComment.find_by(params[:id])
-    @ls_comment.save
-    redirect_to l_story_path(@ls_comment)
   end
 
   private
