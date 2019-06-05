@@ -1,12 +1,28 @@
-<div class="container" id="more-margin">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <%= javascript_include_tag 'l_stories'  %>
+    </head>
+    <body>
 
-    <%= form_for @l_story, url: l_stories_path do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br><br>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %><br><br>
-    <%= f.submit "Create Living Story"%>
-    <% end %>
+        <div class="container" id="more-margin">
 
-</div>
-<br><br><br><br><br><br><br>
+            <%= form_for @l_story, url: l_stories_path do |f| %>
+            <%= f.label "Give your new story a title (optional)" %><br>
+            <%= f.text_field :title %>
+            <br><br><br>
+            <%= f.label "Start writing your story!" %><br>
+            <%= f.text_area :content %>
+            <br><br>
+            <%= f.submit "Create Story"%>
+            <% end %>
+
+            <div>
+                <h2 id="title"></h2><br>
+                <h3 id="content"></h3>
+            </div>
+
+        </div>
+        <br><br><br><br><br><br><br>
+    </body>
+</html>
