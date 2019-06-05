@@ -7,7 +7,7 @@
 
         <div class="container" id="more-margin">
 
-            <%= form_for @l_story, url: l_stories_path do |f| %>
+            <%= form_for @l_story do |f| %>
             <%= f.label "Give your new story a title (optional)" %><br>
             <%= f.text_field :title %>
             <br><br><br>
@@ -17,9 +17,9 @@
             <%= f.submit "Create Story"%>
             <% end %>
             
-            <div>
-                <h2 id="title"></h2><br>
-                <h3 id="content"></h3>
+            <div id=showLStoryResult>
+                <h2 id="lsTitle"></h2><br>
+                <h3 id="lsContent"></h3>
             </div>
 
             <div>
