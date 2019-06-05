@@ -18,11 +18,13 @@ class LStoriesController < ApplicationController
 
   def show
     @l_story = LStory.find(params[:id])
-    @l_stories = LStory.all
-
     @ls_comment = @l_story.ls_comments.build
     @ls_user = @ls_comment.build_ls_user
-    render :layout => 'navbar_on_top'
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render :json => @l_story }
+    end
+    # render :layout => 'navbar_on_top'
   end
 
   def edit
