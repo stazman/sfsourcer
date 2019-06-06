@@ -1,9 +1,22 @@
 
 TO DO:
 
-renders new ls on new view
-allows editing of new story beginning on new view
-creates final submit button to go to actionable story
+l_stories feature:
+  creates final submit button to go to actionable story
+  adds index view and 
+  allows editing of new story beginning on new view
+  
+wg_works feature:
+  finish writer's groups/wg_works association
+  add js functionality to wg_works for a writer_group:
+    all wg_works
+    next button
+
+fanvorites feature:
+  renders new fanvorite author, genre, work in new view for preview before submitting (needed because already has edit function?)
+    using a class constructor
+  allows editing of new author, genre, work in new view (needed because already has edit function)
+
 
   
 
