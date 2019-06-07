@@ -16,10 +16,7 @@ fanvorites feature:
   renders new fanvorite author, genre, work in new view for preview before submitting (needed because already has edit function?)
     using a class constructor
   allows editing of new author, genre, work in new view (needed because already has edit function)
-
-
   
-
 
 FUTURE TO DO: 
 
