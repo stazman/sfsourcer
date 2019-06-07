@@ -13,7 +13,7 @@ class LStoriesController < ApplicationController
 
   def create
     @l_story = LStory.create(l_story_params)
-      render :json => @l_story
+    render :json => @l_story
   end
 
   def show
@@ -34,7 +34,7 @@ class LStoriesController < ApplicationController
   def update
     @l_story = LStory.update(l_story_params)
     @l_story.save
-    redirect_to l_story_path(@l_story)
+    render :json => @l_story
   end
 
   private

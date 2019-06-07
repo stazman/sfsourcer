@@ -1,6 +1,41 @@
-<%# Only admin can edit lstories %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <%= javascript_include_tag 'l_stories'  %>
+    </head>
+    <body>
 
-<h1>LStories#edit</h1>
-<p>Find me in app/views/l_stories/edit.html.erb</p>
+        <div class="container" id="more-margin">
 
-<%= render partial: "errors" %>
+            <%= form_for @l_story, url: {action: "update"}, :method => :POST do |f| %>
+            <%= f.label "Give your new story a title (optional)" %><br>
+            <%= f.text_field :title %>
+            <br><br><br>
+            <%= f.label "Start writing your story" %><br>
+            <%= f.text_area :content %>
+            <br><br>
+            <%= f.submit "Edit Story"%>
+            <% end %>
+            
+            <div id=showLStoryResult>
+                <h2 id="lsTitle"></h2><br>
+                <h3 id="lsContent"></h3>
+            </div>
+
+            <div>
+                <button id="edit_new_story">
+                    Edit your story beginning
+                </button>
+            </div>
+            <br><br>
+ 
+            <div>
+                <button id="go_to_new_story">
+                    Go to your story!
+                </button>
+            </div>
+
+        </div>
+        <br><br><br><br><br><br><br>
+    </body>
+</html>
