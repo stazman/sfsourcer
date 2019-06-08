@@ -6,6 +6,10 @@ class LStoriesController < ApplicationController
     @l_stories = LStory.all.reverse
   end
 
+  def all_living_stories
+    @l_stories = LStory.all_living_stories
+  end
+
   def new
     @l_story = LStory.new
     render :layout => 'navbar_on_top'
