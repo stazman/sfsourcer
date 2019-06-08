@@ -5,6 +5,8 @@
     </head>
     <body>
 
+        <%= render 'layouts/l_stories_navbar' %>
+
         <div class="container" id="more-margin">
 
             <%= form_for @l_story, url: {action: "update"}, :method => :POST do |f| %>
