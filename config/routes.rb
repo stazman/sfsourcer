@@ -22,7 +22,9 @@ Rails.application.routes.draw do
 
   get '/funding_projects/:id/body', to: 'funding_projects#body'
 
-  patch "l_stories/:id/edit" => "l_stories#update"\
+  patch "l_stories/:id/edit" => "l_stories#update"
+
+  get "/l_stories/all_living_stories" => "l_stories#all_living_stories"
 
   resources :users
   resources :sessions

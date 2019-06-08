@@ -1,0 +1,17 @@
+<% render partial: "all_living_stories" %>
+ 
+
+<% @l_stories.each do |ls| %>
+<ul class="no-bull">
+    <li>
+        <h4>
+            <%= link_to ls.title, l_story_path(ls) %>
+        </h4>
+    </li>
+    <li>
+        <h5>
+            <%= ls.content %>
+        </h5>
+    </li>
+</ul>
+<% end %>
