@@ -12,7 +12,6 @@ class LStoriesController < ApplicationController
 
   def new
     @l_story = LStory.new
-    render :layout => 'navbar_on_top'
   end
 
   def create

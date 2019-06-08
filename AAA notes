@@ -3,10 +3,9 @@ TO DO:
 
 l_stories feature:
   
-  
   makes partial for new l_story form, adds to to new, edit views
-  adds l_stories_navbar partial to l_stories views
-
+  
+  DONE adds l_stories_navbar partial to l_stories views
   DONE adds route for all_living_stories; creates all_living_stories view, adds custom navbar partial, renders links to all l_stories on view
   DONE adds all_living_stories action to controller
   DONE adds buttons for new story/view all stories to navbar on l_stories index page

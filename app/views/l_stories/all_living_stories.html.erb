@@ -1,5 +1,10 @@
-<% render partial: "all_living_stories" %>
+
+<%= render partial: "layouts/l_stories_navbar" %>
  
+<div class="container">
+    <h3 id="more-margin">Choose one of the stories below and keep it going!</h3>
+</div>
+<br>
 
 <% @l_stories.each do |ls| %>
 <ul class="no-bull">
@@ -13,5 +18,5 @@
             <%= ls.content %>
         </h5>
     </li>
-</ul>
+</ul><br>
 <% end %>
