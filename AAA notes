@@ -1,16 +1,18 @@
 
 TO DO:
 
-l_stories feature:
+events feature:
+  creates, completes controller, routes for events
+
+  creates, completes ev_user model; creates migration for ev_users
+  completes, migrates, seeds ev_users table
+  creates, completes controller, routes and views for ev_users
   
-  makes partial for new l_story form, adds to to new, edit views
-  
-  DONE adds l_stories_navbar partial to l_stories views
-  DONE adds route for all_living_stories; creates all_living_stories view, adds custom navbar partial, renders links to all l_stories on view
-  DONE adds all_living_stories action to controller
-  DONE adds buttons for new story/view all stories to navbar on l_stories index page
-  DONE creates final submit button to go to actionable story
-  DONE allows editing of new story beginning on new view
+  creates, completes ev_comment model; creates migration for ev_comments
+  completes, migrates, seeds ev_comments table
+  creates, completes controller and views for ev_comments
+
+
   
 wg_works feature:
   finish writer's groups/wg_works association
@@ -129,6 +131,14 @@ JS
 
 ***************************** RAILS/JS PROJECT FINISHED TASKS ******************************
 
+l_stories feature:
+  
+  DONE adds l_stories_navbar partial to l_stories views
+  DONE adds route for all_living_stories; creates all_living_stories view, adds custom navbar partial, renders links to all l_stories on view
+  DONE adds all_living_stories action to controller
+  DONE adds buttons for new story/view all stories to navbar on l_stories index page
+  DONE creates final submit button to go to actionable story
+  DONE allows editing of new story beginning on new view
 
 [x] Finish out unwritten CRUD actions
 [x] Clean up all code for submission
