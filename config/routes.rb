@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
   get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
   get '/writer_groups_home', to: 'static#writer_groups_home'
-
-  get 'all_sf_events', to: 'static#all_sf_events'
   
   get '/funding_projects/:id/description', to: 'funding_projects#description'
 
