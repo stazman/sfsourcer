@@ -5,12 +5,11 @@ events feature:
   DONE creates, completes controller, routes for events
   DONE creates events edit, index, new, show views
   DONE moves contents from events view to events index view, deletes events view 
-  
   DONE replaces all_sf_events urls with events throughout app files; removes css code duplicate with home.css
   
-  removes css; 
-
-
+  DONE changes text in events index view to match current state of feature
+  spreads footer across width of page
+  centers panel spacing under stripe-row
   completes events index view
   completes events show view
   completes events edit view
@@ -245,6 +244,79 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 
 ***************************** UNUSED CODE ******************************
+
+events index
+
+<%#
+        <div class="container">
+            <div class="col-sm-5"> 
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                Literary Event
+                </div>
+                <br>
+                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+            </div>
+            </div>
+            </div>
+
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Film Events</strong></p></div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            Film Event
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            Film Event
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<div class="text-center .mx-auto px-{2}" id="main-with-containers">
+  <div class="stripe_row">
+    <div class="col-sm-10">
+      <div><p><strong>Gaming Events</strong></p></div>
+  </div>
+</div>
+
+
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            Gaming Event
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+            Gaming Event
+        </div>
+        <br>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+%>
 
 l_stories controller
 
