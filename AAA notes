@@ -2,7 +2,14 @@
 TO DO:
 
 events feature:
-  creates, completes controller, routes for events
+  DONE creates, completes controller, routes for events
+  creates events edit, index, new, show views
+
+  completes events index view
+  moves contents from all_sf_events view to events index view, deletes all_sf_events view
+  completes events show view
+  completes events edit view
+  completes events delete view
 
   creates, completes ev_user model; creates migration for ev_users
   completes, migrates, seeds ev_users table
