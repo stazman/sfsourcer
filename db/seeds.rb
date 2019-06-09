@@ -18,4 +18,6 @@
 # wg_work1 = WgWork.create!(author: "test", bio: "test", title: "test", version: "1", content: "a", writer_group_id: 1)
 
 # wg_comment1 = WgComment.create!(author: "Test commenter", content: "Test content", wg_work_id: 2)
-wg_commentpre1 = WgComment.create!(author: "Test commenter pre", content: "Test content pre", wg_work_id: 1)
+# wg_commentpre1 = WgComment.create!(author: "Test commenter pre", content: "Test content pre", wg_work_id: 1)
+
+test_event1 = Event.new(title: "Test Event 1", description: "This event will feature several famous writers.", location: "Event Center, San Dimas, California", date: "July 20, 2019", start_time: "3 p.m.", cost: "$10", contact_info: "John James, organizer, 555-555-5555")
