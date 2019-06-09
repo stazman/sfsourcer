@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   resources :writer_groups
   resources :wg_works
   resources :wg_comments
+  resources :events
   
   resources :lit_fan_authors do
     resources :lit_fan_works, only: [:index, :new, :show, :edit]
