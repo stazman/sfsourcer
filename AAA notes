@@ -6,10 +6,10 @@ events feature:
   DONE creates events edit, index, new, show views
   DONE moves contents from events view to events index view, deletes events view 
   DONE replaces all_sf_events urls with events throughout app files; removes css code duplicate with home.css
-  
   DONE changes text in events index view to match current state of feature
-  spreads footer across width of page
-  centers panel spacing under stripe-row
+  
+  DONE centers panels under stripe-row
+  adds all events button to navbar
   completes events index view
   completes events show view
   completes events edit view
