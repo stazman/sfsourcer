@@ -91,6 +91,7 @@ footer, #footer {
 .panel {
   text-align: left;
   height: 12.5em;
+  margin-left: 7%;
 }
 
 .stripe_row {
