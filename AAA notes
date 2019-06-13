@@ -2,8 +2,8 @@
 TO DO:
 
 funding_projects feature:
-  shows Karma Bucks from pledge just made
-
+    
+  DONE shows Karma Bucks from pledge just made
 
 events feature:
   DONE creates, completes controller, routes for events
