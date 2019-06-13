@@ -20,3 +20,5 @@ Rails.application.config.assets.precompile += %w( writer_groups.js )
 Rails.application.config.assets.precompile += %w( wg_works.js )
 
 Rails.application.config.assets.precompile += %w( l_stories.js )
+
+Rails.application.config.assets.precompile += %w( pledges.js )
