@@ -1,12 +1,22 @@
+<head>
+   <%= javascript_include_tag 'pledges.js' %>
+</head>
+
 <%= render 'layouts/header_navbar' %>
       
 <div class="container" id="more-margin">
 
     <h2>Thank you for your pledge of $<%= @pledge.amount %>!</h2>
     <br>
-    <div id="sourcer_credit" data-id="<%=@pledge.id%>"></div>
+    <a href="#" id="karma-bucks" data-id="<%= @pledge.id %>">
+        Check your Karma Bucks for this pledge
+    </a>
     <br><br>
-
+    <div>
+        <p id="new-karma-bucks">
+        </p>
+    </div>
+    <br><br>
     <%= link_to "Back to Sourcer Projects", funding_projects_path(@funding_project) %>
 
 </div>
