@@ -2,9 +2,10 @@
 TO DO:
 
 funding_projects feature:
+  DONE renders specific funding project page on choosing search result on funding projects home page
   removes bullets from funding project search results on funding projects home page
-  DONE clears search outputs on reclicking button, new inputs in search bar on funding projects home page
 
+  DONE clears search outputs on reclicking button, new inputs in search bar on funding projects home page
   DONE search bar renders funding project titles matching search input on funding projects home page
   DONE adjusts size of search bar on funding projects home page  
   DONE adds search input to funding projects home page sidenav
