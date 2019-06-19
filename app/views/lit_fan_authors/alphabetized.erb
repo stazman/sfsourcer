@@ -5,7 +5,7 @@
 <h4><%= link_to "Back to All Author Fanvorites", lit_fan_authors_path %></h4>
 <br>
 <% @lit_fan_authors.each do |lfa| %>
-    <ul class="no-bull">
+    <ul>
         <h3><li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li></h3>
     </ul>
 <% end %>

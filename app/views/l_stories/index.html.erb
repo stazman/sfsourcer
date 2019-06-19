@@ -32,7 +32,7 @@
       <div class="panel panel-primary">
         <h4>
           <% @l_stories.each do |l_story| %>
-            <ul class='no-bull'>
+            <ul>
               <li>
                 <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[0]%>
               </li>
@@ -48,7 +48,7 @@
       <div class="panel panel-primary">
         <h4>
           <% @l_stories.each do |l_story| %>
-            <ul class='no-bull'>
+            <ul>
               <li><%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[1]%>
               </li>
             </ul>
@@ -63,7 +63,7 @@
       <div class="panel panel-primary">
         <h4>
           <% @l_stories.each do |l_story| %>
-            <ul class='no-bull'>
+            <ul>
               <li><%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[2]%>
               </li>
             </ul>
