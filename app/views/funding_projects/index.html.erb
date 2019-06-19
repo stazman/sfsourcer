@@ -4,8 +4,12 @@
 
   <div class="jumbotron">
     <div class="container text-center">
-      <h1>All SFSourcer Projects</h1>      
-      <p>Help Great SF Projects Get Made</p>
+      <h1>
+        All SFSourcer Projects
+      </h1>      
+      <p>
+        Help Great SF Projects Get Made
+      </p>
     </div>
   </div>
 
@@ -17,15 +21,27 @@
         <br>
         <p>
           <a href="funding_projects/new">
-            <h5>Create a New Project</h5>
+            <h5>
+              Create a New Project
+            </h5>
             <br><br>
           </a>
         </p>
         <p>
           <a href="#">
-            <h5>
-              Search For Specific Project/Keyword (Under Construction)
-            </h5>
+          <h5>
+            <form id="fps-search-form">
+            Search Projects
+          </h5>
+          <input id="fps-search-input" type="text"/>
+          <br><br>
+          <input type="submit" value="Search"/>
+            </form>
+          <br><br>
+              <div id="fps_search_results">
+                <ul class="no_bull">
+                </ul>
+              </div>
             <br><br>
           </a>
         </p>
@@ -54,7 +70,11 @@
       <div class="text-center .mx-auto px-{1}">
         <div class="stripe_row">
           <div class="col-sm-10">
-            <div><p><strong>Most Recent Projects</strong></p></div>
+            <div>
+              <p>
+                <strong>Most Recent Projects</strong>
+              </p>
+            </div>
         </div>
       </div>
       <div class="text-center .mx-auto px-{1}">
@@ -63,12 +83,13 @@
             <div class="col-sm-3">
               <div class="panel panel-primary">
                 <div class="panel-body">
-
-                  <h1><%= link_to @funding_projects[6].title, funding_project_path(@funding_projects[6]) %></h1>
-
+                  <h1>
+                    <%= link_to @funding_projects[6].title, funding_project_path(@funding_projects[6]) %>
+                  </h1>
                   <%= render partial: "fpd", locals: {fpd: @funding_projects[6]} %>
                   <br>
-                  <p id="text"></p>
+                  <p id="text">
+                  </p>
                 </div>
               </div>
             </div>
@@ -76,12 +97,13 @@
             <div class="col-sm-3">
               <div class="panel panel-primary">
                 <div class="panel-body">
-
-                  <h1><%= link_to @funding_projects[5].title, funding_project_path(@funding_projects[5]) %></h1>
-
+                  <h1>
+                    <%= link_to @funding_projects[5].title, funding_project_path(@funding_projects[5]) %>
+                  </h1>
                   <%= render partial: "fpd", locals: {fpd: @funding_projects[5]} %>
                   <br>
-                  <p id="text"></p>
+                  <p id="text">
+                  </p>
                 </div>
               </div>
             </div>
@@ -89,12 +111,13 @@
             <div class="col-sm-3">
               <div class="panel panel-primary">
                 <div class="panel-body">
-
-                  <h1><%= link_to @funding_projects[4].title, funding_project_path(@funding_projects[4]) %></h1>
-
+                  <h1>
+                    <%= link_to @funding_projects[4].title, funding_project_path(@funding_projects[4]) %>
+                  </h1>
                   <%= render partial: "fpd", locals: {fpd: @funding_projects[4]} %>
                   <br>
-                  <p id="text"></p>
+                  <p id="text">
+                  </p>
                 </div>
               </div>
             </div>
