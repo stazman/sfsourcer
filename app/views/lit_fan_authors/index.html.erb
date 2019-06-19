@@ -23,7 +23,7 @@
       <br>
       <h4>Choose an author below to see the author's works, FanClub page and FanWiki, as well as news and events about the author:</h4><br>
       <% @lit_fan_authors.each do |lfa| %>
-        <ul class="no-bull">
+        <ul>
           <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li>
         </ul>
       <% end %>
