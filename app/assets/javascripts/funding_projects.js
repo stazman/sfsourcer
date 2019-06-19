@@ -29,45 +29,6 @@ $(function () {
   });
 })
 
-//this function kept here for sourcer credit feature to be completed
-
-// $(function () {
-
-//   let pledgeId = parseInt($("#sourcer_credit").attr("data-id"));
-
-//   $.get("/pledges/" + pledgeId + ".json", function(data) {
-
-//     let $getCredit = $("#sourcer_credit")
-
-//     let pledge = data;
-
-//     let pledgeAmount = pledge["amount"]
-
-//     function creditMaker (multiplier){
-//       return function creditMultiplier (pledgeAmount){
-//           multiplier * pledgeAmount
-//       };
-//     };
-
-//     const multiplyByOnePercent = creditMaker(.01);
-
-//     multiplyByOnePercent(pledgeAmount);
-
-//     if (pledgeAmount <= 50 ){
-
-//     $getCredit.append(multiplyByOnePercent);
-
-//     } else if (pledgeAmount > 50 ){
-      
-//       const multiplyByTwoPercent = creditMaker(.02);
-      
-//       multiplyByTwoPercent(pledgeAmount);
-      
-//       $getCredit.append(multiplyByTwpPercent);
-//     };
-//   });
-// });
-
 $(function(){
   $("a.load_all_fps").on("click", function(e){
     $.ajax({
@@ -83,5 +44,26 @@ $(function(){
       });
     });  
     e.preventDefault();
+  });
+});
+
+$(function(){
+  $("form").submit(function(e){
+    e.preventDefault();
+    $.ajax({
+      method: "get",
+      dataType: "json",
+      url: "/funding_projects"
+    }).success(function(data){
+
+      const fp_input = $("#fps_search_input").val();
+
+      data.filter(function(fp){
+
+        if (fp.title.toLowerCase().includes(fp_input)){
+          $("#fps_search_results").append("<li>" + fp.title + "</li>");
+        };
+      });
+    });
   });
 });
