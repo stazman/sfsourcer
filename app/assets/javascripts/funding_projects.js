@@ -32,15 +32,13 @@ $(function () {
 $(function(){
   $("a.load_all_fps").on("click", function(e){
     $.ajax({
-      url: "http://localhost:8080/funding_projects",
+      url: "/funding_projects",
       method: 'get',
       dataType: 'json'
     }).done(function(json){
 
-      let $ul = $("div.all_fps ul");
-
       json.forEach(function(funding_project){
-        $ul.append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "' >" + funding_project.title + "</a>" + "</li>");
+        $("div.all_fps ul").append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "' >" + funding_project.title + "</a>" + "</li>");
       });
     });  
     e.preventDefault();
@@ -59,11 +57,11 @@ $(function(){
       const fp_input = $("#fps_search_input").val();
 
       $("#fps_search_results").html("")
-      
-      data.filter(function(fp){
 
+      data.filter(function(fp){
+        
         if (fp.title.toLowerCase().includes(fp_input)){
-          $("#fps_search_results").append("<li>" + fp.title + "</li>");
+          $("#fps_search_results").append("<li>" + "<a " + "href='" + "/funding_projects/" + fp.id + "' >" + fp.title + "</a>" + "</li>");
         };
       });
     });
