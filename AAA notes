@@ -2,9 +2,9 @@
 TO DO:
 
 funding_projects feature:
-  DONE renders specific funding project page on choosing search result on funding projects home page
-  removes bullets from funding project search results on funding projects home page
+  DONE removes bullets from funding project search results on funding projects home page; changes no-bull class to all ul, li selectors
 
+  DONE renders specific funding project page on choosing search result on funding projects home page
   DONE clears search outputs on reclicking button, new inputs in search bar on funding projects home page
   DONE search bar renders funding project titles matching search input on funding projects home page
   DONE adjusts size of search bar on funding projects home page  
@@ -12,14 +12,7 @@ funding_projects feature:
   DONE shows Karma Bucks from pledge just made
 
 events feature:
-  DONE creates, completes controller, routes for events
-  DONE creates events edit, index, new, show views
-  DONE moves contents from events view to events index view, deletes events view 
-  DONE replaces all_sf_events urls with events throughout app files; removes css code duplicate with home.css
-  DONE changes text in events index view to match current state of feature
-  
-  DONE centers panels under stripe-row
-  adds all events button to navbar
+    adds all events button to navbar
   completes events index view
   completes events show view
   completes events edit view
@@ -33,8 +26,14 @@ events feature:
   completes, migrates, seeds ev_comments table
   creates, completes controller and views for ev_comments
 
-
+  DONE creates, completes controller, routes for events
+  DONE creates events edit, index, new, show views
+  DONE moves contents from events view to events index view, deletes events view 
+  DONE replaces all_sf_events urls with events throughout app files; removes css code duplicate with home.css
+  DONE changes text in events index view to match current state of feature
   
+  DONE centers panels under stripe-row
+
 wg_works feature:
   finish writer's groups/wg_works association
   add js functionality to wg_works for a writer_group:
