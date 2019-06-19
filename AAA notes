@@ -2,8 +2,10 @@
 TO DO:
 
 funding_projects feature:
-  adjusts size of search bar on funding projects home page
-  
+  removes bullets from funding project search results on funding projects home page
+  DONE search bar renders funding project titles matching search input on funding projects home page
+
+  DONE adjusts size of search bar on funding projects home page  
   DONE adds search input to funding projects home page sidenav
   DONE shows Karma Bucks from pledge just made
 
@@ -250,6 +252,47 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 
 ***************************** UNUSED CODE ******************************
+
+
+
+//this function kept here for sourcer credit feature to be completed
+
+// $(function () {
+
+//   let pledgeId = parseInt($("#sourcer_credit").attr("data-id"));
+
+//   $.get("/pledges/" + pledgeId + ".json", function(data) {
+
+//     let $getCredit = $("#sourcer_credit")
+
+//     let pledge = data;
+
+//     let pledgeAmount = pledge["amount"]
+
+//     function creditMaker (multiplier){
+//       return function creditMultiplier (pledgeAmount){
+//           multiplier * pledgeAmount
+//       };
+//     };
+
+//     const multiplyByOnePercent = creditMaker(.01);
+
+//     multiplyByOnePercent(pledgeAmount);
+
+//     if (pledgeAmount <= 50 ){
+
+//     $getCredit.append(multiplyByOnePercent);
+
+//     } else if (pledgeAmount > 50 ){
+      
+//       const multiplyByTwoPercent = creditMaker(.02);
+      
+//       multiplyByTwoPercent(pledgeAmount);
+      
+//       $getCredit.append(multiplyByTwpPercent);
+//     };
+//   });
+// });
 
 events index
 
