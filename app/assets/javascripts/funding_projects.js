@@ -58,6 +58,8 @@ $(function(){
 
       const fp_input = $("#fps_search_input").val();
 
+      $("#fps_search_results").html("")
+      
       data.filter(function(fp){
 
         if (fp.title.toLowerCase().includes(fp_input)){
