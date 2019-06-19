@@ -110,7 +110,7 @@ button {
   font-size: 14px;
 }
 
-.no-bull {
+ul, li {
   list-style-type: none;
 }
 
