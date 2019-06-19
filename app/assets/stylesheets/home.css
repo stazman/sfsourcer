@@ -126,3 +126,8 @@ ul:not(.nav navbar-nav) {
   margin: 2%; 
   padding: 1%;
 }
+
+.search-bar input {
+  height: 30%;
+  width: 95%;
+}
