@@ -1,3 +1,10 @@
+@media (min-width: 576px) {
+  .jumbotron {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+}
+
 @media only all and (max-width: 320px) {
   .panel {
     font-size: 22px;
