@@ -1,131 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>
+      All SFSourcer Projects
+    </h1>      
+    <p>
+      Help Great SF Projects Get Made
+    </p>
+  </div>
+</div>
 
-  <div class="jumbotron">
-    <div class="container text-center">
-      <h1>
-        All SFSourcer Projects
-      </h1>      
+<%= render 'layouts/header_navbar' %>
+
+<div class="container-fluid">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <br>
       <p>
-        Help Great SF Projects Get Made
+        <a href="funding_projects/new">
+          <h5>
+            Create a New Project
+          </h5>
+          <br><br>
+        </a>
       </p>
+      <p>
+        <a href="#">
+        <h5>
+          <form id="fps_search_form">
+          Search Projects
+        </h5>
+        <div class="search-bar">
+          <h6>
+            <input id="fps_search_input" type="text"/>
+          </h6>
+        </div>
+        <input type="submit" value="Search"/>
+          </form>
+        <br><br>
+          <div id="fps_search_results">
+            <ul>
+            </ul>
+          </div>
+        <br>
+      </a>
+    </p>
+    <p>
+      <a href="#">
+        <h5>
+          Browse SFSourcer Projects by Category (Under Construction)
+        </h5>
+        <br><br>
+      </a>
+    </p>
+    <div>
+      <a class="load_all_fps" href="/funding_projects">
+        <h5>
+          Browse Through All SFSourcer Projects
+        </h5>
+      </a> 
+    </div>
+
+    <div class="all_fps">
+      <ul>
+      </ul>
     </div>
   </div>
 
-  <%= render 'layouts/header_navbar' %>
-
-  <div class="container-fluid">    
-    <div class="row content">
-      <div class="col-sm-2 sidenav">
-        <br>
-        <p>
-          <a href="funding_projects/new">
-            <h5>
-              Create a New Project
-            </h5>
-            <br><br>
-          </a>
-        </p>
-        <p>
-          <a href="#">
-          <h5>
-            <form id="fps_search_form">
-            Search Projects
-          </h5>
-          <div class="search-bar">
-            <h6>
-              <input id="fps_search_input" type="text"/>
-            </h6>
-          </div>
-          <input type="submit" value="Search"/>
-            </form>
-          <br><br>
-              <div id="fps_search_results">
-                <ul>
-                </ul>
-              </div>
-            <br>
-          </a>
-        </p>
-        <p>
-          <a href="#">
-            <h5>
-              Browse SFSourcer Projects by Category (Under Construction)
-            </h5>
-            <br><br>
-          </a>
-        </p>
+  <div class="text-center .mx-auto px-{1}">
+    <div class="stripe_row">
+      <div class="col-sm-10">
         <div>
-          <a class="load_all_fps" href="/funding_projects">
-            <h5>
-              Browse Through All SFSourcer Projects
-            </h5>
-          </a> 
+          <p>
+            <strong>Most Recent Projects</strong>
+          </p>
         </div>
-
-        <div class="all_fps">
-          <ul>
-          </ul>
-        </div>
-      </div>
-
-      <div class="text-center .mx-auto px-{1}">
-        <div class="stripe_row">
-          <div class="col-sm-10">
-            <div>
-              <p>
-                <strong>Most Recent Projects</strong>
+    </div>
+  </div>
+  <div class="text-center .mx-auto px-{1}">
+    <div class="container">
+      <div class="row content">
+        <div class="col-sm-3">
+          <div class="panel panel-primary">
+            <div class="panel-body">
+              <h1>
+                <%= link_to @funding_projects[6].title, funding_project_path(@funding_projects[6]) %>
+              </h1>
+              <%= render partial: "fpd", locals: {fpd: @funding_projects[6]} %>
+              <br>
+              <p id="text">
               </p>
             </div>
+          </div>
         </div>
-      </div>
-      <div class="text-center .mx-auto px-{1}">
-        <div class="container">
-          <div class="row content">
-            <div class="col-sm-3">
-              <div class="panel panel-primary">
-                <div class="panel-body">
-                  <h1>
-                    <%= link_to @funding_projects[6].title, funding_project_path(@funding_projects[6]) %>
-                  </h1>
-                  <%= render partial: "fpd", locals: {fpd: @funding_projects[6]} %>
-                  <br>
-                  <p id="text">
-                  </p>
-                </div>
-              </div>
+        <div class="row content">
+        <div class="col-sm-3">
+          <div class="panel panel-primary">
+            <div class="panel-body">
+              <h1>
+                <%= link_to @funding_projects[5].title, funding_project_path(@funding_projects[5]) %>
+              </h1>
+              <%= render partial: "fpd", locals: {fpd: @funding_projects[5]} %>
+              <br>
+              <p id="text">
+              </p>
             </div>
-            <div class="row content">
-            <div class="col-sm-3">
-              <div class="panel panel-primary">
-                <div class="panel-body">
-                  <h1>
-                    <%= link_to @funding_projects[5].title, funding_project_path(@funding_projects[5]) %>
-                  </h1>
-                  <%= render partial: "fpd", locals: {fpd: @funding_projects[5]} %>
-                  <br>
-                  <p id="text">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row content">
-            <div class="col-sm-3">
-              <div class="panel panel-primary">
-                <div class="panel-body">
-                  <h1>
-                    <%= link_to @funding_projects[4].title, funding_project_path(@funding_projects[4]) %>
-                  </h1>
-                  <%= render partial: "fpd", locals: {fpd: @funding_projects[4]} %>
-                  <br>
-                  <p id="text">
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="row content">
+        <div class="col-sm-3">
+          <div class="panel panel-primary">
+            <div class="panel-body">
+              <h1>
+                <%= link_to @funding_projects[4].title, funding_project_path(@funding_projects[4]) %>
+              </h1>
+              <%= render partial: "fpd", locals: {fpd: @funding_projects[4]} %>
+              <br>
+              <p id="text">
+              </p>
             </div>
           </div>
         </div>
       </div>
-</body>
-</html>
+    </div>
+  </div>
