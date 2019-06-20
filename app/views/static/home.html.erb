@@ -1,99 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-
-  <div class="jumbotron">
-    <div class="container text-center">
-      <h1>Welcome to SFSourcer!</h1>      
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>
+      Welcome to SFSourcer!
+    </h1>      
+    <p>
       Your One-stop Platform for All Things SF
-    </div>
+    </p>
   </div>
+</div>
 
-  <%= render 'layouts/header_navbar' %>
+<%= render 'layouts/header_navbar' %>
 
-  <div class="text-center .mx-auto px-{2}">
-    <div class="stripe_row">
-      <div class="col-sm-12">
-        <div><strong>Funding SF</strong></div>
-    </div>
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-12">
+      <div>
+        <strong>Funding SF</strong>
+      </div>
   </div>
+</div>
 
-  <div class="container">   
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="panel panel-primary">
-          <div class="panel-body"><%= link_to "Fund an SF Project", funding_projects_path %></div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+<div class="container">   
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <%= link_to "Fund an SF Project", funding_projects_path %>
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
         </div>
       </div>
-      <div class="col-sm-6"> 
-        <div class="panel panel-primary">
-          <div class="panel-body"><%= link_to "Create an SF Project", new_funding_project_path %></div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <div class="text-center .mx-auto px-{2}">
-    <div class="stripe_row">
-      <div class="col-sm-12">
-        <div><strong>Writing SF</strong></div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-body"><%= link_to "Write a Living Story with Other SFSourcer Members", l_stories_path %></div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+    <div class="col-sm-6"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <%= link_to "Create an SF Project", new_funding_project_path %>
         </div>
-      </div>
-      <div class="col-sm-4"> 
-        <div class="panel panel-primary">
-          <div class="panel-body"><%= link_to "Get Help With Your Writing in Our Writer Groups", "writer_groups_home" %></div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        </div>
-      </div>
-      <div class="col-sm-4"> 
-        <div class="panel panel-primary">
-          <div class="panel-body">Talk About Your Writing (under construction)</div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="text-center .mx-auto px-{2}">
-    <div class="stripe_row">
-      <div class="col-sm-12">
-        <div><strong>Talking SF</strong></div>
-    </div>
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-12">
+      <div>
+        <strong>Writing SF</strong>
+      </div>
   </div>
+</div>
 
-  <div class="container"> 
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-body"><%= link_to "Talk About Your SF Fanvorites and Add to Our FanWiki", '/all_sf_fanvorites' %></div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <%= link_to "Write a Living Story with Other SFSourcer Members", l_stories_path %>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-body">Check Out Our ClubSites (under construction)</div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-body">Make and Fund Your Own FanPage (under construction)</div>
-          <div class="panel-body"><img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
         </div>
       </div>
     </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <%= link_to "Get Help With Your Writing in Our Writer Groups", "writer_groups_home" %>
+          </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          Talk About Your Writing (under construction)
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</div>
 
+<div class="text-center .mx-auto px-{2}">
+  <div class="stripe_row">
+    <div class="col-sm-12">
+      <div>
+        <strong>Talking SF</strong>
+      </div>
+  </div>
+</div>
+
+<div class="container"> 
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <%= link_to "Talk About Your SF Fanvorites and Add to Our FanWiki", '/all_sf_fanvorites' %>
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          Check Out Our ClubSites (under construction)
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">Make and Fund Your Own FanPage (under construction)
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

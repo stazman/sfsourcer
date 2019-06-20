@@ -1,7 +1,9 @@
 @media (min-width: 576px) {
   .jumbotron {
+    background-color: white;
     padding-bottom: 2rem;
     padding-top: 1rem;
+    margin: 0;
   }
 }
 
@@ -10,8 +12,10 @@
     font-size: 22px;
     color: navy;
     font-weight: bold;
-    height: 300px;
     width: 300px;
+    text-align: left;
+    height: 12.5em;
+    margin-left: 7%;
   }
   .panel-body {
     height: auto;
@@ -24,6 +28,9 @@
     color: navy;
     font-weight: bold;
     height: 350px;
+    text-align: left;
+    height: 14.5em;
+    margin-left: 7%;  
   }
   .panel-body {
     height: auto;
@@ -31,6 +38,23 @@
   .panel-body img {
     height: auto;
   }
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background-color: white;
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  margin-bottom: 2%;
+  border-radius: 0;
+}
+
+.navbar-nav{
+  background-color: white;
 }
 
 .field_with_errors {
@@ -50,8 +74,8 @@
 }
 
 .info {
-height: 290px;
-text-align: left;
+  height: 290px;
+  text-align: left;
 }
 
 .row.content {height: auto;}
@@ -69,21 +93,13 @@ text-align: left;
   .row.content {height: auto;} 
 }
 
-.navbar {
-  margin-bottom: 50px;
-  border-radius: 0;
-}
-
-.jumbotron {
-  margin-bottom: 0;
-}
-
 .stripe_row {
  background-color: rgb(242, 242, 242);
  padding-top: 2%;
  padding-bottom: 5%;
  display: block;
  margin-bottom: 1.5%;
+ font-size: 26px;
 }
  
 footer, #footer {
@@ -99,10 +115,6 @@ footer, #footer {
   text-align: left;
   height: 12.5em;
   margin-left: 7%;
-}
-
-.stripe_row {
-  font-size: 26px;
 }
 
 .medium-text {
@@ -121,12 +133,12 @@ ul, li {
   list-style-type: none;
 }
 
-.container h3 #more-margin {
-  margin-left: 3%;
+.container{
+  padding: 0;
 }
 
-.container {
-  padding: 0;
+.container h3 #more-margin {
+  margin-left: 3%;
 }
 
 ul:not(.nav navbar-nav) {
