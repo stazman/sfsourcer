@@ -46,11 +46,12 @@
  }
  
  .bg {
-  background: url("star.jpg");
+  width: 100%;
   height: 100%;
+  background: url("background-3581188_960_720.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 200%;
+  background-size: 100% 560%;
  }
  
  .jumbotron {
