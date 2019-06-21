@@ -1,15 +1,24 @@
 
 TO DO:
 
-funding_projects feature:
-  DONE removes bullets from funding project search results on funding projects home page; changes no-bull class to all ul, li selectors
+styling:
+  DONE adds new background image to assets, implements across features; changes text color in jumbotron, _header_navbar buttons
+  changes custom navbars in custom wg_works new, writer_group, l_stories views to _header_navbar standard
+  changes text color in navbar buttons on l_stories views, writer_group new view to _header_navbar standard
+  removes background for striped-row
+  changes color of text in striped-row
+  changes text color for sidenav text, panel text
+  changes background color of panels
+  changes text color for general container content
+  decreases size of jumbotron text
+  decreases size of striped-row, panel title text
+  increases size of header navbar text across all features
+  changes background color, text color for standalone buttons, text color for standalone links, links in lists
+  changes background color for text fields, areas
+  adds images to replace placeholders on all pages
+  changes text to bold in footer, jumbotron
 
-  DONE renders specific funding project page on choosing search result on funding projects home page
-  DONE clears search outputs on reclicking button, new inputs in search bar on funding projects home page
-  DONE search bar renders funding project titles matching search input on funding projects home page
-  DONE adjusts size of search bar on funding projects home page  
-  DONE adds search input to funding projects home page sidenav
-  DONE shows Karma Bucks from pledge just made
+
 
 events feature:
     adds all events button to navbar
@@ -150,6 +159,17 @@ JS
 
 
 ***************************** RAILS/JS PROJECT FINISHED TASKS ******************************
+
+funding_projects feature:
+
+  DONE removes bullets from funding project search results on funding projects home page;changes no-bull class to all ul, li selectors
+  DONE renders specific funding project page on choosing search result on funding projects home page
+  DONE clears search outputs on reclicking button, new inputs in search bar on funding projects home page
+  DONE search bar renders funding project titles matching search input on funding projects home page
+  DONE adjusts size of search bar on funding projects home page  
+  DONE adds search input to funding projects home page sidenav
+  DONE shows Karma Bucks from pledge just made
+
 
 l_stories feature:
   
