@@ -1,9 +1,7 @@
 TO DO:
 
 styling:
-  DONE replaces navbar on new, individual wg_works pages with newly styled _header_navbar
-  changes text color in navbar buttons on l_stories views, writer_group new view to _header_navbar standard
-  removes background for striped-row
+  DONE changes background height, background, text color in stripe rows
   changes color of text in striped-row
   changes text color for sidenav text, panel text
   changes background color of panels
@@ -16,6 +14,7 @@ styling:
   adds images to replace placeholders on all pages
   changes text to bold in footer, jumbotron
 
+  DONE replaces navbar on new, individual wg_works pages with newly styled _header_navbar
   DONE replaces navbar on individual writer group page with newly styled _header_navbar
   DONE changes custom l_stories navbar to match new _header_navbar style standard
   DONE adds new background image to assets, implements across features; changes text color in jumbotron, _header_navbar buttons

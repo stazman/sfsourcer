@@ -118,12 +118,13 @@ body, html {
 }
   
 .stripe_row {
-  background-color: rgb(242, 242, 242);
-  padding-top: 2%;
-  padding-bottom: 5%;
+  background-color: #d4d4d4;
+  padding-bottom: 4%;
   display: block;
+  margin-top: 2%;
   margin-bottom: 1.5%;
   font-size: 26px;
+  color: rgb(4, 4, 58);
 }
 
 footer, #footer {
