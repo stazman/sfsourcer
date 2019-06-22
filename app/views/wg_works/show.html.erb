@@ -1,98 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <%= javascript_include_tag 'wg_works'  %>
-   </head>
-   <body>
+<head>
+   <%= javascript_include_tag 'wg_works'  %>
+</head>
 
-   <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-         </div>
-         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features <span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                  <li><a href="/funding_projects", class="load_fps">Fund an SF Project</a></li>
-                  <li><a href="/funding_projects/new">Create an SF Project</a></li>
-                  <li><a href="/l_stories">Living Stories</a></li>
-                  <li><a href="/writer_groups_home">Writer's Groups</a></li>
-                  <li><a href="#">Writing Help (under construction)</a></li>
-                  <li><a href="/all_sf_fanvorites">Fanvorites</a></li>
-                  <li><a href="#">FanWiki (under construction)</a></li>
-                  <li><a href="#">ClubSites (under construction)</a></li>
-                  <li><a href="#">FanPages (under construction)</a></li>
-                  <li><a href="#">Your FanPage (under construction)</a></li>
-               </ul>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            </ul>
+<%= render partial: "layouts/header_navbar" %>
 
-            <ul class="nav navbar-nav navbar-right">
-               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign In/Sign Up/Log Out <span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                  <li><a href="/sessions/new">Log in</a></li>
-                  <li><a href="/users/new">Sign up</a></li>
-                  <li><a href="/logout">Log out</a></li>
-               </ul>
-            </ul>
-         </div>
-      </div>
-   </nav>
+<div class="container" id="more-margin">
 
-   <div class="container" id="more-margin">
+   <h2>
+      Title: <%= @wg_work.title %>
+   </h2>
+   <br>
+   <h4>
+      Version: <%= @wg_work.version %>
+   </h4>
+   <br>
+   <h3>
+      Author: <%= @wg_work.author %>
+   </h3>
+   <br>
+   <h4>
+      Author Bio
+   </h4>
+   <p>
+      <%= @wg_work.bio %>
+   </p>
+   <br>
+   <br>
+   <h3>
+      Work to be Critiqued
+   </h3>
+   <br>
+   <p>
+      <%= @wg_work.content %>
+   </p>
+   <br>
+   <br>
+   <h4>
+      <%= link_to  "Back to Writer's Groups Home Page", writer_groups_home_path %>
+   </h4>
+   <br>
+   <h3>
+      Make a New Critique/Comment
+   </h3>
+   <br>
+   <%= form_for([@wg_work, @wg_comment]) do |f| %>
+      <%= f.label "Your Name" %>
+      <%= f.text_field :author %><br><br>
+      <%= f.label "Write critique/comment" %>
+      <%= f.text_area :content %><br><br>
+      <%= f.submit "Submit" %>
+   <% end %>
+   <br>
+   <br>
+   <h3>
+      Feedback
+   </h3>
+   <br>
+   <% @wg_work.wg_comments.each do |c| %>
+      <ul>
+         <li><%= c.content %></li>
+         <li><%= c.author %></li>
+         <br>
+         <% end %>
+      </ul>
 
-      <h2>Title: <%= @wg_work.title %></h2>
-      <br>
-      <h4>Version: <%= @wg_work.version %></h4>
-      <br>
-      <h3>Author: <%= @wg_work.author %></h3>
-      <br>
-      <h4>Author Bio</h4>
-      <p><%= @wg_work.bio %></p>
-      <br>
-      <br>
-      <h3>Work to be Critiqued</h3>
-      <br>
-      <p><%= @wg_work.content %></p>
-      <br>
-      <br>
-      <h4><%= link_to  "Back to Writer's Groups Home Page", writer_groups_home_path %>
-      <br>
-      <br>
-      <h3>Make a New Critique/Comment</h3>
-      <br>
-      <%= form_for([@wg_work, @wg_comment]) do |f| %>
-         <%= f.label "Your Name" %>
-         <%= f.text_field :author %><br><br>
-         <%= f.label "Write critique/comment" %>
-         <%= f.text_area :content %><br><br>
-         <%= f.submit "Submit" %>
-      <% end %>
-      <br>
-      <br>
-      <h3>Feedback</h3>
-      <br>
-      <% @wg_work.wg_comments.each do |c| %>
-         <ul>
-            <li><%= c.content %></li>
-            <li><%= c.author %></li>
-            <br>
-            <% end %>
-         </ul>
-
-   </div>
-      
-   <body>
-</html>
-
-
-
+</div>
