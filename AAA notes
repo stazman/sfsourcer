@@ -1,8 +1,7 @@
 TO DO:
 
 styling:
-  DONE reorganizes panels, edits content of panel headings on app home page; removes living stories and FanPages panels
-  changes background to vertical image
+  DONE adds vert-space.jpg to assets, changes, adjusts background to vert-space.jpg
   changes text color for general container content
   decreases size of jumbotron text
   increases size of header navbar text across all features
@@ -11,6 +10,7 @@ styling:
   adds images to replace placeholders on all pages
   changes text to bold in footer, jumbotron
 
+  DONE reorganizes panels, edits content of panel headings on app home page; removes living stories and FanPages panels
   DONE adds panel-heading to remaining primary-panel containers on app home page
   DONE adds panel heading, sized image to first panel-primary container on home page; creates, moves background images to subfolder; creates feature subfolder for, adds images to home pages images
   DONE changes background color, height of panel-primary areas across app; adds panel-body divs to living stories home page panel
@@ -270,6 +270,13 @@ add function for each user to be "up" and claim the spot (with a time limit) and
 
 add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
+
+
+***************************** Photo Credits ******************************
+
+vert-space.jpg
+
+Image by <a href="https://pixabay.com/users/thobar-94601/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3404356">Thobar BIGS Design</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3404356">Pixabay</a>
 
 
 
