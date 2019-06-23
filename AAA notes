@@ -1,16 +1,18 @@
 TO DO:
 
 styling:
-  DONE changes background color, height of panel-primary areas across app; adds panel-body divs to living stories home page panel
+  
+  DONE adds panel heading, sized image to first panel-primary container on home page; creates, moves background images to subfolder; creates feature subfolder for, adds images to home pages images
+  
   changes text color for general container content
   decreases size of jumbotron text
-  decreases size of striped-row, panel title text
   increases size of header navbar text across all features
   changes background color, text color for standalone buttons, text color for standalone links, links in lists
   changes background color for text fields, areas
   adds images to replace placeholders on all pages
   changes text to bold in footer, jumbotron
 
+  DONE changes background color, height of panel-primary areas across app; adds panel-body divs to living stories home page panel
   DONE changes link color
   DONE changes background height, background, text color in stripe rows
   DONE replaces navbar on new, individual wg_works pages with newly styled _header_navbar
