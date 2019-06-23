@@ -19,7 +19,8 @@
   margin-left: 7%;
 }
   .panel-body {
-    height: auto;
+    height: 50%;
+    background-color: #d4d4d4;
   }
 }
 
@@ -33,7 +34,8 @@
   margin-left: 7%; 
 }
   .panel-body {
-    height: auto;
+    height: 50%;
+    background-color: #d4d4d4;
   }
   .panel-body img {
     height: auto;
