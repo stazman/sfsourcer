@@ -1,9 +1,8 @@
 TO DO:
 
 styling:
-  
-  DONE adds panel heading, sized image to first panel-primary container on home page; creates, moves background images to subfolder; creates feature subfolder for, adds images to home pages images
-  
+  DONE reorganizes panels, edits content of panel headings on app home page; removes living stories and FanPages panels
+  changes background to vertical image
   changes text color for general container content
   decreases size of jumbotron text
   increases size of header navbar text across all features
@@ -12,6 +11,8 @@ styling:
   adds images to replace placeholders on all pages
   changes text to bold in footer, jumbotron
 
+  DONE adds panel-heading to remaining primary-panel containers on app home page
+  DONE adds panel heading, sized image to first panel-primary container on home page; creates, moves background images to subfolder; creates feature subfolder for, adds images to home pages images
   DONE changes background color, height of panel-primary areas across app; adds panel-body divs to living stories home page panel
   DONE changes link color
   DONE changes background height, background, text color in stripe rows
@@ -275,7 +276,29 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 ***************************** UNUSED CODE ******************************
 
+//home page panel
 
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Make and Fund Your Own FanPage (under construction)
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <%= link_to "Write a Living Story", l_stories_path %>
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/40x15?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+    </div>
 
 //this function kept here for sourcer credit feature to be completed
 
