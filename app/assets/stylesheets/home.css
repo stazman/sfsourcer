@@ -87,6 +87,10 @@ body, html {
   color: rgb(4, 4, 58);
 }
 
+a {
+  color: rgb(4, 4, 58);
+}
+
 .field_with_errors {
   padding: 2px;
   background-color: red;
