@@ -21,16 +21,20 @@
 <div class="text-center .mx-auto px-{2}">
   <div class="stripe_row">
     <div class="col-sm-12">
-      <div><p><strong>Recent Stories</strong></p></div>
+      <div>
+        <p>
+          <strong>Recent Stories</strong>
+        </p>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="container" style="text-align:center;">   
+<div class="container">   
   <div class="row">
-  
+
     <div class="col-sm-4" style="text-align:center;">
       <div class="panel panel-primary">
-        <h4>
+        <div class="panel-body">
           <% @l_stories.each do |l_story| %>
             <ul>
               <li>
@@ -38,38 +42,43 @@
               </li>
             </ul>
           <% end %>
-        </h4>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
+          </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
         </div>
       </div>
     </div>
   
     <div class="col-sm-4" style="text-align:center;">
       <div class="panel panel-primary">
-        <h4>
+        <div class="panel-body">
           <% @l_stories.each do |l_story| %>
             <ul>
-              <li><%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[1]%>
+              <li>
+                <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[1]%>
               </li>
             </ul>
           <% end %>
-        </h4>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
         </div>
       </div>
     </div>
 
     <div class="col-sm-4" style="text-align:center;">
       <div class="panel panel-primary">
-        <h4>
+        <div class="panel-body">
           <% @l_stories.each do |l_story| %>
             <ul>
-              <li><%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[2]%>
+              <li>
+                <%= link_to l_story.title, l_story_path(l_story) if l_story == @l_stories[2]%>
               </li>
             </ul>
           <% end %>
-        </h4>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
+        </div>
+        <div class="panel-body">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  style="width:100%" alt="Image">
         </div>
       </div>
     </div>

@@ -1,9 +1,7 @@
 TO DO:
 
 styling:
-  DONE changes background height, background, text color in stripe rows
-  changes text color for sidenav text, panel text
-  changes background color of panels
+  DONE changes background color, height of panel-primary areas across app; adds panel-body divs to living stories home page panel
   changes text color for general container content
   decreases size of jumbotron text
   decreases size of striped-row, panel title text
@@ -13,6 +11,8 @@ styling:
   adds images to replace placeholders on all pages
   changes text to bold in footer, jumbotron
 
+  DONE changes link color
+  DONE changes background height, background, text color in stripe rows
   DONE replaces navbar on new, individual wg_works pages with newly styled _header_navbar
   DONE replaces navbar on individual writer group page with newly styled _header_navbar
   DONE changes custom l_stories navbar to match new _header_navbar style standard
