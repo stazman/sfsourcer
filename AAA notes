@@ -1,22 +1,19 @@
 TO DO:
 
 cross-app styling:
-  DONE styles jumbotron text, padding; removes unneeded media query
-  changes text style of jumbotron subheader to bold
-  increases size of header navbar text across all features
-  changes text style of navbar links to bold
+  app home page/navbars:
+    DONE increases size, weight of header navbar text across all features
+    modifies content of header navbar and custom navbars 
+    adds photos for all sections ... under construction image included
+
+  footer:
+    adds about us, contact links to footer
+    changes text to bold in footer
+
   changes background color, text color for standalone buttons, text color for standalone links, links in lists
   changes background color for text fields, text areas
   
-app home page/navbars
-  modifies header navbar and custom navbars 
-  adds photos for all sections ... under construction image included
-
-footer
-  adds about us, contact links to footer
-  changes text to bold in footer
-
-
+  DONE styles jumbotron text, padding; removes unneeded media query
   DONE adds vert-space.jpg to assets, changes, adjusts background to vert-space.jpg
   DONE reorganizes panels, edits content of panel headings on app home page; removes living stories and FanPages panels
   DONE adds panel-heading to remaining primary-panel containers on app home page
