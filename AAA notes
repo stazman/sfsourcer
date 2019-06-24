@@ -1,7 +1,7 @@
 TO DO:
 
-DONE adds button to living stories home page to header navbar
-adds panel-heading to primary-panel panels on living stories home page
+DONE restores right-aligned buttons to custom l_stories navbar
+adds panel-headings to primary-panel panels on living stories home page
 
 cross-app styling: 
   adds panel-heading to primary_panel panels on remaining feature home pages
@@ -12,6 +12,8 @@ cross-app styling:
    app home page:
     adds photos for all feature panels ... under construction image included
 
+
+  DONE adds button to living stories home page to header navbar
   DONE edits template for specific app content on, styles terms & conditions page
   DONE creates controller action, custom route for/link directs to terms & conditions page; organizes custom routes and resources according to order of features on app home page rows, header navbar drop-down menu
   DONE links direct to about us, contact us pages; adds missing controller actions for them
