@@ -11,6 +11,12 @@ class StaticController < ApplicationController
 
     def writer_groups_home
     end
+
+    def about
+    end
+
+    def contact
+    end
 end
 
 

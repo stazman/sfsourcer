@@ -1,9 +1,9 @@
 TO DO:
 
-cross-app styling:
-  footer:
-    DONE adds about us, contact us, terms & conditions links to footer; increases footer text weight
+DONE links direct to about us, contact us pages; adds missing controller actions for them
+creates action, route for, correct link to terms & conditions page
 
+cross-app styling: 
   adds panel-heading to primary_panel panels on remaining feature home pages
   adjusts background size on primary_panel panels across all features to fit in borders
   changes background color, text color for standalone buttons, text color for standalone links, links in lists
@@ -12,7 +12,7 @@ cross-app styling:
    app home page:
     adds photos for all feature panels ... under construction image included
 
- 
+  DONE adds about us, contact us, terms & conditions links to footer; increases footer text weight 
   DONE removes about, contact, unavailable dropdown links from header navbars
   DONE increases size, weight of header navbar text across all features
   DONE styles jumbotron text, padding; removes unneeded media query
