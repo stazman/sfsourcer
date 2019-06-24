@@ -1,7 +1,7 @@
 TO DO:
 
-DONE links direct to about us, contact us pages; adds missing controller actions for them
-creates action, route for, correct link to terms & conditions page
+DONE creates controller action, custom route for/link directs to terms & conditions page; organizes custom routes and resources according to order of features on app home page rows, header navbar drop-down menu
+edits terms & condition template for sfsourcer app, readability
 
 cross-app styling: 
   adds panel-heading to primary_panel panels on remaining feature home pages
@@ -12,6 +12,8 @@ cross-app styling:
    app home page:
     adds photos for all feature panels ... under construction image included
 
+  
+  DONE links direct to about us, contact us pages; adds missing controller actions for them
   DONE adds about us, contact us, terms & conditions links to footer; increases footer text weight 
   DONE removes about, contact, unavailable dropdown links from header navbars
   DONE increases size, weight of header navbar text across all features
