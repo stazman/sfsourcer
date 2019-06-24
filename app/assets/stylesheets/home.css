@@ -149,6 +149,7 @@ footer, #footer {
   text-align: center;
   margin-bottom: 1%;
   color: rgb(4, 4, 58);
+  font-weight: 500;
 }
 
 .panel {
@@ -172,7 +173,6 @@ h1 {
 .medium-text {
   font-size: .7em;
 }
-
 
 .container {
   padding: 0;

@@ -1,18 +1,19 @@
 TO DO:
 
 cross-app styling:
-  app home page/navbars:
-    DONE removes about, contact, unavailable dropdown links from header navbars
-    adds photos for all sections ... under construction image included
-
   footer:
-    adds about us, contact links to footer
-    changes text to bold in footer
+    DONE adds about us, contact us, terms & conditions links to footer; increases footer text weight
 
+  adds panel-heading to primary_panel panels on remaining feature home pages
+  adjusts background size on primary_panel panels across all features to fit in borders
   changes background color, text color for standalone buttons, text color for standalone links, links in lists
   changes background color for text fields, text areas
   
-  
+   app home page:
+    adds photos for all feature panels ... under construction image included
+
+ 
+  DONE removes about, contact, unavailable dropdown links from header navbars
   DONE increases size, weight of header navbar text across all features
   DONE styles jumbotron text, padding; removes unneeded media query
   DONE adds vert-space.jpg to assets, changes, adjusts background to vert-space.jpg
