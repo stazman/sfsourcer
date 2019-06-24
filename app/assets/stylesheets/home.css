@@ -49,6 +49,11 @@ body, html {
   background-size: 100% 280%;
 }
 
+#bg-plain {
+  background: rgb(219, 160, 247);
+  color: rgb(4, 4, 58);
+}
+
 .jumbotron {
   background: none;
   margin-top: 0rem;
@@ -85,7 +90,6 @@ body, html {
   font-weight: 500;
 }
 
-
 .panel-body {
   background-color: #d4d4d4;
 }
@@ -106,21 +110,6 @@ a {
   padding: 2px;
   background-color: red;
   display: table;
-}
-
-.pic,
-.info {
-  padding: 20px;
-  display: inline-block;
-  background-color: #eeeeee;
-  border-radius: 7px;
-  vertical-align: middle;
-  margin: 10px;
-}
-
-.info {
-  height: 290px;
-  text-align: left;
 }
 
 .row.content {
@@ -152,6 +141,7 @@ footer, #footer {
   font-weight: 500;
 }
 
+
 .panel {
   text-align: left;
   height: 12.5em;
@@ -178,7 +168,11 @@ h1 {
   padding: 0;
 }
 
-.container h3 #more-margin {
+.center-text {
+  text-align: center;
+}
+
+.container h3 #more-margin, .container #more-margin {
   margin-left: 3%;
 }
 
