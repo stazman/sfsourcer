@@ -81,6 +81,8 @@ body, html {
 
 .navbar-default .navbar-nav li a {
   color: rgb(4, 4, 58);
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
 
