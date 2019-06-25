@@ -1,18 +1,60 @@
 TO DO:
 
-DONE restores right-aligned buttons to custom l_stories navbar
-adds panel-headings to primary-panel panels on living stories home page
-
-cross-app styling: 
-  adds panel-heading to primary_panel panels on remaining feature home pages
-  adjusts background size on primary_panel panels across all features to fit in borders
+cross-app: 
+  DONE removes remaining unneeded media queries; panel backgrounds fit to panel borders; adds panel-headings, placeholder images for all panels on app, living stories home pages
   changes background color, text color for standalone buttons, text color for standalone links, links in lists
   changes background color for text fields, text areas
+  removes text from log in/sign up dropdown on header navbar
   
-   app home page:
-    adds photos for all feature panels ... under construction image included
+events feature
+  adds events feature to header navbar feature dropdown
+  
+living stories feature:
+  fixes increased height of first panel-heading on living stories home page
+  add different images for stories
+  redesigns new living story page to split page into form and results
+  removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
+  redesigns living story writing page (show view) to split form and ongoing story
 
 
+funding projects home page
+  makes custom navbar for funding projects pages; adds search bar, search by category, all projects buttons to custom navbar
+  removes unneeded sidenav
+  adds images to panels on funding projects home page
+  moves truncated description/more button below image
+
+funding projects show/new views
+  redesigns page into two columns, first one 10, second 2
+  adds image to first column of page above description SECTION
+  removes unneeded largest pledge button
+  shows last five pledges in second column under funding project status lines
+  redesigns funding projects new page to split funding project, creator Information, place all fields under descriptors
+  funding projects new view renders results of both funding projects and creator information on new view
+  user can edit all information about funding project except goal amount
+  
+writer's groups feature
+  completely redesign home page according to mockup
+  allows uploading/downloading of works
+
+fanvorites
+  redesigns all pages
+  creates a place for comments on all author/work pages
+
+
+writer's resources feature
+  ALL JS creates static page allowing users to add resources ... links and documents to ongoing list 
+  "What resources have you found useful?"
+  ALL JS users can create categories as well as add works
+  adds link to home page to header navbar
+  ALL JS creates resources search bar
+
+
+
+app home page:
+  adds different images for all panels ... under construction images included
+
+  DONE adds panel-headings to primary-panel panels on living stories home page
+  DONE restores right-aligned buttons to custom l_stories navbar
   DONE adds button to living stories home page to header navbar
   DONE edits template for specific app content on, styles terms & conditions page
   DONE creates controller action, custom route for/link directs to terms & conditions page; organizes custom routes and resources according to order of features on app home page rows, header navbar drop-down menu
@@ -294,6 +336,49 @@ Image by <a href="https://pixabay.com/users/thobar-94601/?utm_source=link-attrib
 
 
 ***************************** UNUSED CODE ******************************
+
+
+
+initial media queries
+
+/* @media only all and (max-width: 320px) {
+.panel {
+  font-size: 22px;
+  color: rgb(4, 4, 58);
+  font-weight: bold;
+  text-align: left;
+  height: 12.5em;
+  margin-left: 7%;
+}
+  .panel-body {
+    height: 50%;
+  }
+} */
+
+/* @media only all and (min-width: 320px) {
+.panel {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  height: 14.5em;
+  margin-left: 7%; 
+}
+  .panel-body {
+    height: 85%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+} */
+
+/* @media screen and (max-width: 767px) {
+.sidenav {
+  height: auto;
+  padding: 15px;
+}
+  .row.content {
+    height: auto;
+  }
+} */
 
 home.css
 
