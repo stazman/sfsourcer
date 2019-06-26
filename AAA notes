@@ -1,8 +1,8 @@
 TO DO:
 
 funding projects home page
-  DONE adds all funding projects class method, controller action; link in navbar goes to all funding projects page; removes unneeded code
-  makes custom navbar for funding projects pages; removes living stories button
+  DONE makes custom navbar for funding projects pages; removes living stories button
+  completes all funding projects page
   adds images to panels on funding projects home page
   moves truncated description/more button below image
 
@@ -54,7 +54,7 @@ app home page:
 
 
 
-
+  DONE adds all funding projects class method, controller action; link in navbar goes to all funding projects page; removes unneeded code
   DONE creates, adds routes for all funding projects page; removes unneeded JS function
   DONE changes title of funding projects home page
   DONE removes remaining unneeded media queries; panel backgrounds fit to panel borders; adds panel-headings, placeholder images for all panels on app, living stories home pages
