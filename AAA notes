@@ -1,6 +1,14 @@
 TO DO:
 
-  DONE all funding projects are rendered on all funding projects page; completes page content
+events feature
+  DONE adds events feature to header navbar feature dropdown and custom navbars
+  creates output for just made instance on events new page
+
+cross-app: 
+  changes background color for text in general text areas
+  changes background color, text color for standalone buttons, text color for standalone links, links in lists
+  changes background color for text fields, text areas
+  removes text from log in/sign up dropdown on header navbar, custom navbars
 
 writing resources feature
   creates model, migration for writing_resources, migrates
@@ -11,8 +19,6 @@ writing resources feature
   adds link to home page to header navbar
   creates resources search bar
 
-events feature
-  adds events feature to header navbar feature dropdown
 
 funding projects home page
   adds images to panels on funding projects home page
@@ -27,11 +33,6 @@ funding projects index/show/new views
   funding projects new view renders results of both funding projects and creator information on new view
   user can edit all information about funding project except goal amount
 
-cross-app: 
-  changes background color for text in general text areas
-  changes background color, text color for standalone buttons, text color for standalone links, links in lists
-  changes background color for text fields, text areas
-  removes text from log in/sign up dropdown on header navbar, custom navbars
   
   
 living stories feature:
@@ -53,6 +54,7 @@ app home page:
   adds different images for all panels ... under construction images included
 
 
+  DONE all funding projects are rendered on all funding projects page; completes page content
   DONE makes custom navbar for funding projects pages; removes living stories button
   DONE adds all funding projects class method, controller action; link in navbar goes to all funding projects page; removes unneeded code
   DONE creates, adds routes for all funding projects page; removes unneeded JS function
