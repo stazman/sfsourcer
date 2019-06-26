@@ -1,1 +1,16 @@
-all funding projects
+<%= render partial: "layouts/funding_projects_navbar" %>
+
+<div class="container">
+   <h3 id="more-margin">All Funding Projects</h3>
+</div>
+<br>
+
+<% @funding_projects.each do |fp| %>
+<ul>
+   <li>
+       <h4>
+           <%= link_to fp.title, funding_project_path(fp) %>
+       </h4>
+   </li>
+</ul><br>
+<% end %>
