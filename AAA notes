@@ -1,9 +1,7 @@
 TO DO:
 
 funding projects home page
-  DONE creates, adds routes for all funding projects page; removes unneeded JS function
-  all funding projects link on funding projects goes to all funding projects page
-  
+  DONE adds all funding projects class method, controller action; link in navbar goes to all funding projects page; removes unneeded code
   makes custom navbar for funding projects pages; removes living stories button
   adds images to panels on funding projects home page
   moves truncated description/more button below image
@@ -50,13 +48,14 @@ fanvorites
   redesigns all pages
   creates a place for comments on all author/work pages
 
-
-
-
-
 app home page:
   adds different images for all panels ... under construction images included
 
+
+
+
+
+  DONE creates, adds routes for all funding projects page; removes unneeded JS function
   DONE changes title of funding projects home page
   DONE removes remaining unneeded media queries; panel backgrounds fit to panel borders; adds panel-headings, placeholder images for all panels on app, living stories home pages
   DONE adds panel-headings to primary-panel panels on living stories home page
@@ -342,6 +341,35 @@ Image by <a href="https://pixabay.com/users/thobar-94601/?utm_source=link-attrib
 
 
 ***************************** UNUSED CODE ******************************
+
+
+
+funding_projects model
+
+    # has_many :funding_project_pledges
+    # has_many :pledges, through: :pledge_funding_projects
+
+    # order/groupby
+
+    # def total_pledges
+    #     self.pledges.map do |p| 
+    #        p.amount     
+    #     end
+    # end
+
+    # def funding_project_pledge
+    #     self.pledge = Pledge.create(amount: :amount)
+    # end
+    
+    # def funding_project_pledge
+    #     self.pledge ? self.pledge.amount : nil
+    # end
+    # def comment_attributes=(comment_attribute)
+    # end
+        # def comment_attributes=(comment)
+    #     self.comment = Comment.create_by(title = comment.title)
+    #     self.comment.update(comment)
+    # end
 
 all funding projects
 
