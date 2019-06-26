@@ -18,7 +18,6 @@ class FundingProjectsController < ApplicationController
 
   def new
     @funding_project = FundingProject.new
-    render :layout => 'navbar_on_top'
   end
 
   def create
@@ -41,7 +40,6 @@ class FundingProjectsController < ApplicationController
       f.html { render :show }
       f.json { render json: @funding_project }
     end
-    # render json: @funding_project
   end
 
   def description
