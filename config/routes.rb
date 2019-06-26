@@ -2,27 +2,28 @@ Rails.application.routes.draw do
   
   root 'static#home'
   
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  get 'auth/facebook/callback', to: 'sessions#create'
-  get 'auth/failure', to: 'static#home'
-  get '/logout', to: 'sessions#destroy'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get 'auth/facebook/callback' => 'sessions#create'
+  get 'auth/failure' => 'static#home'
+  get '/logout' => 'sessions#destroy'
  
-  get '/funding_projects/:id/description', to: 'funding_projects#description'
-  get '/funding_projects/:id/body', to: 'funding_projects#body'
+  get '/funding_projects/:id/description' => 'funding_projects#description'
+  get '/funding_projects/:id/body' => 'funding_projects#body'
+  get '/funding_projects/all_funding_projects' => 'funding_projects#all_funding_projects'
 
-  get '/writer_groups_home', to: 'static#writer_groups_home'
+  get '/writer_groups_home' => 'static#writer_groups_home'
   
-  get '/all_sf_fanvorites', to: 'static#all_sf_fanvorites'
-  get '/sf_lit_fanvorites', to: 'static#sf_lit_fanvorites'
-  get '/lit_fan_authors/alphabetized', to: 'lit_fan_authors#alphabetized'
+  get '/all_sf_fanvorites' => 'static#all_sf_fanvorites'
+  get '/sf_lit_fanvorites' => 'static#sf_lit_fanvorites'
+  get '/lit_fan_authors/alphabetized' => 'lit_fan_authors#alphabetized'
 
   get "/l_stories/all_living_stories" => "l_stories#all_living_stories"
   patch "l_stories/:id/edit" => "l_stories#update"
 
-  get '/about', to: 'static#about'
-  get '/contact', to: 'static#contact'
-  get '/terms_and_conditions', to: 'static#terms_and_conditions'
+  get '/about' => 'static#about'
+  get '/contact' => 'static#contact'
+  get '/terms_and_conditions' => 'static#terms_and_conditions'
 
   resources :users
   resources :sessions
