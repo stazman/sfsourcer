@@ -12,6 +12,10 @@ class FundingProjectsController < ApplicationController
     end
   end
 
+  def all_funding_projects
+    @funding_projects = FundingProject.all_funding_projects
+  end
+
   def new
     @funding_project = FundingProject.new
     render :layout => 'navbar_on_top'
