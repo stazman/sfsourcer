@@ -30,22 +30,6 @@ $(function () {
 })
 
 $(function(){
-  $("a.load_all_fps").on("click", function(e){
-    $.ajax({
-      url: "/funding_projects",
-      method: 'get',
-      dataType: 'json'
-    }).done(function(json){
-
-      json.forEach(function(funding_project){
-        $("div.all_fps ul").append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "' >" + funding_project.title + "</a>" + "</li>");
-      });
-    });  
-    e.preventDefault();
-  });
-});
-
-$(function(){
   $("form").submit(function(e){
     e.preventDefault();
     $.ajax({

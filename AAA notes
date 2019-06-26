@@ -1,11 +1,11 @@
 TO DO:
 
 funding projects home page
-  changes title of funding projects home page
-  creates all funding projects page; page shows all funding projects
+  DONE creates, adds routes for all funding projects page; removes unneeded JS function
   all funding projects link on funding projects goes to all funding projects page
+  
   makes custom navbar for funding projects pages; removes living stories button
-  adds images to remaining panels on funding projects home page
+  adds images to panels on funding projects home page
   moves truncated description/more button below image
 
 funding projects index/show/new views
@@ -57,7 +57,9 @@ fanvorites
 app home page:
   adds different images for all panels ... under construction images included
 
-  DONE removes remaining unneeded media queries; panel backgrounds fit to panel borders; adds panel-headings, placeholder images for all panels on app, living stories home pagesDONE adds panel-headings to primary-panel panels on living stories home page
+  DONE changes title of funding projects home page
+  DONE removes remaining unneeded media queries; panel backgrounds fit to panel borders; adds panel-headings, placeholder images for all panels on app, living stories home pages
+  DONE adds panel-headings to primary-panel panels on living stories home page
   DONE restores right-aligned buttons to custom l_stories navbar
   DONE adds button to living stories home page to header navbar
   DONE edits template for specific app content on, styles terms & conditions page
@@ -340,6 +342,25 @@ Image by <a href="https://pixabay.com/users/thobar-94601/?utm_source=link-attrib
 
 
 ***************************** UNUSED CODE ******************************
+
+all funding projects
+
+$(function(){
+  $("a.load_all_fps").on("click", function(e){
+    $.ajax({
+      url: "/funding_projects",
+      method: 'get',
+      dataType: 'json'
+    }).done(function(json){
+
+      json.forEach(function(funding_project){
+        $("div.all_fps ul").append("<li>" + "<a " + "href='" + "/funding_projects/" + funding_project.id + "' >" + funding_project.title + "</a>" + "</li>");
+      });
+    });  
+    e.preventDefault();
+  });
+});
+
 
 
 
