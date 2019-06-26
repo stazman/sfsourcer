@@ -1,13 +1,14 @@
 TO DO:
 
+events feature
+  DONE completes new event page
+  renders output for just made instance on individual event page
+  renders output for just made instance on new events new page
+
 funding projects home page
-  DONE renders custom navbar on all working funding projects pages
   adds panel heading to primary-panel panels on funding projects home page
   adds images to panels on funding projects home page
   moves truncated description/more button below image
-
-events feature
-  creates output for just made instance on events new page
 
 cross-app: 
   changes background color for text in general text areas
@@ -54,6 +55,7 @@ app home page:
   adds different images for all panels ... under construction images included
 
 
+  DONE renders custom navbar on all working funding projects pages
   DONE adds events feature to header navbar feature dropdown and custom navbars
   DONE all funding projects are rendered on all funding projects page; completes page content
   DONE makes custom navbar for funding projects pages; removes living stories button
