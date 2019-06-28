@@ -1,0 +1,37 @@
+<%= render partial: "layouts/header_navbar" %>
+
+<h2>
+   <%= @event.title %>
+</h2>
+<br><br>
+
+<div class="container" id="more-margin">
+  <h4>
+     Description
+  </h4>
+  <br>
+   <p>
+       <%= @event.description %>
+   <p>
+  <br>
+  <h4>
+     Location: <p><%= @event.location %></p>
+  </h4>
+  <br>
+  <h4>
+     Date: <p><%= @event.date %></p>
+  </h4>
+  <br>
+  <h4>
+     Start Time: <p><%= @event.start_time %></p>
+  </h4>
+  <br>
+  <h4>
+     Cost: <p><%= @event.cost %></p>
+  </h4>
+  <br>
+  <h4>
+     Contact Info: <p><%= @event.contact_info %></p>
+  </h4>
+
+</div>
