@@ -1,7 +1,7 @@
 TO DO:
 
 events feature
-  DONE completes new event page
+  DONE adds content of events show view
   renders output for just made instance on individual event page
   renders output for just made instance on new events new page
 
@@ -55,6 +55,7 @@ app home page:
   adds different images for all panels ... under construction images included
 
 
+  DONE completes new event page
   DONE renders custom navbar on all working funding projects pages
   DONE adds events feature to header navbar feature dropdown and custom navbars
   DONE all funding projects are rendered on all funding projects page; completes page content
