@@ -1,7 +1,8 @@
 TO DO:
 
+resolves incorrect http requests problem
+
 events feature
-  DONE creates, adds attributes to event serializer
   renders output for just made instance on individual event page
   renders output for just made instance on new events new page
 
@@ -55,6 +56,7 @@ app home page:
   adds different images for all panels ... under construction images included
 
 
+  DONE creates, adds attributes to event serializer
   DONE adds content of events show view
   DONE completes new event page
   DONE renders custom navbar on all working funding projects pages
