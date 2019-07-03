@@ -7,34 +7,7 @@
       <h4>Project Title: <%= f.text_field :title %> </h4><br>
       <h4>Description: <%= f.text_area :description %></h4><br>
       <h4>Funding Goal (in US dollars): <%= f.text_field :funding_goal %></h4><br>
+      <h4><%= f.submit "Create Project"%></h4>
+    <% end %>
   </div>
-</div>
-
-<div class="container">
-  <h4 class="opacity"><b>Creator Information</b></h4>
-    <%= f.collection_check_boxes :fp_creator_ids, FpCreator.all, :id, :creator_name %>
-      <%= f.fields_for :funding_project, @funding_project.fp_creators.build do |fpc_fields|%><br>
-          <%= fpc_fields.label :creator_name %>
-          <%= fpc_fields.text_field :creator_name %> </h2><br>
-          <%= fpc_fields.label "Location "%>
-          <%= fpc_fields.text_field :location %><br>
-          <%= fpc_fields.label "About Creator" %>
-          <%= fpc_fields.text_area :creator_about %><br>
-          <%= fpc_fields.label "Creator Website" %>
-          <%= fpc_fields.text_field :creator_site %><br>
-          <%= fpc_fields.label :email %>
-          <%= fpc_fields.text_field :email %><br>
-          <%= fpc_fields.label "Instagram" %>
-          <%= fpc_fields.text_field :instagram_url %><br>
-          <%= fpc_fields.label "Twitter" %>
-          <%= fpc_fields.text_field :twitter_url %><br>
-          <%= fpc_fields.label "Facebook" %>
-          <%= fpc_fields.text_field :facebook_url %><br>
-          <%= fpc_fields.label "Blog" %>
-          <%= fpc_fields.text_field :blog_url %><br>
-          <br><br>
-
-        <%= f.submit "Create Project"%>
-            <% end %>
-        <% end %>
 </div>
