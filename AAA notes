@@ -1,6 +1,6 @@
 TO DO:
 
-resolves incorrect http requests problem
+DONE resolves incorrect http request problem by restoring previous organization of routes; removes unneeded files, unused fp_creator fields
 
 events feature
   renders output for just made instance on individual event page
@@ -351,6 +351,31 @@ Image by <a href="https://pixabay.com/users/thobar-94601/?utm_source=link-attrib
 
 ***************************** UNUSED CODE ******************************
 
+funding_projects new view for fp_creators
+
+<div class="container">
+  <h4 class="opacity"><b>Creator Information</b></h4>
+    <%= f.collection_check_boxes :fp_creator_ids, FpCreator.all, :id, :creator_name %>
+      <%= f.fields_for :funding_project, @funding_project.fp_creators.build do |fpc_fields|%><br>
+          <%= fpc_fields.label :creator_name %>
+          <%= fpc_fields.text_field :creator_name %> </h2><br>
+          <%= fpc_fields.label "Location "%>
+          <%= fpc_fields.text_field :location %><br>
+          <%= fpc_fields.label "About Creator" %>
+          <%= fpc_fields.text_area :creator_about %><br>
+          <%= fpc_fields.label "Creator Website" %>
+          <%= fpc_fields.text_field :creator_site %><br>
+          <%= fpc_fields.label :email %>
+          <%= fpc_fields.text_field :email %><br>
+          <%= fpc_fields.label "Instagram" %>
+          <%= fpc_fields.text_field :instagram_url %><br>
+          <%= fpc_fields.label "Twitter" %>
+          <%= fpc_fields.text_field :twitter_url %><br>
+          <%= fpc_fields.label "Facebook" %>
+          <%= fpc_fields.text_field :facebook_url %><br>
+          <%= fpc_fields.label "Blog" %>
+          <%= fpc_fields.text_field :blog_url %><br>
+          <br><br>
 
 
 funding_projects model
