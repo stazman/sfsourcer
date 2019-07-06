@@ -25,6 +25,8 @@ config/master.key
 
 *.env
 
+*.log
+
 ## Environment normalization:
 /.bundle
 /vendor/bundle
