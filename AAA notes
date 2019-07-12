@@ -1,11 +1,15 @@
 TO DO:
 
 cross-app: 
-  DONE fixes stripe-row/sidenav overlap, centers striped row/panels below on funding projects, events home pages
-  removes text from log in/sign up dropdown on header navbar, custom navbars
-  changes background color for text in general text areas
-  changes background color, text color for standalone buttons, text color for standalone links, links in lists
-  changes background color for text fields, text areas
+  DONE finishes removing text from log in/sign up dropdown on header navbar, all custom navbars
+  moves create funding project, all funding projects links from sidenav to main navbar on funding projects home page
+  moves back to funding projects home page link to main navbar on individual funding project page
+
+  changes color of text in general text areas for readability
+
+  changes background color, text color for standalone buttons, text color for standalone links, links in lists?
+
+  changes background color for text fields, text areas?
 
 app home page:
   adds different images for all panels ... under construction images included
@@ -52,6 +56,7 @@ fanvorites
   redesigns all pages
   creates a place for comments on all author/work pages
 
+  DONE fixes stripe-row/sidenav overlap, centers striped row/panels below on funding projects, events home pages
   DONE link on events home page renders new event page
   DONE resolves incorrect http request problem by restoring previous organization of routes; removes unneeded files, unused fp_creator fields 
   DONE creates, adds attributes to event serializer
