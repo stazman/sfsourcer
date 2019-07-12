@@ -1,8 +1,7 @@
 TO DO:
 
-DONE resolves incorrect http request problem by restoring previous organization of routes; removes unneeded files, unused fp_creator fields
-
 events feature
+  DONE new event link on events home page renders new event page
   renders output for just made instance on individual event page
   renders output for just made instance on new events new page
 
@@ -56,6 +55,8 @@ app home page:
   adds different images for all panels ... under construction images included
 
 
+
+  DONE resolves incorrect http request problem by restoring previous organization of routes; removes unneeded files, unused fp_creator fields
   DONE creates, adds attributes to event serializer
   DONE adds content of events show view
   DONE completes new event page
