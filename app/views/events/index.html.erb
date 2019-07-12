@@ -7,17 +7,18 @@
 
 <%= render 'layouts/header_navbar' %>
 
-<div class="container text-center">    
+<div class="container-fluid">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
+    <br>
       <p><h5><%= link_to "Add a new event", new_event_path %></h5><br></a></p>
       <p><a href="#"><h5>Search For a Specific Event/Keyword (Under Construction)</h5><br><br></a></p>
       <p><a href="#"><h5>Browse Events by Category (Under Construction)</h5><br><br></a></p>
     </div>
 
     <div class="text-center .mx-auto px-{1}">
-        <div class="stripe_row">
-            <div class="col-sm-10">
+        <div class="stripe_row_feature_home">
+            <div class="col-sm-8">
                 <div>
                     <p>
                         <strong>Newest Events</strong>
@@ -26,31 +27,52 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="col-sm-5">
-                <div class="panel panel-primary">
-                    <div class="panel-body">
-                        <p>
-                            Event
-                        </p>
-                    </div>
-                    <div class="panel-body"><img src="https://placehold.it/250x100?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                </div>
-            </div>
 
-        <div class="container">
-            <div class="col-sm-5"> 
-            <div class="panel panel-primary">
-                <div class="panel-body">
-                    <p>
-                        Event
-                    </p>
+        <div class="text-center .mx-auto px-{1}">
+            <div class="container">
+                <div class="row content">
+                    <div class="col-sm-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <h1>
+                                    Event              
+                                </h1>
+                                <br>
+                                <p id="text">
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                        <div class="panel-body"><img src="https://placehold.it/250x100?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <div class="row content">
+                    <div class="col-sm-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <h1>
+                                    Event              
+                                </h1>
+                                <br>
+                                <p id="text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row content">
+                    <div class="col-sm-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <h1>
+                                    Event              
+                                </h1>
+                                <br>
+                                <p id="text">
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
   </div>
 </div>

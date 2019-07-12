@@ -1,21 +1,22 @@
 TO DO:
 
+cross-app: 
+  DONE fixes stripe-row/sidenav overlap, centers striped row/panels below on funding projects, events home pages
+  removes text from log in/sign up dropdown on header navbar, custom navbars
+  changes background color for text in general text areas
+  changes background color, text color for standalone buttons, text color for standalone links, links in lists
+  changes background color for text fields, text areas
+
+app home page:
+  adds different images for all panels ... under construction images included
 
 events feature
-  DONE link on events home page renders new event page
-  renders output for just made instance on individual event page
   renders output for just made instance on new events new page
 
 funding projects home page
   adds panel heading to primary-panel panels on funding projects home page
   adds images to panels on funding projects home page
   moves truncated description/more button below image
-
-cross-app: 
-  changes background color for text in general text areas
-  changes background color, text color for standalone buttons, text color for standalone links, links in lists
-  changes background color for text fields, text areas
-  removes text from log in/sign up dropdown on header navbar, custom navbars
 
 writing resources feature
   creates model, migration for writing_resources, migrates
@@ -36,7 +37,6 @@ funding projects index/show/new views
   user can edit all information about funding project except goal amount
 
   
-  
 living stories feature:
   fixes increased height of first panel-heading on living stories home page
   add different images for stories
@@ -52,9 +52,7 @@ fanvorites
   redesigns all pages
   creates a place for comments on all author/work pages
 
-app home page:
-  adds different images for all panels ... under construction images included
-
+  DONE link on events home page renders new event page
   DONE resolves incorrect http request problem by restoring previous organization of routes; removes unneeded files, unused fp_creator fields 
   DONE creates, adds attributes to event serializer
   DONE adds content of events show view
