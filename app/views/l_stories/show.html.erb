@@ -11,24 +11,47 @@
         <p><h5><%= link_to "Back to Living Stories Home Page", l_stories_path %></h5></p><br><br>
       </div>
       <div class="col-sm-8 text-left"> 
-        <h2>"<%= @l_story.title %>"</h2><br>
-        <h3>A story by ... everyone!</h3><br>
+        <h2>
+          "<%= @l_story.title %>"
+        </h2>
+        <br>
+        <h3>
+          A story by ... everyone!
+        </h3>
+        <br>
 
-        <h4>Here's the story so far; now it's up to you and other SFSourcer members to see where it goes!</h4><br>
-        <%= @l_story.content %>
+        <h4>
+          Here's the story so far; now it's up to you and other SFSourcer members to see where it goes!
+        </h4>
+        <br>
+        <strong>
+          <%= @l_story.content %>
+        </strong>
         <% @l_story.ls_comments.each do |c| %>
-            <%= c.content %> 
-        <% end %><br><br><br>
+            <strong>
+              <%= c.content %> 
+            </strong>
+        <% end %>
+        <br><br><br>
 
         <%= form_for @ls_comment do |f| %>
-                <label>Choose Your Living Stories username or make a new one:</label><br>
-            <p><%= f.collection_select :ls_user_id, LsUser.all, :id, :username %>
+          <label>
+            Choose Your Living Stories username or make a new one:
+          </label>
+          <br>
+            <p>
+              <%= f.collection_select :ls_user_id, LsUser.all, :id, :username %>
                 <%= f.fields_for :ls_user, @ls_user do |new_ls_user|%>
                 <%= new_ls_user.text_field :username %>
-            </p><br>
-            <label>Click here to claim your place in line to add the next line! (under construction)</label>
+            </p>
+            <br>
+            <label>
+              Click here to claim your place in line to add the next line! (under construction
+            </label>
             <br><br>
-            <label>Now write!</label>
+            <label>
+              Now write!
+            </label>
             <br>
 
         <%= f.text_area :content %><br><br>
