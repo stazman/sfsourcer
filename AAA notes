@@ -1,8 +1,7 @@
 TO DO:
 
 cross-app: 
-  DONE moves create funding project, all funding projects links from sidenav to main navbar on funding projects home page
-  moves back to funding projects home page link to main navbar on individual funding project page
+  DONE moves back-to-funding-projects-home-page link to sidenav on individual funding project page
 
   changes color of text in general text areas for readability
 
@@ -60,6 +59,7 @@ writer's groups feature
   allows uploading/downloading of works
 
 
+  DONE moves create funding project, all funding projects links from sidenav to main navbar on funding projects home page
   DONE finishes removing text from log in/sign up dropdown on header navbar, all custom navbars
   DONE fixes stripe-row/sidenav overlap, centers striped row/panels below on funding projects, events home pages
   DONE link on events home page renders new event page
