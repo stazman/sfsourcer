@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   get '/writer_groups_home', to: 'static#writer_groups_home'
   
   get '/funding_projects/:id/description', to: 'funding_projects#description'
-
   get '/funding_projects/:id/body', to: 'funding_projects#body'
+  get '/funding_projects/all_funding_projects', to: 'funding_projects#all_funding_projects'
+
 
   patch "l_stories/:id/edit" => "l_stories#update"
 
