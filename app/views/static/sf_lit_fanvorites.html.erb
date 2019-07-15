@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Welcome to Literature Fanvorites!</h1>
@@ -11,10 +7,15 @@
 
 <%= render 'layouts/header_navbar' %>
 
-<h4>Here you'll find information, media, events, and links to ClubSites about written SF works and their authors, recommended by SFSourcer members. Find a favorite author or work, or add your own! </h4><br>
+<div class='container' id='more-margin'>
+  <h4>
+    Here you'll find information, media, events, and links to ClubSites about written SF works and their authors, recommended by SFSourcer members. Find a favorite author or work, or add your own! 
+  </h4>
+</div>
+<br>
 
-<h4>Start with a searchable list of recommended authors: <%= link_to 'All Author Fanvorites', lit_fan_authors_path %></h4>
-
-</body>
-</html>
-
+<div class='container' id='more-margin'>
+  <h4>
+    Start with a searchable list of recommended authors: <%= link_to 'All Author Fanvorites', lit_fan_authors_path %></h4>
+  </h4>
+</div>

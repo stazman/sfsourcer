@@ -1,14 +1,14 @@
 TO DO:
 
-
-app home page:
-  DONE adds 14 photos; adds different images for all panels on app home page
-
 fanvorites
-  adds navbars
-  redesigns all pages
+  DONE increases margin of main content area of sf_lit_fanvorites home page
+
+  adds custom navbar to lit_fan_works show view 
   creates a place for comments on all author/work pages
 
+cross-app:
+  lighten background image
+  
 events feature
   renders output for just made instance on new events new page
 
@@ -47,6 +47,7 @@ writer's groups feature
   completely redesign home page according to mockup
   allows uploading/downloading of works
 
+  DONE adds 14 photos; adds different images for all panels on app home page
   DONE changes color, weight of text for readability
   DONE moves back-to-funding-projects-home-page link to sidenav on individual funding project page
   DONE moves create funding project, all funding projects links from sidenav to main navbar on funding projects home page
