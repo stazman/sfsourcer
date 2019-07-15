@@ -1,18 +1,13 @@
 TO DO:
 
-cross-app: 
-  DONE changes color, weight of text for readability
-  changes background color, text color for standalone buttons, text color for standalone links, links in lists?
-  changes background color for text fields, text areas?
 
 app home page:
-  adds different images for all panels ... under construction images included
+  DONE adds 14 photos; adds different images for all panels on app home page
 
 fanvorites
   adds navbars
   redesigns all pages
   creates a place for comments on all author/work pages
-
 
 events feature
   renders output for just made instance on new events new page
@@ -52,7 +47,7 @@ writer's groups feature
   completely redesign home page according to mockup
   allows uploading/downloading of works
 
-
+  DONE changes color, weight of text for readability
   DONE moves back-to-funding-projects-home-page link to sidenav on individual funding project page
   DONE moves create funding project, all funding projects links from sidenav to main navbar on funding projects home page
   DONE finishes removing text from log in/sign up dropdown on header navbar, all custom navbars
@@ -344,6 +339,20 @@ add <p>New user? <%= link_to "Sign up now!", signup_path %></p>to login page
 
 
 ***************************** Photo Credits ******************************
+
+network of wikis 
+
+Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=954967">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=954967">Pixabay</a>
+
+
+tattooed man
+
+<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@judeussamson?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Judeus Samson"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Judeus Samson</span></a>
+
+
+fantasy-collage.jpg
+
+Image by <a href="https://pixabay.com/users/KELLEPICS-4893063/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2750998">Stefan Keller</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2750998">Pixabay</a>
 
 vert-space.jpg
 
