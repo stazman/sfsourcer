@@ -1,59 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  
+<%= render partial: 'layouts/fanvorites_navbar' %>
+
 <div class="container text-center">    
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <p><a href="#"><strong>Check Out [or make] <%= @lit_fan_work.title %>'s Club Site! (under construction) </strong></a></p>
+        <p>
+          <a href="#"><strong>Check Out [or make] <%= @lit_fan_work.title %>'s Club Site! (under construction)</strong>
+          </a>
+        </p>
       </div>
       <div class="well">
-        <p><a href="#"><strong>Enter <%= @lit_fan_work.title %></h1>'s FanWiki! (under construction) </strong></a></p>
+        <p>
+          <a href="#"><strong>Enter <%= @lit_fan_work.title %>'s FanWiki! (under construction) </strong>
+          </a>
+        </p>
       </div>
     </div>
     <div class="col-sm-7">
     
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="panel panel-default text-left">
-            <div class="panel-body">
-              <p contenteditable="true"><h1><%= @lit_fan_work.title %></h1></p>
-            </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default text-left">
+          <div class="panel-body">
+            <p contenteditable="true">
+              <h1>
+                <%= @lit_fan_work.title %>
+              </h1>
+            </p>
           </div>
         </div>
       </div>
-      
-      <h2>By: <%= @lit_fan_work.lit_fan_author.name %></h2><br>
+    </div>
+    
+    <h2>
+      By: <%= @lit_fan_work.lit_fan_author.name %>
+    </h2>
+    <br>
 
-      <h2>Genre/s: </h2>
-          <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
-            <ul>
-              <h4><li><%= lfg.name %><br></li></h4>
-            </ul>
-          <% end %><br>
+    <h2>
+      Genre/s: 
+    </h2>
+    <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
+    <ul>
+      <h4>
+        <li>
+          <%= lfg.name %>
+          <br>
+        </li>
+      </h4>
+    </ul>
+    <% end %>
+    <br>
 
-<a href = "#" onclick="javascript:window.history.back();">Go Back</a>
-<br><br>
-      <h4><%= link_to "Edit Work, Author, and/or Genre", edit_lit_fan_work_path(@lit_fan_work) %></h4>
-      
-      <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
+    <h4>
+      <%= link_to "Edit Work, Author, and/or Genre", edit_lit_fan_work_path(@lit_fan_work) %>
+    </h4>
+    
+    <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
 
-      <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
+    <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
 
-      <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
+    <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
 
-    </div> 
-      <div class="col-sm-2 well">
-        <div class="well">
-          <p><a href="#"><strong><%= @lit_fan_work.title %> Events (under construction)</strong></a></p>
-        </div>
-        <div class="well">
-          <p><a href="#"><strong>News about <%= @lit_fan_work.title %> (under construction)</strong></a></p>
-        </div>
+  </div> 
+    <div class="col-sm-2 well">
+      <div class="well">
+        <p>
+          <a href="#"><strong><%= @lit_fan_work.title %> Events (under construction)</strong>
+          </a>
+        </p>
+      </div>
+      <div class="well">
+        <p>
+          <a href="#"><strong>News about <%= @lit_fan_work.title %> (under construction)</strong>
+          </a>
+        </p>
       </div>
     </div>
   </div>
-</body>
-</html>
+</div>
 

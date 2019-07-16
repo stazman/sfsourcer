@@ -13,7 +13,6 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_works = LitFanWork.all
     end
-    render :layout => 'navbar_on_top'
   end
 
   def new
@@ -22,7 +21,6 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_work = LitFanWork.new(lit_fan_author_id: params[:lit_fan_author_id])
     end
-    render :layout => 'navbar_on_top'
   end
 
   def create
@@ -42,7 +40,6 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_work = LitFanWork.find(params[:id])
     end
-    # render :layout => 'navbar_on_top'
   end
 
   def edit
@@ -57,7 +54,6 @@ class LitFanWorksController < ApplicationController
     else
       @lit_fan_work = LitFanWork.find(params[:id])
     end
-    render :layout => 'navbar_on_top'
   end
 
   def update

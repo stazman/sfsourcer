@@ -1,36 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  
-  <%= render 'layouts/header_navbar' %>
+<%= render partial: 'layouts/fanvorites_navbar' %>
 
-  <div class="container-fluid text-center">    
-    <div class="row content">
-      <div class="col-sm-2 sidenav">
-        <p><h5><%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %></h5></p><br><br>
-        <p><h5><%= link_to "Add New Author, Work, and/or Genre", new_lit_fan_work_path %></h5></p><br><br>
-      </div>
-    <div class="col-sm-8 text-left"> 
-
-      <%= form_tag(lit_fan_authors_path, method: :get) do %>
-      <h4>
-        Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.
-      </h4>
-
-      <%= text_field_tag :term, params[:term] %>
-      <%= submit_tag 'Search', name: nil  %>
-      <% end %>
-      <br>
-      <h4>Choose an author below to see the author's works, FanClub page and FanWiki, as well as news and events about the author:</h4><br>
-      <% @lit_fan_authors.each do |lfa| %>
-        <ul>
-          <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li>
-        </ul>
-      <% end %>
-      
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><h5><%= link_to 'Alphabetized List of Authors (by first name)', lit_fan_authors_alphabetized_path %></h5></p><br><br>
+      <p><h5><%= link_to "Add New Author, Work, and/or Genre", new_lit_fan_work_path %></h5></p><br><br>
     </div>
-  </div>
-</body>
-</html>
+  <div class="col-sm-8 text-left"> 
 
+    <%= form_tag(lit_fan_authors_path, method: :get) do %>
+    <h4>
+      Search for or click on an author below to view an author's home page, get to the home page for an author's work, or add to the author's works.
+    </h4>
+
+    <%= text_field_tag :term, params[:term] %>
+    <%= submit_tag 'Search', name: nil  %>
+    <% end %>
+    <br>
+    <h4>Choose an author below to see the author's works, FanClub page and FanWiki, as well as news and events about the author:</h4><br>
+    <% @lit_fan_authors.each do |lfa| %>
+      <ul>
+        <li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li>
+      </ul>
+    <% end %>
+    
+  </div>
+</div>
 

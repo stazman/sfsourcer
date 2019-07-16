@@ -1,24 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  
+<%= render partial: "layouts/fanvorites_navbar" %>
+
 <div class="container text-center">    
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <p><a href="#"><strong>Check Out [or make] <%= @lit_fan_author.name %>'s Club Site! (under construction)</strong></a></p>
+        <p>
+          <a href="#">
+            <strong>Check Out [or make] <%= @lit_fan_author.name %>'s Club Site! (under construction)</strong>
+          </a>
+        </p>
       </div>
+
       <div class="well">
-        <p><a href="#"><strong>Enter <%= @lit_fan_author.name %>'s FanWiki! (under construction)</strong></a></p>
+        <p>
+          <a href="#">
+            <strong>Enter <%= @lit_fan_author.name %>'s FanWiki! (under construction)</strong>
+          </a>
+        </p>
       </div>
     </div>
+
     <div class="col-sm-7">
-    
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default text-left">
             <div class="panel-body">
-              <p contenteditable="true"><%= @lit_fan_author.name %></p>
+              <p contenteditable="true"><%= @lit_fan_author.name %>
+              </p>
             </div>
           </div>
         </div>
@@ -32,18 +40,21 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-      <h4>
-        <% @lit_fan_works.each do |lfw| %>
-          <%= link_to lfw.title, lit_fan_work_path(lfw) if lfw == @lit_fan_works[0]%>
-        <% end %>
-      </h4>
+            <h4>
+              <% @lit_fan_works.each do |lfw| %>
+                <%= link_to lfw.title, lit_fan_work_path(lfw) if lfw == @lit_fan_works[0]%>
+              <% end %>
+            </h4>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>Work Image</p>
+            <p>
+                Work Image
+            </p>
           </div>
         </div>
         <div class="col-sm-9">
@@ -56,47 +67,69 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>Work Image</p>
+            <p>
+              Work Image
+            </p>
           </div>
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Work</p>
+            <p>
+              Work
+            </p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>Work Image</p>
+            <p>
+              Work Image
+            </p>
           </div>
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Work</p>
+            <p>
+              Work
+            </p>
           </div>
         </div>
       </div>     
       
-      <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
+      <h4>
+        <%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %>
+      </h4>
 
-      <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
+      <h4>
+        <%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %>
+      </h4>
 
-      <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
-
+      <h4>
+        <%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %>
+      </h4>
+      <br>
 
       </div> 
         <div class="col-sm-2 well">
           <div class="well">
-            <p><a href="#"><strong><%= @lit_fan_author.name %> Events (under construction)</strong></a></p>
+            <p>
+              <a href="#">
+                <strong><%= @lit_fan_author.name %> Events (under construction)</strong>
+              </a>
+            </p>
           </div>
+          
           <div class="well">
-            <p><a href="#"><strong>News about <%= @lit_fan_author.name %> (under construction)</strong></a></p>
+            <p>
+              <a href="#">
+                <strong>News about <%= @lit_fan_author.name %> (under construction)</strong>
+              </a>
+            </p>
           </div>
       </div>
   </div>
-</body>
-</html>
