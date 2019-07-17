@@ -3,7 +3,7 @@
         <h3>Title</h3>
         <%= f.text_field :title %><br><br>
 
-{           <h3>Choose/add at least one genre</h3>
+            <h3>Choose/add at least one genre</h3>
             <%= f.collection_check_boxes :lit_fan_genre_ids, LitFanGenre.all, :id, :name %><br>
             <%= f.fields_for :lit_fan_genres, @lit_fan_work.lit_fan_genres.build do |lfg_fields|%><br>
                 <%= lfg_fields.text_field :name %><br><br>

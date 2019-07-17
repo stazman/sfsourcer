@@ -1,14 +1,18 @@
-<%= render partial: 'layouts/fanvorites_navbar' %>
+<div class='container' id='more-margin'>
 
-<h2>All Fanvorite Authors in Alphabetical Order (by First Name)</h2><br>
+    <%= render partial: 'layouts/fanvorites_navbar' %>
 
-<h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
-<br>
-<h4><%= link_to "Back to All Author Fanvorites", lit_fan_authors_path %></h4>
-<br>
-<% @lit_fan_authors.each do |lfa| %>
-    <ul>
-        <h3><li><%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %></li></h3>
-    </ul>
-<% end %>
+    <h3>All Fanvorite Authors in Alphabetical Order (by First Name)</h3><br>
 
+    <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
+    <br>
+    <% @lit_fan_authors.each do |lfa| %>
+        <ul>
+            <h4>
+                <li>
+                    <%= link_to lfa.name, lit_fan_author_lit_fan_works_path(lfa) %>
+                </li>
+            </h4>
+        </ul>
+    <% end %>
+</div>

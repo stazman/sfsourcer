@@ -1,7 +1,7 @@
 TO DO:
 
 fanvorites
-  DONE adds margin to add/edit author, genre, work page
+  DONE adds margin to, adjusts styles on alphabetized lit_fan_author page
   changes overall style of lit fan author, lit fan work pages
   creates a place for comments on all author/work pages?
 
@@ -46,6 +46,8 @@ writer's groups feature
   completely redesign home page according to mockup
   allows uploading/downloading of works
 
+
+  DONE adds margin to add/edit author, genre, work page
   DONE adds custom navbar to all lit fanvorites pages, removes layout rendering in fanvorites controllers 
   DONE increases margin of main content area of sf_lit_fanvorites home page
   DONE adds 14 photos; adds different images for all panels on app home page
