@@ -2,11 +2,11 @@
 
 <div class="container text-center">    
   <div class="row">
-    <div class="col-sm-3 well">
+    <div class="col-sm-2 well">
       <div class="well">
-        <p>
+        <p >
           <a href="#">
-            <strong>Check Out [or make] <%= @lit_fan_author.name %>'s Club Site! (under construction)</strong>
+            <strong>Check out <%= @lit_fan_author.name %>'s Club Site (under construction)</strong>
           </a>
         </p>
       </div>
@@ -14,13 +14,15 @@
       <div class="well">
         <p>
           <a href="#">
-            <strong>Enter <%= @lit_fan_author.name %>'s FanWiki! (under construction)</strong>
+            <strong>Check out <%= @lit_fan_author.name %> in wikis</strong>
+            <br>
+            <strong>(under construction)</strong>
           </a>
         </p>
       </div>
     </div>
 
-    <div class="col-sm-7">
+    <div class="col-sm-8">
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default text-left">
@@ -33,7 +35,7 @@
       </div>
       
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
           <div class="well">
            <p>Work Image</p>
           </div>
@@ -105,21 +107,14 @@
         <%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %>
       </h4>
 
-      <h4>
-        <%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %>
-      </h4>
-
-      <h4>
-        <%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %>
-      </h4>
-      <br>
-
       </div> 
         <div class="col-sm-2 well">
           <div class="well">
             <p>
               <a href="#">
-                <strong><%= @lit_fan_author.name %> Events (under construction)</strong>
+                <strong>Search for <%= @lit_fan_author.name %> events</strong>
+                <br>
+                <strong>(under construction)</strong>
               </a>
             </p>
           </div>
@@ -127,7 +122,10 @@
           <div class="well">
             <p>
               <a href="#">
-                <strong>News about <%= @lit_fan_author.name %> (under construction)</strong>
+                <strong>Search for news about <%= @lit_fan_author.name %></strong>
+                <br>
+                <strong>(under construction)</strong>
+                <br>
               </a>
             </p>
           </div>
