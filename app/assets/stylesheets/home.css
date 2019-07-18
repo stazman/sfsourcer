@@ -65,8 +65,18 @@ a, label, p, h1, h2, h3, h4, h5, h6 {
   background-color: #d4d4d4;
 }
 
+#two-sidenavs {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  background-color: #f5f5f5;
+}
+
 div .panel-primary .panel-heading {
   background-color: #d4d4d4;
+}
+
+.panel-body #two-sidenavs {
+  background-color: #f5f5f5;
 }
 
 .panel-body img {
@@ -114,7 +124,6 @@ a {
   display: block; */
   display: flex;
   justify-content: center;
-  
   width: 71%;
   right: -3%;
   position: relative;
@@ -136,12 +145,6 @@ footer, #footer {
   margin-bottom: 1%;
   color: rgb(4, 4, 58);
   font-weight: 500;
-}
-
-.panel {
-  text-align: left;
-  height: 12.5em;
-  margin-left: 7%;
 }
 
 ul, li {

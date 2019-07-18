@@ -24,23 +24,17 @@
 
     <div class="col-sm-8">
       <div class="row">
-        <div class="col-sm-12">
-          <div class="panel panel-default text-left">
-            <div class="panel-body">
-              <p contenteditable="true"><%= @lit_fan_author.name %>
+          <div class="panel" id="two-sidenavs">
+            <div class="panel-body" id="two-sidenavs">
+              <p contenteditable="true">
+                <%= @lit_fan_author.name %>
               </p>
             </div>
           </div>
         </div>
-      </div>
       
       <div class="row">
-        <div class="col-sm-2">
-          <div class="well">
-           <p>Work Image</p>
-          </div>
-        </div>
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <div class="well">
             <h4>
               <% @lit_fan_works.each do |lfw| %>
@@ -52,14 +46,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <p>
-                Work Image
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <div class="well">
             <h4>
               <% @lit_fan_works.each do |lfw| %>
@@ -71,14 +58,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <p>
-              Work Image
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <div class="well">
             <p>
               Work
@@ -87,14 +67,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <p>
-              Work Image
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <div class="well">
             <p>
               Work

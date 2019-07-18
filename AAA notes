@@ -1,12 +1,15 @@
 TO DO:
 
 fanvorites
-  DONE changes content, spacing of sidenavs on individual lit_fan_author page; removes unneeded code
-  changes overall style of lit fan author, lit fan work pages
+  DONE styles, corrects dimensions of all panels, well columns/removes image panels, unneeded code on individual lit fan author page
   creates a place for comments on all author/work pages?
 
 cross-app:
   lighten background image
+
+writer's groups feature
+  completely redesign home page according to mockup
+  allows uploading/downloading of works
   
 events feature
   renders output for just made instance on new events new page
@@ -42,11 +45,7 @@ living stories feature:
   removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
   redesigns living story writing page (show view) to split form and ongoing story
 
-writer's groups feature
-  completely redesign home page according to mockup
-  allows uploading/downloading of works
-
-
+  DONE changes content, spacing of sidenavs on individual lit_fan_author page; removes unneeded code
   DONE adds margin to, adjusts styles on alphabetized lit_fan_author page
   DONE adds margin to add/edit author, genre, work page
   DONE adds custom navbar to all lit fanvorites pages, removes layout rendering in fanvorites controllers 
