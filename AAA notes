@@ -1,8 +1,7 @@
 TO DO:
 
 fanvorites
-  DONE styles, corrects dimensions of all panels, well columns/removes image panels, unneeded code on individual lit fan author page
-  creates a place for comments on all author/work pages?
+  DONE styles, corrects dimensions of all panels, well columns/removes unneeded code on individual lit fan work page
 
 cross-app:
   lighten background image
@@ -45,6 +44,7 @@ living stories feature:
   removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
   redesigns living story writing page (show view) to split form and ongoing story
 
+  DONE styles, corrects dimensions of all panels, well columns/removes image panels, unneeded code on individual lit fan author page
   DONE changes content, spacing of sidenavs on individual lit_fan_author page; removes unneeded code
   DONE adds margin to, adjusts styles on alphabetized lit_fan_author page
   DONE adds margin to add/edit author, genre, work page

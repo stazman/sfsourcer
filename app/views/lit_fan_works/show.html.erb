@@ -1,82 +1,87 @@
-<%= render partial: 'layouts/fanvorites_navbar' %>
+<%= render partial: "layouts/fanvorites_navbar" %>
 
 <div class="container text-center">    
   <div class="row">
-    <div class="col-sm-3 well">
-      <div class="well">
-        <p>
-          <a href="#"><strong>Check Out [or make] <%= @lit_fan_work.title %>'s Club Site! (under construction)</strong>
-          </a>
-        </p>
-      </div>
-      <div class="well">
-        <p>
-          <a href="#"><strong>Enter <%= @lit_fan_work.title %>'s FanWiki! (under construction) </strong>
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="col-sm-7">
-    
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="panel panel-default text-left">
-          <div class="panel-body">
-            <p contenteditable="true">
-              <h1>
-                <%= @lit_fan_work.title %>
-              </h1>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <h2>
-      By: <%= @lit_fan_work.lit_fan_author.name %>
-    </h2>
-    <br>
-
-    <h2>
-      Genre/s: 
-    </h2>
-    <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
-    <ul>
-      <h4>
-        <li>
-          <%= lfg.name %>
-          <br>
-        </li>
-      </h4>
-    </ul>
-    <% end %>
-    <br>
-
-    <h4>
-      <%= link_to "Edit Work, Author, and/or Genre", edit_lit_fan_work_path(@lit_fan_work) %>
-    </h4>
-    
-    <h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
-
-    <h4><%= link_to 'Back to All Author Fanvorites Page', '/lit_fan_authors' %></h4>
-
-    <h4><%= link_to 'Back to Fanvorites Home Page', '/all_sf_fanvorites' %></h4><br>
-
-  </div> 
     <div class="col-sm-2 well">
       <div class="well">
-        <p>
-          <a href="#"><strong><%= @lit_fan_work.title %> Events (under construction)</strong>
+        <p >
+          <a href="#">
+            <strong>Check out <%= @lit_fan_work.title %>'s Club Site (under construction)</strong>
           </a>
         </p>
       </div>
+
       <div class="well">
         <p>
-          <a href="#"><strong>News about <%= @lit_fan_work.title %> (under construction)</strong>
+          <a href="#">
+            <strong>Check out <%= @lit_fan_work.title %> in wikis</strong>
+            <br>
+            <strong>(under construction)</strong>
           </a>
+        </p>
+      </div>
+    </div>
+
+<div class="col-sm-8">
+  <div class="row">
+    <div class="panel" id="two-sidenavs">
+      <div class="panel-body" id="two-sidenavs">
+        <p contenteditable="true">
+          <%= @lit_fan_work.title %>
         </p>
       </div>
     </div>
   </div>
-</div>
 
+  <h4>
+    By: <%= @lit_fan_work.lit_fan_author.name %>
+  </h4>
+  <br>
+
+  <div>
+    <h4>
+      Genre/s: 
+    </h4>
+    <% @lit_fan_work.lit_fan_genres.each do |lfg| %>
+    <ul>
+      <h5>
+        <li>
+          <%= lfg.name %>
+          <br>
+        </li>
+      </h5>
+    </ul>
+    <% end %>
+  </div>
+  <br>
+
+<h4>
+  <%= link_to "Edit Work, Author, and/or Genre", edit_lit_fan_work_path(@lit_fan_work) %>
+</h4>
+
+<h4><%= link_to "Add New Work, Author, and/or Genre", new_lit_fan_work_path %></h4>
+
+</div> 
+  <div class="col-sm-2 well">
+    <div class="well">
+      <p>
+        <a href="#">
+          <strong>Search for <%= @lit_fan_work.title %> events</strong>
+          <br>
+          <strong>(under construction)</strong>
+        </a>
+      </p>
+    </div>
+    
+    <div class="well">
+      <p>
+        <a href="#">
+          <strong>Search for news about <%= @lit_fan_work.title %></strong>
+          <br>
+          <strong>(under construction)</strong>
+          <br>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
