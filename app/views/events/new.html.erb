@@ -4,28 +4,43 @@
 
 <%= render partial: "layouts/header_navbar"%>
 
-<div class="text-grey padding-16">
-  <div class="container">
-    <h3 class="opacity"><b>Event Information</b></h3><br>
-    
-    <%= form_for @event do |f| %>
-      <h4>Title: <%= f.text_field :title %> </h4><br>
-      <h4>
-        Description
-    </h4>
-      <p>
-        <%= f.text_area :description %>
-    </p><br>
+<div class="container">
+  <h3 class="opacity">
+    Event Information
+  </h3>
+  <br>
+  
+  <%= form_for @event do |f| %>
+    <h4>Title: <%= f.text_field :title %> </h4><br>
+    <h4>
+      Description
+  </h4>
+    <p>
+      <%= f.text_area :description %>
+    </p>
+    <br>
 
-      <h4>Location: <%= f.text_field :location %></h4><br>
-      <h4>Date: <%= f.text_field :date %></h4><br>
-      <h4>Start Time: <%= f.text_field :start_time %></h4><br>
-      <h4>Cost: <%= f.text_field :cost %></h4><br>
-      <h4>Contact Info: <%= f.text_field :contact_info %></h4><br>
+    <h4>Location: <%= f.text_field :location %></h4><br>
+    <h4>Date: <%= f.text_field :date %></h4><br>
+    <h4>Start Time: <%= f.text_field :start_time %></h4><br>
+    <h4>Cost: <%= f.text_field :cost %></h4><br>
+    <h4>Contact Info: <%= f.text_field :contact_info %></h4><br>
     <h4><%= f.submit "Create Event" %></h4>
-        <% end %>
+      <% end %>
+</div>
 
+<div class="container">
+  <div id='show-event-result'>
+    <h4 id='show-event-title'></h4>
+    <h5 id='show-event-description'></h5><br>
+    <h5 id='show-event-location'></h5>
+    <h5 id='show-event-date'></h5>
+    <h5 id='show-event-start-time'></h5>
+    <h5 id='show-event-cost'></h5>
+    <h5 id='show-event-contact-info'></h5>
+    <br><br>
   </div>
 </div>
+
 
 

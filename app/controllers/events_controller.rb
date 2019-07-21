@@ -10,11 +10,12 @@ class EventsController < ApplicationController
 
     def create
         @event = Event.create(event_params)
-        redirect_to event_path(@event)
+        render json: @event
     end
 
     def show
         @event = Event.find(params[:id])
+        render json: @event
     end
 
     def edit

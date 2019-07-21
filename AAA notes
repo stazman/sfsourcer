@@ -1,8 +1,12 @@
 TO DO:
 
 events feature
-  DONE adds events asset; adds asset tag to events new page
-  renders output for just made instance on new event page
+  DONE renders just-made instance on new event page
+
+  adds link for all events to new event page
+  renders all events on new event page
+  adds search bar to events home page
+  search bar renders all events matching search parameters
 
 cross-app:
   lighten background image
