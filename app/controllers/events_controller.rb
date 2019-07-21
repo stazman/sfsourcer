@@ -2,6 +2,10 @@ class EventsController < ApplicationController
 
     def index
         @events = Event.all
+        respond_to do |f|
+            f.html { render :index }
+            f.json { render json: @events }
+        end
     end
     
     def new

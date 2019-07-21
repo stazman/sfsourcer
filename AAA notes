@@ -1,9 +1,7 @@
 TO DO:
 
 events feature
-  DONE renders just-made instance on new event page
-
-  adds link for all events to new event page
+  DONE adds link for all events to new event page
   renders all events on new event page
   adds search bar to events home page
   search bar renders all events matching search parameters
