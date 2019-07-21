@@ -1,7 +1,8 @@
 TO DO:
 
-fanvorites
-  DONE styles, corrects dimensions of all panels, well columns/removes unneeded code on individual lit fan work page
+events feature
+  DONE adds events asset; adds asset tag to events new page
+  renders output for just made instance on new event page
 
 cross-app:
   lighten background image
@@ -10,9 +11,6 @@ writer's groups feature
   completely redesign home page according to mockup
   allows uploading/downloading of works
   
-events feature
-  renders output for just made instance on new events new page
-
 funding projects home page
   adds panel heading to primary-panel panels on funding projects home page
   adds images to panels on funding projects home page
@@ -44,6 +42,7 @@ living stories feature:
   removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
   redesigns living story writing page (show view) to split form and ongoing story
 
+  DONE styles, corrects dimensions of all panels, well columns/removes unneeded code on individual lit fan work page
   DONE styles, corrects dimensions of all panels, well columns/removes image panels, unneeded code on individual lit fan author page
   DONE changes content, spacing of sidenavs on individual lit_fan_author page; removes unneeded code
   DONE adds margin to, adjusts styles on alphabetized lit_fan_author page
