@@ -171,10 +171,8 @@ h1 {
   text-align: center;
 }
 
-.container h3 #more-margin, .container #more-margin {
-  margin-left: 3%;
-}
-
+.container h2 #more-margin,
+.container h3 #more-margin,
 .container h4 #more-margin {
   margin-left: 3%;
 }

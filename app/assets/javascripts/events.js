@@ -17,3 +17,23 @@ $(function(){
         });
     });
 });
+
+$(function(){
+    $('a#return-all-events').on('click', function(e){
+        e.preventDefault();
+
+        let $ul = $('#all-events');
+
+        $ul.html('');
+
+        $.ajax({
+            method: 'GET',
+            url: '/events',
+            dataType: 'json'
+        }).done(function(data){
+            data.forEach(function(ev){
+                $ul.append('<li><h4><a href="/events/' +  ev.id + '">' + ev.title + '</a><h4></h4></li>');
+            });
+        });
+    });
+});

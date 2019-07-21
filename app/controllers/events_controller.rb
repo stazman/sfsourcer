@@ -19,7 +19,10 @@ class EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
-        render json: @event
+        respond_to do |f|
+            f.html { render :show  }
+            f.json { render json: @event }
+        end
     end
 
     def edit

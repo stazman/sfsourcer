@@ -1,8 +1,7 @@
 TO DO:
 
 events feature
-  DONE adds link for all events to new event page
-  renders all events on new event page
+  DONE renders links to all events on new event page; each individual title link renders individual event page; adds margin to event title on individual event page
   adds search bar to events home page
   search bar renders all events matching search parameters
 
@@ -44,6 +43,7 @@ living stories feature:
   removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
   redesigns living story writing page (show view) to split form and ongoing story
 
+  DONE adds link for all events to new event page
   DONE styles, corrects dimensions of all panels, well columns/removes unneeded code on individual lit fan work page
   DONE styles, corrects dimensions of all panels, well columns/removes image panels, unneeded code on individual lit fan author page
   DONE changes content, spacing of sidenavs on individual lit_fan_author page; removes unneeded code
