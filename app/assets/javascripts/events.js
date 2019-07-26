@@ -19,24 +19,56 @@ $(function(){
 });
 
 $(function(){
-    $('a#return-all-events').on('click', function(e){
+    $('a.getEventLinks').on('click', function(e){
         e.preventDefault();
 
         let $ul = $('#all-events');
-
-        $ul.html('');
 
         $.ajax({
             method: 'GET',
             url: '/events',
             dataType: 'json'
         }).done(function(data){
+
+            data.sort(function(a, b) {
+
+                const nameA = a.title.toUpperCase();
+
+                const nameB = b.title.toUpperCase();
+                
+                if (nameA < nameB) {
+                  return -1;
+                }
+
+                if (nameA > nameB) {
+                  return 1;
+                }
+
+                if (nameA === nameB) {
+                    return 0;
+                }
+            });
+
             data.forEach(function(ev){
-                $ul.append('<li><h4><a href="/events/' +  ev.id + '">' + ev.title + '</a></h4></li>');
+
+                let newEv = new Event(ev)
+
+                $ul.append(newEv.renderLi());
             });
         });
     });
 });
+
+class Event {
+    constructor(obj){
+        this.id = obj.id
+        this.title = obj.title
+    };
+};
+
+Event.prototype.renderLi = function(){
+    return '<li><h4><a href="/events/' +  this.id + '">' + this.title + '</a></h4></li>';
+};
 
 $(function(){
     $('form#search-events').submit(function(e){
