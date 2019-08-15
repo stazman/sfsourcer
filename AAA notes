@@ -1,14 +1,15 @@
 TO DO:
 
-events feature:
-  DONE changes all events to all sorted events; changes to class constructor, prototype for rendering all event instances
+cross-app:
+  DONE makes background fixed, non-repeating
+  lighten background image
 
 writer's groups feature:
+  works are available through writer groups or a list on their own
+
   completely redesign home page according to mockup
   allows uploading/downloading of works
 
-cross-app:
-  lighten background image
 
 funding projects home page
   adds panel heading to primary-panel panels on funding projects home page
@@ -41,6 +42,7 @@ living stories feature:
   removes sidenav from living story show view; removes new story link completely, moves back to living stories home page to custom navbar
   redesigns living story writing page (show view) to split form and ongoing story
 
+  DONE changes all events to all sorted events; changes to class constructor, prototype for rendering all event instances
   DONE adds search bar to events home page; search renders all events matching search parameters or gives error message if none found
   DONE renders links to all events on new event page; each individual title link renders individual event page; adds margin to event title on individual event page
   DONE adds link for all events to new event page

@@ -4,10 +4,8 @@ body, html {
 }
 
 .bg {
-  background: url("backgrounds/vert-space.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: 100% 280%;
+  background: url("backgrounds/vert-space.jpg") no-repeat fixed;
+  background-size: cover
 }
 
 a, label, p, h1, h2, h3, h4, h5, h6 {
