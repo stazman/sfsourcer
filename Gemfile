@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+
 gem 'pry'
 gem 'active_model_serializers'
 gem 'figaro'
