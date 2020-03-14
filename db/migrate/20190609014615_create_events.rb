@@ -5,9 +5,10 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.text "description"
       t.text "location"
       t.text "date"
-      t.text "start-time"
+      t.text "start_time"
       t.text "cost"
       t.text "contact_info"
+      
       t.timestamps
     end
   end
