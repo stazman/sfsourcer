@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_025501) do
+ActiveRecord::Schema.define(version: 2019_06_09_014615) do
 
   create_table "events", force: :cascade do |t|
     t.text "title"
@@ -111,6 +111,8 @@ ActiveRecord::Schema.define(version: 2019_06_09_025501) do
 
   create_table "ls_users", force: :cascade do |t|
     t.string "username"
+    t.string "provider"
+    t.integer "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -118,9 +120,9 @@ ActiveRecord::Schema.define(version: 2019_06_09_025501) do
   create_table "pledges", force: :cascade do |t|
     t.integer "amount"
     t.integer "fp_backer_id"
+    t.integer "funding_project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "funding_project_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -129,13 +131,13 @@ ActiveRecord::Schema.define(version: 2019_06_09_025501) do
     t.string "fav_lits"
     t.string "fav_films"
     t.string "fav_games"
+    t.string "profile_image"
     t.string "password"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "provider"
     t.string "uid"
-    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "wg_comments", force: :cascade do |t|
@@ -152,6 +154,7 @@ ActiveRecord::Schema.define(version: 2019_06_09_025501) do
     t.string "title"
     t.string "version"
     t.text "content"
+    t.integer "writer_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
