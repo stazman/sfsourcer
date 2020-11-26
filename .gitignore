@@ -50,3 +50,9 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+db/sfsourcer_development
+db/sfsourcer_development
+log/development.log
+.DS_Store
+db/sfsourcer_test
+log/development.log
