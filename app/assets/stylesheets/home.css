@@ -8,8 +8,12 @@ body, html {
   background-size: cover
 }
 
-a, label, p, h1, h2, h3, h4, h5, h6 {
+a, label {
   color: rgb(4, 4, 58);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
 }
 
 #bg-plain {
@@ -28,6 +32,7 @@ a, label, p, h1, h2, h3, h4, h5, h6 {
 
 .jumbotron h1 {
   font-size: 3.5em;
+  color: white;
 }
 
 .jumbotron p {
